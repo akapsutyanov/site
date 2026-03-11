@@ -438,19 +438,81 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 @media (max-width: 960px) {
   nav { width: calc(100% - 28px); padding: 11px 16px; }
   .nav-links { display: none; }
-  section { padding: 80px 24px; }
-  .hero { grid-template-columns: 1fr; padding: 120px 24px 80px; text-align: center; justify-items: center; }
+  section { padding: 72px 20px; }
+
+  /* Hero: single column, video below text */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 110px 20px 60px;
+    text-align: center;
+    justify-items: center;
+    gap: 40px;
+  }
   .hero-left { align-items: center; }
-  .hero-right { display: none; }
+
+  /* On mobile — show video as a wide card, not hidden */
+  .hero-right {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    min-height: 280px;
+  }
+
+  /* Phone becomes horizontal landscape reel card on mobile */
+  .phone {
+    width: 100%;
+    max-width: 380px;
+    height: 220px;
+    border-radius: 24px;
+  }
+  .phone-video { border-radius: 23px; }
+  .phone-notch { display: none; }
+  .phone::before { display: none; }
+
+  /* Floating cards — repositioned for mobile */
+  .fcards { position: absolute; inset: 0; pointer-events: none; }
+  .fc-1 { top: -20px; right: 8px; }
+  .fc-2 { bottom: -20px; left: 8px; }
+  .fc-3 { display: none; }
+  .fc-4 { display: none; }
+  .phone-glow { width: 200px; height: 200px; }
+
+  /* Other sections */
   .about-grid, .sp-wrap { grid-template-columns: 1fr; }
-  .for-grid, .prog-grid { grid-template-columns: 1fr; }
+  .for-grid, .prog-grid { grid-template-columns: 1fr 1fr; }
   .stats-row { grid-template-columns: repeat(3,1fr); }
   .pricing-grid { grid-template-columns: 1fr; }
-  .cta-wrap { padding: 0 24px 60px; }
-  .cta-panel { padding: 60px 28px; }
+  .cta-wrap { padding: 0 20px 56px; }
+  .cta-panel { padding: 52px 24px; }
   .guarantee { flex-direction: column; text-align: center; padding: 28px; }
-  footer { padding: 0 24px 40px; }
+  footer { padding: 0 20px 36px; }
   .footer-inner { flex-direction: column; text-align: center; padding: 28px 20px; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 100px 16px 48px; gap: 32px; }
+  section { padding: 60px 16px; }
+
+  .hero-right { min-height: 200px; }
+  .phone { height: 190px; border-radius: 20px; }
+  .phone-video { border-radius: 19px; }
+
+  /* Only 2 floating chips, closer */
+  .fc-1 { top: -16px; right: 4px; padding: 8px 12px; }
+  .fc-2 { bottom: -16px; left: 4px; padding: 8px 12px; }
+  .fc-label { font-size: 8px; }
+  .fc-val { font-size: 13px; }
+
+  .for-grid, .prog-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2,1fr); }
+  .sp-wrap { grid-template-columns: 1fr; }
+  .sp-portrait { aspect-ratio: 3/2; max-height: 320px; }
+  .cta-panel h2 { font-size: 40px; letter-spacing: -2px; }
+  .pnow { font-size: 44px; }
+  .hero-chips { gap: 8px; }
+  footer { padding: 0 16px 28px; }
 }
 </style>
 </head>
