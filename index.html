@@ -661,7 +661,9 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   width: 6px; height: 6px; border-radius: 50%; background: #f0c96a;
   animation: dot-pulse 1.5s ease-in-out infinite;
 }
-  .nav-links { display: none; }
+
+@media (max-width: 960px) {
+  nav { width: calc(100% - 28px); padding: 11px 16px; top: 56px; }
   section { padding: 72px 20px; }
 
   /* Hero: single column, video below text */
