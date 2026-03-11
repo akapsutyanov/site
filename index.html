@@ -505,6 +505,40 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 .fu { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .fu.vis { opacity: 1; transform: none; }
 
+/* ══ TELEGRAM FLOAT ══ */
+.tg-float {
+  position: fixed; bottom: 28px; right: 28px; z-index: 2999;
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 20px 12px 14px;
+  background: #229ED9;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 32px rgba(34,158,217,0.45), 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform .25s cubic-bezier(0.34,1.56,0.64,1), box-shadow .25s ease, padding .3s ease;
+  overflow: hidden;
+  max-width: 52px;
+}
+.tg-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(34,158,217,0.6), 0 4px 12px rgba(0,0,0,0.35);
+  max-width: 200px;
+  padding: 12px 20px 12px 14px;
+}
+.tg-float svg { flex-shrink: 0; }
+.tg-float-label {
+  font-size: 14px; font-weight: 700; color: #fff;
+  white-space: nowrap; opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity .25s ease .05s, transform .25s ease .05s;
+  letter-spacing: -0.2px;
+}
+.tg-float:hover .tg-float-label {
+  opacity: 1; transform: translateX(0);
+}
+@media (max-width: 600px) {
+  .tg-float { bottom: 20px; right: 16px; }
+}
+
 /* ══ SVG ILLUSTRATIONS ══ */
 .card-icon { margin-bottom: 18px; display: block; }
 .prog-icon { margin-bottom: 14px; display: block; }
@@ -1508,5 +1542,14 @@ document.querySelectorAll('.fu').forEach(el => obs.observe(el));
   setInterval(updateTimers, 1000);
 })();
 </script>
+<!-- TELEGRAM FLOAT -->
+<a href="https://t.me/foms_fit" target="_blank" class="tg-float" title="Написать Саше в Telegram">
+  <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+    <path d="M2 12.8L6.8 14.6L8.8 21L11.6 17.4L16.8 21L22 4L2 12.8Z" fill="white" fill-opacity="0.95"/>
+    <path d="M6.8 14.6L8.2 19.8L11.6 17.4" stroke="rgba(0,0,0,0.15)" stroke-width="0.8"/>
+  </svg>
+  <span class="tg-float-label">Есть вопрос?</span>
+</a>
+
 </body>
 </html>
