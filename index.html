@@ -588,8 +588,79 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   .sp-toast { left: 12px; right: 12px; max-width: none; bottom: 20px; }
 }
 
-@media (max-width: 960px) {
-  nav { width: calc(100% - 28px); padding: 11px 16px; top: 56px; }
+/* ══ SPOTS PROGRESS BAR ══ */
+.spots-bar {
+  margin: 0 0 40px;
+  padding: 24px 32px;
+  border-radius: 20px;
+  background: rgba(212,168,67,0.05);
+  border: 1px solid rgba(212,168,67,0.20);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.10);
+}
+.spots-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.spots-label {
+  font-size: 13px; font-weight: 700; color: var(--ink2);
+  display: flex; align-items: center; gap: 8px;
+}
+.spots-fire { font-size: 16px; animation: fire-shake 1.8s ease-in-out infinite; }
+@keyframes fire-shake {
+  0%,100% { transform: rotate(-5deg) scale(1); }
+  50%      { transform: rotate(5deg) scale(1.15); }
+}
+.spots-count {
+  font-size: 13px; font-weight: 700; color: var(--ink3);
+}
+.spots-count strong {
+  font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+  background: var(--gold-soft); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+}
+.spots-track {
+  height: 10px; border-radius: 100px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,168,67,0.12);
+  overflow: hidden; position: relative;
+}
+.spots-fill {
+  height: 100%; border-radius: 100px;
+  background: linear-gradient(90deg, #a07828, #d4a843, #f0c96a, #fae8a0, #f0c96a);
+  background-size: 200% auto;
+  animation: bar-shine 2.5s linear infinite;
+  transition: width 1.2s cubic-bezier(0.34,1.2,0.64,1);
+  position: relative;
+}
+.spots-fill::after {
+  content: '';
+  position: absolute; right: -1px; top: -2px; bottom: -2px;
+  width: 14px; border-radius: 50%;
+  background: #fae8a0;
+  box-shadow: 0 0 10px rgba(250,232,160,0.9), 0 0 24px rgba(212,168,67,0.6);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+@keyframes bar-shine {
+  0%   { background-position: 200% center; }
+  100% { background-position: 0% center; }
+}
+@keyframes glow-pulse {
+  0%,100% { box-shadow: 0 0 8px rgba(250,232,160,0.8), 0 0 20px rgba(212,168,67,0.5); }
+  50%      { box-shadow: 0 0 16px rgba(250,232,160,1), 0 0 36px rgba(212,168,67,0.8); }
+}
+.spots-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 10px;
+}
+.spots-taken { font-size: 11px; color: var(--ink4); font-weight: 500; }
+.spots-urgency {
+  font-size: 11px; font-weight: 700; color: #f0c96a;
+  display: flex; align-items: center; gap: 5px;
+}
+.urgency-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #f0c96a;
+  animation: dot-pulse 1.5s ease-in-out infinite;
+}
   .nav-links { display: none; }
   section { padding: 72px 20px; }
 
@@ -989,6 +1060,28 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
       <div class="pt-block"><div class="pt-num" id="pt-s">00</div><div class="pt-label-sm">секунд</div></div>
     </div>
   </div>
+
+  <!-- SPOTS PROGRESS BAR -->
+  <div class="spots-bar">
+    <div class="spots-header">
+      <div class="spots-label">
+        <span class="spots-fire">🔥</span>
+        Осталось мест по стартовой цене
+      </div>
+      <div class="spots-count"><strong id="spotsLeft">12</strong> из 50</div>
+    </div>
+    <div class="spots-track">
+      <div class="spots-fill" id="spotsFill" style="width: 76%"></div>
+    </div>
+    <div class="spots-footer">
+      <div class="spots-taken">38 человек уже заняли место</div>
+      <div class="spots-urgency">
+        <div class="urgency-dot"></div>
+        Места забирают прямо сейчас
+      </div>
+    </div>
+  </div>
+
   <div class="pricing-grid">
     <div class="gc prc fu">
       <div class="pname">База</div>
@@ -1088,6 +1181,62 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 function toggleFaq(btn) { btn.closest('.faq-item').classList.toggle('open'); }
 const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.07 });
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+
+// ── SPOTS COUNTER ──
+(function() {
+  const TOTAL = 50;
+  const KEY   = 'ai_start_spots';
+  let taken = parseInt(localStorage.getItem(KEY) || '38');
+  if (taken >= TOTAL) taken = 48;
+
+  function updateSpots() {
+    const left = TOTAL - taken;
+    const pct  = (taken / TOTAL) * 100;
+    const el   = document.getElementById('spotsLeft');
+    const fill = document.getElementById('spotsFill');
+    if (el)   el.textContent = left;
+    if (fill) fill.style.width = pct + '%';
+    const takenEl = document.querySelector('.spots-taken');
+    if (takenEl) takenEl.textContent = taken + ' человек уже заняли место';
+  }
+
+  // Animate bar on load: start narrow, then expand
+  setTimeout(() => {
+    const fill = document.getElementById('spotsFill');
+    if (!fill) return;
+    const target = ((taken / TOTAL) * 100) + '%';
+    fill.style.transition = 'none';
+    fill.style.width = '20%';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        fill.style.transition = 'width 1.4s cubic-bezier(0.34,1.2,0.64,1)';
+        fill.style.width = target;
+      });
+    });
+  }, 700);
+
+  updateSpots();
+
+  // Decrement a spot every 3–8 minutes randomly
+  function scheduleDecrement() {
+    const delay = (180 + Math.random() * 300) * 1000;
+    setTimeout(() => {
+      if (taken < TOTAL - 1) {
+        taken++;
+        localStorage.setItem(KEY, taken);
+        updateSpots();
+        const el = document.getElementById('spotsLeft');
+        if (el) {
+          el.style.transform = 'scale(1.4)';
+          el.style.filter = 'brightness(1.6)';
+          setTimeout(() => { el.style.transform = ''; el.style.filter = ''; }, 400);
+        }
+      }
+      scheduleDecrement();
+    }, delay);
+  }
+  scheduleDecrement();
+})();
 
 // ── SOCIAL PROOF TOASTS ──
 (function() {
