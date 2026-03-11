@@ -271,61 +271,41 @@ nav {
   filter: blur(28px); z-index: 1; animation: pulse 5s ease-in-out infinite;
 }
 
-.phone {
-  width: 210px; height: 430px; border-radius: 38px;
-  position: relative; z-index: 3; flex-shrink: 0; overflow: hidden;
-  background: rgba(8,6,2,0.82);
-  backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
-  border: 1px solid var(--gb-hi);
-  box-shadow: 0 48px 96px rgba(0,0,0,0.78), 0 12px 28px rgba(0,0,0,0.55),
-    inset 0 2px 0 rgba(240,201,106,0.35), inset 1px 0 0 rgba(240,201,106,0.08),
-    inset -1px 0 0 rgba(240,201,106,0.08), inset 0 -2px 0 rgba(0,0,0,0.6);
+/* ══ HERO PLAYER ══ */
+.hero-player-wrap {
+  position: relative; width: 100%; z-index: 3;
+  display: flex; flex-direction: column; gap: 16px;
 }
-.phone::before {
-  content: ''; position: absolute; top: 13px; left: 50%; transform: translateX(-50%);
-  width: 76px; height: 26px; background: rgba(4,3,1,0.92);
-  border-radius: 0 0 18px 18px; z-index: 10;
-  border: 1px solid rgba(212,168,67,0.16); border-top: none;
+.hero-player-glow {
+  position: absolute; inset: -30px; border-radius: 36px;
+  background: radial-gradient(ellipse at center, rgba(212,168,67,0.18) 0%, transparent 70%);
+  filter: blur(28px); pointer-events: none; z-index: 0;
 }
-.phone-screen {
-  position: absolute; inset: 0;
-  background: linear-gradient(160deg, rgba(212,168,67,0.11) 0%, rgba(120,88,20,0.05) 50%, rgba(10,8,3,0.03) 100%);
-  display: flex; flex-direction: column; padding: 52px 14px 18px; gap: 10px;
+.hero-player-frame {
+  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+  border-radius: 22px; z-index: 1;
+  border: 1px solid rgba(212,168,67,0.28);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.75), 0 8px 24px rgba(0,0,0,0.5),
+              inset 0 1.5px 0 rgba(240,201,106,0.25);
 }
-.phone-thumb {
-  width: 100%; flex: 1; border-radius: 14px;
-  background: linear-gradient(145deg, rgba(180,135,40,0.18) 0%, rgba(80,58,12,0.10) 60%, rgba(20,14,4,0.06) 100%);
-  border: 1px solid rgba(212,168,67,0.16); position: relative; overflow: hidden;
+.hero-stats-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-radius: 16px; z-index: 1;
+  background: rgba(18,14,6,0.65);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,168,67,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(240,201,106,0.12);
 }
-.phone-thumb::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.55) 100%);
+.hstat { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; }
+.hstat-val {
+  font-size: 15px; font-weight: 800; color: var(--ink); letter-spacing: -0.5px;
 }
-.phone-play {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 42px; height: 42px; border-radius: 50%;
-  background: var(--gold-soft); color: #0a0700;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 15px; font-weight: 700; box-shadow: 0 4px 24px rgba(212,168,67,0.55);
-  -webkit-text-fill-color: #0a0700;
+.hstat-val.g {
+  background: var(--gold-soft); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
 }
-.phone-badge {
-  position: absolute; bottom: 10px; left: 10px; padding: 4px 10px; border-radius: 7px;
-  background: rgba(0,0,0,0.68); border: 1px solid rgba(212,168,67,0.22);
-  color: var(--g2); font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
-}
-
-.phone-video {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; object-position: center; z-index: 2;
-  border-radius: 37px;
-}
-.phone-notch {
-  position: absolute; top: 13px; left: 50%; transform: translateX(-50%);
-  width: 76px; height: 26px; background: rgba(4,3,1,0.92);
-  border-radius: 0 0 18px 18px; z-index: 10;
-  border: 1px solid rgba(212,168,67,0.20); border-top: none;
-}
+.hstat-label { font-size: 10px; color: var(--ink4); font-weight: 500; white-space: nowrap; }
+.hstat-div { width: 1px; height: 28px; background: rgba(212,168,67,0.15); flex-shrink: 0; }
 
 .fcards { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
 .fc {
@@ -769,23 +749,18 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   }
   .hero-left { align-items: center; }
 
-  /* On mobile — show video as a wide card, not hidden */
+  /* On mobile — show player full width */
   .hero-right {
     display: flex;
     width: 100%;
     justify-content: center;
     position: relative;
     height: auto;
-    min-height: 280px;
   }
+  .hero-player-wrap { width: 100%; }
 
   /* Phone becomes horizontal landscape reel card on mobile */
-  .phone {
-    width: 100%;
-    max-width: 380px;
-    height: 220px;
-    border-radius: 24px;
-  }
+  .phone { width: 100%; max-width: 380px; height: 220px; border-radius: 24px; }
   .phone-video { border-radius: 23px; }
   .phone-notch { display: none; }
   .phone::before { display: none; }
@@ -814,9 +789,8 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   .hero { padding: 160px 16px 48px; gap: 32px; }
   section { padding: 60px 16px; }
 
-  .hero-right { min-height: 200px; }
-  .phone { height: 190px; border-radius: 20px; }
-  .phone-video { border-radius: 19px; }
+  .hero-right { min-height: auto; }
+  .hero-player-wrap { width: 100%; }
 
   /* Only 2 floating chips, closer */
   .fc-1 { top: -16px; right: 4px; padding: 8px 12px; }
@@ -939,16 +913,28 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   </div>
 
   <div class="hero-right">
-    <div class="phone-glow"></div>
-    <div class="phone">
-      <div class="phone-notch"></div>
-      <video class="phone-video" src="showreel.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="fcards">
-      <div class="fc fc-1"><div class="fc-label">Подписчиков</div><div class="fc-val g">25 000+</div></div>
-      <div class="fc fc-2"><div class="fc-ico">🤖</div><div class="fc-label">AI-агент</div><div class="fc-val">Активен</div></div>
-      <div class="fc fc-3"><div class="fc-label">Просмотры</div><div class="fc-val g">100M+</div></div>
-      <div class="fc fc-4"><div class="fc-ico">💰</div><div class="fc-label">Бюджет</div><div class="fc-val">0 ₽</div></div>
+    <div class="hero-player-wrap">
+      <div class="hero-player-glow"></div>
+      <div class="hero-player-frame">
+        <iframe
+          src="https://kinescope.io/embed/eiPKfer7jkjNesqYP2Sm2h"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          frameborder="0"
+          scrolling="no"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:20px;">
+        </iframe>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hstat"><div class="hstat-val g">25 000+</div><div class="hstat-label">Подписчиков</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-val g">100M+</div><div class="hstat-label">Просмотров</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-val">🤖 Активен</div><div class="hstat-label">AI-агент</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-val">0 ₽</div><div class="hstat-label">Рекламный бюджет</div></div>
+      </div>
     </div>
   </div>
 </div>
