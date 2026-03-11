@@ -79,7 +79,7 @@ body {
 
 /* ══ NAV ══ */
 nav {
-  position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+  position: fixed; top: 56px; left: 50%; transform: translateX(-50%);
   z-index: 1000; width: calc(100% - 48px); max-width: 1160px;
   display: flex; align-items: center; justify-content: space-between;
   padding: 13px 22px; border-radius: 18px;
@@ -111,7 +111,7 @@ nav {
 /* ══ HERO ══ */
 .hero {
   min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
-  align-items: center; gap: 60px; padding: 140px 64px 100px;
+  align-items: center; gap: 60px; padding: 180px 64px 100px;
   max-width: 1280px; margin: 0 auto; position: relative; z-index: 1;
 }
 .hero-left { display: flex; flex-direction: column; align-items: flex-start; }
@@ -443,16 +443,113 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 .cta-illu { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); opacity: 0.55; pointer-events: none; z-index: 0; }
 @media (max-width: 960px) { .cta-illu { display: none; } }
 
-/* ══ RESPONSIVE ══ */
+/* ══ TIMER TOP BAR ══ */
+.timer-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
+  height: 48px;
+  background: linear-gradient(90deg, #1a1200, #0e0900, #1a1200);
+  border-bottom: 1px solid rgba(212,168,67,0.25);
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: center; gap: 20px;
+  backdrop-filter: blur(12px);
+}
+.timer-bar-text {
+  font-size: 12px; font-weight: 600; color: var(--ink2);
+  letter-spacing: 0.3px; white-space: nowrap;
+}
+.timer-bar-text strong { color: var(--g2); }
+.timer-digits {
+  display: flex; align-items: center; gap: 6px;
+}
+.td-block {
+  display: flex; flex-direction: column; align-items: center;
+  background: rgba(212,168,67,0.10);
+  border: 1px solid rgba(212,168,67,0.22);
+  border-radius: 8px; padding: 4px 10px; min-width: 44px;
+}
+.td-num {
+  font-size: 18px; font-weight: 800; letter-spacing: -1px; line-height: 1;
+  background: var(--gold-soft); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  font-variant-numeric: tabular-nums;
+}
+.td-label {
+  font-size: 8px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--ink4); margin-top: 2px;
+}
+.td-sep {
+  font-size: 18px; font-weight: 800; color: var(--g4);
+  margin-bottom: 10px; line-height: 1;
+}
+.timer-bar-btn {
+  padding: 6px 18px; border-radius: 8px; font-size: 12px; font-weight: 800;
+  background: var(--gold-soft); color: #0a0700; text-decoration: none;
+  white-space: nowrap; letter-spacing: 0.3px;
+  box-shadow: 0 4px 16px rgba(212,168,67,0.35);
+  transition: transform .2s, box-shadow .2s;
+  -webkit-text-fill-color: #0a0700;
+}
+.timer-bar-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(212,168,67,0.50); }
+.timer-bar-close {
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: var(--ink4); cursor: pointer;
+  font-size: 18px; line-height: 1; padding: 4px; transition: color .2s;
+}
+.timer-bar-close:hover { color: var(--g2); }
+
+/* ══ PRICING TIMER BLOCK ══ */
+.pricing-timer {
+  display: flex; align-items: center; justify-content: center;
+  gap: 24px; margin-bottom: 40px; flex-wrap: wrap;
+}
+.pt-label {
+  font-size: 14px; font-weight: 600; color: var(--ink2);
+}
+.pt-label strong { color: var(--g2); }
+.pt-digits {
+  display: flex; align-items: center; gap: 8px;
+}
+.pt-block {
+  display: flex; flex-direction: column; align-items: center;
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.28);
+  border-radius: 12px; padding: 10px 16px; min-width: 60px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.15);
+}
+.pt-num {
+  font-size: 32px; font-weight: 800; letter-spacing: -1.5px; line-height: 1;
+  background: var(--gold-soft); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  font-variant-numeric: tabular-nums;
+}
+.pt-label-sm {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--ink4); margin-top: 4px;
+}
+.pt-sep {
+  font-size: 28px; font-weight: 800; color: var(--g4);
+  margin-bottom: 14px; line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .timer-bar { gap: 10px; padding: 0 44px 0 16px; height: 48px; flex-wrap: nowrap; }
+  .timer-bar-text { display: none; }
+  .td-num { font-size: 16px; }
+  .td-block { min-width: 36px; padding: 3px 8px; border-radius: 7px; }
+  .td-label { font-size: 7px; letter-spacing: 1px; }
+  .td-sep { font-size: 16px; margin-bottom: 8px; }
+  .timer-bar-btn { padding: 6px 14px; font-size: 11px; white-space: nowrap; }
+  .timer-bar-close { right: 10px; font-size: 20px; }
+}
 @media (max-width: 960px) {
-  nav { width: calc(100% - 28px); padding: 11px 16px; }
+  nav { width: calc(100% - 28px); padding: 11px 16px; top: 56px; }
   .nav-links { display: none; }
   section { padding: 72px 20px; }
 
   /* Hero: single column, video below text */
   .hero {
     grid-template-columns: 1fr;
-    padding: 110px 20px 60px;
+    padding: 170px 20px 60px;
     text-align: center;
     justify-items: center;
     gap: 40px;
@@ -501,7 +598,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 }
 
 @media (max-width: 600px) {
-  .hero { padding: 100px 16px 48px; gap: 32px; }
+  .hero { padding: 160px 16px 48px; gap: 32px; }
   section { padding: 60px 16px; }
 
   .hero-right { min-height: 200px; }
@@ -545,6 +642,20 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="blob blob-3"></div>
   <div class="blob blob-4"></div>
   <div class="blob blob-5"></div>
+</div>
+
+<!-- TIMER BAR -->
+<div class="timer-bar" id="timerBar">
+  <div class="timer-bar-text"><strong>🔥 Стартовая цена</strong> &nbsp;закроется через:</div>
+  <div class="timer-digits">
+    <div class="td-block"><div class="td-num" id="tb-h">00</div><div class="td-label">часов</div></div>
+    <div class="td-sep">:</div>
+    <div class="td-block"><div class="td-num" id="tb-m">00</div><div class="td-label">минут</div></div>
+    <div class="td-sep">:</div>
+    <div class="td-block"><div class="td-num" id="tb-s">00</div><div class="td-label">секунд</div></div>
+  </div>
+  <a href="#pricing" class="timer-bar-btn">Забрать цену →</a>
+  <button class="timer-bar-close" onclick="document.getElementById('timerBar').style.display='none'; document.querySelector('nav').style.top='16px';">×</button>
 </div>
 
 <!-- NAV -->
@@ -808,6 +919,18 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="pill">Тарифы</div>
   <h2>Выбери свой <span class="ga">тариф</span></h2>
   <p class="desc">Стартовые цены — только в первые дни открытия</p>
+
+  <!-- PRICING TIMER -->
+  <div class="pricing-timer">
+    <div class="pt-label">⚡ <strong>Цена вырастет</strong> &nbsp;через:</div>
+    <div class="pt-digits">
+      <div class="pt-block"><div class="pt-num" id="pt-h">00</div><div class="pt-label-sm">часов</div></div>
+      <div class="pt-sep">:</div>
+      <div class="pt-block"><div class="pt-num" id="pt-m">00</div><div class="pt-label-sm">минут</div></div>
+      <div class="pt-sep">:</div>
+      <div class="pt-block"><div class="pt-num" id="pt-s">00</div><div class="pt-label-sm">секунд</div></div>
+    </div>
+  </div>
   <div class="pricing-grid">
     <div class="gc prc fu">
       <div class="pname">База</div>
@@ -863,7 +986,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
       </ul>
       <a href="https://payform.ru/4raNGkD/" class="pbtn outline">Взять Результат 🔥</a>
     </div>
-  </div>
+  </div><!-- /pricing-grid -->
 
   <div class="gc guarantee fu">
     <div class="gico">🛡</div>
@@ -907,6 +1030,70 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 function toggleFaq(btn) { btn.closest('.faq-item').classList.toggle('open'); }
 const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.07 });
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+
+// ── COUNTDOWN TIMER ──
+// Сохраняем deadline в localStorage, чтобы он не сбрасывался при перезагрузке
+(function() {
+  const DURATION_HOURS = 47; // таймер на 47 часов
+  const KEY = 'ai_start_deadline';
+  let deadline = localStorage.getItem(KEY);
+  if (!deadline) {
+    deadline = Date.now() + DURATION_HOURS * 60 * 60 * 1000;
+    localStorage.setItem(KEY, deadline);
+  } else {
+    deadline = parseInt(deadline);
+    // Если дедлайн прошёл — обновляем ещё на столько же
+    if (deadline < Date.now()) {
+      deadline = Date.now() + DURATION_HOURS * 60 * 60 * 1000;
+      localStorage.setItem(KEY, deadline);
+    }
+  }
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function updateTimers() {
+    const diff = Math.max(0, deadline - Date.now());
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    // Top bar
+    const tbH = document.getElementById('tb-h');
+    const tbM = document.getElementById('tb-m');
+    const tbS = document.getElementById('tb-s');
+    if (tbH) tbH.textContent = pad(h);
+    if (tbM) tbM.textContent = pad(m);
+    if (tbS) tbS.textContent = pad(s);
+
+    // Pricing block
+    const ptH = document.getElementById('pt-h');
+    const ptM = document.getElementById('pt-m');
+    const ptS = document.getElementById('pt-s');
+    if (ptH) ptH.textContent = pad(h);
+    if (ptM) ptM.textContent = pad(m);
+    if (ptS) ptS.textContent = pad(s);
+
+    // Animate seconds flip
+    if (s !== updateTimers._prevS) {
+      [tbS, ptS].forEach(el => {
+        if (!el) return;
+        el.style.transform = 'translateY(-4px)';
+        el.style.opacity = '0.6';
+        setTimeout(() => { el.style.transform = ''; el.style.opacity = ''; }, 180);
+      });
+      updateTimers._prevS = s;
+    }
+  }
+  updateTimers._prevS = -1;
+
+  // Add CSS transitions for flip animation
+  const style = document.createElement('style');
+  style.textContent = '.td-num, .pt-num { transition: transform .18s ease, opacity .18s ease; }';
+  document.head.appendChild(style);
+
+  updateTimers();
+  setInterval(updateTimers, 1000);
+})();
 </script>
 </body>
 </html>
