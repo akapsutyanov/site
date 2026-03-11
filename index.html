@@ -378,8 +378,9 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
   border-radius: 36px 36px 0 0; background: var(--gold-shine); background-size: 300% auto; animation: shine 4s linear infinite;
 }
-.cta-panel h2 { font-size: clamp(52px,8vw,88px); letter-spacing: -3px; margin-bottom: 16px; position: relative; }
-.cta-panel p { font-size: 17px; color: var(--ink3); margin-bottom: 40px; max-width: 420px; margin-left: auto; margin-right: auto; position: relative; }
+.cta-panel h2 { font-size: clamp(52px,8vw,88px); letter-spacing: -3px; margin-bottom: 16px; position: relative; z-index: 1; }
+.cta-panel p { font-size: 17px; color: var(--ink3); margin-bottom: 40px; max-width: 420px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+.cta-panel .btn-gold { position: relative; z-index: 1; }
 
 /* ══ PRICING ══ */
 .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
@@ -439,7 +440,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 .prog-icon { margin-bottom: 14px; display: block; }
 .about-illu { width: 100%; height: 180px; display: block; margin-bottom: 20px; border-radius: 14px; overflow: hidden; }
 .illu-full { width: 100%; display: block; border-radius: 14px; margin-bottom: 20px; }
-.cta-illu { position: absolute; right: 60px; top: 50%; transform: translateY(-50%); opacity: 0.12; pointer-events: none; }
+.cta-illu { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); opacity: 0.55; pointer-events: none; z-index: 0; }
 @media (max-width: 960px) { .cta-illu { display: none; } }
 
 /* ══ RESPONSIVE ══ */
