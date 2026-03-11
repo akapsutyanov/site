@@ -434,6 +434,14 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 .fu { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .fu.vis { opacity: 1; transform: none; }
 
+/* ══ SVG ILLUSTRATIONS ══ */
+.card-icon { margin-bottom: 18px; display: block; }
+.prog-icon { margin-bottom: 14px; display: block; }
+.about-illu { width: 100%; height: 180px; display: block; margin-bottom: 20px; border-radius: 14px; overflow: hidden; }
+.illu-full { width: 100%; display: block; border-radius: 14px; margin-bottom: 20px; }
+.cta-illu { position: absolute; right: 60px; top: 50%; transform: translateY(-50%); opacity: 0.12; pointer-events: none; }
+@media (max-width: 960px) { .cta-illu { display: none; } }
+
 /* ══ RESPONSIVE ══ */
 @media (max-width: 960px) {
   nav { width: calc(100% - 28px); padding: 11px 16px; }
@@ -606,6 +614,55 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
     </div>
     <div class="gc acard fu">
       <div class="pill" style="margin-bottom:18px;">Программа 2026</div>
+      <!-- AI Network Illustration -->
+      <svg class="about-illu" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f0c96a" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#d4a843" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="blur1"><feGaussianBlur stdDeviation="3"/></filter>
+        </defs>
+        <!-- Background glow blobs -->
+        <ellipse cx="100" cy="90" rx="60" ry="60" fill="url(#glow1)" filter="url(#blur1)"/>
+        <ellipse cx="300" cy="90" rx="60" ry="60" fill="url(#glow1)" filter="url(#blur1)"/>
+        <!-- Connection lines -->
+        <line x1="100" y1="90" x2="200" y2="45" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="100" y1="90" x2="200" y2="90" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="100" y1="90" x2="200" y2="135" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="200" y1="45" x2="300" y2="90" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="200" y1="90" x2="300" y2="90" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.5"/>
+        <line x1="200" y1="135" x2="300" y2="90" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="200" y1="45" x2="200" y2="135" stroke="#d4a843" stroke-width="0.5" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+        <!-- Satellite nodes -->
+        <line x1="100" y1="90" x2="50" y2="50" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="100" y1="90" x2="48" y2="130" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="300" y1="90" x2="352" y2="50" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="300" y1="90" x2="350" y2="130" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
+        <!-- Outer nodes small -->
+        <circle cx="50" cy="50" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
+        <circle cx="48" cy="130" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
+        <circle cx="352" cy="50" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
+        <circle cx="350" cy="130" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
+        <!-- Mid nodes -->
+        <circle cx="200" cy="45" r="8" fill="rgba(212,168,67,0.12)" stroke="#d4a843" stroke-width="1.2"/>
+        <circle cx="200" cy="135" r="8" fill="rgba(212,168,67,0.12)" stroke="#d4a843" stroke-width="1.2"/>
+        <circle cx="200" cy="90" r="10" fill="rgba(240,201,106,0.15)" stroke="#f0c96a" stroke-width="1.5"/>
+        <!-- Main nodes -->
+        <circle cx="100" cy="90" r="22" fill="rgba(212,168,67,0.08)" stroke="#d4a843" stroke-width="1.5"/>
+        <circle cx="100" cy="90" r="14" fill="rgba(212,168,67,0.12)" stroke="#d4a843" stroke-width="1"/>
+        <text x="100" y="95" text-anchor="middle" font-size="12" fill="#f0c96a" font-weight="700">AI</text>
+        <circle cx="300" cy="90" r="22" fill="rgba(240,201,106,0.1)" stroke="#f0c96a" stroke-width="1.5"/>
+        <circle cx="300" cy="90" r="14" fill="rgba(240,201,106,0.15)" stroke="#f0c96a" stroke-width="1"/>
+        <text x="300" y="95" text-anchor="middle" font-size="10" fill="#f0c96a" font-weight="700">GPT</text>
+        <!-- Animated pulse rings -->
+        <circle cx="100" cy="90" r="28" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5"/>
+        <circle cx="300" cy="90" r="28" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5"/>
+        <!-- Labels -->
+        <text x="200" y="22" text-anchor="middle" font-size="9" fill="#d4a843" fill-opacity="0.7" font-weight="600" letter-spacing="1">CONTENT</text>
+        <text x="200" y="168" text-anchor="middle" font-size="9" fill="#d4a843" fill-opacity="0.7" font-weight="600" letter-spacing="1">WORKFLOW</text>
+        <text x="200" y="94" text-anchor="middle" font-size="8" fill="#f0c96a" fill-opacity="0.8" font-weight="700">SYSTEM</text>
+      </svg>
       <p style="font-size:15px;color:var(--ink2);line-height:1.75;margin-bottom:14px;">Это практический воркшоп — не теория, а живые задания, реальные инструменты и результаты, которые можно показать клиентам уже через 3 дня.</p>
       <p style="font-size:15px;color:var(--ink2);line-height:1.75;margin-bottom:14px;">Александр прошёл путь от нуля до 25 000+ подписчиков через AI-контент и теперь передаёт эту систему участникам.</p>
       <div class="aquote">9 блоков · 3 дня · живые разборы · обратная связь от ментора</div>
@@ -618,12 +675,30 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="pill">Для кого</div>
   <h2>Кому подойдёт <span class="ga">воркшоп</span></h2>
   <div class="for-grid">
-    <div class="gc for-card fu"><div class="for-num">01</div><div class="for-title">Блогер</div><p class="for-desc">Хочешь масштабировать блог и привлекать аудиторию через AI без бесконечного ручного труда.</p></div>
-    <div class="gc for-card fu"><div class="for-num">02</div><div class="for-title">Фрилансер</div><p class="for-desc">Хочешь освоить профессию AI-монтажёра и начать зарабатывать на востребованном навыке.</p></div>
-    <div class="gc for-card fu"><div class="for-num">03</div><div class="for-title">Предприниматель</div><p class="for-desc">Хочешь продвигать бизнес через AI-контент и выстроить поток клиентов без больших вложений.</p></div>
-    <div class="gc for-card fu"><div class="for-num">04</div><div class="for-title">SMM-специалист</div><p class="for-desc">Хочешь добавить AI-инструменты в арсенал и брать более дорогие проекты.</p></div>
-    <div class="gc for-card fu"><div class="for-num">05</div><div class="for-title">Эксперт</div><p class="for-desc">Хочешь выйти в онлайн и начать привлекать клиентов через Reels и AI-контент.</p></div>
-    <div class="gc for-card fu"><div class="for-num">06</div><div class="for-title">Новичок</div><p class="for-desc">Хочешь освоить AI-нишу с нуля и выйти на доход в новой профессии без опыта.</p></div>
+    <div class="gc for-card fu">
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><rect x="8" y="14" width="28" height="20" rx="4" stroke="#d4a843" stroke-width="1.4"/><circle cx="22" cy="24" r="6" stroke="#f0c96a" stroke-width="1.2"/><circle cx="22" cy="24" r="2.5" fill="#d4a843" fill-opacity="0.5"/><path d="M15 14l2.5-3.5h9l2.5 3.5" stroke="#d4a843" stroke-width="1.2"/><circle cx="33" cy="18" r="1.8" fill="#f0c96a"/></svg>
+      <div class="for-num">01</div><div class="for-title">Блогер</div><p class="for-desc">Хочешь масштабировать блог и привлекать аудиторию через AI без бесконечного ручного труда.</p>
+    </div>
+    <div class="gc for-card fu">
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><rect x="7" y="11" width="30" height="19" rx="3" stroke="#d4a843" stroke-width="1.4"/><path d="M4 34h36" stroke="#f0c96a" stroke-width="1.4" stroke-linecap="round"/><path d="M15 34l-1.5 3.5h15L27 34" stroke="#d4a843" stroke-width="1.2"/><path d="M13 19h8M13 23h12" stroke="#f0c96a" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/><rect x="27" y="16" width="5" height="5" rx="1" fill="#d4a843" fill-opacity="0.25" stroke="#d4a843" stroke-width="1"/></svg>
+      <div class="for-num">02</div><div class="for-title">Фрилансер</div><p class="for-desc">Хочешь освоить профессию AI-монтажёра и начать зарабатывать на востребованном навыке.</p>
+    </div>
+    <div class="gc for-card fu">
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><rect x="8" y="19" width="28" height="18" rx="2" stroke="#d4a843" stroke-width="1.4"/><path d="M15 19v-6l7-3.5 7 3.5v6" stroke="#f0c96a" stroke-width="1.3"/><rect x="13" y="25" width="5" height="5" rx="1" stroke="#d4a843" stroke-width="1.1"/><rect x="26" y="25" width="5" height="5" rx="1" stroke="#d4a843" stroke-width="1.1"/><rect x="19" y="28" width="6" height="9" rx="1" stroke="#f0c96a" stroke-width="1.1"/></svg>
+      <div class="for-num">03</div><div class="for-title">Предприниматель</div><p class="for-desc">Хочешь продвигать бизнес через AI-контент и выстроить поток клиентов без больших вложений.</p>
+    </div>
+    <div class="gc for-card fu">
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><path d="M7 34h30" stroke="#d4a843" stroke-width="1.4" stroke-linecap="round"/><path d="M7 10v24" stroke="#d4a843" stroke-width="1.4" stroke-linecap="round"/><path d="M11 28l8-10 8 6 9-14" stroke="#f0c96a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="28" r="2" fill="#d4a843"/><circle cx="19" cy="18" r="2" fill="#d4a843"/><circle cx="27" cy="24" r="2" fill="#d4a843"/><circle cx="36" cy="10" r="2.5" fill="#f0c96a"/></svg>
+      <div class="for-num">04</div><div class="for-title">SMM-специалист</div><p class="for-desc">Хочешь добавить AI-инструменты в арсенал и брать более дорогие проекты.</p>
+    </div>
+    <div class="gc for-card fu">
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><polygon points="22,7 25,17 36,17 27,23 30,33 22,27 14,33 17,23 8,17 19,17" stroke="#d4a843" stroke-width="1.4" fill="rgba(212,168,67,0.07)"/><polygon points="22,11 24.5,18.5 32.5,18.5 26,23 28.5,30.5 22,26 15.5,30.5 18,23 11.5,18.5 19.5,18.5" fill="#d4a843" fill-opacity="0.22"/></svg>
+      <div class="for-num">05</div><div class="for-title">Эксперт</div><p class="for-desc">Хочешь выйти в онлайн и начать привлекать клиентов через Reels и AI-контент.</p>
+    </div>
+    <div class="gc for-card fu">
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><path d="M22 7s10 3.5 10 13v8l-10 7-10-7V20C12 10.5 22 7 22 7z" stroke="#d4a843" stroke-width="1.4" fill="rgba(212,168,67,0.06)"/><circle cx="22" cy="20" r="3.5" stroke="#f0c96a" stroke-width="1.3"/><path d="M17 35l-3 3M27 35l3 3" stroke="#d4a843" stroke-width="1.3" stroke-linecap="round"/><path d="M19 38c1.5 1.5 5.5 1.5 7 0" stroke="#f0c96a" stroke-width="1.1" stroke-linecap="round"/></svg>
+      <div class="for-num">06</div><div class="for-title">Новичок</div><p class="for-desc">Хочешь освоить AI-нишу с нуля и выйти на доход в новой профессии без опыта.</p>
+    </div>
   </div>
 </section>
 
@@ -649,14 +724,21 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <h2>9 блоков <span class="ga">воркшопа</span></h2>
   <p class="desc">Каждый блок — конкретный результат, а не теория</p>
   <div class="prog-grid">
-    <div class="gc pcard fu"><div class="ptag">Блок 01</div><h3>Актуальность и заработок</h3><ul class="plist"><li>Почему AI-контент — это тренд 2026</li><li>Сколько зарабатывают AI-монтажёры сейчас</li><li>Какие ниши работают лучше всего</li><li>Твои первые шаги в профессии</li></ul><div class="presult">→ Понимаешь рынок и видишь точку входа</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блок 02</div><h3>Работа с ChatGPT</h3><ul class="plist"><li>Промпты для создания вирусных сценариев</li><li>GPT как редактор и генератор идей</li><li>Автоматизация рутины через AI</li><li>Практические шаблоны для Reels</li></ul><div class="presult">→ ChatGPT работает на тебя 24/7</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блок 03</div><h3>Создание ИИ-агента</h3><ul class="plist"><li>Что такое AI-агент и зачем он нужен</li><li>Настройка персонального AI-помощника</li><li>Автогенерация контента под твой стиль</li><li>Масштабирование производства контента</li></ul><div class="presult">→ Твой личный AI-агент готов к работе</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блок 04</div><h3>Упаковка блога</h3><ul class="plist"><li>Структура профиля, которая продаёт</li><li>Контент-план через AI за 10 минут</li><li>Воронка: подписчик → клиент</li><li>Личный бренд с лицом и без лица</li></ul><div class="presult">→ Блог упакован и готов привлекать клиентов</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блок 05</div><h3>Работа с Syntx</h3><ul class="plist"><li>Обзор инструмента для AI-монтажа</li><li>Создание первого AI-ролика в Syntx</li><li>Шаблоны и эффекты для вирального контента</li><li>Оптимизация рабочего процесса</li></ul><div class="presult">→ Первый AI-ролик смонтирован</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блок 06</div><h3>Первые деньги</h3><ul class="plist"><li>Где искать первых клиентов на AI-монтаж</li><li>Как упаковать услугу и назначить цену</li><li>Продающее портфолио за 1 день</li><li>Скрипт переговоров с клиентом</li></ul><div class="presult">→ Первые заявки и оферта готовы</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блоки 07–08</div><h3>Монетизация и стратегия</h3><ul class="plist"><li>Продуктовая линейка AI-контент-мейкера</li><li>Масштабирование: от фриланса к агентству</li><li>Пассивный доход через AI-продукты</li><li>Долгосрочная стратегия роста блога</li></ul><div class="presult">→ Система масштабирования выстроена</div></div>
-    <div class="gc pcard fu"><div class="ptag">Блок 09</div><h3>Топ-10 ошибок + фишки Саши</h3><ul class="plist"><li>Разбор главных ошибок новичков</li><li>Инсайты из личного опыта Александра</li><li>Фишки для быстрого роста без бюджета</li><li>Q&A: ответы на вопросы участников</li></ul><div class="presult">→ Экономишь месяцы проб и ошибок</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="24" width="6" height="12" rx="1.5" fill="#d4a843" fill-opacity="0.5" stroke="#d4a843" stroke-width="1"/><rect x="13" y="18" width="6" height="18" rx="1.5" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/><rect x="22" y="10" width="6" height="26" rx="1.5" fill="#f0c96a" fill-opacity="0.4" stroke="#f0c96a" stroke-width="1"/><rect x="31" y="4" width="6" height="32" rx="1.5" fill="#f0c96a" fill-opacity="0.6" stroke="#f0c96a" stroke-width="1"/><path d="M4 38h34" stroke="#d4a843" stroke-width="1" stroke-opacity="0.4"/></svg><div class="ptag">Блок 01</div><h3>Актуальность и заработок</h3><ul class="plist"><li>Почему AI-контент — это тренд 2026</li><li>Сколько зарабатывают AI-монтажёры сейчас</li><li>Какие ниши работают лучше всего</li><li>Твои первые шаги в профессии</li></ul><div class="presult">→ Понимаешь рынок и видишь точку входа</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="26" height="20" rx="4" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.06)"/><path d="M8 28l-4 6 6-2" stroke="#d4a843" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22" y1="14" x2="28" y2="14"/><path d="M9 14h14M9 18h10" stroke="#f0c96a" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/><circle cx="30" cy="28" r="8" fill="rgba(240,201,106,0.1)" stroke="#f0c96a" stroke-width="1.3"/><path d="M27 28l2 2 4-4" stroke="#f0c96a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ptag">Блок 02</div><h3>Работа с ChatGPT</h3><ul class="plist"><li>Промпты для создания вирусных сценариев</li><li>GPT как редактор и генератор идей</li><li>Автоматизация рутины через AI</li><li>Практические шаблоны для Reels</li></ul><div class="presult">→ ChatGPT работает на тебя 24/7</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="12" width="20" height="20" rx="4" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.06)"/><circle cx="15" cy="19" r="2" fill="#f0c96a"/><circle cx="25" cy="19" r="2" fill="#f0c96a"/><path d="M15 25c0 0 2 2 5 2s5-2 5-2" stroke="#f0c96a" stroke-width="1.2" stroke-linecap="round"/><path d="M14 12V8M26 12V8" stroke="#d4a843" stroke-width="1.3" stroke-linecap="round"/><path d="M10 20H6M34 20H30" stroke="#d4a843" stroke-width="1.1" stroke-linecap="round" opacity="0.6"/><circle cx="20" cy="4" r="2" fill="#d4a843" fill-opacity="0.5" stroke="#d4a843" stroke-width="0.8"/><path d="M20 6v2" stroke="#d4a843" stroke-width="1" stroke-linecap="round"/></svg><div class="ptag">Блок 03</div><h3>Создание ИИ-агента</h3><ul class="plist"><li>Что такое AI-агент и зачем он нужен</li><li>Настройка персонального AI-помощника</li><li>Автогенерация контента под твой стиль</li><li>Масштабирование производства контента</li></ul><div class="presult">→ Твой личный AI-агент готов к работе</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="15" height="15" rx="2.5" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.07)"/><rect x="21" y="4" width="15" height="15" rx="2.5" stroke="#f0c96a" stroke-width="1.3" fill="rgba(240,201,106,0.07)"/><rect x="4" y="21" width="15" height="15" rx="2.5" stroke="#f0c96a" stroke-width="1.3" fill="rgba(240,201,106,0.07)"/><rect x="21" y="21" width="15" height="15" rx="2.5" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.07)"/><path d="M9 11.5h5M9 13.5h3" stroke="#d4a843" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M26 11.5h5M26 13.5h3" stroke="#f0c96a" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M9 28.5h5M9 30.5h3" stroke="#f0c96a" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M26 28.5h5M26 30.5h3" stroke="#d4a843" stroke-width="1" stroke-linecap="round" opacity="0.7"/></svg><div class="ptag">Блок 04</div><h3>Упаковка блога</h3><ul class="plist"><li>Структура профиля, которая продаёт</li><li>Контент-план через AI за 10 минут</li><li>Воронка: подписчик → клиент</li><li>Личный бренд с лицом и без лица</li></ul><div class="presult">→ Блог упакован и готов привлекать клиентов</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="28" height="24" rx="3" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.06)"/><polygon points="18,14 18,26 28,20" fill="#f0c96a" fill-opacity="0.7" stroke="#f0c96a" stroke-width="1"/><path d="M35 12v16" stroke="#d4a843" stroke-width="2" stroke-linecap="round"/><path d="M4 16h3M4 20h3M4 24h3" stroke="#d4a843" stroke-width="1" stroke-linecap="round" opacity="0.4"/></svg><div class="ptag">Блок 05</div><h3>Работа с Syntx</h3><ul class="plist"><li>Обзор инструмента для AI-монтажа</li><li>Создание первого AI-ролика в Syntx</li><li>Шаблоны и эффекты для вирального контента</li><li>Оптимизация рабочего процесса</li></ul><div class="presult">→ Первый AI-ролик смонтирован</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="16" rx="12" ry="10" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.07)"/><path d="M8 16c0 5.5 5.4 10 12 10s12-4.5 12-10" stroke="#d4a843" stroke-width="1.2"/><path d="M8 20c0 5.5 5.4 10 12 10s12-4.5 12-10" stroke="#f0c96a" stroke-width="1.2"/><path d="M8 24c0 5.5 5.4 9 12 9s12-3.5 12-9" stroke="#d4a843" stroke-width="1" stroke-opacity="0.5"/><line x1="20" y1="6" x2="20" y2="33" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.4"/><line x1="8" y1="16" x2="32" y2="16" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/></svg><div class="ptag">Блок 06</div><h3>Первые деньги</h3><ul class="plist"><li>Где искать первых клиентов на AI-монтаж</li><li>Как упаковать услугу и назначить цену</li><li>Продающее портфолио за 1 день</li><li>Скрипт переговоров с клиентом</li></ul><div class="presult">→ Первые заявки и оферта готовы</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 34l8-12 7 5 9-16 6 8" stroke="#f0c96a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="34" r="2.5" fill="#d4a843"/><circle cx="14" cy="22" r="2.5" fill="#d4a843"/><circle cx="21" cy="27" r="2.5" fill="#d4a843"/><circle cx="30" cy="11" r="2.5" fill="#f0c96a"/><path d="M30 11l6-5M30 11h5" stroke="#f0c96a" stroke-width="1.3" stroke-linecap="round"/><path d="M4 36h32" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/></svg><div class="ptag">Блоки 07–08</div><h3>Монетизация и стратегия</h3><ul class="plist"><li>Продуктовая линейка AI-контент-мейкера</li><li>Масштабирование: от фриланса к агентству</li><li>Пассивный доход через AI-продукты</li><li>Долгосрочная стратегия роста блога</li></ul><div class="presult">→ Система масштабирования выстроена</div></div>
+
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4l2.5 8h8.5l-7 5 2.5 8-7-5-7 5 2.5-8-7-5h8.5z" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.08)"/><circle cx="20" cy="15" r="4" fill="#d4a843" fill-opacity="0.2"/><path d="M14 30h12M16 34h8" stroke="#f0c96a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/><circle cx="20" cy="4" r="1.5" fill="#f0c96a" fill-opacity="0.6"/></svg><div class="ptag">Блок 09</div><h3>Топ-10 ошибок + фишки Саши</h3><ul class="plist"><li>Разбор главных ошибок новичков</li><li>Инсайты из личного опыта Александра</li><li>Фишки для быстрого роста без бюджета</li><li>Q&A: ответы на вопросы участников</li></ul><div class="presult">→ Экономишь месяцы проб и ошибок</div></div>
   </div>
 </section>
 
@@ -696,6 +778,24 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 <!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-panel">
+    <!-- Decorative SVG orb -->
+    <svg class="cta-illu" width="320" height="320" viewBox="0 0 320 320" fill="none">
+      <circle cx="160" cy="160" r="140" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.5"/>
+      <circle cx="160" cy="160" r="110" stroke="#d4a843" stroke-width="0.5" stroke-opacity="0.35" stroke-dasharray="6 6"/>
+      <circle cx="160" cy="160" r="80" stroke="#f0c96a" stroke-width="0.6" stroke-opacity="0.3"/>
+      <circle cx="160" cy="160" r="50" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
+      <circle cx="160" cy="160" r="22" fill="rgba(212,168,67,0.15)" stroke="#f0c96a" stroke-width="1"/>
+      <text x="160" y="166" text-anchor="middle" font-size="14" fill="#f0c96a" font-weight="800" opacity="0.8">AI</text>
+      <!-- Orbital dots -->
+      <circle cx="160" cy="20" r="5" fill="#d4a843" fill-opacity="0.5"/>
+      <circle cx="300" cy="160" r="5" fill="#f0c96a" fill-opacity="0.5"/>
+      <circle cx="160" cy="300" r="5" fill="#d4a843" fill-opacity="0.5"/>
+      <circle cx="20" cy="160" r="5" fill="#f0c96a" fill-opacity="0.5"/>
+      <circle cx="259" cy="61" r="4" fill="#d4a843" fill-opacity="0.35"/>
+      <circle cx="259" cy="259" r="4" fill="#d4a843" fill-opacity="0.35"/>
+      <circle cx="61" cy="259" r="4" fill="#d4a843" fill-opacity="0.35"/>
+      <circle cx="61" cy="61" r="4" fill="#d4a843" fill-opacity="0.35"/>
+    </svg>
     <h2>Войди в нишу <span class="gold-text">AI-контента</span></h2>
     <p>Присоединяйся к воркшопу и получи профессию AI-креатора уже в этом месяце</p>
     <a href="#pricing" class="btn-gold">Забрать место сейчас →</a>
