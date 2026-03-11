@@ -108,6 +108,96 @@ nav {
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(212,168,67,0.55); }
 
+/* ══ BURGER ══ */
+.burger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; width: 38px; height: 38px;
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.22);
+  border-radius: 10px; cursor: pointer; padding: 0;
+  transition: background .2s;
+}
+.burger:hover { background: rgba(212,168,67,0.16); }
+.burger span {
+  display: block; width: 18px; height: 1.5px;
+  background: var(--g2); border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ══ MOBILE OVERLAY ══ */
+.mob-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1998;
+  background: rgba(0,0,0,0.65); backdrop-filter: blur(4px);
+  opacity: 0; transition: opacity .3s;
+}
+.mob-overlay.show { opacity: 1; }
+
+/* ══ MOBILE SLIDE MENU ══ */
+.mob-menu {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 1999;
+  width: 280px; max-width: 80vw;
+  background: rgba(8,5,1,0.97);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border-left: 1px solid rgba(212,168,67,0.22);
+  box-shadow: -20px 0 60px rgba(0,0,0,0.7);
+  display: flex; flex-direction: column;
+  padding: 0 0 40px;
+  transform: translateX(100%);
+  transition: transform .4s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.mob-menu.open { transform: translateX(0); }
+
+.mob-menu-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(212,168,67,0.12);
+}
+.mob-logo {
+  font-size: 13px; font-weight: 800; letter-spacing: 2px;
+  background: var(--gold-shine); background-size: 200% auto;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; animation: shine 5s linear infinite;
+}
+.mob-close {
+  background: rgba(212,168,67,0.08); border: 1px solid rgba(212,168,67,0.20);
+  border-radius: 8px; color: var(--g2); font-size: 20px; line-height: 1;
+  width: 34px; height: 34px; cursor: pointer; transition: background .2s;
+}
+.mob-close:hover { background: rgba(212,168,67,0.18); }
+
+.mob-links {
+  list-style: none; display: flex; flex-direction: column;
+  padding: 16px 16px 0; gap: 4px; flex: 1;
+}
+.mob-links li a {
+  display: block; padding: 14px 16px; border-radius: 12px;
+  font-size: 16px; font-weight: 600; color: var(--ink2);
+  text-decoration: none; letter-spacing: -0.3px;
+  transition: background .2s, color .2s, transform .2s;
+  border: 1px solid transparent;
+}
+.mob-links li a:hover {
+  background: rgba(212,168,67,0.08);
+  border-color: rgba(212,168,67,0.18);
+  color: var(--g2); transform: translateX(4px);
+}
+.mob-cta {
+  display: block; margin: 16px 16px 0;
+  padding: 16px; border-radius: 14px; text-align: center;
+  font-size: 15px; font-weight: 800; text-decoration: none;
+  background: var(--gold-soft); color: #0a0700;
+  -webkit-text-fill-color: #0a0700;
+  box-shadow: 0 8px 28px rgba(180,130,30,0.45);
+  transition: transform .2s, box-shadow .2s;
+  letter-spacing: -0.2px;
+}
+.mob-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(212,168,67,0.58); }
+
 /* ══ HERO ══ */
 .hero {
   min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
@@ -664,6 +754,9 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 
 @media (max-width: 960px) {
   nav { width: calc(100% - 28px); padding: 11px 16px; top: 56px; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .burger { display: flex; }
   section { padding: 72px 20px; }
 
   /* Hero: single column, video below text */
@@ -800,7 +893,27 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#pricing" class="nav-cta">Забрать место</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeMenu()"></div>
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-menu-head">
+    <span class="mob-logo">AKAPUSTYANOV</span>
+    <button class="mob-close" onclick="closeMenu()">×</button>
+  </div>
+  <ul class="mob-links">
+    <li><a href="#about"   onclick="closeMenu()">О воркшопе</a></li>
+    <li><a href="#program" onclick="closeMenu()">Программа</a></li>
+    <li><a href="#speaker" onclick="closeMenu()">Спикер</a></li>
+    <li><a href="#pricing" onclick="closeMenu()">Тарифы</a></li>
+    <li><a href="#faq"     onclick="closeMenu()">FAQ</a></li>
+  </ul>
+  <a href="#pricing" class="mob-cta" onclick="closeMenu()">Забрать место →</a>
+</div>
 
 <!-- HERO -->
 <div style="position:relative;z-index:1;">
@@ -1181,6 +1294,33 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 
 <script>
 function toggleFaq(btn) { btn.closest('.faq-item').classList.toggle('open'); }
+
+function toggleMenu() {
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('mobMenu');
+  const overlay = document.getElementById('mobOverlay');
+  const isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    closeMenu();
+  } else {
+    burger.classList.add('open');
+    menu.classList.add('open');
+    overlay.style.display = 'block';
+    requestAnimationFrame(() => overlay.classList.add('show'));
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeMenu() {
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('mobMenu');
+  const overlay = document.getElementById('mobOverlay');
+  burger.classList.remove('open');
+  menu.classList.remove('open');
+  overlay.classList.remove('show');
+  document.body.style.overflow = '';
+  setTimeout(() => { overlay.style.display = 'none'; }, 300);
+}
 const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.07 });
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 
