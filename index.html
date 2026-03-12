@@ -204,6 +204,29 @@ nav {
   align-items: center; gap: 60px; padding: 180px 64px 100px;
   max-width: 1280px; margin: 0 auto; position: relative; z-index: 1;
 }
+/* Funnel variant — single column centered */
+.hero.hero-funnel {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+  padding: 160px 64px 80px;
+  text-align: center;
+  gap: 28px;
+}
+.hero-funnel-top { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.hero-funnel-top h1 { font-size: clamp(44px,7vw,80px); }
+.hero-funnel-video {
+  width: 100%; position: relative;
+}
+.hero-funnel-bottom { width: 100%; display: flex; flex-direction: column; gap: 20px; }
+.hero-funnel-cta {
+  padding: 28px 32px; border-radius: 20px;
+  background: rgba(212,168,67,0.06);
+  border: 1px solid rgba(212,168,67,0.18);
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.hero-funnel-cta-text {
+  font-size: 15px; color: var(--ink2); margin: 0; text-align: center;
+}
 .hero-left { display: flex; flex-direction: column; align-items: flex-start; }
 
 .hero-eyebrow {
@@ -271,7 +294,90 @@ nav {
   filter: blur(28px); z-index: 1; animation: pulse 5s ease-in-out infinite;
 }
 
-/* ══ HERO PLAYER ══ */
+/* ══ SPEAKER TRUST STRIP ══ */
+.speaker-strip-section { padding: 0 64px 20px; position: relative; z-index: 1; }
+.speaker-strip {
+  display: flex; align-items: center; gap: 20px;
+  padding: 18px 28px; border-radius: 20px; flex-wrap: wrap;
+}
+.sp-strip-avatar {
+  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; overflow: hidden;
+  border: 2px solid rgba(212,168,67,0.4);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.sp-strip-body { flex: 1; min-width: 160px; }
+.sp-strip-name { font-size: 15px; font-weight: 800; color: var(--ink); }
+.sp-strip-title { font-size: 12px; color: var(--ink3); margin-top: 2px; }
+.sp-strip-stats { display: flex; gap: 24px; }
+.sp-strip-stat { display: flex; flex-direction: column; align-items: center; }
+.sp-strip-n {
+  font-size: 18px; font-weight: 800; letter-spacing: -0.5px;
+  background: var(--gold-soft); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+}
+.sp-strip-l { font-size: 10px; color: var(--ink4); font-weight: 500; white-space: nowrap; }
+
+/* ══ REVIEWS ══ */
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px;
+}
+.review-card { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.review-stars { color: #f0c96a; font-size: 14px; letter-spacing: 2px; }
+.review-text { font-size: 14px; color: var(--ink2); line-height: 1.7; flex: 1; margin: 0; }
+.review-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.review-ava {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(212,168,67,0.25), rgba(160,120,40,0.15));
+  border: 1.5px solid rgba(212,168,67,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 800; color: var(--g2);
+}
+.review-name { font-size: 13px; font-weight: 700; color: var(--ink); }
+.review-city { font-size: 11px; color: var(--ink4); margin-top: 1px; }
+
+/* ══ STICKY VIDEO CTA BAR ══ */
+.sticky-cta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 2500;
+  background: rgba(8,5,1,0.95);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(212,168,67,0.25);
+  padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  transform: translateY(100%);
+  transition: transform .5s cubic-bezier(0.32,0.72,0,1);
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.5);
+}
+.sticky-cta-bar.show { transform: translateY(0); }
+.sticky-cta-text { font-size: 15px; font-weight: 700; color: var(--ink); }
+.sticky-cta-text span { color: var(--g2); }
+.sticky-cta-close {
+  background: none; border: none; color: var(--ink4);
+  font-size: 22px; cursor: pointer; padding: 4px; line-height: 1;
+  transition: color .2s; flex-shrink: 0;
+}
+.sticky-cta-close:hover { color: var(--g2); }
+@media (max-width: 600px) {
+  .sticky-cta-bar { padding: 12px 16px; flex-wrap: wrap; }
+  .sticky-cta-text { font-size: 13px; }
+  .speaker-strip-section { padding: 0 16px 16px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 960px) {
+  .reviews-grid { grid-template-columns: 1fr 1fr; }
+  .speaker-strip-section { padding: 0 20px 16px; }
+}
+
+/* ══ HERO FUNNEL RESPONSIVE ══ */
+@media (max-width: 960px) {
+  .hero.hero-funnel { padding: 160px 20px 60px; }
+}
+@media (max-width: 600px) {
+  .hero.hero-funnel { padding: 140px 16px 40px; }
+  .hero-funnel-cta { padding: 20px 16px; }
+  .hero-stats-row { flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .hstat-div { display: none; }
+  .hstat { min-width: 80px; }
+}
 .hero-player-wrap {
   position: relative; width: 100%; z-index: 3;
   display: flex; flex-direction: column; gap: 16px;
@@ -895,6 +1001,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <a href="#" class="nav-logo">AKAPUSTYANOV</a>
   <ul class="nav-links">
     <li><a href="#about">О воркшопе</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
     <li><a href="#program">Программа</a></li>
     <li><a href="#speaker">Спикер</a></li>
     <li><a href="#pricing">Тарифы</a></li>
@@ -916,6 +1023,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   </div>
   <ul class="mob-links">
     <li><a href="#about"   onclick="closeMenu()">О воркшопе</a></li>
+    <li><a href="#reviews" onclick="closeMenu()">Отзывы</a></li>
     <li><a href="#program" onclick="closeMenu()">Программа</a></li>
     <li><a href="#speaker" onclick="closeMenu()">Спикер</a></li>
     <li><a href="#pricing" onclick="closeMenu()">Тарифы</a></li>
@@ -927,52 +1035,125 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 
 <!-- HERO -->
 <div style="position:relative;z-index:1;">
-<div class="hero">
-  <div class="hero-left">
+<div class="hero hero-funnel">
+  <div class="hero-funnel-top fu">
     <div class="hero-eyebrow">
       <div class="eyebrow-dot"></div>
-      Воркшоп · 2026 · Онлайн
+      Бесплатный урок · Специально для тебя
     </div>
-    <h1>Освой<br><span class="gold-text">AI-Старт</span><br>за 3 дня</h1>
-    <p class="hero-sub">Воркшоп для тех, кто хочет войти в нишу <strong>AI-контента</strong> и начать зарабатывать. Без опыта, без рекламного бюджета, с телефона.</p>
-    <div class="hero-chips">
-      <div class="chip"><span class="chip-label">Формат</span><span class="chip-value">Онлайн</span></div>
-      <div class="chip"><span class="chip-label">Блоков</span><span class="chip-value">9</span></div>
-      <div class="chip"><span class="chip-label">Аудитория</span><span class="chip-value">25K+</span></div>
-    </div>
-    <div class="hero-btns">
-      <a href="#pricing" class="btn-gold">Забрать место →</a>
-      <a href="#program" class="btn-ghost">Программа</a>
+    <h1>Твой бесплатный<br>урок <span class="gold-text">готов 👇</span></h1>
+    <p class="hero-sub">Смотри как Александр с нуля строит систему AI-контента, которая привлекает клиентов без рекламного бюджета</p>
+  </div>
+
+  <div class="hero-funnel-video fu">
+    <div class="hero-player-glow"></div>
+    <div class="hero-player-frame">
+      <iframe
+        src="https://kinescope.io/embed/eiPKfer7jkjNesqYP2Sm2h"
+        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        frameborder="0" scrolling="no"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:20px;">
+      </iframe>
     </div>
   </div>
 
-  <div class="hero-right">
-    <div class="hero-player-wrap">
-      <div class="hero-player-glow"></div>
-      <div class="hero-player-frame">
-        <iframe
-          src="https://kinescope.io/embed/eiPKfer7jkjNesqYP2Sm2h"
-          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          frameborder="0"
-          scrolling="no"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:20px;">
-        </iframe>
-      </div>
-      <div class="hero-stats-row">
-        <div class="hstat"><div class="hstat-val g">25 000+</div><div class="hstat-label">Подписчиков</div></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><div class="hstat-val g">100M+</div><div class="hstat-label">Просмотров</div></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><div class="hstat-val">🤖 Активен</div><div class="hstat-label">AI-агент</div></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><div class="hstat-val">0 ₽</div><div class="hstat-label">Рекламный бюджет</div></div>
+  <div class="hero-funnel-bottom fu">
+    <div class="hero-stats-row">
+      <div class="hstat"><div class="hstat-val g">25 000+</div><div class="hstat-label">Подписчиков</div></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><div class="hstat-val g">100M+</div><div class="hstat-label">Просмотров</div></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><div class="hstat-val">🤖 Активен</div><div class="hstat-label">AI-агент</div></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><div class="hstat-val">0 ₽</div><div class="hstat-label">Рекламный бюджет</div></div>
+    </div>
+    <div class="hero-funnel-cta">
+      <p class="hero-funnel-cta-text">Понравился урок? Забирай полную программу по стартовой цене</p>
+      <div class="hero-btns" style="justify-content:center;">
+        <a href="#pricing" class="btn-gold">Хочу полный курс →</a>
+        <a href="#program" class="btn-ghost">Смотреть программу</a>
       </div>
     </div>
   </div>
 </div>
 </div>
+
+<!-- SPEAKER TRUST STRIP -->
+<section class="speaker-strip-section">
+  <div class="speaker-strip gc fu">
+    <div class="sp-strip-avatar">
+      <img src="avatar.png" alt="Александр Капустьянов" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:50%;">
+    </div>
+    <div class="sp-strip-body">
+      <div class="sp-strip-name">Александр Капустьянов</div>
+      <div class="sp-strip-title">AI-креатор · 25 000+ подписчиков · 100M+ просмотров</div>
+    </div>
+    <div class="sp-strip-stats">
+      <div class="sp-strip-stat"><span class="sp-strip-n">9 мес</span><span class="sp-strip-l">без рекламы</span></div>
+      <div class="sp-strip-stat"><span class="sp-strip-n">0 ₽</span><span class="sp-strip-l">бюджет</span></div>
+      <div class="sp-strip-stat"><span class="sp-strip-n">3 дня</span><span class="sp-strip-l">до результата</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="pill">Отзывы</div>
+  <h2>Что говорят <span class="ga">участники</span></h2>
+  <p class="desc">Реальные результаты людей, которые уже прошли воркшоп</p>
+  <div class="reviews-grid">
+    <div class="gc review-card fu">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Я вообще не понимала что такое AI-контент. После 1 дня воркшопа сделала первый ролик — он набрал 40 000 просмотров. Это реально работает без бюджета!»</p>
+      <div class="review-author">
+        <div class="review-ava">М</div>
+        <div><div class="review-name">Мария Д.</div><div class="review-city">Москва · тариф Практика</div></div>
+      </div>
+    </div>
+    <div class="gc review-card fu">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Уже через 3 дня после воркшопа взял первого клиента на AI-монтаж за 8 000 ₽. Окупил курс в 4 раза. Саша даёт конкретные инструменты, не воду.»</p>
+      <div class="review-author">
+        <div class="review-ava">А</div>
+        <div><div class="review-name">Артём К.</div><div class="review-city">СПб · тариф Результат</div></div>
+      </div>
+    </div>
+    <div class="gc review-card fu">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Думала что это "очередной курс". Но нет — здесь реальная система. За месяц вышла на 12К подписчиков в Reels через AI. Теперь продаю свои консультации через блог.»</p>
+      <div class="review-author">
+        <div class="review-ava">О</div>
+        <div><div class="review-name">Ольга Р.</div><div class="review-city">Краснодар · тариф Практика</div></div>
+      </div>
+    </div>
+    <div class="gc review-card fu">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Я смотрел похожие курсы раньше — там было много теории. Здесь уже на 2-й день сделал AI-ролик с нуля. ChatGPT + Syntx = реально быстрый контент.»</p>
+      <div class="review-author">
+        <div class="review-ava">Д</div>
+        <div><div class="review-name">Дмитрий В.</div><div class="review-city">Новосибирск · тариф База</div></div>
+      </div>
+    </div>
+    <div class="gc review-card fu">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«У меня узкая ниша — строительство. Саша показал как адаптировать AI-контент под любую тему. Уже получаю заявки через Reels без таргета.»</p>
+      <div class="review-author">
+        <div class="review-ava">И</div>
+        <div><div class="review-name">Игорь М.</div><div class="review-city">Казань · тариф Результат</div></div>
+      </div>
+    </div>
+    <div class="gc review-card fu">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Совмещаю воркшоп с основной работой. Уроки компактные, всё по делу. За 3 вечера освоила инструменты и уже веду первый AI-проект для клиента.»</p>
+      <div class="review-author">
+        <div class="review-ava">Е</div>
+        <div><div class="review-name">Екатерина Л.</div><div class="review-city">Екатеринбург · тариф Практика</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
@@ -1313,11 +1494,12 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="pill">FAQ</div>
   <h2>Частые <span class="ga">вопросы</span></h2>
   <div class="faq-list">
-    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">У меня очень необычная и узкая ниша. Подойдёт ли мне метод?<span class="faq-ico">+</span></button><div class="faq-a"><p>Да, методика опробована на всех нишах и даже сложных/узких. Результат одинаково хорош в любой теме.</p></div></div>
-    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Могу ли я оплатить воркшоп в рассрочку?<span class="faq-ico">+</span></button><div class="faq-a"><p>Да, можно оплатить тарифы в рассрочку через все доступные банки: Сбер, Т-Банк, МТС, Сплит.</p></div></div>
-    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Есть ли гарантия на воркшоп?<span class="faq-ico">+</span></button><div class="faq-a"><p>Да. Если методика не устроит, можно оформить возврат в течение 7 дней без лишних вопросов.</p></div></div>
-    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Я совсем новичок без опыта. Подойдёт ли мне это?<span class="faq-ico">+</span></button><div class="faq-a"><p>Да. Пошаговая стратегия очень проста в освоении. Просто повторяешь шаги и достигаешь результата — специального опыта не нужно.</p></div></div>
-    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">У меня семья и работа — успею ли я внедрить метод?<span class="faq-ico">+</span></button><div class="faq-a"><p>Да. Система построена так, что вы сможете совмещать воркшоп с другими делами. Многие участники прошли обучение параллельно с полной занятостью.</p></div></div>
+    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Я уже смотрел похожие курсы по AI — чем это отличается?<span class="faq-ico">+</span></button><div class="faq-a"><p>Большинство курсов дают теорию — «что такое нейросети» и «какие инструменты существуют». Здесь ты за 3 дня делаешь конкретный результат: готовый AI-ролик, упакованный блог и первые заявки. Никакой воды — только шаги, которые уже сработали на 25 000+ подписчиках.</p></div></div>
+    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Почему так дёшево? Что не так с курсом?<span class="faq-ico">+</span></button><div class="faq-a"><p>Это стартовая цена первых дней — Александр намеренно снижает порог входа, чтобы как можно больше людей получили результат и стали частью комьюнити. После окончания акции цена вырастет минимум в 3 раза. Плюс есть гарантия возврата за 7 дней — риска ноль.</p></div></div>
+    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Это работает в моей нише? У меня специфичная тема.<span class="faq-ico">+</span></button><div class="faq-a"><p>Да. Система проверена на десятках ниш: строительство, психология, юридические услуги, фитнес, B2B, хэндмейд и другие. AI-контент работает в любой теме — алгоритмы платформ не разбираются в нишах, им важна вовлечённость. Именно её ты и научишься создавать.</p></div></div>
+    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">У меня нет времени — работа, семья. Успею ли я?<span class="faq-ico">+</span></button><div class="faq-a"><p>Воркшоп рассчитан на 2–3 часа в день. Большинство участников проходят его в режиме «вечерами после работы». Доступ к материалам остаётся навсегда — можно смотреть в удобном темпе.</p></div></div>
+    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Я полный новичок, не разбираюсь в технологиях.<span class="faq-ico">+</span></button><div class="faq-a"><p>Идеально. Воркшоп разработан именно для тех, кто начинает с нуля. Александр объясняет каждый шаг на пальцах — никаких технических знаний не нужно. Нужен только телефон или ноутбук и желание попробовать.</p></div></div>
+    <div class="gc faq-item"><button class="faq-q" onclick="toggleFaq(this)">Можно ли оплатить в рассрочку?<span class="faq-ico">+</span></button><div class="faq-a"><p>Да, рассрочка доступна через Сбер, Т-Банк, МТС и Сплит. Есть гарантия возврата в течение 7 дней — если методика не подойдёт, вернём деньги без лишних вопросов.</p></div></div>
   </div>
 </section>
 
@@ -1423,6 +1605,20 @@ document.querySelectorAll('.fu').forEach(el => obs.observe(el));
     }, delay);
   }
   scheduleDecrement();
+})();
+
+// ── STICKY CTA BAR — shows after scrolling past hero ──
+(function() {
+  const bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  let shown = false;
+  window.addEventListener('scroll', function() {
+    const heroHeight = window.innerHeight * 1.1;
+    if (!shown && window.scrollY > heroHeight) {
+      shown = true;
+      bar.classList.add('show');
+    }
+  }, { passive: true });
 })();
 
 // ── SOCIAL PROOF TOASTS ──
@@ -1542,6 +1738,13 @@ document.querySelectorAll('.fu').forEach(el => obs.observe(el));
   setInterval(updateTimers, 1000);
 })();
 </script>
+<!-- STICKY CTA BAR (appears after scrolling past hero) -->
+<div class="sticky-cta-bar" id="stickyCta">
+  <div class="sticky-cta-text">🔥 Понравился урок? <span>Стартовая цена закрывается!</span></div>
+  <a href="#pricing" class="btn-gold" style="white-space:nowrap;padding:10px 24px;font-size:14px;" onclick="document.getElementById('stickyCta').classList.remove('show')">Забрать место →</a>
+  <button class="sticky-cta-close" onclick="this.closest('.sticky-cta-bar').classList.remove('show');this.closest('.sticky-cta-bar').style.display='none'">×</button>
+</div>
+
 <!-- TELEGRAM FLOAT -->
 <a href="https://t.me/foms_fit" target="_blank" class="tg-float" title="Написать Саше в Telegram">
   <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
