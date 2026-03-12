@@ -204,28 +204,34 @@ nav {
   align-items: center; gap: 60px; padding: 180px 64px 100px;
   max-width: 1280px; margin: 0 auto; position: relative; z-index: 1;
 }
-/* Funnel variant — single column centered */
+/* Funnel variant — two column on desktop, single on mobile */
 .hero.hero-funnel {
-  grid-template-columns: 1fr;
-  max-width: 860px;
-  padding: 160px 64px 80px;
-  text-align: center;
-  gap: 28px;
+  grid-template-columns: 1fr 1.4fr;
+  max-width: 1280px;
+  padding: 180px 64px 100px;
+  text-align: left;
+  gap: 56px;
+  align-items: center;
 }
-.hero-funnel-top { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.hero-funnel-top h1 { font-size: clamp(44px,7vw,80px); }
-.hero-funnel-video {
-  width: 100%; position: relative;
-}
+.hero-funnel-top { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.hero-funnel-top h1 { font-size: clamp(40px,5vw,72px); }
+.hero-funnel-video { width: 100%; position: relative; }
 .hero-funnel-bottom { width: 100%; display: flex; flex-direction: column; gap: 20px; }
+/* On desktop: left col = text + CTA, right col = video + stats */
+.hero-funnel-left-col {
+  display: flex; flex-direction: column; gap: 24px;
+}
+.hero-funnel-right-col {
+  display: flex; flex-direction: column; gap: 16px;
+}
 .hero-funnel-cta {
-  padding: 28px 32px; border-radius: 20px;
+  padding: 24px 28px; border-radius: 20px;
   background: rgba(212,168,67,0.06);
   border: 1px solid rgba(212,168,67,0.18);
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  display: flex; flex-direction: column; gap: 16px;
 }
 .hero-funnel-cta-text {
-  font-size: 15px; color: var(--ink2); margin: 0; text-align: center;
+  font-size: 15px; color: var(--ink2); margin: 0;
 }
 .hero-left { display: flex; flex-direction: column; align-items: flex-start; }
 
@@ -369,7 +375,15 @@ nav {
 
 /* ══ HERO FUNNEL RESPONSIVE ══ */
 @media (max-width: 960px) {
-  .hero.hero-funnel { padding: 160px 20px 60px; }
+  .hero.hero-funnel {
+    grid-template-columns: 1fr;
+    padding: 160px 20px 60px;
+    text-align: center;
+    gap: 32px;
+  }
+  .hero-funnel-top { align-items: center; }
+  .hero-funnel-cta { align-items: center; }
+  .hero-btns { justify-content: center; }
 }
 @media (max-width: 600px) {
   .hero.hero-funnel { padding: 140px 16px 40px; }
@@ -1036,47 +1050,57 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 <!-- HERO -->
 <div style="position:relative;z-index:1;">
 <div class="hero hero-funnel">
-  <div class="hero-funnel-top fu">
-    <div class="hero-eyebrow">
-      <div class="eyebrow-dot"></div>
-      Бесплатный урок · Специально для тебя
-    </div>
-    <h1>Твой бесплатный<br>урок <span class="gold-text">готов 👇</span></h1>
-    <p class="hero-sub">Смотри как Александр с нуля строит систему AI-контента, которая привлекает клиентов без рекламного бюджета</p>
-  </div>
 
-  <div class="hero-funnel-video fu">
-    <div class="hero-player-glow"></div>
-    <div class="hero-player-frame">
-      <iframe
-        src="https://kinescope.io/embed/eiPKfer7jkjNesqYP2Sm2h"
-        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        frameborder="0" scrolling="no"
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:20px;">
-      </iframe>
+  <!-- LEFT: text + CTA -->
+  <div class="hero-funnel-left-col">
+    <div class="hero-funnel-top fu">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        Бесплатный урок · Специально для тебя
+      </div>
+      <h1>Твой бесплатный<br>урок <span class="gold-text">готов 👇</span></h1>
+      <p class="hero-sub">Смотри как Александр с нуля строит систему AI-контента, которая привлекает клиентов без рекламного бюджета</p>
     </div>
-  </div>
-
-  <div class="hero-funnel-bottom fu">
-    <div class="hero-stats-row">
-      <div class="hstat"><div class="hstat-val g">25 000+</div><div class="hstat-label">Подписчиков</div></div>
-      <div class="hstat-div"></div>
-      <div class="hstat"><div class="hstat-val g">100M+</div><div class="hstat-label">Просмотров</div></div>
-      <div class="hstat-div"></div>
-      <div class="hstat"><div class="hstat-val">🤖 Активен</div><div class="hstat-label">AI-агент</div></div>
-      <div class="hstat-div"></div>
-      <div class="hstat"><div class="hstat-val">0 ₽</div><div class="hstat-label">Рекламный бюджет</div></div>
-    </div>
-    <div class="hero-funnel-cta">
+    <div class="hero-funnel-cta fu">
       <p class="hero-funnel-cta-text">Понравился урок? Забирай полную программу по стартовой цене</p>
-      <div class="hero-btns" style="justify-content:center;">
+      <div class="hero-btns">
         <a href="#pricing" class="btn-gold">Хочу полный курс →</a>
-        <a href="#program" class="btn-ghost">Смотреть программу</a>
+        <a href="#program" class="btn-ghost">Программа</a>
+      </div>
+    </div>
+    <div class="hero-chips fu">
+      <div class="chip"><span class="chip-label">Формат</span><span class="chip-value">Онлайн</span></div>
+      <div class="chip"><span class="chip-label">Блоков</span><span class="chip-value">9</span></div>
+      <div class="chip"><span class="chip-label">Аудитория</span><span class="chip-value">25K+</span></div>
+    </div>
+  </div>
+
+  <!-- RIGHT: video + stats -->
+  <div class="hero-funnel-right-col fu">
+    <div class="hero-player-wrap">
+      <div class="hero-player-glow"></div>
+      <div class="hero-player-frame">
+        <iframe
+          src="https://kinescope.io/embed/eiPKfer7jkjNesqYP2Sm2h"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          frameborder="0" scrolling="no"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:20px;">
+        </iframe>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hstat"><div class="hstat-val g">25 000+</div><div class="hstat-label">Подписчиков</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-val g">100M+</div><div class="hstat-label">Просмотров</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-val">🤖 Активен</div><div class="hstat-label">AI-агент</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-val">0 ₽</div><div class="hstat-label">Рекламный бюджет</div></div>
       </div>
     </div>
   </div>
+
 </div>
 </div>
 
