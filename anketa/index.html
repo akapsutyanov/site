@@ -422,10 +422,11 @@ body {
 
     <!-- Q3: EMAIL -->
     <div class="q-block">
-      <div class="q-num">Вопрос 03 <span class="q-optional">необязательно</span></div>
+      <div class="q-num">Вопрос 03</div>
       <div class="q-label">Email</div>
       <div class="q-hint">Если хочешь получать дополнительные материалы на почту</div>
       <input class="q-input" type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
+      <div class="error-msg" id="email-error">Пожалуйста, введи свой email</div>
     </div>
 
     <!-- Q4: КТО ТЫ -->
@@ -434,17 +435,17 @@ body {
       <div class="q-label">Кто ты сейчас?</div>
       <div class="q-hint">Выбери что подходит тебе больше всего</div>
       <div class="q-options" id="whoOptions">
-        <label class="q-option" onclick="selectRadio(this,'who')">
+        <label class="q-option">
           <input type="radio" name="who" value="Новичок">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Новичок <em>Только начинаю в ИИ, хочу освоить с нуля</em></div>
         </label>
-        <label class="q-option" onclick="selectRadio(this,'who')">
+        <label class="q-option">
           <input type="radio" name="who" value="Эксперт">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Эксперт <em>Уже работаю, но застрял на 10–50К, хочу расти</em></div>
         </label>
-        <label class="q-option" onclick="selectRadio(this,'who')">
+        <label class="q-option">
           <input type="radio" name="who" value="Предприниматель">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Предприниматель <em>Хочу внедрить ИИ в бизнес для автоматизации и масштабирования</em></div>
@@ -455,78 +456,79 @@ body {
 
     <!-- Q5: ЦЕЛЬ -->
     <div class="q-block">
-      <div class="q-num">Вопрос 05 <span class="q-optional">необязательно</span></div>
+      <div class="q-num">Вопрос 05</div>
       <div class="q-label">Что для тебя сейчас самое важное?</div>
       <div class="q-options" id="goalOptions">
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="goal" value="Научиться работать с ИИ с нуля">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Научиться работать с ИИ с нуля</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="goal" value="Найти первых клиентов и начать зарабатывать">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Найти первых клиентов и начать зарабатывать</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="goal" value="Вырасти в блоге">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Вырасти в блоге <em>Набрать подписчиков</em></div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="goal" value="Увеличить доход до 100–300К">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Увеличить доход <em>Выйти на 100–300К в месяц</em></div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="goal" value="Внедрить ИИ в бизнес">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Внедрить ИИ в бизнес <em>Автоматизация и масштабирование</em></div>
         </label>
       </div>
+      <div class="error-msg" id="goal-error">Пожалуйста, выбери хотя бы один вариант</div>
     </div>
 
     <!-- Q6: ЧТО МЕШАЕТ -->
     <div class="q-block">
-      <div class="q-num">Вопрос 06 <span class="q-optional">необязательно</span></div>
+      <div class="q-num">Вопрос 06</div>
       <div class="q-label">Что сейчас мешает тебе развиваться?</div>
       <div class="q-options" id="blockOptions">
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Не знаю с чего начать">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Не знаю с чего начать</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Боюсь что не справлюсь">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Боюсь, что не справлюсь</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Нет времени">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Нет времени</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Думаю что это сложно">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Думаю, что это сложно</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Нет клиентов">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Нет клиентов</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Не растёт блог">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Не растёт блог</div>
         </label>
-        <label class="q-option checkbox-type" onclick="toggleCheckbox(this)">
+        <label class="q-option checkbox-type">
           <input type="checkbox" name="block" value="Застрял на доходе">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Застрял на доходе</div>
         </label>
-        <label class="q-option checkbox-type" id="otherOption" onclick="toggleCheckbox(this); toggleOther(this)">
+        <label class="q-option checkbox-type" id="otherOption">
           <input type="checkbox" name="block" value="Другое">
           <div class="custom-check"><div class="custom-check-inner"></div></div>
           <div class="option-text">Другое</div>
@@ -535,6 +537,7 @@ body {
           <input class="q-input" type="text" id="otherText" placeholder="Напиши своё..." style="margin-top:0;">
         </div>
       </div>
+      <div class="error-msg" id="block-error">Пожалуйста, выбери хотя бы один вариант</div>
     </div>
 
     <!-- SUBMIT -->
@@ -564,34 +567,41 @@ body {
 <script>
 // ══ GOOGLE APPS SCRIPT URL ══
 // Вставь сюда свой URL после деплоя Apps Script
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzlHHaBtvQFgfbVTS99C1od5XT89wNSnooHilYCHk3gwQycrOB9txjr-_nzANzaMsbnIQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMnHv2gQbc8abtClL-kv0ZtibOrk2edDVMTiXRE2Piu1TPPjT2LwfDY4tyZUe2_ya2Lg/exec';
 
-// ══ RADIO SELECT ══
-function selectRadio(el, name) {
-  document.querySelectorAll(`input[name="${name}"]`).forEach(inp => {
-    inp.closest('.q-option').classList.remove('selected');
+// ══ RADIO OPTIONS ══
+document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    var name = this.name;
+    document.querySelectorAll('input[name="' + name + '"]').forEach(function(r) {
+      r.closest('.q-option').classList.remove('selected');
+    });
+    this.closest('.q-option').classList.add('selected');
+    var err = document.getElementById(name + '-error');
+    if (err) err.classList.remove('show');
   });
-  el.classList.add('selected');
-  el.querySelector('input').checked = true;
-  document.getElementById(name + '-error') && (document.getElementById(name + '-error').classList.remove('show'));
-}
+});
 
-// ══ CHECKBOX TOGGLE ══
-function toggleCheckbox(el) {
-  el.classList.toggle('selected');
-  const inp = el.querySelector('input[type="checkbox"]');
-  inp.checked = !inp.checked;
-}
-
-// ══ OTHER FIELD TOGGLE ══
-function toggleOther(el) {
-  const field = document.getElementById('otherField');
-  if (el.classList.contains('selected')) {
-    field.classList.add('show');
-  } else {
-    field.classList.remove('show');
-  }
-}
+// ══ CHECKBOX OPTIONS ══
+document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+  cb.addEventListener('change', function() {
+    var label = this.closest('.q-option');
+    if (this.checked) {
+      label.classList.add('selected');
+    } else {
+      label.classList.remove('selected');
+    }
+    // Handle "Другое" field
+    if (this.value === 'Другое') {
+      var field = document.getElementById('otherField');
+      if (this.checked) {
+        field.classList.add('show');
+      } else {
+        field.classList.remove('show');
+      }
+    }
+  });
+});
 
 // ══ FORM SUBMIT ══
 document.getElementById('mainForm').addEventListener('submit', async function(e) {
@@ -626,12 +636,34 @@ document.getElementById('mainForm').addEventListener('submit', async function(e)
     document.getElementById('who-error').classList.remove('show');
   }
 
-  if (!valid) return;
-
-  // Collect data
+  // Validate email
   const email = document.getElementById('email').value.trim();
+  if (!email) {
+    document.getElementById('email-error').classList.add('show');
+    valid = false;
+  } else {
+    document.getElementById('email-error').classList.remove('show');
+  }
+
+  // Validate goals
   const goals = [...document.querySelectorAll('input[name="goal"]:checked')].map(i => i.value).join(', ');
+  if (!goals) {
+    document.getElementById('goal-error').classList.add('show');
+    valid = false;
+  } else {
+    document.getElementById('goal-error').classList.remove('show');
+  }
+
+  // Validate blocks
   let blocks = [...document.querySelectorAll('input[name="block"]:checked')].map(i => i.value);
+  if (!blocks.length) {
+    document.getElementById('block-error').classList.add('show');
+    valid = false;
+  } else {
+    document.getElementById('block-error').classList.remove('show');
+  }
+
+  if (!valid) return;
   const otherText = document.getElementById('otherText').value.trim();
   if (blocks.includes('Другое') && otherText) {
     blocks = blocks.filter(b => b !== 'Другое');
@@ -655,11 +687,12 @@ document.getElementById('mainForm').addEventListener('submit', async function(e)
   btn.textContent = 'Отправляю...';
 
   try {
+    const formData = new URLSearchParams();
+    Object.keys(payload).forEach(k => formData.append(k, payload[k]));
     await fetch(SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: formData
     });
 
     // Show success
