@@ -565,9 +565,7 @@ body {
 </div>
 
 <script>
-// ══ GOOGLE APPS SCRIPT URL ══
-// Вставь сюда свой URL после деплоя Apps Script
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMnHv2gQbc8abtClL-kv0ZtibOrk2edDVMTiXRE2Piu1TPPjT2LwfDY4tyZUe2_ya2Lg/exec';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMnHv2gQbc8abtClL-kv0ZtibOrk2edDVMTiXRE2Piu1TPPjT2LwfDY4tyZUe2_ya2Lg/exec';
 
 // ══ RADIO OPTIONS ══
 document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
@@ -591,7 +589,6 @@ document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
     } else {
       label.classList.remove('selected');
     }
-    // Handle "Другое" field
     if (this.value === 'Другое') {
       var field = document.getElementById('otherField');
       if (this.checked) {
@@ -604,108 +601,77 @@ document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
 });
 
 // ══ FORM SUBMIT ══
-document.getElementById('mainForm').addEventListener('submit', async function(e) {
+document.getElementById('mainForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  let valid = true;
+  var valid = true;
 
-  // Validate name
-  const name = document.getElementById('name').value.trim();
-  if (!name) {
-    document.getElementById('name-error').classList.add('show');
-    valid = false;
-  } else {
-    document.getElementById('name-error').classList.remove('show');
+  function showErr(id) { var el = document.getElementById(id); if(el) el.classList.add('show'); }
+  function hideErr(id) { var el = document.getElementById(id); if(el) el.classList.remove('show'); }
+
+  var name = document.getElementById('name').value.trim();
+  if (!name) { showErr('name-error'); valid = false; } else { hideErr('name-error'); }
+
+  var telegram = document.getElementById('telegram').value.trim();
+  if (!telegram) { showErr('tg-error'); valid = false; } else { hideErr('tg-error'); }
+
+  var email = document.getElementById('email').value.trim();
+  if (!email) { showErr('email-error'); valid = false; } else { hideErr('email-error'); }
+
+  var whoInput = document.querySelector('input[name="who"]:checked');
+  if (!whoInput) { showErr('who-error'); valid = false; } else { hideErr('who-error'); }
+
+  var goalInputs = document.querySelectorAll('input[name="goal"]:checked');
+  if (!goalInputs.length) { showErr('goal-error'); valid = false; } else { hideErr('goal-error'); }
+
+  var blockInputs = document.querySelectorAll('input[name="block"]:checked');
+  if (!blockInputs.length) { showErr('block-error'); valid = false; } else { hideErr('block-error'); }
+
+  if (!valid) {
+    // Scroll to first error
+    var firstError = document.querySelector('.error-msg.show');
+    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
   }
 
-  // Validate telegram
-  const telegram = document.getElementById('telegram').value.trim();
-  if (!telegram) {
-    document.getElementById('tg-error').classList.add('show');
-    valid = false;
-  } else {
-    document.getElementById('tg-error').classList.remove('show');
-  }
-
-  // Validate who
-  const who = document.querySelector('input[name="who"]:checked');
-  if (!who) {
-    document.getElementById('who-error').classList.add('show');
-    valid = false;
-  } else {
-    document.getElementById('who-error').classList.remove('show');
-  }
-
-  // Validate email
-  const email = document.getElementById('email').value.trim();
-  if (!email) {
-    document.getElementById('email-error').classList.add('show');
-    valid = false;
-  } else {
-    document.getElementById('email-error').classList.remove('show');
-  }
-
-  // Validate goals
-  const goals = [...document.querySelectorAll('input[name="goal"]:checked')].map(i => i.value).join(', ');
-  if (!goals) {
-    document.getElementById('goal-error').classList.add('show');
-    valid = false;
-  } else {
-    document.getElementById('goal-error').classList.remove('show');
-  }
-
-  // Validate blocks
-  let blocks = [...document.querySelectorAll('input[name="block"]:checked')].map(i => i.value);
-  if (!blocks.length) {
-    document.getElementById('block-error').classList.add('show');
-    valid = false;
-  } else {
-    document.getElementById('block-error').classList.remove('show');
-  }
-
-  if (!valid) return;
-  const otherText = document.getElementById('otherText').value.trim();
-  if (blocks.includes('Другое') && otherText) {
-    blocks = blocks.filter(b => b !== 'Другое');
+  var goals = Array.from(goalInputs).map(function(i){ return i.value; }).join(', ');
+  var blocks = Array.from(blockInputs).map(function(i){ return i.value; });
+  var otherText = document.getElementById('otherText').value.trim();
+  if (blocks.indexOf('Другое') !== -1 && otherText) {
+    blocks = blocks.filter(function(b){ return b !== 'Другое'; });
     blocks.push('Другое: ' + otherText);
   }
 
-  const payload = {
-    name,
-    telegram,
-    email,
-    who: who.value,
-    goals,
-    blocks: blocks.join(', '),
-    date: new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })
+  var payload = {
+    date: new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
+    name: name,
+    telegram: telegram,
+    email: email,
+    who: whoInput.value,
+    goals: goals,
+    blocks: blocks.join(', ')
   };
 
-  // Submit
-  const btn = document.getElementById('submitBtn');
+  var btn = document.getElementById('submitBtn');
   btn.disabled = true;
-  btn.classList.add('loading');
   btn.textContent = 'Отправляю...';
 
-  try {
-    const formData = new URLSearchParams();
-    Object.keys(payload).forEach(k => formData.append(k, payload[k]));
-    await fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    });
+  var formData = new URLSearchParams();
+  Object.keys(payload).forEach(function(k) { formData.append(k, payload[k]); });
 
-    // Show success
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  }).then(function() {
     document.getElementById('mainForm').style.display = 'none';
     document.querySelector('.form-header').style.display = 'none';
     document.getElementById('successScreen').style.display = 'block';
-
-  } catch (err) {
+  }).catch(function() {
     btn.disabled = false;
-    btn.classList.remove('loading');
     btn.textContent = 'Отправить анкету →';
     alert('Ошибка отправки. Попробуй ещё раз.');
-  }
+  });
 });
 </script>
 
