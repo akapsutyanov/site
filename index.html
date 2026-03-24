@@ -40,27 +40,27 @@
    ══════════════════════════════════════ */
 
 :root {
-  --bg:        #050505;
-  --surface:   #0c0a06;
-  --ink:       #f0e8d8;
-  --ink2:      #b8a888;
-  --ink3:      #706050;
-  --ink4:      #3a3020;
-  --g1:        #fae8a0;
-  --g2:        #f0c96a;
-  --g3:        #d4a843;
-  --g4:        #a07828;
-  --g5:        #6b4e10;
-  --gold-grad:       linear-gradient(135deg, #fae8a0 0%, #f0c96a 30%, #d4a843 60%, #a07828 100%);
-  --gold-soft:       linear-gradient(135deg, #f0c96a, #d4a843);
-  --gold-shine:      linear-gradient(105deg, #a07828 0%, #f0c96a 35%, #fae8a0 50%, #f0c96a 65%, #a07828 100%);
-  --glass:     rgba(12, 9, 4, 0.65);
-  --gb:        rgba(212,168,67,0.18);
-  --gb-hi:     rgba(240,201,106,0.36);
-  --gi:        inset 0 1.5px 0 rgba(240,201,106,0.22), inset 0 -1px 0 rgba(0,0,0,0.5);
-  --gs:        0 8px 40px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.35);
+  --bg:        #060608;
+  --surface:   #0d0d12;
+  --ink:       #e8e8e8;
+  --ink2:      #a0a0a0;
+  --ink3:      #585858;
+  --ink4:      #383838;
+  --g1:        #f4f4f4;
+  --g2:        #d0d0d0;
+  --g3:        #c8c8c8;
+  --g4:        #888888;
+  --g5:        #444444;
+  --gold-grad:       linear-gradient(135deg, #f8f8f8 0%, #d0d0d0 40%, #888888 100%);
+  --gold-soft:       linear-gradient(135deg, #d0d0d0, #a0a0a0);
+  --gold-shine:      linear-gradient(105deg, #444 0%, #d0d0d0 35%, #f8f8f8 50%, #d0d0d0 65%, #444 100%);
+  --glass:     rgba(6,6,8,0.82);
+  --gb:        rgba(200,200,200,0.12);
+  --gb-hi:     rgba(220,220,220,0.22);
+  --gi:        inset 0 1.5px 0 rgba(200,200,200,0.12), inset 0 -1px 0 rgba(0,0,0,0.5);
+  --gs:        0 8px 40px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.35);
   --gs-lg:     0 24px 72px rgba(0,0,0,0.65), 0 6px 20px rgba(0,0,0,0.40);
-  --blur:      blur(28px) saturate(160%) brightness(1.08);
+  --blur:      blur(24px) saturate(180%);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -77,7 +77,7 @@ body {
 
 /* ══ BACKGROUND ══ */
 .bg-canvas {
-  position: fixed; inset: 0; z-index: -1; overflow: hidden; background: #050505;
+  position: fixed; inset: 0; z-index: -1; overflow: hidden; background: #060608;
 }
 .bg-canvas::before {
   content: ''; position: absolute; inset: 0;
@@ -89,10 +89,10 @@ body {
 }
 .blob { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
 .blob-1 { width:650px;height:650px; background:radial-gradient(circle,rgba(180,135,40,0.26),transparent 70%); top:-180px;left:-120px; animation:d1 20s ease-in-out infinite; }
-.blob-2 { width:500px;height:500px; background:radial-gradient(circle,rgba(212,168,67,0.16),transparent 70%); top:8%;right:-80px;  animation:d2 26s ease-in-out infinite; }
+.blob-2 { width:500px;height:500px; background:radial-gradient(circle,rgba(180,180,180,0.16),transparent 70%); top:8%;right:-80px;  animation:d2 26s ease-in-out infinite; }
 .blob-3 { width:420px;height:420px; background:radial-gradient(circle,rgba(140,100,25,0.14),transparent 70%); bottom:20%;left:10%; animation:d3 23s ease-in-out infinite; }
 .blob-4 { width:340px;height:340px; background:radial-gradient(circle,rgba(250,232,160,0.09),transparent 70%); bottom:-60px;right:12%; animation:d4 19s ease-in-out infinite; }
-.blob-5 { width:280px;height:280px; background:radial-gradient(circle,rgba(212,168,67,0.11),transparent 70%); top:42%;left:42%; animation:d5 29s ease-in-out infinite; }
+.blob-5 { width:280px;height:280px; background:radial-gradient(circle,rgba(180,180,180,0.11),transparent 70%); top:42%;left:42%; animation:d5 29s ease-in-out infinite; }
 
 @keyframes d1 { 0%,100%{transform:translate(0,0)scale(1)} 33%{transform:translate(55px,35px)scale(1.06)} 66%{transform:translate(-25px,75px)scale(0.94)} }
 @keyframes d2 { 0%,100%{transform:translate(0,0)scale(1)} 25%{transform:translate(-70px,55px)scale(1.08)} 75%{transform:translate(35px,-35px)scale(0.93)} }
@@ -124,28 +124,28 @@ nav {
 }
 .nav-links { display: flex; gap: 6px; list-style: none; }
 .nav-links a { font-size: 13px; font-weight: 500; color: var(--ink2); text-decoration: none; padding: 7px 14px; border-radius: 9px; transition: background .2s, color .2s; }
-.nav-links a:hover { background: rgba(212,168,67,0.10); color: var(--g2); }
+.nav-links a:hover { background: rgba(180,180,180,0.10); color: var(--g2); }
 .nav-cta {
   background: var(--gold-soft); color: #08050100;
   padding: 9px 22px; border-radius: 12px; font-size: 13px; font-weight: 700;
   letter-spacing: 0.2px; text-decoration: none;
-  box-shadow: 0 4px 20px rgba(180,130,30,0.42), inset 0 1.5px 0 rgba(255,255,255,0.20);
+  box-shadow: 0 4px 20px rgba(150,150,150,0.42), inset 0 1.5px 0 rgba(255,255,255,0.20);
   transition: transform .2s, box-shadow .2s; color: #08050100;
   -webkit-text-fill-color: #0a0700; color: #0a0700;
 }
-.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(212,168,67,0.55); }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(180,180,180,0.55); }
 
 /* ══ BURGER ══ */
 .burger {
   display: none;
   flex-direction: column; justify-content: center; align-items: center;
   gap: 5px; width: 38px; height: 38px;
-  background: rgba(212,168,67,0.08);
-  border: 1px solid rgba(212,168,67,0.22);
+  background: rgba(180,180,180,0.08);
+  border: 1px solid rgba(180,180,180,0.22);
   border-radius: 10px; cursor: pointer; padding: 0;
   transition: background .2s;
 }
-.burger:hover { background: rgba(212,168,67,0.16); }
+.burger:hover { background: rgba(180,180,180,0.16); }
 .burger span {
   display: block; width: 18px; height: 1.5px;
   background: var(--g2); border-radius: 2px;
@@ -170,7 +170,7 @@ nav {
   background: rgba(8,5,1,0.97);
   backdrop-filter: blur(32px) saturate(200%);
   -webkit-backdrop-filter: blur(32px) saturate(200%);
-  border-left: 1px solid rgba(212,168,67,0.22);
+  border-left: 1px solid rgba(180,180,180,0.22);
   box-shadow: -20px 0 60px rgba(0,0,0,0.7);
   display: flex; flex-direction: column;
   padding: 0 0 40px;
@@ -182,7 +182,7 @@ nav {
 .mob-menu-head {
   display: flex; align-items: center; justify-content: space-between;
   padding: 20px 24px;
-  border-bottom: 1px solid rgba(212,168,67,0.12);
+  border-bottom: 1px solid rgba(180,180,180,0.12);
 }
 .mob-logo {
   font-size: 13px; font-weight: 800; letter-spacing: 2px;
@@ -191,11 +191,11 @@ nav {
   background-clip: text; animation: shine 5s linear infinite;
 }
 .mob-close {
-  background: rgba(212,168,67,0.08); border: 1px solid rgba(212,168,67,0.20);
+  background: rgba(180,180,180,0.08); border: 1px solid rgba(180,180,180,0.20);
   border-radius: 8px; color: var(--g2); font-size: 20px; line-height: 1;
   width: 34px; height: 34px; cursor: pointer; transition: background .2s;
 }
-.mob-close:hover { background: rgba(212,168,67,0.18); }
+.mob-close:hover { background: rgba(180,180,180,0.18); }
 
 .mob-links {
   list-style: none; display: flex; flex-direction: column;
@@ -209,8 +209,8 @@ nav {
   border: 1px solid transparent;
 }
 .mob-links li a:hover {
-  background: rgba(212,168,67,0.08);
-  border-color: rgba(212,168,67,0.18);
+  background: rgba(180,180,180,0.08);
+  border-color: rgba(180,180,180,0.18);
   color: var(--g2); transform: translateX(4px);
 }
 .mob-cta {
@@ -219,11 +219,11 @@ nav {
   font-size: 15px; font-weight: 800; text-decoration: none;
   background: var(--gold-soft); color: #0a0700;
   -webkit-text-fill-color: #0a0700;
-  box-shadow: 0 8px 28px rgba(180,130,30,0.45);
+  box-shadow: 0 8px 28px rgba(150,150,150,0.45);
   transition: transform .2s, box-shadow .2s;
   letter-spacing: -0.2px;
 }
-.mob-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(212,168,67,0.58); }
+.mob-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(180,180,180,0.58); }
 
 /* ══ HERO ══ */
 .hero {
@@ -248,8 +248,8 @@ nav {
 .hero-funnel-right-col { display: flex; flex-direction: column; gap: 16px; }
 .hero-funnel-cta {
   padding: 24px 28px; border-radius: 20px;
-  background: rgba(212,168,67,0.06);
-  border: 1px solid rgba(212,168,67,0.18);
+  background: rgba(180,180,180,0.06);
+  border: 1px solid rgba(180,180,180,0.18);
   display: flex; flex-direction: column; gap: 16px;
 }
 .hero-funnel-cta-text { font-size: 15px; color: var(--ink2); margin: 0; }
@@ -258,15 +258,15 @@ nav {
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 6px 18px 6px 8px; border-radius: 100px;
-  background: rgba(212,168,67,0.07); border: 1px solid var(--gb-hi);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(240,201,106,0.14);
+  background: rgba(180,180,180,0.07); border: 1px solid var(--gb-hi);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(220,220,220,0.14);
   margin-bottom: 32px; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: var(--g2);
 }
 .eyebrow-dot {
   width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
   background: var(--gold-shine); background-size: 200% auto;
   animation: shine 3s linear infinite;
-  box-shadow: 0 0 14px rgba(212,168,67,0.55);
+  box-shadow: 0 0 14px rgba(180,180,180,0.55);
 }
 .hero h1 { font-size: clamp(52px,6.8vw,100px); font-weight: 800; line-height: 1; letter-spacing: -3px; margin-bottom: 28px; color: var(--ink); }
 
@@ -296,27 +296,27 @@ nav {
   display: inline-block; background: var(--gold-shine); background-size: 200% auto;
   color: #0a0700; font-size: 15px; font-weight: 700; padding: 16px 40px; border-radius: 16px;
   text-decoration: none; letter-spacing: -0.2px;
-  box-shadow: 0 8px 32px rgba(180,130,30,0.48), inset 0 1.5px 0 rgba(255,255,255,0.28);
+  box-shadow: 0 8px 32px rgba(150,150,150,0.48), inset 0 1.5px 0 rgba(255,255,255,0.28);
   transition: transform .25s, box-shadow .25s; animation: shine 5s linear infinite;
   -webkit-text-fill-color: #0a0700;
 }
-.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(212,168,67,0.58); }
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(180,180,180,0.58); }
 
 .btn-ghost {
-  display: inline-block; background: rgba(212,168,67,0.07);
+  display: inline-block; background: rgba(180,180,180,0.07);
   backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
   border: 1px solid var(--gb-hi); color: var(--g2);
   font-size: 15px; font-weight: 600; padding: 16px 40px; border-radius: 16px;
   text-decoration: none; box-shadow: var(--gs), var(--gi); transition: transform .25s, background .2s;
 }
-.btn-ghost:hover { transform: translateY(-3px); background: rgba(212,168,67,0.13); }
+.btn-ghost:hover { transform: translateY(-3px); background: rgba(180,180,180,0.13); }
 
 /* ══ HERO VISUAL ══ */
 .hero-right { position: relative; display: flex; align-items: center; justify-content: center; height: 580px; }
 
 .phone-glow {
   position: absolute; width: 320px; height: 320px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,168,67,0.22), rgba(140,100,25,0.10), transparent 70%);
+  background: radial-gradient(circle, rgba(180,180,180,0.22), rgba(140,100,25,0.10), transparent 70%);
   filter: blur(28px); z-index: 1; animation: pulse 5s ease-in-out infinite;
 }
 
@@ -328,7 +328,7 @@ nav {
 }
 .sp-strip-avatar {
   width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; overflow: hidden;
-  border: 2px solid rgba(212,168,67,0.4);
+  border: 2px solid rgba(180,180,180,0.4);
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }
 .sp-strip-body { flex: 1; min-width: 160px; }
@@ -348,13 +348,13 @@ nav {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px;
 }
 .review-card { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
-.review-stars { color: #f0c96a; font-size: 14px; letter-spacing: 2px; }
+.review-stars { color: #e0e0e0; font-size: 14px; letter-spacing: 2px; }
 .review-text { font-size: 14px; color: var(--ink2); line-height: 1.7; flex: 1; margin: 0; }
 .review-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
 .review-ava {
   width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
-  background: linear-gradient(135deg, rgba(212,168,67,0.25), rgba(160,120,40,0.15));
-  border: 1.5px solid rgba(212,168,67,0.3);
+  background: linear-gradient(135deg, rgba(180,180,180,0.25), rgba(160,120,40,0.15));
+  border: 1.5px solid rgba(180,180,180,0.3);
   display: flex; align-items: center; justify-content: center;
   font-size: 15px; font-weight: 800; color: var(--g2);
 }
@@ -366,7 +366,7 @@ nav {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 2500;
   background: rgba(8,5,1,0.95);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(212,168,67,0.25);
+  border-top: 1px solid rgba(180,180,180,0.25);
   padding: 14px 32px;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   transform: translateY(100%);
@@ -418,23 +418,23 @@ nav {
 }
 .hero-player-glow {
   position: absolute; inset: -30px; border-radius: 36px;
-  background: radial-gradient(ellipse at center, rgba(212,168,67,0.18) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(180,180,180,0.18) 0%, transparent 70%);
   filter: blur(28px); pointer-events: none; z-index: 0;
 }
 .hero-player-frame {
   position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
   border-radius: 22px; z-index: 1;
-  border: 1px solid rgba(212,168,67,0.28);
+  border: 1px solid rgba(180,180,180,0.28);
   box-shadow: 0 32px 80px rgba(0,0,0,0.75), 0 8px 24px rgba(0,0,0,0.5),
-              inset 0 1.5px 0 rgba(240,201,106,0.25);
+              inset 0 1.5px 0 rgba(220,220,220,0.25);
 }
 .hero-stats-row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 20px; border-radius: 16px; z-index: 1;
   background: rgba(18,14,6,0.65);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212,168,67,0.18);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(240,201,106,0.12);
+  border: 1px solid rgba(180,180,180,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(220,220,220,0.12);
 }
 .hstat { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; }
 .hstat-val {
@@ -445,14 +445,14 @@ nav {
   -webkit-text-fill-color: transparent; background-clip: text;
 }
 .hstat-label { font-size: 10px; color: var(--ink4); font-weight: 500; white-space: nowrap; }
-.hstat-div { width: 1px; height: 28px; background: rgba(212,168,67,0.15); flex-shrink: 0; }
+.hstat-div { width: 1px; height: 28px; background: rgba(180,180,180,0.15); flex-shrink: 0; }
 
 .fcards { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
 .fc {
   position: absolute; padding: 12px 16px; border-radius: 16px;
   background: rgba(8,6,2,0.82); backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
   border: 1px solid var(--gb-hi);
-  box-shadow: 0 10px 36px rgba(0,0,0,0.65), inset 0 1.5px 0 rgba(240,201,106,0.20);
+  box-shadow: 0 10px 36px rgba(0,0,0,0.65), inset 0 1.5px 0 rgba(220,220,220,0.20);
   white-space: nowrap;
 }
 .fc-1 { top: 28px;   right: 0;     animation: fa 5.5s ease-in-out infinite; }
@@ -471,12 +471,12 @@ section { padding: 100px 64px; max-width: 1280px; margin: 0 auto; position: rela
 
 .pill {
   display: inline-block; padding: 5px 14px; border-radius: 100px;
-  background: rgba(212,168,67,0.08); border: 1px solid var(--gb);
+  background: rgba(180,180,180,0.08); border: 1px solid var(--gb);
   font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
   color: var(--g3); margin-bottom: 20px;
 }
 h2 { font-size: clamp(38px,5vw,60px); font-weight: 800; letter-spacing: -2px; line-height: 1; margin-bottom: 16px; color: var(--ink); }
-h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-text-fill-color: #c8c8c8; background-clip: text; }
 .desc { font-size: 17px; font-weight: 400; color: var(--ink3); max-width: 480px; line-height: 1.65; margin-bottom: 56px; }
 
 .gc {
@@ -496,12 +496,12 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
   width: 22px; height: 22px; border-radius: 7px; flex-shrink: 0;
   background: var(--gold-soft); display: flex; align-items: center; justify-content: center;
   font-size: 11px; font-weight: 800; margin-top: 1px;
-  box-shadow: 0 3px 10px rgba(180,130,30,0.38);
+  box-shadow: 0 3px 10px rgba(150,150,150,0.38);
   -webkit-text-fill-color: #0a0700; color: #0a0700;
 }
 .aquote {
   margin-top: 20px; padding: 18px 20px; border-radius: 14px; font-style: italic;
-  background: rgba(212,168,67,0.06); border: 1px solid rgba(212,168,67,0.18);
+  background: rgba(180,180,180,0.06); border: 1px solid rgba(180,180,180,0.18);
   font-size: 14px; color: var(--g3); line-height: 1.8; font-weight: 500;
 }
 
@@ -527,19 +527,19 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
 }
 .stats-row { display: grid; grid-template-columns: repeat(6,1fr); }
 .stat { text-align: center; padding: 16px; position: relative; }
-.stat:not(:last-child)::after { content:''; position:absolute; right:0; top:18%; bottom:18%; width:1px; background:rgba(212,168,67,0.12); }
+.stat:not(:last-child)::after { content:''; position:absolute; right:0; top:18%; bottom:18%; width:1px; background:rgba(180,180,180,0.12); }
 .stat-n { font-size: 38px; font-weight: 800; letter-spacing: -2px; line-height: 1; background: var(--gold-soft); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 6px; }
 .stat-t { font-size: 11px; font-weight: 500; color: var(--ink3); line-height: 1.4; }
 
 /* ══ PROGRAM ══ */
 .prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 56px; }
 .pcard { padding: 34px; border-radius: 22px; }
-.ptag { display: inline-block; padding: 4px 12px; border-radius: 8px; background: rgba(212,168,67,0.10); border: 1px solid var(--gb); font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--g3); margin-bottom: 14px; }
+.ptag { display: inline-block; padding: 4px 12px; border-radius: 8px; background: rgba(180,180,180,0.10); border: 1px solid var(--gb); font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--g3); margin-bottom: 14px; }
 .pcard h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.4px; color: var(--ink); margin-bottom: 14px; }
 .plist { list-style: none; display: flex; flex-direction: column; gap: 7px; }
 .plist li { font-size: 13px; color: var(--ink3); line-height: 1.5; padding-left: 16px; position: relative; }
 .plist li::before { content: '◆'; position: absolute; left: 0; top: 4px; font-size: 7px; color: var(--g4); }
-.presult { margin-top: 18px; padding: 10px 14px; border-radius: 10px; background: rgba(212,168,67,0.07); border: 1px solid rgba(212,168,67,0.18); font-size: 11px; font-weight: 700; color: var(--g3); }
+.presult { margin-top: 18px; padding: 10px 14px; border-radius: 10px; background: rgba(180,180,180,0.07); border: 1px solid rgba(180,180,180,0.18); font-size: 11px; font-weight: 700; color: var(--g3); }
 
 /* ══ SPEAKER ══ */
 .sp-wrap { display: grid; grid-template-columns: 360px 1fr; gap: 44px; align-items: start; }
@@ -550,24 +550,24 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
 }
 .sp-portrait::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 50% 30%, rgba(212,168,67,0.09), rgba(100,74,16,0.05), transparent 70%);
+  background: radial-gradient(ellipse at 50% 30%, rgba(180,180,180,0.09), rgba(100,74,16,0.05), transparent 70%);
 }
-.sp-letter { font-size: 200px; font-weight: 800; letter-spacing: -10px; background: linear-gradient(135deg, rgba(212,168,67,0.18), rgba(160,120,40,0.07)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; user-select: none; }
-.sp-body { display: flex; flex-direction: column; gap: 18px; }
-.sp-name { font-size: clamp(38px,5vw,54px); font-weight: 800; letter-spacing: -2px; line-height: 1; color: var(--ink); }
-.sp-role { display: inline-block; padding: 7px 18px; border-radius: 100px; background: rgba(212,168,67,0.08); border: 1px solid var(--gb-hi); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--g3); }
+.sp-letter { font-size: 200px; font-weight: 800; letter-spacing: -10px; background: linear-gradient(135deg, rgba(180,180,180,0.18), rgba(160,120,40,0.07)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; user-select: none; }
+
+
+.sp-role { display: inline-block; padding: 7px 18px; border-radius: 100px; background: rgba(180,180,180,0.08); border: 1px solid var(--gb-hi); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--g3); }
 .sp-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .sp-stat { padding: 18px 22px; border-radius: 18px; }
 .sp-stat-n { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; background: var(--gold-soft); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 3px; }
 .sp-stat-l { font-size: 11px; font-weight: 500; color: var(--ink3); }
 .sp-bio { padding: 22px; border-radius: 18px; font-size: 14px; color: var(--ink2); line-height: 1.75; }
 .accolades { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.accolades li { display: flex; gap: 12px; font-size: 13px; color: var(--ink2); line-height: 1.6; padding: 13px 16px; border-radius: 12px; background: rgba(212,168,67,0.05); border: 1px solid rgba(212,168,67,0.12); transition: background .2s, transform .2s; }
-.accolades li:hover { background: rgba(212,168,67,0.10); transform: translateX(4px); }
+.accolades li { display: flex; gap: 12px; font-size: 13px; color: var(--ink2); line-height: 1.6; padding: 13px 16px; border-radius: 12px; background: rgba(180,180,180,0.05); border: 1px solid rgba(180,180,180,0.12); transition: background .2s, transform .2s; }
+.accolades li:hover { background: rgba(180,180,180,0.10); transform: translateX(4px); }
 .accolades li::before { content:'✦'; font-size:9px; color:var(--g3); flex-shrink:0; margin-top:3px; }
 .socials { display: flex; gap: 8px; }
-.soc { padding: 9px 20px; border-radius: 12px; background: rgba(212,168,67,0.07); border: 1px solid var(--gb); color: var(--g2); text-decoration: none; font-size: 12px; font-weight: 700; transition: transform .2s, background .2s, border-color .2s; }
-.soc:hover { transform: translateY(-2px); background: rgba(212,168,67,0.14); border-color: var(--gb-hi); }
+.soc { padding: 9px 20px; border-radius: 12px; background: rgba(180,180,180,0.07); border: 1px solid var(--gb); color: var(--g2); text-decoration: none; font-size: 12px; font-weight: 700; transition: transform .2s, background .2s, border-color .2s; }
+.soc:hover { transform: translateY(-2px); background: rgba(180,180,180,0.14); border-color: var(--gb-hi); }
 
 /* ══ CTA ══ */
 .cta-wrap { padding: 0 64px 80px; position: relative; z-index: 1; }
@@ -580,8 +580,8 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
 }
 .cta-panel::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(180,130,30,0.10), transparent),
-              radial-gradient(ellipse 40% 35% at 10% 10%, rgba(212,168,67,0.06), transparent);
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(150,150,150,0.10), transparent),
+              radial-gradient(ellipse 40% 35% at 10% 10%, rgba(180,180,180,0.06), transparent);
   pointer-events: none;
 }
 .cta-panel::after {
@@ -595,9 +595,9 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
 /* ══ PRICING ══ */
 .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
 .prc { padding: 36px 28px; border-radius: 26px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
-.prc.feat { border-color: var(--gb-hi) !important; box-shadow: 0 24px 72px rgba(180,130,30,0.24), 0 6px 20px rgba(0,0,0,0.40), var(--gi) !important; }
-.prc.feat::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(ellipse at 50% 0%, rgba(212,168,67,0.08), transparent 60%); pointer-events: none; }
-.pbadge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); padding: 5px 22px; border-radius: 0 0 14px 14px; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #0a0700; background: var(--gold-soft); white-space: nowrap; box-shadow: 0 4px 14px rgba(180,130,30,0.48); }
+.prc.feat { border-color: var(--gb-hi) !important; box-shadow: 0 24px 72px rgba(150,150,150,0.24), 0 6px 20px rgba(0,0,0,0.40), var(--gi) !important; }
+.prc.feat::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(ellipse at 50% 0%, rgba(180,180,180,0.08), transparent 60%); pointer-events: none; }
+.pbadge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); padding: 5px 22px; border-radius: 0 0 14px 14px; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #0a0700; background: var(--gold-soft); white-space: nowrap; box-shadow: 0 4px 14px rgba(150,150,150,0.48); }
 .pname { font-size: 26px; font-weight: 800; letter-spacing: -0.8px; color: var(--ink); margin-bottom: 8px; }
 .pdesc { font-size: 12px; color: var(--ink3); line-height: 1.6; margin-bottom: 22px; }
 .pold { font-size: 13px; color: var(--ink4); text-decoration: line-through; margin-bottom: 2px; font-weight: 500; }
@@ -609,13 +609,13 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
 .cx { width: 17px; height: 17px; border-radius: 5px; flex-shrink: 0; background: rgba(255,255,255,0.04); color: var(--ink4); display: flex; align-items: center; justify-content: center; font-size: 10px; margin-top: 1px; }
 .pfeat li:has(.cx) { color: var(--ink4); }
 .pbtn { display: block; text-align: center; padding: 15px; border-radius: 14px; font-size: 14px; font-weight: 700; text-decoration: none; transition: all .25s; }
-.pbtn.outline { background: rgba(212,168,67,0.09); border: 1px solid var(--gb); color: var(--g2); box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.12); }
-.pbtn.outline:hover { background: rgba(212,168,67,0.17); border-color: var(--gb-hi); transform: translateY(-1px); }
-.pbtn.solid { background: var(--gold-soft); color: #0a0700; box-shadow: 0 8px 28px rgba(180,130,30,0.48), inset 0 1.5px 0 rgba(255,255,255,0.24); -webkit-text-fill-color: #0a0700; }
-.pbtn.solid:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(212,168,67,0.58); }
+.pbtn.outline { background: rgba(180,180,180,0.09); border: 1px solid var(--gb); color: var(--g2); box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(220,220,220,0.12); }
+.pbtn.outline:hover { background: rgba(180,180,180,0.17); border-color: var(--gb-hi); transform: translateY(-1px); }
+.pbtn.solid { background: var(--gold-soft); color: #0a0700; box-shadow: 0 8px 28px rgba(150,150,150,0.48), inset 0 1.5px 0 rgba(255,255,255,0.24); -webkit-text-fill-color: #0a0700; }
+.pbtn.solid:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(180,180,180,0.58); }
 
 .guarantee { margin-top: 36px; padding: 36px 44px; border-radius: 22px; display: flex; align-items: center; gap: 28px; }
-.gico { width: 56px; height: 56px; border-radius: 16px; background: var(--gold-soft); display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; box-shadow: 0 8px 24px rgba(180,130,30,0.42); }
+.gico { width: 56px; height: 56px; border-radius: 16px; background: var(--gold-soft); display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; box-shadow: 0 8px 24px rgba(150,150,150,0.42); }
 .gtext h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.4px; color: var(--ink); margin-bottom: 6px; }
 .gtext p { font-size: 13px; color: var(--ink3); line-height: 1.65; }
 
@@ -624,11 +624,11 @@ h2 .ga { background: var(--gold-soft); -webkit-background-clip: text; -webkit-te
 .faq-item { border-radius: 18px; overflow: hidden; transition: border-color .2s; }
 .faq-item.open { border-color: var(--gb-hi) !important; }
 .faq-q { width: 100%; background: transparent; border: none; color: var(--ink); padding: 20px 26px; font-family: inherit; font-size: 15px; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; letter-spacing: -0.2px; }
-.faq-ico { width: 26px; height: 26px; border-radius: 8px; background: rgba(212,168,67,0.08); border: 1px solid var(--gb); display: flex; align-items: center; justify-content: center; font-size: 17px; color: var(--g3); flex-shrink: 0; transition: transform .3s, background .3s; }
+.faq-ico { width: 26px; height: 26px; border-radius: 8px; background: rgba(180,180,180,0.08); border: 1px solid var(--gb); display: flex; align-items: center; justify-content: center; font-size: 17px; color: var(--g3); flex-shrink: 0; transition: transform .3s, background .3s; }
 .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--gold-soft); color: #0a0700; border: none; -webkit-text-fill-color: #0a0700; }
 .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
 .faq-item.open .faq-a { max-height: 200px; }
-.faq-a p { margin: 0 26px 22px; padding-top: 14px; border-top: 1px solid rgba(212,168,67,0.12); font-size: 14px; color: var(--ink3); line-height: 1.7; }
+.faq-a p { margin: 0 26px 22px; padding-top: 14px; border-top: 1px solid rgba(180,180,180,0.12); font-size: 14px; color: var(--ink3); line-height: 1.7; }
 
 /* ══ FOOTER ══ */
 footer { padding: 0 64px 48px; position: relative; z-index: 1; }
@@ -638,8 +638,8 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 .footer-copy a { color: var(--ink4); text-decoration: none; transition: color .2s; }
 .footer-copy a:hover { color: var(--g3); }
 .footer-links { display: flex; gap: 6px; }
-.footer-links a { padding: 7px 16px; border-radius: 9px; font-size: 12px; font-weight: 700; color: var(--ink3); text-decoration: none; background: rgba(212,168,67,0.05); border: 1px solid rgba(212,168,67,0.10); transition: background .2s, color .2s; }
-.footer-links a:hover { background: rgba(212,168,67,0.13); color: var(--g2); }
+.footer-links a { padding: 7px 16px; border-radius: 9px; font-size: 12px; font-weight: 700; color: var(--ink3); text-decoration: none; background: rgba(180,180,180,0.05); border: 1px solid rgba(180,180,180,0.10); transition: background .2s, color .2s; }
+.footer-links a:hover { background: rgba(180,180,180,0.13); color: var(--g2); }
 
 /* ══ FADE IN ══ */
 .fu { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
@@ -692,7 +692,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
   height: 48px;
   background: linear-gradient(90deg, #1a1200, #0e0900, #1a1200);
-  border-bottom: 1px solid rgba(212,168,67,0.25);
+  border-bottom: 1px solid rgba(180,180,180,0.25);
   padding: 0 24px;
   display: flex; align-items: center; justify-content: center; gap: 20px;
   backdrop-filter: blur(12px);
@@ -707,8 +707,8 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 }
 .td-block {
   display: flex; flex-direction: column; align-items: center;
-  background: rgba(212,168,67,0.10);
-  border: 1px solid rgba(212,168,67,0.22);
+  background: rgba(180,180,180,0.10);
+  border: 1px solid rgba(180,180,180,0.22);
   border-radius: 8px; padding: 4px 10px; min-width: 44px;
 }
 .td-num {
@@ -729,11 +729,11 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   padding: 6px 18px; border-radius: 8px; font-size: 12px; font-weight: 800;
   background: var(--gold-soft); color: #0a0700; text-decoration: none;
   white-space: nowrap; letter-spacing: 0.3px;
-  box-shadow: 0 4px 16px rgba(212,168,67,0.35);
+  box-shadow: 0 4px 16px rgba(180,180,180,0.35);
   transition: transform .2s, box-shadow .2s;
   -webkit-text-fill-color: #0a0700;
 }
-.timer-bar-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(212,168,67,0.50); }
+.timer-bar-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(180,180,180,0.50); }
 .timer-bar-close {
   position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
   background: none; border: none; color: var(--ink4); cursor: pointer;
@@ -755,10 +755,10 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 }
 .pt-block {
   display: flex; flex-direction: column; align-items: center;
-  background: rgba(212,168,67,0.08);
-  border: 1px solid rgba(212,168,67,0.28);
+  background: rgba(180,180,180,0.08);
+  border: 1px solid rgba(180,180,180,0.28);
   border-radius: 12px; padding: 10px 16px; min-width: 60px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(220,220,220,0.15);
 }
 .pt-num {
   font-size: 32px; font-weight: 800; letter-spacing: -1.5px; line-height: 1;
@@ -787,122 +787,58 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
 }
 
 /* ══ SOCIAL PROOF TOAST ══ */
-.sp-toast {
-  position: fixed; bottom: 28px; left: 24px; z-index: 3000;
-  display: flex; align-items: center; gap: 12px;
-  padding: 14px 18px; border-radius: 16px;
-  background: rgba(8,6,2,0.92);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(212,168,67,0.32);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.70), 0 4px 16px rgba(0,0,0,0.40),
-              inset 0 1.5px 0 rgba(240,201,106,0.18);
-  max-width: 300px;
-  transform: translateX(-120%) scale(0.92);
-  opacity: 0;
-  transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1), opacity 0.35s ease;
-  cursor: pointer;
-}
-.sp-toast.show { transform: translateX(0) scale(1); opacity: 1; }
-.sp-toast.hide { transform: translateX(-120%) scale(0.92); opacity: 0; }
-.sp-avatar {
-  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 19px; font-weight: 800;
-  background: linear-gradient(135deg, rgba(212,168,67,0.22), rgba(160,120,40,0.12));
-  border: 1.5px solid rgba(212,168,67,0.35);
-  color: var(--g2);
-}
-.sp-body { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
-.sp-name { font-size: 13px; font-weight: 700; color: var(--ink); }
-.sp-action { font-size: 12px; color: var(--ink3); line-height: 1.4; }
+
+
+
+
+
+
+
 .sp-action strong { color: var(--g2); font-weight: 700; }
-.sp-time { font-size: 10px; color: var(--ink4); margin-top: 3px; }
-.sp-dot {
-  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-  background: #34d399;
-  box-shadow: 0 0 8px rgba(52,211,153,0.7);
-  animation: dot-pulse 2s ease-in-out infinite;
-}
+
+
 @keyframes dot-pulse {
   0%,100% { box-shadow: 0 0 6px rgba(52,211,153,0.5); }
   50%      { box-shadow: 0 0 14px rgba(52,211,153,1); }
 }
 @media (max-width: 600px) {
-  .sp-toast { left: 12px; right: 12px; max-width: none; bottom: 20px; }
+  
 }
 
 /* ══ SPOTS PROGRESS BAR ══ */
-.spots-bar {
-  margin: 0 0 40px;
-  padding: 24px 32px;
-  border-radius: 20px;
-  background: rgba(212,168,67,0.05);
-  border: 1px solid rgba(212,168,67,0.20);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.10);
-}
-.spots-header {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 14px;
-}
-.spots-label {
-  font-size: 13px; font-weight: 700; color: var(--ink2);
-  display: flex; align-items: center; gap: 8px;
-}
-.spots-fire { font-size: 16px; animation: fire-shake 1.8s ease-in-out infinite; }
+
+
+
+
 @keyframes fire-shake {
   0%,100% { transform: rotate(-5deg) scale(1); }
   50%      { transform: rotate(5deg) scale(1.15); }
 }
-.spots-count {
-  font-size: 13px; font-weight: 700; color: var(--ink3);
-}
+
 .spots-count strong {
   font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
   background: var(--gold-soft); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; background-clip: text;
 }
-.spots-track {
-  height: 10px; border-radius: 100px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(212,168,67,0.12);
-  overflow: hidden; position: relative;
-}
-.spots-fill {
-  height: 100%; border-radius: 100px;
-  background: linear-gradient(90deg, #a07828, #d4a843, #f0c96a, #fae8a0, #f0c96a);
-  background-size: 200% auto;
-  animation: bar-shine 2.5s linear infinite;
-  transition: width 1.2s cubic-bezier(0.34,1.2,0.64,1);
-  position: relative;
-}
-.spots-fill::after {
-  content: '';
-  position: absolute; right: -1px; top: -2px; bottom: -2px;
-  width: 14px; border-radius: 50%;
-  background: #fae8a0;
-  box-shadow: 0 0 10px rgba(250,232,160,0.9), 0 0 24px rgba(212,168,67,0.6);
-  animation: glow-pulse 1.5s ease-in-out infinite;
-}
+
+
+
 @keyframes bar-shine {
   0%   { background-position: 200% center; }
   100% { background-position: 0% center; }
 }
 @keyframes glow-pulse {
-  0%,100% { box-shadow: 0 0 8px rgba(250,232,160,0.8), 0 0 20px rgba(212,168,67,0.5); }
-  50%      { box-shadow: 0 0 16px rgba(250,232,160,1), 0 0 36px rgba(212,168,67,0.8); }
+  0%,100% { box-shadow: 0 0 8px rgba(250,232,160,0.8), 0 0 20px rgba(180,180,180,0.5); }
+  50%      { box-shadow: 0 0 16px rgba(250,232,160,1), 0 0 36px rgba(180,180,180,0.8); }
 }
 .spots-footer {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: 10px;
 }
-.spots-taken { font-size: 11px; color: var(--ink4); font-weight: 500; }
-.spots-urgency {
-  font-size: 11px; font-weight: 700; color: #f0c96a;
-  display: flex; align-items: center; gap: 5px;
-}
+
+
 .urgency-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: #f0c96a;
+  width: 6px; height: 6px; border-radius: 50%; background: #e0e0e0;
   animation: dot-pulse 1.5s ease-in-out infinite;
 }
 
@@ -1018,10 +954,6 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <a href="#pricing" class="timer-bar-btn">Забрать цену →</a>
   <button class="timer-bar-close" onclick="document.getElementById('timerBar').style.display='none'; document.querySelector('nav').style.top='16px';">×</button>
 </div>
-
-<!-- SOCIAL PROOF TOAST -->
-<div class="sp-toast" id="spToast" onclick="this.classList.remove('show');this.classList.add('hide')">
-  <div class="sp-avatar" id="spAvatar">А</div>
   <div class="sp-body">
     <div class="sp-name" id="spName">Анна</div>
     <div class="sp-action" id="spAction">купила тариф <strong>Практика</strong></div>
@@ -1216,8 +1148,8 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
       <svg class="about-illu" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#f0c96a" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#d4a843" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#e0e0e0" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#c8c8c8" stop-opacity="0"/>
           </radialGradient>
           <filter id="blur1"><feGaussianBlur stdDeviation="3"/></filter>
         </defs>
@@ -1225,41 +1157,41 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
         <ellipse cx="100" cy="90" rx="60" ry="60" fill="url(#glow1)" filter="url(#blur1)"/>
         <ellipse cx="300" cy="90" rx="60" ry="60" fill="url(#glow1)" filter="url(#blur1)"/>
         <!-- Connection lines -->
-        <line x1="100" y1="90" x2="200" y2="45" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
-        <line x1="100" y1="90" x2="200" y2="90" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
-        <line x1="100" y1="90" x2="200" y2="135" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
-        <line x1="200" y1="45" x2="300" y2="90" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.4"/>
-        <line x1="200" y1="90" x2="300" y2="90" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="200" y1="135" x2="300" y2="90" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.4"/>
-        <line x1="200" y1="45" x2="200" y2="135" stroke="#d4a843" stroke-width="0.5" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+        <line x1="100" y1="90" x2="200" y2="45" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="100" y1="90" x2="200" y2="90" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="100" y1="90" x2="200" y2="135" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="200" y1="45" x2="300" y2="90" stroke="#e0e0e0" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="200" y1="90" x2="300" y2="90" stroke="#e0e0e0" stroke-width="0.8" stroke-opacity="0.5"/>
+        <line x1="200" y1="135" x2="300" y2="90" stroke="#e0e0e0" stroke-width="0.8" stroke-opacity="0.4"/>
+        <line x1="200" y1="45" x2="200" y2="135" stroke="#c8c8c8" stroke-width="0.5" stroke-opacity="0.25" stroke-dasharray="4 4"/>
         <!-- Satellite nodes -->
-        <line x1="100" y1="90" x2="50" y2="50" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
-        <line x1="100" y1="90" x2="48" y2="130" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
-        <line x1="300" y1="90" x2="352" y2="50" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
-        <line x1="300" y1="90" x2="350" y2="130" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="100" y1="90" x2="50" y2="50" stroke="#c8c8c8" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="100" y1="90" x2="48" y2="130" stroke="#c8c8c8" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="300" y1="90" x2="352" y2="50" stroke="#c8c8c8" stroke-width="0.6" stroke-opacity="0.3"/>
+        <line x1="300" y1="90" x2="350" y2="130" stroke="#c8c8c8" stroke-width="0.6" stroke-opacity="0.3"/>
         <!-- Outer nodes small -->
-        <circle cx="50" cy="50" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
-        <circle cx="48" cy="130" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
-        <circle cx="352" cy="50" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
-        <circle cx="350" cy="130" r="4" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/>
+        <circle cx="50" cy="50" r="4" fill="#c8c8c8" fill-opacity="0.35" stroke="#c8c8c8" stroke-width="1"/>
+        <circle cx="48" cy="130" r="4" fill="#c8c8c8" fill-opacity="0.35" stroke="#c8c8c8" stroke-width="1"/>
+        <circle cx="352" cy="50" r="4" fill="#c8c8c8" fill-opacity="0.35" stroke="#c8c8c8" stroke-width="1"/>
+        <circle cx="350" cy="130" r="4" fill="#c8c8c8" fill-opacity="0.35" stroke="#c8c8c8" stroke-width="1"/>
         <!-- Mid nodes -->
-        <circle cx="200" cy="45" r="8" fill="rgba(212,168,67,0.12)" stroke="#d4a843" stroke-width="1.2"/>
-        <circle cx="200" cy="135" r="8" fill="rgba(212,168,67,0.12)" stroke="#d4a843" stroke-width="1.2"/>
-        <circle cx="200" cy="90" r="10" fill="rgba(240,201,106,0.15)" stroke="#f0c96a" stroke-width="1.5"/>
+        <circle cx="200" cy="45" r="8" fill="rgba(180,180,180,0.12)" stroke="#c8c8c8" stroke-width="1.2"/>
+        <circle cx="200" cy="135" r="8" fill="rgba(180,180,180,0.12)" stroke="#c8c8c8" stroke-width="1.2"/>
+        <circle cx="200" cy="90" r="10" fill="rgba(220,220,220,0.15)" stroke="#e0e0e0" stroke-width="1.5"/>
         <!-- Main nodes -->
-        <circle cx="100" cy="90" r="22" fill="rgba(212,168,67,0.08)" stroke="#d4a843" stroke-width="1.5"/>
-        <circle cx="100" cy="90" r="14" fill="rgba(212,168,67,0.12)" stroke="#d4a843" stroke-width="1"/>
-        <text x="100" y="95" text-anchor="middle" font-size="12" fill="#f0c96a" font-weight="700">AI</text>
-        <circle cx="300" cy="90" r="22" fill="rgba(240,201,106,0.1)" stroke="#f0c96a" stroke-width="1.5"/>
-        <circle cx="300" cy="90" r="14" fill="rgba(240,201,106,0.15)" stroke="#f0c96a" stroke-width="1"/>
-        <text x="300" y="95" text-anchor="middle" font-size="10" fill="#f0c96a" font-weight="700">GPT</text>
+        <circle cx="100" cy="90" r="22" fill="rgba(180,180,180,0.08)" stroke="#c8c8c8" stroke-width="1.5"/>
+        <circle cx="100" cy="90" r="14" fill="rgba(180,180,180,0.12)" stroke="#c8c8c8" stroke-width="1"/>
+        <text x="100" y="95" text-anchor="middle" font-size="12" fill="#e0e0e0" font-weight="700">AI</text>
+        <circle cx="300" cy="90" r="22" fill="rgba(220,220,220,0.1)" stroke="#e0e0e0" stroke-width="1.5"/>
+        <circle cx="300" cy="90" r="14" fill="rgba(220,220,220,0.15)" stroke="#e0e0e0" stroke-width="1"/>
+        <text x="300" y="95" text-anchor="middle" font-size="10" fill="#e0e0e0" font-weight="700">GPT</text>
         <!-- Animated pulse rings -->
-        <circle cx="100" cy="90" r="28" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5"/>
-        <circle cx="300" cy="90" r="28" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5"/>
+        <circle cx="100" cy="90" r="28" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5"/>
+        <circle cx="300" cy="90" r="28" stroke="#e0e0e0" stroke-width="0.8" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5"/>
         <!-- Labels -->
-        <text x="200" y="22" text-anchor="middle" font-size="9" fill="#d4a843" fill-opacity="0.7" font-weight="600" letter-spacing="1">CONTENT</text>
-        <text x="200" y="168" text-anchor="middle" font-size="9" fill="#d4a843" fill-opacity="0.7" font-weight="600" letter-spacing="1">WORKFLOW</text>
-        <text x="200" y="94" text-anchor="middle" font-size="8" fill="#f0c96a" fill-opacity="0.8" font-weight="700">SYSTEM</text>
+        <text x="200" y="22" text-anchor="middle" font-size="9" fill="#c8c8c8" fill-opacity="0.7" font-weight="600" letter-spacing="1">CONTENT</text>
+        <text x="200" y="168" text-anchor="middle" font-size="9" fill="#c8c8c8" fill-opacity="0.7" font-weight="600" letter-spacing="1">WORKFLOW</text>
+        <text x="200" y="94" text-anchor="middle" font-size="8" fill="#e0e0e0" fill-opacity="0.8" font-weight="700">SYSTEM</text>
       </svg>
       <p style="font-size:15px;color:var(--ink2);line-height:1.75;margin-bottom:14px;">Это практический воркшоп — не теория, а живые задания, реальные инструменты и результаты, которые можно показать клиентам уже через 3 дня.</p>
       <p style="font-size:15px;color:var(--ink2);line-height:1.75;margin-bottom:14px;">Александр прошёл путь от нуля до 25 000+ подписчиков через AI-контент и теперь передаёт эту систему участникам.</p>
@@ -1274,27 +1206,27 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <h2>Кому подойдёт <span class="ga">воркшоп</span></h2>
   <div class="for-grid">
     <div class="gc for-card fu">
-      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><rect x="8" y="14" width="28" height="20" rx="4" stroke="#d4a843" stroke-width="1.4"/><circle cx="22" cy="24" r="6" stroke="#f0c96a" stroke-width="1.2"/><circle cx="22" cy="24" r="2.5" fill="#d4a843" fill-opacity="0.5"/><path d="M15 14l2.5-3.5h9l2.5 3.5" stroke="#d4a843" stroke-width="1.2"/><circle cx="33" cy="18" r="1.8" fill="#f0c96a"/></svg>
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/><rect x="8" y="14" width="28" height="20" rx="4" stroke="#c8c8c8" stroke-width="1.4"/><circle cx="22" cy="24" r="6" stroke="#e0e0e0" stroke-width="1.2"/><circle cx="22" cy="24" r="2.5" fill="#c8c8c8" fill-opacity="0.5"/><path d="M15 14l2.5-3.5h9l2.5 3.5" stroke="#c8c8c8" stroke-width="1.2"/><circle cx="33" cy="18" r="1.8" fill="#e0e0e0"/></svg>
       <div class="for-num">01</div><div class="for-title">Блогер</div><p class="for-desc">Хочешь масштабировать блог и привлекать аудиторию через AI без бесконечного ручного труда.</p>
     </div>
     <div class="gc for-card fu">
-      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><rect x="7" y="11" width="30" height="19" rx="3" stroke="#d4a843" stroke-width="1.4"/><path d="M4 34h36" stroke="#f0c96a" stroke-width="1.4" stroke-linecap="round"/><path d="M15 34l-1.5 3.5h15L27 34" stroke="#d4a843" stroke-width="1.2"/><path d="M13 19h8M13 23h12" stroke="#f0c96a" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/><rect x="27" y="16" width="5" height="5" rx="1" fill="#d4a843" fill-opacity="0.25" stroke="#d4a843" stroke-width="1"/></svg>
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/><rect x="7" y="11" width="30" height="19" rx="3" stroke="#c8c8c8" stroke-width="1.4"/><path d="M4 34h36" stroke="#e0e0e0" stroke-width="1.4" stroke-linecap="round"/><path d="M15 34l-1.5 3.5h15L27 34" stroke="#c8c8c8" stroke-width="1.2"/><path d="M13 19h8M13 23h12" stroke="#e0e0e0" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/><rect x="27" y="16" width="5" height="5" rx="1" fill="#c8c8c8" fill-opacity="0.25" stroke="#c8c8c8" stroke-width="1"/></svg>
       <div class="for-num">02</div><div class="for-title">Фрилансер</div><p class="for-desc">Хочешь освоить профессию AI-монтажёра и начать зарабатывать на востребованном навыке.</p>
     </div>
     <div class="gc for-card fu">
-      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><rect x="8" y="19" width="28" height="18" rx="2" stroke="#d4a843" stroke-width="1.4"/><path d="M15 19v-6l7-3.5 7 3.5v6" stroke="#f0c96a" stroke-width="1.3"/><rect x="13" y="25" width="5" height="5" rx="1" stroke="#d4a843" stroke-width="1.1"/><rect x="26" y="25" width="5" height="5" rx="1" stroke="#d4a843" stroke-width="1.1"/><rect x="19" y="28" width="6" height="9" rx="1" stroke="#f0c96a" stroke-width="1.1"/></svg>
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/><rect x="8" y="19" width="28" height="18" rx="2" stroke="#c8c8c8" stroke-width="1.4"/><path d="M15 19v-6l7-3.5 7 3.5v6" stroke="#e0e0e0" stroke-width="1.3"/><rect x="13" y="25" width="5" height="5" rx="1" stroke="#c8c8c8" stroke-width="1.1"/><rect x="26" y="25" width="5" height="5" rx="1" stroke="#c8c8c8" stroke-width="1.1"/><rect x="19" y="28" width="6" height="9" rx="1" stroke="#e0e0e0" stroke-width="1.1"/></svg>
       <div class="for-num">03</div><div class="for-title">Предприниматель</div><p class="for-desc">Хочешь продвигать бизнес через AI-контент и выстроить поток клиентов без больших вложений.</p>
     </div>
     <div class="gc for-card fu">
-      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><path d="M7 34h30" stroke="#d4a843" stroke-width="1.4" stroke-linecap="round"/><path d="M7 10v24" stroke="#d4a843" stroke-width="1.4" stroke-linecap="round"/><path d="M11 28l8-10 8 6 9-14" stroke="#f0c96a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="28" r="2" fill="#d4a843"/><circle cx="19" cy="18" r="2" fill="#d4a843"/><circle cx="27" cy="24" r="2" fill="#d4a843"/><circle cx="36" cy="10" r="2.5" fill="#f0c96a"/></svg>
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/><path d="M7 34h30" stroke="#c8c8c8" stroke-width="1.4" stroke-linecap="round"/><path d="M7 10v24" stroke="#c8c8c8" stroke-width="1.4" stroke-linecap="round"/><path d="M11 28l8-10 8 6 9-14" stroke="#e0e0e0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="28" r="2" fill="#c8c8c8"/><circle cx="19" cy="18" r="2" fill="#c8c8c8"/><circle cx="27" cy="24" r="2" fill="#c8c8c8"/><circle cx="36" cy="10" r="2.5" fill="#e0e0e0"/></svg>
       <div class="for-num">04</div><div class="for-title">SMM-специалист</div><p class="for-desc">Хочешь добавить AI-инструменты в арсенал и брать более дорогие проекты.</p>
     </div>
     <div class="gc for-card fu">
-      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><polygon points="22,7 25,17 36,17 27,23 30,33 22,27 14,33 17,23 8,17 19,17" stroke="#d4a843" stroke-width="1.4" fill="rgba(212,168,67,0.07)"/><polygon points="22,11 24.5,18.5 32.5,18.5 26,23 28.5,30.5 22,26 15.5,30.5 18,23 11.5,18.5 19.5,18.5" fill="#d4a843" fill-opacity="0.22"/></svg>
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/><polygon points="22,7 25,17 36,17 27,23 30,33 22,27 14,33 17,23 8,17 19,17" stroke="#c8c8c8" stroke-width="1.4" fill="rgba(180,180,180,0.07)"/><polygon points="22,11 24.5,18.5 32.5,18.5 26,23 28.5,30.5 22,26 15.5,30.5 18,23 11.5,18.5 19.5,18.5" fill="#c8c8c8" fill-opacity="0.22"/></svg>
       <div class="for-num">05</div><div class="for-title">Эксперт</div><p class="for-desc">Хочешь выйти в онлайн и начать привлекать клиентов через Reels и AI-контент.</p>
     </div>
     <div class="gc for-card fu">
-      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/><path d="M22 7s10 3.5 10 13v8l-10 7-10-7V20C12 10.5 22 7 22 7z" stroke="#d4a843" stroke-width="1.4" fill="rgba(212,168,67,0.06)"/><circle cx="22" cy="20" r="3.5" stroke="#f0c96a" stroke-width="1.3"/><path d="M17 35l-3 3M27 35l3 3" stroke="#d4a843" stroke-width="1.3" stroke-linecap="round"/><path d="M19 38c1.5 1.5 5.5 1.5 7 0" stroke="#f0c96a" stroke-width="1.1" stroke-linecap="round"/></svg>
+      <svg class="card-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/><path d="M22 7s10 3.5 10 13v8l-10 7-10-7V20C12 10.5 22 7 22 7z" stroke="#c8c8c8" stroke-width="1.4" fill="rgba(180,180,180,0.06)"/><circle cx="22" cy="20" r="3.5" stroke="#e0e0e0" stroke-width="1.3"/><path d="M17 35l-3 3M27 35l3 3" stroke="#c8c8c8" stroke-width="1.3" stroke-linecap="round"/><path d="M19 38c1.5 1.5 5.5 1.5 7 0" stroke="#e0e0e0" stroke-width="1.1" stroke-linecap="round"/></svg>
       <div class="for-num">06</div><div class="for-title">Новичок</div><p class="for-desc">Хочешь освоить AI-нишу с нуля и выйти на доход в новой профессии без опыта.</p>
     </div>
   </div>
@@ -1322,21 +1254,21 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <h2>9 блоков <span class="ga">воркшопа</span></h2>
   <p class="desc">Каждый блок — конкретный результат, а не теория</p>
   <div class="prog-grid">
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="24" width="6" height="12" rx="1.5" fill="#d4a843" fill-opacity="0.5" stroke="#d4a843" stroke-width="1"/><rect x="13" y="18" width="6" height="18" rx="1.5" fill="#d4a843" fill-opacity="0.35" stroke="#d4a843" stroke-width="1"/><rect x="22" y="10" width="6" height="26" rx="1.5" fill="#f0c96a" fill-opacity="0.4" stroke="#f0c96a" stroke-width="1"/><rect x="31" y="4" width="6" height="32" rx="1.5" fill="#f0c96a" fill-opacity="0.6" stroke="#f0c96a" stroke-width="1"/><path d="M4 38h34" stroke="#d4a843" stroke-width="1" stroke-opacity="0.4"/></svg><div class="ptag">Блок 01</div><h3>Актуальность и заработок</h3><ul class="plist"><li>Почему AI-контент — это тренд 2026</li><li>Сколько зарабатывают AI-монтажёры сейчас</li><li>Какие ниши работают лучше всего</li><li>Твои первые шаги в профессии</li></ul><div class="presult">→ Понимаешь рынок и видишь точку входа</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="24" width="6" height="12" rx="1.5" fill="#c8c8c8" fill-opacity="0.5" stroke="#c8c8c8" stroke-width="1"/><rect x="13" y="18" width="6" height="18" rx="1.5" fill="#c8c8c8" fill-opacity="0.35" stroke="#c8c8c8" stroke-width="1"/><rect x="22" y="10" width="6" height="26" rx="1.5" fill="#e0e0e0" fill-opacity="0.4" stroke="#e0e0e0" stroke-width="1"/><rect x="31" y="4" width="6" height="32" rx="1.5" fill="#e0e0e0" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/><path d="M4 38h34" stroke="#c8c8c8" stroke-width="1" stroke-opacity="0.4"/></svg><div class="ptag">Блок 01</div><h3>Актуальность и заработок</h3><ul class="plist"><li>Почему AI-контент — это тренд 2026</li><li>Сколько зарабатывают AI-монтажёры сейчас</li><li>Какие ниши работают лучше всего</li><li>Твои первые шаги в профессии</li></ul><div class="presult">→ Понимаешь рынок и видишь точку входа</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="26" height="20" rx="4" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.06)"/><path d="M8 28l-4 6 6-2" stroke="#d4a843" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22" y1="14" x2="28" y2="14"/><path d="M9 14h14M9 18h10" stroke="#f0c96a" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/><circle cx="30" cy="28" r="8" fill="rgba(240,201,106,0.1)" stroke="#f0c96a" stroke-width="1.3"/><path d="M27 28l2 2 4-4" stroke="#f0c96a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ptag">Блок 02</div><h3>Работа с ChatGPT</h3><ul class="plist"><li>Промпты для создания вирусных сценариев</li><li>GPT как редактор и генератор идей</li><li>Автоматизация рутины через AI</li><li>Практические шаблоны для Reels</li></ul><div class="presult">→ ChatGPT работает на тебя 24/7</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="26" height="20" rx="4" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.06)"/><path d="M8 28l-4 6 6-2" stroke="#c8c8c8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22" y1="14" x2="28" y2="14"/><path d="M9 14h14M9 18h10" stroke="#e0e0e0" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/><circle cx="30" cy="28" r="8" fill="rgba(220,220,220,0.1)" stroke="#e0e0e0" stroke-width="1.3"/><path d="M27 28l2 2 4-4" stroke="#e0e0e0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ptag">Блок 02</div><h3>Работа с ChatGPT</h3><ul class="plist"><li>Промпты для создания вирусных сценариев</li><li>GPT как редактор и генератор идей</li><li>Автоматизация рутины через AI</li><li>Практические шаблоны для Reels</li></ul><div class="presult">→ ChatGPT работает на тебя 24/7</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="12" width="20" height="20" rx="4" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.06)"/><circle cx="15" cy="19" r="2" fill="#f0c96a"/><circle cx="25" cy="19" r="2" fill="#f0c96a"/><path d="M15 25c0 0 2 2 5 2s5-2 5-2" stroke="#f0c96a" stroke-width="1.2" stroke-linecap="round"/><path d="M14 12V8M26 12V8" stroke="#d4a843" stroke-width="1.3" stroke-linecap="round"/><path d="M10 20H6M34 20H30" stroke="#d4a843" stroke-width="1.1" stroke-linecap="round" opacity="0.6"/><circle cx="20" cy="4" r="2" fill="#d4a843" fill-opacity="0.5" stroke="#d4a843" stroke-width="0.8"/><path d="M20 6v2" stroke="#d4a843" stroke-width="1" stroke-linecap="round"/></svg><div class="ptag">Блок 03</div><h3>Создание ИИ-агента</h3><ul class="plist"><li>Что такое AI-агент и зачем он нужен</li><li>Настройка персонального AI-помощника</li><li>Автогенерация контента под твой стиль</li><li>Масштабирование производства контента</li></ul><div class="presult">→ Твой личный AI-агент готов к работе</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="12" width="20" height="20" rx="4" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.06)"/><circle cx="15" cy="19" r="2" fill="#e0e0e0"/><circle cx="25" cy="19" r="2" fill="#e0e0e0"/><path d="M15 25c0 0 2 2 5 2s5-2 5-2" stroke="#e0e0e0" stroke-width="1.2" stroke-linecap="round"/><path d="M14 12V8M26 12V8" stroke="#c8c8c8" stroke-width="1.3" stroke-linecap="round"/><path d="M10 20H6M34 20H30" stroke="#c8c8c8" stroke-width="1.1" stroke-linecap="round" opacity="0.6"/><circle cx="20" cy="4" r="2" fill="#c8c8c8" fill-opacity="0.5" stroke="#c8c8c8" stroke-width="0.8"/><path d="M20 6v2" stroke="#c8c8c8" stroke-width="1" stroke-linecap="round"/></svg><div class="ptag">Блок 03</div><h3>Создание ИИ-агента</h3><ul class="plist"><li>Что такое AI-агент и зачем он нужен</li><li>Настройка персонального AI-помощника</li><li>Автогенерация контента под твой стиль</li><li>Масштабирование производства контента</li></ul><div class="presult">→ Твой личный AI-агент готов к работе</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="15" height="15" rx="2.5" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.07)"/><rect x="21" y="4" width="15" height="15" rx="2.5" stroke="#f0c96a" stroke-width="1.3" fill="rgba(240,201,106,0.07)"/><rect x="4" y="21" width="15" height="15" rx="2.5" stroke="#f0c96a" stroke-width="1.3" fill="rgba(240,201,106,0.07)"/><rect x="21" y="21" width="15" height="15" rx="2.5" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.07)"/><path d="M9 11.5h5M9 13.5h3" stroke="#d4a843" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M26 11.5h5M26 13.5h3" stroke="#f0c96a" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M9 28.5h5M9 30.5h3" stroke="#f0c96a" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M26 28.5h5M26 30.5h3" stroke="#d4a843" stroke-width="1" stroke-linecap="round" opacity="0.7"/></svg><div class="ptag">Блок 04</div><h3>Упаковка блога</h3><ul class="plist"><li>Структура профиля, которая продаёт</li><li>Контент-план через AI за 10 минут</li><li>Воронка: подписчик → клиент</li><li>Личный бренд с лицом и без лица</li></ul><div class="presult">→ Блог упакован и готов привлекать клиентов</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="15" height="15" rx="2.5" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.07)"/><rect x="21" y="4" width="15" height="15" rx="2.5" stroke="#e0e0e0" stroke-width="1.3" fill="rgba(220,220,220,0.07)"/><rect x="4" y="21" width="15" height="15" rx="2.5" stroke="#e0e0e0" stroke-width="1.3" fill="rgba(220,220,220,0.07)"/><rect x="21" y="21" width="15" height="15" rx="2.5" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.07)"/><path d="M9 11.5h5M9 13.5h3" stroke="#c8c8c8" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M26 11.5h5M26 13.5h3" stroke="#e0e0e0" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M9 28.5h5M9 30.5h3" stroke="#e0e0e0" stroke-width="1" stroke-linecap="round" opacity="0.7"/><path d="M26 28.5h5M26 30.5h3" stroke="#c8c8c8" stroke-width="1" stroke-linecap="round" opacity="0.7"/></svg><div class="ptag">Блок 04</div><h3>Упаковка блога</h3><ul class="plist"><li>Структура профиля, которая продаёт</li><li>Контент-план через AI за 10 минут</li><li>Воронка: подписчик → клиент</li><li>Личный бренд с лицом и без лица</li></ul><div class="presult">→ Блог упакован и готов привлекать клиентов</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="28" height="24" rx="3" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.06)"/><polygon points="18,14 18,26 28,20" fill="#f0c96a" fill-opacity="0.7" stroke="#f0c96a" stroke-width="1"/><path d="M35 12v16" stroke="#d4a843" stroke-width="2" stroke-linecap="round"/><path d="M4 16h3M4 20h3M4 24h3" stroke="#d4a843" stroke-width="1" stroke-linecap="round" opacity="0.4"/></svg><div class="ptag">Блок 05</div><h3>Работа с Syntx</h3><ul class="plist"><li>Обзор инструмента для AI-монтажа</li><li>Создание первого AI-ролика в Syntx</li><li>Шаблоны и эффекты для вирального контента</li><li>Оптимизация рабочего процесса</li></ul><div class="presult">→ Первый AI-ролик смонтирован</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="28" height="24" rx="3" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.06)"/><polygon points="18,14 18,26 28,20" fill="#e0e0e0" fill-opacity="0.7" stroke="#e0e0e0" stroke-width="1"/><path d="M35 12v16" stroke="#c8c8c8" stroke-width="2" stroke-linecap="round"/><path d="M4 16h3M4 20h3M4 24h3" stroke="#c8c8c8" stroke-width="1" stroke-linecap="round" opacity="0.4"/></svg><div class="ptag">Блок 05</div><h3>Работа с Syntx</h3><ul class="plist"><li>Обзор инструмента для AI-монтажа</li><li>Создание первого AI-ролика в Syntx</li><li>Шаблоны и эффекты для вирального контента</li><li>Оптимизация рабочего процесса</li></ul><div class="presult">→ Первый AI-ролик смонтирован</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="16" rx="12" ry="10" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.07)"/><path d="M8 16c0 5.5 5.4 10 12 10s12-4.5 12-10" stroke="#d4a843" stroke-width="1.2"/><path d="M8 20c0 5.5 5.4 10 12 10s12-4.5 12-10" stroke="#f0c96a" stroke-width="1.2"/><path d="M8 24c0 5.5 5.4 9 12 9s12-3.5 12-9" stroke="#d4a843" stroke-width="1" stroke-opacity="0.5"/><line x1="20" y1="6" x2="20" y2="33" stroke="#f0c96a" stroke-width="0.8" stroke-opacity="0.4"/><line x1="8" y1="16" x2="32" y2="16" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/></svg><div class="ptag">Блок 06</div><h3>Первые деньги</h3><ul class="plist"><li>Где искать первых клиентов на AI-монтаж</li><li>Как упаковать услугу и назначить цену</li><li>Продающее портфолио за 1 день</li><li>Скрипт переговоров с клиентом</li></ul><div class="presult">→ Первые заявки и оферта готовы</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="16" rx="12" ry="10" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.07)"/><path d="M8 16c0 5.5 5.4 10 12 10s12-4.5 12-10" stroke="#c8c8c8" stroke-width="1.2"/><path d="M8 20c0 5.5 5.4 10 12 10s12-4.5 12-10" stroke="#e0e0e0" stroke-width="1.2"/><path d="M8 24c0 5.5 5.4 9 12 9s12-3.5 12-9" stroke="#c8c8c8" stroke-width="1" stroke-opacity="0.5"/><line x1="20" y1="6" x2="20" y2="33" stroke="#e0e0e0" stroke-width="0.8" stroke-opacity="0.4"/><line x1="8" y1="16" x2="32" y2="16" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.4"/></svg><div class="ptag">Блок 06</div><h3>Первые деньги</h3><ul class="plist"><li>Где искать первых клиентов на AI-монтаж</li><li>Как упаковать услугу и назначить цену</li><li>Продающее портфолио за 1 день</li><li>Скрипт переговоров с клиентом</li></ul><div class="presult">→ Первые заявки и оферта готовы</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 34l8-12 7 5 9-16 6 8" stroke="#f0c96a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="34" r="2.5" fill="#d4a843"/><circle cx="14" cy="22" r="2.5" fill="#d4a843"/><circle cx="21" cy="27" r="2.5" fill="#d4a843"/><circle cx="30" cy="11" r="2.5" fill="#f0c96a"/><path d="M30 11l6-5M30 11h5" stroke="#f0c96a" stroke-width="1.3" stroke-linecap="round"/><path d="M4 36h32" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.3"/></svg><div class="ptag">Блоки 07–08</div><h3>Монетизация и стратегия</h3><ul class="plist"><li>Продуктовая линейка AI-контент-мейкера</li><li>Масштабирование: от фриланса к агентству</li><li>Пассивный доход через AI-продукты</li><li>Долгосрочная стратегия роста блога</li></ul><div class="presult">→ Система масштабирования выстроена</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 34l8-12 7 5 9-16 6 8" stroke="#e0e0e0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="34" r="2.5" fill="#c8c8c8"/><circle cx="14" cy="22" r="2.5" fill="#c8c8c8"/><circle cx="21" cy="27" r="2.5" fill="#c8c8c8"/><circle cx="30" cy="11" r="2.5" fill="#e0e0e0"/><path d="M30 11l6-5M30 11h5" stroke="#e0e0e0" stroke-width="1.3" stroke-linecap="round"/><path d="M4 36h32" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.3"/></svg><div class="ptag">Блоки 07–08</div><h3>Монетизация и стратегия</h3><ul class="plist"><li>Продуктовая линейка AI-контент-мейкера</li><li>Масштабирование: от фриланса к агентству</li><li>Пассивный доход через AI-продукты</li><li>Долгосрочная стратегия роста блога</li></ul><div class="presult">→ Система масштабирования выстроена</div></div>
 
-    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4l2.5 8h8.5l-7 5 2.5 8-7-5-7 5 2.5-8-7-5h8.5z" stroke="#d4a843" stroke-width="1.3" fill="rgba(212,168,67,0.08)"/><circle cx="20" cy="15" r="4" fill="#d4a843" fill-opacity="0.2"/><path d="M14 30h12M16 34h8" stroke="#f0c96a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/><circle cx="20" cy="4" r="1.5" fill="#f0c96a" fill-opacity="0.6"/></svg><div class="ptag">Блок 09</div><h3>Топ-10 ошибок + фишки Саши</h3><ul class="plist"><li>Разбор главных ошибок новичков</li><li>Инсайты из личного опыта Александра</li><li>Фишки для быстрого роста без бюджета</li><li>Q&A: ответы на вопросы участников</li></ul><div class="presult">→ Экономишь месяцы проб и ошибок</div></div>
+    <div class="gc pcard fu"><svg class="prog-icon" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4l2.5 8h8.5l-7 5 2.5 8-7-5-7 5 2.5-8-7-5h8.5z" stroke="#c8c8c8" stroke-width="1.3" fill="rgba(180,180,180,0.08)"/><circle cx="20" cy="15" r="4" fill="#c8c8c8" fill-opacity="0.2"/><path d="M14 30h12M16 34h8" stroke="#e0e0e0" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/><circle cx="20" cy="4" r="1.5" fill="#e0e0e0" fill-opacity="0.6"/></svg><div class="ptag">Блок 09</div><h3>Топ-10 ошибок + фишки Саши</h3><ul class="plist"><li>Разбор главных ошибок новичков</li><li>Инсайты из личного опыта Александра</li><li>Фишки для быстрого роста без бюджета</li><li>Q&A: ответы на вопросы участников</li></ul><div class="presult">→ Экономишь месяцы проб и ошибок</div></div>
   </div>
 </section>
 
@@ -1378,21 +1310,21 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="cta-panel">
     <!-- Decorative SVG orb -->
     <svg class="cta-illu" width="320" height="320" viewBox="0 0 320 320" fill="none">
-      <circle cx="160" cy="160" r="140" stroke="#d4a843" stroke-width="0.6" stroke-opacity="0.5"/>
-      <circle cx="160" cy="160" r="110" stroke="#d4a843" stroke-width="0.5" stroke-opacity="0.35" stroke-dasharray="6 6"/>
-      <circle cx="160" cy="160" r="80" stroke="#f0c96a" stroke-width="0.6" stroke-opacity="0.3"/>
-      <circle cx="160" cy="160" r="50" stroke="#d4a843" stroke-width="0.8" stroke-opacity="0.4"/>
-      <circle cx="160" cy="160" r="22" fill="rgba(212,168,67,0.15)" stroke="#f0c96a" stroke-width="1"/>
-      <text x="160" y="166" text-anchor="middle" font-size="14" fill="#f0c96a" font-weight="800" opacity="0.8">AI</text>
+      <circle cx="160" cy="160" r="140" stroke="#c8c8c8" stroke-width="0.6" stroke-opacity="0.5"/>
+      <circle cx="160" cy="160" r="110" stroke="#c8c8c8" stroke-width="0.5" stroke-opacity="0.35" stroke-dasharray="6 6"/>
+      <circle cx="160" cy="160" r="80" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.3"/>
+      <circle cx="160" cy="160" r="50" stroke="#c8c8c8" stroke-width="0.8" stroke-opacity="0.4"/>
+      <circle cx="160" cy="160" r="22" fill="rgba(180,180,180,0.15)" stroke="#e0e0e0" stroke-width="1"/>
+      <text x="160" y="166" text-anchor="middle" font-size="14" fill="#e0e0e0" font-weight="800" opacity="0.8">AI</text>
       <!-- Orbital dots -->
-      <circle cx="160" cy="20" r="5" fill="#d4a843" fill-opacity="0.5"/>
-      <circle cx="300" cy="160" r="5" fill="#f0c96a" fill-opacity="0.5"/>
-      <circle cx="160" cy="300" r="5" fill="#d4a843" fill-opacity="0.5"/>
-      <circle cx="20" cy="160" r="5" fill="#f0c96a" fill-opacity="0.5"/>
-      <circle cx="259" cy="61" r="4" fill="#d4a843" fill-opacity="0.35"/>
-      <circle cx="259" cy="259" r="4" fill="#d4a843" fill-opacity="0.35"/>
-      <circle cx="61" cy="259" r="4" fill="#d4a843" fill-opacity="0.35"/>
-      <circle cx="61" cy="61" r="4" fill="#d4a843" fill-opacity="0.35"/>
+      <circle cx="160" cy="20" r="5" fill="#c8c8c8" fill-opacity="0.5"/>
+      <circle cx="300" cy="160" r="5" fill="#e0e0e0" fill-opacity="0.5"/>
+      <circle cx="160" cy="300" r="5" fill="#c8c8c8" fill-opacity="0.5"/>
+      <circle cx="20" cy="160" r="5" fill="#e0e0e0" fill-opacity="0.5"/>
+      <circle cx="259" cy="61" r="4" fill="#c8c8c8" fill-opacity="0.35"/>
+      <circle cx="259" cy="259" r="4" fill="#c8c8c8" fill-opacity="0.35"/>
+      <circle cx="61" cy="259" r="4" fill="#c8c8c8" fill-opacity="0.35"/>
+      <circle cx="61" cy="61" r="4" fill="#c8c8c8" fill-opacity="0.35"/>
     </svg>
     <h2>Войди в нишу <span class="gold-text">AI-контента</span></h2>
     <p>Присоединяйся к воркшопу и получи профессию AI-креатора уже в этом месяце</p>
@@ -1419,25 +1351,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   </div>
 
   <!-- SPOTS PROGRESS BAR -->
-  <div class="spots-bar">
-    <div class="spots-header">
-      <div class="spots-label">
-        <span class="spots-fire">🔥</span>
-        Осталось мест по стартовой цене
-      </div>
-      <div class="spots-count"><strong id="spotsLeft">12</strong> из 50</div>
-    </div>
-    <div class="spots-track">
-      <div class="spots-fill" id="spotsFill" style="width: 76%"></div>
-    </div>
-    <div class="spots-footer">
-      <div class="spots-taken">38 человек уже заняли место</div>
-      <div class="spots-urgency">
-        <div class="urgency-dot"></div>
-        Места забирают прямо сейчас
-      </div>
-    </div>
-  </div>
+  
 
   <div class="pricing-grid">
     <div class="gc prc fu">
@@ -1510,7 +1424,7 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="pill">Пример урока</div>
   <h2>Посмотри <span class="ga">как это работает</span></h2>
   <p class="desc">Фрагмент реального урока воркшопа — без воды, только практика</p>
-  <div class="gc fu" style="padding: 0; overflow: hidden; border-radius: 24px; border: 1px solid rgba(212,168,67,0.22); box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,168,67,0.08), inset 0 1px 0 rgba(240,201,106,0.12);">
+  <div class="gc fu" style="padding: 0; overflow: hidden; border-radius: 24px; border: 1px solid rgba(180,180,180,0.22); box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(180,180,180,0.08), inset 0 1px 0 rgba(220,220,220,0.12);">
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 24px;">
       <iframe
         src="https://kinescope.io/embed/iMpjC8umXDijLPqpo1WpX7"
@@ -1591,60 +1505,7 @@ const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 
 // ── SPOTS COUNTER ──
-(function() {
-  const TOTAL = 50;
-  const KEY   = 'ai_start_spots';
-  let taken = parseInt(localStorage.getItem(KEY) || '38');
-  if (taken >= TOTAL) taken = 48;
 
-  function updateSpots() {
-    const left = TOTAL - taken;
-    const pct  = (taken / TOTAL) * 100;
-    const el   = document.getElementById('spotsLeft');
-    const fill = document.getElementById('spotsFill');
-    if (el)   el.textContent = left;
-    if (fill) fill.style.width = pct + '%';
-    const takenEl = document.querySelector('.spots-taken');
-    if (takenEl) takenEl.textContent = taken + ' человек уже заняли место';
-  }
-
-  // Animate bar on load: start narrow, then expand
-  setTimeout(() => {
-    const fill = document.getElementById('spotsFill');
-    if (!fill) return;
-    const target = ((taken / TOTAL) * 100) + '%';
-    fill.style.transition = 'none';
-    fill.style.width = '20%';
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        fill.style.transition = 'width 1.4s cubic-bezier(0.34,1.2,0.64,1)';
-        fill.style.width = target;
-      });
-    });
-  }, 700);
-
-  updateSpots();
-
-  // Decrement a spot every 3–8 minutes randomly
-  function scheduleDecrement() {
-    const delay = (180 + Math.random() * 300) * 1000;
-    setTimeout(() => {
-      if (taken < TOTAL - 1) {
-        taken++;
-        localStorage.setItem(KEY, taken);
-        updateSpots();
-        const el = document.getElementById('spotsLeft');
-        if (el) {
-          el.style.transform = 'scale(1.4)';
-          el.style.filter = 'brightness(1.6)';
-          setTimeout(() => { el.style.transform = ''; el.style.filter = ''; }, 400);
-        }
-      }
-      scheduleDecrement();
-    }, delay);
-  }
-  scheduleDecrement();
-})();
 
 // ── STICKY CTA BAR — shows after scrolling past hero ──
 (function() {
@@ -1661,59 +1522,7 @@ document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 })();
 
 // ── SOCIAL PROOF TOASTS ──
-(function() {
-  const people = [
-    { name: 'Анна М.',      emoji: '👩', city: 'Москва',         tariff: 'Практика',  mins: 2  },
-    { name: 'Дмитрий К.',   emoji: '👨', city: 'СПб',            tariff: 'Результат', mins: 5  },
-    { name: 'Ольга Р.',     emoji: '👩', city: 'Краснодар',      tariff: 'База',      mins: 1  },
-    { name: 'Артём В.',     emoji: '🧑', city: 'Новосибирск',    tariff: 'Практика',  mins: 8  },
-    { name: 'Екатерина Л.', emoji: '👩', city: 'Екатеринбург',   tariff: 'Результат', mins: 3  },
-    { name: 'Михаил С.',    emoji: '👨', city: 'Казань',         tariff: 'Практика',  mins: 12 },
-    { name: 'Юлия Т.',      emoji: '👩', city: 'Ростов-на-Дону', tariff: 'База',      mins: 6  },
-    { name: 'Игорь Н.',     emoji: '🧑', city: 'Воронеж',        tariff: 'Результат', mins: 4  },
-    { name: 'Вика Ш.',      emoji: '👩', city: 'Самара',         tariff: 'Практика',  mins: 9  },
-    { name: 'Андрей Ф.',    emoji: '👨', city: 'Омск',           tariff: 'База',      mins: 15 },
-    { name: 'Наташа Б.',    emoji: '👩', city: 'Уфа',            tariff: 'Результат', mins: 7  },
-    { name: 'Сергей П.',    emoji: '👨', city: 'Волгоград',      tariff: 'Практика',  mins: 20 },
-  ];
 
-  const toast  = document.getElementById('spToast');
-  const avatar = document.getElementById('spAvatar');
-  const name   = document.getElementById('spName');
-  const action = document.getElementById('spAction');
-  const time   = document.getElementById('spTime');
-
-  let idx = 0;
-  let timer;
-
-  function showToast() {
-    const p = people[idx % people.length];
-    idx++;
-
-    avatar.textContent = p.emoji;
-    name.textContent   = p.name + ' · ' + p.city;
-    action.innerHTML   = 'купил(а) тариф <strong>' + p.tariff + '</strong>';
-    time.textContent   = p.mins + ' мин. назад';
-
-    toast.classList.remove('hide');
-    toast.classList.add('show');
-
-    // auto-hide after 5s
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      toast.classList.remove('show');
-      toast.classList.add('hide');
-    }, 5000);
-  }
-
-  // First toast after 8 seconds, then every 25–40 seconds randomly
-  function schedule() {
-    const delay = 25000 + Math.random() * 15000;
-    setTimeout(() => { showToast(); schedule(); }, delay);
-  }
-
-  setTimeout(() => { showToast(); schedule(); }, 8000);
-})();
 // Сохраняем deadline в localStorage, чтобы он не сбрасывался при перезагрузке
 (function() {
   const DURATION_HOURS = 47; // таймер на 47 часов
