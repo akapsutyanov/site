@@ -276,30 +276,93 @@ nav {
 
 /* ── PROGRAM ── */
 .program-section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
-.modules-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 56px; }
-@media(max-width:768px){ .modules-grid{grid-template-columns:1fr} }
+.modules-grid { display: flex; flex-direction: column; gap: 2px; margin-top: 56px; }
 
+/* ACCORDION MODULE CARD */
 .module-card {
   background: rgba(13,13,18,0.95);
   border: 1px solid rgba(200,200,200,0.07);
-  padding: 36px 32px;
-  transition: border-color .4s, transform .3s;
+  transition: border-color .4s;
+  overflow: hidden;
 }
-.module-card:hover { border-color: rgba(200,200,200,0.16); transform: translateY(-2px); }
+.module-card:hover { border-color: rgba(200,200,200,0.16); }
+.module-card.open { border-color: rgba(200,200,200,0.18); }
+
+.module-header {
+  display: flex; align-items: center; gap: 24px;
+  padding: 28px 32px; cursor: pointer;
+  user-select: none;
+  transition: background .2s;
+}
+.module-header:hover { background: rgba(200,200,200,0.03); }
+
 .module-num {
-  font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; line-height: 1;
-  color: rgba(200,200,200,0.09); margin-bottom: 16px;
+  font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; line-height: 1;
+  color: rgba(200,200,200,0.12); flex-shrink: 0; width: 56px;
 }
-.module-title { font-size: 16px; font-weight: 600; color: var(--c1); margin-bottom: 6px; }
-.module-tools { font-size: 11px; font-weight: 400; color: var(--c3); letter-spacing: 1px; margin-bottom: 16px; }
-.module-desc { font-size: 12px; font-weight: 300; color: var(--ink3); line-height: 1.7; }
+.module-header-main { flex: 1; }
+.module-title { font-size: 15px; font-weight: 600; color: var(--c1); margin-bottom: 4px; }
+.module-subtitle { font-size: 11px; font-weight: 400; color: var(--c3); letter-spacing: 0.5px; }
+.module-tag {
+  display: inline-block; background: rgba(200,200,200,0.06); border: 1px solid rgba(200,200,200,0.10);
+  padding: 3px 10px; border-radius: 3px; font-size: 9px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--c3); margin-right: 6px; margin-bottom: 4px;
+}
+.module-arrow {
+  width: 28px; height: 28px; flex-shrink: 0;
+  border: 1px solid rgba(200,200,200,0.12); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--c3);
+  transition: transform .35s, border-color .3s, color .3s;
+}
+.module-card.open .module-arrow { transform: rotate(180deg); border-color: rgba(200,200,200,0.30); color: var(--c2); }
+
+.module-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height .5s cubic-bezier(0.4,0,0.2,1), opacity .4s;
+  opacity: 0;
+}
+.module-card.open .module-body { opacity: 1; }
+
+.module-body-inner {
+  padding: 0 32px 32px 32px;
+  padding-left: calc(32px + 56px + 24px);
+  border-top: 1px solid rgba(200,200,200,0.05);
+}
+@media(max-width:600px){ .module-body-inner{ padding-left: 32px; } }
+
+.module-topics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; margin-bottom: 20px; }
+@media(max-width:600px){ .module-topics{ grid-template-columns: 1fr; } }
+
+.topic-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: rgba(200,200,200,0.03); border: 1px solid rgba(200,200,200,0.06);
+  padding: 12px 14px; border-radius: 4px;
+  font-size: 12px; font-weight: 300; color: var(--ink2); line-height: 1.5;
+  transition: border-color .25s;
+}
+.topic-item:hover { border-color: rgba(200,200,200,0.14); }
+.topic-item::before { content: '✦'; color: var(--c4); font-size: 8px; flex-shrink: 0; margin-top: 3px; }
+
+.module-tools-row {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; margin-top: 16px;
+}
+.tool-tag {
+  background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.10);
+  padding: 5px 12px; border-radius: 3px;
+  font-size: 10px; font-weight: 500; color: var(--ink3); letter-spacing: 1px;
+}
+
 .module-result {
-  margin-top: 16px; padding-top: 14px;
+  padding-top: 14px; margin-top: 4px;
   border-top: 1px solid rgba(160,160,160,0.07);
   font-size: 11px; font-weight: 500; color: var(--c2); letter-spacing: 0.5px;
-  display: flex; align-items: center; gap: 6px;
+  display: flex; align-items: center; gap: 8px;
 }
 .module-result::before { content: '→'; color: var(--c3); }
+
+/* bonus card */
+.module-card.bonus-card { border-color: rgba(200,200,200,0.20); background: rgba(200,200,200,0.025); }
 
 /* ── TOOLS STRIP ── */
 .tools-section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
@@ -687,61 +750,300 @@ footer {
   <div class="section-label reveal">Программа</div>
   <h2 class="section-title reveal">Полный путь<br><em>от инструментов до дохода</em></h2>
   <div class="modules-grid reveal">
-    <div class="module-card">
-      <div class="module-num">01</div>
-      <div class="module-title">Основы и стратегия</div>
-      <div class="module-tools">ChatGPT · Midjourney · Стратегия контента</div>
-      <div class="module-desc">Брифинг: кто ты, куда идёшь, цель. ChatGPT: как правильно писать промпты. Стратегия контента — что снимать. Midjourney: создание визуала для блога.</div>
-      <div class="module-result">Стратегия контента на месяц + первые AI-изображения</div>
-    </div>
-    <div class="module-card">
-      <div class="module-num">02</div>
-      <div class="module-title">Продвинутые инструменты</div>
-      <div class="module-tools">Veo 3.1 · Kling · Seedream · Higgsfield</div>
-      <div class="module-desc">Higgsfield, Nano Banana Pro — улучшение изображений. Seedream — создание уникальных визуалов. Veo 3.1 — создание видео из текста. Kling — анимация контента.</div>
-      <div class="module-result">Первые AI-видео и анимации готовы</div>
-    </div>
-    <div class="module-card">
-      <div class="module-num">03</div>
-      <div class="module-title">Профессиональный уровень</div>
-      <div class="module-tools">KREA AI · RUNWAY · Flora · CapCut</div>
-      <div class="module-desc">KREA AI — продвинутые техники генерации. RUNWAY — профессиональная обработка видео. Flora — финальная обработка и эффекты. Библиотека монтажёра + видеоуроки CapCut.</div>
-      <div class="module-result">Киношные AI-ролики за 30 минут</div>
-    </div>
-    <div class="module-card">
-      <div class="module-num">04</div>
-      <div class="module-title">Упаковка блога и портфолио</div>
-      <div class="module-tools">Соцсети · Нейрофото · Стратегия роста</div>
-      <div class="module-desc">Упаковка соцсетей через AI. Нейрофотосессии для профиля. Портфолио которое продаёт само. Стратегия: с лицом и без лица. Система роста блога и набора аудитории.</div>
-      <div class="module-result">Упакованы все соцсети + продающее портфолио</div>
-    </div>
-    <div class="module-card">
-      <div class="module-num">05</div>
-      <div class="module-title">Поиск клиентов и продажи</div>
-      <div class="module-tools">Скрипты · Переговоры · Воронка продаж</div>
-      <div class="module-desc">Где искать: площадки, чаты, биржи. Скрипты продаж — как закрывать клиентов. Как вести переговоры и озвучивать цену. Как сотрудничать с брендами и агентствами. Воронка: от подписчика к клиенту.</div>
-      <div class="module-result">Первые заявки и воронка продаж</div>
-    </div>
-    <div class="module-card">
-      <div class="module-num">06</div>
-      <div class="module-title">Масштабирование и рост</div>
-      <div class="module-tools">Повышение чека · Система на 5 лет</div>
-      <div class="module-desc">Как повысить чек и брать больше за работу. Как переливать аудиторию блога в продажи. Система актуальности: топ-специалист 5 лет. Постоянно в курсе новых инструментов.</div>
-      <div class="module-result"><span style="color:var(--c2);font-weight:600;">100 000 ₽+</span> стабильно в месяц</div>
-    <div class="module-card" style="border-color:rgba(200,200,200,0.25);background:rgba(200,200,200,0.04);grid-column:span 2;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-        <div style="font-size:28px;">🎁</div>
-        <div>
-          <div style="font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3);margin-bottom:4px;">Бонус · Ранний доступ</div>
-          <div class="module-title" style="margin:0;">SEEDANCE 2.0</div>
+
+    <!-- БЛОК 1 -->
+    <div class="module-card" data-module="1">
+      <div class="module-header">
+        <div class="module-num">01</div>
+        <div class="module-header-main">
+          <div class="module-title">Основы и стратегия</div>
+          <div class="module-subtitle">С чего начать — мышление, стратегия, первые инструменты</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">ChatGPT</span>
+            <span class="tool-tag">Midjourney</span>
+            <span class="tool-tag">Стратегия контента</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Брифинг: кто ты, куда идёшь, цель на программу</div>
+            <div class="topic-item">Мышление AI-криэйтора — как думать, чтобы расти</div>
+            <div class="topic-item">Стратегия контента: что и зачем снимать</div>
+            <div class="topic-item">ChatGPT: как правильно писать промпты с нуля</div>
+            <div class="topic-item">Midjourney: создание визуала для блога и профиля</div>
+            <div class="topic-item">Контент-план на первый месяц</div>
+          </div>
+          <div class="module-result">Стратегия контента на месяц + первые AI-изображения</div>
         </div>
       </div>
-      <div class="module-tools">Нейросеть нового поколения · Ранний доступ · AI-видео</div>
-      <div class="module-desc">Эксклюзивный ранний доступ к нейросети SEEDANCE 2.0 до публичного релиза. AI-генерация видео нового поколения — быстрее, реалистичнее, мощнее. Закрытое бета-тестирование только для участников программы.</div>
-      <div class="module-result">→ Первые на рынке с инструментом следующего поколения</div>
     </div>
-  </div>
-  
+
+    <!-- БЛОК 2 -->
+    <div class="module-card" data-module="2">
+      <div class="module-header">
+        <div class="module-num">02</div>
+        <div class="module-header-main">
+          <div class="module-title">Покупка нейросетей — навигация и экономия</div>
+          <div class="module-subtitle">Как выбрать, купить и не переплатить</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Агрегаторы</span>
+            <span class="tool-tag">Подписки</span>
+            <span class="tool-tag">Бюджет</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Какие нейросети нужны на каждом этапе — не переплачивай за лишнее</div>
+            <div class="topic-item">Где и как дешевле всего купить подписки</div>
+            <div class="topic-item">Агрегаторы vs прямые подписки — что выгоднее</div>
+            <div class="topic-item">Как тестировать инструмент до оплаты</div>
+            <div class="topic-item">Оптимальный AI-стек за минимальный бюджет</div>
+            <div class="topic-item">Карты и способы оплаты зарубежных сервисов</div>
+          </div>
+          <div class="module-result">Собственный AI-стек куплен и настроен</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- РЕЖИССЕРСКИЙ БЛОК -->
+    <div class="module-card" data-module="r1">
+      <div class="module-header">
+        <div class="module-num">
+          <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--c3);font-family:'Montserrat',sans-serif;">РЕЖ</span>
+        </div>
+        <div class="module-header-main">
+          <div class="module-title">Режиссёрский блок — Арт-директор своего контента</div>
+          <div class="module-subtitle">Идеи, вдохновение, поиск визуального языка</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Режиссура</span>
+            <span class="tool-tag">Арт-дирекция</span>
+            <span class="tool-tag">Визуальный язык</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Как стать арт-директором своего контента</div>
+            <div class="topic-item">Поиск визуального вдохновения и референсов</div>
+            <div class="topic-item">Формирование своего визуального стиля</div>
+            <div class="topic-item">Режиссёрское мышление: кадр, свет, атмосфера</div>
+            <div class="topic-item">Moodboard и концепция для съёмки/генерации</div>
+            <div class="topic-item">Как находить идеи, когда «всё уже придумано»</div>
+          </div>
+          <div class="module-result">Собственный визуальный стиль + концепция контента</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ТЕХНИЧЕСКИЙ БЛОК -->
+    <div class="module-card" data-module="t1">
+      <div class="module-header">
+        <div class="module-num">
+          <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--c3);font-family:'Montserrat',sans-serif;">ТЕХ</span>
+        </div>
+        <div class="module-header-main">
+          <div class="module-title">Технический блок — Промпт-инжиниринг и все нейросети</div>
+          <div class="module-subtitle">Детальный разбор агрегаторов, инструментов для фото и видео</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Midjourney</span>
+            <span class="tool-tag">Nano Banana</span>
+            <span class="tool-tag">Seedream</span>
+            <span class="tool-tag">Veo</span>
+            <span class="tool-tag">Kling</span>
+            <span class="tool-tag">Higgsfield</span>
+            <span class="tool-tag">Krea</span>
+            <span class="tool-tag">Flora</span>
+            <span class="tool-tag">Syntx</span>
+          </div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3);margin-bottom:10px;margin-top:16px;">Промпт-инжиниринг</div>
+          <div class="module-topics">
+            <div class="topic-item">Структура промпта: как писать точно и эффективно</div>
+            <div class="topic-item">Продвинутые техники: стиль, свет, настроение</div>
+            <div class="topic-item">Промпты для фото, видео, анимации</div>
+            <div class="topic-item">500+ готовых промптов под разные задачи</div>
+          </div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3);margin-bottom:10px;margin-top:16px;">Инструменты — детальный разбор</div>
+          <div class="module-topics">
+            <div class="topic-item"><strong style="color:var(--c2)">Midjourney</strong> — флагман для изображений, тонкая настройка</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Nano Banana</strong> — улучшение и апскейл изображений</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Seedream</strong> — уникальный визуал и сложные сцены</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Veo</strong> — генерация видео из текста (Google)</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Kling</strong> — анимация и видео высокого качества</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Higgsfield</strong> — агрегатор, видеогенерация</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Krea</strong> — реалтайм-генерация и стилизация</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Flora</strong> — финальная обработка и спецэффекты</div>
+            <div class="topic-item"><strong style="color:var(--c2)">Syntx</strong> — агрегатор моделей, гибкий пайплайн</div>
+          </div>
+          <div class="module-result">Уверенная работа с полным AI-стеком</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ПРАКТИЧЕСКИЙ БЛОК -->
+    <div class="module-card" data-module="p2">
+      <div class="module-header">
+        <div class="module-num">03</div>
+        <div class="module-header-main">
+          <div class="module-title">Практический блок — Профессиональный контент</div>
+          <div class="module-subtitle">Нейрофотосессия, предметка, герои, мультфильмы, кино</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Midjourney</span>
+            <span class="tool-tag">Seedream</span>
+            <span class="tool-tag">Kling</span>
+            <span class="tool-tag">Veo</span>
+            <span class="tool-tag">Flora</span>
+            <span class="tool-tag">RUNWAY</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Нейрофотосессия (проф. уровень) — полный гайд</div>
+            <div class="topic-item">Предметная съёмка: товары, украшения, еда, интерьер</div>
+            <div class="topic-item">Создание Героя / Аватара — неповторимый персонаж</div>
+            <div class="topic-item">Оживление героя — анимация и движение</div>
+            <div class="topic-item">Создание мультфильма в AI — с нуля до готового</div>
+            <div class="topic-item">Кинематографичное видео — свет, монтаж, атмосфера</div>
+          </div>
+          <div class="module-result">30+ профессиональных AI-работ в портфолио</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- БЛОК 4 -->
+    <div class="module-card" data-module="4">
+      <div class="module-header">
+        <div class="module-num">04</div>
+        <div class="module-header-main">
+          <div class="module-title">Упаковка блога и портфолио</div>
+          <div class="module-subtitle">Соцсети, профиль, продающее портфолио</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Соцсети</span>
+            <span class="tool-tag">Нейрофото</span>
+            <span class="tool-tag">Стратегия роста</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Упаковка Instagram, Telegram, VK через AI</div>
+            <div class="topic-item">Нейрофотосессия для профиля и обложек</div>
+            <div class="topic-item">Портфолио которое продаёт само</div>
+            <div class="topic-item">Стратегия: работа с лицом и без лица</div>
+            <div class="topic-item">Система роста блога и набора аудитории</div>
+            <div class="topic-item">10+ шаблонов упаковки соцсетей</div>
+          </div>
+          <div class="module-result">Упакованы все соцсети + продающее портфолио</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- БЛОК 5 -->
+    <div class="module-card" data-module="5">
+      <div class="module-header">
+        <div class="module-num">05</div>
+        <div class="module-header-main">
+          <div class="module-title">Поиск клиентов и продажи</div>
+          <div class="module-subtitle">Скрипты, переговоры, воронка продаж</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Скрипты продаж</span>
+            <span class="tool-tag">Переговоры</span>
+            <span class="tool-tag">Воронка</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Где искать клиентов: площадки, чаты, биржи</div>
+            <div class="topic-item">Скрипты продаж — как закрывать в оплату</div>
+            <div class="topic-item">Как вести переговоры и называть цену уверенно</div>
+            <div class="topic-item">Сотрудничество с брендами и агентствами</div>
+            <div class="topic-item">Воронка: от подписчика → к клиенту</div>
+            <div class="topic-item">Как выйти на 5 первых заказов за месяц</div>
+          </div>
+          <div class="module-result">Первые заявки и воронка продаж запущены</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- БЛОК 6 -->
+    <div class="module-card" data-module="6">
+      <div class="module-header">
+        <div class="module-num">06</div>
+        <div class="module-header-main">
+          <div class="module-title">Масштабирование и рост</div>
+          <div class="module-subtitle">Повышение чека, система на годы вперёд</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">Повышение чека</span>
+            <span class="tool-tag">Автоматизация</span>
+            <span class="tool-tag">Система на 5 лет</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Как повысить чек и брать больше за работу</div>
+            <div class="topic-item">Как переливать аудиторию блога в продажи</div>
+            <div class="topic-item">Система актуальности: быть топ-специалистом 5 лет</div>
+            <div class="topic-item">Новые инструменты — как следить и первым внедрять</div>
+            <div class="topic-item">Выход на пассивный доход и собственные продукты</div>
+            <div class="topic-item">Делегирование и команда для масштаба</div>
+          </div>
+          <div class="module-result"><span style="color:var(--c2);font-weight:600;">100 000 ₽+</span> стабильно в месяц</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- БОНУС -->
+    <div class="module-card bonus-card" data-module="bonus">
+      <div class="module-header">
+        <div class="module-num" style="font-size:28px;width:56px;display:flex;align-items:center;justify-content:center;">🎁</div>
+        <div class="module-header-main">
+          <div style="font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3);margin-bottom:4px;">Бонус · Ранний доступ</div>
+          <div class="module-title">SEEDANCE 2.0</div>
+          <div class="module-subtitle">Нейросеть нового поколения — только для участников</div>
+        </div>
+        <div class="module-arrow">▾</div>
+      </div>
+      <div class="module-body">
+        <div class="module-body-inner">
+          <div class="module-tools-row">
+            <span class="tool-tag">AI-видео нового поколения</span>
+            <span class="tool-tag">Ранний доступ</span>
+            <span class="tool-tag">Закрытое бета</span>
+          </div>
+          <div class="module-topics">
+            <div class="topic-item">Эксклюзивный ранний доступ до публичного релиза</div>
+            <div class="topic-item">AI-генерация видео — быстрее, реалистичнее, мощнее</div>
+            <div class="topic-item">Закрытое бета-тестирование только для участников</div>
+            <div class="topic-item">Первые кейсы и продажи до того, как рынок знает</div>
+          </div>
+          <div class="module-result">Первые на рынке с инструментом следующего поколения</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -968,6 +1270,35 @@ if (t) t.innerHTML += t.innerHTML;
     slides[current].classList.add('active');
   }, 3500);
 })();
+
+// Accordion modules
+document.querySelectorAll('.module-header').forEach(function(header) {
+  header.addEventListener('click', function() {
+    var card = header.closest('.module-card');
+    var body = card.querySelector('.module-body');
+    var isOpen = card.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.module-card.open').forEach(function(c) {
+      c.classList.remove('open');
+      var b = c.querySelector('.module-body');
+      b.style.maxHeight = '0';
+    });
+
+    // Open clicked if was closed
+    if (!isOpen) {
+      card.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+      // Smooth scroll a bit if needed
+      setTimeout(function() {
+        var rect = card.getBoundingClientRect();
+        if (rect.top < 80) {
+          window.scrollBy({ top: rect.top - 100, behavior: 'smooth' });
+        }
+      }, 200);
+    }
+  });
+});
 
 </script>
 </body>
