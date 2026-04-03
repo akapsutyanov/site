@@ -6,7 +6,6 @@
 <title>Анкета — AI-СТАРТ 2026 | Александр Капустьянов</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
-
 :root {
   --bg:        #050505;
   --surface:   #0c0a06;
@@ -19,9 +18,9 @@
   --g3:        #d4a843;
   --g4:        #a07828;
   --g5:        #6b4e10;
-  --gold-grad:       linear-gradient(135deg, #fae8a0 0%, #f0c96a 30%, #d4a843 60%, #a07828 100%);
-  --gold-soft:       linear-gradient(135deg, #f0c96a, #d4a843);
-  --gold-shine:      linear-gradient(105deg, #a07828 0%, #f0c96a 35%, #fae8a0 50%, #f0c96a 65%, #a07828 100%);
+  --gold-grad:  linear-gradient(135deg, #fae8a0 0%, #f0c96a 30%, #d4a843 60%, #a07828 100%);
+  --gold-soft:  linear-gradient(135deg, #f0c96a, #d4a843);
+  --gold-shine: linear-gradient(105deg, #a07828 0%, #f0c96a 35%, #fae8a0 50%, #f0c96a 65%, #a07828 100%);
   --glass:     rgba(12, 9, 4, 0.65);
   --gb:        rgba(212,168,67,0.18);
   --gb-hi:     rgba(240,201,106,0.36);
@@ -43,10 +42,7 @@ body {
   min-height: 100vh;
 }
 
-/* ══ BACKGROUND ══ */
-.bg-canvas {
-  position: fixed; inset: 0; z-index: -1; overflow: hidden; background: #050505;
-}
+.bg-canvas { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: #050505; }
 .bg-canvas::before {
   content: ''; position: absolute; inset: 0;
   background:
@@ -57,7 +53,7 @@ body {
 }
 .blob { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
 .blob-1 { width:650px;height:650px; background:radial-gradient(circle,rgba(180,135,40,0.22),transparent 70%); top:-180px;left:-120px; animation:d1 20s ease-in-out infinite; }
-.blob-2 { width:500px;height:500px; background:radial-gradient(circle,rgba(212,168,67,0.14),transparent 70%); top:8%;right:-80px;  animation:d2 26s ease-in-out infinite; }
+.blob-2 { width:500px;height:500px; background:radial-gradient(circle,rgba(212,168,67,0.14),transparent 70%); top:8%;right:-80px; animation:d2 26s ease-in-out infinite; }
 .blob-3 { width:420px;height:420px; background:radial-gradient(circle,rgba(140,100,25,0.12),transparent 70%); bottom:20%;left:10%; animation:d3 23s ease-in-out infinite; }
 
 @keyframes d1 { 0%,100%{transform:translate(0,0)scale(1)} 33%{transform:translate(55px,35px)scale(1.06)} 66%{transform:translate(-25px,75px)scale(0.94)} }
@@ -67,30 +63,18 @@ body {
 @keyframes pulse { 0%,100%{transform:scale(1);opacity:.75} 50%{transform:scale(1.2);opacity:1} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
 
-/* ══ WRAPPER ══ */
 .page-wrap {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   padding: 60px 20px 80px;
 }
 
-/* ══ HEADER ══ */
-.form-header {
-  text-align: center;
-  max-width: 560px;
-  margin-bottom: 48px;
-  animation: fadeUp .7s ease both;
-}
+.form-header { text-align: center; max-width: 560px; margin-bottom: 48px; animation: fadeUp .7s ease both; }
 .form-logo {
   font-size: 12px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
   background: var(--gold-shine); background-size: 200% auto;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  animation: shine 5s linear infinite;
-  margin-bottom: 32px;
-  display: block;
+  animation: shine 5s linear infinite; margin-bottom: 32px; display: block;
 }
 .form-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -103,42 +87,25 @@ body {
   width: 20px; height: 20px; border-radius: 50%;
   background: var(--gold-shine); background-size: 200% auto;
   animation: shine 3s linear infinite;
-  box-shadow: 0 0 14px rgba(212,168,67,0.55);
-  flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(212,168,67,0.55); flex-shrink: 0;
 }
 .form-title {
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin-bottom: 16px;
-  color: var(--ink);
+  font-size: clamp(32px, 5vw, 52px); font-weight: 800;
+  line-height: 1.08; letter-spacing: -2px; margin-bottom: 16px; color: var(--ink);
 }
 .gold-text {
   background: var(--gold-shine); background-size: 200% auto;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   animation: shine 5s linear infinite;
 }
-.form-sub {
-  font-size: 16px; color: var(--ink2); line-height: 1.7;
-}
+.form-sub { font-size: 16px; color: var(--ink2); line-height: 1.7; }
 
-/* ══ FORM CARD ══ */
-.form-card {
-  width: 100%;
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+.form-card { width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 20px; }
 
-/* ══ QUESTION BLOCK ══ */
 .q-block {
   background: rgba(12,9,4,0.65);
   backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
-  border: 1px solid var(--gb);
-  border-radius: 20px;
-  padding: 24px 28px;
+  border: 1px solid var(--gb); border-radius: 20px; padding: 24px 28px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.45), inset 0 1.5px 0 rgba(240,201,106,0.10);
   animation: fadeUp .6s ease both;
 }
@@ -150,228 +117,103 @@ body {
 .q-block:nth-child(6) { animation-delay: .30s }
 .q-block:nth-child(7) { animation-delay: .35s }
 
-.q-num {
-  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--g4); margin-bottom: 6px;
-}
-.q-label {
-  font-size: 17px; font-weight: 700; color: var(--ink);
-  margin-bottom: 6px; line-height: 1.4;
-}
-.q-hint {
-  font-size: 12px; color: var(--ink4); margin-bottom: 16px;
-}
-.q-optional {
-  display: inline-block;
-  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--ink4); background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 6px; padding: 2px 8px; margin-left: 8px; vertical-align: middle;
-}
+.q-num { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--g4); margin-bottom: 6px; }
+.q-label { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.4; }
+.q-hint { font-size: 12px; color: var(--ink4); margin-bottom: 16px; }
 
-/* ══ TEXT INPUT ══ */
 .q-input {
-  width: 100%;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(212,168,67,0.22);
-  border-radius: 14px;
-  padding: 14px 18px;
-  color: var(--ink);
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 500;
-  outline: none;
+  width: 100%; background: rgba(255,255,255,0.03); border: 1px solid rgba(212,168,67,0.22);
+  border-radius: 14px; padding: 14px 18px; color: var(--ink); font-family: inherit;
+  font-size: 15px; font-weight: 500; outline: none;
   transition: border-color .2s, box-shadow .2s, background .2s;
   -webkit-text-fill-color: var(--ink);
 }
 .q-input::placeholder { color: var(--ink4); -webkit-text-fill-color: var(--ink4); }
 .q-input:focus {
-  border-color: rgba(212,168,67,0.55);
-  background: rgba(212,168,67,0.04);
+  border-color: rgba(212,168,67,0.55); background: rgba(212,168,67,0.04);
   box-shadow: 0 0 0 3px rgba(212,168,67,0.10), 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* ══ RADIO / CHECKBOX OPTIONS ══ */
 .q-options { display: flex; flex-direction: column; gap: 10px; }
 .q-option {
   display: flex; align-items: flex-start; gap: 14px;
   padding: 14px 18px; border-radius: 14px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(212,168,67,0.15);
-  cursor: pointer;
-  transition: background .2s, border-color .2s, transform .15s;
-  user-select: none;
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(212,168,67,0.15);
+  cursor: pointer; transition: background .2s, border-color .2s, transform .15s; user-select: none;
 }
-.q-option:hover {
-  background: rgba(212,168,67,0.06);
-  border-color: rgba(212,168,67,0.32);
-  transform: translateX(3px);
-}
+.q-option:hover { background: rgba(212,168,67,0.06); border-color: rgba(212,168,67,0.32); transform: translateX(3px); }
 .q-option.selected {
-  background: rgba(212,168,67,0.09);
-  border-color: rgba(212,168,67,0.55);
+  background: rgba(212,168,67,0.09); border-color: rgba(212,168,67,0.55);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.12);
 }
-.q-option input[type="radio"],
-.q-option input[type="checkbox"] {
-  display: none;
-}
+.q-option input[type="radio"], .q-option input[type="checkbox"] { display: none; }
 .custom-check {
   width: 20px; height: 20px; border-radius: 50%;
-  border: 1.5px solid rgba(212,168,67,0.35);
-  flex-shrink: 0; margin-top: 1px;
+  border: 1.5px solid rgba(212,168,67,0.35); flex-shrink: 0; margin-top: 1px;
   display: flex; align-items: center; justify-content: center;
-  transition: background .2s, border-color .2s;
-  background: rgba(0,0,0,0.2);
+  transition: background .2s, border-color .2s; background: rgba(0,0,0,0.2);
 }
-.q-option.checkbox-type .custom-check {
-  border-radius: 7px;
-}
+.q-option.checkbox-type .custom-check { border-radius: 7px; }
 .custom-check-inner {
   width: 10px; height: 10px; border-radius: 50%;
-  background: var(--gold-soft);
-  opacity: 0; transform: scale(0);
+  background: var(--gold-soft); opacity: 0; transform: scale(0);
   transition: opacity .2s, transform .2s;
 }
 .q-option.checkbox-type .custom-check-inner {
-  border-radius: 3px;
-  width: 10px; height: 8px;
-  background: none;
-  border-right: 2px solid var(--g2);
-  border-bottom: 2px solid var(--g2);
-  transform: scale(0) rotate(45deg);
-  transform-origin: center;
-  border-radius: 1px;
-  width: 5px; height: 9px;
-  margin-top: -2px;
+  background: none; border-right: 2px solid var(--g2); border-bottom: 2px solid var(--g2);
+  transform: scale(0) rotate(45deg); transform-origin: center;
+  border-radius: 1px; width: 5px; height: 9px; margin-top: -2px;
 }
-.q-option.selected .custom-check {
-  border-color: var(--g3);
-  background: rgba(212,168,67,0.15);
-}
-.q-option.selected .custom-check-inner {
-  opacity: 1; transform: scale(1);
-}
-.q-option.checkbox-type.selected .custom-check-inner {
-  transform: scale(1) rotate(45deg);
-}
-.option-text {
-  font-size: 14px; font-weight: 600; color: var(--ink2); line-height: 1.5;
-  flex: 1;
-}
-.option-text em {
-  display: block;
-  font-style: normal;
-  font-size: 12px;
-  color: var(--ink4);
-  font-weight: 400;
-  margin-top: 2px;
-}
+.q-option.selected .custom-check { border-color: var(--g3); background: rgba(212,168,67,0.15); }
+.q-option.selected .custom-check-inner { opacity: 1; transform: scale(1); }
+.q-option.checkbox-type.selected .custom-check-inner { transform: scale(1) rotate(45deg); }
+.option-text { font-size: 14px; font-weight: 600; color: var(--ink2); line-height: 1.5; flex: 1; }
+.option-text em { display: block; font-style: normal; font-size: 12px; color: var(--ink4); font-weight: 400; margin-top: 2px; }
 .q-option.selected .option-text { color: var(--ink); }
 
-/* ══ OTHER FIELD ══ */
-.other-field {
-  margin-top: 12px;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height .3s ease, opacity .3s ease, margin .3s ease;
-}
-.other-field.show {
-  max-height: 80px;
-  opacity: 1;
-}
+.other-field { margin-top: 12px; overflow: hidden; max-height: 0; opacity: 0; transition: max-height .3s ease, opacity .3s ease, margin .3s ease; }
+.other-field.show { max-height: 80px; opacity: 1; }
 
-/* ══ SUBMIT ══ */
-.submit-wrap {
-  animation: fadeUp .6s .35s ease both;
-}
+.submit-wrap { animation: fadeUp .6s .35s ease both; }
 .btn-submit {
-  width: 100%;
-  background: var(--gold-shine); background-size: 200% auto;
-  color: #0a0700; -webkit-text-fill-color: #0a0700;
-  font-family: inherit;
+  width: 100%; background: var(--gold-shine); background-size: 200% auto;
+  color: #0a0700; -webkit-text-fill-color: #0a0700; font-family: inherit;
   font-size: 16px; font-weight: 800; letter-spacing: -0.2px;
-  padding: 18px 40px; border-radius: 16px; border: none;
-  cursor: pointer;
+  padding: 18px 40px; border-radius: 16px; border: none; cursor: pointer;
   box-shadow: 0 8px 32px rgba(180,130,30,0.48), inset 0 1.5px 0 rgba(255,255,255,0.28);
-  transition: transform .25s, box-shadow .25s;
-  animation: shine 5s linear infinite;
+  transition: transform .25s, box-shadow .25s; animation: shine 5s linear infinite;
 }
 .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(212,168,67,0.58); }
 .btn-submit:active { transform: translateY(0); }
-.btn-submit:disabled {
-  opacity: 0.5; cursor: not-allowed; transform: none;
-}
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-/* ══ SUCCESS STATE ══ */
 .success-screen {
-  display: none;
-  text-align: center;
-  max-width: 480px;
-  padding: 60px 40px;
-  background: rgba(12,9,4,0.65);
-  backdrop-filter: var(--blur);
-  border: 1px solid var(--gb);
-  border-radius: 28px;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
-  animation: fadeUp .6s ease both;
+  display: none; text-align: center; max-width: 480px; padding: 60px 40px;
+  background: rgba(12,9,4,0.65); backdrop-filter: var(--blur);
+  border: 1px solid var(--gb); border-radius: 28px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6); animation: fadeUp .6s ease both;
 }
-.success-icon {
-  font-size: 56px; margin-bottom: 24px;
-  animation: pulse 2s ease-in-out infinite;
-}
-.success-title {
-  font-size: 32px; font-weight: 800; letter-spacing: -1.5px;
-  margin-bottom: 12px; color: var(--ink);
-}
-.success-sub {
-  font-size: 15px; color: var(--ink2); line-height: 1.7;
-}
+.success-icon { font-size: 56px; margin-bottom: 24px; animation: pulse 2s ease-in-out infinite; }
+.success-title { font-size: 32px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 12px; color: var(--ink); }
+.success-sub { font-size: 15px; color: var(--ink2); line-height: 1.7; }
 
-/* ══ ERROR MSG ══ */
-.error-msg {
-  font-size: 12px; color: #ff6b6b; margin-top: 6px;
-  display: none;
-}
+.error-msg { font-size: 12px; color: #ff6b6b; margin-top: 6px; display: none; }
 .error-msg.show { display: block; }
 
-/* ══ LOADING ══ */
-.btn-submit.loading {
-  pointer-events: none;
-}
+.btn-submit.loading { pointer-events: none; }
 .btn-submit.loading::after {
-  content: '';
-  display: inline-block;
-  width: 14px; height: 14px;
-  border: 2px solid rgba(10,7,0,0.3);
-  border-top-color: #0a0700;
-  border-radius: 50%;
-  animation: spin .7s linear infinite;
-  margin-left: 10px;
-  vertical-align: middle;
+  content: ''; display: inline-block; width: 14px; height: 14px;
+  border: 2px solid rgba(10,7,0,0.3); border-top-color: #0a0700; border-radius: 50%;
+  animation: spin .7s linear infinite; margin-left: 10px; vertical-align: middle;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ══ CONSENT ══ */
-.consent-text {
-  margin-top: 14px;
-  font-size: 12px;
-  color: var(--ink4);
-  text-align: center;
-  line-height: 1.7;
-}
+.consent-text { margin-top: 14px; font-size: 12px; color: var(--ink4); text-align: center; line-height: 1.7; }
 .consent-link {
-  color: var(--ink3);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(212,168,67,0.3);
-  transition: color .2s, text-decoration-color .2s;
+  color: var(--ink3); text-decoration: underline; text-underline-offset: 3px;
+  text-decoration-color: rgba(212,168,67,0.3); transition: color .2s, text-decoration-color .2s;
 }
-.consent-link:hover {
-  color: var(--g2);
-  text-decoration-color: rgba(212,168,67,0.7);
-}
+.consent-link:hover { color: var(--g2); text-decoration-color: rgba(212,168,67,0.7); }
 
 @media (max-width: 600px) {
   .page-wrap { padding: 40px 16px 60px; }
@@ -390,7 +232,6 @@ body {
 
 <div class="page-wrap">
 
-  <!-- HEADER -->
   <div class="form-header">
     <a href="/" class="form-logo">AKAPUSTYANOV</a>
     <div class="form-eyebrow">
@@ -401,7 +242,6 @@ body {
     <p class="form-sub">Это поможет мне подготовить для тебя максимально полезные материалы</p>
   </div>
 
-  <!-- FORM -->
   <form class="form-card" id="mainForm" novalidate>
 
     <!-- Q1: ИМЯ -->
@@ -552,9 +392,7 @@ body {
 
     <!-- SUBMIT -->
     <div class="submit-wrap">
-      <button type="submit" class="btn-submit" id="submitBtn">
-        Отправить анкету →
-      </button>
+      <button type="submit" class="btn-submit" id="submitBtn">Отправить анкету →</button>
       <p class="consent-text">
         Нажимая на кнопку, вы даёте согласие на
         <a href="/personal-data" class="consent-link">обработку персональных данных</a>
@@ -565,7 +403,6 @@ body {
 
   </form>
 
-  <!-- SUCCESS -->
   <div class="success-screen" id="successScreen">
     <div class="success-icon">🎯</div>
     <div class="success-title">Анкета <span class="gold-text">принята!</span></div>
@@ -577,7 +414,6 @@ body {
 <script>
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzeGBBptVrg_2V8lNmXgzVnNmKEPVaZnYXHC_PSyRrYICw4bgHX7GXvCj1jL3lZvWvjMg/exec';
 
-// ══ RADIO OPTIONS ══
 document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
   radio.addEventListener('change', function() {
     var name = this.name;
@@ -590,30 +426,19 @@ document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
   });
 });
 
-// ══ CHECKBOX OPTIONS ══
 document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
   cb.addEventListener('change', function() {
     var label = this.closest('.q-option');
-    if (this.checked) {
-      label.classList.add('selected');
-    } else {
-      label.classList.remove('selected');
-    }
+    if (this.checked) { label.classList.add('selected'); } else { label.classList.remove('selected'); }
     if (this.value === 'Другое') {
       var field = document.getElementById('otherField');
-      if (this.checked) {
-        field.classList.add('show');
-      } else {
-        field.classList.remove('show');
-      }
+      if (this.checked) { field.classList.add('show'); } else { field.classList.remove('show'); }
     }
   });
 });
 
-// ══ FORM SUBMIT ══
 document.getElementById('mainForm').addEventListener('submit', function(e) {
   e.preventDefault();
-
   var valid = true;
 
   function showErr(id) { var el = document.getElementById(id); if(el) el.classList.add('show'); }
@@ -641,7 +466,6 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
   if (!blockInputs.length) { showErr('block-error'); valid = false; } else { hideErr('block-error'); }
 
   if (!valid) {
-    // Scroll to first error
     var firstError = document.querySelector('.error-msg.show');
     if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
@@ -656,14 +480,14 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
   }
 
   var payload = {
-    date: new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
-    name: name,
-    telegram: telegram,
+    date:      new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
+    name:      name,
+    telegram:  telegram,
     instagram: instagram,
-    email: email,
-    who: whoInput.value,
-    goals: goals,
-    blocks: blocks.join(', ')
+    email:     email,
+    who:       whoInput.value,
+    goals:     goals,
+    blocks:    blocks.join(', ')
   };
 
   var btn = document.getElementById('submitBtn');
@@ -674,651 +498,7 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
   Object.keys(payload).forEach(function(k) { formData.append(k, payload[k]); });
 
   fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    body: formData
-  }).then(function() {
-    document.getElementById('mainForm').style.display = 'none';
-    document.querySelector('.form-header').style.display = 'none';
-    document.getElementById('successScreen').style.display = 'block';
-  }).catch(function() {
-    btn.disabled = false;
-    btn.textContent = 'Отправить анкету →';
-    alert('Ошибка отправки. Попробуй ещё раз.');
-  });
-});
-</script>
-
-</body>
-</html>  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-/* ══ BACKGROUND ══ */
-.bg-canvas {
-  position: fixed; inset: 0; z-index: -1; overflow: hidden; background: #050505;
-}
-.bg-canvas::before {
-  content: ''; position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 80% 55% at -5% 0%,   rgba(160,120,40,0.20) 0%, transparent 60%),
-    radial-gradient(ellipse 55% 45% at 105% 15%,  rgba(100,76,20,0.16) 0%, transparent 55%),
-    radial-gradient(ellipse 65% 55% at 80% 90%,   rgba(130,98,30,0.14) 0%, transparent 60%),
-    radial-gradient(ellipse 38% 38% at 20% 68%,   rgba(80,60,15,0.10) 0%, transparent 50%);
-}
-.blob { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
-.blob-1 { width:650px;height:650px; background:radial-gradient(circle,rgba(180,135,40,0.22),transparent 70%); top:-180px;left:-120px; animation:d1 20s ease-in-out infinite; }
-.blob-2 { width:500px;height:500px; background:radial-gradient(circle,rgba(212,168,67,0.14),transparent 70%); top:8%;right:-80px;  animation:d2 26s ease-in-out infinite; }
-.blob-3 { width:420px;height:420px; background:radial-gradient(circle,rgba(140,100,25,0.12),transparent 70%); bottom:20%;left:10%; animation:d3 23s ease-in-out infinite; }
-
-@keyframes d1 { 0%,100%{transform:translate(0,0)scale(1)} 33%{transform:translate(55px,35px)scale(1.06)} 66%{transform:translate(-25px,75px)scale(0.94)} }
-@keyframes d2 { 0%,100%{transform:translate(0,0)scale(1)} 25%{transform:translate(-70px,55px)scale(1.08)} 75%{transform:translate(35px,-35px)scale(0.93)} }
-@keyframes d3 { 0%,100%{transform:translate(0,0)scale(1)} 50%{transform:translate(75px,-55px)scale(1.07)} }
-@keyframes shine { 0%{background-position:200% center} 100%{background-position:-200% center} }
-@keyframes pulse { 0%,100%{transform:scale(1);opacity:.75} 50%{transform:scale(1.2);opacity:1} }
-@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-
-/* ══ WRAPPER ══ */
-.page-wrap {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 60px 20px 80px;
-}
-
-/* ══ HEADER ══ */
-.form-header {
-  text-align: center;
-  max-width: 560px;
-  margin-bottom: 48px;
-  animation: fadeUp .7s ease both;
-}
-.form-logo {
-  font-size: 12px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
-  background: var(--gold-shine); background-size: 200% auto;
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  animation: shine 5s linear infinite;
-  margin-bottom: 32px;
-  display: block;
-}
-.form-eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 6px 18px 6px 8px; border-radius: 100px;
-  background: rgba(212,168,67,0.07); border: 1px solid var(--gb-hi);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(240,201,106,0.14);
-  margin-bottom: 24px; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: var(--g2);
-}
-.eyebrow-dot {
-  width: 20px; height: 20px; border-radius: 50%;
-  background: var(--gold-shine); background-size: 200% auto;
-  animation: shine 3s linear infinite;
-  box-shadow: 0 0 14px rgba(212,168,67,0.55);
-  flex-shrink: 0;
-}
-.form-title {
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin-bottom: 16px;
-  color: var(--ink);
-}
-.gold-text {
-  background: var(--gold-shine); background-size: 200% auto;
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  animation: shine 5s linear infinite;
-}
-.form-sub {
-  font-size: 16px; color: var(--ink2); line-height: 1.7;
-}
-
-/* ══ FORM CARD ══ */
-.form-card {
-  width: 100%;
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* ══ QUESTION BLOCK ══ */
-.q-block {
-  background: rgba(12,9,4,0.65);
-  backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
-  border: 1px solid var(--gb);
-  border-radius: 20px;
-  padding: 24px 28px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45), inset 0 1.5px 0 rgba(240,201,106,0.10);
-  animation: fadeUp .6s ease both;
-}
-.q-block:nth-child(1) { animation-delay: .05s }
-.q-block:nth-child(2) { animation-delay: .10s }
-.q-block:nth-child(3) { animation-delay: .15s }
-.q-block:nth-child(4) { animation-delay: .20s }
-.q-block:nth-child(5) { animation-delay: .25s }
-.q-block:nth-child(6) { animation-delay: .30s }
-
-.q-num {
-  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--g4); margin-bottom: 6px;
-}
-.q-label {
-  font-size: 17px; font-weight: 700; color: var(--ink);
-  margin-bottom: 6px; line-height: 1.4;
-}
-.q-hint {
-  font-size: 12px; color: var(--ink4); margin-bottom: 16px;
-}
-.q-optional {
-  display: inline-block;
-  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--ink4); background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 6px; padding: 2px 8px; margin-left: 8px; vertical-align: middle;
-}
-
-/* ══ TEXT INPUT ══ */
-.q-input {
-  width: 100%;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(212,168,67,0.22);
-  border-radius: 14px;
-  padding: 14px 18px;
-  color: var(--ink);
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 500;
-  outline: none;
-  transition: border-color .2s, box-shadow .2s, background .2s;
-  -webkit-text-fill-color: var(--ink);
-}
-.q-input::placeholder { color: var(--ink4); -webkit-text-fill-color: var(--ink4); }
-.q-input:focus {
-  border-color: rgba(212,168,67,0.55);
-  background: rgba(212,168,67,0.04);
-  box-shadow: 0 0 0 3px rgba(212,168,67,0.10), 0 4px 20px rgba(0,0,0,0.3);
-}
-
-/* ══ RADIO / CHECKBOX OPTIONS ══ */
-.q-options { display: flex; flex-direction: column; gap: 10px; }
-.q-option {
-  display: flex; align-items: flex-start; gap: 14px;
-  padding: 14px 18px; border-radius: 14px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(212,168,67,0.15);
-  cursor: pointer;
-  transition: background .2s, border-color .2s, transform .15s;
-  user-select: none;
-}
-.q-option:hover {
-  background: rgba(212,168,67,0.06);
-  border-color: rgba(212,168,67,0.32);
-  transform: translateX(3px);
-}
-.q-option.selected {
-  background: rgba(212,168,67,0.09);
-  border-color: rgba(212,168,67,0.55);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(240,201,106,0.12);
-}
-.q-option input[type="radio"],
-.q-option input[type="checkbox"] {
-  display: none;
-}
-.custom-check {
-  width: 20px; height: 20px; border-radius: 50%;
-  border: 1.5px solid rgba(212,168,67,0.35);
-  flex-shrink: 0; margin-top: 1px;
-  display: flex; align-items: center; justify-content: center;
-  transition: background .2s, border-color .2s;
-  background: rgba(0,0,0,0.2);
-}
-.q-option.checkbox-type .custom-check {
-  border-radius: 7px;
-}
-.custom-check-inner {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--gold-soft);
-  opacity: 0; transform: scale(0);
-  transition: opacity .2s, transform .2s;
-}
-.q-option.checkbox-type .custom-check-inner {
-  border-radius: 3px;
-  width: 10px; height: 8px;
-  background: none;
-  border-right: 2px solid var(--g2);
-  border-bottom: 2px solid var(--g2);
-  transform: scale(0) rotate(45deg);
-  transform-origin: center;
-  border-radius: 1px;
-  width: 5px; height: 9px;
-  margin-top: -2px;
-}
-.q-option.selected .custom-check {
-  border-color: var(--g3);
-  background: rgba(212,168,67,0.15);
-}
-.q-option.selected .custom-check-inner {
-  opacity: 1; transform: scale(1);
-}
-.q-option.checkbox-type.selected .custom-check-inner {
-  transform: scale(1) rotate(45deg);
-}
-.option-text {
-  font-size: 14px; font-weight: 600; color: var(--ink2); line-height: 1.5;
-  flex: 1;
-}
-.option-text em {
-  display: block;
-  font-style: normal;
-  font-size: 12px;
-  color: var(--ink4);
-  font-weight: 400;
-  margin-top: 2px;
-}
-.q-option.selected .option-text { color: var(--ink); }
-
-/* ══ OTHER FIELD ══ */
-.other-field {
-  margin-top: 12px;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height .3s ease, opacity .3s ease, margin .3s ease;
-}
-.other-field.show {
-  max-height: 80px;
-  opacity: 1;
-}
-
-/* ══ SUBMIT ══ */
-.submit-wrap {
-  animation: fadeUp .6s .35s ease both;
-}
-.btn-submit {
-  width: 100%;
-  background: var(--gold-shine); background-size: 200% auto;
-  color: #0a0700; -webkit-text-fill-color: #0a0700;
-  font-family: inherit;
-  font-size: 16px; font-weight: 800; letter-spacing: -0.2px;
-  padding: 18px 40px; border-radius: 16px; border: none;
-  cursor: pointer;
-  box-shadow: 0 8px 32px rgba(180,130,30,0.48), inset 0 1.5px 0 rgba(255,255,255,0.28);
-  transition: transform .25s, box-shadow .25s;
-  animation: shine 5s linear infinite;
-}
-.btn-submit:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(212,168,67,0.58); }
-.btn-submit:active { transform: translateY(0); }
-.btn-submit:disabled {
-  opacity: 0.5; cursor: not-allowed; transform: none;
-}
-
-/* ══ SUCCESS STATE ══ */
-.success-screen {
-  display: none;
-  text-align: center;
-  max-width: 480px;
-  padding: 60px 40px;
-  background: rgba(12,9,4,0.65);
-  backdrop-filter: var(--blur);
-  border: 1px solid var(--gb);
-  border-radius: 28px;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
-  animation: fadeUp .6s ease both;
-}
-.success-icon {
-  font-size: 56px; margin-bottom: 24px;
-  animation: pulse 2s ease-in-out infinite;
-}
-.success-title {
-  font-size: 32px; font-weight: 800; letter-spacing: -1.5px;
-  margin-bottom: 12px; color: var(--ink);
-}
-.success-sub {
-  font-size: 15px; color: var(--ink2); line-height: 1.7;
-}
-
-/* ══ ERROR MSG ══ */
-.error-msg {
-  font-size: 12px; color: #ff6b6b; margin-top: 6px;
-  display: none;
-}
-.error-msg.show { display: block; }
-
-/* ══ LOADING ══ */
-.btn-submit.loading {
-  pointer-events: none;
-}
-.btn-submit.loading::after {
-  content: '';
-  display: inline-block;
-  width: 14px; height: 14px;
-  border: 2px solid rgba(10,7,0,0.3);
-  border-top-color: #0a0700;
-  border-radius: 50%;
-  animation: spin .7s linear infinite;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* ══ CONSENT ══ */
-.consent-text {
-  margin-top: 14px;
-  font-size: 12px;
-  color: var(--ink4);
-  text-align: center;
-  line-height: 1.7;
-}
-.consent-link {
-  color: var(--ink3);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(212,168,67,0.3);
-  transition: color .2s, text-decoration-color .2s;
-}
-.consent-link:hover {
-  color: var(--g2);
-  text-decoration-color: rgba(212,168,67,0.7);
-}
-
-@media (max-width: 600px) {
-  .page-wrap { padding: 40px 16px 60px; }
-  .q-block { padding: 20px 18px; }
-  .form-title { letter-spacing: -1.5px; }
-}
-</style>
-</head>
-<body>
-
-<div class="bg-canvas">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-</div>
-
-<div class="page-wrap">
-
-  <!-- HEADER -->
-  <div class="form-header">
-    <a href="/" class="form-logo">AKAPUSTYANOV</a>
-    <div class="form-eyebrow">
-      <div class="eyebrow-dot"></div>
-      Анкета участника · AI-СТАРТ 2026
-    </div>
-    <h1 class="form-title">Расскажи<br>о себе <span class="gold-text">пару слов</span></h1>
-    <p class="form-sub">Это поможет мне подготовить для тебя максимально полезные материалы</p>
-  </div>
-
-  <!-- FORM -->
-  <form class="form-card" id="mainForm" novalidate>
-
-    <!-- Q1: ИМЯ -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 01</div>
-      <div class="q-label">Как тебя зовут?</div>
-      <input class="q-input" type="text" id="name" name="name" placeholder="Твоё имя" autocomplete="given-name">
-      <div class="error-msg" id="name-error">Пожалуйста, введи своё имя</div>
-    </div>
-
-    <!-- Q2: TELEGRAM -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 02</div>
-      <div class="q-label">Твой ник в Telegram</div>
-      <div class="q-hint">Чтобы я мог прислать тебе материалы</div>
-      <input class="q-input" type="text" id="telegram" name="telegram" placeholder="@username" autocomplete="off">
-      <div class="error-msg" id="tg-error">Пожалуйста, введи свой Telegram ник</div>
-    </div>
-
-    <!-- Q3: EMAIL -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 03</div>
-      <div class="q-label">Email</div>
-      <div class="q-hint">Если хочешь получать дополнительные материалы на почту</div>
-      <input class="q-input" type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
-      <div class="error-msg" id="email-error">Пожалуйста, введи свой email</div>
-    </div>
-
-    <!-- Q4: КТО ТЫ -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 04</div>
-      <div class="q-label">Кто ты сейчас?</div>
-      <div class="q-hint">Выбери что подходит тебе больше всего</div>
-      <div class="q-options" id="whoOptions">
-        <label class="q-option">
-          <input type="radio" name="who" value="Новичок">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Новичок <em>Только начинаю в ИИ, хочу освоить с нуля</em></div>
-        </label>
-        <label class="q-option">
-          <input type="radio" name="who" value="Эксперт">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Эксперт <em>Уже работаю, но застрял на 10–50К, хочу расти</em></div>
-        </label>
-        <label class="q-option">
-          <input type="radio" name="who" value="Предприниматель">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Предприниматель <em>Хочу внедрить ИИ в бизнес для автоматизации и масштабирования</em></div>
-        </label>
-      </div>
-      <div class="error-msg" id="who-error">Пожалуйста, выбери один вариант</div>
-    </div>
-
-    <!-- Q5: ЦЕЛЬ -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 05</div>
-      <div class="q-label">Что для тебя сейчас самое важное?</div>
-      <div class="q-options" id="goalOptions">
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="goal" value="Научиться работать с ИИ с нуля">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Научиться работать с ИИ с нуля</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="goal" value="Найти первых клиентов и начать зарабатывать">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Найти первых клиентов и начать зарабатывать</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="goal" value="Вырасти в блоге">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Вырасти в блоге <em>Набрать подписчиков</em></div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="goal" value="Увеличить доход до 100–300К">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Увеличить доход <em>Выйти на 100–300К в месяц</em></div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="goal" value="Внедрить ИИ в бизнес">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Внедрить ИИ в бизнес <em>Автоматизация и масштабирование</em></div>
-        </label>
-      </div>
-      <div class="error-msg" id="goal-error">Пожалуйста, выбери хотя бы один вариант</div>
-    </div>
-
-    <!-- Q6: ЧТО МЕШАЕТ -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 06</div>
-      <div class="q-label">Что сейчас мешает тебе развиваться?</div>
-      <div class="q-options" id="blockOptions">
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Не знаю с чего начать">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Не знаю с чего начать</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Боюсь что не справлюсь">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Боюсь, что не справлюсь</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Нет времени">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Нет времени</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Думаю что это сложно">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Думаю, что это сложно</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Нет клиентов">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Нет клиентов</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Не растёт блог">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Не растёт блог</div>
-        </label>
-        <label class="q-option checkbox-type">
-          <input type="checkbox" name="block" value="Застрял на доходе">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Застрял на доходе</div>
-        </label>
-        <label class="q-option checkbox-type" id="otherOption">
-          <input type="checkbox" name="block" value="Другое">
-          <div class="custom-check"><div class="custom-check-inner"></div></div>
-          <div class="option-text">Другое</div>
-        </label>
-        <div class="other-field" id="otherField">
-          <input class="q-input" type="text" id="otherText" placeholder="Напиши своё..." style="margin-top:0;">
-        </div>
-      </div>
-      <div class="error-msg" id="block-error">Пожалуйста, выбери хотя бы один вариант</div>
-    </div>
-
-    <!-- SUBMIT -->
-    <div class="submit-wrap">
-      <button type="submit" class="btn-submit" id="submitBtn">
-        Отправить анкету →
-      </button>
-      <p class="consent-text">
-        Нажимая на кнопку, вы даёте согласие на
-        <a href="/personal-data" class="consent-link">обработку персональных данных</a>
-        и соглашаетесь с
-        <a href="/privacy-policy" class="consent-link">политикой конфиденциальности</a>
-      </p>
-    </div>
-
-  </form>
-
-  <!-- SUCCESS -->
-  <div class="success-screen" id="successScreen">
-    <div class="success-icon">🎯</div>
-    <div class="success-title">Анкета <span class="gold-text">принята!</span></div>
-    <p class="success-sub">Спасибо! Александр свяжется с тобой в Telegram в ближайшее время и пришлёт материалы 🚀</p>
-  </div>
-
-</div>
-
-<script>
-var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzeGBBptVrg_2V8lNmXgzVnNmKEPVaZnYXHC_PSyRrYICw4bgHX7GXvCj1jL3lZvWvjMg/exec';
-
-// ══ RADIO OPTIONS ══
-document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
-  radio.addEventListener('change', function() {
-    var name = this.name;
-    document.querySelectorAll('input[name="' + name + '"]').forEach(function(r) {
-      r.closest('.q-option').classList.remove('selected');
-    });
-    this.closest('.q-option').classList.add('selected');
-    var err = document.getElementById(name + '-error');
-    if (err) err.classList.remove('show');
-  });
-});
-
-// ══ CHECKBOX OPTIONS ══
-document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
-  cb.addEventListener('change', function() {
-    var label = this.closest('.q-option');
-    if (this.checked) {
-      label.classList.add('selected');
-    } else {
-      label.classList.remove('selected');
-    }
-    if (this.value === 'Другое') {
-      var field = document.getElementById('otherField');
-      if (this.checked) {
-        field.classList.add('show');
-      } else {
-        field.classList.remove('show');
-      }
-    }
-  });
-});
-
-// ══ FORM SUBMIT ══
-document.getElementById('mainForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  var valid = true;
-
-  function showErr(id) { var el = document.getElementById(id); if(el) el.classList.add('show'); }
-  function hideErr(id) { var el = document.getElementById(id); if(el) el.classList.remove('show'); }
-
-  var name = document.getElementById('name').value.trim();
-  if (!name) { showErr('name-error'); valid = false; } else { hideErr('name-error'); }
-
-  var telegram = document.getElementById('telegram').value.trim();
-  if (!telegram) { showErr('tg-error'); valid = false; } else { hideErr('tg-error'); }
-
-  var email = document.getElementById('email').value.trim();
-  if (!email) { showErr('email-error'); valid = false; } else { hideErr('email-error'); }
-
-  var whoInput = document.querySelector('input[name="who"]:checked');
-  if (!whoInput) { showErr('who-error'); valid = false; } else { hideErr('who-error'); }
-
-  var goalInputs = document.querySelectorAll('input[name="goal"]:checked');
-  if (!goalInputs.length) { showErr('goal-error'); valid = false; } else { hideErr('goal-error'); }
-
-  var blockInputs = document.querySelectorAll('input[name="block"]:checked');
-  if (!blockInputs.length) { showErr('block-error'); valid = false; } else { hideErr('block-error'); }
-
-  if (!valid) {
-    // Scroll to first error
-    var firstError = document.querySelector('.error-msg.show');
-    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-
-  var goals = Array.from(goalInputs).map(function(i){ return i.value; }).join(', ');
-  var blocks = Array.from(blockInputs).map(function(i){ return i.value; });
-  var otherText = document.getElementById('otherText').value.trim();
-  if (blocks.indexOf('Другое') !== -1 && otherText) {
-    blocks = blocks.filter(function(b){ return b !== 'Другое'; });
-    blocks.push('Другое: ' + otherText);
-  }
-
-  var payload = {
-    date: new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
-    name: name,
-    telegram: telegram,
-    email: email,
-    who: whoInput.value,
-    goals: goals,
-    blocks: blocks.join(', ')
-  };
-
-  var btn = document.getElementById('submitBtn');
-  btn.disabled = true;
-  btn.textContent = 'Отправляю...';
-
-  var formData = new URLSearchParams();
-  Object.keys(payload).forEach(function(k) { formData.append(k, payload[k]); });
-
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    body: formData
+    method: 'POST', mode: 'no-cors', body: formData
   }).then(function() {
     document.getElementById('mainForm').style.display = 'none';
     document.querySelector('.form-header').style.display = 'none';
