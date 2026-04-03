@@ -502,6 +502,141 @@ footer {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
+/* ── OUTCOMES (что вы получите) ── */
+.outcomes-section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+}
+@media(max-width:900px){ .outcomes-grid{ grid-template-columns: 1fr 1fr; } }
+@media(max-width:560px){ .outcomes-grid{ grid-template-columns: 1fr; } }
+
+.outcome-card {
+  background: rgba(13,13,18,0.95);
+  border: 1px solid rgba(200,200,200,0.07);
+  padding: 36px 30px;
+  transition: border-color .4s, transform .3s;
+  position: relative;
+  overflow: hidden;
+}
+.outcome-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200,200,200,0.12), transparent);
+}
+.outcome-card:hover { border-color: rgba(200,200,200,0.18); transform: translateY(-3px); }
+.outcome-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px; font-weight: 300; line-height: 1;
+  color: rgba(200,200,200,0.10); margin-bottom: 20px;
+  display: block;
+}
+.outcome-title {
+  font-size: 14px; font-weight: 600; color: var(--c1);
+  margin-bottom: 10px; line-height: 1.4;
+}
+.outcome-desc {
+  font-size: 12px; font-weight: 300; color: var(--ink2);
+  line-height: 1.75;
+}
+
+/* ── PAYMENT METHODS ── */
+.payment-section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+}
+@media(max-width:900px){ .payment-grid{ grid-template-columns: 1fr 1fr; } }
+@media(max-width:560px){ .payment-grid{ grid-template-columns: 1fr; } }
+
+.payment-card {
+  background: rgba(13,13,18,0.95);
+  border: 1px solid rgba(200,200,200,0.07);
+  padding: 32px 28px;
+  transition: border-color .4s;
+}
+.payment-card:hover { border-color: rgba(200,200,200,0.18); }
+.payment-card.special {
+  border-color: rgba(200,200,200,0.14);
+  background: rgba(20,18,12,0.98);
+}
+.payment-icon {
+  font-size: 22px; margin-bottom: 16px; display: block;
+}
+.payment-name {
+  font-size: 13px; font-weight: 600; color: var(--c1);
+  margin-bottom: 8px;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.payment-desc {
+  font-size: 12px; font-weight: 300; color: var(--ink2);
+  line-height: 1.7; margin-bottom: 0;
+}
+.payment-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 20px; padding: 10px 20px; border-radius: 5px;
+  background: transparent; border: 1px solid rgba(200,200,200,0.20);
+  color: var(--c2); font-size: 10px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; font-family: 'Montserrat', sans-serif;
+  transition: all .25s;
+}
+.payment-cta:hover { background: rgba(200,200,200,0.07); border-color: rgba(200,200,200,0.35); }
+
+/* ── BONUSES ── */
+.bonuses-section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+.bonuses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+}
+@media(max-width:768px){ .bonuses-grid{ grid-template-columns: 1fr; } }
+
+.bonus-card {
+  background: rgba(13,13,18,0.95);
+  border: 1px solid rgba(200,200,200,0.07);
+  padding: 36px 36px;
+  display: flex; gap: 24px; align-items: flex-start;
+  transition: border-color .4s, transform .3s;
+  position: relative; overflow: hidden;
+}
+.bonus-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200,200,200,0.06), transparent);
+}
+.bonus-card:hover { border-color: rgba(200,200,200,0.18); transform: translateY(-3px); }
+.bonus-index {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 300; line-height: 1;
+  background: var(--chrome-shine); background-size: 200% auto;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  animation: shine 8s linear infinite;
+  flex-shrink: 0; width: 44px;
+}
+.bonus-body { flex: 1; }
+.bonus-title {
+  font-size: 13px; font-weight: 600; color: var(--c1);
+  margin-bottom: 8px; line-height: 1.4;
+}
+.bonus-desc {
+  font-size: 12px; font-weight: 300; color: var(--ink2);
+  line-height: 1.7;
+}
+.bonus-tag {
+  display: inline-block;
+  background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.10);
+  padding: 3px 10px; border-radius: 3px;
+  font-size: 9px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--c3);
+  margin-bottom: 10px;
+}
+
 .hero > * { position: relative; z-index: 3; }
 
 
@@ -1065,6 +1200,154 @@ footer {
     <div class="tool-chip">Higgsfield</div>
     <div class="tool-chip">Nano Banana Pro</div>
     <div class="tool-chip">CapCut Pro</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OUTCOMES — что вы получите после 7 недель -->
+<section class="outcomes-section" id="outcomes">
+  <div class="section-label reveal">Результаты программы</div>
+  <h2 class="section-title reveal">Что вы получите после<br><em>6 недель обучения?</em></h2>
+  <div class="outcomes-grid reveal">
+
+    <div class="outcome-card">
+      <span class="outcome-num">01</span>
+      <div class="outcome-title">Индивидуальный подход</div>
+      <div class="outcome-desc">Мы работаем и с новичками без бэкграунда, и с теми, кто уже в индустрии — задания и сопровождение адаптируются под ваш уровень.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">02</span>
+      <div class="outcome-title">Геймификация</div>
+      <div class="outcome-desc">Каждую неделю — конкурс на топ-3 работы. Победителей награждаем подписками на нейросети и призами от партнёров.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">03</span>
+      <div class="outcome-title">Креативные задания</div>
+      <div class="outcome-desc">Нестандартные брифы, которые развивают фантазию и насмотренность. Не скучные упражнения — живые кейсы.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">04</span>
+      <div class="outcome-title">Готовое портфолио</div>
+      <div class="outcome-desc">К финалу — 5 сильных проектов в самых востребованных жанрах AI-контента, которые с руками оторвут заказчики.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">05</span>
+      <div class="outcome-title">Кейс-чемпионат с брендом</div>
+      <div class="outcome-desc">Один реальный бренд даёт бриф, выбирает 3 лучшие работы и публикует у себя. Шанс попасть в поле зрения крупных компаний.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">06</span>
+      <div class="outcome-title">Кураторы-практики</div>
+      <div class="outcome-desc">Выпускники, которые работают с клиентами прямо сейчас. На связи каждый день, проводят созвоны, помогают с идеей и докруткой.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">07</span>
+      <div class="outcome-title">Обратная связь от автора</div>
+      <div class="outcome-desc">Еженедельные созвоны с автором для всех тарифов. Личный разбор работ на закрытых эфирах — в старших форматах.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">08</span>
+      <div class="outcome-title">Канал с вакансиями</div>
+      <div class="outcome-desc">После курса — доступ к закрытому каналу с клиентами. Тёплые контакты и заказы от брендов, которые уже ищут AI-криэйторов.</div>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">09</span>
+      <div class="outcome-title">Творческое комьюнити</div>
+      <div class="outcome-desc">Вы становитесь частью сообщества, которое делает контент будущего. Мини-группы до 20 человек, общий чат, живые созвоны.</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PAYMENT METHODS — способы оплаты -->
+<section class="payment-section" id="payment">
+  <div class="section-label reveal">Оплата</div>
+  <h2 class="section-title reveal">Способы<br><em>оплаты</em></h2>
+  <div class="payment-grid reveal">
+
+    <div class="payment-card">
+      <span class="payment-icon">💳</span>
+      <div class="payment-name">Полная оплата</div>
+      <div class="payment-desc">Внести полную стоимость картой банка РФ или иностранной картой. Место фиксируется сразу.</div>
+    </div>
+
+    <div class="payment-card">
+      <span class="payment-icon">🔒</span>
+      <div class="payment-name">Предоплата</div>
+      <div class="payment-desc">Внести предоплату — она фиксирует за вами место и стоимость. Доплатить полную сумму до старта программы.</div>
+    </div>
+
+    <div class="payment-card">
+      <span class="payment-icon">🏦</span>
+      <div class="payment-name">Рассрочка банка</div>
+      <div class="payment-desc">Оформить рассрочку от банка до 12 месяцев — для граждан РФ и стран СНГ. Без переплаты.</div>
+    </div>
+
+    <div class="payment-card special">
+      <span class="payment-icon">🌍</span>
+      <div class="payment-name">Внутренняя рассрочка</div>
+      <div class="payment-desc">3 платежа от нас — для тех, кто живёт за границей. Первый платёж сейчас, остальные 2 во время обучения.</div>
+      <a href="#contact" class="payment-cta">Оставить заявку →</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BONUSES — бонусы -->
+<section class="bonuses-section" id="bonuses">
+  <div class="section-label reveal">Подарки</div>
+  <h2 class="section-title reveal">Бонусы сразу после<br><em>покупки курса</em></h2>
+  <div class="bonuses-grid reveal">
+
+    <div class="bonus-card">
+      <div class="bonus-index">01</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">PDF-гайд</div>
+        <div class="bonus-title">10 атмосферных стилей Midjourney + инструкция</div>
+        <div class="bonus-desc">Готовые промпты для 10 кинематографических стилей от автора с разбором каждого. Скопируй и используй сразу.</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-index">02</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">PDF-гайд</div>
+        <div class="bonus-title">Лучшие AI-криэйторы мира для вдохновения</div>
+        <div class="bonus-desc">Подборка топовых авторов, чьи работы стоит изучить. Насмотренность — основа качественного AI-контента.</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-index">03</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">Чек-лист</div>
+        <div class="bonus-title">Какая нейросеть лучшая прямо сейчас для разных задач</div>
+        <div class="bonus-desc">Актуальный сравнительный обзор инструментов: что выбрать для изображений, видео, озвучки и монтажа в 2026 году.</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-index">04</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">Видеокурс</div>
+        <div class="bonus-title">Пак уроков по профессиональному монтажу</div>
+        <div class="bonus-desc">От AI-криэйтора-режиссёра — ученицы автора. Полноценный мини-курс по монтажу AI-роликов, которые выглядят дорого.</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
