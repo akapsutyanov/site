@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuroCreator Master — Твой путь</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Golos+Text:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #08080e;
+    --surface: #0f0f18;
+    --surface2: #161620;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.13);
+    --text: #eeedf8;
+    --muted: #6b6a7e;
+    --muted2: #9998b0;
+    --accent: #7c6dff;
+    --accent2: #b8adff;
+    --spark: #1df2a0;
+    --spark2: rgba(29,242,160,0.12);
+    --hw: #f9d57a;
+    --pink: #ff6bc8;
+    --blue: #4da6ff;
+    --radius: 16px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Golos Text', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Noise texture overlay ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    padding: 56px 48px 40px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -80px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(124,109,255,0.13) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--spark);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--spark);
+  }
+  .hero h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent2);
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: var(--muted2);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  /* ── Progress summary ── */
+  .progress-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .ps-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ps-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .ps-label {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .ps-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border2);
+  }
+  .progress-bar-hero {
+    flex: 1;
+    min-width: 140px;
+  }
+  .pbh-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pbh-track {
+    height: 5px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .pbh-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--spark));
+    border-radius: 3px;
+    transition: width 0.6s ease;
+  }
+
+  /* ── Days timeline ── */
+  .days-strip {
+    padding: 24px 48px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  .days-strip-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .days-row {
+    display: flex;
+    gap: 8px;
+    min-width: max-content;
+  }
+  .day-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    min-width: 148px;
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .day-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--spark);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .day-card.active { border-color: rgba(29,242,160,0.3); }
+  .day-card.active::before { transform: scaleX(1); }
+  .day-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--spark);
+    margin-bottom: 6px;
+  }
+  .day-result {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  /* ── Layout ── */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    min-height: calc(100vh - 280px);
+  }
+  .main { padding: 32px 48px; border-right: 1px solid var(--border); }
+  .sidebar { padding: 28px 24px; }
+
+  .section-eyebrow {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+
+  /* ── Module cards ── */
+  .modules { display: flex; flex-direction: column; gap: 10px; }
+
+  .mod {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .mod:hover { border-color: var(--border2); }
+  .mod.is-current {
+    border-color: rgba(29,242,160,0.25);
+    box-shadow: 0 0 0 1px rgba(29,242,160,0.08), 0 4px 24px rgba(29,242,160,0.05);
+  }
+
+  .mod-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .mod-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .mod-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    flex: 1;
+    letter-spacing: -0.01em;
+  }
+  .mod-progress-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    color: var(--muted2);
+    flex-shrink: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  .mod-progress-pill.done {
+    background: rgba(29,242,160,0.15);
+    color: var(--spark);
+  }
+  .mod-chevron {
+    font-size: 9px;
+    color: var(--muted);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .mod-chevron.open { transform: rotate(90deg); }
+
+  .mod-body { display: none; padding: 0 18px 18px; }
+  .mod-body.open { display: block; }
+
+  /* result badge */
+  .result-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .result-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* lessons */
+  .lessons { display: flex; flex-direction: column; gap: 3px; margin-bottom: 16px; }
+  .lesson {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border: 1px solid transparent;
+  }
+  .lesson:hover { background: rgba(255,255,255,0.03); }
+  .lesson.checked { opacity: 0.55; }
+  .lesson.is-action {
+    background: rgba(29,242,160,0.04);
+    border-color: rgba(29,242,160,0.12);
+  }
+  .lesson.is-action:hover { background: rgba(29,242,160,0.07); }
+
+  .l-check {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border2);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    transition: background 0.2s, border-color 0.2s;
+    color: transparent;
+  }
+  .lesson.checked .l-check {
+    background: var(--spark);
+    border-color: var(--spark);
+    color: #000;
+  }
+  .lesson.is-action .l-check {
+    border-color: rgba(29,242,160,0.4);
+  }
+  .lesson.is-action.checked .l-check {
+    background: var(--spark);
+    border-color: var(--spark);
+    color: #000;
+  }
+
+  .l-text {
+    font-size: 13px;
+    color: var(--text);
+    flex: 1;
+    line-height: 1.4;
+  }
+  .lesson.is-action .l-text { color: var(--spark); font-weight: 500; }
+  .l-type {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .lt-theory { background: rgba(124,109,255,0.12); color: var(--accent2); }
+  .lt-action { background: rgba(29,242,160,0.12); color: var(--spark); }
+
+  /* hw block */
+  .hw-block {
+    background: rgba(249,213,122,0.05);
+    border: 1px solid rgba(249,213,122,0.18);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .hw-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .hw-icon {
+    width: 24px; height: 24px;
+    border-radius: 7px;
+    background: rgba(249,213,122,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .hw-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--hw);
+  }
+  .hw-tasks { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .hw-task {
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border: 1px solid transparent;
+  }
+  .hw-task:hover { background: rgba(249,213,122,0.05); border-color: rgba(249,213,122,0.1); }
+  .hw-task.checked { opacity: 0.5; }
+  .hw-n {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--hw);
+    flex-shrink: 0;
+    min-width: 14px;
+    padding-top: 3px;
+  }
+  .hw-t { font-size: 12px; color: var(--text); line-height: 1.5; }
+  .hw-task.checked .hw-t { text-decoration: line-through; color: var(--muted); }
+  .hw-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(249,213,122,0.1);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .hw-tg {
+    font-weight: 600;
+    color: var(--hw);
+    padding: 2px 8px;
+    background: rgba(249,213,122,0.1);
+    border-radius: 6px;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 18px;
+  }
+  .div-line { flex: 1; height: 1px; background: var(--border); }
+  .div-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── Library blocks ── */
+  .lib-block {
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .lib-instr { border: 1px dashed rgba(77,166,255,0.3); }
+  .lib-tricks { border: 1px dashed rgba(255,107,200,0.3); }
+
+  .lib-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .lib-instr .lib-header { background: rgba(77,166,255,0.05); border-bottom: 1px solid rgba(77,166,255,0.12); }
+  .lib-tricks .lib-header { background: rgba(255,107,200,0.05); border-bottom: 1px solid rgba(255,107,200,0.12); }
+
+  .lib-badge {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 3px 9px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .lib-instr .lib-badge { background: rgba(77,166,255,0.15); color: var(--blue); }
+  .lib-tricks .lib-badge { background: rgba(255,107,200,0.15); color: var(--pink); }
+
+  .lib-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    flex: 1;
+  }
+  .lib-instr .lib-title { color: var(--blue); }
+  .lib-tricks .lib-title { color: var(--pink); }
+  .lib-sub { font-size: 11px; color: var(--muted); }
+  .lib-chevron { font-size: 9px; color: var(--muted); transition: transform 0.25s; }
+  .lib-chevron.open { transform: rotate(90deg); }
+
+  .lib-body { display: none; padding: 14px 16px; }
+  .lib-body.open { display: block; }
+
+  /* instr list */
+  .instr-group { margin-bottom: 12px; }
+  .instr-group-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .instr-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid transparent;
+    margin-bottom: 3px;
+    font-size: 12px;
+    color: var(--text);
+    transition: border-color 0.15s;
+    cursor: default;
+  }
+  .instr-item:hover { border-color: rgba(77,166,255,0.18); }
+  .instr-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+  /* tricks grid */
+  .tricks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .trick-card {
+    background: rgba(255,107,200,0.04);
+    border: 1px solid rgba(255,107,200,0.12);
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    transition: border-color 0.15s;
+  }
+  .trick-card:hover { border-color: rgba(255,107,200,0.28); }
+  .trick-icon { font-size: 16px; flex-shrink: 0; }
+  .trick-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+  .trick-tool { font-size: 10px; color: var(--muted); }
+
+  /* ── Sidebar ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 12px;
+  }
+  .card-spark { background: rgba(29,242,160,0.05); border-color: rgba(29,242,160,0.18); }
+  .card-hw { background: rgba(249,213,122,0.04); border-color: rgba(249,213,122,0.16); }
+
+  .card-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    color: var(--muted);
+  }
+  .card-spark .card-title { color: var(--spark); }
+  .card-hw .card-title { color: var(--hw); }
+
+  /* timeline in sidebar */
+  .tl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .tl-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .tl-day {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--spark);
+    width: 48px;
+    flex-shrink: 0;
+    padding-top: 1px;
+  }
+  .tl-text { font-size: 12px; color: var(--text); line-height: 1.45; flex: 1; }
+
+  /* faq */
+  .faq-row { padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .faq-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-q { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+  .faq-a { font-size: 13px; font-weight: 600; color: var(--hw); }
+
+  /* overall progress */
+  .overall-prog { margin-top: 4px; }
+  .op-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .op-label { font-size: 11px; color: var(--muted2); }
+  .op-count { font-size: 11px; font-weight: 600; color: var(--spark); }
+  .op-track { height: 4px; background: rgba(255,255,255,0.07); border-radius: 2px; margin-bottom: 10px; }
+  .op-fill { height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--spark)); transition: width 0.4s ease; }
+
+  /* ── Footer ── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-text { font-size: 11px; color: var(--muted); }
+  .footer-brand {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent2);
+  }
+  .reset-btn {
+    font-size: 11px;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    font-family: 'Golos Text', sans-serif;
+  }
+  .reset-btn:hover { border-color: var(--border2); color: var(--text); }
+
+  @media(max-width:860px){
+    .layout { grid-template-columns: 1fr; }
+    .main { border-right: none; border-bottom: 1px solid var(--border); padding: 24px 20px; }
+    .sidebar { padding: 24px 20px; }
+    .hero, .days-strip, .footer { padding-left: 20px; padding-right: 20px; }
+    .tricks-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-eyebrow">NeuroCreator Master</div>
+  <h1>Твой путь<br>от нуля до <em>первого заработка</em></h1>
+  <p class="hero-sub">Отмечай уроки по мере прохождения — карта показывает где ты сейчас и что тебя ждёт дальше.</p>
+  <div class="progress-summary">
+    <div class="ps-item">
+      <div class="ps-num" id="done-count" style="color:var(--spark);">0</div>
+      <div class="ps-label">уроков пройдено</div>
+    </div>
+    <div class="ps-divider"></div>
+    <div class="ps-item">
+      <div class="ps-num" id="total-count" style="color:var(--muted2);">—</div>
+      <div class="ps-label">всего уроков</div>
+    </div>
+    <div class="ps-divider"></div>
+    <div class="progress-bar-hero">
+      <div class="pbh-label">
+        <span>Общий прогресс</span>
+        <span id="pct">0%</span>
+      </div>
+      <div class="pbh-track">
+        <div class="pbh-fill" id="hero-bar" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ── MAIN LAYOUT ── -->
+<div class="layout">
+<div class="main">
+  <div class="section-eyebrow">Программа курса</div>
+  <div class="modules" id="modules"></div>
+
+  <!-- Libraries divider -->
+  <div class="divider"><div class="div-line"></div><div class="div-label">Библиотеки — всегда открыты</div><div class="div-line"></div></div>
+
+  <!-- Instructions library -->
+  <div class="lib-block lib-instr">
+    <div class="lib-header" onclick="toggleLib('instr')">
+      <span class="lib-badge">Инструкции</span>
+      <span class="lib-title">Как работать с инструментами</span>
+      <span class="lib-sub">интерфейс, настройки, старт</span>
+      <span class="lib-chevron" id="lc-instr">▶</span>
+    </div>
+    <div class="lib-body" id="lb-instr">
+      <div class="instr-group">
+        <div class="instr-group-label">Изображения</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#a78bfa;"></div>Midjourney — аккаунт, Discord, первые промпты</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#c4b5fd;"></div>KREA AI — интерфейс и real-time генерация</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#c4b5fd;"></div>Flora — старт и навигация</div>
+      </div>
+      <div class="instr-group">
+        <div class="instr-group-label">Видео</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#4da6ff;"></div>Kling — веб и мобильная версия</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#7ec8ff;"></div>Runway — Gen-3, интерфейс и настройки</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#7ec8ff;"></div>Veo 3.1 — доступ и первая генерация</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#7ec8ff;"></div>Higgsfield — старт и режимы</div>
+      </div>
+      <div class="instr-group" style="margin-bottom:0">
+        <div class="instr-group-label">Агрегаторы и промпты</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#fb923c;"></div>Nano Banana Pro — обзор и подписка</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#fdba74;"></div>Seedreem — интерфейс</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#fdba74;"></div>Fal.ai — обзор возможностей</div>
+        <div class="instr-item"><div class="instr-dot" style="background:#4ade80;"></div>Сайты промптов — обзор и навигация</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tricks library -->
+  <div class="lib-block lib-tricks">
+    <div class="lib-header" onclick="toggleLib('tricks')">
+      <span class="lib-badge">Фишки</span>
+      <span class="lib-title">Приёмы и рецепты</span>
+      <span class="lib-sub">один эффект — один урок</span>
+      <span class="lib-chevron" id="lc-tricks">▶</span>
+    </div>
+    <div class="lib-body" id="lb-tricks">
+      <div class="tricks-grid">
+        <div class="trick-card"><div class="trick-icon">🎬</div><div><div class="trick-name">Анимация логотипа</div><div class="trick-tool">Kling / Runway</div></div></div>
+        <div class="trick-card"><div class="trick-icon">🌊</div><div><div class="trick-name">Морфинг-эффект</div><div class="trick-tool">Runway / KREA</div></div></div>
+        <div class="trick-card"><div class="trick-icon">🪞</div><div><div class="trick-name">Замена себя в кадре</div><div class="trick-tool">Higgsfield / Kling</div></div></div>
+        <div class="trick-card"><div class="trick-icon">👤</div><div><div class="trick-name">Нейроаватар</div><div class="trick-tool">Midjourney + Kling</div></div></div>
+        <div class="trick-card"><div class="trick-icon">✨</div><div><div class="trick-name">Спецэффекты в кадре</div><div class="trick-tool">Runway / Veo</div></div></div>
+        <div class="trick-card"><div class="trick-icon">👗</div><div><div class="trick-name">Лукбук / мода</div><div class="trick-tool">Midjourney + Kling</div></div></div>
+        <div class="trick-card"><div class="trick-icon">🖼️</div><div><div class="trick-name">Живая картина / арт-стиль</div><div class="trick-tool">Runway / Higgsfield</div></div></div>
+        <div class="trick-card"><div class="trick-icon">🔊</div><div><div class="trick-name">Звук и музыка к видео</div><div class="trick-tool">Suno / ElevenLabs</div></div></div>
+        <div class="trick-card"><div class="trick-icon">📦</div><div><div class="trick-name">Упаковка продукта / 3D</div><div class="trick-tool">KREA / Veo</div></div></div>
+        <div class="trick-card" style="border-style:dashed;opacity:0.5;"><div class="trick-icon">➕</div><div><div class="trick-name">Новые приёмы</div><div class="trick-tool">пополняется</div></div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── SIDEBAR ── -->
+<div class="sidebar">
+
+  <div class="card card-spark">
+    <div class="card-title">Результат по неделям</div>
+    <div class="tl-item">
+      <div class="tl-day" style="color:#1df2a0;">Нед. 1</div>
+      <div class="tl-text"><strong style="color:var(--text);">Модули 0–1</strong><br>Первая генерация в день 1. Знаю стиль, пишу промпты, собрал мудборд.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-day" style="color:#a78bfa;">Нед. 2</div>
+      <div class="tl-text"><strong style="color:var(--text);">Модуль 2</strong><br>3 готовых кейса в портфолио — мультик, реклама или арт-ролик.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-day" style="color:#fb923c;">Нед. 3</div>
+      <div class="tl-text"><strong style="color:var(--text);">Модуль 2.5</strong><br>Живой сайт-портфолио — можно показывать клиентам.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-day" style="color:#f472b6;">Нед. 4</div>
+      <div class="tl-text"><strong style="color:var(--text);">Модуль 3</strong><br>Выбран трек (бренд или фриланс). Первый пост или отклик клиенту.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-day" style="color:#4ade80;">Нед. 5+</div>
+      <div class="tl-text"><strong style="color:var(--text);">Модуль 4</strong><br>План на 90 дней с цифрами. Начало масштабирования.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Мой прогресс</div>
+    <div class="overall-prog" id="sidebar-progress"></div>
+  </div>
+
+  <div class="card card-hw">
+    <div class="card-title">Домашние задания</div>
+    <div class="faq-row"><div class="faq-q">Что делать?</div><div class="faq-a">Практика руками — сделать работу</div></div>
+    <div class="faq-row"><div class="faq-q">Как сдавать?</div><div class="faq-a">Присылать в Telegram-чат</div></div>
+    <div class="faq-row"><div class="faq-q">Когда разбор?</div><div class="faq-a">На прямом эфире — дата в чате</div></div>
+  </div>
+
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-text">NeuroCreator Master · neurocreator2.ru</div>
+  <button class="reset-btn" onclick="resetProgress()">Сбросить прогресс</button>
+  <div class="footer-brand">Твой путь</div>
+</div>
+
+<script>
+const modules = [
+  {
+    id: 'mod0',
+    color: '#1df2a0',
+    num: 'Модуль 0',
+    title: 'Старт — первый результат сегодня',
+    open: true,
+    result: { c: 'rgba(29,242,160,0.08)', dot: '#1df2a0', t: 'После этого модуля: сделал первую генерацию в день 1' },
+    lessons: [
+      { id: 'l0_1', text: 'Вводный брифинг — зачем курс и что будет', type: 'theory' },
+      { id: 'l0_2', text: 'Первая генерация прямо сейчас — 10 минут', type: 'action' },
+      { id: 'l0_3', text: 'Подписки — что нужно и зачем', type: 'theory' },
+      { id: 'l0_4', text: 'Покупка подписок — пошагово', type: 'theory' },
+    ],
+    hw: {
+      tasks: [
+        { id: 'hw0_1', text: 'Сгенерируй своё первое изображение — любое, что нравится' },
+        { id: 'hw0_2', text: 'Напиши одно слово: что почувствовал когда увидел результат' },
+      ],
+      tg: '#старт',
+    },
+  },
+  {
+    id: 'mod1',
+    color: '#4da6ff',
+    num: 'Модуль 1',
+    title: 'База — мышление и стиль',
+    open: false,
+    result: { c: 'rgba(77,166,255,0.08)', dot: '#4da6ff', t: 'После этого модуля: понимаю язык промптов, знаю свой стиль, умею искать референсы' },
+    lessons: [
+      { id: 'l1_0', text: '2.0 Промпты для визуала — как переводить идею в текст', type: 'theory' },
+      { id: 'l1_1', text: '2.1 Как избавиться от творческих затыков', type: 'theory' },
+      { id: 'l1_2', text: '2.2 Мини-практика — задание сразу', type: 'action' },
+      { id: 'l1_3', text: '2.3 Как найти и оформить визуальный стиль', type: 'theory' },
+      { id: 'l1_4', text: '2.4 Мини-практика — задание сразу', type: 'action' },
+      { id: 'l1_5', text: '2.5 Мудборд и референсы для генераций', type: 'theory' },
+      { id: 'l1_6', text: '2.6 Мини-практика — задание сразу', type: 'action' },
+      { id: 'l1_7', text: '2.7 Как и где выбрать референсы', type: 'theory' },
+      { id: 'l1_8', text: '2.8 Источники вдохновения', type: 'theory' },
+      { id: 'l1_9', text: '★ Найди 5 референсов точно в своём стиле — сохрани в папку', type: 'action' },
+      { id: 'l1_10', text: '2.9 Как писать промпты — техники и структура', type: 'theory' },
+      { id: 'l1_11', text: '2.10 Арт-директор своего контента', type: 'theory' },
+      { id: 'l1_12', text: '★ Напиши 2 промпта по референсам — сгенерируй — покажи', type: 'action' },
+    ],
+    hw: {
+      tasks: [
+        { id: 'hw1_1', text: 'Собери мудборд из 9–12 изображений — твой визуальный стиль' },
+        { id: 'hw1_2', text: 'Напиши 3 промпта на основе мудборда, сгенерируй и покажи результат' },
+        { id: 'hw1_3', text: 'Одно предложение: опиши свой стиль — это основа позиционирования' },
+      ],
+      tg: '#питстоп',
+    },
+  },
+  {
+    id: 'mod2',
+    color: '#a78bfa',
+    num: 'Модуль 2',
+    title: 'Портфолио — первые кейсы',
+    open: false,
+    result: { c: 'rgba(167,139,250,0.08)', dot: '#a78bfa', t: 'После этого модуля: 5+ готовых работ в портфолио' },
+    lessons: [
+      { id: 'l2_1', text: 'Что такое сильное портфолио в нише ИИ', type: 'theory' },
+      { id: 'l2_2', text: 'Кейс 1: мультик / анимация', type: 'action' },
+      { id: 'l2_3', text: 'Кейс 2: рекламный ролик', type: 'action' },
+      { id: 'l2_4', text: 'Кейс 3: киношный / арт-ролик', type: 'action' },
+      { id: 'l2_5', text: 'Приёмы из «Фишек» — применяем в кейсах', type: 'action' },
+    ],
+    hw: {
+      tasks: [
+        { id: 'hw2_1', text: 'Сними один законченный ролик: мультик, реклама или кино — на выбор' },
+        { id: 'hw2_2', text: 'От 15 секунд, с началом, серединой и концом' },
+        { id: 'hw2_3', text: 'Добавь работу в папку «Портфолио»' },
+      ],
+      tg: '#портфолио',
+    },
+  },
+  {
+    id: 'mod25',
+    color: '#fb923c',
+    num: 'Модуль 2.5',
+    title: 'Сайт-портфолио — сразу после 2–3 работ',
+    open: false,
+    result: { c: 'rgba(251,146,60,0.08)', dot: '#fb923c', t: 'После этого модуля: живой сайт, готовый показать клиентам' },
+    lessons: [
+      { id: 'l25_1', text: 'Структура продающего портфолио', type: 'theory' },
+      { id: 'l25_2', text: 'Сборка сайта: Tilda / Notion / Framer', type: 'action' },
+      { id: 'l25_3', text: 'Тексты о себе с помощью ИИ', type: 'action' },
+    ],
+    hw: {
+      tasks: [
+        { id: 'hw25_1', text: 'Собери сайт с 2–3 работами и разделом «Обо мне»' },
+        { id: 'hw25_2', text: 'Напиши описание услуг в 2–3 предложениях — используй ИИ' },
+        { id: 'hw25_3', text: 'Опубликуй ссылку — теперь это твоя визитка' },
+      ],
+      tg: '#мой-сайт',
+    },
+  },
+  {
+    id: 'mod3',
+    color: '#f472b6',
+    num: 'Модуль 3',
+    title: 'Продвижение — выбираем путь',
+    open: false,
+    result: { c: 'rgba(244,114,182,0.08)', dot: '#f472b6', t: 'После этого модуля: выбран трек, сделан первый публичный шаг' },
+    lessons: [
+      { id: 'l3_1', text: 'Оформление аккаунта и первые посты', type: 'theory' },
+      { id: 'l3_2', text: 'Форматы контента в нише ИИ', type: 'theory' },
+      { id: 'l3_3', text: 'Трек А — Личный бренд: эксперт в нише', type: 'action' },
+      { id: 'l3_4', text: 'Трек Б — Фриланс: первый клиент', type: 'action' },
+      { id: 'l3_5', text: 'Разбор заданий — прямой эфир', type: 'theory' },
+    ],
+    hw: {
+      tasks: [
+        { id: 'hw3_1', text: 'Выбери трек (бренд или фриланс) — запиши почему' },
+        { id: 'hw3_2', text: 'Трек А: опубликуй первый пост с работой из портфолио' },
+        { id: 'hw3_3', text: 'Трек Б: откликнись на 3 заявки или напиши 3 потенциальным клиентам' },
+      ],
+      tg: '#продвижение',
+    },
+  },
+  {
+    id: 'mod4',
+    color: '#4ade80',
+    num: 'Модуль 4',
+    title: 'Масштабирование — план на 90 дней',
+    open: false,
+    result: { c: 'rgba(74,222,128,0.08)', dot: '#4ade80', t: 'После этого модуля: чёткий план роста с конкретными шагами' },
+    lessons: [
+      { id: 'l4_1', text: 'Сценарий 1 — Фриланс: поток и цены', type: 'theory' },
+      { id: 'l4_2', text: 'Сценарий 2 — Агентство: команда', type: 'theory' },
+      { id: 'l4_3', text: 'Сценарий 3 — Продукт: курс, шаблоны', type: 'theory' },
+      { id: 'l4_4', text: 'Автоматизация рабочего процесса с ИИ', type: 'action' },
+      { id: 'l4_5', text: 'Финальный разбор + план на 90 дней', type: 'action' },
+    ],
+    hw: {
+      tasks: [
+        { id: 'hw4_1', text: 'Выбери сценарий и заполни план на 90 дней — цифры, не абстракции' },
+        { id: 'hw4_2', text: 'Поставь 3 цели с дедлайнами' },
+        { id: 'hw4_3', text: 'Поделись планом в чате — публичное обязательство работает' },
+      ],
+      tg: '#план-90-дней',
+    },
+  },
+];
+
+// ── State ──
+function loadState() {
+  try { return JSON.parse(localStorage.getItem('nc_progress') || '{}'); } catch { return {}; }
+}
+function saveState(s) {
+  try { localStorage.setItem('nc_progress', JSON.stringify(s)); } catch {}
+}
+let state = loadState();
+
+function toggle(id) {
+  state[id] = !state[id];
+  saveState(state);
+  document.querySelector(`[data-id="${id}"]`)?.classList.toggle('checked', !!state[id]);
+  updateProgress();
+}
+
+function toggleMod(id) {
+  const body = document.getElementById('mb-' + id);
+  const chev = document.getElementById('mc-' + id);
+  body.classList.toggle('open');
+  chev.classList.toggle('open');
+}
+
+function toggleLib(id) {
+  document.getElementById('lb-' + id)?.classList.toggle('open');
+  document.getElementById('lc-' + id)?.classList.toggle('open');
+}
+
+function rgb(hex) {
+  return [parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16)].join(',');
+}
+
+// ── Render modules ──
+const container = document.getElementById('modules');
+
+modules.forEach(m => {
+  const allIds = [...m.lessons.map(l => l.id), ...m.hw.tasks.map(t => t.id)];
+  const total = allIds.length;
+
+  const lessonsHtml = m.lessons.map(l => `
+    <div class="lesson${l.type === 'action' ? ' is-action' : ''}${state[l.id] ? ' checked' : ''}"
+         data-id="${l.id}" onclick="toggle('${l.id}')">
+      <div class="l-check">${state[l.id] ? '✓' : ''}</div>
+      <span class="l-text">${l.text}</span>
+      <span class="l-type ${l.type === 'action' ? 'lt-action' : 'lt-theory'}">${l.type === 'action' ? 'действие' : 'урок'}</span>
+    </div>`).join('');
+
+  const tasksHtml = m.hw.tasks.map((t, i) => `
+    <div class="hw-task${state[t.id] ? ' checked' : ''}" data-id="${t.id}" onclick="toggle('${t.id}')">
+      <span class="hw-n">${i+1}.</span>
+      <span class="hw-t">${t.text}</span>
+    </div>`).join('');
+
+  const doneCount = allIds.filter(id => state[id]).length;
+  const pillDone = doneCount === total;
+
+  container.innerHTML += `
+    <div class="mod${m.id === 'mod0' ? ' is-current' : ''}" id="${m.id}">
+      <div class="mod-header" onclick="toggleMod('${m.id}')">
+        <span class="mod-num" style="background:rgba(${rgb(m.color)},0.15);color:${m.color};">${m.num}</span>
+        <span class="mod-title">${m.title}</span>
+        <span class="mod-progress-pill${pillDone ? ' done' : ''}" id="pill-${m.id}">${doneCount}/${total}</span>
+        <span class="mod-chevron${m.open ? ' open' : ''}" id="mc-${m.id}">▶</span>
+      </div>
+      <div class="mod-body${m.open ? ' open' : ''}" id="mb-${m.id}">
+        <div class="result-badge" style="background:${m.result.c};border:1px solid rgba(${rgb(m.result.dot)},0.2);">
+          <div class="result-dot" style="background:${m.result.dot};"></div>
+          ${m.result.t}
+        </div>
+        <div class="lessons">${lessonsHtml}</div>
+        <div class="hw-block">
+          <div class="hw-head">
+            <div class="hw-icon">★</div>
+            <div class="hw-title">Домашнее задание</div>
+          </div>
+          <div class="hw-tasks">${tasksHtml}</div>
+          <div class="hw-footer">
+            <span>Сдать в Telegram:</span>
+            <span class="hw-tg">${m.hw.tg}</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+});
+
+// ── Progress update ──
+function updateProgress() {
+  // collect all lesson/hw ids
+  const allLessons = modules.flatMap(m => m.lessons.map(l => l.id));
+  const allHw = modules.flatMap(m => m.hw.tasks.map(t => t.id));
+  const allIds = [...allLessons, ...allHw];
+  const total = allIds.length;
+  const done = allIds.filter(id => state[id]).length;
+  const pct = total ? Math.round(done / total * 100) : 0;
+
+  document.getElementById('done-count').textContent = done;
+  document.getElementById('total-count').textContent = total;
+  document.getElementById('pct').textContent = pct + '%';
+  document.getElementById('hero-bar').style.width = pct + '%';
+
+  // per-module pills
+  modules.forEach(m => {
+    const ids = [...m.lessons.map(l => l.id), ...m.hw.tasks.map(t => t.id)];
+    const d = ids.filter(id => state[id]).length;
+    const pill = document.getElementById('pill-' + m.id);
+    if (pill) {
+      pill.textContent = `${d}/${ids.length}`;
+      pill.classList.toggle('done', d === ids.length);
+    }
+  });
+
+  // sidebar progress
+  const sidebar = document.getElementById('sidebar-progress');
+  sidebar.innerHTML = modules.map(m => {
+    const ids = [...m.lessons.map(l => l.id), ...m.hw.tasks.map(t => t.id)];
+    const d = ids.filter(id => state[id]).length;
+    const p = ids.length ? Math.round(d / ids.length * 100) : 0;
+    return `
+      <div class="op-row"><span class="op-label">${m.num}</span><span class="op-count">${d}/${ids.length}</span></div>
+      <div class="op-track"><div class="op-fill" style="width:${p}%;"></div></div>`;
+  }).join('');
+}
+
+function resetProgress() {
+  if (!confirm('Сбросить весь прогресс?')) return;
+  state = {};
+  saveState(state);
+  document.querySelectorAll('.checked').forEach(el => {
+    el.classList.remove('checked');
+    const check = el.querySelector('.l-check');
+    if (check) check.textContent = '';
+    const hwt = el.querySelector('.hw-t');
+  });
+  updateProgress();
+}
+
+updateProgress();
+</script>
+</body>
+</html>
