@@ -93,11 +93,11 @@ nav {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   animation: shine 6s linear infinite;
 }
-.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links { display: flex; gap: 2px; list-style: none; }
 .nav-links a {
-  font-size: 11px; font-weight: 500; color: var(--ink3); text-decoration: none;
-  padding: 7px 14px; border-radius: 8px; letter-spacing: 1.5px; text-transform: uppercase;
-  transition: all .2s;
+  font-size: 10.5px; font-weight: 500; color: var(--ink3); text-decoration: none;
+  padding: 6px 10px; border-radius: 8px; letter-spacing: 0.8px; text-transform: uppercase;
+  white-space: nowrap; transition: all .2s;
 }
 .nav-links a:hover { background: rgba(200,200,200,0.07); color: var(--c2); }
 .nav-cta {
@@ -109,7 +109,7 @@ nav {
   transition: all .25s;
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(200,200,200,0.40); }
-@media(max-width:768px){ .nav-links{display:none} }
+@media(max-width:1080px){ .nav-links{display:none} }
 
 /* ── HERO ── */
 .hero { position: relative; overflow: hidden; }
@@ -967,11 +967,13 @@ footer {
   font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink2);
 }
 .nav-mobile a:hover, .nav-mobile a:active { background: rgba(200,200,200,0.07); color: var(--c1); }
+@media (max-width: 1080px) {
+  .nav-burger { display: flex; }
+}
 @media (max-width: 768px) {
   nav { padding: 11px 16px; }
   .nav-logo { font-size: 13px; letter-spacing: 1px; }
   .nav-cta { padding: 8px 14px; font-size: 10px; }
-  .nav-burger { display: flex; }
 }
 @media (max-width: 380px) { .nav-cta { display: none; } }
 
@@ -991,6 +993,30 @@ footer {
 .floating-cta:hover { transform: translateY(-3px); }
 @media (max-width: 768px) {
   .floating-cta { left: 16px; right: 16px; bottom: 16px; justify-content: center; padding: 16px; font-size: 13px; }
+}
+
+/* ── FAQ ── */
+.faq-list { display: flex; flex-direction: column; gap: 2px; margin-top: 52px; }
+.faq-item { background: rgba(13,13,18,0.95); border: 1px solid rgba(200,200,200,0.07); transition: border-color .3s; }
+.faq-item.open { border-color: rgba(200,200,200,0.18); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer; color: var(--c1);
+  font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; line-height: 1.4;
+  padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  transition: background .2s;
+}
+.faq-q:hover { background: rgba(200,200,200,0.03); }
+.faq-ic {
+  flex-shrink: 0; width: 28px; height: 28px; border: 1px solid rgba(200,200,200,0.18); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--c2); font-weight: 300;
+  transition: transform .35s, border-color .3s, color .3s;
+}
+.faq-item.open .faq-ic { transform: rotate(45deg); border-color: rgba(200,200,200,0.4); color: var(--c1); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(0.4,0,0.2,1); }
+.faq-a p { padding: 0 28px 24px; font-size: 13px; font-weight: 300; color: var(--ink2); line-height: 1.8; max-width: 800px; }
+@media (max-width: 600px) {
+  .faq-q { padding: 20px 18px; font-size: 14px; }
+  .faq-a p { padding: 0 18px 20px; }
 }
 
 /* lightbox for review screenshots */
@@ -1015,9 +1041,12 @@ footer {
   <a href="#" class="nav-logo">AI — Новый Уровень 2026</a>
   <ul class="nav-links">
     <li><a href="#works">Работы</a></li>
+    <li><a href="#forwho">Для кого</a></li>
     <li><a href="#program">Программа</a></li>
+    <li><a href="#outcomes">Результаты</a></li>
     <li><a href="#reviews">Отзывы</a></li>
     <li><a href="#pricing">Тарифы</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Контакт</a></li>
   </ul>
   <a href="#pricing" class="nav-cta">Начать</a>
@@ -1028,9 +1057,12 @@ footer {
 <!-- выпадающее мобильное меню -->
 <div class="nav-mobile" id="navMobile">
   <a href="#works">Работы</a>
+  <a href="#forwho">Для кого</a>
   <a href="#program">Программа</a>
+  <a href="#outcomes">Результаты</a>
   <a href="#reviews">Отзывы</a>
   <a href="#pricing">Тарифы</a>
+  <a href="#faq">FAQ</a>
   <a href="#contact">Контакт</a>
 </div>
 
@@ -1785,6 +1817,47 @@ footer {
 
 <div class="divider"></div>
 
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="section-label reveal">Вопросы</div>
+  <h2 class="section-title reveal">Частые<br><em>вопросы</em></h2>
+  <div class="faq-list reveal">
+
+    <div class="faq-item">
+      <button class="faq-q">Подойдёт ли мне, если я новичок и с ИИ на «вы»?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Да. Программа построена с нуля: первые модули — основы, мышление и базовые инструменты. Идём пошагово, а личное сопровождение не даёт застрять. Большинство учеников стартуют вообще без опыта.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Сколько времени нужно уделять?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>В среднем 3–5 часов в неделю. Уроки короткие и прикладные, всё в записи — смотришь в удобное время. Главное — делать практику, именно на ней строится результат.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">А если не получится — есть гарантия?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Да. Мы сопровождаем до первого результата: если выполняешь задания и не выходишь на оговорённый результат — продолжаем работать с тобой бесплатно, пока не получится.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Нужен ли мощный компьютер или платные подписки?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Нет. Достаточно обычного ноутбука, а многое делается и с телефона. Нужные нейросети мы показываем, а оплату ключевых подписок берём на себя на время обучения (на VIP-тарифе).</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Когда старт и как проходит обучение?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Обучение онлайн: уроки в записи + личное сопровождение и разборы. Дату старта ближайшего потока уточним при записи. Доступ к материалам остаётся у тебя.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Реально ли выйти на доход и когда первые деньги?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Первые AI-ролики и первые клиенты у учеников появляются уже на 3–5 неделе. Цель программы — система выхода на 100 000 ₽+ в месяц. Скорость зависит от твоей практики — мы даём пошаговый путь.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="section-label reveal">Тарифы</div>
@@ -2097,6 +2170,16 @@ window.reviewFail = function(img, name) {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q) {
+  q.addEventListener('click', function() {
+    var item = q.closest('.faq-item');
+    var a = item.querySelector('.faq-a');
+    var open = item.classList.toggle('open');
+    a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+  });
+});
 
 // Accordion modules
 document.querySelectorAll('.module-header').forEach(function(header) {
