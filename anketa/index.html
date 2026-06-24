@@ -479,8 +479,13 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
     blocks.push('Другое: ' + otherText);
   }
 
+  var srcParam = '';
+  try { srcParam = new URLSearchParams(location.search).get('from') || ''; } catch(e) {}
+  var source = srcParam === 'excursion' ? 'Экскурсия' : (srcParam || 'Анкета');
+
   var payload = {
     date:      new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
+    source:    source,
     name:      name,
     telegram:  telegram,
     instagram: instagram,
