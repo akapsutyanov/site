@@ -3,7 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI-Новый Уровень 2026 — Сопровождение по AI-контенту</title>
+<title>AI — Новый Уровень 2026 — Сопровождение по AI-контенту</title>
+<meta name="description" content="6 недель личного сопровождения по AI-контенту: от нуля до 100 000 ₽+ в месяц. Нейросети, киношные AI-ролики, портфолио, клиенты и гарантия результата.">
+<meta name="theme-color" content="#060608">
+<link rel="canonical" href="https://neurocreator2.ru/master/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<!-- Open Graph (превью при репосте в Telegram, WhatsApp, ВК, соцсети) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI — Новый Уровень 2026">
+<meta property="og:title" content="AI — Новый Уровень 2026 — Сопровождение по AI-контенту">
+<meta property="og:description" content="6 недель личного сопровождения: от нуля до 100 000 ₽+ в месяц на AI-контенте. Нейросети, киношные AI-ролики, портфолио и клиенты.">
+<meta property="og:url" content="https://neurocreator2.ru/master/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI — Новый Уровень 2026 — Сопровождение по AI-контенту">
+<meta name="twitter:description" content="6 недель личного сопровождения: от нуля до 100 000 ₽+ в месяц на AI-контенте.">
+<meta name="twitter:image" content="https://neurocreator2.ru/master/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -920,6 +940,55 @@ footer {
 @media (max-width: 900px) { .reviews-masonry { columns: 2 240px; } }
 @media (max-width: 560px) { .reviews-masonry { columns: 1; } }
 
+/* ── MOBILE NAV (burger) ── */
+.nav-burger {
+  display: none; width: 38px; height: 38px; padding: 0; border: 0; cursor: pointer;
+  background: transparent; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+}
+.nav-burger span { display: block; width: 20px; height: 2px; background: var(--c2); border-radius: 2px; transition: transform .3s, opacity .3s; }
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-mobile {
+  position: fixed; top: 76px; left: 50%; transform: translateX(-50%) translateY(-12px);
+  z-index: 899; width: calc(100% - 40px); max-width: 1160px;
+  background: rgba(6,6,8,0.96); backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
+  border: 1px solid rgba(200,200,200,0.12); border-radius: 14px; padding: 10px;
+  display: none; flex-direction: column; box-shadow: 0 16px 50px rgba(0,0,0,0.6);
+  opacity: 0; transition: opacity .25s, transform .25s;
+}
+.nav-mobile.open { display: flex; opacity: 1; transform: translateX(-50%) translateY(0); }
+.nav-mobile a {
+  padding: 13px 16px; border-radius: 9px; text-decoration: none;
+  font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink2);
+}
+.nav-mobile a:hover, .nav-mobile a:active { background: rgba(200,200,200,0.07); color: var(--c1); }
+@media (max-width: 768px) {
+  nav { padding: 11px 16px; }
+  .nav-logo { font-size: 13px; letter-spacing: 1px; }
+  .nav-cta { padding: 8px 14px; font-size: 10px; }
+  .nav-burger { display: flex; }
+}
+@media (max-width: 380px) { .nav-cta { display: none; } }
+
+/* ── FLOATING CTA ── */
+.floating-cta {
+  position: fixed; z-index: 880; right: 24px; bottom: 24px;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--chrome-grad); color: #0a0a0a;
+  padding: 14px 26px; border-radius: 50px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.15);
+  opacity: 0; transform: translateY(20px) scale(.96); pointer-events: none;
+  transition: opacity .4s, transform .4s;
+}
+.floating-cta.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.floating-cta:hover { transform: translateY(-3px); }
+@media (max-width: 768px) {
+  .floating-cta { left: 16px; right: 16px; bottom: 16px; justify-content: center; padding: 16px; font-size: 13px; }
+}
+
 /* lightbox for review screenshots */
 .review-lightbox {
   position: fixed; inset: 0; z-index: 1000; display: none;
@@ -943,11 +1012,26 @@ footer {
   <ul class="nav-links">
     <li><a href="#works">Работы</a></li>
     <li><a href="#program">Программа</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
     <li><a href="#pricing">Тарифы</a></li>
     <li><a href="#contact">Контакт</a></li>
   </ul>
   <a href="#pricing" class="nav-cta">Начать</a>
+  <button class="nav-burger" id="navBurger" aria-label="Меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- выпадающее мобильное меню -->
+<div class="nav-mobile" id="navMobile">
+  <a href="#works">Работы</a>
+  <a href="#program">Программа</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#pricing">Тарифы</a>
+  <a href="#contact">Контакт</a>
+</div>
+
+<!-- плавающая кнопка (появляется при скролле) -->
+<a href="#pricing" class="floating-cta" id="floatingCta">Начать обучение →</a>
 
 <!-- HERO -->
 <section class="hero">
@@ -1039,7 +1123,7 @@ footer {
       <div class="work-video-wrap">
         <iframe
           src="https://kinescope.io/embed/mbvNwBooC7Sd9M5zKfgSUt?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen"
+          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
           allowfullscreen
         ></iframe>
       </div>
@@ -1050,7 +1134,7 @@ footer {
       <div class="work-video-wrap">
         <iframe
           src="https://kinescope.io/embed/f2iyp4d4qGjRXbzoFCgpMt?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen"
+          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
           allowfullscreen
         ></iframe>
       </div>
@@ -1061,7 +1145,7 @@ footer {
       <div class="work-video-wrap">
         <iframe
           src="https://kinescope.io/embed/6zicv4scTHmkpDanm4rHyc?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen"
+          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
           allowfullscreen
         ></iframe>
       </div>
@@ -1072,7 +1156,7 @@ footer {
       <div class="work-video-wrap">
         <iframe
           src="https://kinescope.io/embed/4YJVTQ8njWVBW56QSTtrcj?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen"
+          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
           allowfullscreen
         ></iframe>
       </div>
@@ -1124,7 +1208,7 @@ footer {
   Как добавить своё видео: в нужной карточке .sw-card замени блок-плейсхолдер
   <div class="sw-ph">...</div> на ОДНО из:
     • локальный файл:  <video src="work-1.mp4" autoplay muted loop playsinline></video>
-    • Kinescope:       <iframe src="https://kinescope.io/embed/КОД?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    • Kinescope:       <iframe src="https://kinescope.io/embed/КОД?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
   Ориентация карточки задаётся классом: .vertical (9:16) или .horizontal (16:9).
   Карточки можно добавлять/удалять — слайдер сам зациклится (дубль создаётся скриптом).
 -->
@@ -1139,22 +1223,22 @@ footer {
     <div class="sw-track">
 
       <div class="sw-card vertical">
-        <iframe src="https://kinescope.io/embed/3sUuKLpgcMeP6HochRXvch?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://kinescope.io/embed/3sUuKLpgcMeP6HochRXvch?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
         <div class="sw-cap"><span class="sw-tag">Reels / Shorts</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
       <div class="sw-card horizontal">
-        <iframe src="https://kinescope.io/embed/bAbndx1F8dGVWM3a2Ak5V5?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://kinescope.io/embed/bAbndx1F8dGVWM3a2Ak5V5?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
         <div class="sw-cap"><span class="sw-tag">Кинематограф</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
       <div class="sw-card vertical">
-        <iframe src="https://kinescope.io/embed/iRmXYfYsXdZgRKpdj87vZe?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://kinescope.io/embed/iRmXYfYsXdZgRKpdj87vZe?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
         <div class="sw-cap"><span class="sw-tag">AI-аватар</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
       <div class="sw-card vertical">
-        <iframe src="https://kinescope.io/embed/wce72cpDs4au9GCw5C4fTz?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://kinescope.io/embed/wce72cpDs4au9GCw5C4fTz?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
         <div class="sw-cap"><span class="sw-tag">Клип</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
@@ -1519,10 +1603,10 @@ footer {
 
   <div class="reviews-masonry reveal">
 
-    <div class="review-card"><img src="review-1.jpg" alt="Отзыв студента" onerror="reviewFail(this,'review-1.jpg')"></div>
-    <div class="review-card"><img src="review-2.jpg" alt="Отзыв студента" onerror="reviewFail(this,'review-2.jpg')"></div>
-    <div class="review-card"><img src="review-3.jpg" alt="Отзыв студента" onerror="reviewFail(this,'review-3.jpg')"></div>
-    <div class="review-card"><img src="review-4.jpg" alt="Отзыв студента" onerror="reviewFail(this,'review-4.jpg')"></div>
+    <div class="review-card"><img src="review-1.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-1.jpg')"></div>
+    <div class="review-card"><img src="review-2.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-2.jpg')"></div>
+    <div class="review-card"><img src="review-3.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-3.jpg')"></div>
+    <div class="review-card"><img src="review-4.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-4.jpg')"></div>
 
   </div>
 </section>
@@ -1979,6 +2063,34 @@ window.reviewFail = function(img, name) {
 
   // if the video genuinely can't load, just keep the poster visible (do NOT hide the video)
   v.addEventListener('error', function() { if (poster) poster.style.opacity = '1'; });
+})();
+
+// Mobile burger menu
+(function() {
+  var b = document.getElementById('navBurger');
+  var m = document.getElementById('navMobile');
+  if (!b || !m) return;
+  function close() { b.classList.remove('open'); m.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }
+  b.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var open = b.classList.toggle('open');
+    m.classList.toggle('open', open);
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  m.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', close); });
+  document.addEventListener('click', function(e) { if (!m.contains(e.target) && !b.contains(e.target)) close(); });
+})();
+
+// Floating CTA — appears after scrolling past the hero
+(function() {
+  var cta = document.getElementById('floatingCta');
+  if (!cta) return;
+  function onScroll() {
+    if (window.scrollY > window.innerHeight * 0.85) cta.classList.add('show');
+    else cta.classList.remove('show');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();
 
 // Accordion modules
