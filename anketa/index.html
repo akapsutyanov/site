@@ -245,6 +245,21 @@ body {
     <p class="form-sub">Ссылку на интенсив вышлю после регистрации</p>
   </div>
 
+  <script>
+  /* Подмена заголовка, если пришли с кнопки «Записаться на экскурсию» (/anketa?from=excursion) */
+  (function() {
+    var from = '';
+    try { from = new URLSearchParams(location.search).get('from') || ''; } catch(e) {}
+    if (from !== 'excursion') return;
+    var t  = document.querySelector('.form-title');
+    var s  = document.querySelector('.form-sub');
+    var eb = document.querySelector('.form-eyebrow');
+    if (t)  t.innerHTML  = 'Заполни анкету<br><span class="gold-text">на экскурсию</span>';
+    if (s)  s.textContent = 'Покажем платформу изнутри, разберём программу под твою цель и ответим на вопросы';
+    if (eb) eb.innerHTML = '<div class="eyebrow-dot"></div> Запись на экскурсию · AI-Новый уровень 2026';
+  })();
+  </script>
+
   <form class="form-card" id="mainForm" novalidate>
 
     <!-- Q1: ИМЯ -->
