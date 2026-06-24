@@ -1961,20 +1961,24 @@ window.reviewFail = function(img, name) {
   }
 
   applySource();
-  v.addEventListener('canplay', tryPlay, { once: true });
+  // several events all nudge playback — covers iOS/Safari autoplay timing
+  ['loadedmetadata', 'loadeddata', 'canplay', 'canplaythrough'].forEach(function(ev) {
+    v.addEventListener(ev, tryPlay);
+  });
   // swap source when crossing the mobile/desktop breakpoint
   if (mq.addEventListener) { mq.addEventListener('change', applySource); }
   else if (mq.addListener) { mq.addListener(applySource); }
 
-  // fallback: start on first user interaction if autoplay was blocked
-  ['pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function(ev) {
-    window.addEventListener(ev, function once() {
-      tryPlay();
-      ['pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function(e2) { window.removeEventListener(e2, once); });
-    }, { once: true, passive: true });
+  // fallback: start on the first user interaction if autoplay was blocked (e.g. iOS Low Power Mode)
+  function kick() { tryPlay(); }
+  ['pointerdown', 'touchstart', 'scroll', 'keydown', 'click'].forEach(function(ev) {
+    window.addEventListener(ev, kick, { passive: true });
   });
+  // also retry when the page becomes visible again
+  document.addEventListener('visibilitychange', function() { if (!document.hidden) tryPlay(); });
 
-  v.addEventListener('error', function() { v.style.display = 'none'; });
+  // if the video genuinely can't load, just keep the poster visible (do NOT hide the video)
+  v.addEventListener('error', function() { if (poster) poster.style.opacity = '1'; });
 })();
 
 // Accordion modules
