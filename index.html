@@ -106,7 +106,7 @@ body {
 
 /* ══ NAV ══ */
 nav {
-  position: fixed; top: 56px; left: 50%; transform: translateX(-50%);
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
   z-index: 1000; width: calc(100% - 48px); max-width: 1160px;
   display: flex; align-items: center; justify-content: space-between;
   padding: 13px 22px; border-radius: 18px;
@@ -941,19 +941,6 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <div class="blob blob-5"></div>
 </div>
 
-<!-- TIMER BAR -->
-<div class="timer-bar" id="timerBar">
-  <div class="timer-bar-text"><strong>🔥 Стартовая цена</strong> &nbsp;закроется через:</div>
-  <div class="timer-digits">
-    <div class="td-block"><div class="td-num" id="tb-h">00</div><div class="td-label">часов</div></div>
-    <div class="td-sep">:</div>
-    <div class="td-block"><div class="td-num" id="tb-m">00</div><div class="td-label">минут</div></div>
-    <div class="td-sep">:</div>
-    <div class="td-block"><div class="td-num" id="tb-s">00</div><div class="td-label">секунд</div></div>
-  </div>
-  <a href="#pricing" class="timer-bar-btn">Забрать цену →</a>
-  <button class="timer-bar-close" onclick="document.getElementById('timerBar').style.display='none'; document.querySelector('nav').style.top='16px';">×</button>
-</div>
   <div class="sp-body">
     <div class="sp-name" id="spName">Анна</div>
     <div class="sp-action" id="spAction">купила тариф <strong>Практика</strong></div>
@@ -1338,17 +1325,6 @@ footer { padding: 0 64px 48px; position: relative; z-index: 1; }
   <h2>Выбери свой <span class="ga">тариф</span></h2>
   <p class="desc">Стартовые цены — только в первые дни открытия</p>
 
-  <!-- PRICING TIMER -->
-  <div class="pricing-timer">
-    <div class="pt-label">⚡ <strong>Цена вырастет</strong> &nbsp;через:</div>
-    <div class="pt-digits">
-      <div class="pt-block"><div class="pt-num" id="pt-h">00</div><div class="pt-label-sm">часов</div></div>
-      <div class="pt-sep">:</div>
-      <div class="pt-block"><div class="pt-num" id="pt-m">00</div><div class="pt-label-sm">минут</div></div>
-      <div class="pt-sep">:</div>
-      <div class="pt-block"><div class="pt-num" id="pt-s">00</div><div class="pt-label-sm">секунд</div></div>
-    </div>
-  </div>
 
   <!-- SPOTS PROGRESS BAR -->
   
@@ -1523,68 +1499,7 @@ document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 
 // ── SOCIAL PROOF TOASTS ──
 
-// Сохраняем deadline в localStorage, чтобы он не сбрасывался при перезагрузке
-(function() {
-  const DURATION_HOURS = 47; // таймер на 47 часов
-  const KEY = 'ai_start_deadline';
-  let deadline = localStorage.getItem(KEY);
-  if (!deadline) {
-    deadline = Date.now() + DURATION_HOURS * 60 * 60 * 1000;
-    localStorage.setItem(KEY, deadline);
-  } else {
-    deadline = parseInt(deadline);
-    // Если дедлайн прошёл — обновляем ещё на столько же
-    if (deadline < Date.now()) {
-      deadline = Date.now() + DURATION_HOURS * 60 * 60 * 1000;
-      localStorage.setItem(KEY, deadline);
-    }
-  }
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function updateTimers() {
-    const diff = Math.max(0, deadline - Date.now());
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-
-    // Top bar
-    const tbH = document.getElementById('tb-h');
-    const tbM = document.getElementById('tb-m');
-    const tbS = document.getElementById('tb-s');
-    if (tbH) tbH.textContent = pad(h);
-    if (tbM) tbM.textContent = pad(m);
-    if (tbS) tbS.textContent = pad(s);
-
-    // Pricing block
-    const ptH = document.getElementById('pt-h');
-    const ptM = document.getElementById('pt-m');
-    const ptS = document.getElementById('pt-s');
-    if (ptH) ptH.textContent = pad(h);
-    if (ptM) ptM.textContent = pad(m);
-    if (ptS) ptS.textContent = pad(s);
-
-    // Animate seconds flip
-    if (s !== updateTimers._prevS) {
-      [tbS, ptS].forEach(el => {
-        if (!el) return;
-        el.style.transform = 'translateY(-4px)';
-        el.style.opacity = '0.6';
-        setTimeout(() => { el.style.transform = ''; el.style.opacity = ''; }, 180);
-      });
-      updateTimers._prevS = s;
-    }
-  }
-  updateTimers._prevS = -1;
-
-  // Add CSS transitions for flip animation
-  const style = document.createElement('style');
-  style.textContent = '.td-num, .pt-num { transition: transform .18s ease, opacity .18s ease; }';
-  document.head.appendChild(style);
-
-  updateTimers();
-  setInterval(updateTimers, 1000);
-})();
+// (таймер удалён — без поддельной срочности)
 </script>
 <!-- STICKY CTA BAR (appears after scrolling past hero) -->
 <div class="sticky-cta-bar" id="stickyCta">
