@@ -67,6 +67,7 @@ h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto
 .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
 .tag{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0a0a0a;
   background:var(--chrome-grad);padding:4px 11px;border-radius:50px}
+.tag.tag-alt{color:var(--c1);background:rgba(120,170,230,.16);border:1px solid rgba(120,170,230,.34)}
 .time{font-size:10px;color:var(--ink3);letter-spacing:.5px;white-space:nowrap}
 .card-text{font-size:13px;font-weight:300;color:var(--ink);line-height:1.7;white-space:pre-line;word-break:break-word;overflow-wrap:anywhere;
   overflow:hidden;display:-webkit-box;-webkit-line-clamp:11;-webkit-box-orient:vertical;
@@ -186,15 +187,18 @@ function render(){
   stateEl.style.display='none';
   grid.innerHTML = list.map(v => {
     const long = (v.text||'').length > 280;
-    const c = extractContact(v.text||'', v.channel);
+    const tg = (v.source||'telegram')==='telegram';
+    const c = tg ? extractContact(v.text||'', v.channel) : null;
+    const tag = tg ? '@'+esc(v.channel) : esc(v.channel);
+    const openLabel = tg ? 'Открыть в Telegram →' : 'Открыть вакансию →';
     return `
     <article class="card">
-      <div class="card-top"><span class="tag">@${esc(v.channel)}</span><span class="time">${rel(v.date)}</span></div>
+      <div class="card-top"><span class="tag${tg?'':' tag-alt'}">${tag}</span><span class="time">${rel(v.date)}</span></div>
       <div class="card-text">${esc(v.text)}</div>
       ${long ? '<button class="card-more">Показать полностью ▾</button>' : ''}
       <div class="card-actions">
         ${c ? `<a class="card-link primary" href="${esc(c.url)}" target="_blank" rel="noopener">✍ Написать @${esc(c.user)}</a>` : ''}
-        <a class="card-link" href="${esc(v.link)}" target="_blank" rel="noopener">Открыть пост →</a>
+        <a class="card-link" href="${esc(v.link)}" target="_blank" rel="noopener">${openLabel}</a>
       </div>
     </article>`; }).join('');
 }
@@ -207,12 +211,13 @@ grid.addEventListener('click', e => {
 });
 
 function buildChips(){
-  const counts = {};
-  DATA.forEach(v => counts[v.channel]=(counts[v.channel]||0)+1);
+  const counts = {}, srcOf = {};
+  DATA.forEach(v => { counts[v.channel]=(counts[v.channel]||0)+1; srcOf[v.channel]=v.source||'telegram'; });
   const chans = Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
   chipsEl.innerHTML =
     `<span class="chip active" data-ch="all">Все · ${DATA.length}</span>` +
-    chans.map(c=>`<span class="chip" data-ch="${esc(c)}">@${esc(c)} · ${counts[c]}</span>`).join('');
+    chans.map(c=>{ const label = srcOf[c]==='telegram' ? '@'+esc(c) : esc(c);
+      return `<span class="chip" data-ch="${esc(c)}">${label} · ${counts[c]}</span>`; }).join('');
   chipsEl.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>{
     channel = ch.dataset.ch;
     chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active', x===ch));
