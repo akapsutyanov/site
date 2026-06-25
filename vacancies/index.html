@@ -78,6 +78,10 @@ h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto
 .card-more{align-self:flex-start;margin-top:10px;background:none;border:0;cursor:pointer;font-family:inherit;
   font-size:11px;font-weight:600;letter-spacing:.5px;color:var(--c3);padding:2px 0;transition:color .2s}
 .card-more:hover{color:var(--c1)}
+.card-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.card-actions .card-link{margin-top:0}
+.card-link.primary{color:#0a0a0a;background:var(--chrome-grad);border-color:transparent;font-weight:700}
+.card-link.primary:hover{color:#0a0a0a;background:var(--chrome-grad);transform:translateY(-1px);box-shadow:0 8px 22px rgba(200,200,200,.32)}
 
 .state{text-align:center;padding:80px 20px;color:var(--ink3);font-size:14px}
 .loader{width:30px;height:30px;border:2px solid rgba(200,200,200,.18);border-top-color:var(--c2);
@@ -153,6 +157,19 @@ function rel(d){
   return Math.floor(s/86400)+' дн назад';
 }
 
+// Достаём контакт из текста вакансии: @username или t.me/username (кроме самого канала)
+function extractContact(text, channel){
+  const ch = (channel||'').toLowerCase();
+  const bad = new Set(['joinchat','share','addstickers','proxy','iv']);
+  const ments = [...text.matchAll(/@([a-zA-Z][a-zA-Z0-9_]{3,31})/g)].map(m=>m[1]);
+  const links = [...text.matchAll(/t\.me\/([a-zA-Z][a-zA-Z0-9_]{3,31})/gi)].map(m=>m[1]);
+  for(const u of [...ments, ...links]){
+    if(u.toLowerCase()!==ch && !bad.has(u.toLowerCase()) && !u.startsWith('+'))
+      return {user:u, url:'https://t.me/'+u};
+  }
+  return null;
+}
+
 function render(){
   const q = query.trim().toLowerCase();
   const list = DATA.filter(v =>
@@ -168,12 +185,16 @@ function render(){
   stateEl.style.display='none';
   grid.innerHTML = list.map(v => {
     const long = (v.text||'').length > 280;
+    const c = extractContact(v.text||'', v.channel);
     return `
     <article class="card">
       <div class="card-top"><span class="tag">@${esc(v.channel)}</span><span class="time">${rel(v.date)}</span></div>
       <div class="card-text">${esc(v.text)}</div>
       ${long ? '<button class="card-more">Показать полностью ▾</button>' : ''}
-      <a class="card-link" href="${esc(v.link)}" target="_blank" rel="noopener">Открыть в Telegram →</a>
+      <div class="card-actions">
+        ${c ? `<a class="card-link primary" href="${esc(c.url)}" target="_blank" rel="noopener">✍ Написать @${esc(c.user)}</a>` : ''}
+        <a class="card-link" href="${esc(v.link)}" target="_blank" rel="noopener">Открыть пост →</a>
+      </div>
     </article>`; }).join('');
 }
 
