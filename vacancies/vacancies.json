@@ -1,7 +1,47 @@
 {
- "updated": "2026-06-27T11:32:14Z",
+ "updated": "2026-06-27T12:03:04Z",
  "count": 195,
  "items": [
+  {
+   "id": "hh/134171600",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес-ассистент / Проджект-менеджер AI-направления в онлайн-проект Екатерины Усмановой\n🏢 GymTeam · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/134171600",
+   "date": "2026-06-27T14:30:32+0300"
+  },
+  {
+   "id": "hh/133820906",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Промпт-инженер / Аккаунт-менеджер\n🏢 Сфера · Москва\n💰 от 120000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/133820906",
+   "date": "2026-06-27T14:10:20+0300"
+  },
+  {
+   "id": "hh/133820358",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Инженер-технолог по металлообработке (с ИИ-технологиями)\n🏢 ДжиЭрСи · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/133820358",
+   "date": "2026-06-27T14:01:36+0300"
+  },
+  {
+   "id": "hh/133817723",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Event‑продюсер / Руководитель платных бизнес‑форумов (IT / 1С / AI)\n🏢 КСА · Москва\n💰 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/133817723",
+   "date": "2026-06-27T13:46:02+0300"
+  },
+  {
+   "id": "hh/134168394",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-дизайнер / ИИ-креатор (Маркетплейсы, А/В-тестирование)\n🏢 Тишина Анастасия Валерьевна · Ижевск\n💰 от 60000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/134168394",
+   "date": "2026-06-27T13:44:44+0300"
+  },
   {
    "id": "hh/134011862",
    "source": "hh",
@@ -1027,14 +1067,6 @@
    "date": "2026-06-24T14:13:52+00:00"
   },
   {
-   "id": "hh/133820906",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Промпт-инженер / Аккаунт-менеджер\n🏢 Сфера · Москва\n💰 от 120000 до 250000 RUR",
-   "link": "https://hh.ru/vacancy/133820906",
-   "date": "2026-06-24T14:10:20+0300"
-  },
-  {
    "id": "digital_jobster/5964",
    "source": "telegram",
    "channel": "digital_jobster",
@@ -1251,14 +1283,6 @@
    "date": "2026-06-22T21:06:22+0300"
   },
   {
-   "id": "hh/134457417",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Художник AI-контента / AI Content Creator (GameDev)\n🏢 AMT Inc. · Екатеринбург\n💰 от 60000 до 90000 RUR",
-   "link": "https://hh.ru/vacancy/134457417",
-   "date": "2026-06-22T17:21:54+0300"
-  },
-  {
    "id": "tv/541c5301-6dfa-11f1-a0ef-714ad8f097f6",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1347,22 +1371,6 @@
    "date": "2026-06-22"
   },
   {
-   "id": "hh/134410224",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ML engineer/ Computer Vision and Generative AI\n🏢 Группа компаний «Триумф» · Москва",
-   "link": "https://hh.ru/vacancy/134410224",
-   "date": "2026-06-21T18:42:59+0300"
-  },
-  {
-   "id": "hh/134383186",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Промпт-инженер\n🏢 ИТЦ · Ростов-на-Дону\n💰 от 150000 RUR",
-   "link": "https://hh.ru/vacancy/134383186",
-   "date": "2026-06-19T16:15:33+0300"
-  },
-  {
    "id": "tv/e9292874-6bb4-11f1-9324-bbbec6225e30",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1417,14 +1425,6 @@
    "text": "Менеджер по рекламе\n🏢 ООО \"ДОМСТИЛЬ\" · Иркутская область\n💰 от 30000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1223800012171/2a519b98-6b90-11f1-9525-d7fe4fb2ad62",
    "date": "2026-06-19"
-  },
-  {
-   "id": "hh/134322929",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ‑креатор / AI Content Creator (full‑time в офис Naturalsupp, Пермь)\n🏢 Натуральные добавки · Пермь\n💰 от 60000 RUR",
-   "link": "https://hh.ru/vacancy/134322929",
-   "date": "2026-06-18T15:12:14+0300"
   },
   {
    "id": "tv/c0d85d64-6aeb-11f1-9dfc-a1e8f0c18044",
