@@ -2224,6 +2224,23 @@ window.reviewFail = function(img) {
   onScroll();
 })();
 
+// UTM passthrough — пробрасываем метки с этой страницы во все ссылки на анкету
+(function() {
+  try {
+    var qs = new URLSearchParams(location.search);
+    var utm = new URLSearchParams();
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) {
+      var v = qs.get(k); if (v) utm.set(k, v);
+    });
+    if (!utm.toString()) return;
+    document.querySelectorAll('a[href*="/anketa"]').forEach(function(a) {
+      var u = new URL(a.href);
+      utm.forEach(function(v, k) { u.searchParams.set(k, v); });
+      a.href = u.toString();
+    });
+  } catch(e) {}
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(function(q) {
   q.addEventListener('click', function() {
