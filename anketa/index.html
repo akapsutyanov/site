@@ -217,6 +217,19 @@ body {
 .success-icon { font-size: 56px; margin-bottom: 24px; animation: pulse 2s ease-in-out infinite; }
 .success-title { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; letter-spacing: 0; margin-bottom: 12px; color: var(--ink); }
 .success-sub { font-size: 15px; color: var(--ink2); line-height: 1.7; }
+.success-steps { margin: 28px 0 6px; text-align: left; display: flex; flex-direction: column; gap: 14px; }
+.s-step { display: flex; gap: 14px; align-items: flex-start; font-size: 14px; color: var(--ink); line-height: 1.55; font-weight: 400; }
+.s-step b { color: var(--ink); font-weight: 600; }
+.s-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(200,200,200,0.3);
+  display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; color: var(--g2); margin-top: 1px; }
+.success-btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px;
+  background: linear-gradient(135deg,#f8f8f8,#d0d0d0 45%,#888); color: #0a0a0a; -webkit-text-fill-color: #0a0a0a;
+  padding: 15px 32px; border-radius: 10px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; text-decoration: none; transition: transform .25s, box-shadow .25s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+.success-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(200,200,200,0.3); }
+.success-note { margin-top: 16px; font-size: 12px; color: var(--ink3); line-height: 1.6; }
 
 .error-msg { font-size: 12px; color: #ff6b6b; margin-top: 6px; display: none; }
 .error-msg.show { display: block; }
@@ -457,7 +470,14 @@ body {
   <div class="success-screen" id="successScreen">
     <div class="success-icon">🎯</div>
     <div class="success-title">Анкета <span class="gold-text">принята!</span></div>
-    <p class="success-sub">Спасибо! Александр свяжется с тобой в Telegram в ближайшее время и пришлёт ссылку на интенсив 🚀</p>
+    <p class="success-sub">Ты записан(а) на экскурсию по обучению. Вот что дальше:</p>
+    <div class="success-steps">
+      <div class="s-step"><span class="s-num">1</span><span><b>Александр напишет тебе в Telegram</b> в ближайшее время, чтобы согласовать день и время созвона — проверяй личные сообщения.</span></div>
+      <div class="s-step"><span class="s-num">2</span><span>Экскурсия — это <b>созвон 30–40 минут</b>: покажем платформу изнутри, разберём твою ситуацию и составим пошаговый план.</span></div>
+      <div class="s-step"><span class="s-num">3</span><span>А пока ждёшь — <b>посмотри бонусное видео</b>: за несколько минут поймёшь, как устроена профессия AI-контент-мейкера.</span></div>
+    </div>
+    <a class="success-btn" href="https://neurocreator2.ru/bonus/">Смотреть бонусное видео →</a>
+    <p class="success-note">Если сообщение не пришло в течение суток — напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a></p>
   </div>
 
   <footer class="anketa-footer">
