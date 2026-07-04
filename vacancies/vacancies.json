@@ -1,7 +1,15 @@
 {
- "updated": "2026-07-04T21:27:21Z",
+ "updated": "2026-07-04T21:58:40Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/134130733",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Head of AI Creative Production\n🏢 ТМГТ · Москва\n💰 от 150000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/134130733",
+   "date": "2026-07-05T00:11:15+0300"
+  },
   {
    "id": "hh/134130045",
    "source": "hh",
@@ -521,14 +529,6 @@
    "text": "Data Scientist (AI Safety)\n🏢 СБЕР · Москва",
    "link": "https://hh.ru/vacancy/130715345",
    "date": "2026-07-03T17:21:10+0300"
-  },
-  {
-   "id": "hh/134843620",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Автор курса «Цифровая грамотность 2.0: ИИ для каждого»\n🏢 Яндекс · Москва",
-   "link": "https://hh.ru/vacancy/134843620",
-   "date": "2026-07-03T17:17:11+0300"
   },
   {
    "id": "work_editor/6301",
