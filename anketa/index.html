@@ -292,17 +292,31 @@ body {
   </div>
 
   <script>
-  /* Подмена заголовка, если пришли с кнопки «Записаться на экскурсию» (/anketa?from=excursion) */
+  /* Подмена текстов по источнику: ?from=excursion (экскурсия) / ?from=bonus (предзапись с бонуса) */
   (function() {
     var from = '';
     try { from = new URLSearchParams(location.search).get('from') || ''; } catch(e) {}
-    if (from !== 'excursion') return;
-    var t  = document.querySelector('.form-title');
-    var s  = document.querySelector('.form-sub');
-    var eb = document.querySelector('.form-eyebrow');
-    if (t)  t.innerHTML  = 'Заполни анкету<br><span class="gold-text">на экскурсию</span>';
-    if (s)  s.textContent = 'Разберём твою ситуацию, найдём, что тормозит рост, и составим пошаговый план';
-    if (eb) eb.innerHTML = '<div class="eyebrow-dot"></div> Запись на экскурсию · AI-Новый уровень 2026';
+    if (from === 'excursion') {
+      var t  = document.querySelector('.form-title');
+      var s  = document.querySelector('.form-sub');
+      var eb = document.querySelector('.form-eyebrow');
+      if (t)  t.innerHTML  = 'Заполни анкету<br><span class="gold-text">на экскурсию</span>';
+      if (s)  s.textContent = 'Разберём твою ситуацию, найдём, что тормозит рост, и составим пошаговый план';
+      if (eb) eb.innerHTML = '<div class="eyebrow-dot"></div> Запись на экскурсию · AI-Новый уровень 2026';
+      /* экран успеха — экскурсионный вариант с шагами */
+      var ss = document.getElementById('successSub');
+      var st = document.getElementById('successSteps');
+      if (ss) ss.innerHTML = 'Ты записан(а) на экскурсию по обучению. Вот что дальше:';
+      if (st) st.style.display = 'flex';
+    } else if (from === 'bonus') {
+      var t2  = document.querySelector('.form-title');
+      var eb2 = document.querySelector('.form-eyebrow');
+      if (t2)  t2.innerHTML  = 'Анкета<br><span class="gold-text">предзаписи</span>';
+      if (eb2) eb2.innerHTML = '<div class="eyebrow-dot"></div> Предзапись · AI-Новый уровень 2026';
+      /* человек пришёл с бонусного видео — кнопку на него не показываем */
+      var b = document.getElementById('successBtn');
+      if (b) b.style.display = 'none';
+    }
   })();
   </script>
 
@@ -470,13 +484,13 @@ body {
   <div class="success-screen" id="successScreen">
     <div class="success-icon">🎯</div>
     <div class="success-title">Анкета <span class="gold-text">принята!</span></div>
-    <p class="success-sub">Ты записан(а) на экскурсию по обучению. Вот что дальше:</p>
-    <div class="success-steps">
+    <p class="success-sub" id="successSub">Спасибо! <b>Александр напишет тебе в Telegram</b> в ближайшее время — проверяй личные сообщения.</p>
+    <div class="success-steps" id="successSteps" style="display:none">
       <div class="s-step"><span class="s-num">1</span><span><b>Александр напишет тебе в Telegram</b> в ближайшее время, чтобы согласовать день и время созвона — проверяй личные сообщения.</span></div>
       <div class="s-step"><span class="s-num">2</span><span>Экскурсия — это <b>созвон 30–40 минут</b>: покажем платформу изнутри, разберём твою ситуацию и составим пошаговый план.</span></div>
       <div class="s-step"><span class="s-num">3</span><span>А пока ждёшь — <b>посмотри бонусное видео</b>: за несколько минут поймёшь, как устроена профессия AI-контент-мейкера.</span></div>
     </div>
-    <a class="success-btn" href="https://neurocreator2.ru/bonus/">Смотреть бонусное видео →</a>
+    <a class="success-btn" id="successBtn" href="https://neurocreator2.ru/bonus/">Смотреть бонусное видео →</a>
     <p class="success-note">Если сообщение не пришло в течение суток — напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a></p>
   </div>
 
@@ -561,7 +575,7 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
     srcParam = qs.get('from') || '';
     utmInfo = ['utm_source','utm_medium','utm_campaign'].map(function(k){ return qs.get(k); }).filter(Boolean).join(' / ');
   } catch(e) {}
-  var source = srcParam === 'excursion' ? 'Экскурсия' : (srcParam || 'Анкета');
+  var source = srcParam === 'excursion' ? 'Экскурсия' : (srcParam === 'bonus' ? 'Предзапись' : (srcParam || 'Анкета'));
   if (utmInfo) source += ' · ' + utmInfo;
 
   var payload = {
