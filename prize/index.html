@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Квиз с призами | AI — Новый Уровень 2026</title>
+<meta name="description" content="Пройди короткий квиз за минуту и крути колесо — разыгрываем консультацию, доступ к базе нейросетей и скидку на обучение.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Квиз с призами · AI — Новый Уровень 2026">
+<meta property="og:description" content="Пройди квиз за минуту и крути колесо фортуны — забери свой приз.">
+<meta property="og:url" content="https://neurocreator2.ru/prize/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(0.23,1,0.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.6;
+  min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px;width:100%;flex:1;display:flex;flex-direction:column;justify-content:center}
+
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.05);z-index:10}
+.progress-bar{height:100%;width:0;background:var(--chrome-grad);transition:width .4s var(--eo)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3);justify-content:center;width:100%}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#5cd17a;box-shadow:0 0 10px rgba(92,209,122,.6)}
+
+.step{display:none;animation:fadeUp .5s var(--eo) both;padding:40px 0}
+.step.active{display:block}
+
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,7vw,46px);
+  line-height:1.05;color:var(--ink);text-align:center;margin:18px 0 0}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.lead{font-size:15px;font-weight:300;color:var(--ink2);text-align:center;max-width:440px;margin:16px auto 0}
+.qnum{text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--c3);font-weight:600}
+.qtitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,5.5vw,34px);
+  color:var(--ink);text-align:center;margin:12px 0 26px;line-height:1.15}
+
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--line);
+  border-radius:14px;background:rgba(13,13,18,.7);cursor:pointer;text-align:left;color:var(--ink);
+  font-size:15px;font-weight:400;width:100%;transition:border-color 160ms ease,background-color 160ms ease,transform 140ms var(--eo)}
+.opt:hover{border-color:rgba(220,220,220,.35);background:rgba(20,20,26,.9)}
+.opt:active{transform:scale(.985)}
+.opt .oi{flex-shrink:0;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-size:16px;background:rgba(200,200,200,.06);border:1px solid var(--line)}
+
+.field{margin-bottom:16px}
+.label{display:block;font-size:12px;font-weight:600;letter-spacing:.5px;color:var(--c2);margin-bottom:7px}
+.inp{width:100%;padding:15px 16px;background:rgba(255,255,255,.03);border:1px solid var(--line);
+  border-radius:12px;color:var(--ink);font-size:15px;font-family:inherit;transition:border-color 160ms ease}
+.inp:focus{outline:none;border-color:rgba(220,220,220,.45)}
+.inp::placeholder{color:var(--ink3)}
+.err{font-size:12px;color:#ff6b6b;margin-top:5px;display:none}
+.err.show{display:block}
+.consent{display:flex;gap:11px;align-items:flex-start;margin:4px 0 18px;cursor:pointer;user-select:none}
+.consent input{position:absolute;opacity:0;width:0;height:0}
+.consent .box{flex-shrink:0;width:20px;height:20px;border-radius:6px;border:1px solid rgba(200,200,200,.28);
+  background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;margin-top:1px;
+  transition:border-color 150ms ease,background-color 150ms ease}
+.consent input:checked + .box{background:var(--chrome-grad);border-color:transparent}
+.consent .box svg{width:12px;height:12px;opacity:0;transition:opacity 120ms ease}
+.consent input:checked + .box svg{opacity:1}
+.consent .txt{font-size:12px;color:var(--ink2);line-height:1.5}
+.consent .txt a{color:var(--c2);text-decoration:underline;text-underline-offset:2px}
+.consent.err-on .box{border-color:#ff6b6b}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  background:var(--chrome-grad);color:#0a0a0a;padding:17px 32px;border:none;border-radius:12px;
+  font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(200,200,200,.25)}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.hint{text-align:center;font-size:12px;color:var(--ink3);margin-top:14px}
+
+/* ═══ КОЛЕСО ═══ */
+.wheel-wrap{position:relative;width:min(340px,86vw);aspect-ratio:1;margin:26px auto 0}
+.pointer{position:absolute;top:-6px;left:50%;transform:translateX(-50%);z-index:5;
+  width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;
+  border-top:26px solid #f4f4f4;filter:drop-shadow(0 3px 6px rgba(0,0,0,.6))}
+.wheel{width:100%;height:100%;border-radius:50%;position:relative;
+  border:6px solid #16161c;box-shadow:0 0 0 2px rgba(200,200,200,.25),0 30px 70px rgba(0,0,0,.6),inset 0 0 40px rgba(0,0,0,.5);
+  transition:transform 5.4s cubic-bezier(0.17,0.67,0.12,0.99);
+  background:conic-gradient(
+    #2a2a32 0deg 60deg, #15151b 60deg 120deg,
+    #2a2a32 120deg 180deg, #15151b 180deg 240deg,
+    #2a2a32 240deg 300deg, #15151b 300deg 360deg);}
+.wheel .seg{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none}
+/* размещаем метку на угол --a (по часовой от верха), радиус --r, и делаем текст «лицом» вверх */
+.wheel .seg .lbl{position:absolute;left:0;top:0;width:92px;
+  transform:translate(-50%,-50%) rotate(var(--a)) translateY(calc(-1 * var(--r))) rotate(calc(-1 * var(--a)));
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  font-size:10px;font-weight:600;letter-spacing:.2px;color:var(--c1);text-align:center;line-height:1.12;text-shadow:0 1px 4px rgba(0,0,0,.95)}
+.wheel .seg .lbl .em{font-size:42px;line-height:1;filter:drop-shadow(0 3px 6px rgba(0,0,0,.5))}
+.hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;
+  background:var(--chrome-grad);z-index:4;display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#0a0a0a;font-weight:600;
+  box-shadow:0 4px 14px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.6)}
+.spin-note{text-align:center;font-size:12px;color:var(--ink3);margin-top:10px}
+
+.prize-card{text-align:center;padding:36px 26px;border:1px solid rgba(200,200,200,.16);border-radius:22px;
+  background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5);animation:fadeUp .6s var(--eo) both}
+.prize-em{font-size:60px;animation:pop .5s var(--eo) both}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.prize-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:var(--ink);margin:8px 0 4px}
+.prize-name em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.prize-sub{font-size:14px;color:var(--ink2);margin-top:4px}
+.prize-sub s,.lead s{color:var(--ink3);text-decoration-thickness:1.5px}
+.prize-steps{text-align:left;margin:22px 0 6px;display:flex;flex-direction:column;gap:12px}
+.pstep{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink);line-height:1.5}
+.pstep .n{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid rgba(200,200,200,.3);
+  display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--c2)}
+
+footer{padding:30px 0 40px;text-align:center;font-size:10.5px;color:var(--ink3);line-height:1.8}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:2px}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="progress"><div class="progress-bar" id="pbar"></div></div>
+
+<div class="wrap">
+
+  <section class="step active" data-step="intro">
+    <div class="eyebrow"><span class="dot"></span>AI — Новый Уровень 2026</div>
+    <h1>Квиз с <em>призами</em></h1>
+    <p class="lead">Ответь на 7 вопросов — и я подберу, с чего тебе начать в ИИ. А в конце крутанёшь колесо и заберёшь гарантированный приз 🎁</p>
+    <p class="lead" style="margin-top:10px">Один из призов — личная консультация со мной (ценность <s>15 000 ₽</s>). Погнали?</p>
+    <div style="margin-top:28px"><button class="btn" onclick="next()">Начать 🎯</button></div>
+    <p class="hint">Займёт меньше минуты · всё в один тап</p>
+  </section>
+
+  <section class="step" data-step="q" data-field="seg">
+    <div class="qnum">Вопрос 1 из 7</div>
+    <div class="qtitle">На каком ты этапе с ИИ?</div>
+    <div class="opts">
+      <button class="opt" data-val="Новичок"><span class="oi">🌱</span>Новичок, только присматриваюсь</button>
+      <button class="opt" data-val="Пробовал, забросил"><span class="oi">🔁</span>Что-то пробовал, но забросил</button>
+      <button class="opt" data-val="Делаю без системы"><span class="oi">⚙️</span>Уже делаю, но без системы</button>
+      <button class="opt" data-val="Зарабатываю, хочу больше"><span class="oi">💰</span>Зарабатываю, хочу больше</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="q" data-field="motive">
+    <div class="qnum">Вопрос 2 из 7</div>
+    <div class="qtitle">Что больше всего привлекает в ИИ?</div>
+    <div class="opts">
+      <button class="opt" data-val="Заработок"><span class="oi">💵</span>Возможность зарабатывать</button>
+      <button class="opt" data-val="Творчество"><span class="oi">🎬</span>Крутой контент и творчество</button>
+      <button class="opt" data-val="Профессия и свобода"><span class="oi">🚀</span>Своя профессия и свобода</button>
+      <button class="opt" data-val="Всё сразу"><span class="oi">✨</span>Честно — всё сразу</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="q" data-field="pain">
+    <div class="qnum">Вопрос 3 из 7</div>
+    <div class="qtitle">Что мешает тебе прямо сейчас?</div>
+    <div class="opts">
+      <button class="opt" data-val="Не знаю с чего начать"><span class="oi">🤷</span>Не знаю, с чего начать</button>
+      <button class="opt" data-val="Хаос, нет системы"><span class="oi">🌀</span>Всё хаотично, нет системы</button>
+      <button class="opt" data-val="Есть навык, нет клиентов"><span class="oi">🔍</span>Есть навык, но нет клиентов</button>
+      <button class="opt" data-val="Нет времени и поддержки"><span class="oi">⏳</span>Не хватает времени и поддержки</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="q" data-field="future">
+    <div class="qnum">Вопрос 4 из 7</div>
+    <div class="qtitle">Каким ты видишь себя через полгода?</div>
+    <div class="opts">
+      <button class="opt" data-val="Первые заказы"><span class="oi">🎯</span>Освоил ИИ и беру первые заказы</button>
+      <button class="opt" data-val="Стабильный доход"><span class="oi">📈</span>Стабильно зарабатываю на этом</button>
+      <button class="opt" data-val="Основная профессия"><span class="oi">🏆</span>Это моя основная профессия</button>
+      <button class="opt" data-val="Свобода, работа на себя"><span class="oi">🌍</span>Работаю откуда хочу и на себя</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="q" data-field="money">
+    <div class="qnum">Вопрос 5 из 7</div>
+    <div class="qtitle">Сколько хочешь зарабатывать на ИИ?</div>
+    <div class="opts">
+      <button class="opt" data-val="30–50К"><span class="oi">💸</span>30–50К в месяц</button>
+      <button class="opt" data-val="50–100К"><span class="oi">💵</span>50–100К в месяц</button>
+      <button class="opt" data-val="100–200К"><span class="oi">💰</span>100–200К в месяц</button>
+      <button class="opt" data-val="200К+"><span class="oi">🤑</span>200К+ в месяц</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="q" data-field="temp">
+    <div class="qnum">Вопрос 6 из 7</div>
+    <div class="qtitle">Насколько серьёзно ты настроен?</div>
+    <div class="opts">
+      <button class="opt" data-val="Готов сейчас"><span class="oi">🔥</span>Готов начать хоть сейчас</button>
+      <button class="opt" data-val="Хочу, но сомневаюсь"><span class="oi">💭</span>Хочу, но есть сомнения</button>
+      <button class="opt" data-val="Присматриваюсь"><span class="oi">👀</span>Присматриваюсь, изучаю</button>
+      <button class="opt" data-val="Просто интересно"><span class="oi">🙂</span>Пока просто интересно</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="contact">
+    <div class="qnum">Вопрос 7 из 7</div>
+    <div class="qtitle">Куда прислать приз и разбор?</div>
+    <p class="lead" style="margin-top:-14px">Оставь контакт — Александр лично вручит выигрыш и ответит на вопросы.</p>
+    <div style="margin-top:24px">
+      <div class="field">
+        <label class="label" for="q_name">Как тебя зовут?</label>
+        <input class="inp" id="q_name" type="text" placeholder="Имя" autocomplete="name">
+        <div class="err" id="q_name_err">Впиши имя</div>
+      </div>
+      <div class="field">
+        <label class="label" for="q_tg">Ник в Telegram / Instagram</label>
+        <input class="inp" id="q_tg" type="text" placeholder="@username" autocomplete="off">
+        <div class="err" id="q_tg_err">Впиши свой ник для связи</div>
+      </div>
+      <div class="field">
+        <label class="label" for="q_phone">Телефон <span style="color:var(--ink3);font-weight:400">· по желанию</span></label>
+        <input class="inp" id="q_phone" type="tel" placeholder="+7…" autocomplete="tel">
+      </div>
+      <label class="consent" id="consentWrap">
+        <input type="checkbox" id="q_consent">
+        <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <span class="txt">Соглашаюсь на обработку персональных данных и <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+      </label>
+      <button class="btn" id="toWheelBtn" onclick="goWheel()">К колесу фортуны →</button>
+    </div>
+  </section>
+
+  <section class="step" data-step="wheel">
+    <div class="qnum">Твой приз ждёт</div>
+    <div class="qtitle">Крути <em style="font-style:italic">колесо</em></div>
+    <div class="wheel-wrap">
+      <div class="pointer"></div>
+      <div class="wheel" id="wheel"></div>
+      <div class="hub">крути</div>
+    </div>
+    <div style="margin-top:26px"><button class="btn" id="spinBtn" onclick="spin()">Крутить колесо 🎡</button></div>
+    <p class="spin-note">Один спин — один гарантированный приз</p>
+  </section>
+
+  <section class="step" data-step="result">
+    <div class="prize-card">
+      <div class="prize-em" id="rEm">🎉</div>
+      <div class="qnum" style="margin-top:6px">Поздравляем!</div>
+      <div class="prize-name">Ты выиграл: <em id="rName">—</em></div>
+      <div class="prize-sub" id="rSub"></div>
+      <div class="prize-steps">
+        <div class="pstep"><span class="n">1</span><span><b>Александр напишет тебе в Telegram</b> в ближайшее время — проверяй личные сообщения.</span></div>
+        <div class="pstep"><span class="n">2</span><span>Он вручит приз и коротко разберёт твою ситуацию по ответам из квиза.</span></div>
+        <div class="pstep"><span class="n">3</span><span>Никаких обязательств — просто забери своё и задай любые вопросы.</span></div>
+      </div>
+      <p class="hint" style="margin-top:18px">Не пришло сообщение за сутки? Напиши сам: <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--c2)">@newhndrx</a></p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a><br>
+  Розыгрыш носит рекламный характер. Доход не гарантирован.
+</footer>
+
+<script>
+/* ▼▼▼ ВСТАВЬ СЮДА URL НОВОГО Apps Script (отдельная таблица под квиз!) ▼▼▼
+   Это ДРУГАЯ база, не анкетная. Как создать — см. инструкцию (prize-apps-script.js). */
+var QUIZ_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwsEMSlxN1aXL0iqLsGW0_2CivCxBdlALID_yWSqW6FgGin6XFMJK_RsddbD03INYD_/exec';
+
+/* ── ПРИЗЫ (6 сегментов) — все реальные, каждый можно выиграть ── */
+var PRIZES = [
+  { em:'🎁', label:'Консультация',   name:'Личная консультация 1-на-1',    win:true, sub:'Обычно <s>15 000 ₽</s> — для тебя бесплатно' },
+  { em:'💻', label:'Синтакс',        name:'Подписка на Синтакс',           win:true },
+  { em:'🔑', label:'Доступ к базе',  name:'Доступ к базе нейросетей',      win:true },
+  { em:'🔍', label:'Разбор профиля', name:'Разбор твоего профиля / блога', win:true },
+  { em:'🎓', label:'−10% на курс',   name:'Скидка −10% на обучение',       win:true },
+  { em:'✍️', label:'50 промптов',    name:'Подборка из 50 промптов',       win:true }
+];
+var SEG = 360 / PRIZES.length;
+
+var answers = { seg:'', motive:'', pain:'', future:'', money:'', temp:'' };
+var steps = Array.prototype.slice.call(document.querySelectorAll('.step'));
+var idx = 0;
+
+function show(i){
+  steps[idx].classList.remove('active');
+  idx = i;
+  steps[idx].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  var pct = Math.min(100, Math.round(idx / (steps.length-1) * 100));
+  document.getElementById('pbar').style.width = pct + '%';
+  if (steps[idx].getAttribute('data-step') === 'wheel') layoutWheel();
+}
+function next(){ show(idx+1); }
+
+document.querySelectorAll('.step[data-step="q"]').forEach(function(stepEl){
+  var field = stepEl.getAttribute('data-field');
+  stepEl.querySelectorAll('.opt').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      answers[field] = btn.getAttribute('data-val');
+      setTimeout(next, 160);
+    });
+  });
+});
+
+var wheelEl = document.getElementById('wheel');
+(function buildWheel(){
+  PRIZES.forEach(function(p, i){
+    var seg = document.createElement('div');
+    seg.className = 'seg';
+    seg.style.setProperty('--a', (i*SEG + SEG/2) + 'deg');
+    seg.innerHTML = '<div class="lbl"><span class="em">'+p.em+'</span>'+p.label+'</div>';
+    wheelEl.appendChild(seg);
+  });
+})();
+function layoutWheel(){
+  var r = wheelEl.clientWidth * 0.34;               // радиус меток от центра
+  if (!r) return;
+  wheelEl.querySelectorAll('.seg').forEach(function(s){ s.style.setProperty('--r', r + 'px'); });
+}
+window.addEventListener('resize', layoutWheel);
+
+function goWheel(){
+  var name = document.getElementById('q_name').value.trim();
+  var tg   = document.getElementById('q_tg').value.trim();
+  var ok = true;
+  if (!name){ document.getElementById('q_name_err').classList.add('show'); ok=false; } else document.getElementById('q_name_err').classList.remove('show');
+  if (!tg){ document.getElementById('q_tg_err').classList.add('show'); ok=false; } else document.getElementById('q_tg_err').classList.remove('show');
+  var consent = document.getElementById('q_consent').checked;
+  document.getElementById('consentWrap').classList.toggle('err-on', !consent);
+  if (!consent) ok=false;
+  if (!ok) return;
+  next();
+}
+
+var spun = false;
+function spin(){
+  if (spun) return; spun = true;
+  var btn = document.getElementById('spinBtn');
+  btn.disabled = true; btn.textContent = 'Крутится…';
+
+  var winIdx = PRIZES.map(function(p,i){ return p.win ? i : -1; }).filter(function(i){ return i>=0; });
+  var target = winIdx[Math.floor(Math.random()*winIdx.length)];
+
+  var offset = (360 - (target*SEG + SEG/2)) % 360;   // доводка: центр сегмента target под указатель
+  var total  = 360*6 + offset;                       // 6 полных оборотов + доводка
+  wheelEl.style.transform = 'rotate(' + total + 'deg)';
+
+  /* СТРАХОВКА: определяем приз по реальному финальному углу — что встало под указателем, то и пишем */
+  var underPointer = (((360 - (total % 360)) % 360) + 360) % 360;
+  var wIdx = Math.round((underPointer - SEG/2) / SEG);
+  wIdx = ((wIdx % PRIZES.length) + PRIZES.length) % PRIZES.length;
+  var prize = PRIZES[wIdx];
+
+  submitLead(prize.name);                             // сохраняем лид сразу — данные не потеряем
+  setTimeout(function(){ showResult(prize); }, 5600);
+}
+
+function showResult(p){
+  document.getElementById('rEm').textContent = p.em;
+  document.getElementById('rName').textContent = p.name;
+  document.getElementById('rSub').innerHTML = p.sub || '';
+  next();
+}
+
+function submitLead(prizeName){
+  var srcParam = '';
+  try { srcParam = new URLSearchParams(location.search).get('from') || ''; } catch(e){}
+  var source = 'Квиз' + (srcParam ? ' · ' + srcParam : '') + ' · 🎁 Приз: ' + prizeName;
+
+  var payload = {
+    date:     new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
+    source:   source,
+    name:     document.getElementById('q_name').value.trim(),
+    telegram: document.getElementById('q_tg').value.trim(),
+    phone:    document.getElementById('q_phone').value.trim(),
+    segment:  answers.seg,      // В1 этап с ИИ
+    motive:   answers.motive,   // В2 что привлекает
+    pain:     answers.pain,     // В3 что мешает
+    future:   answers.future,   // В4 образ будущего
+    money:    answers.money,    // В5 фин.цель
+    temp:     answers.temp      // В6 температура лида
+  };
+  if (!QUIZ_SCRIPT_URL || QUIZ_SCRIPT_URL.indexOf('http') !== 0) return;  // URL ещё не задан
+  var body = new URLSearchParams();
+  Object.keys(payload).forEach(function(k){ body.append(k, payload[k]); });
+  fetch(QUIZ_SCRIPT_URL, { method:'POST', mode:'no-cors', body:body }).catch(function(){});
+}
+</script>
+</body>
+</html>
