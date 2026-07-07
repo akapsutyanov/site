@@ -284,12 +284,12 @@ var QUIZ_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwsEMSlxN1aXL0iqL
 
 /* ── ПРИЗЫ (6 сегментов) — все реальные, каждый можно выиграть ── */
 var PRIZES = [
-  { em:'🎁', label:'Консультация',   name:'Личная консультация 1-на-1',    win:true, sub:'Обычно <s>15 000 ₽</s> — для тебя бесплатно' },
-  { em:'💻', label:'Синтакс',        name:'Подписка на Синтакс',           win:true },
-  { em:'🔑', label:'Доступ к базе',  name:'Доступ к базе нейросетей',      win:true },
-  { em:'🔍', label:'Разбор профиля', name:'Разбор твоего профиля / блога', win:true },
-  { em:'🎓', label:'−10% на курс',   name:'Скидка −10% на обучение',       win:true },
-  { em:'✍️', label:'50 промптов',    name:'Подборка из 50 промптов',       win:true }
+  { em:'🎁', label:'Консультация',   name:'Личная консультация 1-на-1',    win:true, w:34, sub:'Обычно <s>15 000 ₽</s> — для тебя бесплатно' },
+  { em:'💻', label:'Синтакс',        name:'Подписка на Синтакс',           win:true, w:8  },
+  { em:'🔑', label:'Доступ к базе',  name:'Доступ к базе нейросетей',      win:true, w:8  },
+  { em:'🔍', label:'Разбор профиля', name:'Разбор твоего профиля / блога', win:true, w:8  },
+  { em:'🎓', label:'−10% на курс',   name:'Скидка −10% на обучение',       win:true, w:33 },
+  { em:'✍️', label:'50 промптов',    name:'Подборка из 50 промптов',       win:true, w:9  }
 ];
 var SEG = 360 / PRIZES.length;
 
@@ -354,8 +354,12 @@ function spin(){
   var btn = document.getElementById('spinBtn');
   btn.disabled = true; btn.textContent = 'Крутится…';
 
-  var winIdx = PRIZES.map(function(p,i){ return p.win ? i : -1; }).filter(function(i){ return i>=0; });
-  var target = winIdx[Math.floor(Math.random()*winIdx.length)];
+  /* взвешенный выбор: чаще консультация и −10% (веса в p.w) */
+  var pool = [];
+  PRIZES.forEach(function(p,i){ if (p.win) pool.push({ i:i, w:p.w || 1 }); });
+  var totalW = pool.reduce(function(s,x){ return s + x.w; }, 0);
+  var roll = Math.random() * totalW, acc = 0, target = pool[0].i;
+  for (var k=0; k<pool.length; k++){ acc += pool[k].w; if (roll < acc){ target = pool[k].i; break; } }
 
   var offset = (360 - (target*SEG + SEG/2)) % 360;   // доводка: центр сегмента target под указатель
   var total  = 360*6 + offset;                       // 6 полных оборотов + доводка
