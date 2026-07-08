@@ -1,7 +1,15 @@
 {
- "updated": "2026-07-08T08:15:54Z",
+ "updated": "2026-07-08T08:46:45Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/134482249",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Automation Engineer / AI Operations Manager (vibecoding)\n🏢 Beoma · Москва\n💰 от 145000 до 220000 RUR",
+   "link": "https://hh.ru/vacancy/134482249",
+   "date": "2026-07-08T11:35:57+0300"
+  },
   {
    "id": "hh/134972575",
    "source": "hh",
@@ -25,6 +33,14 @@
    "text": "AI Designer (специалист по внутренним ИИ-проектам)\n🏢 Лаборатория Касперского · Москва",
    "link": "https://hh.ru/vacancy/134971482",
    "date": "2026-07-08T10:49:02+0300"
+  },
+  {
+   "id": "hh/134133314",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-специалист / контент менеджер с навыками ИИ. Работа в офисе Казани.\n🏢 Международная Академия Бизнес-тренеров и Коучей · Казань\n💰 от 60000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/134133314",
+   "date": "2026-07-08T10:37:56+0300"
   },
   {
    "id": "hh/134476299",
@@ -505,22 +521,6 @@
    "text": "Product Manager / Product Owner (AI Products)\n🏢 KEDOO Entertainment · Москва",
    "link": "https://hh.ru/vacancy/132930391",
    "date": "2026-07-07T16:07:22+0300"
-  },
-  {
-   "id": "hh/134381995",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дизайнер / Специалист по нейросетям\n🏢 Текстильно · Пятигорск\n💰 от 65000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/134381995",
-   "date": "2026-07-07T15:54:47+0300"
-  },
-  {
-   "id": "hh/133056277",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Data Scientist ИИ (LLM / Fine‑tuning)\n🏢 СМАРТА · Тверь",
-   "link": "https://hh.ru/vacancy/133056277",
-   "date": "2026-07-07T15:42:21+0300"
   },
   {
    "id": "SearchEditorr/3573",
@@ -1267,38 +1267,6 @@
    "date": "2026-07-01"
   },
   {
-   "id": "tv/ccc06084-754c-11f1-813b-1b63078e4f86",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Волгоградская область\n💰 от 66000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/ccc06084-754c-11f1-813b-1b63078e4f86",
-   "date": "2026-07-01"
-  },
-  {
-   "id": "tv/0af4d0e4-753c-11f1-8339-b9f89d94176d",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Город Санкт-Петербург\n💰 от 66000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0af4d0e4-753c-11f1-8339-b9f89d94176d",
-   "date": "2026-07-01"
-  },
-  {
-   "id": "tv/0aea4994-753c-11f1-813b-1b63078e4f86",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Нижегородская область\n💰 от 66000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0aea4994-753c-11f1-813b-1b63078e4f86",
-   "date": "2026-07-01"
-  },
-  {
-   "id": "tv/0a980ae4-753c-11f1-9538-f7721c1768bb",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Ростовская область\n💰 от 66000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0a980ae4-753c-11f1-9538-f7721c1768bb",
-   "date": "2026-07-01"
-  },
-  {
    "id": "tv/cc524eb8-7547-11f1-ad26-3ba0911813e6",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1521,6 +1489,38 @@
    "text": "Косметолог-эстетист\n🏢 JOBCART.RU · Город Санкт-Петербург\n💰 от 80000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1027700404797/11822834-7060-11f1-9bfc-3337b7650057",
    "date": "2026-06-25"
+  },
+  {
+   "id": "tv/8420c051-6fa2-11f1-ac81-0fee4bebada3",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "графический дизайнер\n🏢 ООО \"АРТПОЛЕ ТЕХНОЛОДЖИ\" · Тверская область\n💰 от 35000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1126914000751/8420c051-6fa2-11f1-ac81-0fee4bebada3",
+   "date": "2026-06-24"
+  },
+  {
+   "id": "tv/69b3c284-6fdd-11f1-af51-ffb78e50ea79",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Графический дизайнер\n🏢 ООО \"Джобкарт\" · Челябинская область\n💰 от 50000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/69b3c284-6fdd-11f1-af51-ffb78e50ea79",
+   "date": "2026-06-24"
+  },
+  {
+   "id": "tv/c64c9e65-6fe5-11f1-9367-b5f0b9bc5ff2",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "CRM-менеджер (удаленно)\n🏢 DAS GROUP PLUS · Город Москва\n💰 от 40000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1027700404797/c64c9e65-6fe5-11f1-9367-b5f0b9bc5ff2",
+   "date": "2026-06-24"
+  },
+  {
+   "id": "tv/43a2bbf4-6fdd-11f1-9bfc-3337b7650057",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Контент-менеджер\n🏢 ФГБОУ ВО Санкт-Петербургский государственный университет · Город Санкт-Петербург\n💰 от 63000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/7226c750-02f1-11eb-8600-bfd13399602c/43a2bbf4-6fdd-11f1-9bfc-3337b7650057",
+   "date": "2026-06-24"
   }
  ]
 }
