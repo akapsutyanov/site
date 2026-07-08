@@ -1,7 +1,39 @@
 {
- "updated": "2026-07-08T11:22:14Z",
+ "updated": "2026-07-08T11:53:20Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/134611141",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-аналитик маркетплейсов\n🏢 Зимина Екатерина Валерьевна · Москва\n💰 от 40000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/134611141",
+   "date": "2026-07-08T14:36:27+0300"
+  },
+  {
+   "id": "hh/134671307",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Вайбкодер / ИИ-разработчик / Специалист по автоматизации с ИИ\n🏢 Митряков Геннадий Геннадьевич · Нижний Новгород\n💰 от 50000 RUR",
+   "link": "https://hh.ru/vacancy/134671307",
+   "date": "2026-07-08T14:35:03+0300"
+  },
+  {
+   "id": "hh/134671037",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Графический дизайнер со знанием ИИ (гибридный график)\n🏢 YourLook · Тверь\n💰 от 80000 до 120000 RUR",
+   "link": "https://hh.ru/vacancy/134671037",
+   "date": "2026-07-08T14:31:01+0300"
+  },
+  {
+   "id": "hh/134667040",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-продюсер\n🏢 Revyline · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/134667040",
+   "date": "2026-07-08T14:03:18+0300"
+  },
   {
    "id": "hh/134981317",
    "source": "hh",
@@ -473,38 +505,6 @@
    "text": "Врач для обучения нейросетей\n🏢 Яндекс Крауд · Челябинск\n💰 до 125000 RUR",
    "link": "https://hh.ru/vacancy/127211316",
    "date": "2026-07-07T17:50:22+0300"
-  },
-  {
-   "id": "hh/134953093",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Creative Developer / Vibe Coder (AI Software)\n🏢 Quadcode · Москва",
-   "link": "https://hh.ru/vacancy/134953093",
-   "date": "2026-07-07T17:38:32+0300"
-  },
-  {
-   "id": "hh/134951972",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-специалист / Технический специалист по внедрению ИИ / AI-интегратор\n🏢 LD LATTE · Москва\n💰 от 100000 до 160000 RUR",
-   "link": "https://hh.ru/vacancy/134951972",
-   "date": "2026-07-07T17:11:08+0300"
-  },
-  {
-   "id": "hh/134951857",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам курсов по дизайну и нейросетям\n🏢 Yudaev.School · Москва\n💰 от 200000 RUR",
-   "link": "https://hh.ru/vacancy/134951857",
-   "date": "2026-07-07T17:10:04+0300"
-  },
-  {
-   "id": "hh/134950960",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ-креатор / AI Video Creator\n🏢 KHARITONOV MEDIA · Чебоксары\n💰 от 30000 RUR",
-   "link": "https://hh.ru/vacancy/134950960",
-   "date": "2026-07-07T17:01:05+0300"
   },
   {
    "id": "work_editor/6309",
