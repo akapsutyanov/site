@@ -1,7 +1,23 @@
 {
- "updated": "2026-07-18T10:31:24Z",
+ "updated": "2026-07-18T11:07:30Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/135332483",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист поддержки пользователей AI-сервиса\n🏢 Shark Ads · Москва\n💰 от 55000 до 70000 RUR",
+   "link": "https://hh.ru/vacancy/135332483",
+   "date": "2026-07-18T13:55:11+0300"
+  },
+  {
+   "id": "hh/134530155",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Product Marketing Lead (PMM) — AI-продукт (B2C)\n🏢 РТ · Москва",
+   "link": "https://hh.ru/vacancy/134530155",
+   "date": "2026-07-18T13:01:43+0300"
+  },
   {
    "id": "hh/133253568",
    "source": "hh",
@@ -507,22 +523,6 @@
    "date": "2026-07-17T13:10:46+0300"
   },
   {
-   "id": "hh/134792863",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ Рилсмейкер / AI Reelsmaker\n🏢 Огурец · Москва",
-   "link": "https://hh.ru/vacancy/134792863",
-   "date": "2026-07-17T13:09:03+0300"
-  },
-  {
-   "id": "hh/134410224",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ML engineer/ Computer Vision and Generative AI\n🏢 Группа компаний «Триумф» · Москва",
-   "link": "https://hh.ru/vacancy/134410224",
-   "date": "2026-07-17T12:56:04+0300"
-  },
-  {
    "id": "comeinlena/6090",
    "source": "telegram",
    "channel": "comeinlena",
@@ -680,6 +680,30 @@
    "channel": "Работа России",
    "text": "Старший контент-менеджер\n🏢 ООО \"ВК \"МАНЖЕРОК\" · Республика Алтай\n💰 от 93000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1200400001251/463edaa8-81a4-11f1-a78d-69d402810640",
+   "date": "2026-07-17"
+  },
+  {
+   "id": "tv/a17b8bd0-81dd-11f1-a65f-59f30d2f7521",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Воспитатель детского сада (яслей-сада)\n🏢 ГБДОУ ДЕТСКИЙ САД № 73 КИРОВСКОГО РАЙОНА САНКТ-ПЕТЕРБУРГА · Город Санкт-Петербург\n💰 от 60000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1027802731527/a17b8bd0-81dd-11f1-a65f-59f30d2f7521",
+   "date": "2026-07-17"
+  },
+  {
+   "id": "tv/8a0bc5c9-81bf-11f1-9bb3-0ddf1d24e504",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Графический дизайнер\n🏢 ООО \"РЕДАКЦИЯ ГАЗЕТЫ \"ВЕСТНИК ПРЕДГОРЬЯ\" · Краснодарский край\n💰 от 29000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1122368000050/8a0bc5c9-81bf-11f1-9bb3-0ddf1d24e504",
+   "date": "2026-07-17"
+  },
+  {
+   "id": "tv/d5815f14-81e7-11f1-8683-77ae2900e43c",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Дизайнер по шторам\n🏢 ИП Алиев Руслан Чингизович · Город Москва\n💰 от 100000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/d5815f14-81e7-11f1-8683-77ae2900e43c",
    "date": "2026-07-17"
   },
   {
@@ -1123,6 +1147,14 @@
    "date": "2026-07-16"
   },
   {
+   "id": "tv/8575de70-8105-11f1-ab90-03d7f3112905",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Волгоградская область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/8575de70-8105-11f1-ab90-03d7f3112905",
+   "date": "2026-07-16"
+  },
+  {
    "id": "comeinreels/1652",
    "source": "telegram",
    "channel": "comeinreels",
@@ -1489,38 +1521,6 @@
    "text": "Контент-менеджер\n🏢 Компания БКС · Город Москва\n💰 от 100000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/7226c750-02f1-11eb-8600-bfd13399602c/6db24e84-76bb-11f1-a393-f9a46ede89d0",
    "date": "2026-07-03"
-  },
-  {
-   "id": "tv/c8c221c8-76b5-11f1-a41f-c3af44321512",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Организатор мероприятий\n🏢 ООО \"КОРПОРАЦИЯ МОНСТРОВ\" · Тюменская область\n💰 от 31157 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1257200013290/c8c221c8-76b5-11f1-a41f-c3af44321512",
-   "date": "2026-07-03"
-  },
-  {
-   "id": "tv/9b71062b-76e5-11f1-a41f-c3af44321512",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "графический дизайнер\n🏢 ФОНД \"В.Н.У.К.\" · Город Москва\n💰 от 39730 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1147799006827/9b71062b-76e5-11f1-a41f-c3af44321512",
-   "date": "2026-07-03"
-  },
-  {
-   "id": "tv/29903738-75df-11f1-aa3e-ab0d9cf47236",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "специалист по видеомонтажу\n🏢 МУК \"АГКЦ\" · Архангельская область\n💰 от 50000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1022900526450/29903738-75df-11f1-aa3e-ab0d9cf47236",
-   "date": "2026-07-02"
-  },
-  {
-   "id": "tv/4b3491a4-75db-11f1-85e8-5b149373c16e",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Косметолог-эстетист\n🏢 ООО \"Джобкарт\" · Город Санкт-Петербург\n💰 от 80000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/4b3491a4-75db-11f1-85e8-5b149373c16e",
-   "date": "2026-07-02"
   }
  ]
 }
