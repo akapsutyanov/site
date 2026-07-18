@@ -1,7 +1,15 @@
 {
- "updated": "2026-07-18T11:38:05Z",
+ "updated": "2026-07-18T12:38:52Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/134895818",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-инфлюенсер\n🏢 Revyline · Москва\n💰 от 40000 RUR",
+   "link": "https://hh.ru/vacancy/134895818",
+   "date": "2026-07-18T14:59:21+0300"
+  },
   {
    "id": "hh/135332483",
    "source": "hh",
@@ -569,14 +577,6 @@
    "text": "Начинающий Python-разработчик / Data Engineer (AI-проекты)\n🏢 Data Light · Санкт-Петербург\n💰 от 64000 до 70000 RUR",
    "link": "https://hh.ru/vacancy/135313753",
    "date": "2026-07-17T13:50:33+0300"
-  },
-  {
-   "id": "hh/135311616",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Junior-разработчик / вайбкодер (AI-assisted) — автоматизация бизнеса\n🏢 Строительная компания Серьезное Дело · Краснодар\n💰 от 50000 до 90000 RUR",
-   "link": "https://hh.ru/vacancy/135311616",
-   "date": "2026-07-17T13:10:46+0300"
   },
   {
    "id": "comeinlena/6090",
