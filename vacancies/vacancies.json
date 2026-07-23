@@ -1,7 +1,31 @@
 {
- "updated": "2026-07-23T10:51:54Z",
+ "updated": "2026-07-23T11:28:28Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/135515745",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Content Manager AI\n🏢 Бойлер лабс · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/135515745",
+   "date": "2026-07-23T13:52:10+0300"
+  },
+  {
+   "id": "hh/135513591",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель клиентских AI-решений в AI Space\n🏢 VK · Москва",
+   "link": "https://hh.ru/vacancy/135513591",
+   "date": "2026-07-23T13:50:51+0300"
+  },
+  {
+   "id": "hh/135515588",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI инженер\n🏢 БОРОДОВОЙ · Москва\n💰 от 200000 RUR",
+   "link": "https://hh.ru/vacancy/135515588",
+   "date": "2026-07-23T13:49:53+0300"
+  },
   {
    "id": "hh/134792863",
    "source": "hh",
@@ -595,22 +619,6 @@
    "date": "2026-07-22T09:02:42+00:00"
   },
   {
-   "id": "hh/134850037",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ-креатор/AI креатор\n🏢 Премиум Кеа Груп · Москва\n💰 от 130000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/134850037",
-   "date": "2026-07-22T08:57:59+0300"
-  },
-  {
-   "id": "hh/134273048",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель IT-проектов в области ИИ\n🏢 ТЭК-Торг · Москва",
-   "link": "https://hh.ru/vacancy/134273048",
-   "date": "2026-07-22T08:43:24+0300"
-  },
-  {
    "id": "dnative_job/11357",
    "source": "telegram",
    "channel": "dnative_job",
@@ -787,12 +795,20 @@
    "date": "2026-07-22"
   },
   {
-   "id": "hh/134548815",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель отдела трафика / Head of Performance Marketing (EdTech, Ai)\n🏢 LENIVIN.AI · Москва\n💰 от 150000 RUR",
-   "link": "https://hh.ru/vacancy/134548815",
-   "date": "2026-07-21T22:21:01+0300"
+   "id": "tv/fe69e1c8-85db-11f1-ae5d-9f41f4fa76e3",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Телеоператор\n🏢 МУ \"МОЛОДЕЖНЫЙ ЦЕНТР\" · Архангельская область\n💰 от 46058 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1022901028050/fe69e1c8-85db-11f1-ae5d-9f41f4fa76e3",
+   "date": "2026-07-22"
+  },
+  {
+   "id": "tv/f8a5380c-85dd-11f1-ae5d-9f41f4fa76e3",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Специалист по контенту\n🏢 ИП КИЗИЛОВ А. В. · Город Москва\n💰 от 60000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/310463229200053/f8a5380c-85dd-11f1-ae5d-9f41f4fa76e3",
+   "date": "2026-07-22"
   },
   {
    "id": "forallmedia/4142",
@@ -1505,22 +1521,6 @@
    "text": "Фототехник (стажировка инвалидов)\n🏢 ТРОО \"ЦЕНТР СОЦИАЛЬНОЙ РЕАБИЛИТАЦИИ ИНВАЛИДОВ \"БЕРЕЗЕНЬ\" · Тульская область\n💰 от 30095 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1027100004810/606a7cb9-7c52-11f1-bfbc-a1d6d860641d",
    "date": "2026-07-10"
-  },
-  {
-   "id": "tv/d75b2714-7b63-11f1-8673-45b033f36c49",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "SMM-специалист / маркетолог\n🏢 ООО \"Джобкарт\" · Город Москва\n💰 от 0 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/d75b2714-7b63-11f1-8673-45b033f36c49",
-   "date": "2026-07-09"
-  },
-  {
-   "id": "tv/9a8e3728-7b8e-11f1-96a1-71ec6ab38b2c",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Графический дизайнер\n🏢 ИП РОМАНОВСКАЯ С. Е. · Город Севастополь\n💰 от 30000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/325920000009154/9a8e3728-7b8e-11f1-96a1-71ec6ab38b2c",
-   "date": "2026-07-09"
   }
  ]
 }
