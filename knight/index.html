@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Рыцарь на горе — гайд по генерации | AI Новый Уровень</title>
+<meta name="description" content="Пошаговый гайд: как сгенерировать кинематографичное видео «Рыцарь на горе» — карта героя, локация и промпт для видео.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Рыцарь на горе · гайд по генерации">
+<meta property="og:description" content="Три шага и три промпта: карта героя, локация, видео. Забирай и повторяй.">
+<meta property="og:url" content="https://neurocreator2.ru/knight/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 20px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,8vw,68px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:600px;margin:22px auto 0;line-height:1.8}
+
+.map{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:38px 0 10px}
+.map .m{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:30px;
+  padding:9px 17px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6)}
+.map .m b{font-family:'Cormorant Garamond',serif;font-size:17px;
+  background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.map .arw{align-self:center;color:var(--ink3);font-size:13px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line)}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--chrome-grad);
+  display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;
+  font-size:26px;font-weight:600;color:#0a0a0a;box-shadow:0 6px 20px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.6)}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,6vw,38px);
+  color:var(--c1);line-height:1.1;margin-top:3px}
+.s-lead{font-size:15px;font-weight:300;color:var(--ink2);margin-top:18px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:16px;font-size:12.5px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:8px 14px}
+
+.prompt{margin-top:20px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.p-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:300px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.cta{margin:64px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.btn:active{transform:scale(.98)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:52px 0 14px}
+  .s-head{gap:14px} .s-num{width:46px;height:46px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Рыцарь <em>на горе</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Кинематографичное видео с собой в главной роли: замок на скале, километровая пропасть, гроза и дракон в долине. Три шага, три промпта — забирай и повторяй.</p>
+    <div class="map">
+      <div class="m"><b>1</b> Карта героя</div><span class="arw">→</span>
+      <div class="m"><b>2</b> Локация</div><span class="arw">→</span>
+      <div class="m"><b>3</b> Видео</div>
+    </div>
+  </header>
+
+  <section class="step">
+    <div class="s-head">
+      <div class="s-num">1</div>
+      <div>
+        <div class="s-kicker">Шаг 1</div>
+        <h2>Карта героя</h2>
+      </div>
+    </div>
+    <p class="s-lead">Загрузи в нейросеть <b>несколько своих селфи</b> — с разных ракурсов, при хорошем свете. Промпт соберёт трёхпанельный референс: фигура спереди, со спины и крупный портрет. Это твой «паспорт персонажа» — он держит лицо и доспех одинаковыми во всех дальнейших генерациях.</p>
+    <div class="s-tag">📎 Прикрепи 3–5 селфи</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="p1">Копировать</button>
+      </div>
+      <pre id="p1">A three-panel character reference sheet composed as one horizontal frame, divided into three equal vertical panels side by side, thin clean separation between panels, the same figure and the same armor rendered identically across all three.
+
+The figure is a lean adult man with fair skin and a warm undertone, fine even pore texture, real peach fuzz along the jawline and hairline, warm subsurface scattering at the ears and nostrils. His hair is loose and curly, medium length, mid-brown with warm auburn and copper highlights, full volume at the crown and temples, rendered strand by strand with natural flyaways and baby hairs at the hairline, matte fine fiber, never glossy. Green-hazel eyes, straight moderate brows, straight narrow nose, full lips. A full but not dense beard covers the jaw and chin — reddish-blond through the mustache and chin, darker brown along the jawline and cheeks, individual hairs readable. A single slender silver drop earring hangs from his left ear. Lean build, slim neck and shoulders, upright natural posture. No helmet.
+
+He wears a complete battle-worn steel plate harness. A one-piece breastplate with a shallow central ridge covers the torso in dull gray-blue tempered steel, matte and unpolished, marked with fine scratches, shallow dents across the chest and lower left side, and warm brown patina pooling in the low areas and around the rivets. A matching backplate closes behind, joined at the sides by thick weathered leather straps and heavy iron buckles. A tall standing collar of dense riveted mail rings the throat, small interlocking rings dark and oily-dull, individually readable. A short mail skirt hangs below the fauld between the tassets. Undyed coarse quilted linen shows at the inner elbows and armpits, grayed and stained with wear. Large overlapping pauldrons cap both shoulders in articulated lames with rolled edges, scuffed to bare bright metal along the high edges. Tubular rerebraces cover the upper arms, fluted fan-shaped couters shield the elbows, vambraces enclose the forearms, all strapped in dark leather with small iron buckles. Articulated steel gauntlets cover both hands with flared cuffs, fingers built from small overlapping lames over dark leather, knuckle plates scratched bright at the ridges. A fauld of horizontal lames wraps the waist below the breastplate with two hanging tassets over the upper thighs, their lower edges nicked and dented, buckled with worn leather straps. Cuisses plate the thighs, rounded poleyns cap both knees with small fan-shaped side wings, greaves enclose the shins in two hinged halves, and articulated sabatons cover the feet in overlapping lames tapering to a blunt elongated toe, the metal dulled and abraded at the toes and ankles. A long heavy wool cloak in deep charcoal falls from the shoulders to the floor behind him, coarse and dense with visible fiber and weight. Every steel surface reads matte, worn, and used — dulled finish, real dents, real scratches, real rust-brown patina in the crevices, leather straps softened and cracked with age — never mirror-polished, never chrome, never ceremonial, never clean.
+
+LEFT PANEL — full body front view, headless. The full figure stands squared to camera from the shoulders down to the sabatons, gauntleted arms relaxed at the sides, hands open and loose, weight even across both feet, the cloak falling behind to the floor. There is no head and no hair — no hair falls across the pauldrons or the mail collar. The mail standing collar rises from the shoulders and terminates as a clean hollow opening, empty and dark inside like a ghost-mannequin display piece, the inner surface of the mail collar visible around a crisp defined edge with nothing above it — no neck, no jaw, no face, no hair. The opening is sharply defined, not blurred, not faded, not dissolving, no wisps, no smoke, no ghosting, no transparency. Above that clean edge there is only empty mid-gray backdrop. The panel keeps full headroom — generous empty space above the pauldrons where the head would be — so the figure sits in the frame at the same scale and position as a normal full-body portrait.
+
+CENTER PANEL — full body rear view, head attached. The same figure photographed from directly behind, standing straight, from the top of the head down to the sabatons. Loose curly mid-brown hair falls naturally at the back of the head, individual curls and flyaways readable against the mail collar. The heavy charcoal wool cloak falls from the shoulders down the full length of the back to the floor in dense coarse folds, partly covering the backplate. Where the plate is visible past the cloak edges, the backplate and its horizontal lames, the crossed leather straps and iron buckles at the sides, the rear of the pauldrons, rerebraces, vambraces and gauntlets, and the rear of the cuisses, poleyns, greaves and sabatons all read clearly. Arms relaxed at the sides, hands loose, weight even across both feet.
+
+RIGHT PANEL — tight chest-up portrait, identity lock. The same figure framed from just above the top of the head down to the mail collar and the very top of the pauldrons only, the face filling most of the panel, a true close-up. Body squared to camera, head level, eyes directly to camera, lips closed and relaxed, neutral controlled expression. Curly mid-brown hair with copper highlights, brows, lashes, the reddish-blond mustache and chin beard against the darker brown jawline, the fine even pore texture and peach fuzz, the silver drop earring at the left ear, and the individual rings of the mail collar all clearly readable at close range.
+
+18% neutral gray seamless studio backdrop applied uniformly across all three panels — one single flat uniform value corner to corner in every panel, no seam line, no gradient, no hotspot, no vignette, no falloff to black or white, and the identical gray value in all three panels. Relight from scratch overriding any reference lighting: completely flat shadowless illumination in every panel — one enormous soft frontal source at camera position with matched equal fill from camera-left, camera-right, above, and below, so both sides of the face and body read at exactly the same brightness. No key-and-fill ratio, no modelling, no shadow side, no nose shadow, no under-chin shadow, no rim light, no hair light, no kicker, no specular hotspot, no specular flare anywhere on the metal. Zero shadow cast onto the background in any panel — the backdrop stays clean flat gray behind and around the figure. No contact shadow, no drop shadow, no ambient occlusion on the floor beneath the sabatons. Extremely low contrast, even, milky, catalogue-flat, identical in every panel. Form is described by armor structure, plate articulation, cloak folds, and bone structure alone, not by light and shadow. Skin, wool, leather, mail, and steel all read matte and velvety, no shine, no gloss, no oily T-zone. Skin renders at its true natural warm tone, identical in value and hue across the face and</pre>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="s-head">
+      <div class="s-num">2</div>
+      <div>
+        <div class="s-kicker">Шаг 2</div>
+        <h2>Локация</h2>
+      </div>
+    </div>
+    <p class="s-lead">Генерируй <b>отдельно, без себя в кадре</b> — только мир: замок на скале, километровая пропасть, гроза и горы. Отдельная локация даёт стабильную географию и свет, которые потом не «поплывут» в видео.</p>
+    <div class="s-tag">📎 Без персонажа — только сцена</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="p2">Копировать</button>
+      </div>
+      <pre id="p2">Grounded naturalistic photoreal cinematic film still, live-action quality, shot on anamorphic 35mm film. Establishing landscape from an extreme high vantage point, no people, no text.
+
+Camera stands on the open stone battlement terrace of a massive medieval castle built on a sheer cliff summit roughly 1000 meters above the valley floor — an extreme, vertigo-inducing elevated viewpoint, like a fortress on an alpine crag. Foreground, sharp and tactile: weathered pale sandstone parapet wall with crenellations running along the frame edge, real stone texture — coarse blocks, worn mortar lines, chipped edges, patches of lichen and moss, dust and rainwater standing dark in the joints, the stone darkened and streaked wet down one face. Part of a tall castle tower with narrow arched windows rises at frame left, its masonry catching the last raking light, the windows behind it black. The flat stone terrace floor is visible at the bottom of frame, worn smooth by centuries, wet in patches and holding thin broken reflections. Just beyond the parapet, the cliff face plunges away — a dizzying vertical drop of bare rock falling toward the valley, torn shreds of mist ripping upward along the rock in the wind.
+
+Far below, seen truly from a kilometer of height: a wide valley under broken storm light — a river coiling through farmland in loops of cold pewter and dull steel, going briefly to hammered gold where a shaft of light finds it, tiny villages scattered along its banks like scale models, most of them sunk in shadow, one small cluster lit brilliantly by a single moving patch of sun. Patches of forest read almost black. The river widens into a bay under a heavy sky, wooden sailing ships reduced to tiny specks with faint white wakes on dark water. On rocky heights in the middle distance — still well below the camera — a fortified medieval town with walls, towers, and spires clings to a ridge, half in shadow, faint points of firelight already burning in its windows; two or three more castles crown lower crags, all seen from above, all in shadow. Dense veils of mist float BELOW the castle, hanging and drifting in the airspace between the terrace and the valley floor, tearing apart in the wind — unmistakable kilometer-high altitude. At the far end of the valley a grey curtain of rain hangs from the cloud base to the ground, dissolving that whole distance into soft nothing.
+
+In the middle distance, well below the camera and well above the valley floor, a single enormous winged reptile banks in a slow wide circle over the farmland — seen from above at a downward angle, small in the frame but unmistakably vast against the ground beneath it, its wingspan wider than the villages it passes over. It emerges through a torn gap in the cloud layer, one wing lifted into the break where a hard shaft of low sun catches it from behind: the stretched membrane goes momentarily translucent and glows warm amber-red, individual wing-finger bones reading as dark ribs through the light, while the body and the far wing stay in deep silhouette against the shadowed valley. Dark slate-grey hide with a leathery matte finish, long neck extended forward, tail streaming behind, the wings held in a shallow tilted glide. Rendered at the scale and softness a camera resolves at that distance — real silhouette, real anatomy, real weight, no fine surface detail, atmospheric haze thinning its contrast. Thin mist trails off its wingtips in the turn. A second, much more distant winged shape is barely readable near the rain curtain, reduced almost entirely to grey.
+
+Dominating the scene: a colossal mountain range rising close beyond the valley — enormous, steep, overwhelming, its massive rock faces and ridgelines standing at eye level with the camera and climbing far higher, snowfields and glaciers on the upper crags catching the last cold light, sheer grey stone walls streaked with couloirs and running dark with meltwater, green forested lower slopes plunging into shadow. The mountains stand near enough that their immense faces press into the composition — the town and lower castles look tiny against them — while their summits are half-swallowed by the storm. True alpine grandeur, believable geology, a real high massif seen from a facing peak.
+
+A heavy storm front stacks over the range and rolls toward the camera: vast dark blue-grey cumulonimbus with churned, roiling undersides and a low ragged cloud base swallowing the highest summits, bruised purple-charcoal in the mass, the anvil tops far above still burning orange where the sun strikes them. The cloud layer is broken open in two or three places, and through those gaps hard god rays fall in visible defined columns of light through the humid air, striking the valley in isolated moving patches — one on the river, one on a far hillside, everything between them dark. Wind is visible everywhere: mist streaming sideways across the cliff face, cloud shredding at the edges of the gaps, rain slanting in the far curtain. Strong aerial perspective: crisp wet stone in the foreground, progressively bluer, greyer and softer layers with every kilometer of distance, layered depth from the parapet down to the valley and up into the storm.
+
+Low late sun breaking through beneath the cloud base from the upper right: hard raking directional light where it lands, modeling the stone texture of the battlements and the great rock faces in sharp relief and going molten-warm on the parapet edge, everything outside the light shafts falling into deep cool blue-grey shadow with detail still held. Natural filmic color grade with strong warm-cool separation: warm amber and molten orange in the light shafts, cliff edge and cloud tops against cold slate blue, pewter and charcoal in the shadowed valley and storm mass, highlights with soft filmic roll-off, blacks lifted and open, never crushed, never oversaturated.
+
+Captured with a wide-latitude cinema look and a vintage 2x anamorphic character at a wide aperture — oval bokeh, gentle horizontal squeeze on out-of-focus highlights, soft frame-edge falloff, mild organic optical imperfection toward the edges, a light diffusion bloom lifting the god rays, the lit river and the sunlit cloud tops into soft halation, color-negative daylight film rendition pushed slightly, with fine theatrical 35mm grain across the entire frame including stone, mist, atmosphere and sky, in an M5 atmospheric register. Deep focus from parapet to summits with heavy natural atmospheric softening by distance. No HDR, no digital sharpness, no CG gloss, no game-engine look, no painting or illustration style, no fantasy oversaturation. No people, no birds, no flags, no props on the terrace, no text, no watermarks. Real photographic frame captured on a real cinema camera — no CGI, no plastic, no AI smoothness.</pre>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="s-head">
+      <div class="s-num">3</div>
+      <div>
+        <div class="s-kicker">Шаг 3</div>
+        <h2>Генерация видео</h2>
+      </div>
+    </div>
+    <p class="s-lead">Собери всё вместе: <b>карта героя + локация + фото твоего питомца</b> (у меня — сиба-ину). Один непрерывный кадр: камера с верхней точки опускается по дуге, рыцарь просыпается от ветра, садится на край, а внизу долину пересекает дракон.</p>
+    <div class="s-tag">📎 Карта героя + локация + питомец</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="p3">Копировать</button>
+      </div>
+      <pre id="p3">SCENE CONTEXT
+
+A knight in battle-worn steel plate armor lies on his back on the very edge of a castle cliff ledge, 1000 meters above a storm-lit valley, an open book resting over his face, hands folded under his head, one knee bent. As the camera descends from a directly overhead top shot to a side eye-level shot, a gust flips a page against his cheek and wakes him; he lifts the book off his face, pushes himself up on one hand with real armored effort, sits on the edge — and behind him, far below, an enormous dragon crosses the valley once — then looks out at the vast landscape and continues reading while the wind pulls at his hair, his cloak, and the pages. A Shiba Inu lies curled beside him.
+
+ACTIVE REFERENCES
+
+@image1: lean adult male knight, calm and at peace, awake and reading by the end of the shot. Full battle-worn steel plate harness, no helmet, mail collar at the throat, heavy charcoal wool cloak from the shoulders. Loose curly mid-brown hair whipped hard by the wind, full reddish-blond and brown beard, silver drop earring in his left ear. Face, hair, beard, earring, armor and cloak 100% match the reference. Do not beautify or modify his face.
+
+@image2: adult Shiba Inu, rust-orange coat with cream-white markings, thick tail curled over the back, small erect ears. Curled asleep at the start, ears twitching mid-shot. 100% matches the reference.
+
+@image3: medieval castle terrace on a sheer cliff summit 1000 meters above the valley — weathered sandstone, vertical rock face plunging below, river coiling through shadowed farmland, fortified town on a lower ridge, colossal alpine mountains beyond the valley, heavy broken storm front with hard god rays, mist drifting below the castle. Use for geography, materials, atmosphere, and scale — not for camera framing.
+
+A book with worn leather covers, no reference.
+
+LOCATION MAP
+
+The stone terrace of @image3 ends at an open ledge with no parapet at this spot; the cliff face drops vertically 1000 meters to the valley floor. @image1 lies on his back along the ledge, parallel to the edge, on the safe flat stone right at the rim: head toward screen-left, gauntleted hands folded under his head, right knee bent upward with the sabaton planted on the stone, left leg extended, the open book resting face-down over his face covering it, its pages pinned by their own weight. His cloak is spread beneath and beside him on the stone, its free edge lifting and dragging in the wind. @image2 lies already curled asleep on the safe stone near his right hip, nose tucked under its tail. The abyss falls away immediately beyond his body line. The valley of @image3 lies far below; the colossal snow-capped mountains rise across it under a stacked storm front. Strong steady wind blows along the cliff from screen-right, with irregular natural gusts.
+
+FIRST FRAME AND SPATIAL BLOCKING
+
+The first visible frame is a directly overhead top shot: @image1 seen from above, lying on his back on the rim of the ledge — the book covering his face, gauntleted arms folded under his head, one knee raised, plate armor catching a low raking edge of light, cloak spread and stirring on the wet stone, @image2 curled asleep beside his hip — and right beside his body line, straight down, the full 1000-meter drop: the cliff face receding below, mist floating beneath, the tiny valley, river loops, and village roofs far at the bottom of frame. The vertigo and depth are readable immediately in frame one. No empty establishing frame. No delayed reveal. The sky is empty in the opening frames — nothing flying.
+
+@image1 and @image2 are the only living subjects on the terrace. No extra people, no second dog, no duplicates.
+
+FORMAT MODE
+
+Single continuous take. Real-time motion. One continuous camera move, no cuts, no montage, no fade, no transition effects.
+
+OPTICS
+
+84° diagonal field of view, classic wide-angle lens character, camera 1.5 to 2.5 meters from subject throughout the move. Strong but natural perspective expansion: his body holds real foreground presence while the environment stays visible to the frame edges — the cliff, the drop, the valley, the storm and the mountains all readable around him, deep edge-to-edge focus, straight architectural lines stay rectilinear, no fisheye curve. The wide lens carries the sense of height and volume. Shot on anamorphic 35mm film: fine organic film grain, slightly soft rendering, gentle halation on the god rays and the lit river. No telephoto compression, no creamy portrait bokeh, no lens change during the move. No HDR, no digital sharpness.
+
+CAMERA
+
+One continuous 90-degree vertical arc, like a crane sweeping on a curved rail centered on @image1:
+
+The camera starts directly above him — top shot, lens pointing straight down at his lying figure, @image2, and the abyss beside them. It then descends smoothly along an arc around his camera-right side, keeping him locked in the center of frame the whole way, gradually tilting from looking straight down to looking horizontally. As the camera descends, the view transforms: the vertical drop and valley floor give way to the cliff edge in profile, then to the horizon — the colossal mountains and the stacked storm front rising into frame behind him. His waking and sitting up are timed with the descent, so the arc and his rise complete together. The move ends at his seated eye level, off his side at a 3/4 side angle, slightly outboard of the cliff edge, so he sits in profile on screen-left with his legs over the drop, @image2 beside him, and the immense valley, river, mountains and storm open across screen-right. The descent is slow, smooth, and constant — one unbroken motion, subtle organic drift like a real stabilized crane, no speed ramps, no pauses, no zoom, no reframing jumps, no cut.
+
+ACTION TIMING
+
+0:00 to 0:03 — Top shot: @image1 lies still, the book over his face rising and falling slightly with his slow breathing, gauntleted hands under his head, one knee bent. The wind whips his hair ends out across the wet stone and drags the heavy cloak edge in slow rolling folds; loose page corners tremble in the gusts. @image2 sleeps curled beside his hip, flank rising and falling, fur parting and ruffling in the wind. Mist drifts below the ledge. Nothing else moves in frame.
+
+0:03 to 0:07 — Mid-arc, the waking is fully natural and unhurried: a strong gust flips a page corner against @image1&#x27;s cheek. He stirs, one gauntleted hand slides out from under his head and lifts the book off his face, the steel fingers closing on the worn leather cover. He blinks awake into the low storm light, brow furrowing once, and exhales. @image2&#x27;s ears twitch at the same gust, head lifting. He plants his right gauntlet flat on the stone beside his hip and pushes himself up on that arm — elbow straightening, pauldron and backplate lames sliding and clinking, torso rising with real armored effort — then swings both legs over the edge one after the other and settles seated on the rim, sabatons hanging above the abyss. As he settles, far below and well behind him, a single enormous winged reptile enters frame from screen-right and crosses the valley in one slow unhurried glide — seen from above at a downward angle, small in frame but unmistakably vast against the farmland beneath it, dark slate-grey leathery hide, long neck extended, tail streaming, wings held in a shallow tilted glide, one wing catching a low shaft of sun from behind so the stretched membrane glows briefly translucent amber with the wing-finger bones reading as dark ribs. He does not look at it. It passes behind him and out of frame screen-left, leaving the sky empty again.
+
+0:07 to 0:12 — The camera settles at his eye level in the final 3/4 side framing: @image1 seated on the edge in profile, small against the colossal mountains and the storm, looking out at the vast landscape — a faint content breath, the beard catching the low warm light along his jaw — while the wind streams his hair back and drags the heavy cloak in slow surging folds off the drop. The sky behind him is empty. He rolls his shoulders once, lowers his eyes, opens the book on his raised knee, and reads: his gauntleted thumb visibly presses the pages flat against the gusts, the paper bowing and fluttering under the steel; he turns one page, and the wind snaps it over faster than intended — he flattens it with his palm and keeps reading. @image2 settles back down against his hip, chin on paws. The camera holds this final frame with a barely perceptible drift.
+
+PHYSICS
+
+Every motion carries real weight and cause. The sit-up is a true armored push: gauntlet pressure on the wet stone, straightening elbow, plates sliding and softly clinking against each other, hips pivoting, weight transferring from back to seat, one small settling shift at the end — no smooth animation glide. The book behaves like a real object: it has weight lifting off his face; its cover resists the wind but the pages do not — open pages flutter, bow, and snap in the gusts, and stay flat only where his thumb and palm physically pin them; when unpinned for a turn, the wind takes the page. Steel fingers grip the cover with the slight clumsiness of articulated plate, never like a bare hand. His hair reacts strongly and continuously to the wind: streaming, whipping, curls crossing his face and being pushed away, never static, with natural inertia on every gust. The heavy charcoal wool cloak has real mass — it does not crack or snap like silk; it surges, rolls, and drags in slow heavy folds, the free edge over the drop lifting and falling with visible delay, the fabric holding its weight against the gale. @image2 is a compact muscular mass: slow breathing flank while asleep, ears twitching independently at gusts, then a soft resettling with real weight — no rubbery motion. Wind gusts are irregular and natural, affecting hair, cloak, pages, and fur in the same direction at the same moments. The dragon crosses with real mass and a slow wingbeat frequency appropriate to its size, gliding more than flapping, holding a steady line with visible momentum; it appears once, crosses once, and exits — it never circles back, never approaches the terrace, never lands. Mist below drifts slowly with believable scale; cloud shadows crawl across the valley. Parallax during the camera arc is geometrically correct: near stone fast, valley slow, mountains nearly still — true 1000-meter depth. No floating motion, no rubbery movement, no scale drift, no teleporting.
+
+LIGHTING
+
+Low late storm-broken sunlight from screen-right, matching @image3: hard raking directional light where it lands, modeling the plate armor with sliding specular glints and gentle halation along the pauldron rims and breastplate ridge, catching the outline of @image2&#x27;s ruff in a thin warm edge, going molten-warm on the wet sandstone ledge, everything outside the light shafts falling into deep cool blue-grey shadow with detail still held — dimensional, never flat. Hard god rays fall through breaks in the cloud in visible columns, striking the valley in isolated moving patches. The stone shows raking texture and broken wet reflections; snowfields and anvil cloud tops burn orange against bruised purple-charcoal storm mass; the river throws bright glints far below; strong aerial perspective with progressively bluer haze into the distance; a grey rain curtain hangs at the far end of the valley. Natural filmic color grade with strong warm-cool separation: warm amber and molten orange in the light shafts, rust-orange fur, dulled steel and dark wool against cold slate blue, pewter and charcoal in the shadowed valley, highlights with soft filmic roll-off, blacks lifted and open, no crushed blacks, no beauty fill, no HDR.
+
+AUDIO
+
+Natural diegetic sound only: strong steady high-altitude wind with gusts, the heavy wool cloak surging and thumping softly, paper pages rustling and snapping in the wind, the metallic shift and clink of armor plates as he pushes himself up, a soft waking breath and one short exhale, @image2&#x27;s faint slow sleeping breath close by, distant thin valley ambience far below, one deep distant call carried up on the wind as the dragon crosses. No music, no narration, no dialogue, no subtitles, no captions, no text.
+
+POSITIVE LOCKS
+
+@image1 and @image2 remain the only characters on the terrace throughout. His face, hair, beard, earring, armor and cloak match @image1 in every frame. The camera performs exactly one continuous 90-degree overhead-to-eye-level arc with no cuts. He begins lying with the book over his face and finishes seated on the edge reading; the push-up on his gauntlet, the waking, and the settling happen once, during the mid-arc. He wakes from the wind, not from the dragon. The dragon appears exactly once, during the sit-up, far below and behind him, crossing the valley in a single pass from screen-right to screen-left, and is absent from the frame before and after. It never approaches the terrace and he never reacts to it. The wind visibly affects hair, cloak, pages, and fur together in every frame. The 1000-meter depth stays readable in the top shot, and the mountains and storm dominate the final frame.</pre>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь так же — но <em>с нуля и до клиентов</em>?</h3>
+    <p>Этот ролик — один приём из десятков. На экскурсии покажу платформу и обучение изнутри, работы учеников и разберу лично твою ситуацию. Ничего продавать не буду — даже если не пойдёшь учиться, уйдёшь с планом.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.id);
+    var txt = el.innerText;
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = 'Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done).catch(function(){ fallback(txt, done); });
+    } else { fallback(txt, done); }
+  });
+});
+function fallback(txt, cb){
+  var ta = document.createElement('textarea');
+  ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
