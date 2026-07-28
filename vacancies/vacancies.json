@@ -1,7 +1,15 @@
 {
- "updated": "2026-07-28T07:49:51Z",
+ "updated": "2026-07-28T08:20:44Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/135642072",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI инженер\n🏢 СБЕР · Москва",
+   "link": "https://hh.ru/vacancy/135642072",
+   "date": "2026-07-28T11:03:20+0300"
+  },
   {
    "id": "hh/135640090",
    "source": "hh",
@@ -521,14 +529,6 @@
    "text": "Senior AI Engineer (Agentic AI / RnD)\n🏢 Ингосстрах · Москва",
    "link": "https://hh.ru/vacancy/134839223",
    "date": "2026-07-27T15:40:53+0300"
-  },
-  {
-   "id": "hh/135613139",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Нижний Новгород",
-   "link": "https://hh.ru/vacancy/135613139",
-   "date": "2026-07-27T15:31:41+0300"
   },
   {
    "id": "digital_jobster/6111",
