@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Превращение в героя — промпты стилизации | AI Новый Уровень</title>
+<meta name="description" content="4 промпта: преврати себя в LEGO, low-poly, Minecraft или Pixar-персонажа. Мир остаётся настоящим — меняешься только ты.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Превращение в героя · промпты стилизации">
+<meta property="og:description" content="LEGO, low-poly, Minecraft, Pixar — 4 промпта. Забирай и повторяй.">
+<meta property="og:url" content="https://neurocreator2.ru/hero/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,64px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px 24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.6;border-top:1px solid var(--line);padding-top:14px}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:27px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.p-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:290px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.cta{margin:64px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.btn:active{transform:scale(.98)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:23px}
+  pre{font-size:11.5px;max-height:250px;padding:14px}
+  .cta{padding:34px 20px}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Превращение<br>в <em>героя</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Четыре промпта, которые превращают тебя в персонажа: LEGO, low-poly, Minecraft и Pixar. Главный принцип — <b>мир остаётся настоящим, меняешься только ты</b>. Лес, свет, боке и глубина кадра сохраняются как на съёмке, поэтому персонаж выглядит вживлённым в реальность, а не наклеенным.</p>
+
+    <div class="howto">
+      <div class="ht">Как пользоваться</div>
+      <ol>
+        <li>Сними или возьми <b>обычное фото/кадр с собой</b> — лучше в полный рост, на природе или улице.</li>
+        <li>Прикрепи его в <b>Nano Banana / Banana Pro</b> и вставь промпт нужного стиля.</li>
+        <li>Получаешь стилизованный кадр, где ты — персонаж, а фон остался настоящим.</li>
+      </ol>
+      <div class="note">💡 Хочешь видео — этот кадр можно оживить в Seedance: прикрепи его как стартовый кадр, а исходное видео как референс движения. Ключевая фраза против «расстилизации»: <b>never drift back toward real human</b>.</div>
+    </div>
+
+    <div class="map">
+<a class="m" href="#s1"><b>🧱</b> LEGO-минифигура</a>
+<a class="m" href="#s2"><b>🔻</b> Low-poly</a>
+<a class="m" href="#s3"><b>⬛</b> Minecraft</a>
+<a class="m" href="#s4"><b>✨</b> Pixar</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🧱</div>
+      <div>
+        <div class="s-kicker">Стиль 1</div>
+        <h2>LEGO-минифигура</h2>
+      </div>
+    </div>
+    <p class="s-lead">Ты становишься глянцевой пластиковой минифигуркой: цилиндрическая голова, клешни-руки, блочный корпус. Лес и свет остаются настоящими — меняешься только ты.</p>
+    <div class="s-tag">📎 Блокбастер-эффект, заходит лучше всего</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="c1">Копировать</button>
+      </div>
+      <pre id="c1">Take the source photo and transform ONLY the man into a LEGO minifigure version of himself. Keep the entire real forest environment completely unchanged — the birch trees, green grass, dirt path, overcast daylight, background bokeh and depth all stay exactly as photographed, real and untouched. Do not stylize the world, only the person.
+
+The man becomes a photoreal LEGO minifigure: glossy injection-molded ABS plastic body, cylindrical head with a printed face, the classic C-shaped claw hands, blocky torso and articulated shoulders and hips. Preserve his identity in minifig form — a molded shoulder-length curly brown hair piece, a printed beard and warm friendly expression, no glasses, wearing a printed grey graphic tee under a dark plaid minifig overcoat. He holds the camera at arm&#x27;s length with one claw hand at frame-left, keeping the exact same arm&#x27;s-length selfie composition and pose as the source.
+
+Real plastic material response: subtle specular highlights sliding across the glossy ABS, fine seam lines and stud logic on the parts, a soft-edged contact shadow where the figure sits in the scene, and the forest&#x27;s green ambient light bouncing naturally onto the plastic so the minifigure sits believably in the real environment — matched daylight direction, matched softness, matched depth of field and haze, no cut-out edges or halos. Photoreal LEGO minifigure composited into a real, unaltered forest photograph. Only the man is LEGO; everything else is real.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">🔻</div>
+      <div>
+        <div class="s-kicker">Стиль 2</div>
+        <h2>Low-poly</h2>
+      </div>
+    </div>
+    <p class="s-lead">Тело собрано из крупных плоских треугольных граней с острыми рёбрами. Геометрия вместо гладких форм — стильно и узнаваемо.</p>
+    <div class="s-tag">📎 Гранёный 3D · чёткий силуэт</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="c2">Копировать</button>
+      </div>
+      <pre id="c2">Take the source photo and transform ONLY the man into a low-poly 3D character version of himself. Keep the entire real forest environment completely unchanged — the birch trees, green grass, dirt path, overcast daylight, background bokeh and depth all stay exactly as photographed, real and untouched. Do not stylize the world, only the person.
+
+The man becomes a stylized low-poly 3D character: his whole body built from a small number of large flat triangular facets with sharp visible edges and hard corners, faceted geometric planes instead of smooth curves, simplified angular forms for the head, torso, arms and hands. Flat-shaded polygons with clear boundaries between facets, minimal texture, clean geometric color blocks. Preserve his identity in faceted form — shoulder-length curly brown hair simplified into angular low-poly clumps, a geometric faceted beard, no glasses, wearing a grey graphic tee and a dark plaid overcoat modeled as flat angular polygon planes with simple crease facets. He holds the camera at arm&#x27;s length with one hand at frame-left, keeping the exact same selfie composition and pose as the source.
+
+Render the low-poly character as a real 3D object sitting in the real scene: flat per-facet shading with crisp edge highlights, a soft-edged contact shadow grounding him on the path, and the forest&#x27;s green ambient daylight falling across the polygon faces from the matched direction and softness. Match the plate&#x27;s depth of field, haze and grain so he sits believably in the world — no cut-out edges or halos. A faceted low-poly 3D character composited into a real, unaltered forest photograph. Only the man is low-poly; everything else is real.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">⬛</div>
+      <div>
+        <div class="s-kicker">Стиль 3</div>
+        <h2>Minecraft (воксель)</h2>
+      </div>
+    </div>
+    <p class="s-lead">Кубическая версия тебя: квадратная голова, прямоугольные руки-ноги, пиксельные текстуры на гранях. Никаких округлостей.</p>
+    <div class="s-tag">📎 Кубический стиль · пиксель-текстуры</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="c3">Копировать</button>
+      </div>
+      <pre id="c3">Take the source photo and transform ONLY the man into a Minecraft-style voxel character version of himself. Keep the entire real forest environment completely unchanged — the birch trees, green grass, dirt path, overcast daylight, background bokeh and depth all stay exactly as photographed, real and untouched. Do not blockify or stylize the world, only the person.
+
+The man becomes a blocky Minecraft-style voxel character: a body built entirely from large cubic blocks — a boxy square head, rectangular torso, cuboid arms and legs, flat blocky hands, no curves anywhere. His face and clothing are rendered as low-resolution pixel textures mapped onto the cube faces, in the classic 8-bit-per-face Minecraft look. Preserve his identity in voxel form — brown pixel-texture hair blocked around the square head, a simple pixel-texture beard on the face, a friendly pixel expression, no glasses, wearing a grey pixel-texture graphic tee under a dark plaid pixel-texture overcoat. One cuboid arm is raised holding the camera at arm&#x27;s length at frame-left, keeping the exact same selfie composition and pose as the source.
+
+Render the voxel character as a real 3D object sitting in the real scene: matte pixel-texture surfaces with slight sheen, hard blocky edges, a soft-edged contact shadow grounding him on the path, and the forest&#x27;s green ambient daylight falling on the cube faces from the matched direction and softness. Match the plate&#x27;s depth of field, haze and grain so he sits believably in the world — no cut-out edges or halos. A blocky 3D voxel Minecraft-style character composited into a real, unaltered forest photograph. Only the man is voxel; everything else is real.</pre>
+    </div>
+  </section>
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">✨</div>
+      <div>
+        <div class="s-kicker">Стиль 4</div>
+        <h2>Pixar / Disney 3D</h2>
+      </div>
+    </div>
+    <p class="s-lead">Полированный анимационный персонаж: мягкая кожа с подповерхностным свечением, большие выразительные глаза, скульптурные локоны.</p>
+    <div class="s-tag">📎 Дорогая мультипликация</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="c4">Копировать</button>
+      </div>
+      <pre id="c4">Take the source photo and transform ONLY the man into a modern Pixar/Disney-style 3D animated character version of himself. Keep the entire real forest environment completely unchanged — the birch trees, green grass, dirt path, overcast daylight, background bokeh and depth all stay exactly as photographed, real and untouched. Do not stylize the world, only the person.
+
+The man becomes a polished Pixar/Disney feature-animation 3D character: smooth stylized skin with soft subsurface glow, large expressive warm eyes with detailed irises and catchlights, softened rounded facial features with gently exaggerated but appealing proportions, and the clean high-end look of modern 3D animation. Preserve his identity in that style — shoulder-length curly brown hair rendered as soft sculpted animated clumps with subtle strand detail, a neatly stylized soft beard, a warm friendly closed-lip smile, no glasses, wearing a grey graphic tee under a dark plaid overcoat with soft simplified cloth folds. He holds the camera at arm&#x27;s length with one hand at frame-left, keeping the exact same arm&#x27;s-length selfie composition and pose as the source.
+
+Render the character with the soft cinematic lighting and gentle rim light of a Pixar frame, while integrating him into the real plate: matched overcast daylight direction and softness, matched depth of field and haze, a soft-edged contact shadow grounding him on the path, no cut-out edges or halos. A polished Pixar-style 3D animated character composited into a real, unaltered forest photograph. Only the man is stylized; everything else is real.</pre>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь делать такое <em>для клиентов</em>?</h3>
+    <p>Промпты — это один инструмент. На обучении даю систему: от первой генерации до портфолио, упаковки и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=hero">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.id);
+    var txt = el.innerText;
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = 'Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done).catch(function(){ fallback(txt, done); });
+    } else { fallback(txt, done); }
+  });
+});
+function fallback(txt, cb){
+  var ta = document.createElement('textarea');
+  ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
