@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ты — супергерой: 7 кинокадров | AI Новый Уровень</title>
+<meta name="description" content="7 готовых промптов: сними себя в костюме супергероя — от полёта над Манхэттеном до портрета после боя. Забирай и повторяй.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ты — супергерой · 7 кинокадров">
+<meta property="og:description" content="7 промптов уровня блокбастера: полёт над городом, портрет после боя, перевёрнутый город.">
+<meta property="og:url" content="https://neurocreator2.ru/spider/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,64px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px 24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.6;border-top:1px solid var(--line);padding-top:14px}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 15px;font-size:12px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:14px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+.prompt{margin-top:16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.neg{border-color:rgba(255,120,120,.16)}
+.prompt.neg .p-label{color:#b98686}
+.p-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:290px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+.prompt.neg pre{max-height:150px}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.cta{margin:64px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.btn:active{transform:scale(.98)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:250px;padding:14px}
+  .cta{padding:34px 20px}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Ты — <em>супергерой</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Семь кинокадров уровня блокбастера, где главный герой — <b>ты сам, без маски</b>: полёт над Манхэттеном, тихий момент между миссиями, портрет после боя, перевёрнутый город. Промпты держат твоё реальное лицо и не превращают его в «лицо актёра».</p>
+
+    <div class="howto">
+      <div class="ht">Как пользоваться</div>
+      <ol>
+        <li>Подготовь <b>2 портретных фото</b> себя — фронтально, при хорошем свете, лицо чётко видно.</li>
+        <li>Прикрепи их как <b>identity reference</b> и вставь основной промпт.</li>
+        <li><b>Negative prompt</b> вставляй в отдельное поле — он убирает лишние руки, маски, надписи и «лицо актёра».</li>
+      </ol>
+      <div class="note">💡 Все кадры вертикальные 4:5 — идеально под пост и сторис. Если лицо «уплывает» в чужое — усиль формулировку <b>must be unmistakably the subject</b> и добавь третье фото.</div>
+    </div>
+
+    <div class="map">
+<a class="m" href="#s1"><b>🕸</b> Полёт над Манхэттеном</a>
+<a class="m" href="#s2"><b>🎒</b> Между миссиями</a>
+<a class="m" href="#s3"><b>🤸</b> Разминка перед боем</a>
+<a class="m" href="#s4"><b>💥</b> После боя — портрет</a>
+<a class="m" href="#s5"><b>🕷</b> Двойной выстрел паутиной</a>
+<a class="m" href="#s6"><b>🌀</b> Перевёрнутый город</a>
+<a class="m" href="#s7"><b>⚡</b> Готов к прыжку</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🕸</div>
+      <div>
+        <div class="s-kicker">Кадр 1</div>
+        <h2>Полёт над Манхэттеном</h2>
+      </div>
+    </div>
+    <p class="s-lead">Воздушная схватка в сотнях метров над авеню: ты в кадре без маски, второй паук и противник — в масках по углам. Небоскрёбы уходят вертикально вниз, золотое солнце пробивается между домами.</p>
+    <div class="s-tag">📎 4:5 · широкий угол 20–24 мм · 3 персонажа</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m1">Копировать</button>
+      </div>
+      <pre id="m1">Create a premium photorealistic superhero-film action still in vertical 4:5 at 2K resolution.
+
+IDENTITY REFERENCE: Use both attached portrait photographs only to reproduce the subject&#x27;s real identity — skin tone, authentic facial proportions, eyes, eyebrows, nose, lips, jawline, and hair from the reference portraits. The character must be unmistakably the subject and must not resemble an actor. Do not copy the portraits&#x27; clothing, background, pose, or lighting.
+
+MAIN SUBJECT: The subject is Spider-Man in a classic red-and-deep-blue textured suit, completely unmasked, caught mid-swing high above the city — one leg bent up toward the chest, the other extended, one arm reaching forward toward the camera while a web line pulls taut from the gloved hand. The recognizable face is turned toward the lens with focused determination, hair swept by the wind.
+
+SECONDARY CHARACTERS: A second, fully masked Spider-Man swings in the lower-left corner; a fully masked black-and-white opponent anchors the lower-right corner. Both remain masked and clearly secondary.
+
+ENVIRONMENT: Camera is hundreds of meters above a dense Manhattan avenue. Tall skyscrapers drop vertically beneath the characters, windows and rooftops shrinking toward traffic far below. Warm sunlight bursts from the left edge between buildings, creating golden haze and long rays. Several thin web lines stretch diagonally through the scene. Architecture must remain realistic, straight, and detailed despite the extreme perspective.
+
+COMPOSITION AND CAMERA: Vertical 4:5, extreme high-altitude action shot using a 20–24 mm wide-angle lens mounted very close to the subject. Strong foregrounding makes the bent leg and reaching arm feel close without distorting the face. The subject fills roughly the upper two-thirds. Secondary Spider-Man anchors the lower-left corner; black-and-white opponent anchors the lower-right. The avenue and building canyon pull the eye downward through the center. Keep all three characters readable and prevent overlap of faces, limbs, and web lines.
+
+LIGHTING AND DETAIL: Strong golden rim light from the left, cool blue-gray shadows on buildings, realistic bounce light on the face, sharp suit weave and webbing, natural skin texture, wind-swept hair, subtle motion blur in the distant city but crisp hero anatomy. Premium blockbuster realism with enormous scale and restrained cinematic grain.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n1">Копировать</button>
+      </div>
+      <pre id="n1">only the main subject is unmasked; secondary Spider-Man and opponent remain fully masked; no duplicate faces; no extra heroes; no distorted legs, hands, soles, or buildings; no broken web lines; no floating disconnected limbs. Raw image only. Absolutely no title, logo, caption, credits, letters, numbers, watermark, border, poster design, or UI.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">🎒</div>
+      <div>
+        <div class="s-kicker">Кадр 2</div>
+        <h2>Между миссиями</h2>
+      </div>
+    </div>
+    <p class="s-lead">Тихий момент: стоишь один в коридоре, маска снята и висит в руке, рюкзак на плечах, спортивки поверх костюма. Камера сверху, лицо поднято в кадр.</p>
+    <div class="s-tag">📎 4:5 · вид сверху 28–35 мм · лайфстайл</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m2">Копировать</button>
+      </div>
+      <pre id="m2">Create a clean photorealistic superhero lifestyle still in vertical 4:5 at 2K resolution.
+
+IDENTITY REFERENCE: Use the two attached portrait photographs only as identity references. Reproduce the subject&#x27;s real face accurately: skin tone, eyes, eyebrows, nose, lips, jawline, and hair from the reference portraits. The character must be unmistakably the subject. Do not copy either portrait&#x27;s clothing, background, snow, office setting, camera angle, or lighting.
+
+SUBJECT AND WARDROBE: The subject stands alone inside a quiet modern institutional hallway and looks directly upward into a camera positioned high above. The subject is completely unmasked. The subject wears a fitted classic red-and-blue Spider-Man bodysuit on the torso and arms, gray loose sweatpants pulled over the lower half of the suit, clean white high-top canvas sneakers, and a simple black backpack with both shoulder straps on. In the right hand at thigh level, the subject loosely carries the removed red Spider-Man mask by its fabric edge; the white eye lens on the mask is visible. The left arm hangs naturally at the side. The feet are shoulder-width apart. The posture is calm and slightly vulnerable, expression neutral and attentive.
+
+FACE AND HAIR: The subject&#x27;s recognizable face is fully visible from the high angle, with natural hair softly parted and slightly tousled. No injuries, no heavy makeup, no actor likeness.
+
+ENVIRONMENT: Polished gray marble floor with subtle white veining, beige plaster walls, a dark wooden door frame along one side, gray stone baseboards, soft reflections on the floor, minimal modern architecture. No signs, labels, or decorative text.
+
+CAMERA AND COMPOSITION: Strong bird&#x27;s-eye high-angle shot from roughly three meters above, using a 28–35 mm lens. The entire body from head to shoes fits inside the vertical 4:5 frame. The face points upward and remains readable rather than overly foreshortened. Place the subject slightly below center with generous marble floor visible around. Geometric floor lines lead toward the body.
+
+LIGHTING AND STYLE: Soft natural indoor daylight from above and one side, neutral realistic color, gentle shadow beneath the shoes, subtle skin and hair detail, crisp suit fabric, realistic backpack straps, cotton sweatpants, clean rubber sneakers, restrained depth of field. Candid grounded superhero realism, like a private moment between missions.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n2">Копировать</button>
+      </div>
+      <pre id="n2">one subject only; face fully unmasked; mask only in the hand; no duplicate mask, no mask on head, no warped overhead anatomy, no extra fingers, no missing feet, text, logo, title, credits, watermark, border, UI, or poster styling.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🤸</div>
+      <div>
+        <div class="s-kicker">Кадр 3</div>
+        <h2>Разминка перед боем</h2>
+      </div>
+    </div>
+    <p class="s-lead">Юмор внутри серьёзного экшена: вместо атаки — демонстративная растяжка на одном колене, рука дугой над головой. Противник размыт на переднем плане спиной к камере.</p>
+    <div class="s-tag">📎 4:5 · 50 мм · комедийный бит</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m3">Копировать</button>
+      </div>
+      <pre id="m3">Create a grounded photorealistic superhero-film action still in vertical 4:5 at 2K resolution with a subtle humorous tone.
+
+IDENTITY REFERENCE: Use both attached portrait photographs only to reproduce the subject&#x27;s exact real identity. Preserve the facial features, skin tone, eyes, brows, nose, lips, jawline, and hair from the reference portraits. The character must be recognizable as the subject and not resemble an actor. Do not copy the portrait clothes, locations, pose, framing, or lighting.
+
+MAIN SUBJECT: The subject wears a classic red-and-deep-blue Spider-Man bodysuit and is completely unmasked. The subject is in the middle distance, centered slightly left, kneeling on the right knee on rough asphalt while the left foot is planted forward. Instead of attacking, the subject performs an exaggerated side stretch: the left arm curves high over the head toward the right side, the red-gloved hand extended; the right forearm rests near the raised left thigh. The torso bends sideways, creating a playful crescent silhouette. The subject&#x27;s face turns toward the opponent with a focused but slightly deadpan expression. The hair is natural and clearly visible.
+
+FOREGROUND OPPONENT: A large anonymous opponent in a dark navy or black tactical jacket occupies the right foreground with back turned toward the camera. Only the blurred back, shoulder, and part of one arm are visible. The opponent must remain heavily out of focus and must not block the face or pose. Do not give this opponent the subject&#x27;s identity.
+
+ENVIRONMENT: Exterior industrial service yard during overcast daylight. Tall wall of weathered metal ventilation grilles fills the background, with bolts, vertical seams, moss along the concrete base, patched asphalt, rectangular black rubber mats, and a small metal drain cover near the foot. No signs or labels.
+
+CAMERA AND COMPOSITION: Vertical 4:5 frame, eye-level camera behind the opponent, 50 mm lens. The subject&#x27;s entire kneeling stretch pose fits from raised hand to planted boot. The blurred opponent creates depth on the right edge. Keep ample industrial wall visible behind the subject. Natural perspective, believable scale, moderate depth of field with the subject sharp and opponent blurred.
+
+LIGHTING AND STYLE: Flat cool overcast sky, soft shadows, muted gray-green environment, saturated but weathered red-and-blue suit, realistic skin and fabric detail, subtle cinematic contrast. The result should feel like a strange candid beat inside a serious action film.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n3">Копировать</button>
+      </div>
+      <pre id="n3">subject unmasked; opponent remains anonymous and blurred; no mask on the subject, no duplicate hero, no extra limbs, no broken stretching anatomy, no distorted hands, text, logos, signs, captions, credits, watermark, border, poster graphics, or UI.</pre>
+    </div>
+  </section>
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">💥</div>
+      <div>
+        <div class="s-kicker">Кадр 4</div>
+        <h2>После боя — портрет</h2>
+      </div>
+    </div>
+    <p class="s-lead">Крупный симметричный портрет: измотанный, но упрямый взгляд в объектив, боевые повреждения, порванный костюм переходит в тёмные нити нанотеха на шее.</p>
+    <div class="s-tag">📎 4:5 · 85 мм · close-up</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m4">Копировать</button>
+      </div>
+      <pre id="m4">Create an intense premium superhero-film portrait in vertical 4:5 at 2K resolution, fully photorealistic.
+
+IDENTITY REFERENCE: Use both attached portrait photographs solely to reproduce the subject&#x27;s exact real identity. Preserve the subject&#x27;s authentic facial proportions, skin tone, eyes, eyebrows, nose, lips, jawline, and hair from the reference portraits. The character must remain clearly recognizable beneath makeup, dirt, and injuries. Do not blend with any celebrity or actor. Do not copy the portraits&#x27; clothing, backgrounds, pose, or light.
+
+PORTRAIT: The subject faces the camera directly in a perfectly centered head-and-shoulders composition. The subject wears a battle-damaged red-and-deep-blue Spider-Man suit with the collar open around the neck. The subject is completely unmasked. The wet hair is disheveled, with several strands falling diagonally across the forehead. The expression is exhausted but defiant: relaxed closed mouth, tense jaw, slightly narrowed eyes looking straight into the lens.
+
+INJURY DETAIL: Add cinematic but believable battle damage without changing the subject&#x27;s underlying face: faint bruises beneath the eyes, grime in skin texture, a thin fresh blood trail beneath one nostril, a small split on the lower lip, light scratches on the temple, and damp sweat. Along one lower cheek and side of the neck, the torn red suit material appears to merge or peel into dark cracked filaments, as if damaged nanotech is retracting from the skin. Keep this effect localized and subtle; do not turn the face into a monster and do not obscure the eyes, nose, mouth, or jawline.
+
+COMPOSITION AND CAMERA: Tight symmetrical close-up, 85 mm portrait lens, camera exactly at eye level. Top of hair fully inside frame. Shoulders and upper chest occupy the lower third. Face fills roughly half the image height. Extremely shallow depth of field with both eyes razor sharp.
+
+LIGHTING AND BACKGROUND: Dark industrial interior with large soft rectangular windows far behind. Cool teal-blue ambient light from behind, warm amber key light grazing one cheek, thin red rim light touching the suit, faint dust and moisture in the air. Background falls into deep cinematic blur. Render pores, fine facial hair, wet hair strands, tears of sweat, dried blood, suit weave, seams, scratches, and subtle atmospheric grain. Serious, grounded, expensive superhero cinema.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n4">Копировать</button>
+      </div>
+      <pre id="n4">subject unmasked; accurate face; natural human skin; no mask fragments over the face; no glowing eyes; no exaggerated gore; no asymmetrical melted features; no extra people. Raw image only. Absolutely no typography, title, logo, studio mark, actor names, credits, release date, watermark, border, or poster layout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s5">
+    <div class="s-head">
+      <div class="s-num">🕷</div>
+      <div>
+        <div class="s-kicker">Кадр 5</div>
+        <h2>Двойной выстрел паутиной</h2>
+      </div>
+    </div>
+    <p class="s-lead">Оба культовых жеста рукой прямо в камеру: нижняя рука крупно в переднем плане, лицо читается в треугольнике между руками. Мокрый коридор, дождевая дымка.</p>
+    <div class="s-tag">📎 4:5 · 24 мм · сильное переднее плано</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m5">Копировать</button>
+      </div>
+      <pre id="m5">Create a dynamic photorealistic superhero action portrait in vertical 4:5 at 2K resolution.
+
+IDENTITY REFERENCE: Use both attached portrait photographs only to reproduce the subject&#x27;s real face. Preserve the subject&#x27;s authentic identity, skin tone, eyes, eyebrows, nose, lips, jawline, and hair from the reference portraits. The character must not resemble an actor or a generic generated person. Do not copy the portraits&#x27; clothing, background, lighting, or pose.
+
+SUBJECT AND POSE: The subject is an unmasked Spider-Man in a classic red-and-deep-blue textured suit. The subject is crouching low and performing two iconic web-shooting hand gestures toward the camera. The upper red-gloved hand crosses diagonally in front of the forehead near the top of the frame, palm angled outward, middle and ring fingers pressed toward the palm, index and little finger extended. The lower gloved hand is much closer to the camera and dominates the bottom-center foreground with strong but believable foreshortening, performing the same gesture. The face remains visible in the triangular opening between the arms. The body leans forward, shoulders tense, eyes locked on the viewer with determination.
+
+FACE AND DAMAGE: The subject is fully unmasked with damp messy hair. Add realistic sweat, dust, two small cheek cuts, a thin blood smear near the nose, slight bruising, and fatigue. Preserve the recognizable facial structure and natural skin. The red-and-blue suit is wet, scuffed, lightly torn at one shoulder, and darkened by rain, with highly detailed fabric weave and raised black web lines.
+
+ENVIRONMENT: Narrow dark industrial corridor or prison-like structure with vertical metal bars, wet concrete, cold windows, drifting rain mist, and tiny airborne droplets. Background lines should frame the face rather than intersect it.
+
+CAMERA AND COMPOSITION: Vertical 4:5, 24 mm wide-angle lens placed very close to the lower hand, slightly below eye level. Strong depth layering: lower hand large and sharp, face sharply readable behind it, upper hand framing the forehead, crouched torso receding into the background. Maintain anatomically correct arms and hands. Use a fast shutter so fingers remain crisp.
+
+LIGHTING: Cold steel-blue backlight from windows, dim warm skin key from camera-left, subtle red reflections from the suit, wet highlights on gloves and hair, moody high contrast, controlled cinematic grain. High-budget practical realism, not a comic illustration.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n5">Копировать</button>
+      </div>
+      <pre id="n5">no mask or face covering; exactly two hands with five anatomically correct fingers each; no duplicate fingers, broken wrists, fused gloves, extra arms, or distorted face. Raw image only. No text, logo, title, studio branding, names, credits, numbers, watermark, border, or poster graphics.</pre>
+    </div>
+  </section>
+  <section class="step" id="s6">
+    <div class="s-head">
+      <div class="s-num">🌀</div>
+      <div>
+        <div class="s-kicker">Кадр 6</div>
+        <h2>Перевёрнутый город</h2>
+      </div>
+    </div>
+    <p class="s-lead">Сюрреализм: сидишь на карнизе небоскрёба, смотришь в телефон с тревожным выражением, а весь город позади перевёрнут — здания сходятся к светящемуся горизонту.</p>
+    <div class="s-tag">📎 4:5 · 35 мм · сюрреализм</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m6">Копировать</button>
+      </div>
+      <pre id="m6">Create a surreal yet photorealistic superhero-film still in vertical 4:5 at 2K resolution.
+
+IDENTITY REFERENCE: Use the two attached portrait photographs only to reproduce the subject&#x27;s real face and identity. Preserve the subject&#x27;s authentic features, skin tone, eye shape, eyebrows, nose, lips, jawline, and hair from the reference portraits. The character must be immediately recognizable as the subject. Do not copy the portrait photos&#x27; clothing, backgrounds, expressions, framing, or lighting.
+
+SUBJECT: The subject wears a classic red-and-blue Spider-Man suit but is completely unmasked. The subject&#x27;s full face and natural hair are visible. The subject sits alone on the narrow stone cornice of an old skyscraper, high above Manhattan, with the body in side profile facing left. The back curves slightly forward in a tired, contemplative posture. Both legs hang over the ledge; one knee is slightly higher than the other. The subject holds a black smartphone in the left red-gloved hand and looks down at the screen with a quiet, worried expression. The right hand rests near the thigh. The red mask is rolled back behind the head like a loose fabric collar or removed completely; it must not cover the forehead, cheeks, chin, or hair.
+
+WORLD DESIGN: The entire city behind appears upside down, as though gravity and architecture have folded. Skyscrapers descend from the top and rise from the bottom, converging toward a luminous central horizon. Roads, windows, and building edges remain realistic and internally coherent rather than abstract. The subject and the stone ledge remain upright within the frame, making the inverted city feel impossible but believable.
+
+COMPOSITION AND CAMERA: Vertical 4:5 full-body composition using a 35 mm cinematic lens. The subject occupies the right-center and lower-right area. The head sits near the upper-right third; the phone is clearly visible near center. The inverted city fills the left and upper background, creating enormous scale and negative space. Camera is positioned slightly above and to the subject&#x27;s front-left so the recognizable face is visible in three-quarter profile while looking at the phone.
+
+LIGHTING AND MOOD: Dreamlike late-afternoon light combining warm golden haze from the lower left with cool cyan-blue city shadows. Soft rim light around the hair and shoulders. Realistic skin pores, individual hair strands, woven suit fabric, raised webbing, stone texture, atmospheric perspective, subtle volumetric fog, restrained lens bloom, cinematic depth of field. Mood: lonely, reflective, suspended between worlds.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n6">Копировать</button>
+      </div>
+      <pre id="n6">only one subject, unmasked; no duplicate face, no visible actor likeness, no malformed phone, no impossible hands, no extra limbs, no random floating objects, text, title, logo, numbers, credits, watermark, border, poster design, or UI.</pre>
+    </div>
+  </section>
+  <section class="step" id="s7">
+    <div class="s-head">
+      <div class="s-num">⚡</div>
+      <div>
+        <div class="s-kicker">Кадр 7</div>
+        <h2>Готов к прыжку</h2>
+      </div>
+    </div>
+    <p class="s-lead">Максимально низкая стойка в разрушенной башне: тело сжато как пружина, рука у щеки готова выстрелить, паутина тянется через передний план, в воздухе висит стеклянная пыль.</p>
+    <div class="s-tag">📎 4:5 · 28 мм · тугой средний план</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт</span>
+        <button class="copy" data-id="m7">Копировать</button>
+      </div>
+      <pre id="m7">IDENTITY REFERENCE: Use both attached portrait photographs only as identity references for the unmasked hero. Reproduce the subject&#x27;s real identity accurately: skin tone, authentic facial proportions, eyes, eyebrows, nose, lips, jawline, and hair from the reference portraits. The character must look unmistakably like the subject in the reference photos rather than an actor or a generic model. Do not copy the portrait clothing, background, pose, or lighting.
+
+SUBJECT AND ACTION: The subject is Spider-Man, completely unmasked, crouched very low in a tense defensive pose inside a damaged industrial tower. The subject wears a classic fitted red-and-deep-blue Spider-Man suit with fine fabric weave, raised black web patterns, red gloves, and subtle battle damage. The subject&#x27;s face is close to the camera and framed between the arms. The right forearm crosses diagonally through the lower foreground, while the left gloved hand rises beside the cheek with fingers partially curled as if ready to fire a web. Both knees are deeply bent and the body coils like a spring. The subject stares directly toward the camera with fierce concentration. The subject&#x27;s hair is damp, messy, and pushed upward by movement. Add restrained realistic injuries: sweat, dust, a faint cut near one eyebrow, a small smear of dried blood on one cheek, and light bruising without hiding the subject&#x27;s identity.
+
+ENVIRONMENT: A cold gray industrial interior made of large metal beams, frosted windows, steel grating, shattered glass, and broken concrete. Thick translucent spiderweb strands stretch across the extreme foreground from the lower left toward the center and from the lower right toward the arm. Small glass fragments and dust hang in the air. The background architecture forms strong diagonal lines around the crouching body.
+
+COMPOSITION AND CAMERA: Tight medium close-up with powerful foregrounding, 28 mm lens, camera positioned slightly below eye level and very close to the foreground hand. The subject&#x27;s face sits slightly above center; the red gloves create diagonal framing. Keep the complete face visible and anatomically correct. Shallow depth of field: eyes and face tack sharp, near web strands slightly blurred, industrial background softly out of focus.
+
+LIGHTING AND COLOR: Cold daylight from large windows behind and above, soft silver rim light on hair and shoulders, controlled shadows across the face, muted steel-gray environment contrasted with saturated red suit panels. Detailed pores, moisture, fabric texture, scratches, web fibers, and floating debris. Gritty, grounded, high-budget superhero cinema.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar">
+        <span class="p-label">Negative prompt</span>
+        <button class="copy" data-id="n7">Копировать</button>
+      </div>
+      <pre id="n7">no mask on the subject, no hood, no partial face covering, no other Spider-Man, no celebrity likeness, no distorted hands, no extra fingers, no fused limbs, no plastic skin, no cartoon style, text, logo, title, credits, watermark, border, poster graphics, letters, or UI.</pre>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Промпты — это инструмент. На обучении даю систему: от первой генерации до портфолио, упаковки и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=spider">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.id);
+    var txt = el.innerText;
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = 'Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done).catch(function(){ fallback(txt, done); });
+    } else { fallback(txt, done); }
+  });
+});
+function fallback(txt, cb){
+  var ta = document.createElement('textarea');
+  ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
