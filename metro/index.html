@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Метро: эволюция графики — 6 промптов | AI Новый Уровень</title>
+<meta name="description" content="Один кадр проходит три эпохи: Game Boy → 16 бит → low-poly 3D. 6 промптов + исходное видео для скачивания.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Метро: эволюция графики · 6 промптов">
+<meta property="og:description" content="Game Boy → 16 бит → low-poly 3D. Промпты и исходник для скачивания.">
+<meta property="og:url" content="https://neurocreator2.ru/metro/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+.evo{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+.evo span{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--c2)}
+.evo i{font-style:normal;color:var(--ink3);font-size:14px}
+
+.video-card{margin-top:36px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:rgba(13,13,18,.8)}
+.video-card video{display:block;width:100%;background:#000}
+.vc-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;flex-wrap:wrap}
+.vc-t{text-align:left}
+.vc-t .n{font-size:13.5px;font-weight:500;color:var(--ink)}
+.vc-t .s{font-size:11.5px;color:var(--ink3);margin-top:2px}
+.dl{display:inline-flex;align-items:center;gap:8px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:12px 24px;border-radius:9px;font-size:11.5px;font-weight:700;letter-spacing:1.4px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.dl:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,200,200,.25)}
+.dl:active{transform:scale(.98)}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px 24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.howto .note ul{margin:0;padding-left:18px}
+.howto .note li{font-size:13px;color:var(--ink3);line-height:1.6;margin-bottom:6px}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+
+.prompt{margin-top:16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:260px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.cta{margin:64px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.btn:active{transform:scale(.98)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:230px;padding:14px}
+  .cta{padding:34px 20px}
+  .vc-bar{justify-content:center;text-align:center} .vc-t{text-align:center}
+  .dl{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Метро:<br>эволюция <em>графики</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Один кадр проходит через три эпохи железа — от карманной консоли 89-го до раннего 3D. <b>Композиция, поза и движение поезда сохраняются</b>, меняется только рендер. Три клипа встык дают эффект «эволюции качества».</p>
+    <div class="evo"><span>Game Boy</span><i>→</i><span>16 бит</span><i>→</i><span>Low-poly 3D</span></div>
+
+    <div class="video-card">
+      <video src="metro-source.mp4" controls playsinline preload="metadata"></video>
+      <div class="vc-bar">
+        <div class="vc-t">
+          <div class="n">Исходное видео</div>
+          <div class="s">4 сек · 1.3 МБ · MP4 — из него берётся стоп-кадр</div>
+        </div>
+        <a class="dl" href="metro-source.mp4" download="metro-source.mp4">↓ Скачать видео</a>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Пайплайн — два шага</div>
+      <ol>
+        <li><b>Стоп-кадр → Nano Banana.</b> Возьми кадр из видео выше и прогони через каждый промпт стилизации в режиме image-to-image. На выходе — три картинки одной композиции.</li>
+        <li><b>Картинка → Google Veo.</b> Каждую стилизованную картинку подай как стартовый кадр и примени соответствующий видео-промпт: лёгкий пуш-ин и проход поезда, ~4 секунды.</li>
+        <li><b>Склей три клипа встык</b> — точка склейки в момент прохода поезда, он есть во всех трёх.</li>
+      </ol>
+      <div class="note"><ul><li>«Nano Banana» = разговорное имя Gemini Flash Image (редактор изображений). «Veo Flash/Fast» — быстрая видео-модель Google. Если в твоём интерфейсе они названы иначе — логика та же: картинки в image-редакторе, видео из картинки.</li><li>Формат вертикальный 9:16 (1080×1920). Указывай это в обоих инструментах, иначе можно получить квадрат или 16:9.</li><li>Длительность видео ~4 секунды под исходный клип.</li><li>Ключевые слова, которые реально дают эффект: Game Boy — «160×144, 4-shade monochrome, dithering, nearest-neighbor»; 16-бит — «256×224, 16–32 colors, dithering, sprite»; low-poly — «faceted polygons, flat shading, visible triangles, reduced polygon count».</li></ul></div>
+    </div>
+
+    <div class="map">
+<a class="m" href="#s1"><b>🕹</b> Game Boy</a>
+<a class="m" href="#s2"><b>🎮</b> 16 бит</a>
+<a class="m" href="#s3"><b>🧊</b> Low-poly 3D</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🕹</div>
+      <div>
+        <div class="s-kicker">1989 год, карманная консоль</div>
+        <h2>Стадия 1 · Game Boy</h2>
+      </div>
+    </div>
+    <p class="s-lead">Кадр превращается в 4-оттеночную зелёную монохромную графику: 160×144, огромные квадратные пиксели, дизеринг, жёсткие края без сглаживания. Героиня — коренастый спрайт с читаемым силуэтом.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Картинка · Nano Banana</span>
+        <button class="copy" data-id="i1">Копировать</button>
+      </div>
+      <pre id="i1">Use the input image as a strict composition reference. Preserve the exact framing, camera angle, perspective, subject placement, and overall scene layout. Do not add, remove, or reposition any objects or people.
+
+Convert the entire image into authentic original Game Boy graphics: native 160x144 low resolution, huge visible square pixels, hard nearest-neighbor edges, no anti-aliasing and no smoothing. Use a strict 4-shade monochrome DMG palette only — dark olive-green, mid green, light green, pale green — no other colors. Render all shading through coarse checkerboard dithering, with no gradients.
+
+The woman becomes a chunky 4-tone character sprite with a readable silhouette. The platform, ceiling beams and pillars collapse into flat green pixel blocks. The fluorescent tubes become pale-green banded pixel lines. The train becomes a chunky sprite. Distant city lights become single pale-green pixels.
+
+Look: a still frame from a 1989 handheld console game. No color, no text, no UI, no new objects.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Видео · Google Veo</span>
+        <button class="copy" data-id="v1">Копировать</button>
+      </div>
+      <pre id="v1">Animate the stylized still as a continuous 4-second shot, 9:16 vertical. Keep the exact composition: the woman stays centered and frontal, unmoving except for a faint idle sway. Apply a very slow, subtle push-in toward her. A chunky sprite train slides across the background from screen-right to screen-left, its motion faked by a few offset pixel columns.
+
+Maintain the Game Boy render every frame: native 160x144 look, huge visible square pixels, 4-shade monochrome DMG green palette, coarse checkerboard dithering, hard nearest-neighbor edges, no smoothing, no new colors introduced in motion. The fluorescent tube flickers slightly as pale-green banded pixels.
+
+No text, no UI. Composition and camera move unchanged from the still; only the train animates and the camera slowly pushes in.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">🎮</div>
+      <div>
+        <div class="s-kicker">Начало 90-х, SNES / Genesis</div>
+        <h2>Стадия 2 · 16 бит</h2>
+      </div>
+    </div>
+    <p class="s-lead">Пиксель-арт 256×224 с палитрой 16–32 цвета, постеризация и шахматный дизеринг. Уже цветной, но всё ещё крупный пиксель — вид катсцены из 16-битной игры.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Картинка · Nano Banana</span>
+        <button class="copy" data-id="i2">Копировать</button>
+      </div>
+      <pre id="i2">Use the input image as a strict composition reference. Preserve the exact framing, camera angle, perspective, subject placement, and overall scene layout. Do not add, remove, or reposition any objects or people.
+
+Convert the entire image into 16-bit SNES / Sega Genesis pixel art: native ~256x224 low resolution, large clearly visible square pixels, hard nearest-neighbor edges, no smoothing or anti-aliasing. Use a limited full-color palette of roughly 16-32 colors, posterized, with dithering (checkerboard and cross-hatch) replacing all gradients and glow.
+
+The woman becomes a detailed character sprite with only 2-3 tones per surface — the white tank top, light-blue jeans and black boots read as flat color blocks with dithered shadows. The fluorescent tubes become bright banded pixel lines. The platform tiles become a repeating pixel texture. The train becomes a chunky multi-color sprite. Distant city lights become single glowing pixels.
+
+Look: a cinematic cutscene frame from an early-1990s 16-bit console game. Posterized, dithered, no photorealism. No text, no UI, no new objects.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Видео · Google Veo</span>
+        <button class="copy" data-id="v2">Копировать</button>
+      </div>
+      <pre id="v2">Animate the stylized still as a continuous 4-second shot, 9:16 vertical. Keep the exact composition: the woman stays centered and frontal, unmoving except for a faint idle sway. Apply a very slow, subtle push-in toward her. A chunky multi-color sprite train slides across the background from screen-right to screen-left, motion suggested by a few offset pixel columns and a soft parallax.
+
+Maintain the 16-bit SNES / Genesis render every frame: native ~256x224 look, large visible square pixels, limited 16-32 color posterized palette, checkerboard and cross-hatch dithering, hard nearest-neighbor edges, no smoothing. The fluorescent tubes stay bright banded pixel lines; distant lights stay single glowing pixels.
+
+No text, no UI. Composition and camera move unchanged from the still; only the train animates and the camera slowly pushes in.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🧊</div>
+      <div>
+        <div class="s-kicker">Начало 2000-х, 480p</div>
+        <h2>Стадия 3 · Low-poly 3D</h2>
+      </div>
+    </div>
+    <p class="s-lead">Гранёные полигоны с плоской заливкой, видимые треугольники, мутные текстуры и алиасинг. Ранний 3D во всей красе: угловатые конечности, лицо из плоских граней.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Картинка · Nano Banana</span>
+        <button class="copy" data-id="i3">Копировать</button>
+      </div>
+      <pre id="i3">Use the input image as a strict composition reference. Preserve the exact framing, camera angle, perspective, subject placement, and overall scene layout. Do not add, remove, or reposition any objects or people.
+
+Reinterpret the entire image as aggressively stylized early-2000s low-poly 3D at a soft 480p look, with visible texture aliasing and slightly muddy low-res texture mapping. Every surface is built from clearly visible faceted polygons with hard triangular edges and flat faceted shading — one solid color plane per polygon, a hard lighting break at every edge, no smooth curves.
+
+The woman becomes a low-poly character model: angular blocky limbs, a faceted torso, a simplified polygonal head with flat-shaded planes instead of soft facial detail, hair as a few large angular chunks; jeans, tank and boots as flat-shaded polygon groups. The platform floor is a low-poly tiled plane, beams and pillars are chunky angular prisms, the train is a simple boxy low-poly mesh, distant city lights are flat glowing polygon dots.
+
+Basic per-vertex lighting with flat highlights, drastically reduced polygon count, clearly artificial 3D, zero photorealism. No text, no UI, no new objects.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Видео · Google Veo</span>
+        <button class="copy" data-id="v3">Копировать</button>
+      </div>
+      <pre id="v3">Animate the stylized still as a continuous 4-second shot, 9:16 vertical. Keep the exact composition: the woman stays centered and frontal, with a faint idle sway and subtle breathing. Apply a very slow, subtle push-in toward her. A boxy low-poly train mesh slides across the background from screen-right to screen-left with parallax past the platform.
+
+Maintain the aggressive low-poly 3D render every frame: clearly visible faceted polygons, flat faceted shading with a hard lighting break at every edge, no smooth curves, drastically reduced polygon count, soft 480p look with visible texture aliasing. Basic per-vertex lighting with flat highlights, zero photorealism.
+
+No text, no UI. Composition and camera move unchanged from the still; only the train animates and the camera slowly pushes in.</pre>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь так же — но <em>с нуля и до клиентов</em>?</h3>
+    <p>Этот приём — один из десятков. На обучении даю систему: от первой генерации до портфолио, упаковки и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=metro">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.id);
+    var txt = el.innerText;
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = 'Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done).catch(function(){ fallback(txt, done); });
+    } else { fallback(txt, done); }
+  });
+});
+function fallback(txt, cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
