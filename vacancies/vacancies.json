@@ -1,7 +1,31 @@
 {
- "updated": "2026-07-31T11:13:49Z",
+ "updated": "2026-07-31T11:45:57Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/135784892",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Лидер команды Data science (генеративный ИИ, ИИ-агенты)\n🏢 Банк ВТБ (ПАО) · Москва",
+   "link": "https://hh.ru/vacancy/135784892",
+   "date": "2026-07-31T14:35:45+0300"
+  },
+  {
+   "id": "hh/135184724",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-дизайнер карточек и баннеров для маркетплейсов (Wildberries / Ozon)\n🏢 ТВОЕ · Москва",
+   "link": "https://hh.ru/vacancy/135184724",
+   "date": "2026-07-31T14:17:50+0300"
+  },
+  {
+   "id": "hh/135476866",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Customer Journey Expert в команду ИИ-агентов\n🏢 Домклик · Москва",
+   "link": "https://hh.ru/vacancy/135476866",
+   "date": "2026-07-31T14:13:20+0300"
+  },
   {
    "id": "hh/132790894",
    "source": "hh",
@@ -481,30 +505,6 @@
    "text": "Менеджер по продажам ИИ\n🏢 Гунчахмаев Магомед Магомедович · Махачкала\n💰 от 40000 до 100000 RUR",
    "link": "https://hh.ru/vacancy/135621742",
    "date": "2026-07-30T17:23:42+0300"
-  },
-  {
-   "id": "hh/134011109",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дизайнер маркетплейсов/ИИ дизайнер\n🏢 Revyline · Москва\n💰 от 90000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/134011109",
-   "date": "2026-07-30T17:18:02+0300"
-  },
-  {
-   "id": "hh/135757485",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Аккаунт - менеджер | куратор AI-проекта + магазин PlayStation\n🏢 Restosupport · Смоленск\n💰 от 25000 до 60000 RUR",
-   "link": "https://hh.ru/vacancy/135757485",
-   "date": "2026-07-30T17:14:35+0300"
-  },
-  {
-   "id": "hh/135757190",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI application security engineer\n🏢 Контур · Екатеринбург",
-   "link": "https://hh.ru/vacancy/135757190",
-   "date": "2026-07-30T17:08:00+0300"
   },
   {
    "id": "dnative_job/11382",
@@ -1355,14 +1355,6 @@
    "date": "2026-07-22"
   },
   {
-   "id": "tv/fda039b4-859a-11f1-a138-1fceae9e6fb1",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "AI-тренер для обучения нейросетей\n🏢 ООО \"Яндекс Крауд\" · Город Москва\n💰 от 62500 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/fda039b4-859a-11f1-a138-1fceae9e6fb1",
-   "date": "2026-07-22"
-  },
-  {
    "id": "tv/fde5f544-859a-11f1-90b1-1b732b3ea3cb",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1392,6 +1384,14 @@
    "channel": "Работа России",
    "text": "AI-тренер для обучения нейросетей\n🏢 ООО \"Яндекс Крауд\" · Омская область\n💰 от 62500 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/fdb918e4-859a-11f1-9386-23013e39af8f",
+   "date": "2026-07-22"
+  },
+  {
+   "id": "tv/fda039b4-859a-11f1-a138-1fceae9e6fb1",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "AI-тренер для обучения нейросетей\n🏢 ООО \"Яндекс Крауд\" · Город Москва\n💰 от 62500 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/fda039b4-859a-11f1-a138-1fceae9e6fb1",
    "date": "2026-07-22"
   },
   {
