@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Скилл Seedance 2.0 — режиссёр промптов для Claude | AI Новый Уровень</title>
+<meta name="description" content="Скачай скилл для Claude: он превращает идею сцены в готовый промпт Seedance 2.0 — блокинг, свет, оптика, тайминг.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Скилл Seedance 2.0 · режиссёр промптов">
+<meta property="og:description" content="Один файл — и Claude пишет промпты для Seedance как режиссёр. Скачивай.">
+<meta property="og:url" content="https://neurocreator2.ru/seedance/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:74px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:600px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+.dl-card{margin-top:36px;border:1px solid rgba(200,200,200,.18);border-radius:20px;padding:30px 26px;
+  background:rgba(13,13,18,.85);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.dl-ico{font-size:40px;line-height:1}
+.dl-name{margin-top:12px;font-size:16px;font-weight:600;color:var(--ink)}
+.dl-meta{margin-top:5px;font-size:12px;color:var(--ink3)}
+.dl{display:inline-flex;align-items:center;gap:9px;margin-top:20px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:16px 38px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.6px;
+  text-transform:uppercase;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.dl:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(200,200,200,.28)}
+.dl:active{transform:scale(.98)}
+
+.block{margin-top:44px;padding-top:36px;border-top:1px solid var(--line);text-align:left}
+.bt{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:18px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,34px);
+  color:var(--c1);line-height:1.12;margin-bottom:18px}
+ol.steps{margin:0;padding-left:0;list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding-left:52px;margin-bottom:20px;
+  font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;
+  background:var(--chrome-grad);color:#0a0a0a;display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600}
+ol.steps li b{color:var(--ink);font-weight:500}
+.tip{margin-top:18px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;
+  background:rgba(200,200,200,.03);font-size:13.5px;color:var(--ink2);line-height:1.65}
+.tip b{color:var(--ink);font-weight:500}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:14px;padding:18px 18px;background:rgba(13,13,18,.6)}
+.card .ci{font-size:20px}
+.card .cn{margin-top:8px;font-size:14px;font-weight:500;color:var(--ink)}
+.card .cd{margin-top:5px;font-size:12.5px;font-weight:300;color:var(--ink3);line-height:1.55}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .dl{width:100%;justify-content:center}
+  .cta{padding:34px 20px}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Скилл <em>Seedance 2.0</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Один файл — и Claude начинает писать промпты для Seedance <b>как режиссёр</b>: блокинг, свет, оптика, тайминг, склейки. Вместо «сделай красиво» ты получаешь готовый промпт со структурой, который модель понимает буквально.</p>
+
+    <div class="dl-card">
+      <div class="dl-ico">🎬</div>
+      <div class="dl-name">seedance-clean.skill</div>
+      <div class="dl-meta">8 КБ · скилл для Claude · версия 2</div>
+      <a class="dl" href="seedance-clean.skill" download="seedance-clean.skill">↓ Скачать скилл</a>
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="bt">Установка</div>
+    <h2>Как подключить за минуту</h2>
+    <ol class="steps">
+      <li><b>Скачай файл</b> кнопкой выше — это архив с инструкцией внутри, распаковывать не нужно.</li>
+      <li><b>Открой Claude</b> → настройки → раздел <b>Skills / Навыки</b> → загрузи файл <b>seedance-clean.skill</b>.</li>
+      <li><b>Просто попроси промпт:</b> «сделай промпт для Seedance: девушка идёт по ночной улице под дождём». Claude сам подхватит скилл и выдаст готовый промпт в блоке кода.</li>
+    </ol>
+    <div class="tip">💡 Если раздела «Skills» в твоей версии нет — просто <b>прикрепи файл в чат</b> и напиши: «действуй по этой инструкции, напиши промпт для Seedance». Работает так же.</div>
+  </section>
+
+  <section class="block">
+    <div class="bt">Что внутри</div>
+    <h2>Чему он учит модель</h2>
+    <div class="grid">
+      <div class="card"><div class="ci">👁</div><div class="cn">Пиши видимое</div><div class="cd">Не «напряжённая сцена», а «мужчина замирает и медленно сжимает кулак, свет только сбоку»</div></div>
+      <div class="card"><div class="ci">🏷</div><div class="cn">Теги ассетов</div><div class="cd">Как правильно привязывать референсы @image1 и не тащить объект в кадр, где его нет</div></div>
+      <div class="card"><div class="ci">🧱</div><div class="cn">Структура промпта</div><div class="cd">Порядок блоков: контекст → пространство → действие → камера → свет → стиль</div></div>
+      <div class="card"><div class="ci">🎞</div><div class="cn">Склейки и тайминг</div><div class="cd">Как разложить сцену на сегменты и удержать персонажа между кадрами</div></div>
+      <div class="card"><div class="ci">📷</div><div class="cn">Оптика</div><div class="cd">Крупность, угол обзора в градусах по таблице, положение камеры относительно света</div></div>
+      <div class="card"><div class="ci">✅</div><div class="cn">Чеклист</div><div class="cd">18 пунктов проверки перед отправкой промпта — от порядка блоков до баланса белого</div></div>
+    </div>
+    <div class="tip">⚠️ Скилл написан на английском — это норма: модель работает с ним внутри, а тебе отвечает по-русски. Промпты для Seedance тоже выдаются на английском, как и нужно генератору.</div>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Скилл — это один инструмент. На обучении даю систему: от первой генерации до портфолио, упаковки и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=seedance">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+</body>
+</html>
