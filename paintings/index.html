@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оживление классических картин — 18 промптов | AI Новый Уровень</title>
+<meta name="description" content="9 великих картин, оживлённых с собой в главной роли. По два промпта на каждую: плейт для Nano Banana Pro и анимация для Seedance 2.0.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Оживление классических картин · 18 промптов">
+<meta property="og:description" content="Климт, Рембрандт, Айвазовский, Магритт — оживи шедевр с собой в кадре.">
+<meta property="og:url" content="https://neurocreator2.ru/paintings/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px 24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.6;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.p-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:290px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.cta{margin:64px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.btn:active{transform:scale(.98)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:250px;padding:14px}
+  .cta{padding:34px 20px}
+}
+
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{gap:10px}
+.copy{white-space:nowrap}
+pre{max-height:270px}
+.howto .note + .note{border-top:none;padding-top:8px;margin-top:8px}
+.weak{margin-top:52px;padding-top:38px;border-top:1px solid var(--line);text-align:left}
+.weak h2{margin-bottom:16px}
+.weak ul{margin:0;padding-left:20px}
+.weak li{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:10px}
+.weak li b{color:var(--ink);font-weight:500}
+h1{font-size:clamp(36px,7vw,60px);line-height:1.04}
+@media(max-width:600px){.p-bar{flex-direction:column;align-items:flex-start}.copy{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Оживление<br>классических <em>картин</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Девять шедевров — и <b>ты внутри каждого</b>: Климт, Рембрандт, Айвазовский, Магритт, Редон. По два промпта на картину: сначала фотореалистичный кадр, потом его оживление. Не «фильтр под картину», а полноценная киносцена по её композиции.</p>
+
+    <div class="howto">
+      <div class="ht">Как пользоваться</div>
+      <ol>
+        <li><b>Плейт → Nano Banana Pro.</b> Прикладываешь фейс-лок героя как character reference. Аспект выставляешь в интерфейсе — в промпте его нет.</li>
+        <li><b>Готовый плейт → Seedance 2.0</b> как <b>@image1</b>. Промпт анимации написан под этот кадр как под стартовый.</li>
+      </ol>
+      <div class="note">⚖️ <b>Права:</b> Редон, Рембрандт, Лейтон, Климт, Айвазовский — общественное достояние, свободно. Обе работы Магритта защищены до 2037 года: для своих каналов обычно вопросов нет, для коммерции узнаваемая реплика композиции может стать проблемой.</div>
+      <div class="note">🎨 <b>Принцип грейда:</b> холодный обесцвеченный лук — только там, где у картины серое небо (Циклоп, Магритт). Где картина построена на тёплом источнике — шторм, посвящение, Одиссей, Климт, дозор, вал — берётся только «реалистичная» часть: большой формат, сферическая оптика, свет только практический, ноль блума, плотное мелкое зерно. Иначе умирает сам первоисточник.</div>
+    </div>
+
+    <div class="map">
+<a class="m" href="#s1"><b>👁</b> Циклоп</a>
+<a class="m" href="#s2"><b>⛵</b> Шторм на Галилейском море</a>
+<a class="m" href="#s3"><b>🎭</b> Влюблённые</a>
+<a class="m" href="#s4"><b>⚔️</b> Посвящение в рыцари</a>
+<a class="m" href="#s5"><b>🐕</b> Одиссей и пёс Аргос</a>
+<a class="m" href="#s6"><b>🍏</b> Сын человеческий</a>
+<a class="m" href="#s7"><b>💛</b> Поцелуй</a>
+<a class="m" href="#s8"><b>🌃</b> Ночной дозор</a>
+<a class="m" href="#s9"><b>🌊</b> Девятый вал</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">👁</div>
+      <div>
+        <div class="s-kicker">Картина 1 · 4.5 секунды</div>
+        <h2>Редон — «Циклоп»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Герой прячется за камнем от гиганта. Композиция картины, холодный обесцвеченный грейд, костюм — чёрный доспех из одиссеевского проекта. Аспект 21:9.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p1">Копировать</button>
+      </div>
+      <pre id="p1">A photorealistic large-format still photograph captured on a real cinema set — a wide low-angle composition of a young man crouched behind a low granite outcrop among wildflowers on a windswept coastal meadow at overcast dawn, an enormous single-eyed giant risen head and one shoulder above the mossy rock ridge that closes the frame behind him, the camera set low at flower height looking slightly upward so the man reads across the lower right third and the giant fills the upper left of the frame, the whole composition held in a still watchful hush.
+
+The man carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He is crouched low behind the lichened granite outcrop, his back and left shoulder pressed flat against the stone, knees folded under him, his right palm braced on the rock face beside his head, his left hand flat in the grass taking his weight. His head is turned back over his left shoulder toward the ridge, chin tucked, his eyes wide and fixed upward, his jaw set and his mouth closed on a held breath, the tendons standing in his neck, his shoulders drawn up and locked, a damp sheen at his hairline and temple. He wears a black leather corslet with a scaled chest panel and dark bronze rivets over a cream linen tunic, black leather pteruges at the hip, dark bronze greaves dulled by salt, a black wool cloak gathered tight against his back and pinched between his shoulder and the stone, the leather scuffed and travel-worn, the linen creased and damp at the hem.
+
+The meadow around him runs thick with coastal wildflowers threaded through pale windblown grass, low granite outcrops furred with grey-green lichen breaking through the turf on both sides, the wet stone of his outcrop darker and denser where it meets the ground beside him, the land falling away behind toward a grey open sea that reads flat and cold in the deeper distance, a pale colourless overcast sky filling the top of the frame with the sun buried somewhere behind the cloud sheet camera-right, the light broad and shadowless and cool with no added fill, thin sea haze suspended through the deeper space giving the air real physical body, individual flower heads bending in a steady wind moving from camera-left.
+
+The giant is the anchor of the deeper frame — a colossal hairless humanoid risen from behind the ridge, his head alone standing as tall as two grown men set one atop the other, his skull broad and smooth and domed with no brow, his hide weathered like exposed stone with dust, dried salt, and pale lichen film across the crown and temples, deep sun-cracked creases at the neck. A single enormous eye sits centred in the face, wet and dark and convex, the iris a narrow ring around a wide black pupil, one broad lid half-lowered over it, capillary red at the inner corner, the whole eye aimed out across the meadow away from the outcrop toward the far left of the frame. One massive hand rests over the top of the ridge with the fingers curled into the rock, the knuckles cracked and grey with dust, small loose stones settled against the fingertips, the shoulder and the top of the chest just clearing the ridge line, the rest of the body hidden behind the rock.
+
+Captured on large-format spherical optics at a 40mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, deep focus holding the man sharp and the ridge and the giant nearly as sharp behind him, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain sitting evenly across every surface — skin, leather, granite, petals, haze. Heavily desaturated cold grade: the sea, sky, and ridge stone reduced to layered steel-grey and slate-blue, the grass grey-green under the flat sky light, the wildflowers holding only a muted brick-red and dusty violet residue as the single trace of colour left in the frame, the man&#x27;s skin carrying the only warmth against all of it, the giant&#x27;s hide muted into dusty stone tones, blacks deep and neutral and open, highlights rolled off cleanly with small hard-edged speculars. Real photographic frame captured on a real camera, real leather and linen, real human subject, real granite, grass, and sea haze, real weather — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glow, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v1">Копировать</button>
+      </div>
+      <pre id="v1">SCENE CONTEXT
+Overcast dawn on a coastal meadow. A man in black leather armour is crouched behind a low granite outcrop among wildflowers in the lower right of the frame, hiding. A colossal one-eyed giant is risen head and one shoulder above the mossy rock ridge behind him, upper left, sweeping his eye across the meadow looking for him. One continuous shot, four and a half seconds, nothing else enters frame.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the crouching man, his armour, the granite outcrop, the flowering meadow, the ridge, the giant, the sea and overcast sky. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: dense wildflowers and windblown grass filling the bottom of the frame, closest heads soft. Midground: the lichened granite outcrop with the man pressed against its far side, his back to the stone, the ridge side of the rock between him and the giant. Background: the mossy rock ridge running across the upper frame with the giant risen behind it, grey open sea beyond, flat overcast sky above. Camera sits low at flower height four metres from the man, slightly off his shoulder on the shadow side, diffuse sky glow strongest from camera-right. Wind travels across the meadow from camera-left to camera-right.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the man across the lower right third, crouched, back against the stone, head turned up over his left shoulder toward the ridge, eyes wide and open; the giant&#x27;s head and shoulder above the ridge in the upper left, his single eye aimed out across the meadow away from the man, toward the far left of the frame; his hand curled over the rock at the ridge line. Grass and flowers are already moving in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+Wide 63° observational FOV on large-format spherical optics, low-angle, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast edge to edge, no drift in focal length across the shot. Deep focus holds the man sharp and the ridge and the giant behind him nearly as sharp.
+
+CAMERA
+Operator low at flower height, axis toward the ridge. One slow continuous push-in at 1 km/h across the full four and a half seconds, drifting eight centimetres upward as it moves. Faint organic handheld breath of one to two centimetres throughout, tightening slightly at the end. Wide tonal latitude with clean neutral highlight roll-off and shadows that stay open and readable rather than sinking to black.
+
+ACTION
+0.0s to 1.5s — the giant&#x27;s head turns slowly to his right, his single eye sweeping across the meadow toward the man&#x27;s outcrop at the speed of a slow scan; a wave of wind crosses the flowers left to right; the man holds absolutely still, chest locked on a held breath.
+1.5s to 3.0s — the eye reaches the outcrop and stops on it; the man&#x27;s fingers tighten on the rock beside his head and he presses his back and shoulder harder into the stone, sinking five centimetres lower behind it, his head turning two centimetres further away from the ridge while his eyes stay locked upward.
+3.0s to 4.5s — the giant leans a few centimetres further over the ridge, knuckles flexing on the rock, and two small stones slide loose and tumble down the rock face; the man&#x27;s jaw tightens and one slow controlled breath escapes through his nose; the eye stays fixed on the outcrop as the shot ends.
+
+PERFORMANCE
+Fear reads at muscle level on the man — jaw clamped, tendons standing in the neck, shoulders drawn up and locked, ribs held still against the urge to breathe, one blink at the very start and none after, pupils wide. Pore-level skin detail on his face, damp sheen at the hairline and temple, fine hairs on the forearm catching flat light, capillary flush across the cheek and ear. The giant&#x27;s movement is slow and heavy and deliberate, the only life in the eye — real moisture on the surface, one small hard-edged catch-light from the overcast sky, capillary red at the inner corner, the lid moving with real weight.
+
+PHYSICS
+The giant carries real mass — the ridge stone grinds faintly under his fingers, the loose stones fall with real gravity and bounce twice before settling in the grass, his shoulder shifts the way a great weight shifts. Flowers bend and spring back individually in the wind, grass lies over and lifts, the man&#x27;s cloak edge pinches and creases where his back presses it into the stone, contact shadows stay soft under his knees and under the giant&#x27;s hand.
+
+LIGHTING
+Broad shadowless overcast daylight from a full cloud sheet overhead, brightest from camera-right, the only light in the scene is what the sky physically provides with no added fill. White balance fixed at 5600K under a 7500K overcast sky so the whole frame renders cool and blue-leaning. Modelling comes from the sky&#x27;s soft top light and the bounce off the pale grass. Sea haze density 30% between the ridge and the sea, visible at 40 metres depth.
+
+COLOR GRADE
+Heavily desaturated cold grade. The sea, sky, and ridge stone read as layered steel-grey and slate-blue, the wet granite of the outcrop darker and denser beside the man, the grass grey-green under the flat sky light. The wildflowers hold only a muted brick-red and dusty violet residue, the last trace of colour in the frame, catching what light the cloud sheet gives. The man&#x27;s skin carries the single point of warmth against all of it, the giant&#x27;s ochre-pink hide muted into dusty stone tones. Blacks stay deep, neutral and open, highlights roll off cleanly with small hard-edged speculars, the whole frame sitting in a narrow cold band.
+
+AUDIO
+Steady sea wind through grass, distant surf breaking below the ridge, small stones clattering down the rock face, one deep slow breath drawn by the giant, the man&#x27;s tight controlled exhale close to the microphone. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain sitting evenly across skin, leather, granite, petals and haze, cold desaturated documentary realism, the texture of real weather and real available light.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, four and a half seconds, one take.
+
+POSITIVE LOCKS
+The man stays crouched behind the outcrop for the entire shot, back against the stone, eyes open and fixed upward. The giant stays behind the ridge with only head, one shoulder and one hand visible. His single eye stays open throughout and finishes fixed on the outcrop. The giant&#x27;s head stays as tall as two grown men stacked head to toe. The man&#x27;s armour, cloak, and position stay identical to the reference. The grade stays cold and desaturated with the flowers as the only colour residue. Optics stay spherical and clean with small hard speculars. The camera holds one continuous move and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">⛵</div>
+      <div>
+        <div class="s-kicker">Картина 2 · 5 секунд</div>
+        <h2>Рембрандт — «Шторм на Галилейском море»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Герой — фигура у мачты, которая держится за ванты, прижимает шапку и смотрит прямо в камеру (у Рембрандта это автопортрет). Тёплый прорыв света в тучах слева оставлен живым. Аспект 4:5.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p2">Копировать</button>
+      </div>
+      <pre id="p2">A photorealistic large-format still photograph captured on a real cinema set — a wide low-angle composition of a small single-masted wooden fishing boat heeled hard over and driven bow-up into a breaking wave in an open storm sea at first light, fourteen men aboard fighting the water, the camera set low just above the surface off the boat&#x27;s port bow looking up so the bow and the raked mast fill the upper left of the frame against a torn storm sky and the crowded stern sits low across the lower right, the whole composition caught at the top of a violent roll.
+
+The man at the mast carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He is braced at the base of the mast in the middle of the deck, one hand clamped white-knuckled around a rigging line above his head, the other pressing a soft dark cap flat to his skull, his knees bent low against the heel of the deck, his body the only one turned outward and his eyes looking straight into the camera, his mouth open on a shout the storm takes away, spray running off his beard and soaking the shoulders of his coarse wool coat. Around him the crew works in a single tangled mass — one man high on the windward rigging in a soaked red tunic hauling at the yard with his legs wrapped round the lines, three men on the foredeck dragging at the loose sail with the rope biting across their forearms, one doubled over the lee rail retching into the water, one clutching a raised oar as a brace, and a knot of robed men crowded low in the stern around a seated figure in a dark robe who alone is still, some gripping his arm and shoulder, one with both hands raised, all of them soaked through with hair and beards plastered flat.
+
+The sea around the boat is deep and heavy and moving in real mass — a black-green wall of water rising against the port bow, its crest already collapsing into a torn sheet of white foam that explodes up across the bow and the foresail and hangs in the air as dense spray, the surface beyond ridged into steep short swells with wind streaking the tops into long white lines, a dark shelf of wet rock breaking the surface at the lower left edge of the frame. Above, the storm sky is a low ceiling of bruised grey-brown cloud dragged across the frame from the left, torn open in the upper left into a break of hard warm dawn light that falls in a single defined shaft across the foam, the bow, and the pale straining sail, leaving the stern and the rock in deep shadow, the rest of the sky sinking to near-black in the upper right.
+
+That single break of light is the anchor of the frame — hard-edged and directional, catching the white water first, then the wet planking of the bow, the straining canvas, the wet faces and forearms of the men working forward, the rope fibres standing wet against the light, the small pennant snapping straight off the masthead, everything it does not touch falling into a deep open shadow where the stern figures read as shape, wet cloth, and small catch-lights in the eyes.
+
+Captured on large-format spherical optics at a 35mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, deep focus holding the bow, the mast, and the stern all readable, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain sitting across every surface — skin, wet wool, canvas, planking, foam, cloud. Restrained cold grade with one warm source: the sea, sky, and shadowed stern reduced to layered slate, black-green, and cold brown, the wet men&#x27;s faces and the sunlit canvas holding the only warmth in the frame where the light break lands, blacks deep and neutral and open with detail still living inside them, highlights rolled off cleanly on the foam with small hard speculars on wet skin and wet rope. Light is only what the storm sky physically provides — one hard directional break and the bounce off the white water, no added fill, no bloom, no glow. Real photographic frame captured on a real camera, real wet wool and canvas, real human subjects, real seawater and spray, real weather — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v2">Копировать</button>
+      </div>
+      <pre id="v2">SCENE CONTEXT
+Open storm sea at first light. A small single-masted wooden fishing boat is heeled hard over, bow up, driven into a breaking wave, fourteen men aboard fighting the water. One continuous shot, five seconds, the boat rides through one full wave cycle.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the boat, the raked mast and torn sail, every man aboard and his position, the breaking wave, the storm sky with its warm light break in the upper left, the dark rock at the lower left. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: the crest of the breaking wave and its foam curtain rising against the boat&#x27;s port bow at the lower left. Midground: the boat across the centre of the frame, bow up-left, stern down-right, the mast raked toward the upper right. Background: ridged storm swells running to a black horizon, low cloud ceiling above, the light break torn open in the upper left. Camera sits low, one metre above the water surface, off the boat&#x27;s port bow at eight metres, on the shadow side with the hard light break coming from camera-left.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: bow up-left at the top of the roll, foam already exploding across the foredeck, the man in the red tunic high on the windward rigging, three men hauling the loose sail on the foredeck, one doubled over the lee rail, the man at the mast in the centre gripping a rigging line with one hand and holding his cap with the other, looking directly into the camera, the robed men crowded low in the stern around the one seated still figure. Water, rope, sail, and cloth are all already moving in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+Wide 63° FOV on large-format spherical optics, low-angle, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast edge to edge, no drift in focal length across the shot. Deep focus holds the bow, the mast, and the stern readable together.
+
+CAMERA
+Operator low on a sea-mounted rig one metre above the surface, axis toward the boat&#x27;s port bow. The camera rides its own swell — a slow continuous rise and fall of forty centimetres across the shot, independent of the boat&#x27;s roll, with hard buffeting handheld shake of three to five centimetres from the wind. One slow push-in at 2 km/h across the full five seconds. Wide tonal latitude, shadows staying open and readable, highlights on the foam rolling off cleanly.
+
+ACTION
+0.0s to 1.6s — the boat drops off the crest, the bow falling two metres and burying into the trough, the whole hull rolling further onto its side; the wave face rises against the port bow; the man on the windward rigging swings outward with the roll and hauls himself back in; the loose sail cracks once, hard, in the wind.
+1.6s to 3.2s — the wave breaks across the bow and a solid sheet of white water sweeps the full length of the foredeck at 30 km/h, knocking the three hauling men down onto one knee and blowing back as dense spray over the mast; ropes snap taut and vibrate; the man at the mast takes the water across his back and shoulders, his grip tightening on the line, his eyes staying on the camera.
+3.2s to 5.0s — the bow lifts again through the foam with water pouring off the planking in heavy ropes and sheets; the boat rights fifteen degrees toward level; in the stern the robed men lurch with the roll and grip each other and the gunwale, one raising both hands, the seated figure alone unmoved; the man at the mast presses his cap harder to his head, his mouth still open on the shout.
+
+PERFORMANCE
+Exhaustion and fear read at muscle level — forearms corded on the ropes, faces screwed against the spray, eyes blinking hard through water, mouths open on shouts the wind takes, bodies bracing at every roll. Pore-level skin detail and real capillary flush on the near faces, water beading and running off beards and eyebrows, wet hair plastered to skulls. The man at the mast holds his eye-line straight into the lens through the entire shot.
+
+PHYSICS
+Water carries real mass — the wave face lifts and collapses under its own weight, the foam sheet has weight when it lands and knocks men down, spray droplets fly on real ballistic arcs and fall back, water sheets off the planking in ropes rather than a film. The hull rides the swell with real inertia and lag, the mast whips slightly at the top of each roll, ropes snap taut and vibrate at the moment of load, wet wool and canvas hang heavy and slap rather than flutter, the sail luffs with real cloth weight.
+
+LIGHTING
+One hard directional break of warm dawn light through the torn cloud ceiling in the upper left, falling across the white water, the bow, the sail, and the men working forward, with strong bounce off the foam lifting the shadow side. White balance fixed at 5600K under a cold storm sky so the break reads warm against everything around it. The stern and the rock sit in deep open shadow lit only by the foam bounce. Sea spray density 60% through the air across the whole frame, wind-driven from camera-left.
+
+COLOR GRADE
+Restrained cold grade with one warm source. Sea, sky, and shadowed stern hold in layered slate, black-green, and cold brown; the sunlit foam, the straining canvas, and the wet faces forward carry the only warmth, exactly where the light break lands. Blacks deep and neutral and open with detail living inside them, highlights rolled off cleanly on the foam, small hard speculars on wet skin, wet rope, and wet planking.
+
+AUDIO
+Full storm wind, the boom and collapse of the breaking wave, solid water landing on the deck, hull timbers groaning and working, rope creaking under load, canvas cracking in the gusts, men shouting over the wind. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across skin, wet wool, canvas, planking, foam and cloud, cold documentary realism with one warm practical source, the texture of real weather and real seawater.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, five seconds, one take.
+
+POSITIVE LOCKS
+All fourteen men stay aboard through the entire shot and hold the positions from the reference. The man at the mast keeps his hand on the rigging line, his cap on his head, and his eyes on the camera. The seated figure in the stern stays still while everyone around him moves. The mast stays raked and the sail stays torn and straining. The warm light break stays in the upper left and stays the only warm source in the frame. The camera holds one continuous move and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🎭</div>
+      <div>
+        <div class="s-kicker">Картина 3 · 4.5 секунды</div>
+        <h2>Магритт — «Влюблённые»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Лица закрыты тканью, героя как такового в кадре нет. Вся анимация на ткани: натяжение на скулах и втягивание внутрь на вдохе. Аспект 4:3 или 5:4. **Права: защищено до 2037.**</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p3">Копировать</button>
+      </div>
+      <pre id="p3">A photorealistic large-format still photograph captured on a real set — a tight medium composition of a man and a woman kissing with their heads completely wrapped in pale cloth, standing in the corner of a bare interior at midday, the camera at their eye level and slightly to the left in a chest-up framing that fills the centre of the frame with the two heads pressed together, the composition held in a quiet airless stillness.
+
+The woman stands on the left, turned three-quarters away from camera so her bare shoulder and upper back read in the foreground, her skin fine-textured with visible pores and fine down catching the flat light, a deep oxblood sleeveless dress cut low across her shoulder blades with the fabric weave clearly visible. The man stands on the right facing her, in a dark charcoal wool suit with a white cotton shirt and a plain black tie, the wool nap and the shirt weave readable at this distance. Both heads are entirely enclosed in a single layer of soft pale grey-white cotton, the cloth pulled smooth and taut over the crown, drawn tight enough across each face to show the shape of the nose bridge, the brow, the cheekbone, and the eye socket underneath, gathering into deep soft folds at the jaw and knotting at the nape of the neck, the man&#x27;s wrap ending in a loose twisted tail that falls across his collar and disappears behind his lapel. Their faces are pressed together through the two layers of cloth at the mouth, the fabric compressed and creased where they meet, their shoulders nearly touching, everything about the pose settled and still.
+
+The room behind them is bare and cold — a smooth plaster wall in a cool grey-green that darkens toward the lower left corner, meeting a flat dark oxblood wall panel that closes the right edge of the frame, a narrow strip of pale ceiling running across the very top with a plain fluted plaster cornice sitting where the two walls meet at the upper right, nothing else in the space, no furniture, no window visible, the air completely still.
+
+The cloth is the anchor of the frame — the weave of the cotton readable across the whole surface, the light raking gently along the taut planes over the brow and cheek and falling into the soft folds at the jaw, every crease and fold rendered with real fabric weight, a faint shadow where the two wrapped faces compress against each other, the material slightly translucent at the tightest stretch over the nose bridge so the shape underneath reads through.
+
+Captured on large-format spherical optics at a 75mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across cloth, skin, wool, and plaster. Broad soft daylight from a large source off frame at camera-left, no added fill, no bloom, no glow. Restrained cold grade: the walls, cloth, and suit held in cool grey-green and slate, the oxblood dress and the dark red wall carrying the only warmth in the frame, her bare shoulder the only living skin tone, blacks deep and neutral and open, highlights rolled off cleanly with no speculars on the matte cotton. Real photographic frame captured on a real camera, real cotton cloth, real wool, real human subjects, real plaster wall — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v3">Копировать</button>
+      </div>
+      <pre id="v3">SCENE CONTEXT
+A bare interior corner at midday. A man and a woman stand kissing with their heads completely wrapped in pale cotton cloth, faces pressed together through the fabric. One continuous shot, four and a half seconds, almost nothing moves except the cloth and their breath.
+
+ACTIVE REFERENCES
+@image1 — the full frame: both figures, their wrapped heads, the oxblood dress, the charcoal suit, the grey-green wall, the dark red panel at the right edge, the cornice at the upper right. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: the woman&#x27;s bare shoulder and upper back at the lower left. Midground: the two wrapped heads pressed together filling the centre of the frame, the man&#x27;s suited shoulder at the right. Background: the cool grey-green plaster wall behind them, the dark oxblood wall panel closing the right edge, the pale ceiling strip and plaster cornice across the top. Camera stands at their eye level, one and a half metres away, slightly left of the pair, with broad soft daylight arriving from a large source off frame at camera-left.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the woman on the left turned three-quarters away, the man on the right facing her, both heads fully wrapped, their faces pressed together at the mouth through the cloth, shoulders nearly touching, the loose twisted tail of the man&#x27;s wrap lying across his collar. The cloth is already under faint tension in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+29° portrait FOV on large-format spherical optics, eye level, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Focus sits on the cloth over the man&#x27;s cheekbone with the wall falling gently soft behind.
+
+CAMERA
+Operator locked at eye level on a stable head, axis toward the pair. One very slow push-in at 0.5 km/h across the full four and a half seconds. Faint organic breath of half a centimetre only. Wide tonal latitude with shadows staying open in the folds of the cloth and highlights rolling off cleanly on the taut planes.
+
+ACTION
+0.0s to 1.5s — both press one centimetre closer together; the cloth draws taut across the man&#x27;s nose bridge and cheekbone as the shape underneath comes forward, a single deep crease travelling slowly down the side of the woman&#x27;s wrap toward her jaw.
+1.5s to 3.0s — the man draws a slow breath in through the cloth and the fabric pulls visibly inward at his mouth for a full second, holding the hollow, then releases and settles back out as he exhales; the woman&#x27;s wrap moves faintly with the same rhythm at her jaw.
+3.0s to 4.5s — his head tilts two degrees deeper into hers, the knot at the nape of his neck shifting a few millimetres and the loose twisted tail of cloth lifting once in a faint draught and settling across his collar; both go completely still, the fold pattern on the cloth holding its new shape as the shot ends.
+
+PERFORMANCE
+Everything is carried by the fabric and by breath — no visible faces, no gesture, no shift of weight. Real skin detail on the woman&#x27;s bare shoulder and upper back with visible pores, fine down catching the raking light, and one faint involuntary contraction across her shoulder blade on the man&#x27;s inhale. The stillness is deliberate and held, the bodies settled and grounded through the whole shot.
+
+PHYSICS
+The cotton behaves as real fabric with real weight — it stretches at the taut planes and gathers into soft folds where it slackens, creases travel across the surface rather than sliding as a texture, the two layers compress where the faces meet and take a lasting fold, the loose tail hangs with real mass and swings once with damping before it settles, the wool of the suit holds its shape without ripple.
+
+LIGHTING
+Broad soft daylight from a single large source off frame at camera-left, raking gently along the taut planes of the cloth and falling into the folds at the jaw, no added fill, no bloom. White balance fixed at 5600K with the room reading cool. The plaster wall holds an even flat value with a slow falloff into the lower left corner.
+
+COLOR GRADE
+Restrained cold grade. Walls, cloth, and suit held in cool grey-green and slate; the oxblood dress and the dark red wall panel carry the only warmth in the frame; her bare shoulder is the only living skin tone. Blacks deep and neutral and open with the fold detail living inside them, highlights rolled off cleanly on the matte cotton with no speculars.
+
+AUDIO
+Bare room tone with a faint high-ceiling reverb, the soft rustle of cotton against cotton, one slow muffled breath drawn through cloth and released, a distant street hum far outside. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across cloth weave, skin, wool, and plaster, cold restrained realism, the texture of real fabric and real available daylight.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, four and a half seconds, one take.
+
+POSITIVE LOCKS
+Both heads stay fully wrapped in cloth for the entire shot with no skin of either face showing. The faces stay pressed together at the mouth throughout. Both figures stay standing in the positions from the reference with their feet planted. The wall, the red panel, and the cornice stay exactly as in the reference. The cloth stays matte with no sheen. The camera holds one continuous slow push and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">⚔️</div>
+      <div>
+        <div class="s-kicker">Картина 4 · 5 секунд</div>
+        <h2>Эдмунд Блэр Лейтон — «Посвящение в рыцари»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Герой — коленопреклонённый рыцарь, голова развёрнута чуть больше в профиль к камере, чем у Лейтона, иначе лицо не читается. Опорный бит — клинок ложится на плечо. Аспект 4:5 или 21:9.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p4">Копировать</button>
+      </div>
+      <pre id="p4">A photorealistic large-format still photograph captured on a real cinema set — a wide composition of a knighting ceremony in a stone hall at midday, a woman in a pale gown standing on a low stone dais at the left holding a longsword out over the head of a young knight who kneels on the flagstones facing her at the right, the camera at the kneeling man&#x27;s eye level and slightly right of the sword line in a full-figure framing, warm window light falling in from the upper right, the whole hall held in a hushed formal stillness.
+
+The kneeling knight carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He kneels upright on both knees with his back three-quarters to camera and his head turned just enough that his profile and the near side of his face read clearly, his chin lowered toward his chest, his eyes closed, his hands clasped low in front of him, his shoulders squared and still. He wears a full riveted mail hauberk with a mail coif pushed back onto his shoulders, the individual rings catching light along his arms and back, over it a deep crimson wool surcoat carrying a black eagle device across the back, a wide studded leather belt at the waist and a second belt slung diagonally across the hip, mail chausses on his legs, worn brown leather boots turned up behind him, the crimson wool creased and slightly dusty at the hem. A polished steel helmet sits on the flagstones at his right side, a long embroidered cushion under his knees.
+
+The woman on the dais stands a full head above him, her body angled toward camera and her face inclined down toward his crown, her expression calm and formal. Long copper-red hair falls loose past her waist, a narrow jewelled gold circlet across her brow, a floor-length gown of heavy cream silk with wide sleeves and a long gold-embroidered mantle falling from her left shoulder to the floor, a jewelled gold belt at the hip. Her right arm is extended straight out, her hand closed on the grip of a plain steel longsword, the blade angled down across the frame with its edge hanging a few centimetres above the knight&#x27;s right shoulder, the cross guard and pommel catching the light.
+
+The hall behind them is deep and dim — a wall of heavy crimson cloth hanging in shadow behind the dais, a carved stone bench with cushions at the far left, pale worn flagstones running across the floor, and in the deeper background to the right a small crowd of onlookers standing in near-darkness, an old bearded man in mail and a fair-haired boy in a pale tunic reading as the nearest of them, a painted shield with a black eagle propped at the right edge of the frame. Warm daylight enters from a tall window off frame at the upper right and falls in a single defined wash across the flagstones, the knight&#x27;s back, and the woman&#x27;s gown, leaving the crimson wall, the crowd, and the far left of the hall in deep shadow, fine dust suspended in the light with visible physical body.
+
+Captured on large-format spherical optics at a 40mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, deep focus holding the knight, the woman, and the crowd behind all readable, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across mail, wool, silk, skin, and stone. Restrained grade with one warm practical source: the stone, shadow, and crowd held in cool desaturated grey-brown, the crimson surcoat and the hanging cloth carrying the only saturated colour in the frame, the gown and the skin warm where the window light lands, blacks deep and neutral and open with detail living inside them, highlights rolled off cleanly with small hard speculars on the mail rings, the blade, and the helmet. Light is only what the window physically provides plus the bounce off the pale flagstones, no added fill, no bloom, no glow. Real photographic frame captured on a real camera, real riveted mail, real wool and silk, real human subjects, real stone and dust — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v4">Копировать</button>
+      </div>
+      <pre id="v4">SCENE CONTEXT
+A stone hall at midday. A woman in a pale gown stands on a low dais holding a longsword out over a young knight kneeling on the flagstones in front of her. She lowers the blade onto his shoulder. One continuous shot, five seconds.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the kneeling knight, his mail and crimson surcoat, the helmet on the floor, the woman on the dais with the sword, her gown and circlet, the crimson hanging, the flagstones, the crowd in the deeper background, the window light from the upper right. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: the flagstone floor and the polished steel helmet at the lower right. Midground: the kneeling knight at the right of frame facing left, the woman standing on the low dais at the left with the sword extended between them. Background: the crimson cloth hanging behind the dais in shadow, the carved bench at the far left, the small crowd of onlookers standing in near-darkness at the right. Camera sits at the kneeling man&#x27;s eye level, three metres back, slightly right of the sword line, with warm window light arriving from off frame at the upper right.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the knight kneeling upright, head lowered, eyes closed, hands clasped; the woman standing above him with her right arm extended and the blade hanging a few centimetres above his right shoulder; the helmet on the stone beside him; the crowd standing still in the dark behind. Dust is already drifting in the window light in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+47° neutral FOV on large-format spherical optics, eye level, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Deep focus holds the knight, the woman, and the crowd all readable.
+
+CAMERA
+Operator at kneeling eye level on a stable head, axis toward the pair. One slow continuous push-in at 1 km/h across the full five seconds, drifting ten centimetres upward as it moves so the blade line stays across the middle of the frame. Faint organic breath of one centimetre throughout. Wide tonal latitude with shadows staying open and highlights on the blade and mail rolling off cleanly.
+
+ACTION
+0.0s to 1.8s — the woman&#x27;s extended arm lowers slowly and the blade descends the last few centimetres and settles flat onto the knight&#x27;s right shoulder, the crimson wool compressing under the steel; her wide sleeve falls back along her forearm as the arm drops.
+1.8s to 3.4s — the knight&#x27;s shoulders rise once on a slow drawn breath under the blade and settle; his clasped hands tighten, the knuckles shifting; his head lowers one further centimetre; the mail rings across his back move and reseat with the breath.
+3.4s to 5.0s — the woman&#x27;s chin lifts two degrees as she speaks a few words with barely parted lips; the blade lifts off the shoulder and moves in a slow arc across above the back of his head toward his left shoulder, stopping a few centimetres above it as the shot ends; behind them the fair-haired boy in the crowd shifts his weight and the old bearded man beside him turns his head slightly toward the sword.
+
+PERFORMANCE
+The knight holds his stillness at muscle level — jaw set, throat moving once on a swallow, eyelids closed and steady, one slow controlled breath the only movement in his torso, tension visible in the tendons of his clasped hands. Pore-level skin detail on his face and neck with capillary flush along the cheekbone, damp sheen at the hairline, individual curls holding their shape. The woman&#x27;s movement is formal and unhurried, her wrist steady under the weight of the blade, her eyes down on his crown, her expression composed.
+
+PHYSICS
+The sword carries real weight — the blade descends with control against its own mass, tips fractionally as it lands, and presses the wool of the surcoat down where it rests. The mail moves as thousands of linked rings, sliding and reseating with every breath rather than shifting as a sheet. The heavy silk gown holds its own weight and the mantle stays settled on the floor. Dust drifts through the light shaft on real slow air currents, unaffected by the movement of the blade.
+
+LIGHTING
+Warm daylight from a tall window off frame at the upper right, falling in one defined wash across the flagstones, the knight&#x27;s back and shoulders, and the woman&#x27;s gown, with strong bounce off the pale stone floor lifting her face and his. White balance fixed at 5600K so the window light reads warm against the cool shadow of the hall. The crimson hanging, the crowd, and the far left of the hall hold in deep open shadow. Fine dust suspended through the shaft, density 25%, visible against the dark background.
+
+COLOR GRADE
+Restrained grade with one warm practical source. Stone, shadow, and crowd held in cool desaturated grey-brown; the crimson surcoat and the hanging cloth carry the only saturated colour; the gown, the gold circlet, and the skin warm where the window light lands. Blacks deep and neutral and open with the crowd still readable inside them, highlights rolled off cleanly with small hard speculars on the mail rings, the blade edge, and the helmet.
+
+AUDIO
+Bare stone-hall room tone with long reverb, mail rings shifting with his breath, the faint metallic tap and slide of the blade settling on the shoulder, cloth moving, a single cough from the crowd far back in the hall, the woman speaking a few quiet words. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across mail, wool, silk, skin, stone and dust, restrained historical realism with one warm practical source, the texture of real metal and real daylight.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, five seconds, one take.
+
+POSITIVE LOCKS
+The knight stays kneeling with his head lowered and his eyes closed for the entire shot. The woman stays standing on the dais with her feet planted. The blade stays in her right hand throughout and touches only his shoulders. His mail, crimson surcoat, and the helmet on the floor stay identical to the reference. The crowd stays in the deep background in shadow. The window light stays the only warm source in the frame. The camera holds one continuous move and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s5">
+    <div class="s-head">
+      <div class="s-num">🐕</div>
+      <div>
+        <div class="s-kicker">Картина 5 · 6 секунд</div>
+        <h2>Одиссей и пёс Аргос</h2>
+      </div>
+    </div>
+    <p class="s-lead">Твоя собственная картина. Герой в лохмотьях, старый пёс узнаёт хозяина. В анимации он тянется рукой к морде, перед этим коротко проверяет, не смотрит ли кто — он в маскировке, его не должны узнать. Шесть секунд: в пять жест выходит скомканным.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p5">Копировать</button>
+      </div>
+      <pre id="p5">A photorealistic large-format still photograph captured on a real cinema set — a wide composition of a ragged barefoot man standing on a sunlit marble terrace above the sea at midday, an old lean hound lying on the flagstones a few paces in front of him with its head raised toward him, the camera at chest height and level with the terrace floor in a full-figure framing that places the man in the right third and the dog low in the centre, the bay and the far coast open across the whole background, the composition held in a still exhausted quiet.
+
+The man carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He stands in profile turned toward the dog, his head bowed and his chin dropped toward his chest, his eyes down on the animal, his shoulders rounded and his weight settled evenly on both bare feet, one hand hanging closed at his side and the other resting against his hip. He wears a coarse undyed wool tunic gone brown with age, the hem torn into ragged strips at the knee and one shoulder seam split open, a dark shapeless goatskin satchel slung across his body on a frayed cord, a strip of cloth tied around his head. His skin is burned dark by sun and salt, deeply weathered across the forearms, shoulders and cheekbones, the feet cracked and dusty, dried salt visible at the hairline, his forearms corded and thin.
+
+The hound lies stretched on its side on the pale flagstones close against the low wall, its head lifted clear of the ground and turned toward the man, ears half raised, its coat a short fawn-gold thinned with age and its ribs and hip bones showing sharply, a dry rheumy shine in its eyes, one foreleg extended forward, its long tail curled around behind it, a scatter of dry olive leaves and small refuse on the stones around it.
+
+The terrace itself runs the full width of the frame — worn marble flagstones cracked with weeds pushing through the joints, a low carved balustrade closing the middle distance, a fluted column wrapped in a vine heavy with green leaves and dark grapes rising at the left edge, a small marble bench at the right with a clay jug, two bowls and an oil lamp set on it, and beyond the balustrade the flat blue-green bay, a scatter of white ruined temple buildings on the far headland at the right, dry brown mountains folding away behind, a high pale sky with thin drawn cirrus. Full overhead midday sun falls hard from the upper left, throwing short crisp shadows off the man and the bench onto the stone, the marble reading almost white where the light lands and cool in the shade.
+
+Captured on large-format spherical optics at a 35mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, deep focus holding the man, the dog, and the far coast all readable, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across skin, coarse wool, dog coat, marble and haze. Restrained naturalistic grade with the saturation pulled back from postcard brightness: the sea and sky held in a dusty muted blue, the marble bleached and slightly warm, the stone and the dry hills in worn ochre and sand, the man&#x27;s burned skin and the dog&#x27;s fawn coat carrying the warmth of the frame, blacks deep and neutral and open with detail living in the shaded stone, highlights rolled off cleanly on the sunlit marble with small hard speculars on the clay jug and the dog&#x27;s eye. Light is only what the midday sun and the bounce off the white flagstones physically provide, no added fill, no bloom, no glow. Real photographic frame captured on a real camera, real coarse wool, real weathered human skin, real dog, real marble, dust and sea haze — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v5">Копировать</button>
+      </div>
+      <pre id="v5">SCENE CONTEXT
+A sunlit marble terrace above the sea at midday. A ragged barefoot man stands looking down at an old lean hound lying on the flagstones in front of him. The dog recognises him and he reaches out to its muzzle. One continuous shot, six seconds.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the standing man in his torn wool tunic and goatskin satchel, the old hound lying on the stones, the vine-wrapped column at the left, the low balustrade, the marble bench with the jug and bowls at the right, the bay, the ruins on the far headland, the sky. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: worn marble flagstones with dry olive leaves and weeds in the joints running across the bottom of the frame. Midground: the hound lying low against the wall in the centre, the man standing in profile in the right third, the marble bench at the right edge. Background: the low balustrade, the flat bay, the ruined buildings on the far headland at the right, dry mountains and a high pale sky. Camera sits at chest height four metres back, level with the terrace floor, on the shadow side with the hard midday sun coming from the upper left.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the man standing still in profile, head bowed, eyes down on the dog, both arms hanging at his sides; the hound stretched on its side with its head already lifted and turned toward him, ears half raised; the vine leaves at the left edge and the dry weeds in the stone joints already stirring in a light sea breeze in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+47° neutral FOV on large-format spherical optics, chest height, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Deep focus holds the man, the dog, and the far coast all readable.
+
+CAMERA
+Operator at chest height on a stable head, axis across the terrace toward the man. One slow continuous push-in at 1 km/h across the full six seconds, drifting fifteen centimetres downward toward the dog as it moves so the frame settles on the meeting of the hand and the muzzle. Faint organic breath of one centimetre throughout. Wide tonal latitude with shadows staying open on the shaded marble and highlights on the sunlit stone rolling off cleanly.
+
+ACTION
+0.0s to 1.5s — the hound&#x27;s head lifts two centimetres higher and its ears come fully up, its nose working once as it takes the man&#x27;s scent; its ribs rise on a shallow breath; the man stays completely still.
+1.5s to 2.6s — the man&#x27;s head turns twenty degrees away toward the far end of the terrace off frame at the right, holding for a beat as he checks the empty colonnade behind him, then turns back down to the dog; his closed hand opens at his side.
+2.6s to 4.4s — he lowers slowly into a half crouch, one knee bending and the other leg taking his weight, his torn hem dragging on the stone, and extends his right arm forward at 2 km/h with the palm turned down and the fingers loose, the hand travelling the last half metre toward the dog&#x27;s muzzle and stopping ten centimetres short of it.
+4.4s to 6.0s — the dog lifts its head off the stone and presses its nose up into his open palm; its long tail rises and falls twice against the flagstone in slow weak thumps, raising a small puff of dust; his fingers curl once against the side of its muzzle; his chest rises on one long drawn breath and his jaw tightens as he holds it, his eyes staying on the dog as the shot ends.
+
+PERFORMANCE
+The man holds everything in — jaw clamped, throat moving once on a swallow, one blink held a half-beat too long, the reach slow and controlled rather than eager, the whole gesture carrying restraint rather than release. Pore-level skin detail on his burned face, forearms and the back of his extended hand, capillary flush across the cheekbone, salt dried at the hairline, individual curls stirring in the breeze. The dog&#x27;s effort reads as real age and weakness — the head lifting with difficulty, the nose pressing up with almost no strength, wet reflective eyes with a rheumy film, the coat lying flat over visible ribs, the tail moving from the base only.
+
+PHYSICS
+The dog&#x27;s mass rests fully on the stone and its movements are small and effortful against it, the tail striking the flagstone with real weight and raising fine dust that drifts and settles. The man&#x27;s weight shifts visibly through his feet as he lowers into the crouch, the tendons working in the supporting leg. The coarse wool tunic hangs heavy and moves as one piece as he bends, the frayed hem strips swinging with damping and dragging on the stone. Vine leaves turn individually in the breeze, dry weeds in the stone joints bend and spring back, contact shadows stay crisp and short under the man, the dog, and the bench.
+
+LIGHTING
+Hard overhead midday sun from the upper left, throwing short crisp shadows onto the flagstones, with strong bounce off the near-white marble lifting the shaded side of both the man and the dog. White balance fixed at 5600K. The far coast and the mountains sit behind sea haze at 25% density, visible at 300 metres depth.
+
+COLOR GRADE
+Restrained naturalistic grade with the saturation pulled back from postcard brightness. Sea and sky held in a dusty muted blue, the marble bleached and slightly warm where the sun lands and cool in the shade, the stone and dry hills in worn ochre and sand. The man&#x27;s burned skin and the dog&#x27;s fawn coat carry the warmth of the frame. Blacks deep, neutral and open, highlights rolled off cleanly with small hard speculars on the clay jug and in the dog&#x27;s eye.
+
+AUDIO
+Steady sea breeze across the terrace, waves breaking faintly far below the wall, dry vine leaves rattling, the man&#x27;s bare feet and hem scuffing the stone as he lowers, the dog&#x27;s tail thumping twice on stone, a shallow laboured dog breath, cicadas dense in the heat off frame, one long human breath drawn and held. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across skin, coarse wool, dog coat, marble, dust and haze, restrained sun-bleached realism with natural light only, the texture of real heat and real stone.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, six seconds, one take.
+
+POSITIVE LOCKS
+The man stays on the same spot on the flagstones throughout, lowering into a half crouch and reaching with his right hand only. The dog stays lying on the stones and lifts only its head and tail, keeping its eyes on him throughout. His torn wool tunic, headcloth, and goatskin satchel stay identical to the reference. The bench, jug and bowls stay in place at the right. The far coast and the ruins stay visible beyond the balustrade. The hand meets the muzzle once and stays there as the shot ends. The camera holds one continuous move and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s6">
+    <div class="s-head">
+      <div class="s-num">🍏</div>
+      <div>
+        <div class="s-kicker">Картина 6 · 4.5 секунды</div>
+        <h2>Магритт — «Сын человеческий»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Лицо закрыто яблоком; идентичность читается по кудрям из-под котелка, бороде вокруг яблока и серьге. Единственное движение в кадре — один моргающий глаз над краем яблока. Аспект 4:5. **Права: защищено до 2037.**</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p6">Копировать</button>
+      </div>
+      <pre id="p6">A photorealistic large-format still photograph captured on a real set — a centred waist-up composition of a man in a dark overcoat and a black bowler hat standing alone in front of a low stone parapet above the sea on an overcast day, a green apple hovering in the air directly in front of his face and hiding it completely, the camera at his eye level straight on in a symmetrical framing, the whole composition held in a flat airless stillness.
+
+The man carrying identically from the attached character reference for everything visible around the apple — his mid-length curly chestnut hair showing at the sides and back beneath the hat brim, his short reddish beard reading along the jaw and chin at the edges of the apple, the small silver drop earring hanging from his left ear, his skin tone and the texture of his temple and ear locked from the reference. His face itself is hidden behind the apple with only the outer edge of his left brow and one open eye visible just above the apple&#x27;s upper curve, looking straight into the camera. He stands square to camera with his shoulders level and his weight even on both feet, his arms hanging straight at his sides, his hands relaxed and open with the fingers just visible at the bottom edge of the frame. He wears a black bowler hat set level on his head, a heavy charcoal-black wool overcoat buttoned to the chest with wide lapels, a white cotton shirt with a stiff collar, and a plain scarlet silk tie knotted tight at the throat, the wool nap and the shirt weave clearly readable at this distance.
+
+The apple hangs in the air a hand&#x27;s width in front of his face, unsupported, its skin a matte green with faint yellow mottling and a few small russet freckles, a short cut stem at the top with two fresh green leaves that spread out to either side and break the line of the hat brim, the fruit lit by the same flat overcast light as everything else and casting a soft shadow onto his cheek and chin behind it.
+
+Behind him a low weathered stone parapet runs straight across the frame at hip height, its blocks stained and lichened, and beyond it a flat grey-blue sea reaching to a hard horizon and a heavy overcast sky filling the upper half of the frame, the cloud ceiling smooth and featureless, a faint band of paler light sitting low near the horizon, nothing else in the frame — no other figures, no boats, no birds.
+
+Captured on large-format spherical optics at a 50mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across wool, skin, apple skin, stone and sky. Broad shadowless overcast daylight from the whole sky with no directional key and no added fill, no bloom, no glow. Heavily desaturated cold grade: sea, sky, stone and overcoat held in layered slate, grey-blue and near-black, the apple a muted cool green, the scarlet tie the only saturated colour left in the frame and the small warmth of his skin at the ear and jaw the only other, blacks deep and neutral and open with the coat&#x27;s weave still living inside them, highlights rolled off cleanly with small hard speculars on the apple skin and the silver earring. Real photographic frame captured on a real camera, real wool and silk, real fruit, real human subject, real weathered stone and sea air — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v6">Копировать</button>
+      </div>
+      <pre id="v6">SCENE CONTEXT
+An overcast day above a flat grey sea. A man in a dark overcoat and a black bowler hat stands alone in front of a low stone parapet, a green apple hovering unsupported in the air in front of his face and hiding it. He does not move. One continuous shot, four and a half seconds.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the man, his bowler hat, overcoat, white collar and scarlet tie, his curly chestnut hair at the sides, his beard at the edges of the apple, the silver earring in his left ear, the one visible eye above the apple, the green apple with its two leaves, the stone parapet, the sea and the overcast sky. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: nothing between camera and subject, open air. Midground: the man standing square to camera in the centre of the frame with the apple hovering in front of his face, the low stone parapet running straight across behind him at hip height. Background: flat grey-blue sea to a hard horizon, heavy featureless overcast sky filling the upper half of the frame. Camera stands at his eye level two and a half metres away, straight on and centred, with flat shadowless light arriving from the whole sky.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the man centred and square, arms straight at his sides, hat level, tie knotted at the throat, the apple hovering a hand&#x27;s width in front of his face with its two leaves spread across the hat brim, one open eye visible above the apple&#x27;s upper curve looking straight into the camera. The sea surface and the leaves are already moving in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+47° neutral FOV on large-format spherical optics, eye level, straight on, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Focus sits on the apple with the man and the parapet held sharp and the horizon falling gently soft.
+
+CAMERA
+Operator locked at eye level on a stable head, centred on the subject. One very slow push-in at 0.5 km/h across the full four and a half seconds. Faint organic breath of half a centimetre only. Wide tonal latitude with the coat&#x27;s shadow detail staying open and the sky rolling off cleanly without blowing out.
+
+ACTION
+0.0s to 1.6s — a steady sea wind moves through the frame from camera-left: the two leaves on the apple&#x27;s stem turn and flutter, a few loose curls at the side of his head lift and fall back, the lapels and the skirt of his overcoat stir and settle; the apple itself stays absolutely fixed in the air, not swaying, not turning, not drifting.
+1.6s to 3.0s — his shoulders rise on one slow breath and settle; the scarlet tie shifts a few millimetres against his shirt; the sea behind him keeps running in low grey swells and one distant wave breaks into white far out near the horizon.
+3.0s to 4.5s — the one visible eye above the apple blinks once, slowly, the lid taking a full half second to close and open; his gaze returns to the lens and holds; a gust moves the leaves once more and everything settles as the shot ends.
+
+PERFORMANCE
+Absolute stillness held on purpose — no shift of weight, no turn of the head, no movement in the hands, all of it carried by breath and one blink. Pore-level skin detail on the visible temple, ear, and the strip of jaw beside the apple, fine hairs at the hairline catching the flat light, the eye above the apple wet and living with a soft catch-light from the open sky and visible iris pattern.
+
+PHYSICS
+The apple hangs completely unsupported and completely stable, holding its exact position and orientation in the air while the wind moves everything around it, its leaves alive on the stem. Wool moves as heavy fabric with real weight, lifting and dropping rather than fluttering, the silk tie moving lighter and faster than the coat. The sea runs in real swell with real mass to the horizon. Contact shadows stay soft and shadowless-flat under the overcast light, with the apple&#x27;s soft shadow falling on the face behind it.
+
+LIGHTING
+Broad shadowless overcast daylight from the entire sky, no directional key, no added fill, no bloom. White balance fixed at 5600K under a 7000K overcast sky so the whole frame reads cool and blue-leaning. Modelling comes only from the sky&#x27;s soft top light and the faint bounce off the sea.
+
+COLOR GRADE
+Heavily desaturated cold grade. Sea, sky, parapet stone and overcoat held in layered slate, grey-blue and near-black; the apple a muted cool green; the scarlet tie the only saturated colour in the frame; the small warmth at his ear and jaw the only other. Blacks deep, neutral and open with the coat&#x27;s weave living inside them, highlights rolled off cleanly with small hard speculars on the apple skin and the silver earring.
+
+AUDIO
+Steady sea wind close to the microphone, waves breaking distantly below the parapet, wool and silk moving in the gusts, one slow human breath. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across wool, skin, apple skin, stone and sky, cold restrained realism under flat natural light, the texture of real weather and real fabric.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, four and a half seconds, one take.
+
+POSITIVE LOCKS
+The apple stays fixed in the air in front of his face for the entire shot, hiding his face throughout, with only the one eye visible above its upper curve. The man stays standing square and centred with his feet planted and his arms at his sides. The bowler hat stays level on his head. The scarlet tie stays the only saturated colour in the frame. The sea and the overcast sky stay behind him with the horizon level. The camera holds one continuous slow push and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s7">
+    <div class="s-head">
+      <div class="s-num">💛</div>
+      <div>
+        <div class="s-kicker">Картина 7 · 5 секунд</div>
+        <h2>Климт — «Поцелуй»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Голова мужчины развёрнута градусов на пятнадцать к камере против оригинала, иначе героя в кадре нет. Золото переведено в реальные материалы: парча с золотым шитьём и стена, крытая сусальным золотом. Грейд тёплый. Аспект 1:1.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p7">Копировать</button>
+      </div>
+      <pre id="p7">A photorealistic large-format still photograph captured on a real set — a tight three-quarter composition of a man and a woman kneeling together at the edge of a flowering meadow ledge, both wrapped in heavy gold-embroidered robes, the man bent over the woman with both hands cradling her face as he kisses her cheek, the camera at their eye level slightly to the right in a waist-up framing that centres the two figures against a wall of gilded gold behind them, the composition held in a warm enclosed hush.
+
+The man carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He kneels upright and leans down and forward over the woman with his head turned just enough toward camera that his near cheek, the line of his beard, his ear and the earring all read clearly, his eyes closed, his lips pressed to her cheekbone, his jaw and neck tendons visible with the effort of holding the position. Both his hands cradle her face — one palm flat against her cheek and jaw, the other cupped under her chin, the fingers spread and the knuckles and tendons standing out. He wears a heavy floor-length robe of gold cloth, the fabric structured and stiff, worked in dense vertical panels of black rectangular blocks and silver-white bars against the gold ground, a plain narrow band of woven gold at his brow.
+
+The woman kneels facing him with her body turned into his, her head tipped back and to the side against his hands, her eyes closed and her lips parted, her expression completely still and given over. Long dark auburn hair falls loose down her back and shoulders with small red and white flowers pinned through it and a gold band across her brow. Her robe is the same weight of gold cloth worked in dense round medallions of red, violet, and blue against the gold ground, the material falling from her shoulders to the ledge and pooling around her folded legs. One of her hands rests over the back of his hand at her cheek, the fingers curled and the knuckles pale with pressure, her other arm hooked around his neck. Her bare feet are visible at the lower edge of the frame, curled over the lip of the ledge with the toes flexed and gripping.
+
+They kneel on a narrow shelf of ground at the very edge of a drop, the surface behind and beneath them dense with low green growth and small wildflowers in violet, cobalt, magenta, and white packed thick enough to hide the soil, a few strands of vine trailing over the edge into the dark below. Behind and above them a flat wall of gold rises and fills the entire rest of the frame — real gold leaf laid over plaster in overlapping square sheets with visible seams, hairline cracks, and small worn patches showing the warm red bole underneath, its surface catching the light unevenly and reading as a real gilded surface rather than a flat glow.
+
+Captured on large-format spherical optics at a 50mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across skin, gold cloth, hair, flowers, and gilded plaster. Soft directional daylight from a large source off frame at the upper left, raking across the gilded wall and lighting the two faces and hands, with strong warm bounce off the gold lifting the shadow side, no added fill, no bloom, no glow. Warm restrained grade: the frame held almost entirely in worked gold and warm ochre with the true metallic quality of the leaf preserved, the medallions on her robe carrying the only saturated red, violet, and blue, the meadow flowers the only cool colour in the frame, both skin tones warm and living against the metal, blacks deep and neutral and open, highlights rolled off cleanly with small hard speculars on the gold thread, the leaf edges, and the silver earring. Real photographic frame captured on a real camera, real gold-embroidered cloth, real gold leaf on plaster, real human subjects, real flowers and living skin — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v7">Копировать</button>
+      </div>
+      <pre id="v7">SCENE CONTEXT
+A man and a woman kneel together at the edge of a flowering meadow ledge in front of a gilded wall, both in heavy gold-embroidered robes. He holds her face in both hands and kisses her cheek. Almost nothing moves. One continuous shot, five seconds.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the kneeling man and woman, his gold robe with its black and white block panels, her gold robe with its coloured medallions, her loose auburn hair with flowers pinned through it, both their hands at her face, her bare curled toes at the ledge, the flowering meadow, the gilded wall behind. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: the flowering meadow surface and the lip of the ledge with her bare feet curled over it, at the bottom of the frame. Midground: the two kneeling figures filling the centre, the man leaning down from the left into the woman on the right. Background: the flat gilded wall rising behind them and filling the rest of the frame. Camera stands at their eye level two metres away, slightly right of the pair, with soft directional daylight arriving from a large source off frame at the upper left.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the man bent over her with both hands cradling her face and his lips already pressed to her cheekbone, his head turned just enough toward camera for his near cheek, beard, ear and earring to read; the woman&#x27;s head tipped back into his hands, eyes closed, lips parted, one hand over the back of his and the other arm hooked around his neck; her toes curled over the ledge. The flowers and loose hair are already stirring faintly in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+29° portrait FOV on large-format spherical optics, eye level, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Focus sits on the woman&#x27;s face and his hands, with the gilded wall falling gently soft behind and the flowers soft at the bottom edge.
+
+CAMERA
+Operator at eye level on a stable head, axis toward the pair. One very slow push-in at 0.5 km/h across the full five seconds, drifting eight centimetres downward as it moves so the frame settles between their hands and her curled feet. Faint organic breath of half a centimetre only. Wide tonal latitude with the gold holding its detail without blowing out and shadow detail staying open in the folds of the robes.
+
+ACTION
+0.0s to 1.6s — a faint warm draught moves through the frame: loose strands of her hair lift from her shoulder and settle, the small flowers pinned through it tremble, the wildflowers at the ledge nod once; both figures stay motionless.
+1.6s to 3.2s — his hands press one millimetre closer against her jaw, the tendons rising on the backs of them; her fingers curl tighter over his hand, the knuckles blanching; her chest rises on one slow drawn breath and her lips part a fraction wider on the exhale.
+3.2s to 5.0s — her bare toes flex and grip harder over the lip of the ledge, the tendons standing out across the top of her foot, and a few loose petals fall from the flowers in her hair and drop past the ledge edge; his shoulders settle a centimetre lower as he leans further in, and both go completely still as the shot ends.
+
+PERFORMANCE
+Everything is carried by hands, breath, and micro-tension — no turn of the head, no shift of weight, no opening of eyes. Pore-level skin detail on both faces with real capillary flush across her cheek where his palm presses, fine down on her jaw catching the light, his beard hairs individually readable at the edge of her cheekbone, the moisture on her parted lips. Her stillness is complete surrender, his is held effort.
+
+PHYSICS
+The gold cloth behaves as heavy structured fabric — it holds its own architecture, creasing rather than draping, moving only at the hem and the loose edges, the embroidery catching light differently as the surface shifts a few millimetres. Her hair moves strand by strand in the draught with real weight, petals fall on real ballistic arcs and disappear past the ledge, the flowers bend and spring back individually, contact shadows stay soft under their knees and under her feet at the stone lip.
+
+LIGHTING
+Soft directional daylight from a large source off frame at the upper left, raking across the gilded wall and modelling both faces and all four hands, with strong warm bounce off the gold leaf lifting the shadow side of both figures. White balance fixed at 5600K so the gold reads as real warm metal rather than as a colour cast. No added fill, no bloom.
+
+COLOR GRADE
+Warm restrained grade. The frame is held almost entirely in worked gold and warm ochre with the true metallic quality of the leaf preserved and its worn patches and seams visible. The medallions on her robe carry the only saturated red, violet and blue; the meadow flowers carry the only cool colour; both skin tones stay warm and living against the metal. Blacks deep, neutral and open, highlights rolled off cleanly with small hard speculars on the gold thread, the leaf edges and the silver earring.
+
+AUDIO
+Close intimate room tone with a faint outdoor air beyond the ledge, stiff embroidered cloth creaking softly as the fabric shifts, one slow breath drawn and released, a light draught moving through grass and flowers, a single distant bird far below the ledge. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across skin, gold cloth, gold leaf, hair and flowers, warm restrained realism under natural light, the texture of real metal thread and real living skin.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, five seconds, one take.
+
+POSITIVE LOCKS
+Both figures stay kneeling in the positions from the reference for the entire shot, with his lips staying on her cheek and both his hands staying on her face. Her eyes stay closed throughout. Her bare toes stay curled over the lip of the ledge. Both robes stay gold with their pattern work identical to the reference. The gilded wall stays behind them filling the frame. The gold reads as real metal leaf with visible seams and wear. The camera holds one continuous slow push and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s8">
+    <div class="s-head">
+      <div class="s-num">🌃</div>
+      <div>
+        <div class="s-kicker">Картина 8 · 6 секунд</div>
+        <h2>Рембрандт — «Ночной дозор»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Герой — капитан в чёрном с красной перевязью, единственный, кто шагает на зрителя с вытянутой рукой. В кадре три десятка человек, поэтому движение назначено только шести фигурам — остальные держат позу, иначе поплывут лица во втором ряду. Аспект 4:5 или 5:4.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p8">Копировать</button>
+      </div>
+      <pre id="p8">A photorealistic large-format still photograph captured on a real cinema set — a wide composition of a seventeenth-century militia company assembling under a dark stone archway and stepping forward out of the shadow into a shaft of daylight, some thirty men crowded across the full width of the frame with pikes and muskets raised above them, the camera at chest height straight on in a near-full-figure framing that places the two lead officers in the centre foreground, the composition held in a moment of controlled disorder just before the column moves.
+
+The captain in the centre carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair falling to his collar, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He is caught mid-stride with his left foot forward, his body angled slightly to camera-right and his head turned back toward the man beside him, his mouth open on a spoken order, his left hand extended out and forward into the light with the palm down and the fingers spread, a long staff held low in his right hand. He wears a black wool doublet with slashed sleeves and dark trunk hose, a wide flat white lace collar spread across his shoulders, a broad crimson silk sash tied across his chest and knotted at the hip with the tasselled ends hanging, black leather boots with wide turned-down tops, a black wide-brimmed hat with a low crown.
+
+Beside him at his left walks a younger officer in a pale ochre buff leather coat worked with gold braid, a white silk sash at his waist, a wide-brimmed pale hat with a plume, tall pale boots with folded tops and gilt spurs, a short sword and powder flask at his hip, his head turned up and toward the captain and his own mouth closed, listening. Behind and around them the company crowds the archway — a man in dull red at the left loading a long musket with his elbow raised, a helmeted pikeman further left, a standard bearer holding a large green-gold banner high at the upper left, a drummer at the right edge with a large rope-tensioned drum slung at his hip and both sticks up, a knot of men in dark coats and hats behind the officers with only faces and hat brims catching light, one man pointing off to the right, and at the left middle-ground a small girl in a pale gold brocade dress moving through the crowd with a pale bird hanging at her belt, lit brighter than anyone around her. A dog crosses low at the right edge near the drummer. Pikes, halberds and musket barrels cross above the whole group at steep angles against the dark.
+
+The space itself is a deep stone archway with a heavy blind arch and a worn relief panel high in the shadow behind the men, the masonry dark and stained, the ground pale packed earth and flagstone. A single shaft of hard daylight enters from off frame at the upper left and falls across the captain&#x27;s extended hand, his collar and face, the lieutenant&#x27;s buff coat, and the girl in gold, leaving the archway, the rear ranks and the upper half of the frame in deep shadow where figures read only as hat brims, faces, and the glint of steel. Fine dust hangs visible in the shaft.
+
+Captured on large-format spherical optics at a 35mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, deep focus holding the front officers, the crowd, and the archway all readable, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across wool, buff leather, lace, steel, skin and stone. Restrained grade with one warm practical source: the archway, the rear ranks and the shadowed masonry held in deep cool grey-brown, the sunlit buff coat and the girl&#x27;s gold brocade carrying the warmth of the frame, the captain&#x27;s crimson sash the only saturated colour, blacks deep and neutral and open with faces and steel still living inside them, highlights rolled off cleanly with small hard speculars on helmets, gorgets, musket barrels and the gilt spurs. Light is only what the single shaft and the bounce off the pale ground physically provide, no added fill, no bloom, no glow. Real photographic frame captured on a real camera, real wool and buff leather, real steel and lace, real human subjects, real stone and dust — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v8">Копировать</button>
+      </div>
+      <pre id="v8">SCENE CONTEXT
+A seventeenth-century militia company stands packed under a dark stone archway, about to move off. The captain in black gives the order and the column starts forward into the light. One continuous shot, six seconds.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the captain in black with the crimson sash and extended hand, the officer in the pale buff coat beside him, the musketeer in dull red at the left, the standard bearer with the green-gold banner, the drummer at the right, the small girl in gold brocade at the left middle-ground, the dog, the crowd of men in the archway, the crossing pikes, the shaft of daylight and the dust in it. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: the pale packed earth of the ground and the two lead officers stepping forward at the centre. Midground: the crowd of militiamen filling the archway from edge to edge, the musketeer at the left, the drummer at the right, the girl in gold at the left. Background: the deep stone archway with its blind arch and worn relief panel, everything above the men falling into shadow, pikes and halberds crossing at steep angles against it. Camera sits at chest height five metres back, straight on to the advancing column, with the hard daylight shaft entering from off frame at the upper left.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the captain mid-stride with his left foot forward, head turned to his lieutenant, mouth open on the order, left hand extended into the light; the lieutenant beside him listening; the musketeer&#x27;s elbow raised over his weapon; the drummer&#x27;s sticks up; the banner held high; the girl caught moving through the crowd; the dog low at the right. Dust is already drifting in the shaft in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+63° observational FOV on large-format spherical optics, chest height, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Deep focus holds the lead officers, the crowd, and the archway all readable together.
+
+CAMERA
+Operator at chest height on a stable head, axis straight down the line of the advancing column. One slow continuous push-in at 1 km/h across the full six seconds, drifting six centimetres upward as it moves. Faint organic breath of one to two centimetres throughout. Wide tonal latitude with the shadowed ranks staying open and readable and the sunlit buff coat rolling off cleanly.
+
+ACTION
+0.0s to 2.0s — the drummer at the right brings both sticks down and starts a slow marching roll, his shoulders working; the dog turns its head sharply toward the drum; the captain finishes the order, his extended hand pushing forward another ten centimetres into the light and his head beginning to turn back toward camera.
+2.0s to 4.0s — the whole company begins to move forward at 3 km/h: the captain and the lieutenant complete one full step toward camera together, the crimson sash swinging and the lace collar lifting and settling, the lieutenant&#x27;s plume dipping; the forest of pikes and halberds behind them tilts as one and reseats at a new angle; the banner at the upper left unrolls half a metre and lifts.
+4.0s to 6.0s — the musketeer at the left finishes seating his ramrod and swings the long barrel up onto his shoulder; the girl in gold slips two steps further left through the crowd and out toward the frame edge; the captain&#x27;s head finishes its turn and his eyes come to camera as he takes a second step, the dust in the shaft swirling around his advancing hand as the shot ends.
+
+PERFORMANCE
+The captain carries command at muscle level — jaw set after the order, chest expanding on the next breath, the extended hand steady and deliberate rather than gestural, his eyes hard when they reach the lens. Pore-level skin detail on his face with capillary flush at the cheek and nose, the beard hairs individually readable, the lace collar&#x27;s thread structure visible. The lieutenant&#x27;s attention stays entirely on him. Everyone else holds their posture with only the assigned movements, weight settled and faces still.
+
+PHYSICS
+Steel, wood and cloth all carry real weight — the pikes are long and heavy and tilt slowly with visible inertia and a slight whip at the tips, the musket barrel drops onto the shoulder with mass, the drum resonates against the drummer&#x27;s hip, the banner cloth unrolls and lifts with real fabric weight and damping. Boots strike the packed earth and raise small dust clouds that drift into the light shaft. Wool and buff leather move as heavy garments rather than fluttering, the tasselled sash ends swinging and settling.
+
+LIGHTING
+One hard shaft of daylight entering from off frame at the upper left, falling across the captain&#x27;s hand, collar and face, the lieutenant&#x27;s buff coat and the girl&#x27;s gold brocade, with bounce off the pale ground lifting the shadow side of the front rank. White balance fixed at 5600K so the shaft reads warm against the cool shadow of the archway. The rear ranks and the whole upper frame hold in deep open shadow with faces and steel still readable. Dust density 35% inside the shaft, visible against the dark stone.
+
+COLOR GRADE
+Restrained grade with one warm practical source. Archway, masonry and rear ranks held in deep cool grey-brown; the sunlit buff coat and the gold brocade carry the warmth; the crimson sash is the only saturated colour in the frame. Blacks deep, neutral and open with faces and steel living inside them, highlights rolled off cleanly with small hard speculars on helmets, gorgets, barrels and spurs.
+
+AUDIO
+Deep stone-archway reverb, a slow marching drum roll starting and continuing, boots on packed earth, pike shafts knocking together, steel and buckles shifting, low male voices under the drum, one sharp spoken order, a single dog bark. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across wool, buff leather, lace, steel, skin, stone and dust, restrained historical realism with one hard practical source, the texture of real metal and real daylight.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, six seconds, one take.
+
+POSITIVE LOCKS
+The captain in black stays in the centre foreground and stays the only figure whose eyes come to camera. Only six elements move: the captain, the lieutenant, the drummer, the musketeer at the left, the girl in gold, and the mass of pikes. Every other man holds his posture, his hat, his weapon and his face exactly as in the reference. The banner stays at the upper left, the drum stays at the right, the dog stays low at the right edge. The light shaft stays from the upper left and stays the only warm source. The camera holds one continuous move and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+  <section class="step" id="s9">
+    <div class="s-head">
+      <div class="s-num">🌊</div>
+      <div>
+        <div class="s-kicker">Картина 9 · 6 секунд</div>
+        <h2>Айвазовский — «Девятый вал»</h2>
+      </div>
+    </div>
+    <p class="s-lead">Камера подвинута ближе, чем у Айвазовского: вал и солнце в тех же пропорциях, но группа читается средним планом и герой узнаваем. Он — тот, кто поднимает руку с красной тряпкой. Аспект 3:2.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">① Плейт · Nano Banana Pro</span>
+        <button class="copy" data-id="p9">Копировать</button>
+      </div>
+      <pre id="p9">A photorealistic large-format still photograph captured on a real cinema set — a wide low-angle composition of five shipwrecked men clinging to the broken mast and crosstree of a lost ship adrift in an open ocean at sunrise, an enormous wave rising and beginning to curl behind them at the left, the sun burning through the sea mist low on the horizon at the centre right, the camera set just above the water surface fifteen metres from the wreckage in a medium-wide framing that places the men in the lower centre and gives the wave the upper left of the frame, the composition caught at the bottom of a swell.
+
+The man standing highest on the wreckage carrying identically from the attached character reference — his face, bone structure, mid-length curly chestnut hair plastered flat and dripping, short reddish beard, and the small silver drop earring in his left ear locked from the reference. He straddles the broken crosstree with one arm locked around the mast stump and the other raised straight above his head holding a torn strip of red cloth streaming out in the wind, his head turned back toward the wave, his mouth open on a shout, his eyes wide, his soaked linen shirt torn open across the chest and clinging to him, his skin burned and salt-blistered across the shoulders, his forearm corded where it grips.
+
+Four other survivors cling to the wreckage below and around him — one on his knees on the spar with both arms wrapped around it and his head down against the wood, one lying flat along the crosstree gripping the lashings with both hands, one half in the water at the lower edge hauling himself up by a trailing rope with his legs still in the sea, and one seated with his back against the mast stump and his head tipped back, exhausted. All of them are soaked through in torn dark linen and wool, hair flattened, faces raw and salt-burned, hands bloodless on the wet timber. The wreckage itself is a heavy squared mast section with its crosstree still attached, planking and a coil of rope lashed across it, the wood dark and waterlogged with pale splintered ends, the whole thing riding low with water washing over it.
+
+Behind them at the left a wave the height of a three-storey building rises out of the swell, its face steep and glassy and lit through from behind so the water body glows a deep translucent emerald where the light passes through it, the crest already feathering and beginning to curl over into white, spindrift torn off the top and streaming downwind. The rest of the sea runs in heavy confused swells, dark green in the troughs and gold where the light lands, the surface ridged and streaked with foam.
+
+The sky is the anchor of the frame — a low bank of storm mist burning through at the centre right where the sun sits just above the horizon as a hard defined disc in a wall of haze, throwing a broad gold path straight down the water toward the wreckage, the cloud above lit amber and rose at its lower edges and falling into cold violet-grey higher and further left, the air thick with suspended spray and mist across the whole frame. Captured on large-format spherical optics at a 35mm-equivalent field of view, clean rectilinear rendering with no horizontal squeeze and no lens flare, extreme edge-to-edge micro-contrast, deep focus holding the men, the wave, and the sun disc all readable, natural optical falloff only, colour-negative daylight rendition with very fine dense film grain across skin, wet linen, waterlogged timber, foam and mist. Warm restrained grade with a single natural source: the sun and its path on the water carrying the warmth, the wave body a deep translucent emerald where the light passes through it, the troughs and the far sea in cold slate green, the torn red cloth the only saturated colour, skin warm and raw against the water, blacks deep and neutral and open, highlights rolled off cleanly on the foam and the sun path with small hard speculars on wet skin and wet timber. Light is only what the low sun and the bounce off the water physically provide, no added fill, no bloom, no glow. Real photographic frame captured on a real camera, real wet linen, real waterlogged wood, real human subjects, real seawater, foam and mist — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no diffusion bloom, no glossy highlights.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">② Анимация · Seedance 2.0</span>
+        <button class="copy" data-id="v9">Копировать</button>
+      </div>
+      <pre id="v9">SCENE CONTEXT
+Open ocean at sunrise after a storm. Five shipwrecked men cling to a broken mast and crosstree adrift on the swell. A huge wave rises and starts to break behind them. One continuous shot, six seconds.
+
+ACTIVE REFERENCES
+@image1 — the full frame: the five men and their positions on the wreckage, the standing man with the raised red cloth, the mast section with its crosstree and lashed rope, the great wave rising at the left with its translucent green body, the sun disc burning through the mist at the centre right and its gold path on the water, the swells and the sky. Every element holds 100% to the reference in shape, colour, scale, and position.
+
+LOCATION MAP
+Foreground: the swell surface and foam streaks running across the bottom of the frame. Midground: the mast wreckage with the five men riding low in the water at the lower centre. Background: the great wave rising and curling at the left, the open confused sea running to the horizon, the sun disc in the mist at the centre right with its gold path leading straight to the wreckage, storm cloud above. Camera sits one metre above the water surface fifteen metres out from the wreckage, on the shadow side with the low sun coming from the centre right.
+
+FIRST FRAME / BLOCKING
+Frame opens exactly on the reference: the standing man high on the crosstree with one arm locked around the mast and the other raised holding the red cloth, head turned back toward the wave; the kneeling man hugging the spar; the man lying flat on the crosstree; the man half in the water hauling on the trailing rope; the exhausted man seated against the mast stump. Water, cloth, spray and cloud are all already moving in frame one.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+63° FOV on large-format spherical optics, low-angle just above the water, clean rectilinear rendering with no horizontal squeeze and no lens flare, high micro-contrast, no drift in focal length across the shot. Deep focus holds the men, the wave face, and the sun disc all readable.
+
+CAMERA
+Operator low on a sea-mounted rig one metre above the surface, axis toward the wreckage. The camera rides its own swell — a continuous rise and fall of sixty centimetres across the shot, independent of the wreckage, with hard buffeting handheld shake of three to five centimetres from the wind. One slow push-in at 2 km/h across the full six seconds. Wide tonal latitude with the shadowed troughs staying open and the sun path rolling off cleanly without blowing out.
+
+ACTION
+0.0s to 2.0s — the wreckage rides up the near swell, lifting a metre and a half and tilting fifteen degrees toward the wave, water sheeting off the timber; the standing man&#x27;s raised arm swings the red cloth once through a full arc and it snaps taut in the wind; the man half in the water gets a knee onto the spar and hauls himself higher.
+2.0s to 4.0s — the great wave behind them rises another two metres and its crest feathers and starts to curl over, spindrift tearing off the top and streaming downwind across the frame; the light through the wave body brightens as the face steepens; the kneeling man&#x27;s head comes up and turns toward it; the standing man shouts again and his head turns from the wave back toward the sun.
+4.0s to 6.0s — the wreckage drops off the top of the swell and falls into the trough, the bow end burying and a sheet of white water sweeping the length of the spar at 25 km/h and breaking over the two lowest men; the standing man&#x27;s grip locks white on the mast and the red cloth is dragged down and snaps out again; the wave behind stands at the point of collapse without breaking as the shot ends.
+
+PERFORMANCE
+Exhaustion and terror read at muscle level — forearms corded on the wet timber, hands bloodless where they grip, faces screwed against the spray, eyes blinking hard through salt water, mouths open on shouts the wind takes, bodies bracing at every drop. Pore-level skin detail on the standing man&#x27;s face with capillary flush and salt crust across the cheekbone and shoulders, water running out of his beard and hair, individual curls plastered and dripping. No one lets go at any point.
+
+PHYSICS
+Water carries real mass — the swell lifts and drops the wreckage with real buoyancy and lag, the wave face rises under its own volume and the crest feathers under wind before it curls, the sheet of white water has weight when it lands and knocks the low men flat against the spar, spray droplets fly on real ballistic arcs and fall back. The waterlogged mast rides heavy and low and rolls slowly. Wet linen and wool cling and slap rather than flutter, the torn red cloth is light and snaps fast and hard, the trailing rope goes slack and taut with the motion.
+
+LIGHTING
+The low sun burning through the mist bank at the centre right is the only source, throwing a broad gold path across the water straight toward the wreckage, backlighting the men into near-silhouette with rim light along their shoulders and arms, and lighting the great wave from behind so its body glows translucent emerald where the light passes through the water. Strong bounce off the foam and the sun path lifts the shadow side of the men. White balance fixed at 5600K. Sea mist and suspended spray at 55% density across the whole frame, thickest around the sun.
+
+COLOR GRADE
+Warm restrained grade with a single natural source. The sun, the mist around it, and the gold path on the water carry the warmth; the wave body holds a deep translucent emerald where the light passes through; the troughs and the far sea sit in cold slate green; the torn red cloth is the only saturated colour in the frame. Skin reads warm and raw against the water. Blacks deep, neutral and open with the men&#x27;s faces still readable in the backlight, highlights rolled off cleanly on the foam and the sun path with small hard speculars on wet skin and wet timber.
+
+AUDIO
+Deep ocean swell and wind, the boom and hiss of the great wave building behind, solid water landing on the timber, the mast section groaning and working, rope creaking and snapping taut, the red cloth cracking in the wind, men shouting hoarsely over the sea, ragged breathing close to the microphone. No music.
+
+STYLE
+Photoreal live-action cinema, 8K, large-format spherical capture, very fine dense film grain across skin, wet linen, waterlogged timber, foam and mist, warm restrained realism with one natural source, the texture of real seawater and real dawn light.
+
+OUTPUT SETTINGS
+Real-time speed for the whole shot, six seconds, one take.
+
+POSITIVE LOCKS
+All five men stay on the wreckage for the entire shot and hold the positions from the reference. The standing man keeps one arm locked around the mast and the red cloth in his raised hand throughout. The great wave stays at the left, keeps rising, and stays unbroken at the end of the shot. The sun disc stays burning through the mist at the centre right with its gold path leading to the wreckage. The wave body stays translucent green where the light passes through it. The camera holds one continuous move and the composition of the reference frame is preserved throughout.</pre>
+    </div>
+  </section>
+
+  <section class="weak">
+    <h2>Известные слабые места</h2>
+    <ul><li><b>Циклоп.</b> Холодный грейд может съесть узнаваемость Редона — там всё держалось на цвете. Если станет слишком голо, поднимай насыщенность только на цветах, остальное оставляй стальным.</li><li><b>Влюблённые.</b> Ткань не должна блестеть — при появлении бликов кадр сразу читается как CG.</li><li><b>Одиссей.</b> На медленных жестах рука «плывёт» и удлиняется. Если поймаешь — пусть тянется не к морде, а к холке: путь короче, анатомия держится.</li><li><b>Сын человеческий.</b> Seedance любит «оживлять» висящие предметы. Если яблоко поедет — продублируй в POSITIVE LOCKS отдельной строкой, что оно неподвижно относительно кадра.</li><li><b>Поцелуй.</b> Орнамент на парче модель переписывает от кадра к кадру. Если поплывёт — убери из ACTION движение ткани совсем, оставь волосы, цветы и пальцы.</li><li><b>Ночной дозор.</b> Поплывут лица во втором ряду — убери из ACTION девочку в золотом, она в глубине и тянет внимание модели сильнее всех.</li><li><b>Девятый вал.</b> Модель норовит обрушить волну раньше времени. Если рухнет — убери из ACTION фразу про заворачивающийся гребень, оставь только рост.</li></ul>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Эти промпты — верхний уровень работы с нейросетями. На обучении даю систему с самого начала: от первой генерации до портфолио, упаковки и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=paintings">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
