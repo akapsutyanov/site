@@ -60,6 +60,20 @@ h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto
   font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;
   transition:color .35s,border-color .35s,transform .35s}
 .btn-secondary:hover{color:var(--c1);border-color:rgba(220,220,220,.5);transform:translateY(-3px)}
+.disclaimer{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:16px 18px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.disclaimer .dz{font-size:17px;line-height:1.3;flex-shrink:0}
+.disclaimer .dt{font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.65}
+.disclaimer .dt b{color:var(--ink);font-weight:600}
+.disclaimer .dt a{color:#e8c88a;text-decoration:underline;text-underline-offset:3px}
+.materials{margin:44px auto 0;max-width:560px;text-align:center;padding:28px 24px;
+  border:1px solid rgba(200,200,200,.12);border-radius:18px;background:rgba(13,13,18,.7)}
+.materials .mt{font-size:15px;font-weight:600;color:var(--ink)}
+.materials p{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.65}
+.mlink{display:inline-flex;align-items:center;gap:8px;margin-top:18px;border:1px solid rgba(200,200,200,.25);
+  border-radius:9px;padding:12px 26px;font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--c2);text-decoration:none;transition:color .25s,border-color .25s,transform .25s}
+.mlink:hover{color:var(--c1);border-color:rgba(220,220,220,.5);transform:translateY(-2px)}
 .cta-hints{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
 .hint{font-size:11px;color:var(--ink3);letter-spacing:.5px;max-width:260px;text-align:center}
 
@@ -85,9 +99,16 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
     <p class="sub">Посмотри до конца — а дальше забирай подарок: пройди короткую игру и крути колесо с призами.</p>
   </header>
 
-  <!-- ▼ Замени код видео на свой: https://kinescope.io/embed/КОД -->
   <div class="player">
-    <iframe src="https://kinescope.io/embed/qkuQ8ZcXcUo8v8Cci4PRNu" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="Бонусное видео"></iframe>
+    <iframe src="https://www.youtube.com/embed/TFiKNznFKlc?rel=0&amp;modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Бонусное видео" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+
+  <div class="disclaimer">
+    <span class="dz">⚠️</span>
+    <div class="dt">
+      <b>Не закрывай эту страницу</b> — после видео здесь ждёт твой подарок.<br>
+      Если видео не запускается — <a href="https://youtu.be/TFiKNznFKlc" target="_blank" rel="noopener">смотри на YouTube</a> и возвращайся сюда за подарком.
+    </div>
   </div>
 
   <div class="ctas">
@@ -98,6 +119,12 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
     <div class="hint">Пара минут — и крутишь колесо. Приз достаётся каждому</div>
     <div class="hint">Уже решил(а) — выбирай формат и бронируй место на потоке</div>
   </div>
+  <div class="materials">
+    <div class="mt">📎 Все полезные материалы из видео</div>
+    <p>Промпты, ссылки и файлы, которые я показывал, — собрал в одном посте.</p>
+    <a class="mlink" href="https://t.me/akapustyanov/2476" target="_blank" rel="noopener">Забрать материалы в Telegram →</a>
+  </div>
+
 </div>
 
 <footer>
