@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карта обучения — мой прогресс | AI Новый Уровень</title>
+<meta name="description" content="Личная карта обучения: отмечай пройденные уроки и следи за прогрессом по всем модулям.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%, #d0d0d0 45%, #888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --ok:#5cd17a; --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px;width:100%}
+
+header{text-align:center;padding:64px 0 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:32px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(36px,7vw,56px);
+  line-height:1.04;color:var(--ink);margin-top:18px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+
+/* общий прогресс */
+.total{margin-top:30px;padding:26px 24px;border:1px solid rgba(200,200,200,.16);border-radius:20px;
+  background:rgba(13,13,18,.85);box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.t-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.t-lbl{font-size:11px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.t-num{font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1;
+  background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.t-bar{margin-top:16px;height:10px;border-radius:20px;background:rgba(255,255,255,.06);overflow:hidden}
+.t-bar i{display:block;height:100%;width:0;border-radius:20px;background:var(--chrome-grad);
+  transition:width .5s var(--eo)}
+.t-sub{margin-top:12px;font-size:13px;color:var(--ink2)}
+.t-sub b{color:var(--ink);font-weight:500}
+
+.note{margin-top:16px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(120,200,140,.2);border-radius:12px;background:rgba(92,209,122,.05)}
+.note .ni{font-size:15px;flex-shrink:0}
+.note .nt{font-size:12.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.note .nt b{color:var(--ink);font-weight:500}
+
+/* модуль */
+.mod{margin-top:30px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.6)}
+.mod.done{border-color:rgba(92,209,122,.3)}
+.m-head{display:flex;align-items:center;gap:14px;padding:20px 20px 14px}
+.m-em{flex-shrink:0;width:46px;height:46px;border-radius:13px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:21px}
+.m-info{flex:1;min-width:0}
+.m-kick{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:25px;color:var(--c1);line-height:1.15;margin-top:2px}
+.m-count{flex-shrink:0;font-size:13px;color:var(--ink3);font-variant-numeric:tabular-nums}
+.m-count b{color:var(--c2);font-weight:600}
+.mod.done .m-count b{color:var(--ok)}
+.m-bar{height:3px;background:rgba(255,255,255,.05)}
+.m-bar i{display:block;height:100%;width:0;background:var(--chrome-grad);transition:width .45s var(--eo)}
+.mod.done .m-bar i{background:linear-gradient(90deg,#5cd17a,#8ee6a4)}
+
+.lessons{padding:8px 12px 14px}
+.lesson{display:flex;align-items:center;gap:13px;padding:11px 10px;border-radius:10px;cursor:pointer;
+  transition:background-color .18s ease}
+.lesson:hover{background:rgba(255,255,255,.03)}
+.lesson input{position:absolute;opacity:0;width:0;height:0}
+.lesson .box{flex-shrink:0;width:22px;height:22px;border-radius:7px;border:1px solid rgba(200,200,200,.26);
+  background:rgba(255,255,255,.02);display:flex;align-items:center;justify-content:center;
+  transition:background-color .2s ease,border-color .2s ease}
+.lesson .box svg{width:13px;height:13px;opacity:0;transition:opacity .15s ease}
+.lesson input:checked + .box{background:linear-gradient(135deg,#8ee6a4,#5cd17a);border-color:transparent;animation:pop .3s var(--eo)}
+.lesson input:checked + .box svg{opacity:1}
+.lt{font-size:14px;font-weight:300;color:var(--ink);line-height:1.45;transition:color .2s ease}
+.lesson input:checked ~ .lt{color:var(--ink3);text-decoration:line-through;text-decoration-color:rgba(150,150,150,.5)}
+
+/* финал */
+.finish{margin-top:34px;padding:36px 26px;text-align:center;border:1px solid rgba(92,209,122,.28);
+  border-radius:20px;background:rgba(92,209,122,.05);display:none}
+.finish.on{display:block;animation:pop .5s var(--eo)}
+.finish .fe{font-size:46px}
+.finish h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:32px;color:var(--ink);margin-top:8px}
+.finish p{margin-top:12px;font-size:14px;font-weight:300;color:var(--ink2);line-height:1.7}
+
+.tools{margin:36px 0 0;text-align:center}
+.reset{background:none;border:1px solid var(--line);color:var(--ink3);border-radius:9px;
+  padding:11px 24px;font-family:inherit;font-size:11.5px;font-weight:500;letter-spacing:1px;
+  text-transform:uppercase;cursor:pointer;transition:color .2s ease,border-color .2s ease}
+.reset:hover{color:#e08b8b;border-color:rgba(224,139,139,.35)}
+
+footer{margin-top:46px;padding:26px 0 44px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:600px){
+  header{padding:46px 0 6px}
+  .t-num{font-size:38px}
+  .m-head{padding:16px 14px 12px;gap:11px}
+  .m-em{width:40px;height:40px;font-size:19px}
+  h2{font-size:21px}
+  .lessons{padding:6px 8px 12px}
+  .lt{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">AI — Новый Уровень</div>
+    <h1>Моя карта <em>обучения</em></h1>
+  </header>
+
+  <div class="total">
+    <div class="t-top">
+      <div class="t-lbl">Общий прогресс</div>
+      <div class="t-num" id="pct">0%</div>
+    </div>
+    <div class="t-bar"><i id="tbar"></i></div>
+    <div class="t-sub">Пройдено <b id="doneN">0</b> из <b>42</b> уроков</div>
+    <div class="note">
+      <span class="ni">✅</span>
+      <span class="nt"><b>Отметки сохраняются автоматически</b> — страницу можно закрывать, прогресс останется.
+      Он хранится в этом браузере: на другом устройстве и после очистки истории отметки не перенесутся.</span>
+    </div>
+  </div>
+
+  <section class="mod" data-m="0">
+    <div class="m-head">
+      <div class="m-em">🎯</div>
+      <div class="m-info">
+        <div class="m-kick">Модуль 1 · Готов к работе за вечер</div>
+        <h2>Брифинг</h2>
+      </div>
+      <div class="m-count"><b data-done="0">0</b>/4</div>
+    </div>
+    <div class="m-bar"><i data-bar="0"></i></div>
+    <div class="lessons">
+        <label class="lesson" data-id="m0_l0"><input type="checkbox" data-m="0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Брифинг</span></label>
+        <label class="lesson" data-id="m0_l1"><input type="checkbox" data-m="0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Обзор Синтакс / практика</span></label>
+        <label class="lesson" data-id="m0_l2"><input type="checkbox" data-m="0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Подписки: какие и зачем</span></label>
+        <label class="lesson" data-id="m0_l3"><input type="checkbox" data-m="0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Подписки: покупка</span></label>
+    </div>
+  </section>
+  <section class="mod" data-m="1">
+    <div class="m-head">
+      <div class="m-em">🧠</div>
+      <div class="m-info">
+        <div class="m-kick">Модуль 2 · Свой визуальный почерк</div>
+        <h2>Мышление и стиль</h2>
+      </div>
+      <div class="m-count"><b data-done="1">0</b>/10</div>
+    </div>
+    <div class="m-bar"><i data-bar="1"></i></div>
+    <div class="lessons">
+        <label class="lesson" data-id="m1_l0"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Как писать промпты</span></label>
+        <label class="lesson" data-id="m1_l1"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Как избавиться от творческих затыков</span></label>
+        <label class="lesson" data-id="m1_l2"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Задание к уроку 2</span></label>
+        <label class="lesson" data-id="m1_l3"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Как найти и оформить свой визуальный стиль</span></label>
+        <label class="lesson" data-id="m1_l4"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Задание к уроку 3</span></label>
+        <label class="lesson" data-id="m1_l5"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Как составить мудборд и выбрать референсы</span></label>
+        <label class="lesson" data-id="m1_l6"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Задание к уроку 4</span></label>
+        <label class="lesson" data-id="m1_l7"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Как и где выбрать референсы для генераций</span></label>
+        <label class="lesson" data-id="m1_l8"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Источники вдохновения</span></label>
+        <label class="lesson" data-id="m1_l9"><input type="checkbox" data-m="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Что значит быть арт-директором своего контента</span></label>
+    </div>
+  </section>
+  <section class="mod" data-m="2">
+    <div class="m-head">
+      <div class="m-em">🎬</div>
+      <div class="m-info">
+        <div class="m-kick">Модуль 3 · 3 кейса в портфолио</div>
+        <h2>Портфолио</h2>
+      </div>
+      <div class="m-count"><b data-done="2">0</b>/14</div>
+    </div>
+    <div class="m-bar"><i data-bar="2"></i></div>
+    <div class="lessons">
+        <label class="lesson" data-id="m2_l0"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Что такое сильное портфолио</span></label>
+        <label class="lesson" data-id="m2_l1"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Как писать сценарии</span></label>
+        <label class="lesson" data-id="m2_l2"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Создание карты персонажа + локации</span></label>
+        <label class="lesson" data-id="m2_l3"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Нейрофотосессия</span></label>
+        <label class="lesson" data-id="m2_l4"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Фотосессия в белье</span></label>
+        <label class="lesson" data-id="m2_l5"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Модели, которыми я пользуюсь</span></label>
+        <label class="lesson" data-id="m2_l6"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Стили анимации</span></label>
+        <label class="lesson" data-id="m2_l7"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Кейс 1 — анимация</span></label>
+        <label class="lesson" data-id="m2_l8"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Claude Skill — трендовое видео</span></label>
+        <label class="lesson" data-id="m2_l9"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Kling Motion — превращение в персонажа</span></label>
+        <label class="lesson" data-id="m2_l10"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Кейс 2 — продуктовый ролик</span></label>
+        <label class="lesson" data-id="m2_l11"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Звук</span></label>
+        <label class="lesson" data-id="m2_l12"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Кейс 3 — диалог + все приёмы</span></label>
+        <label class="lesson" data-id="m2_l13"><input type="checkbox" data-m="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Экзамен</span></label>
+    </div>
+  </section>
+  <section class="mod" data-m="3">
+    <div class="m-head">
+      <div class="m-em">📈</div>
+      <div class="m-info">
+        <div class="m-kick">Модуль 4 · Профиль, который приводит людей</div>
+        <h2>Продвижение</h2>
+      </div>
+      <div class="m-count"><b data-done="3">0</b>/6</div>
+    </div>
+    <div class="m-bar"><i data-bar="3"></i></div>
+    <div class="lessons">
+        <label class="lesson" data-id="m3_l0"><input type="checkbox" data-m="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Вводный урок</span></label>
+        <label class="lesson" data-id="m3_l1"><input type="checkbox" data-m="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Упаковка профиля / Я-ниша</span></label>
+        <label class="lesson" data-id="m3_l2"><input type="checkbox" data-m="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Сценарий / Контент-стратегия</span></label>
+        <label class="lesson" data-id="m3_l3"><input type="checkbox" data-m="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Сценарий / Производство рилсов</span></label>
+        <label class="lesson" data-id="m3_l4"><input type="checkbox" data-m="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Упаковка ТГ / Связка IG + TG</span></label>
+        <label class="lesson" data-id="m3_l5"><input type="checkbox" data-m="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Масштабирование / Антивыгорание</span></label>
+    </div>
+  </section>
+  <section class="mod" data-m="4">
+    <div class="m-head">
+      <div class="m-em">🌐</div>
+      <div class="m-info">
+        <div class="m-kick">Модуль 5 · Личная сайт-витрина</div>
+        <h2>Сайт в Claude</h2>
+      </div>
+      <div class="m-count"><b data-done="4">0</b>/1</div>
+    </div>
+    <div class="m-bar"><i data-bar="4"></i></div>
+    <div class="lessons">
+        <label class="lesson" data-id="m4_l0"><input type="checkbox" data-m="4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Портфолио в Claude AI</span></label>
+    </div>
+  </section>
+  <section class="mod" data-m="5">
+    <div class="m-head">
+      <div class="m-em">🚀</div>
+      <div class="m-info">
+        <div class="m-kick">Модуль 6 · Первый клиент + система</div>
+        <h2>Масштаб</h2>
+      </div>
+      <div class="m-count"><b data-done="5">0</b>/7</div>
+    </div>
+    <div class="m-bar"><i data-bar="5"></i></div>
+    <div class="lessons">
+        <label class="lesson" data-id="m5_l0"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Вводный урок</span></label>
+        <label class="lesson" data-id="m5_l1"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Урок 1 — Продвинутая практика рилсов</span></label>
+        <label class="lesson" data-id="m5_l2"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Урок 2 — Посадочный пост</span></label>
+        <label class="lesson" data-id="m5_l3"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Урок 3 — Ценообразование, оффер и первая продажа</span></label>
+        <label class="lesson" data-id="m5_l4"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Урок 4 — Холодные продажи</span></label>
+        <label class="lesson" data-id="m5_l5"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Урок 5 — ChatPlace и воронка</span></label>
+        <label class="lesson" data-id="m5_l6"><input type="checkbox" data-m="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="lt">Урок 6 — Карусели и финал</span></label>
+    </div>
+  </section>
+
+  <div class="finish" id="finish">
+    <div class="fe">🏆</div>
+    <h3>Курс пройден полностью</h3>
+    <p>Все 42 урока отмечены. Ты прошёл путь, который проходят единицы — от первого знакомства с ИИ до системы, которая работает.<br>Теперь главное не останавливаться.</p>
+  </div>
+
+  <div class="tools">
+    <button class="reset" id="reset">Сбросить прогресс</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+</footer>
+
+<script>
+(function(){
+  var KEY='nc_progress_v1';
+  var boxes=[].slice.call(document.querySelectorAll('.lesson input'));
+  var total=boxes.length;
+
+  function load(){
+    var saved={};
+    try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){}
+    boxes.forEach(function(b){
+      var id=b.parentNode.dataset.id;
+      if(saved[id]) b.checked=true;
+    });
+  }
+  function save(){
+    var o={};
+    boxes.forEach(function(b){ if(b.checked) o[b.parentNode.dataset.id]=1; });
+    try{ localStorage.setItem(KEY, JSON.stringify(o)); }catch(e){}
+  }
+  function render(){
+    var done=0;
+    document.querySelectorAll('.mod').forEach(function(mod){
+      var mi=mod.dataset.m;
+      var list=[].slice.call(mod.querySelectorAll('input'));
+      var d=list.filter(function(b){return b.checked}).length;
+      done+=d;
+      mod.querySelector('[data-done="'+mi+'"]').textContent=d;
+      mod.querySelector('[data-bar="'+mi+'"]').style.width=(d/list.length*100)+'%';
+      mod.classList.toggle('done', d===list.length);
+    });
+    var pct=Math.round(done/total*100);
+    document.getElementById('pct').textContent=pct+'%';
+    document.getElementById('tbar').style.width=pct+'%';
+    document.getElementById('doneN').textContent=done;
+    document.getElementById('finish').classList.toggle('on', done===total);
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', function(){ save(); render(); }); });
+  document.getElementById('reset').addEventListener('click', function(){
+    if(!confirm('Сбросить весь прогресс? Отметки будут удалены.')) return;
+    boxes.forEach(function(b){ b.checked=false; });
+    save(); render();
+  });
+  load(); render();
+})();
+</script>
+</body>
+</html>
