@@ -91,6 +91,27 @@ pre{margin:0;padding:18px;max-height:280px;overflow:auto;white-space:pre-wrap;wo
 pre::-webkit-scrollbar{width:8px}
 pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
 
+.mclass{margin:56px 0 0;display:flex;gap:20px;align-items:center;padding:26px 26px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mclass .mc-play{flex-shrink:0;width:62px;height:62px;border-radius:50%;background:var(--chrome-grad);
+  display:flex;align-items:center;justify-content:center;color:#0a0a0a;font-size:21px;
+  box-shadow:0 8px 22px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.55)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:15px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:26px 20px}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+
 .cta{margin:64px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
   border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
 .cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
@@ -397,6 +418,16 @@ Both panels sit against the same pure seamless pink cyclorama with no objects an
 Captured with a wide-latitude cinema look and a clean fast eighty-five-millimeter-equivalent character at a wide aperture, gentle perspective compression, shallow depth of field holding her sharp while the cyclorama falls softly out behind her, a light diffusion bloom lifting the brightest highlights into a soft halation, color-negative daylight film rendition with fine 35mm grain across skin, denim, rib knit, and backdrop in both panels, in an M2 studio editorial register. Warm glossy skin rendition against the monochrome pink palette, identical in value and hue across the face, arms, midriff, back, hands, and feet in both panels, never darkened, never tanned, never cool-shifted. The white of the tank and the light-blue wash of the denim render true and consistent across both panels. Contrast lifted with a glamour-magazine snap, highlights rolled off softly and never clipping to pure white, shadows deep but open and never crushed to black. Real photographic frames captured on a real cinema camera, real fabric, real human subject, real seamless paper and real studio light — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no artificial glow.</pre>
     </div>
   </section>
+
+  <div class="mclass">
+    <div class="mc-play">▶</div>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+    </div>
+    <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=poses">Смотреть →</a>
+  </div>
 
   <div class="cta">
     <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
