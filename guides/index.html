@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гайды и промпты | AI — Новый Уровень</title>
+<meta name="description" content="Все бесплатные гайды по нейросетям в одном месте: готовые промпты для видео, портретов, товарной съёмки и оживления картин.">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Гайды и промпты · AI — Новый Уровень">
+<meta property="og:description" content="Готовые промпты для нейросетей: видео, портреты, товарная съёмка, оживление картин. Забирай бесплатно.">
+<meta property="og:url" content="https://neurocreator2.ru/guides/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:70px 0 10px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.04;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:600px;margin:20px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* мастер-класс сверху */
+.mclass{margin:36px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.18);border-radius:20px;background:rgba(13,13,18,.85);
+  box-shadow:0 18px 44px rgba(0,0,0,.45);text-align:left}
+.mc-thumb{position:relative;flex-shrink:0;width:250px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.26);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:48px;height:48px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:16px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.1)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mc-body{flex:1;min-width:0}
+.mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mc-t{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.sect{margin-top:52px}
+.sect-lbl{display:flex;align-items:center;gap:14px;font-size:10.5px;font-weight:700;
+  letter-spacing:2.6px;text-transform:uppercase;color:var(--c3)}
+.sect-lbl::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(200,200,200,.14),transparent)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;margin-top:20px}
+.gcard{display:flex;flex-direction:column;padding:22px 20px;border:1px solid var(--line);border-radius:18px;
+  background:rgba(13,13,18,.66);text-decoration:none;
+  transition:border-color 200ms ease,background-color 200ms ease,transform 200ms var(--eo)}
+.gcard:hover{border-color:rgba(220,220,220,.34);background:rgba(20,20,26,.9);transform:translateY(-3px)}
+.g-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.g-em{font-size:26px;line-height:1}
+.g-n{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink3);
+  border:1px solid var(--line);border-radius:20px;padding:5px 11px;white-space:nowrap}
+.g-t{margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;color:var(--c1);line-height:1.18}
+.hot{display:inline-block;vertical-align:middle;margin-left:4px;font-family:'Montserrat',sans-serif;
+  font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#0a0a0a;
+  background:linear-gradient(135deg,#8ee6a4,#5cd17a);border-radius:20px;padding:3px 8px}
+.g-d{margin-top:9px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6;flex:1}
+.g-go{margin-top:16px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;
+  background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+
+.cta{margin:56px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:50px 0 8px}
+  .grid{grid-template-columns:1fr}
+  .cta{padding:34px 20px}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">AI — Новый Уровень</div>
+    <h1>Гайды и <em>промпты</em></h1>
+    <p class="intro">Всё, что я показываю в роликах, — собрано здесь. <b>Готовые промпты, которые можно скопировать и повторить сегодня.</b> Бесплатно, без регистраций.</p>
+
+    <div class="mclass">
+      <a class="mc-thumb" href="../bonus/?from=guides">
+        <img src="../assets/masterclass.jpg" alt="Мастер-класс Seedance 2.0" loading="lazy" width="800" height="450">
+        <span class="pl">▶</span>
+      </a>
+      <div class="mc-body">
+        <div class="mc-kick">Начни отсюда · бесплатный мастер-класс</div>
+        <div class="mc-t">Как это собирается — от идеи до ролика</div>
+        <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+        <a class="mc-btn" href="../bonus/?from=guides">Смотреть мастер-класс →</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="sect">
+    <div class="sect-lbl">Гайды с промптами</div>
+    <div class="grid">
+    <a class="gcard" href="../pov/">
+      <div class="g-top">
+        <span class="g-em">🎥</span>
+        <span class="g-n">3 промпта</span>
+      </div>
+      <div class="g-t">POV: телефон как камера <span class="hot">Новое</span></div>
+      <div class="g-d">Связка из трёх сцен со сквозным сюжетом и двумя финалами — дракон или гигантский пёс.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../paintings/">
+      <div class="g-top">
+        <span class="g-em">🖼</span>
+        <span class="g-n">18 промптов</span>
+      </div>
+      <div class="g-t">Оживление классических картин <span class="hot">Новое</span></div>
+      <div class="g-d">Девять шедевров, и ты внутри каждого: Климт, Рембрандт, Айвазовский, Магритт.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../spider/">
+      <div class="g-top">
+        <span class="g-em">🕸</span>
+        <span class="g-n">7 промптов</span>
+      </div>
+      <div class="g-t">Ты — супергерой </div>
+      <div class="g-d">Семь кинокадров без маски: полёт над городом, портрет после боя, перевёрнутый город.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../hero/">
+      <div class="g-top">
+        <span class="g-em">🧱</span>
+        <span class="g-n">4 промпта</span>
+      </div>
+      <div class="g-t">Превращение в героя </div>
+      <div class="g-d">LEGO, low-poly, Minecraft, Pixar — мир остаётся настоящим, меняешься только ты.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../knight/">
+      <div class="g-top">
+        <span class="g-em">⚔️</span>
+        <span class="g-n">3 промпта</span>
+      </div>
+      <div class="g-t">Рыцарь на горе </div>
+      <div class="g-d">Замок на скале, километровая пропасть и дракон в долине. От карты героя до видео.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../grid/">
+      <div class="g-top">
+        <span class="g-em">🔲</span>
+        <span class="g-n">4 промпта</span>
+      </div>
+      <div class="g-t">Одно фото — целая съёмка </div>
+      <div class="g-d">Beauty-коллаж, раскадровка сцены, продуктовая сетка и лист персонажа.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../poses/">
+      <div class="g-top">
+        <span class="g-em">💃</span>
+        <span class="g-n">9 промптов</span>
+      </div>
+      <div class="g-t">Библиотека поз </div>
+      <div class="g-d">Перенос любой позы с чужого фото на себя + шесть студийных поз на розовой циклораме.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../metro/">
+      <div class="g-top">
+        <span class="g-em">🕹</span>
+        <span class="g-n">6 промптов</span>
+      </div>
+      <div class="g-t">Эволюция графики </div>
+      <div class="g-d">Один кадр через три эпохи: Game Boy → 16 бит → low-poly. С исходным видео.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    <a class="gcard" href="../seedance/">
+      <div class="g-top">
+        <span class="g-em">🎬</span>
+        <span class="g-n">файл .skill</span>
+      </div>
+      <div class="g-t">Скилл Seedance 2.0 </div>
+      <div class="g-d">Файл для Claude: он начинает писать промпты как режиссёр — свет, оптика, тайминг.</div>
+      <span class="g-go">Открыть →</span>
+    </a>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Хочешь не промпты, <em>а профессию</em>?</h3>
+    <p>Промпты — это инструменты. На обучении даю систему: от первой генерации до портфолио, упаковки и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="../anketa?from=excursion&amp;utm_source=guides">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../master/" target="_blank" rel="noopener">Об обучении</a>
+      <a href="../vacancies/" target="_blank" rel="noopener">AI-вакансии</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+</body>
+</html>
