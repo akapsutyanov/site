@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POV: телефон как камера — 3 сцены | AI Новый Уровень</title>
+<meta name="description" content="Связка из трёх POV-сцен: кофе в поле, падение телефона и две альтернативные концовки — дракон или гигантский пёс.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="POV: телефон как камера · 3 сцены">
+<meta property="og:description" content="Кофе → падение телефона → дракон или гигантский пёс. Три промпта Seedance.">
+<meta property="og:url" content="https://neurocreator2.ru/pov/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* схема связки */
+.flow{margin-top:34px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.fl{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 18px;min-width:130px;
+  border:1px solid var(--line);border-radius:14px;background:rgba(13,13,18,.7)}
+.fl .fe{font-size:22px}
+.fl .fn{font-size:12.5px;font-weight:500;color:var(--ink)}
+.fl .fd{font-size:10.5px;color:var(--ink3);letter-spacing:.5px}
+.farr{color:var(--ink3);font-size:15px}
+.fork{display:flex;flex-direction:column;gap:10px}
+.fork-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3);text-align:center;width:100%}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:290px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:250px;padding:14px}
+  .cta{padding:34px 20px}
+  .flow{flex-direction:column} .farr{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>POV: телефон<br>как <em>камера</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Связка из трёх сцен, которые склеиваются встык: <b>кадр, на котором кончается одна, — это первый кадр следующей</b>. Камера здесь — телефон в руке героя, и она ни разу не появляется в кадре. У истории две концовки: эпичная и тёплая — выбирай, какую снять.</p>
+
+    <div class="flow">
+      <div class="fl"><span class="fe">☕</span><span class="fn">Кофе</span><span class="fd">10 сек</span></div>
+      <span class="farr">→</span>
+      <div class="fork">
+        <div class="fork-lbl">на выбор</div>
+        <div class="fl"><span class="fe">🐉</span><span class="fn">Дракон</span><span class="fd">12 сек · финал A</span></div>
+        <div class="fl"><span class="fe">🐕</span><span class="fn">Гигантский пёс</span><span class="fd">12 сек · финал B</span></div>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Как пользоваться</div>
+      <ol>
+        <li>Подготовь <b>три референса</b>: герой (лицо + костюм), локация (поле в тумане) и существо — дракон или пёс.</li>
+        <li>Подставь их в промпт как <b>@image1</b> (существо), <b>@image2</b> (герой), <b>@image3</b> (локация) — в промпте они уже расписаны.</li>
+        <li>Генерируй в <b>Seedance 2.0</b>, вертикаль 9:16, затем склей клипы встык — стык незаметен, потому что кадры совпадают.</li>
+      </ol>
+      <div class="note">💡 Главный приём: <b>телефон никогда не виден</b> — он и есть камера. Во второй сцене падает только телефон, герой всё это время спокойно стоит. Именно этот контраст и делает эффект.</div>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">☕</div>
+      <div>
+        <div class="s-kicker">Сцена 1 · 10 секунд</div>
+        <h2>Кофе перед боем</h2>
+      </div>
+    </div>
+    <p class="s-lead">Рыцарь в поле стоит с телефоном в вытянутой руке и кофе во второй. Пьёт, не глядя в камеру, швыряет стакан за спину — тот раскрывается в полёте — и медленно поднимает руку, пока объектив не упирается в серое небо. Полный дедпан.</p>
+    <div class="s-tag">📎 Нужны: герой + локация</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance 2.0</span>
+        <button class="copy" data-id="c1">Копировать</button>
+      </div>
+      <pre id="c1">SCENE CONTEXT
+Phone-POV comedy-cool beat: a young knight in battle-worn plate armor stands in a foggy field holding his PHONE in his RIGHT hand, arm out to his right side — WE ARE THE PHONE; the phone itself is never seen, it IS the camera. His LEFT hand holds a plain white paper coffee cup with a white plastic sip-lid. He doesn&#x27;t look at us: he stares flatly ahead into the fog with a calm, indifferent &quot;well… here we go&quot; face, sips through the lid&#x27;s opening, tosses the CUP with his left hand straight back behind him — then a beat later slowly raises his right hand upward, the phone lifting with it until the lens points straight up into the fog and grey sky. 10 seconds, one continuous POV shot, vertical 9:16, full realism.
+
+ACTIVE REFERENCES — STRICT ROLE HIERARCHY
+@image3: LOCATION — a foggy grass field under heavy overcast: tall knee-high grass rolling edge to edge, a few dark mossy boulders half-sunk in the mid-distance, dense fog erasing the horizon into a luminous grey-white void, visibility 40–60 meters. 100% matches the reference. A steady wind lives in the scene — grass swaying in running waves.
+@image2: HERO — controls everything including the face: curly mid-brown hair, green-hazel eyes, reddish-blond beard, small silver drop earring in left ear; battle-worn full steel plate armor with engraved detailing; blackened riveted chainmail gorget; brown leather sword-belt with the sheathed arming sword on his RIGHT hip; articulated steel gauntlets; charcoal wool cloak. An adult man of ordinary height and sturdy build. 100% match, zero drift on face and armor.
+
+THE CUP — prop lock, LEFT HAND
+A plain white paper coffee cup with a white plastic sip-lid, unbranded, steam curling faintly from the lid&#x27;s opening. Held in his LEFT hand for the entire clip. Real disposable-cup physics.
+
+FORMAT MODE
+One continuous shot, 10 seconds, vertical 9:16. NO cuts. The camera IS his phone — iPhone 16 Pro character: crisp wide digital look, natural handheld micro-shake transmitted from his right hand. THE PHONE NEVER APPEARS IN FRAME — no phone body, no screen, no reflection of it; we only ever see what its lens sees.
+
+CAMERA — THE PHONE IN HIS RIGHT HAND
+Held in his RIGHT hand, arm extended out to his RIGHT side at chest-shoulder height, lens aimed back at him — he reads in a close three-quarter framing from his right side, chest-up, like a candid selfie-video he isn&#x27;t bothering to watch. His LEFT hand (with the cup) is on the far side of frame; behind him the foggy field, grass waves, a dark boulder ghosting in the grey. The frame breathes with his right arm — every weight shift and gesture reads as organic handheld motion. IMPORTANT: he NEVER looks into the lens; his eyes stay fixed FORWARD into the fog the entire time.
+
+FIRST FRAME / BLOCKING
+Selfie-distance chest-up framing, hero positioned left-of-center in frame (his extended right arm holding the phone pushes the frame slightly toward him), face and shoulders occupying the frame&#x27;s vertical center, foggy field and grass filling the right two-thirds and the background. This exact centering holds for the entire clip until the final upward lift — the hero does not drift toward frame edges or re-center during the stare, sip, or cup toss.
+
+ACTION — 0:00–0:10
+0:00–0:03 THE STARE: he stands still, right arm holding us out to his side, and just looks ahead into the fog wall — calm, flat, unimpressed; heavy-lidded indifferent eyes, a slow tired blink; the vibe of &quot;well… so this is what&#x27;s waiting for me.&quot; Wind streams his curls across his brow and stirs the cloak; he breathes visibly.
+0:03–0:06 THE SIP: without moving his gaze from the fog, his LEFT hand raises the cup into frame and he takes a long, deliberate, unbothered sip through the lid&#x27;s opening — a slow swallow, steam mixing with his breath in the cold air. One slow blink mid-sip. He lowers the cup — a tiny exhale through the nose, almost a scoff.
+0:06–0:07.5 THE CUP TOSS — LEFT HAND, STRAIGHT BACK: still staring ahead, his left arm flicks the cup BACKWARD OVER HIS LEFT SHOULDER, straight behind his back, without a glance — the cup arcs through the background of the frame: mid-flight the lid POPS OFF, coffee bursts free in a dark twisting arc, splattering across the grass behind him; the empty cup bounces once and settles. His face doesn&#x27;t change at all.
+0:07.5–0:10 THE LIFT — RIGHT HAND, SLOW RISE: a beat — then, same flat expression, his right arm slowly rises straight up in front of him, no swing, no snap, just a smooth unhurried lift — his figure drops out of frame as the lens tilts upward with the rising arm, passing his shoulder, the top of his head, and settling on an open view of drifting fog and flat grey sky, holding there as the wind hisses past the mic and the fog rolls slowly overhead. The clip ends on this quiet upward view.
+
+HIS PERFORMANCE
+Total deadpan confidence: a self-assured young knight who has decided to be unimpressed by whatever waits in the fog. No smiles, no fear, no glances at the lens — flat calm eyes forward, natural blinks, visible slow breathing, micro-expressions only: the tired blink, the tiny nose-exhale, one slow swallow after the sip.
+
+PHYSICS
+The POV inherits every real motion of his right arm — micro-shake, the subtle dip as he sips, then the smooth, unhurried rise as he lifts his arm at the end. The cup: real lightweight paper-cup ballistics from a left-handed over-the-shoulder toss — fast flips, lid separating under rotation, coffee leaving as a coherent twisting arc breaking into drops, everything landing in a believable spread behind him. The upward lift: steady, continuous arm-raise speed, natural micro-shake throughout, no sudden acceleration. Wind moves grass, hair and cloak with natural lag throughout, and moves the fog slowly overhead in the final view.
+
+LIGHTING
+Flat, soft, shadowless overcast-fog light per @image3: cool grey-white, no sun, no direction; soft dull sky reflections on his armor; the pale cup and steam standing out softly against the muted scene; the final sky view holding the same flat luminous grey-white.
+
+AUDIO
+Wind over the mic, grass hiss, armor creaking at small shifts. The sip: a quiet slurp, a soft swallow. The cup toss: a soft whoosh behind him, the lid popping, coffee splattering in the grass. The lift: the soft creak of his gauntlet and pauldron shifting as the arm rises, wind growing slightly louder and more open as the lens clears his shoulder and faces the sky. His single flat exhale through the nose. No music, no dialogue, no subtitles.
+
+POSITIVE CONSTRAINTS
+One continuous phone-POV shot — no cuts, no third-person view; the camera obeys the logic of a phone held in his RIGHT hand throughout, including during the final lift. THE PHONE ITSELF IS NEVER VISIBLE — no phone body, no screen, no hand-holding-phone shot from outside.
+HAND LOGIC LOCKED: phone stays in the RIGHT hand for the entire clip, never thrown or released; cup in the LEFT hand, tossed by the LEFT hand straight back behind him at ~0:06.5 and bursts open mid-air. The right arm&#x27;s final motion is a slow, smooth, continuous lift — no swing, no snap, no throwing motion of any kind.
+He NEVER looks into the lens — eyes forward into the fog until his figure passes out of frame during the lift; face calm and indifferent throughout, no smiles, no fear.
+NO dragon, NO creature, NO other person visible — only him, the field, the fog and, at the end, the open sky. Face and armor 100% @image2 zero drift, sword worn on the right hip; location 100% @image3 with living wind.
+Full realism: real skin with pores, real hair in the wind, true metal, paper and liquid physics — no animated look, no CG sheen, no plastic skin. Clean image: no grain, no vignette. No text, no logos, no watermarks.
+
+OPTICS
+iPhone 16 Pro phone-camera character: crisp wide digital look, deep focus, natural clarity — NOT anamorphic, NO cinematic bokeh; everything sharp the way a phone shoots. Slight lens breathing with motion; no motion blur beyond natural handheld micro-shake, since there is no throw.
+Focus locked on him for the first two-thirds, drifting to a soft, even focus on the fog and sky once the lens tilts upward.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">🐉</div>
+      <div>
+        <div class="s-kicker">Финал A · 12 секунд</div>
+        <h2>Пробуждение дракона</h2>
+      </div>
+    </div>
+    <p class="s-lead">Телефон падает из поднятой руки, кувыркается сквозь туман и приземляется в траву. С этой низкой точки открывается вся картина: рыцарь стоит перед спящим драконом. Звон вынимаемого меча будит его — и рёв срывает телефон с земли.</p>
+    <div class="s-tag">📎 Нужны: дракон + герой + локация</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance 2.0</span>
+        <button class="copy" data-id="c2">Копировать</button>
+      </div>
+      <pre id="c2">SCENE CONTEXT
+Continuation, same phone: the shot OPENS exactly where the previous clip ended — the lens still tilted up into drifting fog and flat grey sky. A beat, then WE, the phone itself, begin to fall: the view drops and tumbles through the fog, DOWN toward the ground. The HERO never falls — only the camera does. We slam into the grass, bounce, flip once more and settle low on the ground. From this low resting angle the whole picture finally reveals itself: the hero stands intact and upright in the foggy field, facing a COLOSSAL sleeping wild dragon. He draws his sword — and at the ring of steel the dragon wakes: one eye opens, finds him, the huge head rises, the jaws part, and a deafening ROAR blasts across the field — its sheer force rips us off the ground and hurls us away. The video ends there. 12 seconds, one continuous POV shot, vertical 9:16, full realism.
+
+ACTIVE REFERENCES — STRICT ROLE HIERARCHY
+@image3: LOCATION — a foggy grass field under heavy overcast: tall knee-high grass rolling edge to edge, a few dark mossy boulders half-sunk in the mid-distance, dense fog erasing the horizon into a luminous grey-white void, visibility 40–60 meters. 100% matches the reference. A steady wind lives in the scene — grass swaying in running waves.
+@image1: DRAGON — a WILD dragon, colossal adult: body ~60 meters nose-to-tail, shoulder height ~12 meters, head over 4 meters long, folded wings rising like pale hills off its back. Against the hero the difference is absolute: he stands no taller than the toes of its foreclaw; his whole body is smaller than its eye region — this size gap must be readable in every frame.
+SCALE TEXTURE — dense obsidian-dark keratin plates with matte micro-relief: growth ridges, chipped edges, faint dirt in the seams. NOT plastic, NOT uniform gloss.
+WING TEXTURE — a completely different material from the scales and it must read so: bare leathery membrane between long finger-bones, translucent skin with branching veins glowing warm amber where backlit, fine wrinkles and creases at the folds, matte and soft where the scales are hard and faceted; wings folded against the body.
+NO TACK — the dragon is wild: NO saddle, NO reins, NO bridle, NO straps anywhere on its body — bare scales only.
+LIVING MASS — it breathes HEAVILY even in sleep: each breath a slow enormous event, the ribcage swelling and sinking like a tide, a low rumbling exhale stirring the grass and fog before its nostrils; in sleep it SHIFTS slightly — a wing settling, the tail tip dragging, a foreclaw curling — every movement SLOW and fluid, mass-heavy. Its far body parts (hindquarters, tail) soften into the fog while the near mass stays crisp.
+@image2: HERO — curly mid-brown hair, green-hazel eyes, reddish-blond beard, small silver drop earring in left ear, battle-worn full steel plate armor with fleur-de-lis engraving, blackened riveted chainmail gorget, charcoal wool cloak. An adult man of ordinary human height, sturdy build. A brown leather sword-belt with a sheathed arming sword worn on his right hip. 100% matches the reference, zero drift on face and armor.
+
+FORMAT MODE
+One continuous shot, 12 seconds, vertical 9:16. NO cuts. The camera IS the phone — iPhone 16 Pro character: crisp wide digital look, deep focus. THE PHONE NEVER APPEARS AS AN OBJECT — no phone body, no screen, no cracked glass overlay, no view of a phone lying in the grass from outside: at every moment, including the fall, the rest on the ground and the final blast, the phone is only ever the CAMERA — the eyes of the video. THE HERO NEVER FALLS OR TUMBLES — only the camera does; he is discovered already standing, upright and composed, once the camera settles.
+
+CAMERA — THE FALLING AND LANDED VIEWPOINT
+0:00–0:01 OPENING HOLD: the frame holds exactly as the last clip left it — flat grey-white fog and sky filling the entire view, faint wind hiss.
+0:01–0:02.5 THE FALL: the view tips and DROPS, the fog and grey blurring into streaked downward motion as we fall, IMPACT: a hard jolt as we hit the grass, the world whip-flips once as we bounce, grass blades slash across the frame — and we SETTLE tilted low in the grass, lens facing forward into the field. A few blades lean into the bottom edge of frame, slightly soft; the frame is still, canted a few degrees — a phone lying where it fell.
+0:02.5 onward: locked ground-level wide view from inside the grass. THE FULL PICTURE now reads in deep layers: near grass blades → open field → the HERO already standing small, intact, back three-quarter to us, facing away into the scene — and beyond him, filling the frame&#x27;s upper half, the SLEEPING DRAGON: an enormous dark mass rising out of the fog like a hill, head resting on the ground with the long muzzle toward him, dorsal spikes running up its neck, folded membrane wings looming, hindquarters and tail dissolving into the grey. The scale gap is brutal and beautiful: he is a small dark-steel speck against its bulk; its closed eye alone reads bigger than his torso.
+
+FIRST FRAME / BLOCKING
+Once the camera settles at 0:02.5, the hero is positioned center-frame, slightly left of the vertical midline, standing in the lower third of frame with grass at his boots; the dragon&#x27;s head and bulk fill the upper two-thirds directly behind and above him. This centering holds fixed for the entire stand-off, draw, and waking sequence — the hero does not drift toward either frame edge until the roar-blast tears the camera away.
+
+ACTION — 0:00–0:12
+0:00–0:01 Opening hold on sky and fog (above).
+0:01–0:02.5 The fall and landing (above). Wind settles; grass ticks against the lens; far off, the dragon&#x27;s slow tidal breathing moves its ribcage, fog curling at its nostrils with each rumbling exhale; a wing shifts lazily in sleep.
+0:02.5–0:05.5 THE STAND-OFF: the hero stands motionless before the mass, wind streaming his curls and the cloak&#x27;s edge, grass waves running past his boots. He breathes — shoulders rising once, slow — a natural blink read even at this distance in his posture: calm, self-assured, unhurried. The dragon sleeps on: another enormous breath swells and sinks; the tail tip drags a slow half-meter through the grass.
+0:05.5–0:07.5 THE DRAW: his right hand crosses to the right hip and DRAWS the arming sword — the long, bright, ringing SCRAPE of steel leaving the scabbard cuts through the field&#x27;s hush; he settles the blade low at his side, feet shifting into a loose ready stance. The sound hangs in the fog.
+0:07.5–0:09.5 THE WAKING: a beat of silence — then the dragon&#x27;s near EYE OPENS: the lid peels back slow and deliberate, revealing a huge amber-gold eye with a vertical pupil that CONTRACTS and swivels, locking onto him. A deep rumble starts somewhere inside the ribcage, felt as a tremble in our frame. The head begins to LIFT off the ground — grass and fog pouring off the jaw — the dorsal spikes rising and flaring one row after another, the whole motion slow, fluid, unstoppable, mass-heavy.
+0:09.5–0:12 THE ROAR: the head rears to full height above him, the JAWS PART wide — rows of white teeth, the deep throat — and it ROARS: a physical wall of sound. The blast flattens a radius of grass in a rushing ring, rips the fog apart in streaks, slams the hero&#x27;s cloak and hair hard backward (he plants his feet, blade up, holding his ground, tiny against it) — and hits US: the frame SHUDDERS violently, grass whips flat across the lens, and we are TORN off the ground and hurled backward, the world smearing into spin — a frame or two of tumbling grey-green blur — CUT TO BLACK mid-flight. The video ends inside the roar.
+
+PHYSICS
+Our fall and landing: true dropped-phone deceleration — a streaked airborne fall, a hard first impact with a jolt-blur frame, one shorter bounce-flip, a skidding settle; grass reacting where we land. The dragon: mass-true motion at 60-meter scale — every movement slow with enormous inertia; breathing that visibly displaces fog and grass; the waking head lifting like heavy machinery, smooth and continuous; the roar producing a real pressure wave — radial grass flattening, fog shredding, loose blades and dew whipped past the lens, and finally enough force at our distance to flip a lightweight object off the ground. Hero: real human bracing against wind-blast — leaning in, cloak snapping horizontal, one step absorbed. Sword draw with true steel-on-scabbard friction and ring.
+
+LIGHTING
+Flat, soft, shadowless overcast-fog light per @image3: cool grey-white, no sun; the dragon&#x27;s dark scales holding a dull matte sheen with faint highlight catch even in diffuse light; his armor in dull sky reflections; everything beyond the dragon&#x27;s midline melting into the fog void. Natural exposure, muted true colors.
+
+AUDIO
+Opening: quiet wind hiss over fog. The fall: a rush of wind, then a hard thud, grass scrape, a settling tick. Then field hush: wind, grass hiss, and the dragon&#x27;s slow colossal breathing — a low tidal rumble with each exhale. The sword: a long bright steel SCHIIING that hangs in the fog. The waking: a sub-bass rumble building in its chest, the creak of enormous mass shifting. The ROAR: overwhelming, layered — sub-bass punch, tearing mid-roar, a metallic shriek at the top — with wind-blast noise slamming the mic, grass thrashing, then the whip of our airborne tumble and abrupt silence at the black. No music, no dialogue, no subtitles.
+
+POSITIVE CONSTRAINTS
+One continuous shot — no cuts until the final cut-to-black. THE PHONE IS ALWAYS THE CAMERA AND NEVER AN OBJECT: the opening hold, the fall, the landing, the ground rest and the roar-blast are all experienced strictly first-person; no phone body, no screen, no external view of a phone anywhere.
+THE HERO DOES NOT FALL: only the camera/phone falls and tumbles; the hero is discovered already standing, upright, unruffled, once the camera settles on the ground.
+The opening frame matches the previous clip&#x27;s final upward sky view exactly — flat fog and grey sky filling the frame — before the fall begins.
+SCALE MANDATORY: he is minuscule against the dragon — no taller than its foreclaw toes, smaller than its eye region; the size gap reads in every frame; the dragon&#x27;s far body dissolves into fog.
+THE DRAGON IS WILD: no saddle, no reins, no bridle, no straps — bare scales. It sleeps, breathes heavily and shifts slowly until the sword&#x27;s ring wakes it: one eye opens first → pupil finds him → head lifts → jaws part → roar. It never attacks him, never breathes fire — only the roar.
+Hero: calm and self-assured throughout — draws the sword deliberately, holds his ground in the blast; natural blinks and visible breathing; he never looks at the camera.
+Face and armor 100% @image2 zero drift, sword worn and drawn from the right hip as described; dragon 100% @image1 with the scale/wing texture split; location 100% @image3 with living wind and fog.
+Full realism: real skin, real steel, real scale keratin and wing membrane, real grass and fog physics — no animated look, no CG sheen, no plastic surfaces. Clean image: no grain, no vignette. No text, no logos, no watermarks.
+
+OPTICS
+iPhone 16 Pro phone-camera character: crisp wide digital look, deep focus, natural clarity — NOT anamorphic, NO cinematic bokeh. Ground-level perspective with near grass blades soft at the frame&#x27;s bottom edge; he and the dragon sharp in the field&#x27;s depth; fog handling the far falloff. Motion blur only from real movement: the falling tumble and the final blast-away.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🐕</div>
+      <div>
+        <div class="s-kicker">Финал B · 12 секунд</div>
+        <h2>Гигантский шиба</h2>
+      </div>
+    </div>
+    <p class="s-lead">Тот же старт, но вместо дракона — колоссальный спящий сиба-ину. Рыцарь подходит, пёс просыпается, хвост тяжело бьёт по земле — и герой обнимает огромную морду. Меч остаётся в ножнах. Тихий, тёплый финал.</p>
+    <div class="s-tag">📎 Нужны: сиба + герой + локация</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance 2.0</span>
+        <button class="copy" data-id="c3">Копировать</button>
+      </div>
+      <pre id="c3">SCENE CONTEXT
+Continuation, same phone: the shot OPENS exactly where the previous clip ended — the lens still tilted up into drifting fog and flat grey sky. A beat, then WE, the phone itself, begin to fall: the view drops and tumbles through the fog, DOWN toward the ground. The HERO never falls — only the camera does. We slam into the grass, bounce, flip once more and settle low on the ground. From this low resting angle the whole picture finally reveals itself: the hero stands intact and upright in the foggy field, facing a COLOSSAL sleeping Shiba Inu. He walks toward it — and at his approaching footsteps the dog wakes: one eye opens, finds him, ears perk up, the huge head lifts, the tail begins a slow heavy thump against the ground — and he closes the distance and wraps his arms around its massive snout in a quiet embrace. The video ends there, softly. 12 seconds, one continuous POV shot, vertical 9:16, full realism.
+
+ACTIVE REFERENCES — STRICT ROLE HIERARCHY
+@image1: SHIBA — a colossal adult Shiba Inu at building scale: body roughly 40 meters nose-to-tail, shoulder height around 10 meters, head over 3 meters long. 100% matches the reference — rust-orange coat with cream-white markings across the muzzle, chest, and legs, dense double-layer fur with visible individual guard hairs and softer undercoat, alert triangular ears, tightly curled tail, dark almond eyes, black nose with visible whiskers. Against the hero the difference is absolute: he stands no taller than the width of one of its front paws; his whole body is smaller than its head. Ordinary house-pet behavior at giant scale — head tilts, ear twitches, a slow contented tail-thump — never predatory, never threatening.
+FUR TEXTURE — soft layered fur with visible directional flow per the reference, slightly damp and matted with dew near the ground-contact areas, individual strands catching what little light passes through the fog. NOT smooth, NOT plastic, NOT uniform — real fur density and shading.
+@image2: HERO — curly mid-brown hair, green-hazel eyes, reddish-blond beard, small silver drop earring in left ear, battle-worn full steel plate armor with fleur-de-lis engraving, blackened riveted chainmail gorget, charcoal wool cloak. An adult man of ordinary human height, sturdy build. A brown leather sword-belt with a sheathed arming sword worn on his right hip — the sword stays sheathed throughout this clip, never drawn. 100% matches the reference, zero drift on face and armor.
+@image3: LOCATION — a foggy grass field under heavy overcast: tall knee-high grass rolling edge to edge, a few dark mossy boulders half-sunk in the mid-distance, dense fog erasing the horizon into a luminous grey-white void, visibility 40–60 meters. 100% matches the reference. A steady wind lives in the scene — grass swaying in running waves.
+
+FORMAT MODE
+One continuous shot, 12 seconds, vertical 9:16. NO cuts. The camera IS the phone — iPhone 16 Pro character: crisp wide digital look, deep focus. THE PHONE NEVER APPEARS AS AN OBJECT — no phone body, no screen, no cracked glass overlay, no view of a phone lying in the grass from outside: at every moment, including the fall, the rest on the ground and the embrace, the phone is only ever the CAMERA — the eyes of the video. THE HERO NEVER FALLS OR TUMBLES — only the camera does; he is discovered already standing, upright and composed, once the camera settles.
+
+CAMERA — THE FALLING AND LANDED VIEWPOINT
+0:00–0:01 OPENING HOLD: the frame holds exactly as the last clip left it — flat grey-white fog and sky filling the entire view, faint wind hiss.
+0:01–0:02.5 THE FALL: the view tips and DROPS, the fog and grey blurring into streaked downward motion as we fall, IMPACT: a hard jolt as we hit the grass, the world whip-flips once as we bounce, grass blades slash across the frame — and we SETTLE tilted low in the grass, lens facing forward into the field. A few blades lean into the bottom edge of frame, slightly soft; the frame is still, canted a few degrees — a phone lying where it fell.
+0:02.5 onward: locked ground-level wide view from inside the grass. THE FULL PICTURE now reads in deep layers: near grass blades → open field → the HERO already standing small, intact, back three-quarter to us, facing away into the scene — and beyond him, filling the frame&#x27;s upper half, the SLEEPING SHIBA: an enormous rust-orange mass rising out of the fog like a hill, head resting on the ground with the muzzle toward him, one paw curled loosely forward, tail wrapped around its haunches, ears relaxed. The scale gap is warm and gentle rather than menacing: he is a small dark-steel figure against its soft bulk; its closed eye alone reads bigger than his torso.
+
+FIRST FRAME / BLOCKING
+Once the camera settles at 0:02.5, the hero is positioned center-frame, slightly left of the vertical midline, standing in the lower third of frame with grass at his boots; the dog&#x27;s head and bulk fill the upper two-thirds directly behind and above him. This centering holds fixed through the stand-off and the walk, panning gently only as the hero moves toward the dog&#x27;s snout in the final beats.
+
+ACTION — 0:00–0:12
+0:00–0:01 Opening hold on sky and fog (above).
+0:01–0:02.5 The fall and landing (above). Wind settles; grass ticks against the lens; far off, the dog&#x27;s slow steady breathing moves its ribcage, fog curling at its nose with each soft exhale.
+0:02.5–0:05 THE STAND-OFF: the hero stands still before the sleeping mass for a moment, wind streaming his curls and the cloak&#x27;s edge, grass waves running past his boots — a calm, fond half-smile rather than caution. The dog sleeps on, one back paw twitching faintly in a dream, tail loosely curled.
+0:05–0:07 THE WAKING: the hero&#x27;s footsteps in the grass grow near enough to stir it — the dog&#x27;s near ear flicks first, then the eyelid peels back slow and soft, a warm dark eye finding him; the tail gives one slow, heavy THUMP against the ground, sending a ripple through the grass. The head lifts a short distance, nose working the air, an unhurried, friendly recognition rather than alarm.
+0:07–0:09.5 THE APPROACH: the hero walks steadily toward the massive snout, unhurried and open-armed, boots pressing through the wet grass; the dog&#x27;s head lowers slightly to meet him, ears soft and forward, tail-thumps quickening into a gentle rhythm.
+0:09.5–0:12 THE EMBRACE: the hero reaches the muzzle and wraps both arms around it in a full, quiet embrace, his cheek resting against the warm fur; the dog&#x27;s eye half-closes in contentment, a long slow exhale stirring the fog and grass around them, tail settling into a soft steady wag. The frame holds on this quiet moment, wind hushing, and the clip ends softly there — no cut, no blast, just stillness.
+
+PERFORMANCE
+Hero: warm, unguarded affection throughout — no fear, no hesitation, a small genuine smile as he approaches, eyes soft on the dog rather than the lens. The dog: pure gentle house-pet behavior at giant scale — ear flicks, tail thumps, head-tilts, a slow blink of contentment during the embrace, never a growl, never bared teeth.
+
+PHYSICS
+Our fall and landing: true dropped-phone deceleration — a streaked airborne fall, a hard first impact with a jolt-blur frame, one shorter bounce-flip, a skidding settle; grass reacting where we land. The dog: mass-true motion at giant scale — every movement slow with real inertia; each tail-thump sends a visible ripple through the nearby grass and a faint tremor through the frame; fur shifts and settles naturally with the head&#x27;s movement. Hero: natural walking gait through tall wet grass, boots pressing visible tracks, real weight transfer as he leans into the embrace.
+
+LIGHTING
+Flat, soft, shadowless overcast-fog light per @image3: cool grey-white, no sun; the dog&#x27;s rust-orange fur holding warm, muted color even under the flat light — the single warm color note in the desaturated field; his armor in dull sky reflections; everything beyond the dog&#x27;s midline melting into the fog void. Natural exposure, muted true colors.
+
+AUDIO
+Opening: quiet wind hiss over fog. The fall: a rush of wind, then a hard thud, grass scrape, a settling tick. Then field hush: wind, grass hiss, and the dog&#x27;s slow steady breathing. The waking: a soft huff through the nose, the heavy thump-thump of the tail against damp ground. The approach: boots in wet grass, quickening tail-thumps. The embrace: a long warm exhale from the dog, fabric and fur brushing together, the wind settling to near-silence. No music, no dialogue, no subtitles.
+
+POSITIVE CONSTRAINTS
+One continuous shot — no cuts, ending softly on the embrace, no blast-away, no violent motion at any point after the landing. THE PHONE IS ALWAYS THE CAMERA AND NEVER AN OBJECT: the opening hold, the fall, the landing, the ground rest and the embrace are all experienced strictly first-person; no phone body, no screen, no external view of a phone anywhere.
+THE HERO DOES NOT FALL: only the camera/phone falls and tumbles; the hero is discovered already standing, upright, unruffled, once the camera settles on the ground.
+THE SWORD STAYS SHEATHED throughout — it is never drawn, never referenced as a threat.
+The opening frame matches the previous clip&#x27;s final upward sky view exactly — flat fog and grey sky filling the frame — before the fall begins.
+SCALE MANDATORY: he is small against the dog — no taller than the width of one front paw; the size gap reads in every frame; the dog&#x27;s far body dissolves into fog.
+THE DOG IS FRIENDLY AND DOMESTIC IN BEHAVIOR despite its scale: ordinary house-pet body language throughout — ear flicks, tail thumps, head tilts, a contented half-closed eye during the embrace. It never growls, never bares teeth, never moves aggressively.
+Hero: warm and unguarded throughout — no fear, small genuine smile, natural blinks and visible breathing; he never looks at the camera.
+Face and armor 100% @image2 zero drift; dog 100% @image1 with the fur texture and rust-orange/cream coloring; location 100% @image3 with living wind and fog.
+Full realism: real skin, real steel, real fur, real grass and fog physics — no animated look, no CG sheen, no plastic surfaces. Clean image: no grain, no vignette. No text, no logos, no watermarks.
+
+OPTICS
+iPhone 16 Pro phone-camera character: crisp wide digital look, deep focus, natural clarity — NOT anamorphic, NO cinematic bokeh. Ground-level perspective with near grass blades soft at the frame&#x27;s bottom edge; he and the dog sharp in the field&#x27;s depth; fog handling the far falloff. Motion blur only from real movement: the falling tumble at the start; otherwise steady, gentle handheld motion throughout the walk and embrace.</pre>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=pov">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс Seedance 2.0" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=pov">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Эти сцены — верхний уровень работы с Seedance. На обучении даю систему с самого начала: от первой генерации до портфолио, упаковки и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=pov">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://neurocreator2.ru/master" target="_blank" rel="noopener">Об обучении</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
