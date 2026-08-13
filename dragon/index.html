@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Полёт на драконе над Петербургом — пакет промптов | AI Новый Уровень</title>
+<meta name="description" content="Готовый рилс на 50 секунд: три шота, обложка и музыка. Полёт на драконе над Невой и Финским заливом.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Полёт на драконе над Петербургом">
+<meta property="og:description" content="Целый рилс на 50 секунд: 3 шота + обложка + музыка. Забирай пакет промптов.">
+<meta property="og:url" content="https://neurocreator2.ru/dragon/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* схема связки */
+.flow{margin-top:34px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.fl{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 18px;min-width:130px;
+  border:1px solid var(--line);border-radius:14px;background:rgba(13,13,18,.7)}
+.fl .fe{font-size:22px}
+.fl .fn{font-size:12.5px;font-weight:500;color:var(--ink)}
+.fl .fd{font-size:10.5px;color:var(--ink3);letter-spacing:.5px}
+.farr{color:var(--ink3);font-size:15px}
+.fork{display:flex;flex-direction:column;gap:10px}
+.fork-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c3);text-align:center;width:100%}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:290px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:250px;padding:14px}
+  .cta{padding:34px 20px}
+  .flow{flex-direction:column} .farr{transform:rotate(90deg)}
+}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+pre{max-height:none}
+
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+pre{max-height:300px}
+.refs{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.ref{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(200,200,200,.03)}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fa8c8;font-weight:600}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Полёт на драконе<br>над <em>Петербургом</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Не отдельный кадр, а <b>целый рилс на 50 секунд</b>: три шота, которые клеятся встык, плюс обложка и музыка с таймингом под сюжет. Пасмурный Петербург, обсидиановый дракон, полёт над Невой и нырок в залив.</p>
+
+    <div class="howto">
+      <div class="ht">Что нужно подготовить</div>
+      <p style="font-size:14px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:4px">Три референса-карты, которые используются во всех трёх шотах:</p>
+      <div class="refs">
+        <div class="ref"><div class="rc">@image1</div><div class="rd">Карта героя — 3 панели: безголовый фронт, спина, лицо крупно</div></div>
+        <div class="ref"><div class="rc">@image2</div><div class="rd">Карта дракона — 3 панели: крыло, голова, пасть</div></div>
+        <div class="ref"><div class="rc">@image3</div><div class="rd">Карта «герой на драконе» — масштаб и посадка</div></div>
+      </div>
+      <div class="warn"><span class="wi">⚠️</span><span class="wt">Загружай строго в порядке <b>@image1 → @image2 → @image3</b>. Перепутаешь — модель свяжет описание не с тем референсом.</span></div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Что проверять на выходе</div>
+      <ol>
+        <li><b>Анатомия дракона.</b> Виверна — только две задние лапы, крылья это передние конечности. Вылезла отдельная передняя лапа — перегенерируй, правкой не чинится.</li>
+        <li><b>Лицо героя</b> — борода, кудри, серьга слева. Дрейф лечится усилением @image1 в POSITIVE LOCKS.</li>
+        <li><b>Масштаб</b> — герой примерно 1/10 длины тела дракона. Стал крупнее — добавь «render the rider smaller, never larger».</li>
+        <li><b>Руки</b> — голые, только нейлоновые манжеты. Ни перчаток, ни лат.</li>
+      </ol>
+      <div class="note">💡 Генерируй по одному шоту и проверяй каждый. Во всех кадрах <b>музыки нет — только звук сцены</b>: музыка кладётся отдельным слоем на монтаже.</div>
+    </div>
+
+    <div class="map">
+<a class="m" href="#s1"><b>🎬</b> Вступление</a>
+<a class="m" href="#s2"><b>🪂</b> POV-полёт</a>
+<a class="m" href="#s3"><b>🐉</b> Погоня с разворотом</a>
+<a class="m" href="#s4"><b>🖼</b> Обложка</a>
+<a class="m" href="#s5"><b>🎵</b> Музыка</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🎬</div>
+      <div>
+        <div class="s-kicker">Шот 1 · 6.5 сек · 9:16</div>
+        <h2>Вступление</h2>
+      </div>
+    </div>
+    <p class="s-lead">Камера стартует крупно на лице и отъезжает назад, открывая героя верхом на драконе: тот стоит на крыше над Невой, за спиной — исторический силуэт Петербурга.</p>
+    <div class="s-tag">📎 Раскрытие · пул-бэк</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance</span>
+        <button class="copy" data-id="c1">Копировать</button>
+      </div>
+      <pre id="c1">SCENE CONTEXT
+Third-person cinematic shot on a broad stone rooftop above the Neva embankment in Saint Petersburg. Opens tight on the rider&#x27;s face, then pulls back to reveal him seated astride @image2&#x27;s neck as the dragon stands braced on its two hind legs and its two folded wings, the city skyline spread out behind them.
+
+ACTIVE REFERENCES
+@image1: rider — curly mid-brown hair, green-hazel eyes, light brown beard, a small silver drop earring in his left ear, wearing an oversized light grey-beige crinkle nylon half-zip hooded anorak with black drawstring toggles and a flap kangaroo pocket, a small tonal &quot;AINEWLVL&quot; wordmark high on the right chest, white t-shirt showing at the hem, matching light grey-beige wide-leg elastic-cuff trousers, white low-top sneakers, bare hands. 100% matches the reference.
+@image2: colossal black dragon, obsidian scaled hide, jagged bone-spike ridge running down the neck and spine, membranous wings with warm amber light glowing through the leather when backlit, sharp amber reptilian eyes. Wyvern anatomy — exactly four limbs total: two powerful hind legs and two wings, and the wings ARE the forelimbs. There are no separate front legs, no front arms, no front paws of any kind; the shoulder joint at the front of the body belongs to the wing and nothing else. 100% matches the reference.
+@image3: the scale and seating relationship between rider and dragon — the man seated astride the base of the neck between the spikes, roughly fifteen times smaller than the dragon, the spikes beside him rising to his full seated height. 100% matches the reference.
+
+LOCATION MAP
+Foreground (start): @image1&#x27;s face fills the frame, the nylon hood and stand collar of the anorak just visible at the bottom.
+Foreground (end): @image2 standing braced across the rooftop on four contact points — two heavy hind legs planted wide and clawed into the stone at the rear, and at the front the two folded wings taking the body&#x27;s weight through the wrist knuckle at the leading-edge bend, the long wing fingers folded back and the membranes creased and tucked along the flanks like a resting bat, chest carried between them, tail laid out long behind. No other limb touches the ground because no other limb exists.
+Background: stone rooftop parapet with skylights and vent housings, the Neva below, Saint Petersburg&#x27;s historic skyline beyond — the gilded dome of Saint Isaac&#x27;s Cathedral, the Admiralty spire, the golden needle of the Peter and Paul Cathedral across the water, under a heavy overcast sky.
+Light source throughout: flat overcast daylight from a uniform white-grey sky, diffused, no direct sun.
+
+FIRST FRAME / BLOCKING
+Close-up on @image1&#x27;s face in three-quarter profile, eyes lowered slightly toward his hands, wind moving loose curls, the hood collar and a sliver of dark scale visible at the very bottom edge of frame.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own.
+
+OPTICS
+29° portrait-compression FOV held constant for the entire move, physical distance from the subject increasing rather than the lens zooming, faint depth compression keeping the skyline soft in the far background throughout.
+
+CAMERA
+Crane/dolly pulls straight back and rises slightly over the full duration, starting at eye level on @image1&#x27;s face and ending elevated enough to frame the dragon&#x27;s full braced stance and the rider against the rooftop and skyline, holding the scale relationship from @image3. Smooth, continuous, no hitches, motivated purely by the reveal. Camera stays on the shadow side of the subject, soft top-down ambient light throughout.
+
+ACTION
+0.0s to 5.0s — camera holds close on @image1&#x27;s face as it pulls back and rises; his eyes lift from his hands to the skyline ahead, jaw sets, a slow breath visible in the cold air; as the frame widens, the nylon shoulders of the anorak come into view, then his bare hands resting on the base of a neck spike, then the full spiked ridge of @image2&#x27;s neck beneath him, and finally the whole body — hind legs braced at the rear, the folded wings planted on their wrist knuckles carrying the front of the body, tail trailing long across the rooftop.
+5.0s to 6.5s — camera settles into its final wide framing: @image2 braced on hind legs and folded wings with @image1 astride its neck, head lowered and facing forward toward the river; @image1 shifts his grip slightly on the spike, @image2 shifts weight from one wing knuckle to the other with a slow scrape of claw on stone, the folded membranes flexing with the movement, nostrils flaring with a faint puff of vapor in the cold air.
+
+PERFORMANCE
+@image1&#x27;s expression reads controlled and focused — a fixed jaw, steady eyes, one slow breath; fingers flex once on the cold scale. @image2 stands still but alert, shoulder and haunch muscle rippling under the scales as it settles its weight, the folded wing membranes flexing where the wrist knuckles press into the stone, head low and level.
+
+PHYSICS
+Wind moves loose curls and ripples the loose nylon of the anorak throughout, cold breath visible from both rider and dragon, the dragon&#x27;s full weight settles visibly through the two planted wing knuckles and the two hind legs with the rooftop structure creaking faintly beneath, loose grit shifting under the claws.
+
+LIGHTING
+Flat, soft overcast key from a uniform grey-white sky, no visible sun, minimal shadow contrast, cool ambient fill across nylon, scale, and stone. White balance fixed at 6500K.
+
+COLOR GRADE
+Cool desaturated palette — slate greys and muted stone tones across the rooftop and skyline, @image2&#x27;s obsidian scales reading near-black with a faint blue sheen, @image1&#x27;s light grey-beige nylon reading as the single soft warm-neutral note against the cold city.
+
+AUDIO
+Wind moving steadily across the rooftop, nylon fabric rustling and snapping lightly in the gusts, claws scraping and grit shifting as the dragon settles its weight, the faint creak of the rooftop structure under the load, one slow breath from the rider, a low huff and puff of vapor from @image2, distant muffled city ambience below.
+
+STYLE
+Photoreal cinematic realism, fine natural film grain, soft atmospheric haze toward the distant skyline, no stylization or animation cues — reads as real captured footage.
+
+OUTPUT SETTINGS
+Vertical 9:16 frame, 24fps, real-time speed throughout, no slow-motion, smooth continuous camera move with no ramping.
+
+POSITIVE LOCKS
+@image1 100% matches the reference — face, curls, beard, earring, grey-beige nylon anorak with the small tonal chest wordmark, matching trousers, white sneakers, bare hands. @image2 100% matches the reference — obsidian scales, spiked ridge, amber eyes. Wyvern anatomy holds in every single frame: exactly four limbs, two hind legs and two wings, the wings serving as the forelimbs. The front of the body rests on the folded wing wrist knuckles and on nothing else. No front leg, no front arm, no front paw, no additional limb appears anywhere in the frame at any moment. The dragon stays grounded and braced for the entire shot — never rearing, never lifting off, wings never opening. Scale and seating position follow @image3 exactly. Saint Petersburg&#x27;s historic skyline stays identifiable in the background once revealed. One continuous take, no hard cuts, no zoom — physical camera pull-back only. Overcast flat lighting and cool color grade hold constant from first frame to last.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">🪂</div>
+      <div>
+        <div class="s-kicker">Шот 2 · 30 сек · 9:16</div>
+        <h2>POV-полёт</h2>
+      </div>
+    </div>
+    <p class="s-lead">Главный кадр: от первого лица. Хлопок по шее дракона, срыв с крыши, пике, бег над Невой, облёт башни, нырок в воду и выход. С репликами героя на русском.</p>
+    <div class="s-tag">📎 От первого лица · весь сюжет</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance</span>
+        <button class="copy" data-id="c2">Копировать</button>
+      </div>
+      <pre id="c2">Single continuous POV shot, no cuts, no transitions, one unbroken 30-second take. First-person point of view of a dragon rider: the camera IS the rider&#x27;s eyes, mounted at head height, with @image1&#x27;s bare hands and the light grey-beige nylon sleeves and elasticated cuffs of his anorak permanently visible in the lower frame, gripping two heavy iron chains that run forward to the dragon&#x27;s harness. Preserve EXACTLY @image2: the obsidian black-scaled dragon with the bone-spike ridge and amber eye, a studded black leather harness and buckles at the base of the neck spikes, and @image1&#x27;s outfit and bare hands, the Saint Petersburg setting, the overcast sky and the exact color grade of the references. Rider-to-dragon scale and seating position follow @image3 exactly.
+
+TIMECODE BEATS:
+0.0–2.0s — POV locked forward over @image2&#x27;s spiked neck, perched on a stone rooftop parapet above the Neva embankment, the wide grey-green river below and the historic skyline spread out ahead — the gilded dome of Saint Isaac&#x27;s Cathedral, the Admiralty spire, the golden needle of the Peter and Paul Cathedral on its island across the water. Slight natural head-bob and finger micro-tension on the chains. The dragon turns its head slightly to the left and glances back out of the corner of its amber eye, a knowing complicit look straight into the lens.
+2.0–5.0s — @image1&#x27;s right hand releases its chain (chain swings loose and clinks). The bare hand reaches forward and gives the dragon&#x27;s neck spikes two affectionate pats, palm slapping softly against cold scale. The rider says, in Russian, warm and half-pleading, with a light nervous laugh in the voice: &quot;Будь со мной подобрее, а?&quot;
+5.0–6.5s — The hand grabs the chain again and both fists tighten, knuckles going pale. @image2 snorts hard through its nostrils, a puff of vapor, and swings its head forward, facing the parapet edge and the river beyond.
+6.5–9.0s — @image2 lunges into a running start along the rooftop. Progressive acceleration: the camera lurches back then forward, heavy vertical bounce with every stride, chains snapping taut and slack, vents and skylights rushing past faster and faster. The nylon sleeves flutter and snap in the wind, bare fingers white-knuckling the chains. The rider blurts a rising comedic &quot;Ай... ай... ай-ай-ай!&quot; as the speed builds.
+9.0–10.5s — Full sprint, the parapet edge rushing in. The rooftop drops away and the open river opens up far below. The camera tips violently forward over the edge into the void, embankment and sky swapping places. The rider lets out a long, absurdly high-pitched comic scream: &quot;А-А-А-А-А!!&quot;
+10.5–12.0s — Freefall POV, the grey-green water rushing up, wind roaring, the arms yanked forward, body shaking, nylon hammering against the forearms. Screaming continues, breaking into a strangled &quot;НЕТ-НЕТ-НЕТ-НЕТ!&quot;
+12.0–15.0s — @image2 snaps its wings open and corrects with a violent whump; the camera slams downward with the G-force, then levels out three meters above the river surface, hurtling down the middle of the Neva at full speed — granite embankment walls sliding past on both sides, each wingbeat ripping twin spray vortices off the water, moored barges and bridge piers blurring past, the fortress spire whipping by close on the left and the Admiralty spire on the right. The rider&#x27;s scream collapses into a shaky, disbelieving &quot;Ох, мамочки!&quot;
+15.0–18.0s — @image2 banks hard left then right in playful zigzags down the river corridor, threading between bridge spans and rolling the horizon back and forth, wingtips slicing curtains of spray off the surface, clearly having fun. The camera whips side to side, the arms crossing and pulling on the chains. Comic escalating yelps timed to each bank: &quot;Ой!— ой-ой-ой!— эй, эй, ЭЙ!&quot;
+18.0–21.0s — The river mouth opens out into the wide grey water of the Gulf of Finland; ahead on the low shoreline stands a single enormous tapering tower — a lone twisted glass spire narrowing to a fine needle point, standing completely alone with nothing else tall anywhere near it, far taller than every building around, its facade a cold silver-blue against the overcast. @image2 climbs and banks into one full circling orbit around it, the tower&#x27;s whole height sliding past continuously in frame, wingtip nearly grazing the curved glass at the tightest point of the turn. The rider yelps: &quot;Ты чего творишь?!&quot;
+21.0–22.5s — @image2 breaks off the orbit past the tower&#x27;s needle tip, the camera pitching up to sky, hangs for a beat, then pitches straight down and dives at the open water below. The rider manages one panicked &quot;Не, не, не, не—!&quot;
+22.5–25.0s — Impact. The lens is engulfed: violent white foam, roaring bubbles, blurred grey-green water and streaks of black scale hurtling past the camera, everything muffled and chaotic, bare hands still clamped on the chains, soaked nylon sleeves clinging to the forearms.
+25.0–27.5s — @image2 bursts up out of the water and rockets almost vertically upward at high speed, water sheeting off the lens and trailing behind. The camera is pressed down by the climb, the sea and the lone spire on the shoreline shrinking rapidly below, sky filling the frame, wind screaming. The rider is coughing and spluttering seawater between gasps, water streaming off his hands and cuffs.
+27.5–30.0s — The climb eases; @image2 rolls level and settles into slow, calm gliding flight high above the Gulf of Finland, the lone needle-tipped tower small on the shoreline far below. The camera stabilizes into a gentle wing-beat rhythm, droplets still clinging to the lens, the soaked nylon sleeves rippling in the airflow. The rider&#x27;s coughing softens into steady breathing, then into a relieved, complicit laugh. The dragon turns its head back and glances at him with the same knowing amber eye as the opening. The rider laughs again, quieter, shaking his head slightly, and the shot rides out calmly on the glide.
+
+CAMERA:
+True first-person POV, ultra-wide 107° action-cam field of view with slight barrel distortion, mounted at the rider&#x27;s eye level. Heavy handheld/body-mounted motion throughout: stride bounce during the sprint, freefall tumble, G-force compression on the pull-out, whip-pans during the river zigzags, sustained lateral roll through the tower orbit, full submersion chaos, hard vertical G-load on the ascent, then progressive stabilization in the final beat. Bare hands and nylon-sleeved forearms always anchored in the bottom third of frame. Water droplets, spray and lens smear accumulate on the lens from 12.0s onward and remain to the end. No cuts, no speed ramps, no camera changes.
+
+BACKGROUND:
+Opening: stone rooftop parapet with skylights and vent housings, the Neva and Saint Petersburg&#x27;s historic skyline ahead — Saint Isaac&#x27;s dome, the Admiralty spire, the Peter and Paul Cathedral needle across the water — low cloud ceiling, overcast bright sky. River run: granite embankments, ochre and pale-yellow historic facades, bridge spans and moored barges blurring past close on both sides, spray off the water. Open water: the wide grey Gulf of Finland, a low flat shoreline carrying one single enormous tapering glass tower standing entirely alone, nothing else tall within sight of it. Final beat: high altitude over open water, the sea and the lone spire far below, soft horizon and cloud layer close by.
+
+LIGHTING &amp; LOOK:
+Match the references exactly. Overcast diffused daylight, soft top light, no hard sun. Slightly desaturated palette: near-black obsidian scales with a faint blue sheen, light grey-beige crinkle nylon on the sleeves, muted stone and ochre tones across the historic embankment, the lone tower&#x27;s glass facade adding a cold silver-blue accent, cool grey-white sky. Photorealistic textures, wet scale specularity, wet nylon sheen once soaked, visible skin texture on the hands, fine film grain, subtle anamorphic-style flare on bright sky. Cinematic realism, no stylization, no CGI sheen.
+
+AUDIO (diegetic only, no music):
+Wind against the mic throughout, scaling with speed. Chain links clinking and snapping taut. Nylon fabric hammering and snapping in the airflow. Dragon: deep snort at 5.5s, guttural breathing, thunderous footfalls on rooftop gravel during the sprint, heavy wing-beat whumps, spray hiss off the river surface, a low playful rumble during the zigzags, powerful accelerating wing-beats on the vertical climb, and a satisfied huff in the final beat. City ambience (distant traffic, wind between buildings, water slap against embankment stone) during the rooftop and river beats. Water: rushing spray through the river run, huge crashing impact and muffled underwater roar at 22.5s, foam and drainage on resurfacing, water sheeting off during the ascent. Rider vocals in Russian with a natural, slightly nervous comic delivery, close-mic&#x27;d and always audible: the line at 2.0–5.0s delivered warm and pleading; then comedic fear exclamations continuously and coherently across every beat as described; coughing and gasping through the climb; a genuine relieved laugh to close.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🐉</div>
+      <div>
+        <div class="s-kicker">Шот 3 · 15 сек · 21:9</div>
+        <h2>Погоня с разворотом</h2>
+      </div>
+    </div>
+    <p class="s-lead">Камера-дрон летит за хвостом сквозь город, пробивает облако — и над заливом обходит дракона на 180°, заканчивая лобовым кадром с орущим от восторга героем.</p>
+    <div class="s-tag">📎 Финал · разворот камеры</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance</span>
+        <button class="copy" data-id="c3">Копировать</button>
+      </div>
+      <pre id="c3">SCENE CONTEXT
+A colossal dragon with its rider races low along the Neva through the heart of Saint Petersburg, weaving around jutting spires and church domes and punching through a low-hanging cloud shred while a hard-shaken chase camera follows behind its tail, its lens catching spray; bursting out over the open water toward the Gulf of Finland, the camera arcs 180° around the flying dragon and ends dead ahead, facing it head-on. One continuous chase-to-reveal shot, real time.
+
+ACTIVE REFERENCES
+@image1 — the rider: curly mid-brown hair, damp and wind-whipped, light brown beard, a small silver drop earring in his left ear, damp light grey-beige crinkle nylon hooded anorak with a small tonal &quot;AINEWLVL&quot; wordmark high on the right chest, matching light grey-beige wide-leg trousers, white low-top sneakers, bare hands. 100% matches the reference; ignore the sheet layout and studio background.
+@image2 — the dragon: obsidian black hide like wet volcanic rock, translucent amber-brown wing membranes, jagged bone-spike ridge down the neck and spine, long spiked tail, amber reptilian eyes, wingspan of fourteen men laid head to toe, heavy as five elephants. No saddle, no harness. 100% matches the reference; ignore the sheet&#x27;s grey background.
+@image3 — proportion and mount only: the rider sits astride the neck base between the wing roots at exactly this rider-to-dragon scale, held in every frame; his face and wardrobe come from @image1. Ignore its background and lighting.
+
+LOCATION MAP
+The Neva running through central Saint Petersburg under a heavy broken cloud deck. Foreground: the wide grey-green river, wind-chopped, granite embankment walls sliding past on both sides. Midground: the river bends past the Peter and Paul Fortress on its island, its golden needle spire jutting into the flight path, then the Admiralty spire and the gilded dome of Saint Isaac&#x27;s Cathedral rising alternately from either bank, moored barges and low bridge spans crossing the water ahead, gaps between spire and bridge tower narrower than the dragon&#x27;s wingspan; one ragged shred of low cloud hangs over the river below the rooftops, snagged across the flight line. Background: the ochre, green and pale-yellow facades of the historic embankment stepping away to a ragged skyline of domes and rooftops, dense grey-white cumulus stacked above with narrow torn gaps, one thin sun blade sweeping the far bank, cloud shadows crawling over the stone; far downriver, on a low flat shoreline, one single enormous tapering glass tower narrowing to a fine needle point, standing entirely alone with nothing else tall within sight of it.
+
+FIRST FRAME / BLOCKING
+Chase framing from directly behind: @image2 fills the mid-frame flying away from camera at 130 km/h, three meters above the river surface, wings at full span, @image1 leaning low on its neck base between the wing roots, both bare hands locked on a dorsal spike; the first bend of the river and the fortress spire stand ahead, half in soft cloud light, the low cloud shred visible beyond; the frame already carries a fine speed vibration and two small water beads at its lower edge.
+
+FORMAT MODE
+One continuous shot, real time throughout; the camera does not cut on its own.
+
+OPTICS
+84° diagonal FOV, rectilinear, one wide prime character for the whole shot, natural 180° shutter motion blur, focal length locked; a physical front element riding open in the airstream — water beads and streaks live on the lens glass and refract the scene like a hard-mounted action camera.
+
+CAMERA
+Chase drone 15 meters behind and slightly right of the tail at matched 130 km/h, three meters altitude: through the city it banks with every turn a half-beat late, threads the same gaps, and punches through the same cloud shred two beats after the dragon. At 10 seconds, over the open water past the last bridge, it accelerates hard, swings wide out to the dragon&#x27;s right flank and carves a level 180° arc around it — past the full side profile at 12 seconds — settling dead ahead of the dragon at 13 seconds, flying backward at matched speed, aimed straight down its incoming flight line, holding constant distance for the final beats. The whole chase rides a constant fine speed vibration — a one-to-two-centimeter high-frequency tremor — with discrete jolts on top: a kick in every wingbeat wash, a hard buffet through the cloud shred, and continuous heavy buffeting inside the dragon&#x27;s bow-wave through the backward-flying head-on finale. The arc&#x27;s path itself stays smooth and machine-driven; the shake lives on top of it as fine vibration, never swinging the framing off the subject. Focus rides the dragon and rider throughout.
+
+ACTION
+0–4s: full-speed run down the middle of the Neva — each heavy downstroke slams a pressure ring onto the water and rips twin spray vortices off the wingtips, a V-shaped wake tearing between moored barges; the first fine spray beads tick onto the lens glass and streak toward the frame edges in the airstream; the dragon lifts a wing to clear a bridge pier by arm-lengths; the rider flattened low, nylon anorak cracking in the airstream. 4–7s: the first bend — the dragon rolls into a knife-edge left bank around the Peter and Paul Fortress spire, wings near-vertical so the span fits between the golden needle and the embankment wall, the low wingtip slicing a curtain of spray that rakes across the lens — a burst of distinct droplets lands and stays, beads trembling with the vibration, crawling outward; mid-move the fortress bastion whips between camera and dragon, wiping the frame for two beats. 7–10s: out of the bank straight into the hanging cloud shred — the dragon punches through it, vapor exploding off its leading edges and streaming from the wingtips in torn ribbons; the camera punches through two beats later with a hard buffet — a wet film fogs the glass for a breath and tears away in the airstream, leaving fresh beads scattered across the frame — and they burst out the far side together over the wide open water past the last bridge. 10–13s: the dragon holds straight, level, powerful flight up the middle of the open river mouth, vapor still shedding off its spikes, while the camera arcs around it; as the thin sun blade through a cloud gap crosses the flight line the wing membranes flash translucent amber against the dark water, and every bead on the lens glass flares into a tiny prismatic spark. 13–15s: head-on at last — the dragon barrels straight at the lens in full frontal power, head low, wingbeats hammering toward camera, wing-thrown spray spattering one last fresh burst across the glass, beads shivering in the bow-wave buffet; @image1 stays low over the neck, both bare hands still welded to the spike, and plays the whole beat with his face alone — the grin cracking wide into a shredded yell of pure joy, brows high, eyes blazing straight past the lens between the trembling droplets, the lone needle-tipped tower small and cold on the shoreline behind him. Displaced air shoves mist outward on every pass.
+
+PERFORMANCE
+Both of the rider&#x27;s bare hands grip the neck spike in every single frame — they never open, never lift, never wave. Everything lives in the body lean and the face: pressed flat through the banks, head tucked behind the spike in the cloud punch, then in the head-on finale the face carries it all — grin breaking into a yell, cheeks shuddering in the airstream, damp curls whipping, catch-lights flaring as the sun blade passes.
+
+PHYSICS
+Thirty tons at 130 km/h: carved banks with visible wing flex, spray and wake obeying the wingbeat rhythm, vapor tearing honestly around the body in the cloud punch, real inertia in every turn; through the camera&#x27;s arc the dragon&#x27;s own flight stays straight and level — all curving motion belongs to the camera. Droplets on the glass obey the airstream — landing as distinct beads, trembling with the vibration, streaking toward the frame edges; the wet film from the cloud punch tears off in under a second. The rider&#x27;s 80 kg leans a fraction ahead of every roll, wet nylon clinging and rippling against his forearms. Gaps narrower than the wingspan are passed only in knife-edge bank or half-fold, wingtips clearing stone by arm-lengths.
+
+LIGHTING
+Heavy broken-cloud daylight: dominant soft luminous 6000K cloud light with crawling shadow patches, one hard 5600K sun blade sweeping through a torn gap — crossing the flight line exactly at the camera arc&#x27;s side point, flaring the membranes amber contre-jour and sparking the lens beads; wet hide, wet nylon and churned water picking soft speculars, cool haze deepening downriver, the cloud shred glowing from within as they punch it.
+
+AUDIO (diegetic only — no music of any kind, no score, no soundtrack, no orchestral swell, no ambient pad, no drone, no rhythmic bed):
+Wind and water only. Hammering wingbeats with spray hiss, the ripping rush of the wake, wet spray ticking and spattering against the camera housing, a doppler whoosh as the fortress bastion whips past the lens, a muffled white roar inside the cloud shred, the building thunder and buffet rumble of the head-on approach, nylon fabric cracking in the airstream, the rider&#x27;s shredded yell. Every sound in the mix is a real physical source visible or implied inside the frame. No music, no subtitles.
+
+STYLE
+Photoreal live-action aerial chase cinematography, 8K-level detail with fine grain, true reptilian anatomy, real water, vapor and fabric behavior, crisp northern grade — cool shadows, rare warm sun accents.
+
+OUTPUT SETTINGS
+Real time start to finish, one uninterrupted take, 21:9.
+
+POSITIVE LOCKS
+Exactly one dragon and one rider; the rider stays seated astride the neck base in every frame at the @image3 proportion, both bare hands gripping the neck spike from first frame to last, one continuous anatomically intact silhouette from every viewing angle of the arc — identity and wardrobe identical from behind, from the side and head-on. Saint Petersburg&#x27;s historic landmarks stay identifiable through the city run. The shake stays a fine constant vibration and the lens droplets refract without hiding the action — the dragon and the rider&#x27;s face stay clearly readable in every frame. Wings, architecture and camera never intersect or touch; the 180° arc happens over the open water, clear of all structures. Damp state and wardrobe identical from first frame to last.</pre>
+    </div>
+  </section>
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">🖼</div>
+      <div>
+        <div class="s-kicker">Приложение A · Soul Cinema</div>
+        <h2>Обложка</h2>
+      </div>
+    </div>
+    <p class="s-lead">Кадр для превью: герой крупно, всё вокруг — в смазе движения. Лицо и хват в резкости, остальное streaked. Вертикаль 9:16.</p>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · обложка</span>
+        <button class="copy" data-id="c4">Копировать</button>
+      </div>
+      <pre id="c4">Low-angle medium shot from just ahead and to the side, camera close in and slightly below the rider, the man on the dragon filling the upper two thirds of a tall vertical frame, rule of thirds. A young man with curly mid-brown hair whipped back by the wind, light brown beard, a small silver drop earring in his left ear, wearing a soaked light grey-beige crinkle nylon hooded anorak with a small tonal chest wordmark, gripping a bone spike low against the neck of a colossal obsidian-black dragon in full flight, his face sharp and readable mid-yell, jaw open, eyes blazing. The dragon&#x27;s spiked neck ridge and one enormous wing sweep across the frame behind him, the amber-brown membrane glowing translucent against the pale sky, wet volcanic-rock hide catching soft speculars.
+
+Everything except his face and hands dissolves into heavy directional motion blur — the wing, the neck ridge, the grey-green water and hazy shoreline far below all streaked and smeared with speed along the flight direction, a hard 180-degree shutter drag, only his face and grip holding sharp focus. Flat overcast daylight from a soft cloud dome above, no sun disc, cool even key with bright catchlights in his eyes, spray droplets flying off his hair.
+
+Palette of 60% cool slate grey and grey-green, 30% near-black obsidian hide, 10% warm amber membrane glow. Photorealistic ARRI Alexa LF anamorphic Cooke S4 lens at T2.0, organic 35mm Kodak Vision3 250D film grain, soft cinematic falloff, cinematic film still aesthetic.</pre>
+    </div>
+  </section>
+
+  <section class="step" id="s5">
+    <div class="s-head">
+      <div class="s-num">🎵</div>
+      <div>
+        <div class="s-kicker">Приложение B · Suno</div>
+        <h2>Музыка</h2>
+      </div>
+    </div>
+    <p class="s-lead">Оркестровый трейлер на ~55 секунд. Структура привязана к шоту 2: провал на 0:16 — срыв с крыши, удар на 0:21 — раскрытие крыльев, приглушение на 0:36 — нырок, взрыв на 0:41 — выход из воды.</p>
+    <div class="s-tag">📎 Включи Instrumental · без вокала</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Style of Music</span>
+        <button class="copy" data-id="c5">Копировать</button>
+      </div>
+      <pre id="c5">epic orchestral cinematic trailer score, instrumental, no vocals, low taiko and timpani, soaring french horns and brass fanfare, tense staccato strings, wide reverb, northern and cold, 90 bpm</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Структура (в поле Lyrics)</span>
+        <button class="copy" data-id="c6">Копировать</button>
+      </div>
+      <pre id="c6">[Intro: 0:00-0:07]
+[sparse cold strings, single distant horn, low sustained drone, very quiet, restrained]
+
+[Build: 0:07-0:16]
+[low taiko enters, stepwise rising string tension, pulse quickening]
+
+[Drop: 0:16-0:21]
+[everything cuts to one held high string note and thin airy choir pad, near silence, suspended]
+
+[Hit: 0:21-0:24]
+[full orchestra slams in, brass fanfare, pounding percussion, heroic main theme at full power]
+
+[Theme: 0:24-0:36]
+[main theme flying at full scale, driving strings, horn melody soaring over hammering low brass]
+
+[Break: 0:36-0:41]
+[muffled and submerged, everything low-passed, deep rumble only, drums distant]
+
+[Surge: 0:41-0:48]
+[full theme explodes back at maximum scale, choir and brass at peak, rising]
+
+[Outro: 0:48-0:55]
+[resolves into warm sustained strings and soft solo horn, calm, majestic, settling and fading]</pre>
+    </div>
+  </section>
+
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=dragon">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс Seedance 2.0" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=dragon">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Этот пакет — уровень готового продакшена. На обучении даю систему с самого начала: от первой генерации до портфолио, упаковки и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=dragon">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
