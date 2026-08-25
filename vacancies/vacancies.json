@@ -1,7 +1,15 @@
 {
- "updated": "2026-08-25T17:12:15Z",
+ "updated": "2026-08-25T17:42:50Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136423030",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "IOS Swift Разработчик / AI Специалист\n🏢 Корпу · Москва\n💰 от 180000 до 220000 RUR",
+   "link": "https://hh.ru/vacancy/136423030",
+   "date": "2026-08-25T20:05:14+0300"
+  },
   {
    "id": "hh/136229641",
    "source": "hh",
@@ -755,14 +763,6 @@
    "date": "2026-08-24T18:42:29+0300"
   },
   {
-   "id": "hh/135675537",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-мейкер коротких видео / AI Content Maker / Reels, Shorts, TikTok / AI-контент\n🏢 GameSport · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/135675537",
-   "date": "2026-08-24T18:14:30+0300"
-  },
-  {
    "id": "forallmedia/4198",
    "source": "telegram",
    "channel": "forallmedia",
@@ -1307,19 +1307,19 @@
    "date": "2026-08-19"
   },
   {
-   "id": "tv/29450774-9bbd-11f1-ada1-b511068681db",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Город Санкт-Петербург\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/29450774-9bbd-11f1-ada1-b511068681db",
-   "date": "2026-08-19"
-  },
-  {
    "id": "tv/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Ульяновская область\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
+   "date": "2026-08-19"
+  },
+  {
+   "id": "tv/29450774-9bbd-11f1-ada1-b511068681db",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Город Санкт-Петербург\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/29450774-9bbd-11f1-ada1-b511068681db",
    "date": "2026-08-19"
   },
   {
