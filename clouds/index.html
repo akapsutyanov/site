@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Свободное падение над облаками — пакет промптов | AI Новый Уровень</title>
+<meta name="description" content="Два кинематографичных шота падения сквозь облака: карта героя, локация и промпты для Seedance 2.5.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Свободное падение над облаками">
+<meta property="og:description" content="Карта героя, локация и два промпта для Seedance 2.5. Забирай пакет.">
+<meta property="og:url" content="https://neurocreator2.ru/clouds/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,180,220,.07),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:620px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+
+.refs{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(200,200,200,.03)}
+.ref img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:12px 14px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:300px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:250px;padding:14px}
+  .cta{padding:34px 20px}
+  .refs{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Свободное падение<br>над <em>облаками</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Два кинематографичных шота, которые клеятся в один рилс: <b>падение снизу</b> и <b>срыв с края облака</b>. Внутри — не только видеопромпты, но и то, с чего всё начинается: как собрать карту героя и локацию, чтобы лицо не плыло от кадра к кадру.</p>
+
+    <div class="howto">
+      <div class="ht">Порядок работы</div>
+      <ol>
+        <li><b>Сначала два референса.</b> Карта героя и картинка с облаками — их делаешь в любом image-генераторе по промптам ниже.</li>
+        <li><b>Потом видео.</b> Обе карты загружаешь в Seedance 2.5 и вставляешь промпт шота.</li>
+      </ol>
+      <div class="refs">
+        <div class="ref">
+          <img src="ref-hero.jpg" alt="Пример карты героя — три панели" loading="lazy" width="1400" height="781">
+          <div class="rb"><div class="rc">@image1 · карта героя</div><div class="rd">Три панели: фронт без головы, спина, лицо крупно. Задаёт лицо, причёску и одежду</div></div>
+        </div>
+        <div class="ref">
+          <img src="ref-cloud.jpg" alt="Пример локации — облака сверху" loading="lazy" width="558" height="1000">
+          <div class="rb"><div class="rc">@image2 · локация</div><div class="rd">Облака сверху. Задаёт геометрию, масштаб и плотность — свет пересветится под рассвет</div></div>
+        </div>
+      </div>
+      <div class="warn"><span class="wi">⚠️</span><span class="wt">Загружай строго в порядке <b>@image1 → @image2</b>. Перепутаешь местами — модель свяжет описание героя с облаками, и кадр развалится.</span></div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Что проверять на выходе</div>
+      <ol>
+        <li><b>Лицо.</b> Главный риск — дрейф между шотами. Если поплыло, усиль формулировку «100% matches the reference» и перегенерируй, правкой не чинится.</li>
+        <li><b>Ткань.</b> Смысл первого шота — контраст: тело расслаблено, а нейлон рвётся вверх и хлещет. Если куртка висит спокойно — кадр мёртвый, перегенерируй.</li>
+        <li><b>Направление падения.</b> Во втором шоте с 7-й секунды герой падает <b>спиной вниз, лицом к небу</b>. Перевернулся животом — брак.</li>
+        <li><b>Один человек в кадре.</b> На широких планах модель любит дорисовать вторую фигуру. Проверяй каждый план отдельно.</li>
+      </ol>
+      <div class="note">💡 Музыки в промптах нет намеренно — только звук сцены: рёв ветра и хлопки ткани. Музыка кладётся отдельным слоем на монтаже.</div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>🧍</b> Карта героя</a>
+      <a class="m" href="#s2"><b>☁️</b> Локация</a>
+      <a class="m" href="#s3"><b>🪂</b> Падение снизу</a>
+      <a class="m" href="#s4"><b>🌤</b> Край облака</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🧍</div>
+      <div>
+        <div class="s-kicker">Шаг 1 · Референс · 16:9</div>
+        <h2>Карта героя</h2>
+      </div>
+    </div>
+    <p class="s-lead">Первое, что нужно сделать, — «паспорт» персонажа: три панели на сером фоне, по которым модель запоминает лицо, причёску и одежду. Без него герой поплывёт между кадрами. Загрузи своё фото как <b>@image1</b> — лицо возьмётся с него, а одежду опишет промпт.</p>
+    <div class="s-tag">📎 Nano Banana Pro · Soul Cinema · любой image-генератор с референсом</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · карта героя</span>
+        <button class="copy" data-id="c1">Копировать</button>
+      </div>
+      <pre id="c1">Three-panel character reference sheet on a flat neutral grey seamless studio backdrop, shadowless even light, no cast shadow on the floor.
+
+Panel 1 (left): full-body front view of the outfit, standing straight, arms relaxed at the sides — the head is omitted entirely, only the garments and the empty hood opening are visible.
+Panel 2 (centre): the same person seen from directly behind, full body, standing straight, arms relaxed, hood down on the back.
+Panel 3 (right): chest-up close-up of the face, looking straight into the camera, neutral expression, hood collar visible at the bottom of frame.
+
+FACE AND HAIR: exactly matches @image1 — same face, same hair, same beard, same eye colour. Do not restyle, do not idealise, do not change age.
+
+WARDROBE (identical in all three panels): oversized light grey nylon half-zip anorak with a hood, black drawstring toggles at the collar and a large kangaroo pocket on the chest, worn over a white t-shirt with the hem showing below the jacket; matching light grey nylon track pants with elastic cuffs; white chunky sneakers.
+
+STYLE: photoreal studio product photography, sharp fabric texture — visible nylon weave, crinkle and stitching, natural skin texture with pores, strand-by-strand hair. Neutral colour, no grade, no vignette, no lens flare.
+
+OUTPUT: horizontal 16:9, the three panels separated by thin vertical dividers.</pre>
+    </div>
+  </section>
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">☁️</div>
+      <div>
+        <div class="s-kicker">Шаг 2 · Референс · 9:16</div>
+        <h2>Локация: облака</h2>
+      </div>
+    </div>
+    <p class="s-lead">Вторая карта — сама локация. Она задаёт геометрию облаков, их масштаб и плотность. Время суток в ней не важно: в видеопромптах сцена всё равно пересвечивается под рассвет.</p>
+    <div class="s-tag">📎 Вертикальный кадр · пойдёт и своё фото из иллюминатора</div>
+    <div class="prompt">
+      <div class="p-bar">
+        <span class="p-label">Промпт · локация</span>
+        <button class="copy" data-id="c2">Копировать</button>
+      </div>
+      <pre id="c2">Photoreal aerial photograph taken from above the cloud layer: a vast field of towering white cumulus clouds seen from the height of an airliner, dense billowing cloud towers with deep soft folds and crisp sunlit rims, the highest tower flattening into a wide anvil.
+
+SKY: deep saturated blue overhead, fading paler toward the horizon. High sun in the upper right corner, long visible sun rays raking down across the cloud tops.
+
+LIGHT: hard directional sunlight from the upper right, brilliant white on the lit faces of the clouds, cool blue-violet in the shadowed valleys between the towers, strong sense of depth and scale.
+
+STYLE: photoreal, shot on a full-frame camera through an aircraft window, natural colour, fine grain, no stylisation, no people, no aircraft, no text.
+
+OUTPUT: vertical 9:16, high detail.</pre>
+    </div>
+  </section>
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🪂</div>
+      <div>
+        <div class="s-kicker">Шот 1 · 6 сек · 9:16</div>
+        <h2>Падение снизу</h2>
+      </div>
+    </div>
+    <p class="s-lead">Один непрерывный кадр: камера летит под героем и смотрит строго вверх. Тело расслаблено, глаза закрыты — а одежда рвётся вверх и хлещет. Весь эффект держится на контрасте: человек спокоен, ткань в ярости.</p>
+    <div class="s-tag">📎 Тряска в кадре · терминальная скорость</div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance 2.5</span>
+        <button class="copy" data-id="c3">Копировать</button>
+      </div>
+      <pre id="c3">SCENE CONTEXT
+A single continuous vertical shot: a young man in free fall high above a sea of clouds at sunrise, filmed from directly below him as he plummets toward the camera, his clothes violently whipping in the wind. His expression is completely serene — the fall is a choice.
+
+ACTIVE REFERENCES
+@image1 — young man, late twenties, shoulder-length wavy chestnut-brown hair, full short beard and moustache, pale grey-green eyes, small silver earring in one ear. Wearing an oversized light grey nylon half-zip anorak with a hood, drawstring toggles at the collar and a large front kangaroo pocket, over a white t-shirt with the hem showing below the jacket, matching light grey nylon track pants with elastic cuffs, white chunky sneakers. 100% matches the reference. Ignore the grey studio backdrop and the multi-panel layout of the reference — it defines face, hair and wardrobe only.
+@image2 — location reference: towering cumulus cloudscape. Controls cloud geometry, scale and atmosphere only, not camera angle, framing, or time of day — the scene is re-lit as sunrise.
+
+LOCATION MAP
+Open sky between cloud layers. Far above the falling man: the bright upper sky, deep blue overhead fading to warm gold, with the sunlit rims of huge cumulus towers at the frame edges. The camera is below him in the open air, falling slightly slower than he is.
+
+FIRST FRAME AND SPATIAL BLOCKING
+First frame: medium shot from directly beneath the falling man, camera aimed straight up — @image1 centered in frame from roughly knees to head, body loose and face-down toward camera, arms spread, framed against the vast bright sky and the glowing cloud towers at the edges. His clothes and hair are already blasting upward away from camera.
+
+FORMAT MODE
+Vertical 9:16, single continuous shot, 6 seconds.
+
+OPTICS
+Medium shot on a moderate wide lens, close enough that fabric detail and his calm face read clearly, wide enough that the sky and cloud rims frame him.
+
+CAMERA
+Handheld shaky camera for the entire shot: constant rough jitter, unstable framing, small violent bumps and drift corrections as if the operator is free-falling with him — he slowly gains on the camera, growing slightly larger in frame through the shot. The frame slowly rolls a few degrees. The shake never settles.
+
+ACTION TIMING
+0–6s: Continuous free fall. His body stays loose and relaxed, arms spread, fingers open, small weightless drifts of his limbs. His eyes are closed, face serene, a faint trace of a smile in the beard. The dominant motion is the fabric: the oversized grey nylon anorak balloons, snaps and flaps violently upward, the hood inflating and collapsing behind his shoulders, the drawstring toggles whipping loose; the white t-shirt hem thrashes out from under the jacket; the baggy nylon track pants ripple in fast chaotic waves around his legs, elastic cuffs shuddering; his wavy chestnut hair streams straight up and whips across the top of frame. Wisps of thin cloud vapor rush past between him and the camera.
+
+PHYSICS
+True terminal-velocity wind behavior: nylon flutters at high frequency with hard snapping oscillations, sleeves and hem inflate and collapse rapidly, hair whips with heavy inertia. His limbs drift with slow weightless momentum while the cloth moves violently — the contrast between calm body and thrashing fabric is the core of the shot. Passing vapor streaks reinforce his downward speed.
+
+LIGHTING
+Low golden sunrise from the side: warm amber light rakes across his body and catches every fold and ripple of the flapping nylon, rim-lighting his hair and beard against the deep blue upper sky. Cloud towers at the frame edges glow peach and rose.
+
+AUDIO
+Deep roaring rush of free-fall wind, hard nylon snapping and fluttering close to the mic, strands of wind whistle. No music, no dialogue, no breathing audible over the wind.
+
+STYLE
+Photorealistic live-action cinema, muted desaturated film grade with warm golden-hour tones — peach, amber, soft violet-blue shadows — fine analog grain, gentle contrast.
+
+QUALITY
+Sharp readable face and body poses with natural cinematic motion blur on the fast-moving fabric and hair; stable temporal cadence, no ghosting, no duplicated limbs, no frame-skipping stutter.
+
+POSITIVE CONSTRAINTS
+Exactly one person appears: @image1, wardrobe identical to the reference. His face stays calm with eyes closed for the entire shot. The camera stays below him, aimed up, shaking continuously from first frame to last. The fabric motion stays violent throughout — it never settles.
+
+STRONG anamorphic lens character: horizontal squeeze and compression, oval elliptical bokeh, horizontally stretched highlights, curved barrel edge distortion, chromatic aberration toward the edges. NO lens flares, NO light streaks, NO floating bokeh circles.</pre>
+    </div>
+  </section>
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">🌤</div>
+      <div>
+        <div class="s-kicker">Шот 2 · 12 сек · 9:16</div>
+        <h2>Край облака</h2>
+      </div>
+    </div>
+    <p class="s-lead">Мини-фильм из пяти планов: герой теряет равновесие на краю, ловит себя, садится — и спокойно откидывается спиной в пустоту. Сначала опасность, потом осознанный выбор. Из него же нарезается вторая половина рилса.</p>
+    <div class="s-tag">📎 Мультишот · драматургия в 12 секунд</div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance 2.5</span>
+        <button class="copy" data-id="c4">Копировать</button>
+      </div>
+      <pre id="c4">SCENE CONTEXT
+A dreamlike vertical cinematic sequence at sunrise: a young man stands dangerously off-balance on the edge of a massive cumulus cloud, fights to steady himself, carefully sits on the rim with his back to the drop — then calmly lets himself tip backward into the open sky, falling back-first with his face toward the sun. Danger first, serene surrender after.
+
+ACTIVE REFERENCES
+@image1 — young man, late twenties, shoulder-length wavy chestnut-brown hair, full short beard and moustache, pale grey-green eyes, small silver earring in one ear. Wearing an oversized light grey nylon half-zip anorak with a hood, drawstring toggles at the collar and a large front kangaroo pocket, over a white t-shirt with the hem showing below the jacket, matching light grey nylon track pants with elastic cuffs, white chunky sneakers. 100% matches the reference. Ignore the grey studio backdrop and the multi-panel layout of the reference — it defines face, hair and wardrobe only.
+@image2 — location reference: towering cumulus cloudscape seen from above the cloud layer. Controls cloud geometry, scale and atmosphere only, not camera angle, framing, or time of day — the scene is re-lit as sunrise.
+
+LOCATION MAP
+The man is on the rounded upper edge of a huge dense cumulus cloud in the lower third of the world. Below the edge: a vast open drop with a soft hazy cloud floor far beneath. On the horizon: a low golden sunrise sun. The cloud surface behaves like firm packed snow — it holds his weight but crumbles at the rim.
+
+FIRST FRAME AND SPATIAL BLOCKING
+First frame: medium-wide shot from out in the open air, level with the cloud edge — @image1 standing upright on the very rim, body tilted forward over the drop, arms already rising for balance, the crumbling edge under his sneakers and the huge void below him clearly visible. Low golden sun behind the distant cloud towers. Camera slightly below his eyeline with a subtle dutch roll.
+
+FORMAT MODE
+Vertical 9:16, cinematic multi-shot sequence, 12 seconds.
+
+CAMERA AND ACTION TIMING
+0–3s: The danger beat. His sneaker slides on the crumbling rim, vapor breaks off under his sole, his whole body pitches toward the drop — arms windmilling, torso swaying past the edge, curly hair swinging, the loose nylon anorak snapping with the movement. Handheld tremble on the camera, dutch roll deepening as he tips. At the last moment he throws his weight inward and catches himself.
+3–5s: He turns and lowers into a careful seat on the rim, back to the open drop, knees drawn up, palms flat on the cloud beside his hips. Cut to a wide shot from open air: his small figure on the immense cloud face, the whole cloudscape glowing amber and rose in low sunrise light, long shadows raking across the cloud tops. Camera drifts back very slowly.
+5–7s: Close profile shot: sunrise light warm on his face and beard, his breathing settles, eyes slowly close, a small resolved exhale. His palms lift off the cloud and his arms open outward.
+7–9s: He lets his shoulders go and tips backward off the edge, falling back-first, face turned up to the sky. Close-up falling with him: camera free-falls alongside, his face and shoulders filling the frame, calm and weightless, curly hair sweeping forward across his face, the grey nylon jacket pressed flat against his back with the open front rippling, golden light flickering across his face as he drops past cloud walls.
+9–10.5s: Cut to a top-down medium shot from directly above him: camera looks straight down at his upturned face, open chest and spread arms, his body slowly receding toward the hazy cloud floor far below.
+10.5–12s: Final wide: his tiny silhouetted figure falling back-first through an immense canyon of clouds lit peach and gold by the low sun on the horizon, arms still open.
+
+PHYSICS
+His weight visibly presses into the cloud; the rim crumbles into vapor wisps exactly where his sneaker slips. During the balance fight his arms and torso move with real corrective momentum — overshoot, counter-sway, recovery. The lightweight nylon jacket ripples, the hood flaps and the elastic cuffs shift a beat behind every movement. The backward tip starts slow, weight rolling off the edge of the rim, then the body rotates gently as gravity takes it and the fall accelerates naturally to full speed. In free fall the relative wind hits his back — hair pushed forward over his forehead, hood dragged flat, jacket hem lifting toward his head.
+
+LIGHTING
+Low golden sunrise sun sitting near the horizon behind the cloud towers. Warm amber and rose light rakes sideways across the cloud tops, long soft shadows, shadowed cloud walls in cool violet-blue. In close shots the low sun rims his hair and beard and warms one side of his face while the other side stays softly readable. Sky gradient from warm gold at the horizon to deep blue overhead.
+
+AUDIO
+High-altitude wind, cloud vapor hiss under his slipping shoe, nylon fabric snapping in the wind, sharp breath during the balance fight, one long calm exhale before he lets go, wind building into a deep rushing whoosh through the fall. No music, no dialogue.
+
+STYLE
+Photorealistic live-action cinema, muted desaturated film grade with warm golden-hour tones — peach, amber, soft violet-blue shadows — fine analog grain, gentle contrast, quiet dreamlike pacing.
+
+QUALITY
+Sharp readable poses with natural cinematic motion blur during the balance sway and the fall; stable temporal cadence, no ghosting, no duplicated limbs, no frame-skipping stutter.
+
+POSITIVE CONSTRAINTS
+Exactly one person appears in the entire sequence: @image1. His wardrobe stays identical to the reference in every shot — grey nylon anorak, white t-shirt hem visible, grey track pants, white sneakers. His expression arc is locked: genuine alarm during the balance fight (0–3s), settling calm once seated, fully serene and resolved from the moment he tips back — the fall is a choice. From 7s onward he falls back-first with his face toward the sky in every remaining shot. The cloud edge, the drop below, and the sun&#x27;s horizon position keep consistent geography across all shots.
+
+STRONG anamorphic lens character: horizontal squeeze and compression, oval elliptical bokeh, horizontally stretched highlights, curved barrel edge distortion, chromatic aberration toward the edges. NO lens flares, NO light streaks, NO floating bokeh circles.</pre>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=clouds">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=clouds">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Промпт — это последний шаг. Всё остальное — референсы, драматургия, монтаж, звук — то, чему я учу на обучении. Приходи на экскурсию: покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=clouds">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
