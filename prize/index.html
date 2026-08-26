@@ -129,6 +129,30 @@ h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto
 .pstep .n{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid rgba(200,200,200,.3);
   display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--c2)}
 
+/* ── AI-комьюнити ── */
+.community{margin-top:18px;text-align:center;padding:28px 24px;border-radius:22px;
+  border:1px solid rgba(90,165,230,.26);background:
+    radial-gradient(ellipse 90% 70% at 50% 0%,rgba(70,150,220,.10),transparent 65%),rgba(13,13,18,.8);
+  box-shadow:0 20px 50px rgba(0,0,0,.45);animation:fadeUp .6s var(--eo) both}
+.community .cm-ic{width:46px;height:46px;margin:0 auto 14px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#3aa2e0,#2b7cc0);box-shadow:0 8px 24px rgba(58,162,224,.28)}
+.community .cm-ic svg{width:24px;height:24px;fill:#fff;margin-left:-1px}
+.community .cm-eyebrow{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#6fb6e8}
+.community .cm-title{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:400;color:var(--ink);margin:8px 0 8px;line-height:1.15}
+.community .cm-title em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.community .cm-sub{font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7;max-width:420px;margin:0 auto}
+.cm-list{list-style:none;text-align:left;max-width:360px;margin:18px auto 0;display:flex;flex-direction:column;gap:9px}
+.cm-list li{position:relative;padding-left:22px;font-size:13.5px;color:var(--ink);line-height:1.5}
+.cm-list li::before{content:'→';position:absolute;left:0;top:0;color:#6fb6e8;font-size:12px}
+.cm-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;
+  background:linear-gradient(135deg,#3aa2e0,#2b7cc0);color:#fff;padding:15px 34px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 10px 30px rgba(58,162,224,.26),inset 0 1px 0 rgba(255,255,255,.22);
+  transition:transform .35s var(--eo),box-shadow .35s}
+.cm-btn:hover{transform:translateY(-3px);box-shadow:0 16px 42px rgba(58,162,224,.4)}
+.cm-note{margin-top:12px;font-size:11.5px;color:var(--ink3)}
+
 footer{padding:30px 0 40px;text-align:center;font-size:10.5px;color:var(--ink3);line-height:1.8}
 footer a{color:var(--c3);text-decoration:underline;text-underline-offset:2px}
 </style>
@@ -266,6 +290,21 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:2px}
         <div class="pstep"><span class="n">3</span><span>Никаких обязательств — просто забери своё и задай любые вопросы.</span></div>
       </div>
       <p class="hint" style="margin-top:18px">Не пришло сообщение за сутки? Напиши сам: <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--c2)">@newhndrx</a></p>
+    </div>
+
+    <div class="community">
+      <div class="cm-ic"><svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div>
+      <div class="cm-eyebrow">Пока ждёшь ответа</div>
+      <div class="cm-title">Заходи в <em>AI-комьюнити</em></div>
+      <p class="cm-sub">Закрытый чат, где мы разбираем нейросети каждый день. Вход бесплатный — просто будь своим.</p>
+      <ul class="cm-list">
+        <li>Готовые промпты и разборы — можно брать и делать</li>
+        <li>Свежие инструменты: что появилось и стоит ли тратить время</li>
+        <li>Работы участников и обратная связь по своим</li>
+        <li>Вопросы можно задавать любые — тут все начинали с нуля</li>
+      </ul>
+      <a class="cm-btn" href="https://t.me/+n73CTNryF744N2I6" target="_blank" rel="noopener">Вступить в комьюнити →</a>
+      <p class="cm-note">Открывается в Telegram · выйти можно в любой момент</p>
     </div>
   </section>
 
