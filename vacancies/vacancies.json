@@ -1,7 +1,15 @@
 {
- "updated": "2026-08-28T11:16:09Z",
+ "updated": "2026-08-28T11:47:37Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136407963",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Customer Success Manager/Менеджер по работе с клиентами(международная AI-платформа, английский язык)\n🏢 Nexus Hub · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/136407963",
+   "date": "2026-08-28T14:26:34+0300"
+  },
   {
    "id": "hh/129837946",
    "source": "hh",
@@ -198,7 +206,7 @@
    "id": "hh/136723340",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "AI-иллюстратор / AI Visual Designer — Middle\n🏢 Студия Очень · Москва",
+   "text": "AI-иллюстратор / AI Visual Designer\n🏢 Студия Очень · Москва",
    "link": "https://hh.ru/vacancy/136723340",
    "date": "2026-08-28T12:00:18+0300"
   },
@@ -601,14 +609,6 @@
    "text": "DevOps-инженер Generative AI\n🏢 Норникель · Москва",
    "link": "https://hh.ru/vacancy/136701181",
    "date": "2026-08-27T16:35:54+0300"
-  },
-  {
-   "id": "hh/135742412",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Санкт-Петербург\n💰 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/135742412",
-   "date": "2026-08-27T16:25:40+0300"
   },
   {
    "id": "jobforpr/4037",
