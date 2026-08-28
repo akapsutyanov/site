@@ -1,12 +1,20 @@
 {
- "updated": "2026-08-28T07:31:38Z",
+ "updated": "2026-08-28T08:04:12Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136718193",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-инженер\n🏢 СБЕР · Москва",
+   "link": "https://hh.ru/vacancy/136718193",
+   "date": "2026-08-28T10:32:36+0300"
+  },
   {
    "id": "hh/136714909",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "Junior-разработчик / Junior Fullstack Developer (PHP, JS/TS + AI)\n🏢 АИСТСОФТ · Муром",
+   "text": "Junior-разработчик / Junior Fullstack Developer (PHP, JS/TS + AI)\n🏢 АИСТСОФТ · Муром\n💰 до 150000 RUR",
    "link": "https://hh.ru/vacancy/136714909",
    "date": "2026-08-28T09:33:39+0300"
   },
@@ -561,14 +569,6 @@
    "text": "Редактор для обучения нейросетей\n🏢 Яндекс Крауд · Рязань\n💰 до 133000 RUR",
    "link": "https://hh.ru/vacancy/135877623",
    "date": "2026-08-27T12:22:49+0300"
-  },
-  {
-   "id": "hh/135877605",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Редактор для обучения нейросетей\n🏢 Яндекс Крауд · Пермь\n💰 до 133000 RUR",
-   "link": "https://hh.ru/vacancy/135877605",
-   "date": "2026-08-27T12:22:48+0300"
   },
   {
    "id": "smmlancer/8588",
@@ -1347,19 +1347,19 @@
    "date": "2026-08-19"
   },
   {
-   "id": "tv/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Ульяновская область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
-   "date": "2026-08-19"
-  },
-  {
    "id": "tv/29450774-9bbd-11f1-ada1-b511068681db",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Город Санкт-Петербург\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/29450774-9bbd-11f1-ada1-b511068681db",
+   "date": "2026-08-19"
+  },
+  {
+   "id": "tv/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Ульяновская область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
    "date": "2026-08-19"
   },
   {
