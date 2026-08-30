@@ -1,7 +1,15 @@
 {
- "updated": "2026-08-30T10:53:43Z",
+ "updated": "2026-08-30T11:24:26Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136757832",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент маркетинг менеджер / продакт маркетинг менеджер (B2B SAAS AI)\n🏢 Supalab · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/136757832",
+   "date": "2026-08-30T13:57:05+0300"
+  },
   {
    "id": "hh/136684356",
    "source": "hh",
@@ -561,14 +569,6 @@
    "text": "AI Sales Manager (B2B, входящие заявки)\n🏢 Selsup · Москва\n💰 от 100000 до 200000 RUR",
    "link": "https://hh.ru/vacancy/135714224",
    "date": "2026-08-28T15:49:28+0300"
-  },
-  {
-   "id": "hh/133809298",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ-креатор\n🏢 Esterk Lux Parfum · Москва",
-   "link": "https://hh.ru/vacancy/133809298",
-   "date": "2026-08-28T15:34:40+0300"
   },
   {
    "id": "vacancysmm/16864",
@@ -1387,19 +1387,19 @@
    "date": "2026-08-19"
   },
   {
-   "id": "tv/29450774-9bbd-11f1-ada1-b511068681db",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Город Санкт-Петербург\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/29450774-9bbd-11f1-ada1-b511068681db",
-   "date": "2026-08-19"
-  },
-  {
    "id": "tv/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Ульяновская область\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/29ba3774-9bbd-11f1-8e0f-3b08a1b18ff4",
+   "date": "2026-08-19"
+  },
+  {
+   "id": "tv/29450774-9bbd-11f1-ada1-b511068681db",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Город Санкт-Петербург\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/29450774-9bbd-11f1-ada1-b511068681db",
    "date": "2026-08-19"
   },
   {
