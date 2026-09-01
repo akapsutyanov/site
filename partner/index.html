@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Партнёрская программа | AI — Новый Уровень 2026</title>
+<meta name="description" content="Приводи людей на экскурсию и получай фикс за каждого, 15% с оплат и курс в подарок.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Партнёрская программа · AI — Новый Уровень 2026">
+<meta property="og:description" content="Фикс за приведённого на экскурсию + 15% с продаж + курс в подарок.">
+<meta property="og:url" content="https://neurocreator2.ru/partner/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.pay{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px}
+.pc{border:1px solid var(--line);border-radius:18px;padding:24px 22px;background:rgba(13,13,18,.75);text-align:left;position:relative}
+.pc.gift{border-color:rgba(200,170,110,.28);background:radial-gradient(ellipse 90% 70% at 50% 0%,rgba(200,170,110,.07),transparent 65%),rgba(13,13,18,.8)}
+.pc .pk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.pc.gift .pk{color:#d9bd82}
+.pc .pv{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--ink);line-height:1.05;margin-top:10px}
+.pc .pv em{font-style:normal;background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.pc .pn{margin-top:8px;font-size:13.5px;color:var(--ink);font-weight:500}
+.pc .pd{margin-top:6px;font-size:12.5px;color:var(--ink3);line-height:1.55}
+
+.steps{margin-top:16px;display:flex;flex-direction:column;gap:9px;text-align:left}
+.st{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;
+  border:1px solid var(--line);border-radius:13px;padding:14px 16px;background:rgba(200,200,200,.025)}
+.st .sn{width:30px;height:30px;border-radius:50%;border:1px solid rgba(200,200,200,.28);display:flex;
+  align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--c2)}
+.st .sb{font-size:13.5px;color:var(--ink);line-height:1.55}
+.st .sb b{font-weight:600}
+.st .sb span{display:block;margin-top:4px;font-size:12.5px;color:var(--ink3)}
+
+.who{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:11px}
+.wc{border:1px solid var(--line);border-radius:14px;padding:17px 18px;background:rgba(13,13,18,.7);text-align:left}
+.wc .we{font-size:20px}
+.wc .wn{margin-top:8px;font-size:13.5px;color:var(--ink);font-weight:600}
+.wc .wd{margin-top:5px;font-size:12.5px;color:var(--ink3);line-height:1.55}
+
+.kit{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.ki{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink2);line-height:1.55}
+.ki b{color:var(--ink);font-weight:600}
+.ki .kx{color:#8fb4d8;flex-shrink:0}
+
+.tg{display:inline-flex;align-items:center;justify-content:center;gap:11px;margin-top:26px;
+  background:linear-gradient(135deg,#3aa2e0,#2b7cc0);color:#fff;padding:18px 40px;border-radius:12px;
+  font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 12px 34px rgba(58,162,224,.28),inset 0 1px 0 rgba(255,255,255,.22);
+  transition:transform .35s var(--eo),box-shadow .35s}
+.tg:hover{transform:translateY(-3px);box-shadow:0 18px 46px rgba(58,162,224,.42)}
+.tg svg{width:19px;height:19px;fill:#fff}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Для партнёров · AI — Новый Уровень 2026</div>
+    <h1>Партнёрская<br><em>программа</em></h1>
+    <p class="intro">Ты приводишь людей, которым правда нужны нейросети. Я провожу экскурсию и довожу до результата. Ты получаешь деньги <b>дважды</b>: сразу за каждого дошедшего на созвон и потом процентом с оплаты. А за пятерых учеников — забираешь курс целиком.</p>
+
+    <div class="pay">
+      <div class="pc">
+        <div class="pk">За каждого</div>
+        <div class="pv"><em>2 000 ₽</em></div>
+        <div class="pn">Дошёл до экскурсии</div>
+        <div class="pd">Платится сразу после созвона — независимо от того, купил человек или нет. Достаточно, чтобы он пришёл и поговорил</div>
+      </div>
+      <div class="pc">
+        <div class="pk">С каждой оплаты</div>
+        <div class="pv"><em>15 %</em></div>
+        <div class="pn">С любого тарифа</div>
+        <div class="pd">От базового до VIP. Считается от суммы, которую человек реально оплатил — включая рассрочку и вторую часть</div>
+      </div>
+      <div class="pc gift">
+        <div class="pk">Бонус</div>
+        <div class="pv">Курс<br>в подарок</div>
+        <div class="pn">За 5 оплативших учеников</div>
+        <div class="pd">Полный доступ к обучению «AI — Новый Уровень 2026» — тебе или кому подаришь. Деньги за этих пятерых остаются у тебя</div>
+      </div>
+    </div>
+
+    <a class="tg" href="https://t.me/foms_fit?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B2%20%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      Хочу участвовать
+    </a>
+    <p class="cta-note" style="margin-top:14px;font-size:12px;color:var(--ink3)">Откроется Telegram с готовым сообщением — просто отправь</p>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🎯</div>
+      <div>
+        <div class="s-kicker">Главное правило</div>
+        <h2>Мест мало — качество важнее объёма</h2>
+      </div>
+    </div>
+    <p class="s-lead">Я беру в поток небольшую группу, потому что веду каждого лично. Это значит, что <b>гнать трафик бессмысленно</b> — сто случайных заявок не превратятся в сто учеников, а ты потратишь силы впустую.</p>
+    <p class="s-lead">Поэтому платится не за клики и не за регистрации, а за <b>живого человека, который дошёл до разговора</b>. Приведи пятерых, которым правда надо, — заработаешь больше, чем на сотне случайных.</p>
+    <div class="warn"><span class="wi">⚠️</span><span class="wt">Экскурсия засчитывается, если человек <b>реально пришёл на созвон</b> и мы поговорили. Не записался, а пришёл. Ботов, накрутку и рассылку по чатам не считаю и программу за это закрываю — без обсуждений.</span></div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">👥</div>
+      <div>
+        <div class="s-kicker">Кому подходит</div>
+        <h2>Кто зарабатывает лучше всех</h2>
+      </div>
+    </div>
+    <div class="who">
+      <div class="wc"><div class="we">🎓</div><div class="wn">Мои выпускники</div><div class="wd">У тебя есть то, чего нет ни у кого: свой результат. Когда ты рассказываешь свою историю — это не реклама, это доказательство</div></div>
+      <div class="wc"><div class="we">📱</div><div class="wn">Блогеры 5–30к</div><div class="wd">SMM, фриланс, удалёнка, смена профессии после 35. Тёплая аудитория работает лучше миллионных охватов</div></div>
+      <div class="wc"><div class="we">🎬</div><div class="wn">Смежные специалисты</div><div class="wd">Монтажёры, таргетологи, фотографы — те, кому клиенты постоянно задают вопрос «а нейросетями можешь?»</div></div>
+      <div class="wc"><div class="we">💬</div><div class="wn">Ведущие чатов и сообществ</div><div class="wd">Там, где люди спрашивают, как войти в ИИ. Один честный ответ с ссылкой закрывает вопрос</div></div>
+    </div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🧰</div>
+      <div>
+        <div class="s-kicker">Что даю</div>
+        <h2>Тебе не нужно уметь продавать</h2>
+      </div>
+    </div>
+    <p class="s-lead">Ты не продаёшь курс. Ты даёшь человеку бесплатную пользу — <b>дальше продаёт воронка</b>. Всё готово, ничего придумывать не надо.</p>
+    <div class="kit">
+      <div class="ki"><span class="kx">→</span><span><b>17 гайдов с промптами</b> — готовые тренды и разборы. Постишь не «купи курс», а «забери бесплатно»</span></div>
+      <div class="ki"><span class="kx">→</span><span><b>Бесплатный мастер-класс</b> — главная точка входа: смотрят, греются, оставляют заявку</span></div>
+      <div class="ki"><span class="kx">→</span><span><b>Квиз с призами</b> — лёгкий вход для тех, кто ещё не готов на созвон</span></div>
+      <div class="ki"><span class="kx">→</span><span><b>Отзывы и кейсы учеников</b> — видео и нарезки под рилсы</span></div>
+      <div class="ki"><span class="kx">→</span><span><b>Готовые тексты постов и сторис</b> — под копипаст, несколько вариантов</span></div>
+      <div class="ki"><span class="kx">→</span><span><b>Своя ссылка и кодовое слово</b> — чтобы все твои люди учитывались</span></div>
+    </div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">⚙️</div>
+      <div>
+        <div class="s-kicker">Как это работает</div>
+        <h2>Четыре шага</h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="st"><span class="sn">1</span><span class="sb"><b>Пишешь мне в Telegram</b><span>Коротко: кто ты и где твоя аудитория. Отвечаю лично, программа не публичная</span></span></div>
+      <div class="st"><span class="sn">2</span><span class="sb"><b>Получаешь ссылку, кодовое слово и папку материалов</b><span>Ссылка тянет метку через всю воронку. Кодовое слово — страховка, если человек пришёл позже или с другого устройства</span></span></div>
+      <div class="st"><span class="sn">3</span><span class="sb"><b>Делишься тем, что тебе близко</b><span>Гайд, мастер-класс, свой отзыв. Человек оставляет заявку и приходит на экскурсию</span></span></div>
+      <div class="st"><span class="sn">4</span><span class="sb"><b>Получаешь деньги</b><span>Фикс — после каждой экскурсии. Процент — после оплаты. Расчёт раз в месяц, отчёт присылаю сам</span></span></div>
+    </div>
+  </section>
+
+  <section class="step" id="s5">
+    <div class="s-head">
+      <div class="s-num">📋</div>
+      <div>
+        <div class="s-kicker">Условия</div>
+        <h2>Что важно знать</h2>
+      </div>
+    </div>
+    <div class="howto">
+      <div class="ht">Учёт и выплаты</div>
+      <ol>
+        <li><b>Как считается твой человек.</b> Переход по твоей ссылке, или кодовое слово, или строка «кто порекомендовал» в анкете. Любого из трёх достаточно.</li>
+        <li><b>Когда платится фикс.</b> После состоявшегося созвона. Не за запись — за приход.</li>
+        <li><b>Когда платится процент.</b> После оплаты и окончания периода возврата. При рассрочке — с каждой части.</li>
+        <li><b>Как платится.</b> Раз в месяц, переводом. Нужна самозанятость или ИП — налог со своего дохода платишь сам.</li>
+        <li><b>Отчёт.</b> Присылаю сам: сколько пришло, сколько дошло, сколько оплатило. Без запросов с твоей стороны.</li>
+      </ol>
+      <div class="note">💡 Если человек пришёл от тебя, но купил через два месяца — он всё равно твой. Метка и кодовое слово не сгорают.</div>
+    </div>
+
+    <div class="howto" style="margin-top:18px">
+      <div class="ht">Чего делать нельзя</div>
+      <ol>
+        <li><b>Обещать доход.</b> Ни «заработаешь 100 тысяч», ни «гарантированный результат». Только факты: что внутри, чему учат, что получилось у конкретных людей.</li>
+        <li><b>Обещать скидки от себя.</b> Цену держим одну для всех — иначе обесцениваем тех, кто купил честно.</li>
+        <li><b>Рассылать по чатам и в личку незнакомым.</b> Это спам, он бьёт по репутации нам обоим.</li>
+        <li><b>Выдавать себя за меня.</b> Ты партнёр, а не представитель курса — так и говори.</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>Готов <em>начать</em>?</h3>
+    <p>Напиши в Telegram — расскажи в двух словах, кто ты и где твоя аудитория. Отвечаю лично каждому: программа не массовая, партнёров беру немного, ровно как и учеников.</p>
+    <a class="tg" href="https://t.me/foms_fit?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B2%20%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5" target="_blank" rel="noopener" style="margin-top:22px">
+      <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      Хочу участвовать
+    </a>
+    <small>Сообщение уже написано — останется нажать «отправить»</small>
+    <div class="links">
+      <a href="../guides/">Гайды и промпты</a>
+      <a href="https://neurocreator2.ru/bonus/">Мастер-класс</a>
+      <a href="../master/">О курсе</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a><br>
+  Доход не гарантирован. Информация на странице не является публичной офертой.
+</footer>
+
+</body>
+</html>
