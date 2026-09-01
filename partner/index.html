@@ -243,6 +243,15 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
 .ki b{color:var(--ink);font-weight:600}
 .ki .kx{color:#8fb4d8;flex-shrink:0}
 
+.rates{margin-top:13px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rt{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:rgba(200,200,200,.025);text-align:left}
+.rt.top{border-color:rgba(200,170,110,.26);background:rgba(200,170,110,.045)}
+.rt .rn{font-size:12px;color:var(--ink3);letter-spacing:.4px}
+.rt .rp{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:var(--ink);line-height:1;margin-top:6px}
+.rt.top .rp{color:#e5cd9c}
+.rt .rs{margin-top:6px;font-size:12px;color:var(--ink2)}
+@media(max-width:600px){ .rates{grid-template-columns:1fr} }
+
 .tg{display:inline-flex;align-items:center;justify-content:center;gap:11px;margin-top:26px;
   background:linear-gradient(135deg,#3aa2e0,#2b7cc0);color:#fff;padding:18px 40px;border-radius:12px;
   font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;
@@ -265,15 +274,15 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
     <div class="pay">
       <div class="pc">
         <div class="pk">За каждого</div>
-        <div class="pv"><em>2 000 ₽</em></div>
+        <div class="pv"><em>1 500 ₽</em></div>
         <div class="pn">Дошёл до экскурсии</div>
         <div class="pd">Платится сразу после созвона — независимо от того, купил человек или нет. Достаточно, чтобы он пришёл и поговорил</div>
       </div>
       <div class="pc">
         <div class="pk">С каждой оплаты</div>
-        <div class="pv"><em>15 %</em></div>
-        <div class="pn">С любого тарифа</div>
-        <div class="pd">От базового до VIP. Считается от суммы, которую человек реально оплатил — включая рассрочку и вторую часть</div>
+        <div class="pv"><em>10–20 %</em></div>
+        <div class="pn">Чем выше тариф — тем больше</div>
+        <div class="pd">Считается от суммы, которую человек реально оплатил, включая рассрочку и вторую часть. Разбивка по тарифам — ниже</div>
       </div>
       <div class="pc gift">
         <div class="pk">Бонус</div>
@@ -282,6 +291,25 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
         <div class="pd">Полный доступ к обучению «AI — Новый Уровень 2026» — тебе или кому подаришь. Деньги за этих пятерых остаются у тебя</div>
       </div>
     </div>
+
+    <div class="rates">
+      <div class="rt">
+        <div class="rn">Базовый · 29 990 ₽</div>
+        <div class="rp">10 %</div>
+        <div class="rs">3 000 ₽ с оплаты</div>
+      </div>
+      <div class="rt">
+        <div class="rn">Продвинутый · 69 990 ₽</div>
+        <div class="rp">15 %</div>
+        <div class="rs">10 500 ₽ с оплаты</div>
+      </div>
+      <div class="rt top">
+        <div class="rn">VIP · 149 990 ₽</div>
+        <div class="rp">20 %</div>
+        <div class="rs">30 000 ₽ с оплаты</div>
+      </div>
+    </div>
+    <p class="cta-note" style="margin-top:13px;font-size:12.5px;color:var(--ink3);line-height:1.6">Приведёшь человека на VIP — заработаешь как за десять экскурсий. Поэтому выгоднее приводить тех, кто настроен серьёзно</p>
 
     <a class="tg" href="https://t.me/foms_fit?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B2%20%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
