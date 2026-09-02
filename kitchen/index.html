@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кухня в замедлении — сцена по карте глубины | AI Новый Уровень</title>
+<meta name="description" content="20 секунд slow-motion боевика с твоим лицом: карта глубины, промпт для Seedance 2.5 и музыка. Полный рабочий файл.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Кухня в замедлении — сцена по карте глубины">
+<meta property="og:description" content="20 секунд кино с твоим лицом. Карта глубины, промпт и музыка — забирай целиком.">
+<meta property="og:url" content="https://neurocreator2.ru/kitchen/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.p-hero{margin-top:30px;display:grid;grid-template-columns:1.15fr 1fr;gap:18px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video,.vwrap img{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:11.5px;color:var(--ink3);line-height:1.5}
+@media(max-width:720px){ .p-hero{grid-template-columns:1fr} }
+
+.beats{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:22px 78px 24px 180px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:rgba(200,200,200,.025)}
+.beat .bl{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--c3)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fa8c8}
+.beat .be{font-size:15px;text-align:center}
+.beat .bn{font-size:13px;color:var(--ink);font-weight:500}
+.beat .bd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:720px){ .beat{grid-template-columns:22px 76px 24px 1fr;row-gap:4px} .beat .bd{grid-column:1/-1} }
+
+.fxs{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.fx{display:grid;grid-template-columns:260px 1fr;gap:14px;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;background:rgba(200,200,200,.02)}
+.fx .fs{font-size:13px;color:var(--ink);font-weight:500}
+.fx .fa{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.fx code,.fx i{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fb4d8;font-style:normal}
+@media(max-width:700px){ .fx{grid-template-columns:1fr;row-gap:5px} }
+
+.prompt.sh{border-color:rgba(140,200,150,.18)}
+.prompt.sh .p-label{color:#8fc79a}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Разбор · AI — Новый Уровень</div>
+    <h1>Кухня<br>в <em>замедлении</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Двадцать секунд slow-motion боевика: кухня разлетается, зависшая в воздухе мука, гильзы, вспышки — и <b>твоё лицо</b> посреди всего этого, спокойное. Движение и камера берутся с карты глубины, внешность — с карты героя. Внутри полный рабочий файл: подготовка, промпт, музыка и что делать, когда поплывёт.</p>
+
+    <div class="p-hero">
+      <div class="vwrap">
+        <video src="depthmap.mp4" poster="poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+        <div class="vcap">
+          <div class="vk">Вход · @depth</div>
+          <div class="vt">Карта глубины</div>
+          <div class="vd">20.5 сек. Задаёт геометрию, блокинг и камеру в каждом бите</div>
+        </div>
+      </div>
+      <div class="vwrap">
+        <img src="ref-hero.jpg" alt="Карта героя — три панели" loading="lazy">
+        <div class="vcap">
+          <div class="vk">Вход · @hero</div>
+          <div class="vt">Карта героя</div>
+          <div class="vd">Фас, спина, портрет. Подавать <b>тремя файлами</b>, не одной склейкой</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Раскадровка · 5 битов</div>
+      <div class="beats">
+        <div class="beat"><span class="bl">A</span><span class="bt">0 – 3.3</span><span class="be">🔫</span><span class="bn">Охранник стреляет в камеру</span><span class="bd">Белая рубашка, кепка, обе руки в объектив</span></div>
+        <div class="beat"><span class="bl">B</span><span class="bt">3.3 – 7.0</span><span class="be">🧔</span><span class="bn">Крупный план героя</span><span class="bd">Твоё лицо, спокойное посреди хаоса</span></div>
+        <div class="beat"><span class="bl">C</span><span class="bt">7.0 – 11.5</span><span class="be">💥</span><span class="bn">Общий план кухни</span><span class="bd">Спины охранников, кухня разлетается</span></div>
+        <div class="beat"><span class="bl">D</span><span class="bt">11.5 – 18.7</span><span class="be">🎥</span><span class="bn">Панорама вправо</span><span class="bd">Трое стреляют, вспышки зависли</span></div>
+        <div class="beat"><span class="bl">E</span><span class="bt">18.7 – 20.5</span><span class="be">✋</span><span class="bn">Снова герой</span><span class="bd">Рука у виска, взгляд вперёд</span></div>
+      </div>
+      <div class="note">💡 Таймкоды даны <b>по карте глубины</b>. Она сдвинута относительно оригинала примерно на треть секунды — у неё срезано начало.</div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>✂️</b> Подготовка</a>
+      <a class="m" href="#s2"><b>📝</b> Промпт</a>
+      <a class="m" href="#s3"><b>🎵</b> Музыка</a>
+      <a class="m" href="#s4"><b>🔧</b> Если поплыло</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">✂️</div>
+      <div>
+        <div class="s-kicker">Шаг 1 · Обязательно</div>
+        <h2>Срезать леттербокс</h2>
+      </div>
+    </div>
+    <p class="s-lead">В карту глубины запечены чёрные полосы сверху и снизу. Беда в том, что в депте они вышли <b>светлыми</b>, а светлое для модели означает «очень близко к камере». Не срежешь — получишь белую стену поперёк кадра вместо кухни.</p>
+    <div class="s-tag">📎 Одна команда в терминале · режем 1920×800, отступ 140 px сверху</div>
+    <div class="prompt sh">
+      <div class="p-bar"><span class="p-label">Терминал · ffmpeg</span><button class="copy" data-id="c1">Копировать</button></div>
+      <pre id="c1">ffmpeg -i ~/Desktop/&quot;КУРС НЕЙРОКРЕАТОР/Timeline 1.mp4&quot; -vf &quot;crop=1920:800:0:140&quot; -c:v libx264 -crf 16 -an ~/Desktop/depth_full.mp4 -y</pre>
+    </div>
+
+    <div class="howto" style="margin-top:20px">
+      <div class="ht">И ещё одно перед загрузкой</div>
+      <ol>
+        <li><b>Разрежь карту героя на три отдельных файла</b> — фас, спина, портрет. Не подавай одной склейкой: лицо держится заметно лучше, когда панели идут по отдельности. Лимит референсов в Seedance 2.5 — пятьдесят, места хватает с запасом.</li>
+        <li><b>Длительность не режь.</b> 20.5 секунды укладывается в лимит модели.</li>
+      </ol>
+      <div class="note">💡 Не знаешь, что такое карта глубины и откуда её взять — начни с гайда <a href="../depth/" style="color:var(--c2)">«Видео с собой по карте глубины»</a>, там метод объясняется с нуля.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">📝</div>
+      <div>
+        <div class="s-kicker">Шаг 2 · Seedance 2.5 · 20.5 сек · 16:9</div>
+        <h2>Промпт</h2>
+      </div>
+    </div>
+    <p class="s-lead">Вставляй как есть. Входы: обрезанная карта глубины плюс три картинки героя. Обрати внимание на две вещи внутри — <b>прямой запрет рендерить серые тона</b> самой депт-карты и <b>NON-IP</b>: охранники намеренно описаны как обезличенные, чтобы модель не потянула лица из фильма-источника.</p>
+    <div class="s-tag">📎 Английский · менять ничего не нужно</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Seedance 2.5</span><button class="copy" data-id="c2">Копировать</button></div>
+      <pre id="c2">@depth: depth_full.mp4 — grayscale depth-map pass, near surfaces bright, far surfaces dark. Use it strictly as the geometry and camera source: it defines where every body, limb, prop and surface sits in Z, the framing of each beat, and the exact camera position and camera motion throughout. Do not render the gray tones themselves. Do not treat it as style, colour, lighting, texture or wardrobe. Ignore any flat light horizontal band at the top or bottom edge — that is letterbox, not geometry, and no wall or surface exists there.
+
+@hero: character reference — man, about 30, mid-length wavy dark-blond hair, thick reddish-blond full beard and moustache, grey-blue eyes, silver hoop earring in the left ear, silver ball-chain necklace, black oversized T-shirt with a blue gradient AINEWLVL chest print, grey-beige marbled wide-leg trousers, white low sneakers, black smartwatch on the left wrist. Identity, face, hair, beard and wardrobe reference only. Ignore the reference&#x27;s flat grey studio background and its shadowless studio light entirely — he must be lit by the scene.
+
+Photoreal. 16:9. 20.5s. Cold steel-blue desaturated cinema grade, heavy slow motion, anamorphic, fine film grain, cool overhead fluorescent key with blue daylight fill. NON-IP — generic anonymous security guards, generic wardrobe, no resemblance to any existing film character. SFX only.
+
+One continuous take inside a commercial kitchen mid-catastrophe: white subway tile, stainless steel counters, overhead fluorescents, everything suspended in extreme slow motion — flour hanging as a fine white cloud, water beads holding in the air, cutlery, spent brass, shattered crockery and food debris frozen mid-flight. Camera position, framing and motion taken exactly from the depth pass at every beat.
+
+It opens on the guard. Medium shot, centre frame, a generic uniformed security guard — white short-sleeve shirt, black tie, dark peaked cap, badge on the sleeve — both arms punched straight toward the lens in the exact pose the depth pass describes, hands locked at the wrists around a pistol, firing at camera. Muzzle flash blooms and hangs. Brass tumbles slowly out of frame. Two more blurred generic guards hold the left and right edges where the depth pass places them, out of focus. Knives, a cleaver, vegetable batons and plastic bottles drift through the air around him.
+
+At about 3.3 seconds the framing changes to a tight chest-up on the hero from @hero, filling frame exactly as the depth pass places his head and shoulders — his face, his beard, his hair, his black AINEWLVL T-shirt, the ball chain on his collarbone. He is calm inside the chaos, unhurried, eyes level, jaw set, breath barely moving his chest, debris drifting past his cheek. His right hand rises into the upper right of frame precisely where the depth pass puts it, one finger extended. Micro-motion only: a slow blink, hair strands drifting, the chain shifting a millimetre.
+
+At about 7 seconds it opens to a wide of the kitchen, two guards&#x27; backs to camera in the foreground, the room shredding in slow motion behind them — trays lifting off the counters, plates separating in the air, a pan of food climbing away from a burner.
+
+At about 11.5 seconds the camera pans right across three guards firing toward the lens, muzzle flashes suspended, stacked crockery and bottles frozen on the counters, a wall of glass sheeting apart at the right of frame.
+
+At about 18.7 seconds it returns to a tight shot of the hero from @hero, moving between the guards, his left arm raised and bent up beside his head exactly as the depth pass describes, hand near his temple, still unhurried, eyes forward. A guard&#x27;s shoulder and a suspended cloud of debris fill the right edge.
+
+Cold overhead fluorescent key from above and slightly screen-left, cool blue window fill from screen-right, soft-edged shadows under the brow and the beard, cool skylight bounce on the forehead and cheekbones. The hero carries the same haze, depth of field, grain and anamorphic falloff as the rest of the frame — never crisper than the room, no cut-out edge, no rim halo. Face and identity exactly as @hero, unchanged in both his beats; geometry, blocking, framing and camera exactly as @depth.
+
+SFX only: a deep low-frequency slow-motion drone, stretched dull gunshot concussions, suspended metal-on-metal ticks from tumbling cutlery and brass, a soft granular hiss of drifting flour, glass separating in slow sheets, faint fluorescent hum.</pre>
+    </div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🎵</div>
+      <div>
+        <div class="s-kicker">Шаг 3 · Монтаж</div>
+        <h2>Музыка</h2>
+      </div>
+    </div>
+    <p class="s-lead">В видеопромпте стоит <b>SFX only</b> — модель отдаёт только звук сцены, поэтому музыка кладётся отдельным слоем и не конфликтует. Приём здесь простой и очень рабочий: <b>чем нежнее музыка, тем страшнее хаос</b>.</p>
+    <div class="s-tag">📎 Проси 30 секунд и режь под 20.5 · флаг Instrumental обязателен</div>
+    <div class="prompt">
+      <div class="p-bar"><span class="p-label">Вариант A · контраст (основной)</span><button class="copy" data-id="c3">Копировать</button></div>
+      <pre id="c3">Instrumental. Delicate fingerpicked nylon-string guitar, slow arpeggios, one sustained cello note underneath, sparse felt piano, no drums for the first half. Warm, tender, nostalgic — almost a lullaby. Tempo 68 BPM, key A minor. Recorded close and dry, room tone audible, tape warmth, no reverb wash. Ends unresolved on a suspended chord.</pre>
+    </div>
+
+    <div class="prompt">
+      <div class="p-bar"><span class="p-label">Вариант A · структура (поле Lyrics)</span><button class="copy" data-id="c4">Копировать</button></div>
+      <pre id="c4">[Intro — 0:00] solo fingerpicked guitar, single voice, very quiet
+[0:03] one low cello note enters and holds
+[0:07] felt piano adds a slow four-note figure, guitar keeps arpeggiating
+[0:11] soft brushed snare and upright bass enter, gentle pulse, still tender
+[0:18] everything drops away except the guitar
+[0:20] final suspended chord, unresolved, let it ring
+[End]</pre>
+    </div>
+
+    <div class="prompt">
+      <div class="p-bar"><span class="p-label">Вариант B · тёмный кинематограф</span><button class="copy" data-id="c5">Копировать</button></div>
+      <pre id="c5">Instrumental cinematic score. Deep sub-bass drone, reversed piano swells, granular metallic textures, a slow taiko pulse entering halfway, cold analog synth pad. Tension building, no melody, no drop. Tempo 70 BPM, minor. Wide stereo, heavy low end, dry percussive transients over a hazy tail.</pre>
+    </div>
+
+    <div class="prompt">
+      <div class="p-bar"><span class="p-label">Вариант C · под бренд-ролик</span><button class="copy" data-id="c6">Копировать</button></div>
+      <pre id="c6">Instrumental. Dark trap-cinematic hybrid, 808 sub bass, sparse triplet hi-hats entering at 0:11, detuned bell melody, vinyl crackle, cold and confident, not aggressive. Tempo 140 BPM half-time feel, key F minor. Clean modern mix, punchy transients, space around the low end.</pre>
+    </div>
+
+    <div class="howto" style="margin-top:22px">
+      <div class="ht">Правила по музыке</div>
+      <ol>
+        <li><b>Проси 30 секунд.</b> Точный короткий хронометраж генераторы не отдают — режь под 20.5 уже на монтаже.</li>
+        <li><b>Ставь флаг Instrumental.</b> Иначе влезет вокал и убьёт слой SFX.</li>
+        <li><b>Не упоминай фильм-источник и его саундтрек.</b> Генератор потянет к узнаваемой мелодии, и трек станет непригоден для коммерции.</li>
+        <li><b>В Higgsfield</b> бери вариант A, но убери таймкодовую разбивку — этот инструмент её игнорирует.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">🔧</div>
+      <div>
+        <div class="s-kicker">Шаг 4 · Контроль</div>
+        <h2>Если поплыло</h2>
+      </div>
+    </div>
+    <p class="s-lead">Первый прогон смотри <b>только в двух местах</b>: лицо на 3.3 секунде и на 18.7. Это должен быть один и тот же человек. Всё остальное вторично — если лицо держится, сцена собралась.</p>
+    <div class="fxs">
+        <div class="fx"><span class="fs">Лицо разное в битах B и E</span><span class="fa">Добавить портретный референс ещё раз отдельным файлом. <b>Промпт не трогать</b></span></div>
+        <div class="fx"><span class="fs">Белая стена сверху или снизу кадра</span><span class="fa">Леттербокс не срезан — вернись к шагу 1</span></div>
+        <div class="fx"><span class="fs">Кадр вышел серым, как сама депт-карта</span><span class="fa">Усилить в <code>@depth</code>: <i>output must be full-colour photoreal footage, never grayscale</i></span></div>
+        <div class="fx"><span class="fs">Охранники похожи на персонажей фильма</span><span class="fa">Усилить NON-IP: <i>faces must not resemble any existing actor or film character</i></span></div>
+        <div class="fx"><span class="fs">Герой выглядит вклеенным</span><span class="fa">Проверить строку про haze / depth of field / grain / no cut-out edge — она в последнем абзаце</span></div>
+        <div class="fx"><span class="fs">Силуэт не совпадает с картой</span><span class="fa">Это предел Seedance: он читает depth как референс геометрии, а не как попиксельную маску</span></div>
+    </div>
+    <div class="warn"><span class="wi">⚠️</span><span class="wt">Нужен <b>строгий попиксельный контроль силуэта</b> — это уже не Seedance, а ComfyUI с ControlNet-Depth. Размен честный: Seedance даёт живую физику и свет, но силуэт плывёт; ControlNet даёт точный силуэт, но физику зависших предметов придётся вытягивать руками.</span></div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=kitchen">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=kitchen">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Здесь всё держится не на промпте, а на решениях: срезать леттербокс, разрезать лист на три файла, поставить SFX only. Такие вещи не гуглятся — их показывают. На обучении даю систему целиком: от первой генерации до портфолио и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=kitchen">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
