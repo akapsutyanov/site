@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вайбкодящая сиба — ситком за 4 шага | AI Новый Уровень</title>
+<meta name="description" content="30 секунд ситкома 90-х с говорящей собакой: четыре промпта, голос, диалог и правила. Полный разбор с готовым результатом.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Вайбкодящая сиба — ситком за 4 шага">
+<meta property="og:description" content="30 секунд ситкома 90-х с говорящей собакой. Четыре промпта, голос и разбор целиком.">
+<meta property="og:url" content="https://neurocreator2.ru/sitcom/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.p-hero{margin-top:32px;display:grid;grid-template-columns:290px 1fr;gap:22px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sp{border:1px solid var(--line);border-radius:13px;padding:14px 16px;background:rgba(13,13,18,.7);text-align:left}
+.sp .sk{font-size:9px;font-weight:700;letter-spacing:2.1px;text-transform:uppercase;color:var(--c3)}
+.sp .sv{margin-top:4px;font-size:15px;color:var(--ink);font-weight:500}
+.synopsis{margin-top:10px;border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+  background:rgba(200,200,200,.025);text-align:left;font-size:13.5px;color:var(--ink2);line-height:1.7}
+.synopsis b{color:var(--ink);font-weight:600}
+@media(max-width:760px){ .p-hero{grid-template-columns:1fr} }
+
+.plates{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.pl{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.pl img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#0a0a0d}
+.pl .pb{padding:12px 14px;text-align:left}
+.pl .ps{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fb4d8;font-weight:600}
+.pl .pt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+.pl .pd{margin-top:4px;font-size:12px;color:var(--ink3);line-height:1.5}
+
+.refs{padding:12px 14px;border-bottom:1px solid var(--line);display:grid;gap:6px;background:rgba(200,200,200,.02)}
+.rf{display:grid;grid-template-columns:88px 1fr;gap:10px;align-items:baseline}
+.rf .rs{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fb4d8;border:1px solid var(--line);
+  border-radius:4px;padding:2px 6px;text-align:center}
+.rf .rx{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.p-foot{padding:12px 15px;border-top:1px solid var(--line);background:rgba(200,200,200,.02);
+  font-size:12.5px;color:var(--ink2);line-height:1.6;text-align:left}
+.p-foot b{color:var(--ink);font-weight:600}
+.p-foot i{font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:11.5px}
+
+.dlg{margin-top:16px;display:flex;flex-direction:column;gap:12px;text-align:left;max-width:640px}
+.dl{display:grid;gap:3px}
+.dl .dw{font-size:10.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8fb4d8}
+.dl .dw i{color:var(--ink3);font-style:normal;text-transform:none;letter-spacing:0;font-weight:400}
+.dl .dt{font-size:14.5px;color:var(--ink);line-height:1.55}
+
+.vps{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.vp{display:grid;grid-template-columns:120px 90px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 15px;background:rgba(200,200,200,.02)}
+.vp .vn{font-size:13px;color:var(--ink);font-weight:500}
+.vp .vv{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#8fb4d8}
+.vp .vd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:640px){ .vp{grid-template-columns:1fr 90px;row-gap:4px} .vp .vd{grid-column:1/-1} }
+audio{width:100%;margin-top:16px;border-radius:10px}
+
+.rls{margin-top:16px;display:flex;flex-direction:column;gap:11px;text-align:left}
+.rl{border-left:2px solid var(--line);padding:2px 0 2px 16px}
+.rl.key{border-left-color:#5a9fd8}
+.rl.hot{border-left-color:rgba(255,190,100,.55)}
+.rl .rt{display:block;font-size:13.5px;color:var(--ink);font-weight:600;margin-bottom:3px}
+.rl .rd{font-size:13px;color:var(--ink2);line-height:1.6}
+.rl .rd i{font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:11.5px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Разбор · AI — Новый Уровень</div>
+    <h1>Вайбкодящая<br><em>сиба</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Ситком девяностых на тридцать секунд: герой приходит с продуктами, а на кухне сиба в кепке задом наперёд заняла всю столешницу мониторами и отказывается уходить. <b>Говорит, с акцентом, со смехом за кадром.</b> Ниже — весь путь: четыре промпта в правильном порядке, голос, диалог и правила, без которых собака превратится в человека.</p>
+
+    <div class="p-hero">
+      <div class="vwrap">
+        <video src="result.mp4" poster="poster.jpg" loop playsinline controls preload="metadata"></video>
+        <div class="vcap"><div class="vk">Результат</div><div class="vt">Эпизод 1 · со звуком</div></div>
+      </div>
+      <div>
+        <div class="specs">
+          <div class="sp"><div class="sk">Длина</div><div class="sv">30 сек</div></div>
+          <div class="sp"><div class="sk">Формат</div><div class="sv">9:16 · 1080p</div></div>
+          <div class="sp"><div class="sk">Модель</div><div class="sv">Seedance 2.5</div></div>
+          <div class="sp"><div class="sk">Референсов</div><div class="sv">4 + голос</div></div>
+        </div>
+        <div class="synopsis">
+          <b>Сюжет по битам.</b> 0:00 герой входит с пакетом и роняет его. 0:03 наезд на кухню: сиба печатает лапами по трём клавиатурам. 0:06 «Ты что творишь?». 0:09 «Я вайбкожу. Отстань». 0:15 «Ты вообще готовить умеешь?» — и хохот. 0:18 мониторы гаснут каскадом, из-под козырька идёт дымок. 0:21 герой уходит за продуктами. 0:27 сиба передразнивает его и жмёт лапой одну клавишу. Ничего.
+        </div>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Порядок работы</div>
+      <ol>
+        <li><b>Карточка героя</b> — три ракурса на сером фоне. Пойдёт в сцену слотом <code style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#8fb4d8">@image1</code>.</li>
+        <li><b>Карточка сибы</b> — профиль, фас и портрет. Станет <code style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#8fb4d8">@image2</code>.</li>
+        <li><b>Сеты</b> — гостиная и кухня готовыми картинками плюс установочный кадр дома.</li>
+        <li><b>Сцена</b> — всё вместе, тридцать секунд одним куском.</li>
+      </ol>
+      <div class="note">💡 Шаги строго по порядку: карточки нужны как рефы для сцены, установочный кадр монтируется перед ней.</div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>🧑</b> Герой</a>
+      <a class="m" href="#s2"><b>🐕</b> Сиба</a>
+      <a class="m" href="#s3"><b>🏠</b> Сеты</a>
+      <a class="m" href="#s4"><b>🎬</b> Сцена</a>
+      <a class="m" href="#s5"><b>🔊</b> Голос</a>
+      <a class="m" href="#s6"><b>📋</b> Правила</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🧑</div>
+      <div>
+        <div class="s-kicker">Шаг 1 · @image1</div>
+        <h2>Карточка героя</h2>
+      </div>
+    </div>
+    <p class="s-lead">Первым делом лицо и образ в трёх ракурсах: фас крупно, три четверти в полный рост, профиль. Загружаешь своё фото как реф — лицо возьмётся с него, свитер и джинсы опишет промпт.</p>
+    <div class="plates" style="grid-template-columns:1fr;max-width:520px">
+      <div class="pl"><img src="ref1-hero.jpg" alt="Карточка героя" loading="lazy"><div class="pb"><div class="ps">@image1</div><div class="pt">Герой · 3 панели</div></div></div>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Nano Banana Pro · 3 панели</span>
+        <button class="copy" data-id="c1">Копировать</button>
+      </div>
+      <div class="refs">
+        <div class="rf"><span class="rs">реф</span><span class="rx">Фото лица — волосы, борода, серьга</span></div>
+      </div>
+      <pre id="c1">Character sheet, 90s sitcom style. Young man, face and identity exactly as in the attached reference image — wavy mid-length dark-brown hair with a loose centre parting falling to the jaw, thick natural brows, grey-green eyes, full trimmed beard and moustache with warmer copper tones through the chin, fair warm-toned skin, a small silver hoop earring with a tiny cross pendant in one ear.
+
+Wearing an oversized chunky ribbed knit sweater with bold horizontal stripes in purple, mustard yellow, orange, dark green and burgundy — loose boxy fit, dropped shoulders, ribbed crew neck, hem falling below the hips, long sleeves bunched down over the backs of his hands; high-waisted light-wash baggy jeans with a relaxed straight leg, tucked under the sweater hem and stacking over the shoes; black high-top canvas sneakers with white rubber soles and white laces. On his left wrist a stack of accessories half hidden by the sleeve: several woven beaded friendship bracelets, a braided leather cord, thin silver bangles and a chunky plastic watch on a colourful woven strap. A thin silver ball-chain necklace sitting at the base of the throat.
+
+Three panels in one horizontal frame, thin clean separation between panels, the same man and the same outfit in all three.
+
+PANEL 1 — front view, close up. Chest-up, squared to camera, head level, eyes to camera, relaxed neutral expression with a faint closed-lip half-smile. The sweater collar and the chain read at the bottom of frame.
+
+PANEL 2 — three-quarter view, full height. The complete figure head to toe, body turned about thirty degrees, weight on one hip, one hand loose at his side and the other pushed into a jean pocket, sleeve bunched at the wrist. The full sweater, jean break and sneakers all in frame.
+
+PANEL 3 — profile view, full height. The complete figure head to toe in clean side profile, standing relaxed, arms at his sides, the hair falling past the ear, the beard line and the earring readable in silhouette.
+
+Warm tungsten studio lighting, soft key with gentle falloff. Neutral grey backdrop. 35mm film grain, warm photochemical colour, slightly soft micro-contrast. Photoreal, no illustration.</pre>
+      <div class="p-foot"><b>Тёплый вольфрам здесь — плюс, а не проблема.</b> Обычно запечённый в карточку свет мешает: сцена тянет его за собой. Но эта сцена сама светится тёплым вольфрамом ситкома, так что карточка и кадр совпадают по освещению.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">🐕</div>
+      <div>
+        <div class="s-kicker">Шаг 2 · @image2</div>
+        <h2>Карточка сибы</h2>
+      </div>
+    </div>
+    <p class="s-lead">Панели другие, чем у героя: безголовая панель для собаки бессмысленна, поэтому <b>профиль в стойке, фас в полный рост и портрет как якорь</b>. Профиль тут не для красоты — по нему модель запоминает силуэт: глубину груди, линию спины и хвост колечком.</p>
+    <div class="plates" style="grid-template-columns:1fr;max-width:520px">
+      <div class="pl"><img src="ref2-shiba.jpg" alt="Карточка сибы" loading="lazy"><div class="pb"><div class="ps">@image2</div><div class="pt">Сиба · 3 панели</div></div></div>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Nano Banana Pro · 3 панели</span>
+        <button class="copy" data-id="c2">Копировать</button>
+      </div>
+      <div class="refs">
+        <div class="rf"><span class="rs">реф</span><span class="rx">Фото собаки — идентичность конкретного пса</span></div>
+      </div>
+      <pre id="c2">A three-panel photorealistic character reference sheet of one real Shiba Inu, composed as one horizontal frame divided into three equal vertical panels side by side, thin clean separation between panels, the same dog and the same styling rendered identically across all three. No text, no labels, no numbering anywhere in the image.
+
+The dog is the exact same individual as the attached reference photograph. A compact well-muscled red Shiba Inu with a dense double coat: rich red-orange guard hair across the back, shoulders, flanks and outer legs, and clean cream-white urajiro markings on the muzzle, cheeks, throat, chest, belly, inner legs and the underside of the tail. Small erect triangular ears set wide and tilted slightly forward, dark almond-shaped eyes set obliquely with black rims, a broad black nose with a slightly damp surface, black lip line, thick white whiskers, a broad flat forehead with a defined stop, and a thick tail carried curled over the back. Individual guard hairs and the softer undercoat both visible, with real fur direction, real density variation, and light catching the guard hairs at the coat edges.
+
+He wears a blue-and-white striped baseball cap turned backwards, sitting naturally on the crown with the closure strap over the forehead and both erect ears standing free on either side of the cap, and round tortoiseshell-framed glasses slipping slightly down the muzzle. The collar of an oversized red and black plaid flannel shirt sits loosely around his neck and shoulders. Everything is worn realistically, sitting on the fur with real weight and real contact, fur compressed slightly beneath the cap band and the flannel collar.
+
+Real dog anatomy and proportions throughout. No anthropomorphism, no standing on hind legs, no human posture, no human hands, no cartoon styling, no exaggerated features.
+
+LEFT PANEL — full body side profile, standing squared in a natural breed stance on all four legs, seen from directly beside him, head level and facing forward out of profile. The full silhouette reads: chest depth, back line, tuck-up, angulation of the hind legs, and the curled tail over the back with its cream underside visible.
+
+CENTER PANEL — full body front view, standing squared to camera on all four legs, weight even, head level, ears up, eyes directly to camera, mouth closed. The full front of the flannel collar and the chest markings read clearly.
+
+RIGHT PANEL — tight head and chest close-up, shot straight on, the head filling the panel from just above the cap down to the top of the chest. Every detail at maximum resolution: the fold and texture of the ears, the eye shape and the dark iris with real moisture and reflection, the transition line where red coat meets cream urajiro on the cheeks and muzzle, the nose texture, individual whiskers, and the weave of the cap fabric.
+
+Coat color renders identically in value and hue across all three panels — the same red-orange, the same cream, never darker, never washed out, never colour-shifted.
+
+Pure white seamless background in every panel, one uniform value corner to corner with no gradient, no seam line and no vignette. Soft even studio lighting, flat and shadowless, matched fill from both sides so neither side of the face is darker. No cast shadow, no contact shadow beneath the paws, no floor shadow, no halo or edge darkening anywhere outside the dog.
+
+Sharp focus edge to edge in all three panels, no depth-of-field falloff and no background blur. Shot on an 85mm lens, high detail, photograph not illustration.</pre>
+      <div class="p-foot"><b>Кепка сине-белая, очки круглые.</b> Именно так они описаны и в сцене — расхождение между промптом и рефом заставляет модель их смешивать. Меняешь реквизит — меняй в обоих местах.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🏠</div>
+      <div>
+        <div class="s-kicker">Шаг 3 · @image3 и @image4</div>
+        <h2>Сеты</h2>
+      </div>
+    </div>
+    <p class="s-lead">Два интерьера идут в сцену готовыми картинками. Снаружи нужен отдельный установочный кадр — с него открывается эпизод, на него ляжет название.</p>
+    <div class="plates">
+      <div class="pl"><img src="ref3-living.jpg" alt="Гостиная" loading="lazy"><div class="pb"><div class="ps">@image3</div><div class="pt">Гостиная</div><div class="pd">Красный велюровый диван лицом к камере, белый кирпич, гирлянды. Дверь справа, арка на кухню слева</div></div></div>
+      <div class="pl"><img src="ref4-kitchen.jpg" alt="Кухня с мониторами" loading="lazy"><div class="pb"><div class="ps">@image4</div><div class="pt">Кухня</div><div class="pd">Пирамида из 12 CRT с бегущим кодом — и уцелевший уют: занавески в клетку, кастрюля на системнике, базилик</div></div></div>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Nano Banana Pro · 9:16</span>
+        <button class="copy" data-id="c3">Копировать</button>
+      </div>
+      <pre id="c3">Cinematic establishing shot of a classic American brownstone row house at blue
+hour, vertical 9:16 framing, camera on the opposite sidewalk looking slightly
+upward at the building.
+
+Three-storey nineteenth-century townhouse in warm tan-brown brick with a flat
+roofline, a simple stone cornice, and three dark chimney stacks standing against
+the sky. Tall double-hung sash windows in white-painted frames, several glowing
+warm amber from inside with sheer curtains half drawn, one upper window showing
+a sliver of a lit room with a plant on the sill. Two window boxes of trailing
+flowers on the ground-floor windows. A recessed entrance slightly left of centre
+with a heavy wooden double door with glass panels, a small portico above it, and
+two warm wall sconces throwing soft pools of light onto the brick. A short flight
+of stone steps down to the sidewalk with black iron handrails, a low black iron
+fence along the frontage, a terracotta pot with a small shrub at the bottom of
+the steps. A narrow black iron balcony and railing on the upper right of the
+facade. A single utility wire crossing the sky at the upper right. The dark
+silhouette of leafy tree branches intruding into the top right corner.
+
+Deep indigo blue sky overhead grading down to warm orange, peach and dusty rose
+at the horizon on the right, the last of the sunset. Distant city lights twinkling
+in the low right background beyond the rooftops. The street itself in soft
+shadow, the parked roof of a pale sedan cutting across the bottom left corner and
+a dark car at the bottom right, sidewalk paving faintly catching the streetlight.
+
+Warm practical lighting only — window light, door sconces, distant streetlamps —
+against the cool blue ambient dusk. Nostalgic, cosy, inviting. Shot on 35mm film,
+50mm lens, static locked-off camera, deep focus with the whole facade sharp, fine
+organic film grain, warm photochemical colour, gentle highlight bloom around the
+lamps, natural contrast with readable shadows. Photograph, not illustration.
+
+No text, no title card, no lettering, no captions, no subtitles, no logo, no
+watermark, no interface overlay, no people, no daylight, no harsh shadows, no
+neon, no HDR, no digital sharpening.</pre>
+      <div class="p-foot"><b>Двойной запрет на текст — не перестраховка.</b> Генераторы охотно дорисовывают вывески и номера домов ровно там, куда просится титр. Название эпизода накладывается потом, в монтаже.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">🎬</div>
+      <div>
+        <div class="s-kicker">Шаг 4 · Seedance 2.5 · 30 сек · 9:16</div>
+        <h2>Сцена</h2>
+      </div>
+    </div>
+    <p class="s-lead">Тридцать секунд целиком, без склеек. Реплики размечены по таймкодам, смех — только в отмеченных точках. Загружай рефы <b>строго по нумерации слотов</b>.</p>
+    <div class="prompt vid">
+      <div class="p-bar">
+        <span class="p-label">Промпт · Seedance 2.5</span>
+        <button class="copy" data-id="c4">Копировать</button>
+      </div>
+      <div class="refs">
+        <div class="rf"><span class="rs">@image1</span><span class="rx">Карточка героя из шага 1</span></div>
+        <div class="rf"><span class="rs">@image2</span><span class="rx">Карточка сибы из шага 2</span></div>
+        <div class="rf"><span class="rs">@image3</span><span class="rx">Гостиная</span></div>
+        <div class="rf"><span class="rs">@image4</span><span class="rx">Кухня с мониторами</span></div>
+        <div class="rf"><span class="rs">@audio1</span><span class="rx">Голос сибы — шаг 5</span></div>
+      </div>
+      <pre id="c4">90s multi-camera sitcom scene, 30 seconds, continuous, 9:16 vertical.
+Shot on 35mm film, bright evenly lit cosy apartment, high-key warm tungsten
+lighting, soft fill from every side, no harsh shadows, flat theatrical staging,
+characters face camera, subtle film grain, sitcom set brightness.
+EVENING: deep blue dusk outside the windows, warm lamps lit inside.
+All dialogue in English.
+
+CHARACTERS —
+MAN: @image1 a lean man in his mid-twenties, wavy mid-length dark-brown hair with a
+loose centre parting falling to the jaw, thick natural eyebrows, full trimmed
+beard and moustache, grey-green eyes, a small silver hoop earring with a tiny
+cross pendant in one ear. Oversized chunky ribbed knit sweater with horizontal
+stripes in purple, mustard, orange, dark green and burgundy, dropped shoulders,
+crew neck, hem below the hips, sleeves bunched over the backs of his hands.
+High-waisted baggy light-wash jeans, black high-top canvas sneakers with white
+soles. On his left wrist a stack of woven beaded bracelets, a braided leather
+cord and a chunky watch, half hidden by the sleeve. Thin silver ball-chain
+necklace. Speaks American English.
+
+SHIBA: @image2 photorealistic real red Shiba Inu, compact and well-muscled, dense
+double coat with rich red-orange guard hair and clean cream-white urajiro
+markings on the muzzle, cheeks, throat, chest and belly, small erect triangular
+ears tilted slightly forward, dark almond eyes, broad black nose, thick tail
+curled over the back. Blue-and-white striped cap worn backwards, sitting on the
+crown with both erect ears standing free on either side of it, round
+tortoiseshell-framed glasses slipping down the muzzle, oversized red and black
+plaid flannel shirt worn over its coat with rolled sleeves. Real dog anatomy and
+proportions, four legs, sits on its haunches with front paws up on the keyboard,
+NOT anthropomorphic, no human arms, no human shoulders, never standing on hind
+legs. Speaks English with a distinct Japanese accent — polite, precise, slightly
+clipped consonants, unhurried.
+
+SET — @image3 Cosy lived-in apartment. Living room with a deep red velvet sofa facing
+camera, mustard and cream pillows, knitted blanket, low mid-century coffee
+table, geometric striped rug, cream walls, white painted brick, pale honey wood
+trim, open shelves crammed with books and clutter, houseplants in woven baskets,
+warm fairy lights, candles. Heavy wooden front door with brass locks on the
+RIGHT. Wide archway on the LEFT into a bright kitchen @image4 taken over by a pyramid
+wall of 12 beige CRT and flat-panel monitors glowing with scrolling code,
+tangled cables, three mechanical keyboards, beige tower PCs, with cosy kitchen
+details still visible: gingham curtains, ceramic jars, a cooking pot sitting on
+top of a computer tower, basil on the windowsill.
+
+0:00–0:03 — WIDE SHOT, static. The man enters through the front door on the
+RIGHT carrying a large brown paper grocery bag, baguette and greens sticking
+out. He pushes the door shut with his foot, takes two steps in, turns his head
+to the LEFT toward the kitchen archway. His eyes widen, his jaw drops. The bag
+slips from his hands and hits the floor, oranges rolling across the rug.
+
+0:03–0:06 — SLOW PUSH-IN LEFT through the archway into the kitchen. The Shiba in
+the backwards cap and glasses types furiously across three keyboards with its
+front paws, curled tail flicking a mouse off the counter, tugging a cable with
+its teeth, scrolling code reflected in its lenses, the monitor wall glowing
+behind it.
+[LAUGH TRACK: big burst + applause]
+
+0:06–0:09 — MEDIUM TWO-SHOT. He storms up to the counter, arms crossed,
+bracelets visible where the sleeve rides up.
+MAN (annoyed): &quot;What are you doing? I need to cook dinner!&quot;
+
+0:09–0:12 — The Shiba slowly turns its head to camera, smug, looking over the
+top of its glasses.
+SHIBA (Japanese accent): &quot;I&#x27;m vibecoding. Leave me alone.&quot;
+It turns dismissively back to the screen.
+[LAUGH TRACK]
+
+0:12–0:15 — He jabs a finger at the monitor wall.
+MAN (firmer): &quot;Okay, clear all this junk out of here! I want to cook dinner!&quot;
+
+0:15–0:18 — CLOSE-UP on the Shiba. It turns its whole body toward him.
+SHIBA (amused, Japanese accent): &quot;You? Can you even cook?&quot;
+It throws its head back in exaggerated laughter, mouth wide open with the tongue
+lolling out, one front paw slapping the counter, cap knocked sideways over one
+ear, glasses sliding down its muzzle.
+[LAUGH TRACK: over the Shiba&#x27;s laugh]
+
+0:18–0:21 — WIDE on the monitor wall. A thin wisp of grey smoke, one small
+spark pops, the central screen goes black, then all the other monitors shut off
+one by one in a cascade. The cold blue glow disappears, the kitchen left in even
+warm lamp light — still bright, just warmer. The Shiba freezes mid-laugh, mouth
+open, ears swivelling forward, the blue reflections in its lenses going dark, a
+tiny curl of smoke rising from the brim of its cap. No explosion, no fire, just
+a quiet burnout.
+[LAUGH TRACK: long &quot;ooooh&quot; then a burst]
+
+0:21–0:27 — MEDIUM SHOT. He smirks, one eyebrow raised, nudges a rolled-away
+orange toward himself with the toe of his sneaker and picks it up.
+MAN (calm and satisfied): &quot;Right. I&#x27;m going back to the store. In fifteen
+minutes I want all this junk gone.&quot;
+He turns and walks RIGHT across the living room to the front door, pauses,
+glances back over his shoulder to the left, exits and slams the door. The top
+monitor on the stack wobbles and tips over from the impact.
+
+0:27–0:30 — CLOSE-UP on the Shiba staring at the closed door. It mockingly
+mouths his words with its tongue slightly out, then mutters aloud.
+SHIBA (sulking under its breath, Japanese accent): &quot;Blah, blah, blah... &#x27;all
+this junk&#x27;...&quot;
+It straightens its crooked cap with one paw with wounded dignity, nudges its
+glasses back up, turns to the dead black monitor and presses a single key with
+one paw. Nothing happens. FREEZE FRAME.
+[LAUGH TRACK + applause + upbeat 90s sitcom outro sting]
+
+AUDIO: 90s sitcom laugh track at the marked beats only, no background music
+except the final sting. Room tone, key in lock, door creak, paper bag hitting
+the floor, rolling oranges, cooling fan hum, mechanical keyboard clatter, rising
+overheat whine, electrical pop and hiss, cascade of monitors clicking off, claws
+on the countertop, door slam, plastic case falling, single lonely key click.
+USE THIS VOICE FOR SHIBA: @audio1
+
+NEGATIVE: dark cinematic grading, moody shadows, dim lighting, underexposed,
+cold blue interior, handheld camera, shaky, shallow depth of field bokeh, fisheye,
+wide angle distortion, neon, cyberpunk, haze, explosion, fireball, flames,
+dramatic destruction, cartoon dog, 3d render, pixar, anime, illustration,
+anthropomorphic dog, bipedal dog, dog standing on hind legs, human arms on dog,
+human hands, distorted anatomy, extra limbs, floppy ears, wrong breed, daylight
+outside, sunny, empty sterile room, modern minimalist, text, watermark, logo,
+subtitles, non-english dialogue.</pre>
+      <div class="p-foot"><b>В негативах стоят <i>floppy ears, wrong breed</i></b> — без них модели охотно подмешивают акиту или корги, а у сибы силуэт уха очень характерный.</div>
+    </div>
+
+    <div class="howto" style="margin-top:22px">
+      <div class="ht">Диалог по-русски</div>
+      <p style="font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7">Для субтитров и понимания. В промпте стоит <i style="font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:12px">All dialogue in English</i>, а в негативах <i style="font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:12px">non-english dialogue</i> — озвучка сгенерируется английской.</p>
+      <div class="dlg">
+        <div class="dl"><span class="dw">Герой <i>(раздражённо)</i></span><span class="dt">Ты что творишь? Мне ужин готовить надо!</span></div>
+        <div class="dl"><span class="dw">Сиба</span><span class="dt">Я вайбкожу. Отстань.</span></div>
+        <div class="dl"><span class="dw">Герой <i>(жёстче)</i></span><span class="dt">Так, убрал отсюда весь этот хлам! Я хочу приготовить ужин!</span></div>
+        <div class="dl"><span class="dw">Сиба <i>(насмешливо)</i></span><span class="dt">Ты? Ты вообще готовить умеешь?</span></div>
+        <div class="dl"><span class="dw">Герой <i>(спокойно, довольно)</i></span><span class="dt">Ладно. Я схожу обратно в магазин. Через пятнадцать минут чтобы этого хлама тут не было.</span></div>
+        <div class="dl"><span class="dw">Сиба <i>(бубнит под нос, обиженно)</i></span><span class="dt">Бла-бла-бла… «весь этот хлам»…</span></div>
+      </div>
+      <div class="note"><b>«Junk» переведён одинаково оба раза.</b> В финале сиба цитирует героя: «барахло» в начале и «хлам» в конце — цитата развалится. И «я вайбкожу» звучит коряво намеренно, в этом вся шутка — «программирую» убивает её насмерть.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s5">
+    <div class="s-head">
+      <div class="s-num">🔊</div>
+      <div>
+        <div class="s-kicker">Шаг 5 · @audio1</div>
+        <h2>Голос сибы</h2>
+      </div>
+    </div>
+    <p class="s-lead">Четыре реплики, все короткие — тут важнее тембр и акцент, чем длина. Вот как это звучит:</p>
+    <audio src="voice.m4a" controls preload="none"></audio>
+    <div class="vps">
+        <div class="vp"><span class="vn">Stability</span><span class="vv">40–50</span><span class="vd">ниже 40 начнёт «играть», выше 60 станет плоским</span></div>
+        <div class="vp"><span class="vn">Similarity</span><span class="vv">75</span><span class="vd">рабочий дефолт для клона</span></div>
+        <div class="vp"><span class="vn">Style</span><span class="vv">25–35</span><span class="vd">сиба надменная, ей нужно чуть больше подачи, чем герою</span></div>
+        <div class="vp"><span class="vn">Speed</span><span class="vv">0.9</span><span class="vd">медленная речь — половина шутки</span></div>
+    </div>
+    <div class="howto" style="margin-top:20px">
+      <div class="ht">Про акцент</div>
+      <p style="font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7"><b style="color:var(--ink)">Акцент держит клон, а не ремарка.</b> <i style="font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:12px">Japanese accent</i> в скобках подстрахует интонацию, но по-настоящему акцент живёт в самом голосе. Для клона нужна чистая запись без музыки и эха, минута-две обычной речи — не чтение вслух с выражением.</p>
+    </div>
+  </section>
+
+  <section class="step" id="s6">
+    <div class="s-head">
+      <div class="s-num">📋</div>
+      <div>
+        <div class="s-kicker">Что ломается чаще всего</div>
+        <h2>Правила</h2>
+      </div>
+    </div>
+    <div class="rls">
+        <div class="rl key"><span class="rt">Порядок загрузки = нумерация слотов</span><span class="rd">Рефы читаются по позиции. Поменяешь @image1 и @image2 местами — получишь лицо героя на собаке и наоборот.</span></div>
+        <div class="rl hot"><span class="rt">Лист из панелей требует отдельной оговорки</span><span class="rd">Модель по умолчанию читает трёхпанельный лист как трёх разных персонажей. В блоке @image1 поэтому прямо сказано, что это один человек в трёх ракурсах.</span></div>
+        <div class="rl hot"><span class="rt">Промпт не должен спорить с рефом</span><span class="rd">Кепка и очки описаны в сцене ровно так, как они на карточке сибы. Расхождение правится в обоих местах или ни в одном — иначе модель начнёт их смешивать.</span></div>
+        <div class="rl "><span class="rt">Реквизит на собаке — по физике, а не «как у человека»</span><span class="rd">У сибы стоячие треугольные уши, поэтому кепка сидит козырьком назад с ушами по бокам от тульи. И у собаки нет жеста «лапа на животе»: смех — это запрокинутая голова, открытая пасть с языком и удар лапой по столешнице.</span></div>
+        <div class="rl "><span class="rt">Смех только в отмеченных точках</span><span class="rd">В промпте laugh track стоит пятью метками и нигде больше. Уберёшь разметку — модель размажет смех по всей дорожке, и ритм ситкома развалится.</span></div>
+        <div class="rl "><span class="rt">Русская речь в кадре — это две правки</span><span class="rd">Заменить <i>All dialogue in English</i> и убрать <i>non-english dialogue</i> из негативов, а реплики подставить в те же таймкоды.</span></div>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=sitcom">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=sitcom">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Здесь работа не в промптах, а в порядке: карточки до сцены, реквизит описан дважды одинаково, смех размечен по таймкодам. Такие решения не гуглятся — их показывают. На обучении даю систему целиком: от первой генерации до портфолио и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=sitcom">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
