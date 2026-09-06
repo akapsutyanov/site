@@ -250,6 +250,24 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
 .prompt.sk{border-color:rgba(200,200,200,.22)}
 pre{max-height:340px}
 
+/* демо: исходник и четыре мира */
+.vdemo{display:block;margin-top:32px}
+.dsrc{max-width:430px;margin:0 auto}
+.vw{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vw.out{border-color:rgba(120,180,255,.24)}
+.vw video{width:100%;height:auto;display:block;background:#08080a}
+.vc{padding:11px 13px;text-align:left}
+.vc .vk{font-size:9px;font-weight:700;letter-spacing:2.3px;text-transform:uppercase;color:var(--c3)}
+.vw.out .vc .vk{color:#8fa8c8}
+.vc .vt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+.vc .vd{margin-top:3px;font-size:11.5px;color:var(--ink3);line-height:1.5}
+.dsplit{margin:14px auto 0;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--ink3);font-size:12px}
+.dsplit::before,.dsplit::after{content:'';height:1px;flex:1;max-width:150px;
+  background:linear-gradient(to right,transparent,rgba(200,200,200,.18),transparent)}
+.dgrid{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+@media(max-width:780px){ .dgrid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:460px){ .dgrid{grid-template-columns:1fr} }
+
 </style>
 </head>
 <body>
@@ -261,6 +279,39 @@ pre{max-height:340px}
     <h1>Замена героя<br>и <em>локации</em></h1>
     <div class="author">by @alexkapustyanov</div>
     <p class="intro">Снимаешь <b>один дубль</b> — как говоришь в микрофон на фоне тёмной стены. А дальше переодеваешь себя в скафандр, тогу или техвер и переносишь в космос, на горный хребет, в Древний Рим и в неоновый мегаполис. Лицо, мимика и речь остаются твоими, кадр в кадр. Меняется всё остальное.</p>
+
+    <div class="vdemo">
+      <div class="dsrc">
+        <div class="vw">
+          <video src="src.mp4" poster="src.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+          <div class="vc">
+            <div class="vk">Исходник</div>
+            <div class="vt">Один дубль в тёмной комнате</div>
+            <div class="vd">Кардиган, микрофон, восемь секунд. Всё, что было снято на самом деле</div>
+          </div>
+        </div>
+      </div>
+      <div class="dsplit">из него — четыре мира</div>
+      <div class="dgrid">
+        <div class="vw out">
+          <video src="w1-space.mp4" poster="w1-space.jpg" autoplay muted loop playsinline preload="none"></video>
+          <div class="vc"><div class="vk">Сценарий 1</div><div class="vt">🚀 Космонавт</div></div>
+        </div>
+        <div class="vw out">
+          <video src="w2-mount.mp4" poster="w2-mount.jpg" autoplay muted loop playsinline preload="none"></video>
+          <div class="vc"><div class="vk">Сценарий 2</div><div class="vt">🏔 Репортёр на горе</div></div>
+        </div>
+        <div class="vw out">
+          <video src="w3-rome.mp4" poster="w3-rome.jpg" autoplay muted loop playsinline preload="none"></video>
+          <div class="vc"><div class="vk">Сценарий 3</div><div class="vt">🏛 Древний Рим</div></div>
+        </div>
+        <div class="vw out">
+          <video src="w4-cyber.mp4" poster="w4-cyber.jpg" autoplay muted loop playsinline preload="none"></video>
+          <div class="vc"><div class="vk">Сценарий 4</div><div class="vt">🌃 Киберпанк</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px;font-size:12.5px;color:var(--ink3);line-height:1.6">Лицо, мимика и движение губ одинаковые во всех пяти роликах — это буквально один и тот же дубль. Промпты каждого мира лежат ниже.</p>
+    </div>
 
     <div class="two">
       <div class="tc keep">
