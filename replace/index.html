@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Замена героя и локации по референсу | AI Новый Уровень</title>
+<meta name="description" content="Один дубль — четыре мира: космос, горы, Древний Рим, киберпанк. Инструкция и готовые промпты для замены одежды и фона в видео.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Замена героя и локации по референсу">
+<meta property="og:description" content="Снял один дубль — получил четыре мира. Лицо и речь остаются, меняется всё вокруг.">
+<meta property="og:url" content="https://neurocreator2.ru/replace/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.two{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.tc{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:rgba(13,13,18,.75);text-align:left}
+.tc.keep{border-color:rgba(140,200,150,.22)}
+.tc .tk{font-size:9.5px;font-weight:700;letter-spacing:2.3px;text-transform:uppercase;color:var(--c3)}
+.tc.keep .tk{color:#8fc79a}
+.tc .tt{margin-top:9px;font-size:14px;color:var(--ink);font-weight:600;line-height:1.4}
+.tc .td{margin-top:7px;font-size:13px;color:var(--ink2);line-height:1.6}
+@media(max-width:600px){ .two{grid-template-columns:1fr} }
+
+.reqs{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:11px}
+.rq{border:1px solid var(--line);border-radius:14px;padding:16px 17px;background:rgba(200,200,200,.025);text-align:left}
+.rq .re{font-size:18px}
+.rq .rn{display:block;margin-top:8px;font-size:13.5px;color:var(--ink);font-weight:600}
+.rq .rd{display:block;margin-top:5px;font-size:12.5px;color:var(--ink3);line-height:1.55}
+
+.sts{margin-top:16px;display:flex;flex-direction:column;gap:9px;text-align:left}
+.st{display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:start;
+  border:1px solid var(--line);border-radius:13px;padding:13px 16px;background:rgba(200,200,200,.025)}
+.st .sn{width:28px;height:28px;border-radius:50%;border:1px solid rgba(200,200,200,.28);display:flex;
+  align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--c2)}
+.st .sb{font-size:13.5px;color:var(--ink);line-height:1.5}
+.st .sb b{font-weight:600}
+.st .sb span{display:block;margin-top:4px;font-size:12.5px;color:var(--ink3);font-weight:300}
+.st i,.fx i,.rl i{font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:11.5px}
+
+.fxs{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.fx{display:grid;grid-template-columns:260px 190px 1fr;gap:14px;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;background:rgba(200,200,200,.02)}
+.fx .fs{font-size:13px;color:var(--ink);font-weight:500}
+.fx .fc{font-size:12.5px;color:var(--ink3)}
+.fx .fa{font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:820px){ .fx{grid-template-columns:1fr;row-gap:5px} .fx .fc{color:#c9a86a} }
+
+.prompt.neg{border-color:rgba(255,140,140,.16)}
+.prompt.neg .p-label{color:#d89a9a}
+.prompt.sk{border-color:rgba(200,200,200,.22)}
+pre{max-height:340px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>Замена героя<br>и <em>локации</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Снимаешь <b>один дубль</b> — как говоришь в микрофон на фоне тёмной стены. А дальше переодеваешь себя в скафандр, тогу или техвер и переносишь в космос, на горный хребет, в Древний Рим и в неоновый мегаполис. Лицо, мимика и речь остаются твоими, кадр в кадр. Меняется всё остальное.</p>
+
+    <div class="two">
+      <div class="tc keep">
+        <div class="tk">Что сохраняется</div>
+        <div class="tt">Лицо, мимика, артикуляция</div>
+        <div class="td">Плюс кадрирование, движение камеры и тайминг речи. Исходная съёмка остаётся основой — это не генерация с нуля</div>
+      </div>
+      <div class="tc">
+        <div class="tk">Что меняется</div>
+        <div class="tt">Одежда, предметы, фон и свет</div>
+        <div class="td">Поверх твоего дубля переписывается всё, кроме человека. Режим <i style="font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:12px">hf_mult_replace_object</i> в Higgsfield Genjutsu</div>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Требования к исходному кадру</div>
+      <div class="reqs">
+        <div class="rq"><span class="re">🔦</span><span class="rn">Лицо открыто и освещено</span><span class="rd">Вся ценность метода в том, что лицо и речь не трогаются. Тень на пол-лица — потеря</span></div>
+        <div class="rq"><span class="re">🧱</span><span class="rn">Простой фон</span><span class="rd">Чем меньше узнаваемых предметов за спиной, тем чище замена. Тёмная стена — лучший случай</span></div>
+        <div class="rq"><span class="re">✋</span><span class="rn">Руки целиком в кадре или вне его</span><span class="rd">Обрезанная по запястью рука — источник лишних пальцев</span></div>
+        <div class="rq"><span class="re">🎤</span><span class="rn">Не больше одного предмета в руках</span><span class="rd">Микрофон — да. Микрофон плюс телефон — уже риск</span></div>
+        <div class="rq"><span class="re">🎥</span><span class="rn">Спокойная камера</span><span class="rd">Резкие рывки модель отрабатывает хуже, чем плавное движение или статику</span></div>
+        <div class="rq"><span class="re">💡</span><span class="rn">Нейтральный свет</span><span class="rd">Сильный цветной свет из исходника «протекает» в новую локацию и мешает пересветке</span></div>
+      </div>
+      <div class="note">💡 Родственный режим <i style="font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:12px">hf_mult_motion_control</i> берёт только движение и строит кадр с нуля — он нужен, когда меняется даже ракурс. Для этой задачи не он.</div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Порядок работы</div>
+      <div class="sts">
+        <div class="st"><span class="sn">1</span><span class="sb"><b>Загрузить видео</b><span>Локальный файл нужно прогнать через окно загрузки — чат-вложения Higgsfield не читает. Получаешь <i>media_id</i></span></span></div>
+        <div class="st"><span class="sn">2</span><span class="sb"><b>Сделать референсы</b><span>Модели нужно показать картинкой, во что менять: скафандр, тога, техвер. Генеришь 1–2 стилла на сценарий и смотришь, тот ли дизайн</span></span></div>
+        <div class="st"><span class="sn">3</span><span class="sb"><b>Утвердить внешность</b><span>Только после этого запускать видео. Переделать стилл в разы дешевле, чем переделать ролик</span></span></div>
+        <div class="st"><span class="sn">4</span><span class="sb"><b>Запустить замену</b><span>Видео с ролью <i>video</i> + референсы с ролью <i>image</i> + промпт</span></span></div>
+        <div class="st"><span class="sn">5</span><span class="sb"><b>Проверить три вещи</b><span>Не поехало ли лицо, не разошлись ли губы со звуком, сведён ли свет героя со светом фона</span></span></div>
+      </div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#skel"><b>🧩</b> Скелет</a>
+      <a class="m" href="#w1"><b>🚀</b> Космонавт</a>
+      <a class="m" href="#w2"><b>🏔</b> Горы</a>
+      <a class="m" href="#w3"><b>🏛</b> Рим</a>
+      <a class="m" href="#w4"><b>🌃</b> Киберпанк</a>
+      <a class="m" href="#photo"><b>🖼</b> Для фото</a>
+      <a class="m" href="#fix"><b>🔧</b> Поломки</a>
+    </div>
+  </header>
+
+  <section class="step" id="skel">
+    <div class="s-head">
+      <div class="s-num">🧩</div>
+      <div>
+        <div class="s-kicker">Основа</div>
+        <h2>Скелет промпта</h2>
+      </div>
+    </div>
+    <p class="s-lead">Порядок блоков не декоративный. <b>PRESERVE идёт первым</b> — без него модель начинает «улучшать» лицо, переигрывает мимику, и липсинк уезжает.</p>
+    <div class="prompt sk">
+      <div class="p-bar"><span class="p-label">Структура · пять блоков</span><button class="copy" data-id="sk">Копировать</button></div>
+      <pre id="sk">PRESERVE  — что не трогать: лицо, мимика, артикуляция, кадр, камера, предмет
+REPLACE — WARDROBE   — во что переодеть
+REPLACE — ENVIRONMENT — куда перенести
+RELIGHT   — как пересветить героя под новую локацию
+RENDER    — техника: материалы, кожа, оптика, финиш</pre>
+    </div>
+
+    <div class="warn"><span class="wi">⚠️</span><span class="wt"><b>RELIGHT — самый важный блок, и его чаще всего забывают.</b> Без явной команды «выбрось исходный свет» герой остаётся освещённым тёплой лампой из комнаты, а фон уже космос. Получается наклейка. Всегда пиши, откуда бьёт ключ в новой локации и чем заполняется тень.</span></div>
+  </section>
+
+  <section class="step" id="w1">
+    <div class="s-head">
+      <div class="s-num">🚀</div>
+      <div>
+        <div class="s-kicker">Сценарий 1 · видео</div>
+        <h2>Космонавт</h2>
+      </div>
+    </div>
+    <p class="s-lead">Белый скафандр EVA, поднятое золотое забрало, толстая перчатка на микрофоне — и голубой лимб Земли за спиной. Самый требовательный сценарий по свету: одно жёсткое солнце и холодный отсвет от планеты в тени.</p>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Космонавт</span><button class="copy" data-id="p1">Копировать</button></div>
+      <pre id="p1">Video edit. Replace the hero&#x27;s wardrobe and the entire environment from the
+reference images. Keep everything else from the source clip untouched.
+
+PRESERVE — the man&#x27;s face and identity exactly as in the source: bone
+structure, green-hazel eyes, straight dark brows, full dark brown beard and
+moustache, dark hair pulled back off the forehead. Preserve his performance
+frame for frame: head turns, eye direction, blinks, eyebrow movement, jaw and
+lip movement, speech timing. Preserve the framing, the shot size, the camera
+position and any camera movement from the source. Preserve the white handheld
+microphone with the black foam windscreen, its position in frame and the way
+the hand grips it mid-shaft.
+
+REPLACE — WARDROBE. The brown waffle-knit cardigan and white collared shirt
+become a white EVA spacesuit: bulky segmented hard upper torso in scuffed
+white Beta cloth with blue trim and woven fabric layers, chest control module
+with worn labelled switches, thick gold-anodised neck ring, articulated
+shoulder joints, a tethered checklist cuff. The helmet is on with the gold
+sun visor raised — curved scratched glass, his face fully readable inside,
+never obscured by reflection. The hand on the microphone becomes a thick
+white segmented EVA glove, clearly a spacesuit glove and not bare skin.
+
+REPLACE — ENVIRONMENT. The dark room, the wall and the warm lamp spill are
+replaced by open orbit: the curved blue limb of Earth filling the background
+behind him, cloud systems and terminator line visible, dense hard stars, the
+edge of a station truss and a handrail drifting at the frame edge.
+
+RELIGHT — relight the subject to match the new environment, do not carry the
+source room lighting. One hard white unfiltered sun as key with a razor-sharp
+shadow terminator, cold blue bounce from Earth filling the shadow side of his
+face and the suit, sharp specular glints on the neck ring and visor glass,
+absolute black where nothing is lit, no warm indoor spill, no soft diffusion.
+
+RENDER — photorealistic, physically based materials, real fabric weave and
+scuffing on the suit, ray-traced reflections in the visor, subsurface skin
+scattering, visible pores, individual beard hairs, filmic tonemapping, ACES
+colour, seamless integration with the source plate, 8K.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar"><span class="p-label">Негатив · дополнительно к общему</span><button class="copy" data-id="n1">Копировать</button></div>
+      <pre id="n1">bare hand, human skin on hand, helmet reflection covering the face, closed
+sun visor, atmospheric haze, fog, god rays, air perspective</pre>
+    </div>
+  </section>
+
+  <section class="step" id="w2">
+    <div class="s-head">
+      <div class="s-num">🏔</div>
+      <div>
+        <div class="s-kicker">Сценарий 2 · видео</div>
+        <h2>Репортёр на горе</h2>
+      </div>
+    </div>
+    <p class="s-lead">Потрёпанная штормовка, обветренное лицо, волосы в ветре — и хребет, уходящий в слоистые синие дали. Здесь важен ветер: он должен читаться в волосах и воротнике, иначе кадр выглядит студийным.</p>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Репортёр на горе</span><button class="copy" data-id="p2">Копировать</button></div>
+      <pre id="p2">Video edit. Replace the hero&#x27;s wardrobe and the entire environment from the
+reference images. Keep everything else from the source clip untouched.
+
+PRESERVE — the man&#x27;s face and identity exactly as in the source: bone
+structure, green-hazel eyes, straight dark brows, full dark brown beard and
+moustache, dark hair pulled back off the forehead. Preserve his performance
+frame for frame: head turns, eye direction, blinks, eyebrow movement, jaw and
+lip movement, speech timing. Preserve the framing, the shot size, the camera
+position and any camera movement from the source. Preserve the white handheld
+microphone with the black foam windscreen, its position in frame and the way
+the hand grips it mid-shaft.
+
+REPLACE — WARDROBE. The brown waffle-knit cardigan and white collared shirt
+become a weathered dark technical shell jacket with the hood down, a fleece
+collar and a lanyard badge at the chest. Cold-flushed cheeks and nose, loose
+strands of hair whipping in the wind. The hand stays bare on the microphone.
+
+REPLACE — ENVIRONMENT. The dark room, the wall and the warm lamp spill are
+replaced by a high mountain ridge: wind-scoured rock falling away into
+layered blue ranges and a valley of low cloud, patches of snow in the rock, a
+huge overcast sky breaking into hard sun shafts, wind-driven dust and
+spindrift crossing the frame.
+
+RELIGHT — relight the subject to match the new environment, do not carry the
+source room lighting. Cold overcast daylight key from above, warm bounce off
+the rock below filling the shadow side, open natural shadows, strong wind
+visible in hair and collar, no indoor lamp spill, no warm room glow.
+
+RENDER — photorealistic, physically based materials, real technical fabric
+with wind stress and moisture, subsurface skin scattering, visible pores,
+individual beard hairs, subtle film grain, seamless integration with the
+source plate, 8K.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar"><span class="p-label">Негатив · дополнительно к общему</span><button class="copy" data-id="n2">Копировать</button></div>
+      <pre id="n2">studio backdrop, calm still air, summer greenery, warm sunset light</pre>
+    </div>
+  </section>
+
+  <section class="step" id="w3">
+    <div class="s-head">
+      <div class="s-num">🏛</div>
+      <div>
+        <div class="s-kicker">Сценарий 3 · видео</div>
+        <h2>Древний Рим</h2>
+      </div>
+    </div>
+    <p class="s-lead">Шерстяная тога, льняная туника с пурпурной полосой, бронзовая фибула — и Форум в полдень. Микрофон остаётся: это намеренный анахронизм, на нём и держится шутка.</p>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Древний Рим</span><button class="copy" data-id="p3">Копировать</button></div>
+      <pre id="p3">Video edit. Replace the hero&#x27;s wardrobe and the entire environment from the
+reference images. Keep everything else from the source clip untouched.
+
+PRESERVE — the man&#x27;s face and identity exactly as in the source: bone
+structure, green-hazel eyes, straight dark brows, full dark brown beard and
+moustache, dark hair pulled back off the forehead. Preserve his performance
+frame for frame: head turns, eye direction, blinks, eyebrow movement, jaw and
+lip movement, speech timing. Preserve the framing, the shot size, the camera
+position and any camera movement from the source. Preserve the white handheld
+microphone with the black foam windscreen exactly as it is, its position in
+frame and the way the hand grips it mid-shaft — a deliberate modern
+anachronism.
+
+REPLACE — WARDROBE. The brown waffle-knit cardigan and white collared shirt
+become Roman dress: a heavy cream wool toga draped over one shoulder in deep
+sculptural folds, worn over an off-white linen tunic with a narrow crimson
+clavus stripe, a bronze fibula pin at the shoulder, a leather cord at the
+neck. Hand-woven fabric with visible slub and weave, sun-bleached at the
+folds, faint dust in the cloth.
+
+REPLACE — ENVIRONMENT. The dark room, the wall and the warm lamp spill are
+replaced by the Roman Forum at midday: travertine and marble columns, a
+temple portico with painted red and ochre detail, a crowd of togate figures
+moving softly out of focus behind him, cypress and distant tiled roofs, a
+pale blue sky with high thin cloud.
+
+RELIGHT — relight the subject to match the new environment, do not carry the
+source room lighting. Hard high noon sun from above as key, crisp shadow
+under the brow and nose, strong warm bounce coming up off the sunlit marble
+filling the shadow side of his face, clean saturated cream and ochre, deep
+but open shadows, no warm indoor spill, no lamp glow.
+
+RENDER — photorealistic, physically based materials, real wool weave and
+drape, marble subsurface, dust motes in the sunlight, subsurface skin
+scattering, visible pores, individual beard hairs, subtle film grain,
+seamless integration with the source plate, 8K.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar"><span class="p-label">Негатив · дополнительно к общему</span><button class="copy" data-id="n3">Копировать</button></div>
+      <pre id="n3">laurel wreath, gold armour, gladiator costume, cosplay bedsheet toga, clean
+new fabric, plastic marble, CGI crowd artifacts</pre>
+    </div>
+  </section>
+
+  <section class="step" id="w4">
+    <div class="s-head">
+      <div class="s-num">🌃</div>
+      <div>
+        <div class="s-kicker">Сценарий 4 · видео</div>
+        <h2>Киберпанк</h2>
+      </div>
+    </div>
+    <p class="s-lead">Матовая техническая куртка со светящейся окантовкой, нейроинтерфейс за ухом — и залитая дождём ночная улица мегаполиса. Свет строится только на неоне: маджента слева, циан справа, провал в чёрное посередине.</p>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Киберпанк</span><button class="copy" data-id="p4">Копировать</button></div>
+      <pre id="p4">Video edit. Replace the hero&#x27;s wardrobe and the entire environment from the
+reference images. Keep everything else from the source clip untouched.
+
+PRESERVE — the man&#x27;s face and identity exactly as in the source: bone
+structure, green-hazel eyes, straight dark brows, full dark brown beard and
+moustache, dark hair pulled back off the forehead. Preserve his performance
+frame for frame: head turns, eye direction, blinks, eyebrow movement, jaw and
+lip movement, speech timing. Preserve the framing, the shot size, the camera
+position and any camera movement from the source. Preserve the handheld
+microphone, its position in frame and the way the hand grips it mid-shaft.
+
+REPLACE — WARDROBE. The brown waffle-knit cardigan and white collared shirt
+become street techwear: a matte black technical shell jacket with taped seams
+and a high collar, thin luminous cyan piping along the shoulder line, a dark
+ribbed underlayer, a slim neural interface band behind the ear with a single
+amber status LED, a press credential chip clipped at the chest. Worn, rain-
+beaded fabric, not clean or new. The microphone becomes a slim matte black
+handheld with a thin glowing cyan ring at its base and a small scrolling
+readout on the shaft.
+
+REPLACE — ENVIRONMENT. The dark room, the wall and the warm lamp spill are
+replaced by a rain-soaked night street in a dense Asian megacity: stacked
+neon signage in magenta, cyan and cold white running up the buildings out of
+focus behind him, a holographic advertisement drifting across the upper
+frame, wet asphalt throwing long smeared reflections, steam venting from a
+grate, umbrellas and traffic moving softly in deep background bokeh.
+
+RELIGHT — relight the subject to match the new environment, do not carry the
+source room lighting. Motivated neon keys only: cold magenta rim from camera
+left, cyan rim from camera right, a weak warm practical from below front,
+deep unlit black in the centre of the face falloff, wet specular highlights
+on skin and jacket, rain streaks catching the backlight, no soft even
+lighting, no warm indoor spill.
+
+RENDER — photorealistic, anamorphic 2.39:1 character with oval bokeh and
+horizontal blue flares, shallow depth of field, physically based wet
+materials, subsurface skin scattering, visible pores, individual beard hairs,
+raindrops on skin and fabric, filmic tonemapping, ACES colour, seamless
+integration with the source plate, 8K.</pre>
+    </div>
+    <div class="prompt neg">
+      <div class="p-bar"><span class="p-label">Негатив · дополнительно к общему</span><button class="copy" data-id="n4">Копировать</button></div>
+      <pre id="n4">full face mask, visor over the eyes, robotic face, glowing eyes, chrome skin,
+clean dry jacket, daylight, oversaturated rainbow neon mush</pre>
+    </div>
+  </section>
+
+
+  <section class="step" id="photo">
+    <div class="s-head">
+      <div class="s-num">🖼</div>
+      <div>
+        <div class="s-kicker">Вариант</div>
+        <h2>То же самое для фото</h2>
+      </div>
+    </div>
+    <p class="s-lead">Если меняешь не видео, а один кадр — структура короче: артикуляции и таймингов нет. Но исходный свет картиночные редакторы держат ещё упрямее, поэтому <b>RELIGHT важнее вдвое</b>.</p>
+    <div class="howto" style="margin-top:18px">
+      <div class="ht">Как перевести видео-промпт в картиночный</div>
+      <ol>
+        <li>Заменить весь блок <b>PRESERVE</b> на одну строку про сохранение лица, взгляда, позы, хвата и кадрирования.</li>
+        <li>Убрать из <b>RENDER</b> всё про интеграцию с плитой и про кадры — <i>seamless integration with the source plate</i>, <i>frame for frame</i>.</li>
+        <li><b>WARDROBE, ENVIRONMENT и RELIGHT</b> переносятся без изменений, можно только сократить формулировки.</li>
+        <li>Негатив тот же, минус пункты про камеру и липсинк, плюс <i>pasted-on cutout look, mismatched lighting between subject and background</i>.</li>
+      </ol>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><span class="p-label">Готовый пример · космонавт для фото</span><button class="copy" data-id="ph">Копировать</button></div>
+      <pre id="ph">Edit this photo. Keep the man&#x27;s face, identity, expression, head angle, gaze,
+hairstyle, beard, hand position and grip on the microphone, and the exact
+framing and crop.
+CHANGE CLOTHING: replace the brown cardigan and white shirt with a white EVA
+spacesuit — segmented hard upper torso in scuffed Beta cloth with blue trim,
+chest control module with labelled switches, thick gold-anodised neck ring,
+helmet on with the gold sun visor raised, curved scratched glass, face fully
+readable inside and never covered by reflection. The hand on the microphone
+becomes a thick white segmented spacesuit glove, not bare skin.
+CHANGE BACKGROUND: replace the dark room with open orbit — the curved blue
+limb of Earth with cloud systems behind him, dense hard stars, the edge of a
+station truss at the frame edge.
+RELIGHT: discard the original room lighting completely. One hard white sun as
+key with a razor-sharp shadow edge, cold blue bounce from Earth filling the
+shadow side of the face, sharp specular glints on the neck ring and visor,
+absolute black in the unlit areas.
+Photorealistic, subsurface skin scattering, visible pores, individual beard
+hairs, ACES colour, 8K.</pre>
+    </div>
+  </section>
+
+  <section class="step" id="neg">
+    <div class="s-head">
+      <div class="s-num">🚫</div>
+      <div>
+        <div class="s-kicker">Для всех сценариев</div>
+        <h2>Общий негатив</h2>
+      </div>
+    </div>
+    <p class="s-lead">Годится для всех четырёх сценариев и для видео, и для фото. К нему добавляется свой негатив каждого сценария — они выше, красной рамкой.</p>
+    <div class="prompt neg">
+      <div class="p-bar"><span class="p-label">Негатив · общий</span><button class="copy" data-id="na">Копировать</button></div>
+      <pre id="na">changed face, altered identity, different person, morphing face, distorted
+features, changed expression, desynced lips, changed camera angle, changed
+framing, changed crop, added camera movement, clean-shaven, bald, two
+microphones, floating microphone, duplicate arms, duplicate hands, extra
+fingers, fused hands, warm indoor lighting on the subject, room walls, lamp
+glow, flat even lighting, pasted-on cutout look, mismatched lighting between
+subject and background, cartoon, anime, illustration, 3d videogame look,
+plastic skin, waxy skin, uncanny dead eyes, blurry, low res, watermark, logo,
+text, end card</pre>
+    </div>
+  </section>
+
+  <section class="step" id="fix">
+    <div class="s-head">
+      <div class="s-num">🔧</div>
+      <div>
+        <div class="s-kicker">Контроль</div>
+        <h2>Типовые поломки</h2>
+      </div>
+    </div>
+    <p class="s-lead">Девять симптомов, которые встречаются чаще всего, и что с каждым делать.</p>
+    <div class="fxs">
+        <div class="fx"><span class="fs">Герой выглядит наклейкой на фоне</span><span class="fc">Не сработал RELIGHT</span><span class="fa">Усилить блок RELIGHT, в негатив <i>mismatched lighting</i></span></div>
+        <div class="fx"><span class="fs">Лицо «поплыло», стало чужим</span><span class="fc">Слабый PRESERVE</span><span class="fa">Поднять PRESERVE в самое начало, добавить <i>bone structure</i></span></div>
+        <div class="fx"><span class="fs">Губы разошлись со звуком</span><span class="fc">Модель переиграла мимику</span><span class="fa">В PRESERVE явно: <i>jaw and lip movement, speech timing</i></span></div>
+        <div class="fx"><span class="fs">Второй микрофон или он висит в воздухе</span><span class="fc">Предмет не закреплён</span><span class="fa">В PRESERVE описать хват: <i>gripped mid-shaft</i></span></div>
+        <div class="fx"><span class="fs">Рука голая там, где должна быть перчатка</span><span class="fc">Кожа тянется из исходника</span><span class="fa">Явно: <i>clearly a spacesuit glove and not bare skin</i></span></div>
+        <div class="fx"><span class="fs">Глаза закрыты железом (киберпанк)</span><span class="fc">Модель любит визоры</span><span class="fa">В негатив <i>visor over the eyes, robotic face</i></span></div>
+        <div class="fx"><span class="fs">Лицо не видно за отражением в шлеме</span><span class="fc">Модель зеркалит стекло</span><span class="fa">Явно: <i>visor raised, face fully readable inside</i></span></div>
+        <div class="fx"><span class="fs">Пальцы поехали</span><span class="fc">Рука обрезана краем кадра</span><span class="fa">Снимать так, чтобы рука была целиком в кадре или вне его</span></div>
+        <div class="fx"><span class="fs">Одежда идеально чистая, как костюм</span><span class="fc">Нет износа в промпте</span><span class="fa">Добавить <i>worn, scuffed, dust, not new</i></span></div>
+    </div>
+    <div class="howto" style="margin-top:22px">
+      <div class="ht">Что стоит запомнить</div>
+      <ol>
+        <li><b>PRESERVE первым, RELIGHT обязательно.</b> Два блока, на которых держится весь результат. Всё остальное — детализация.</li>
+        <li><b>Сначала референс-картинки, потом видео.</b> Дизайн утверждается на стиллах — это в разы дешевле, чем перегенерировать ролик.</li>
+        <li><b>Одна фраза, много миров.</b> Самая наглядная подача метода — один и тот же дубль в нескольких вселенных, нарезка по 2–3 секунды. Зритель видит, что человек один, а меняется всё вокруг.</li>
+        <li><b>Микрофон — сквозная деталь.</b> Он объясняет, зачем герой говорит в камеру, и связывает разные миры в одну серию.</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=replace">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=replace">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Этот метод экономит клиенту всю продакшен-смету: одна съёмка вместо четырёх локаций. Именно за такие решения и платят, а не за красивую картинку. На обучении даю систему целиком: от первой генерации до портфолио и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=replace">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
