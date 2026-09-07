@@ -230,10 +230,22 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
 .success-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(200,200,200,0.3); }
 .success-note { margin-top: 16px; font-size: 12px; color: var(--ink3); line-height: 1.6; }
-.slotbox { margin: 24px auto 0; max-width: 380px; padding: 16px 20px; border-radius: 14px;
-  border: 1px solid rgba(200,200,200,0.18); background: rgba(200,200,200,0.04); }
-.slotbox .sb-l { font-size: 10px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: var(--g4); }
-.slotbox .sb-v { margin-top: 7px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--ink); line-height: 1.2; }
+.pick-l { margin-top: 26px; font-size: 10px; font-weight: 700; letter-spacing: 2.2px;
+  text-transform: uppercase; color: var(--g4); }
+.slot-grid { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.slot { display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+  padding: 13px 15px; border-radius: 12px; cursor: pointer; text-align: left;
+  border: 1px solid rgba(200,200,200,0.18); background: rgba(200,200,200,0.035);
+  font-family: inherit; transition: border-color .2s, background .2s, transform .15s; }
+.slot:hover { border-color: rgba(200,200,200,0.42); background: rgba(200,200,200,0.06); }
+.slot.on { border-color: #3aa2e0; background: rgba(58,162,224,0.10); }
+.slot .sd { font-size: 12.5px; color: var(--ink2); }
+.slot .sh { font-size: 17px; font-weight: 600; color: var(--ink); }
+.slot.on .sh { color: #8fd0f5; }
+.slot.wide { grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 9px; }
+.slot.wide .sh { font-size: 13px; font-weight: 500; }
+.tg-hint { margin-top: 10px; font-size: 11.5px; color: var(--ink3); }
+.tg-btn.off { opacity: .4; pointer-events: none; box-shadow: none; }
 .tg-btn { display: inline-flex; align-items: center; justify-content: center; gap: 11px; margin-top: 22px;
   background: linear-gradient(135deg,#3aa2e0,#2b7cc0); color: #fff; -webkit-text-fill-color: #fff;
   padding: 18px 38px; border-radius: 12px; font-size: 13px; font-weight: 700; letter-spacing: 1.4px;
@@ -494,15 +506,6 @@ body {
     </div>
 
 
-    <!-- Q8: СЛОТ -->
-    <div class="q-block">
-      <div class="q-num">Вопрос 08</div>
-      <div class="q-label">Когда тебе удобно созвониться?</div>
-      <div class="q-hint">Экскурсия занимает 30–40 минут. Время московское.</div>
-      <div class="q-options" id="slotOptions"></div>
-      <div class="error-msg" id="slot-error">Пожалуйста, выбери удобное время</div>
-    </div>
-
     <!-- SUBMIT -->
     <div class="submit-wrap">
       <button type="submit" class="btn-submit" id="submitBtn">Отправить анкету →</button>
@@ -518,22 +521,23 @@ body {
 
   <div class="success-screen" id="successScreen">
     <div class="success-icon">📩</div>
-    <div class="success-title">Остался <span class="gold-text">один шаг</span></div>
-    <p class="success-sub">Анкета получена. Чтобы закрепить время — <b>нажми кнопку и отправь сообщение</b>: оно уже написано, ничего печатать не нужно.</p>
+    <div class="success-title" id="okTitle">Остался <span class="gold-text">один шаг</span></div>
+    <p class="success-sub" id="okSub">Анкета получена. Чтобы закрепить время — <b>нажми кнопку и отправь сообщение</b>: оно уже написано, ничего печатать не нужно.</p>
 
-    <div class="slotbox">
-      <div class="sb-l">Ты выбрал(а) время</div>
-      <div class="sb-v" id="slotEcho">—</div>
+    <div id="pickWrap">
+      <div class="pick-l">Выбери удобное время · МСК</div>
+      <div class="slot-grid" id="slotPicker"></div>
     </div>
 
-    <a class="tg-btn" id="tgBtn" href="https://t.me/newhndrx" target="_blank" rel="noopener">
+    <a class="tg-btn off" id="tgBtn" href="https://t.me/newhndrx" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
-      Подтвердить время в Telegram
+      <span id="tgLabel">Подтвердить время в Telegram</span>
     </a>
-    <p class="success-note">Без этого шага время не закрепится — я подтвержу его в ответ. Не открылся Telegram? Напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a></p>
+    <p class="tg-hint" id="tgHint">Сначала выбери время выше</p>
+    <p class="success-note" id="okNote">Без этого шага время не закрепится — я подтвержу его в ответ. Не открылся Telegram? Напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a></p>
 
     <div class="success-steps" style="margin-top:26px">
-      <div class="s-step"><span class="s-num">1</span><span><b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и подтвержу слот.</span></div>
+      <div class="s-step"><span class="s-num">1</span><span id="okStep1"><b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и подтвержу слот.</span></div>
       <div class="s-step"><span class="s-num">2</span><span>Экскурсия — это <b>созвон 30–40 минут</b>: покажу платформу изнутри, разберём твою ситуацию и составим пошаговый план.</span></div>
       <div class="s-step"><span class="s-num">3</span><span>А пока — <b>посмотри бонусное видео</b>: за несколько минут поймёшь, как устроена профессия AI-контент-мейкера. <a href="https://neurocreator2.ru/bonus/" style="color:var(--g2)">Смотреть →</a></span></div>
     </div>
@@ -591,36 +595,47 @@ document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
 /* ── слоты созвона ─────────────────────────────── */
 var SLOT_TIMES = ['13:00', '19:00'];
 var SLOT_DAYS  = 3;
-var DOW = ['воскресенье','понедельник','вторник','среду','четверг','пятницу','субботу'];
+var DOW2 = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
 var MON = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
 
-(function buildSlots(){
-  var box = document.getElementById('slotOptions');
+function buildSlotPicker(){
+  var box = document.getElementById('slotPicker');
   if (!box) return;
   var msk = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Moscow' }));
   var html = '';
   for (var d = 1; d <= SLOT_DAYS; d++) {
     var day = new Date(msk.getTime());
     day.setDate(day.getDate() + d);
-    var human = (d === 1 ? 'Завтра' : 'В ' + DOW[day.getDay()]);
+    var human = (d === 1 ? 'Завтра' : DOW2[day.getDay()]);
     var date  = day.getDate() + ' ' + MON[day.getMonth()];
     for (var t = 0; t < SLOT_TIMES.length; t++) {
       var val = date + ', ' + SLOT_TIMES[t] + ' МСК';
-      html += '<label class="q-option">' +
-                '<input type="radio" name="slot" value="' + val + '">' +
-                '<div class="custom-radio"><div class="custom-radio-inner"></div></div>' +
-                '<div class="option-text">' + human + ', ' + date +
-                  ' <em>' + SLOT_TIMES[t] + ' по Москве</em></div>' +
-              '</label>';
+      html += '<button type="button" class="slot" data-v="' + val + '">' +
+                '<span class="sd">' + human + ', ' + date + '</span>' +
+                '<span class="sh">' + SLOT_TIMES[t] + '</span>' +
+              '</button>';
     }
   }
-  html += '<label class="q-option">' +
-            '<input type="radio" name="slot" value="Другое время — договоримся">' +
-            '<div class="custom-radio"><div class="custom-radio-inner"></div></div>' +
-            '<div class="option-text">Другое время <em>Напишу, договоримся индивидуально</em></div>' +
-          '</label>';
+  html += '<button type="button" class="slot wide" data-v="Другое время — напишу, договоримся">' +
+            '<span class="sd">Другое время</span><span class="sh">договоримся</span></button>';
   box.innerHTML = html;
-})();
+
+  box.addEventListener('click', function(e){
+    var b = e.target.closest('.slot');
+    if (!b) return;
+    box.querySelectorAll('.slot').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on');
+    var val = b.dataset.v;
+    var nm  = window.__leadName || '';
+    var msg = 'Привет! Записался(ась) на экскурсию.'
+            + (nm ? ' Меня зовут ' + nm + '.' : '')
+            + ' Удобное время: ' + val;
+    var tg = document.getElementById('tgBtn');
+    tg.href = 'https://t.me/newhndrx?text=' + encodeURIComponent(msg);
+    tg.classList.remove('off');
+    document.getElementById('tgHint').textContent = 'Сообщение уже написано — просто отправь его';
+  });
+}
 
 document.getElementById('mainForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -656,15 +671,6 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
     return;
   }
 
-  var slotInput = document.querySelector('input[name="slot"]:checked');
-  if (!slotInput) {
-    var se = document.getElementById('slot-error');
-    if (se) { se.classList.add('show'); se.scrollIntoView({ behavior:'smooth', block:'center' }); }
-    return;
-  }
-  var slotErr = document.getElementById('slot-error');
-  if (slotErr) slotErr.classList.remove('show');
-
   var goals = Array.from(goalInputs).map(function(i){ return i.value; }).join(', ');
   var blocks = Array.from(blockInputs).map(function(i){ return i.value; });
   var otherText = document.getElementById('otherText').value.trim();
@@ -691,8 +697,7 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
     email:     email,
     who:       whoInput.value,
     goals:     goals,
-    blocks:    blocks.join(', '),
-    slot:      slotInput.value
+    blocks:    blocks.join(', ')
   };
 
   var btn = document.getElementById('submitBtn');
@@ -705,13 +710,25 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
   fetch(SCRIPT_URL, {
     method: 'POST', mode: 'no-cors', body: formData
   }).then(function() {
-    var msg = 'Привет! Записался(ась) на экскурсию.'
-            + (name ? ' Меня зовут ' + name + '.' : '')
-            + ' Удобное время: ' + slotInput.value;
-    var tg = document.getElementById('tgBtn');
-    if (tg) tg.href = 'https://t.me/newhndrx?text=' + encodeURIComponent(msg);
-    var sl = document.getElementById('slotEcho');
-    if (sl) sl.textContent = slotInput.value;
+    window.__leadName = name;
+    var isExc = (srcParam === 'excursion');
+    if (isExc) {
+      buildSlotPicker();
+    } else {
+      document.getElementById('pickWrap').style.display = 'none';
+      document.getElementById('okTitle').innerHTML = 'Анкета <span class="gold-text">принята</span>';
+      document.getElementById('okSub').innerHTML = 'Спасибо! Остался один шаг — <b>напиши мне в Telegram</b>, расскажу детали обучения и отвечу на вопросы. Сообщение уже написано.';
+      document.getElementById('okStep1').innerHTML = '<b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и отвечу лично.';
+      document.getElementById('okNote').innerHTML = 'Не открылся Telegram? Напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a>';
+      var msg0 = 'Привет! Заполнил(а) анкету'
+               + (name ? ', меня зовут ' + name : '')
+               + '. Хочу узнать детали обучения.';
+      var tg0 = document.getElementById('tgBtn');
+      tg0.href = 'https://t.me/newhndrx?text=' + encodeURIComponent(msg0);
+      tg0.classList.remove('off');
+      document.getElementById('tgLabel').textContent = 'Написать в Telegram';
+      document.getElementById('tgHint').textContent = 'Сообщение уже написано — просто отправь его';
+    }
 
     document.getElementById('mainForm').style.display = 'none';
     document.querySelector('.form-header').style.display = 'none';
