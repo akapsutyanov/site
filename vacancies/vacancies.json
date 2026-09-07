@@ -1,7 +1,23 @@
 {
- "updated": "2026-09-07T10:03:59Z",
+ "updated": "2026-09-07T10:38:37Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137056852",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ai Режиссер  (AI video creator)\n🏢 Медиа Лига · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/137056852",
+   "date": "2026-09-07T13:19:47+0300"
+  },
+  {
+   "id": "hh/137055905",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист разметки данных для обучения нейросетей нового поколения\n🏢 СБЕР · Великие Луки",
+   "link": "https://hh.ru/vacancy/137055905",
+   "date": "2026-09-07T13:08:04+0300"
+  },
   {
    "id": "hh/136178742",
    "source": "hh",
@@ -545,22 +561,6 @@
    "text": "Менеджер по продажам обучения нейросетям (GPT/AI агенты/ПРОМТы)\n🏢 xHuman Sales · Москва\n💰 от 120000 до 180000 RUR",
    "link": "https://hh.ru/vacancy/136394146",
    "date": "2026-09-06T10:52:28+0300"
-  },
-  {
-   "id": "hh/136771705",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Лид-инженер по AI-разработке\n🏢 Оператор связи Комфортел · Санкт-Петербург\n💰 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/136771705",
-   "date": "2026-09-06T09:43:07+0300"
-  },
-  {
-   "id": "hh/136714909",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Junior-разработчик / Junior Fullstack Developer (PHP, JS/TS + AI)\n🏢 АИСТСОФТ · Муром\n💰 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/136714909",
-   "date": "2026-09-06T09:33:39+0300"
   },
   {
    "id": "prodjob/1339",
