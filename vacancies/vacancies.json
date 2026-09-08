@@ -1,7 +1,39 @@
 {
- "updated": "2026-09-08T11:44:45Z",
+ "updated": "2026-09-08T12:16:05Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137115431",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Орел",
+   "link": "https://hh.ru/vacancy/137115431",
+   "date": "2026-09-08T15:08:06+0300"
+  },
+  {
+   "id": "hh/137113630",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Помощник контент-креатора / AI-дизайнер\n🏢 Roymar (ООО Мир Зеркал) · Нижний Новгород",
+   "link": "https://hh.ru/vacancy/137113630",
+   "date": "2026-09-08T14:47:05+0300"
+  },
+  {
+   "id": "hh/137113493",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-тренер, эксперт в области HR и организационного управления\n🏢 Дартс рекрутинг сервисез · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/137113493",
+   "date": "2026-09-08T14:44:56+0300"
+  },
+  {
+   "id": "hh/137113399",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ассистент аккаунт - менеджера | куратор AI-проекта + магазин PlayStation\n🏢 Restosupport · Смоленск\n💰 от 25000 до 60000 RUR",
+   "link": "https://hh.ru/vacancy/137113399",
+   "date": "2026-09-08T14:42:39+0300"
+  },
   {
    "id": "hh/136494404",
    "source": "hh",
@@ -38,9 +70,17 @@
    "id": "hh/137110476",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "SRE Senior ( ИИ-помощник)\n🏢 СБЕР · Москва",
+   "text": "SRE Senior инженер (ИИ-помощник)\n🏢 СБЕР · Москва",
    "link": "https://hh.ru/vacancy/137110476",
    "date": "2026-09-08T14:02:01+0300"
+  },
+  {
+   "id": "hh/136892176",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Developer Intern / Стажер-разработчик\n🏢 Секретные Агенты · Краснознаменск (Московская область)",
+   "link": "https://hh.ru/vacancy/136892176",
+   "date": "2026-09-08T13:53:52+0300"
   },
   {
    "id": "hh/136551852",
@@ -699,36 +739,12 @@
    "date": "2026-09-07T14:33:24+0300"
   },
   {
-   "id": "hh/137061196",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Псков\n💰 от 85750 RUR",
-   "link": "https://hh.ru/vacancy/137061196",
-   "date": "2026-09-07T14:22:10+0300"
-  },
-  {
-   "id": "hh/136131834",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор / Дизайнер / Моушен-дизайнер\n🏢 Садко, ювелирный дом · Санкт-Петербург\n💰 от 90000 до 120000 RUR",
-   "link": "https://hh.ru/vacancy/136131834",
-   "date": "2026-09-07T14:15:15+0300"
-  },
-  {
    "id": "newhrvacancies/84",
    "source": "telegram",
    "channel": "newhrvacancies",
    "text": "Senior Go/Ruby Engineer (Gateways Infra, Singapore)\nLocation: Singapore ONLY.\nProduct:\nA global\nIntegration Platform as a Service (iPaaS)\nthat uses\nAI and ML\nto enable organizations to seamlessly connect data sources, cloud applications, and enterprise systems through\nlow-code/no-code automation.\nAbout the Role:\nWe are looking for several\nSenior Go/Ruby Engineers\nto join our\nGateways team\nand work on the\ncore\nModel Context Protocol (MCP)\nand\nAI Gateway infrastructure.\nResponsibilities may include:\n— Building and evolving the core services of both gateways, not applications sitting on top of them.\n— Handling the protocol side: dispatching model and tool calls, authentication and tenant isolation in a multi-tenant setup, and long-lived streaming sessions held open across real networks and load balancers.\n— Keeping throughput and tail latency predictable — connection management, backpressure, concurrent processing — and when they slip, profiling the running service and fixing the actual cause.\n— Designing the observability for everything you ship, including the AI-specific signals: latency per provider, tokens consumed, cache hit rates, cost per request.\n— Working with PostgreSQL in depth: schemas, indexes, and queries that hold up as volume grows.\n— Shipping into a live product that keeps moving: parts get redesigned and rewritten in flight, and each engineer carries their slice from design through production and keeps it afterwards.\n— Shaping how the team works with AI tooling: agent-driven workflows, automated code review, internal utilities.\n— Collaborating with the Infra/SRE teams on availability and scaling; architecture and code reviews.\nMore info\nApply to margarita@new.hr\nMore NEWHR vacancies\n:\n@newhrvacancies",
    "link": "https://t.me/newhrvacancies/84",
    "date": "2026-09-07T14:08:53+00:00"
-  },
-  {
-   "id": "hh/136254537",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ассистент бренда (SMM и ИИ)\n🏢 Матраев Алексей Вячеславович · Москва\n💰 от 25000 до 25000 RUR",
-   "link": "https://hh.ru/vacancy/136254537",
-   "date": "2026-09-07T13:57:55+0300"
   },
   {
    "id": "dnative_job/11468",
@@ -761,22 +777,6 @@
    "text": "🔥\nГОРЯЧАЯ ВАКАНСИЯ: Senior Brand Designer\nТвой дизайн увидят миллионы!\nУмеешь создавать визуальные стили с нуля и рулить айдентикой бренда?\nТогда мы ищем именно тебя\n📱\n📱\n📱\nМеждународный маркетинговый холдинг в поиске сильного\nSenior Brand Designer\n, который будет задавать креативный вектор всей компании.\nТвои задачи:\n✅\nАдаптировать визуал под бизнес-задачи холдинга\n✅\nГенерировать визуальные концепты под маркетинговые кампании\n✅\nСоздавать брендбуки и разрабатывать мерч\nЧто мы предлагаем:\n💲\nОт $1 500 + KPI\n🌎\nФормат работы обсуждаем\n⚡️\nКорпоративные\nподписки на нейронки\nУмеешь превращать бизнес-задачи в сильный визуал и хочешь реально влиять на развитие бренда?\n📌\n➡️\nЖдем твое портфолио:\n@roimedia_hr",
    "link": "https://t.me/design_vacancy/3121",
    "date": "2026-09-07T13:31:03+00:00"
-  },
-  {
-   "id": "hh/137056852",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ai Режиссер  (AI video creator)\n🏢 Медиа Лига · Москва\n💰 от 150000 RUR",
-   "link": "https://hh.ru/vacancy/137056852",
-   "date": "2026-09-07T13:19:47+0300"
-  },
-  {
-   "id": "hh/137055905",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист разметки данных для обучения нейросетей нового поколения\n🏢 СБЕР · Великие Луки",
-   "link": "https://hh.ru/vacancy/137055905",
-   "date": "2026-09-07T13:08:04+0300"
   },
   {
    "id": "smmlancer/8629",
