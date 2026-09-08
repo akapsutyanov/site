@@ -124,6 +124,13 @@ h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto
 .prize-name em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
 .prize-sub{font-size:14px;color:var(--ink2);margin-top:4px}
 .prize-sub s,.lead s{color:var(--ink3);text-decoration-thickness:1.5px}
+.tg-btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;margin-top:22px;
+  background:linear-gradient(135deg,#3aa2e0,#2b7cc0);color:#fff;padding:17px 38px;border-radius:11px;
+  font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 12px 32px rgba(58,162,224,.28),inset 0 1px 0 rgba(255,255,255,.22);
+  transition:transform .3s var(--eo),box-shadow .3s}
+.tg-btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(58,162,224,.42)}
+.tg-btn svg{width:19px;height:19px;fill:#fff}
 .prize-steps{text-align:left;margin:22px 0 6px;display:flex;flex-direction:column;gap:12px}
 .pstep{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink);line-height:1.5}
 .pstep .n{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid rgba(200,200,200,.3);
@@ -285,11 +292,15 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:2px}
       <div class="prize-name">Ты выиграл: <em id="rName">—</em></div>
       <div class="prize-sub" id="rSub"></div>
       <div class="prize-steps">
-        <div class="pstep"><span class="n">1</span><span><b>Александр напишет тебе в Telegram</b> в ближайшее время — проверяй личные сообщения.</span></div>
-        <div class="pstep"><span class="n">2</span><span>Он вручит приз и коротко разберёт твою ситуацию по ответам из квиза.</span></div>
+        <div class="pstep"><span class="n">1</span><span><b>Нажми кнопку и отправь сообщение</b> — оно уже написано, ничего печатать не нужно.</span></div>
+        <div class="pstep"><span class="n">2</span><span>Я вручу приз и коротко разберу твою ситуацию по ответам из квиза.</span></div>
         <div class="pstep"><span class="n">3</span><span>Никаких обязательств — просто забери своё и задай любые вопросы.</span></div>
       </div>
-      <p class="hint" style="margin-top:18px">Не пришло сообщение за сутки? Напиши сам: <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--c2)">@newhndrx</a></p>
+      <a class="tg-btn" id="tgBtn" href="https://t.me/newhndrx" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+        Забрать приз в Telegram
+      </a>
+      <p class="hint" style="margin-top:12px">Без этого шага приз не закрепится. Не открылся Telegram? Напиши сам: <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--c2)">@newhndrx</a></p>
     </div>
 
     <div class="community">
@@ -418,6 +429,14 @@ function showResult(p){
   document.getElementById('rEm').textContent = p.em;
   document.getElementById('rName').textContent = p.name;
   document.getElementById('rSub').innerHTML = p.sub || '';
+
+  var nm = (document.getElementById('q_name') || {}).value || '';
+  nm = nm.trim();
+  var msg = 'Привет! Прошёл(ла) квиз'
+          + (nm ? ', меня зовут ' + nm : '')
+          + '. Выиграл(а): ' + p.name + '. Как забрать?';
+  document.getElementById('tgBtn').href = 'https://t.me/newhndrx?text=' + encodeURIComponent(msg);
+
   next();
 }
 
