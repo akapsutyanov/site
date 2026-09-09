@@ -260,7 +260,11 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
 .ly .ld{display:block;margin-top:5px;font-size:12.5px;color:var(--ink3);line-height:1.55}
 @media(max-width:620px){ .lys{grid-template-columns:1fr} }
 
-.lk{margin-top:34px;padding-top:28px}
+.pkg{margin-top:16px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pk{border:1px solid var(--line);border-radius:11px;padding:11px 14px;background:rgba(200,200,200,.025);text-align:left}
+.pk .pkn{display:block;font-size:13px;color:var(--ink);font-weight:600}
+.pk .pkd{display:block;margin-top:3px;font-size:11.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:620px){ .pkg{grid-template-columns:1fr} }
 pre{max-height:340px}
 
 </style>
@@ -327,8 +331,7 @@ pre{max-height:340px}
     </div>
 
     <div class="map">
-      <a class="m" href="#s1"><b>📝</b> Промпт целиком</a>
-      <a class="m" href="#l1"><b>⚪</b> По лукам</a>
+      <a class="m" href="#s1"><b>📝</b> Все промпты</a>
       <a class="m" href="#glue"><b>✂️</b> Склейка</a>
       <a class="m" href="#fix"><b>🔧</b> Поломки</a>
       <a class="m" href="#move"><b>🔁</b> Под свою серию</a>
@@ -340,14 +343,27 @@ pre{max-height:340px}
       <div class="s-num">📝</div>
       <div>
         <div class="s-kicker">Genjutsu Motion Transfer · 11 сек · 9:16</div>
-        <h2>Промпт целиком</h2>
+        <h2>Все промпты</h2>
       </div>
     </div>
-    <p class="s-lead">Финальная версия под всю сцену: десять референсов, пять луков, четыре перехода. Двадцать тысяч знаков, из которых <b>половина — негативы</b>. Именно они держат телефон прямым, а переход честно чёрно-белым.</p>
+    <p class="s-lead">Одна кнопка — весь пакет: промпт на всю сцену целиком плюс пять отдельных проходов по лукам. Копируешь один раз, дальше берёшь нужный кусок. Двадцать тысяч знаков в основном промпте, из которых <b>половина — негативы</b>: именно они держат телефон прямым, а переход честно чёрно-белым.</p>
     <div class="s-tag">📎 Английский · вставлять как есть · негативы не резать</div>
+    <div class="pkg">
+      <div class="pk"><span class="pkn">Вся сцена</span><span class="pkd">11 сек одним куском · @image1—@image10 + @video1</span></div>
+      <div class="pk"><span class="pkn">Look 1 · белый</span><span class="pkd">0.0—2.2 с · единственный без входящего оборота</span></div>
+      <div class="pk"><span class="pkn">Look 2 · кожа</span><span class="pkd">2.2—4.4 с · начинается на обороте в ЧБ</span></div>
+      <div class="pk"><span class="pkn">Look 3 · худи</span><span class="pkd">4.4—6.6 с · одно семейство с телефоном, но разный тон</span></div>
+      <div class="pk"><span class="pkn">Look 4 · мех</span><span class="pkd">6.6—8.8 с · лучше всех отрабатывает оборот</span></div>
+      <div class="pk"><span class="pkn">Look 5 · бордо</span><span class="pkd">8.8—11.0 с · финал, без исходящего оборота</span></div>
+    </div>
     <div class="prompt vid">
-      <div class="p-bar"><span class="p-label">Промпт · вся сцена</span><button class="copy" data-id="c1">Копировать</button></div>
-      <pre id="c1">INPUT ROLES — TEN REFERENCES, EACH WITH A STRICT SCOPE:
+      <div class="p-bar"><span class="p-label">Все промпты одним куском</span><button class="copy" data-id="c1">Копировать всё</button></div>
+      <pre id="c1">==============================================================================
+ПРОМПТ ЦЕЛИКОМ — ВСЯ СЦЕНА, 11 СЕКУНД, ОДИН КУСОК
+Ассеты: @image1—@image10 + @video1
+==============================================================================
+
+INPUT ROLES — TEN REFERENCES, EACH WITH A STRICT SCOPE:
 
 @image10 — LOOK 1, THE INTRO, AND THE IDENTITY MASTER. The man&#x27;s face, hair and body come from here and are the identity for the WHOLE film: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, straight strong nose, green-hazel eyes, no make-up. LOOK 1 WARDROBE: a fitted plain white crew-neck cotton tee tucked in, cream off-white wide-leg pleated tailored trousers breaking long over the shoe, black leather square-toe loafers. Take the person and this outfit; take NOTHING of the sheet layout, the panel divisions or the studio lighting.
 @image6 — LOOK 2 WARDROBE, same man: a LONG BLACK LEATHER TRENCH COAT worn open, notch lapels, falling below the knee; a black mandarin-collar shirt buttoned to the throat; a black leather belt with a square metal buckle; straight black trousers; black leather boots. Clothes only; his face, hair and beard stay as in @image10.
@@ -437,23 +453,15 @@ STYLE AND FINISH: high-end menswear lookbook — crisp, bright, clean, editorial
 
 NEGATIVE: no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no fade in or out of monochrome, no colour surviving anywhere during the spin; no second pose inside a look, no gesture during the hold, no repositioning, no walking, no dancing, no fidgeting, no fast movement outside the spin, no normal-speed motion anywhere, no speed ramping; no arms hanging limp, no repeated pose, no neutral standing between looks, no pose hiding the camera plateau, no pose taking him off his mark or cropping his head or feet, no comedy mugging; no garment recoloured to match its device, no navy hoodie turned light blue, no burgundy suit turned magenta; no card without a pinked zigzag edge, no straight-cut swatch edge, no card without a white label band, no text, codes, numbers or gibberish writing on the cards, no tall thin cards, no colours copied from @image5, no fan where all cards are the same shade, no curled or rosette fan, no pleated paper fan, no cards standing on end, no empty bottom edge, no fan in the wrong colour family; no more than one giant phone at a time, no group or stack of phones, no small phones in the background; no phone entering from the top, the side or diagonally, no phone moving downward, no phone tumbling as it travels, no phone sliding during the hold, no phone missing from frame; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid shape, no bending device, no phone wider than tall, no squashed, stretched or compressed device; no tablet, no iPad, no slab, no flat coloured panel, no poster, no printed image of a phone, no screen; no missing camera plateau, no module in the wrong corner, no scattered dark dots instead of lenses, no smeared or merged lenses, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves, no wipes, no flash frames; no dissolve or morph between outfits, no clothes changing outside the spin, no half-changed outfit, no wrong outfit order; no stiff frozen hair, no hair moving as one solid block, no weightless fabric; no face changing between looks, no different man, no identity drift, no shaved or shortened beard, no changed hairstyle, no woman, no person or face or hair or outfit from the reference video; no second person, no duplicate of him; no phone in his hands, no phone touching him; no coloured or gradient background, no location, no set dressing; no white or cream look merging into the white background, no lost silhouette; no readable text or lettering anywhere in frame, no brand names, no logos other than the apple emblem, no captions, no subtitles, no watermarks; no melted or fused hands, no extra fingers or limbs, no deformed feet, no missing contact shadow; no music, no score, no soundtrack, no beat, no dialogue, no voice; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look, no style drift.
 
-AUDIO: NO MUSIC AT ALL — real recorded sound only, time-stretched with the slow motion: quiet studio room tone; a smooth low mechanical slide and a soft settle as each giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle; a long low rush of fabric and hair on each spin. No voices, no dialogue, no beat.</pre>
-    </div>
-  </section>
+AUDIO: NO MUSIC AT ALL — real recorded sound only, time-stretched with the slow motion: quiet studio room tone; a smooth low mechanical slide and a soft settle as each giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle; a long low rush of fabric and hair on each spin. No voices, no dialogue, no beat.
 
-  <section class="step lk" id="l1">
-    <div class="s-head">
-      <div class="s-num">⚪</div>
-      <div>
-        <div class="s-kicker">Look 1 · 0.0—2.2 с</div>
-        <h2>Белый · цветовой шторм</h2>
-      </div>
-    </div>
-    <p class="s-lead">Единственный сегмент без входящего оборота. Самый нагруженный: белое на белом плюс мигающий цветом продукт — если генерация не заходит, начинай проверку отсюда.</p>
-    <div class="s-tag">📎 @image10 герой в белом (лицо + гардероб) · @image4 телефон · @image5 веер</div>
-    <div class="prompt vid">
-      <div class="p-bar"><span class="p-label">Промпт · Look 1</span><button class="copy" data-id="L1">Копировать</button></div>
-      <pre id="L1">SINGLE CONTINUOUS TAKE, 2.6 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+==============================================================================
+LOOK 1 — БЕЛЫЙ · ЦВЕТОВОЙ ШТОРМ · 0.0—2.2 с
+Ассеты: @image10 лицо + гардероб · @image4 телефон · @image5 веер
+==============================================================================
+
+SINGLE CONTINUOUS TAKE, 2.6 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
 
 REFERENCES: @image10 is the IDENTITY MASTER and the wardrobe — a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. He wears a fitted plain white crew-neck cotton tee tucked in, cream off-white wide-leg pleated tailored trousers breaking long over the shoe, black leather square-toe loafers. @image4 is a HARDWARE REFERENCE for the giant phone&#x27;s shape only — silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot. @image5 shows ONLY how the swatch cards are built and spread — square cards, white label band along the top edge, fabric colour field with a fine pinked zigzag edge, laid flat in a wide overlapping fan. Take no colour from @image5. From every reference take only the person, the device shape or the card construction — never the sheet layout, never the panel splits, never the studio lighting.
 
@@ -479,23 +487,15 @@ ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand wit
 
 NEGATIVE: no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no normal-speed motion, no speed ramping; no arms hanging limp; no phone changing shape while its colour changes; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone in his hands, no phone touching him; no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge, no colours copied from @image5; no white or cream look merging into the white background, no lost silhouette; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
 
-AUDIO: quiet studio room tone; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a faint papery flick from the swatch cards. No music, no voices.</pre>
-    </div>
-  </section>
+AUDIO: quiet studio room tone; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a faint papery flick from the swatch cards. No music, no voices.
 
-  <section class="step lk" id="l2">
-    <div class="s-head">
-      <div class="s-num">⚫</div>
-      <div>
-        <div class="s-kicker">Look 2 · 2.2—4.4 с</div>
-        <h2>Чёрный · кожа</h2>
-      </div>
-    </div>
-    <p class="s-lead">Начинается на обороте в ЧБ — сюда падает склейка.</p>
-    <div class="s-tag">📎 @image10 лицо · @image6 гардероб · @image3 телефон · @image5 веер</div>
-    <div class="prompt vid">
-      <div class="p-bar"><span class="p-label">Промпт · Look 2</span><button class="copy" data-id="L2">Копировать</button></div>
-      <pre id="L2">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+==============================================================================
+LOOK 2 — ЧЁРНЫЙ · КОЖА · 2.2—4.4 с
+Ассеты: @image10 лицо · @image6 гардероб · @image3 телефон · @image5 веер
+==============================================================================
+
+SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
 
 REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image6 is WARDROBE ONLY, same man: a LONG BLACK LEATHER TRENCH COAT worn open, notch lapels, falling below the knee; a black mandarin-collar shirt buttoned to the throat; a black leather belt with a square metal buckle; straight black trousers; black leather boots. @image3 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN DEEP MATTE BLACK, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
 
@@ -521,23 +521,15 @@ ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand wit
 
 NEGATIVE: no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen hair, no hair moving as one solid block, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
 
-AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
-    </div>
-  </section>
+AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.
 
-  <section class="step lk" id="l3">
-    <div class="s-head">
-      <div class="s-num">🔵</div>
-      <div>
-        <div class="s-kicker">Look 3 · 4.4—6.6 с</div>
-        <h2>Синий · худи</h2>
-      </div>
-    </div>
-    <p class="s-lead">Тёмно-синее худи и голубой телефон — одно семейство, но разный тон. Одежда не перекрашивается под устройство.</p>
-    <div class="s-tag">📎 @image10 лицо · @image9 гардероб · @image1 телефон · @image5 веер</div>
-    <div class="prompt vid">
-      <div class="p-bar"><span class="p-label">Промпт · Look 3</span><button class="copy" data-id="L3">Копировать</button></div>
-      <pre id="L3">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+==============================================================================
+LOOK 3 — СИНИЙ · ХУДИ · 4.4—6.6 с
+Ассеты: @image10 лицо · @image9 гардероб · @image1 телефон · @image5 веер
+==============================================================================
+
+SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
 
 REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image9 is WARDROBE ONLY, same man: an oversized DEEP NAVY HEAVY-FLEECE HOODIE with a kangaroo pocket and ribbed cuffs and hem; matching deep navy fleece sweatpants with a drawcord and elasticated ankles; a thin white tee showing at the hem; white leather low-top sneakers; a silver chain bracelet on one wrist and a steel watch with a blue dial on the other. @image1 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN CLEAN LIGHT STEEL-BLUE, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
 
@@ -563,23 +555,15 @@ ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand wit
 
 NEGATIVE: no navy hoodie turned light blue, no garment recoloured to match its device; no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen hair, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
 
-AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
-    </div>
-  </section>
+AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.
 
-  <section class="step lk" id="l4">
-    <div class="s-head">
-      <div class="s-num">⬜</div>
-      <div>
-        <div class="s-kicker">Look 4 · 6.6—8.8 с</div>
-        <h2>Серый · мех</h2>
-      </div>
-    </div>
-    <p class="s-lead">Самый выигрышный лук по фактуре — мех отрабатывает оборот лучше всего.</p>
-    <div class="s-tag">📎 @image10 лицо · @image7 гардероб · @image4 телефон · @image5 веер</div>
-    <div class="prompt vid">
-      <div class="p-bar"><span class="p-label">Промпт · Look 4</span><button class="copy" data-id="L4">Копировать</button></div>
-      <pre id="L4">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+==============================================================================
+LOOK 4 — СЕРЫЙ · МЕХ · 6.6—8.8 с
+Ассеты: @image10 лицо · @image7 гардероб · @image4 телефон · @image5 веер
+==============================================================================
+
+SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
 
 REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image7 is WARDROBE ONLY, same man: a GREY FAUX-FUR JACKET with a wide fur collar and long fur pile, worn open; a charcoal ribbed henley beneath, buttoned partway; matching GREY FAUX-FUR WIDE TROUSERS with a darker streaked pile; a metal buckle belt; black chunky lace-up boots with yellow welt stitching. @image4 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN NATURAL SILVER-GREY TITANIUM, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its brushed finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
 
@@ -605,23 +589,15 @@ ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand wit
 
 NEGATIVE: no fur and phone flattening into one undifferentiated grey; no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no pose hiding the camera plateau; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen fur, no fur moving as one solid block, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
 
-AUDIO: quiet studio room tone; a long low rush of fur and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
-    </div>
-  </section>
+AUDIO: quiet studio room tone; a long low rush of fur and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.
 
-  <section class="step lk" id="l5">
-    <div class="s-head">
-      <div class="s-num">🟥</div>
-      <div>
-        <div class="s-kicker">Look 5 · 8.8—11.0 с</div>
-        <h2>Бордо · костюм</h2>
-      </div>
-    </div>
-    <p class="s-lead">Финал: заканчивается на удержанной позе, без исходящего оборота.</p>
-    <div class="s-tag">📎 @image10 лицо · @image8 гардероб · @image2 телефон · @image5 веер</div>
-    <div class="prompt vid">
-      <div class="p-bar"><span class="p-label">Промпт · Look 5</span><button class="copy" data-id="L5">Копировать</button></div>
-      <pre id="L5">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+==============================================================================
+LOOK 5 — БОРДО · КОСТЮМ · 8.8—11.0 с
+Ассеты: @image10 лицо · @image8 гардероб · @image2 телефон · @image5 веер
+==============================================================================
+
+SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
 
 REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image8 is WARDROBE ONLY, same man: a BURGUNDY-PLUM TAILORED SUIT — a cropped structured jacket with wide peak lapels and one button at the waist, and matching pleated straight trousers with a turned cuff — over a burgundy silk shirt open at the collar; black polished leather derbies. @image2 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN VIVID METALLIC MAGENTA-RASPBERRY, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
 
