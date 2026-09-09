@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Витрина музея — тренд под любой товар | AI Новый Уровень</title>
+<meta name="description" content="Обычный продукт выставлен в музее как шедевр, героиня разбивает витрину каблуком и убегает от охраны. Готовый промпт на 12 секунд под любой товар.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Витрина музея — тренд под любой товар">
+<meta property="og:description" content="Твой товар как музейный экспонат. Кража, каблук, погоня — 12 секунд.">
+<meta property="og:url" content="https://neurocreator2.ru/museum/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.p-hero{margin-top:30px;display:grid;grid-template-columns:270px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:17px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:11px 13px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+@media(max-width:720px){ .p-hero{grid-template-columns:1fr} }
+
+.refs2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rf{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:rgba(13,13,18,.72)}
+.rf img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;background:#0a0a0d}
+.rf .rb{padding:12px 14px;text-align:left}
+.rf .rs{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fb4d8;font-weight:600}
+.rf .rt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+.rf .rd{margin-top:4px;font-size:12px;color:var(--ink3);line-height:1.5}
+@media(max-width:560px){ .refs2{grid-template-columns:1fr} }
+
+.beats{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:78px 26px 190px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fa8c8}
+.beat .be{font-size:15px;text-align:center}
+.beat .bn{font-size:13px;color:var(--ink);font-weight:500}
+.beat .bd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .beat{grid-template-columns:74px 24px 1fr;row-gap:4px} .beat .bd{grid-column:1/-1} }
+
+.tns{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.tn{display:grid;grid-template-columns:230px 1fr;gap:14px;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;background:rgba(200,200,200,.02)}
+.tn .tt{font-size:13px;color:var(--ink);font-weight:600}
+.tn .td{font-size:12.5px;color:var(--ink2);line-height:1.55}
+@media(max-width:700px){ .tn{grid-template-columns:1fr;row-gap:5px} }
+
+.uni{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.un{border:1px solid var(--line);border-radius:13px;padding:14px 15px;background:rgba(200,200,200,.025);text-align:left}
+.un .ue{font-size:19px}
+.un .ut{display:block;margin-top:7px;font-size:13px;color:var(--ink);font-weight:600}
+.un .ud{display:block;margin-top:4px;font-size:11.5px;color:var(--ink3);line-height:1.45}
+pre{max-height:340px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Тренд · AI — Новый Уровень</div>
+    <h1>Витрина<br><em>музея</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Обычный товар стоит под стеклом в музее, освещённый софитом как шедевр. Посетительница разглядывает его, читает табличку — а потом снимает туфлю и разбивает витрину каблуком. Двенадцать секунд, два шота, финал на погоне. <b>Комедия рождается не из товара, а из того, как серьёзно с ним обращаются</b> — поэтому схема работает под что угодно.</p>
+
+    <div class="p-hero">
+      <div class="vwrap">
+        <video src="result.mp4" poster="poster.jpg" loop playsinline controls preload="metadata"></video>
+        <div class="vcap"><div class="vk">Результат</div><div class="vt">12 секунд · Seedance 2.0</div></div>
+      </div>
+      <div class="refs2">
+        <div class="rf">
+          <img src="ref1-product.jpg" alt="Референс продукта" loading="lazy">
+          <div class="rb"><div class="rs">@image1 · продукт</div><div class="rt">Сетка на белом фоне</div><div class="rd">Только идентичность: форма, цвет, отделка, блок камер, логотип</div></div>
+        </div>
+        <div class="rf">
+          <img src="ref2-hero.jpg" alt="Референс героини" loading="lazy">
+          <div class="rb"><div class="rs">@image2 · героиня</div><div class="rt">Лицо и гардероб</div><div class="rd">Лицо, волосы, костюм, туфли. Фон и свет модель игнорирует</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Раскадровка · 8 битов</div>
+      <div class="beats">
+        <div class="beat"><span class="bt">0–0.8 с</span><span class="be">🏛</span><span class="bn">Пустой зал</span><span class="bd">Смартфон под стеклом в луче софита, как экспонат</span></div>
+        <div class="beat"><span class="bt">0.8–2.2 с</span><span class="be">👠</span><span class="bn">Приходит посетительница</span><span class="bd">Короткие шаги — узкая юбка не даёт шагать широко</span></div>
+        <div class="beat"><span class="bt">2.2–3.4 с</span><span class="be">🧐</span><span class="bn">Разглядывает</span><span class="bd">Наклон головы, читает табличку, взгляд возвращается</span></div>
+        <div class="beat"><span class="bt">3.4–4.4 с</span><span class="be">👀</span><span class="bn">Решение</span><span class="bd">Смотрит вправо, влево, вверх на камеру. Взгляд падает на свою туфлю</span></div>
+        <div class="beat"><span class="bt">4.4–5.8 с</span><span class="be">🦶</span><span class="bn">Снимает туфлю</span><span class="bd">Выскальзывает ногой, приседает на согнутых коленях и поднимает</span></div>
+        <div class="beat"><span class="bt">5.8–6.6 с</span><span class="be">💥</span><span class="bn">Удар каблуком</span><span class="bd">Шпилька касается стекла в одной точке — трещины расходятся оттуда</span></div>
+        <div class="beat"><span class="bt">7.0–8.1 с</span><span class="be">🤏</span><span class="bn">Захват</span><span class="bd">Камера впервые едет. Микро-слоумо: почти касание → пауза → хват</span></div>
+        <div class="beat"><span class="bt">8.8–12 с</span><span class="be">🏃</span><span class="bn">Погоня</span><span class="bd">Хард-кат. Новый кадр по пояс, сзади бегут два охранника</span></div>
+      </div>
+      <div class="note">💡 Порядок загрузки: <b>первым продукт, вторым героиня</b>. Перепутаешь — теги в промпте будут указывать не туда.</div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>🎯</b> Под свой товар</a>
+      <a class="m" href="#s2"><b>⚙️</b> Что подогнано</a>
+      <a class="m" href="#s3"><b>📝</b> Промпт</a>
+      <a class="m" href="#s4"><b>🔧</b> Проверка</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">🎯</div>
+      <div>
+        <div class="s-kicker">Главное про эту схему</div>
+        <h2>Работает под любой товар</h2>
+      </div>
+    </div>
+    <p class="s-lead">В примере смартфон, но <b>сюжет не про смартфон</b>. Он про контраст: обыденную вещь выставили как национальное достояние — софит, витрина, табличка с каталожным номером, — и ради неё идут на преступление. Чем проще и дешевле предмет, тем смешнее.</p>
+    <div class="uni">
+      <div class="un"><span class="ue">👟</span><span class="ut">Кроссовки</span><span class="ud">на подставке из музейной ткани</span></div>
+      <div class="un"><span class="ue">💄</span><span class="ut">Помада, флакон</span><span class="ud">мелкий предмет под софитом читается идеально</span></div>
+      <div class="un"><span class="ue">☕️</span><span class="ut">Кофе, снек</span><span class="ud">чем обыденнее, тем сильнее контраст</span></div>
+      <div class="un"><span class="ue">🎧</span><span class="ut">Гаджет, техника</span><span class="ud">как в примере — блок деталей ловит свет</span></div>
+      <div class="un"><span class="ue">💍</span><span class="ut">Украшение</span><span class="ud">единственный случай, где музей не шутка</span></div>
+      <div class="un"><span class="ue">📦</span><span class="ut">Любая упаковка</span><span class="ud">коробка, банка, тюбик — лишь бы стояла</span></div>
+    </div>
+    <div class="howto" style="margin-top:20px">
+      <div class="ht">Что менять в промпте под свой продукт</div>
+      <ol>
+        <li><b>Блок <i>@image1 = PRODUCT IDENTITY</i></b> — описать свой товар: материал, цвет, форму, где логотип. Чем подробнее опишешь печать и фактуру, тем стабильнее они держатся.</li>
+        <li><b>Реальный размер и вес</b> — в промпте прописано «примерно 16 см и 230 грамм». Поставь свои: это удерживает модель от превращения товара в памятник.</li>
+        <li><b>Правило экрана</b> — оно нужно только для гаджетов. Для косметики или еды блок <i>SCREEN RULE</i> убирается целиком.</li>
+        <li><b>Цвет стен.</b> Заданы тёплый терракотовый и оливковый — под голубой деним и голубой корпус. Под свой товар подбери <b>контрастный тёмный фон</b>, чтобы продукт не утонул.</li>
+      </ol>
+      <div class="note">💡 Героиню тоже можно менять — но тогда придётся переписать блок про физику одежды, он завязан на узкую юбку.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">⚙️</div>
+      <div>
+        <div class="s-kicker">Решения внутри</div>
+        <h2>Что уже подогнано</h2>
+      </div>
+    </div>
+    <p class="s-lead">Четыре вещи в промпте выглядят мелочью, но именно они не дают сцене развалиться.</p>
+    <div class="tns">
+        <div class="tn"><span class="tt">Задняя панель вверх</span><span class="td">Экран не виден вообще. Иначе модель начнёт выдумывать интерфейс, иконки и время на часах — и продукт перестанет совпадать с референсом</span></div>
+        <div class="tn"><span class="tt">Узкая юбка до середины икры</span><span class="td">Наклониться в пояс она в ней не может. Поэтому туфлю снимает выскальзыванием, а поднимает приседая. Оставишь обычный подъём колена — модель порвёт юбку или проигнорирует посадку</span></div>
+        <div class="tn"><span class="tt">Бег короткими шагами</span><span class="td">В финале кадр по пояс, ног не видно, но корпус читает скованность — и это работает на комедию</span></div>
+        <div class="tn"><span class="tt">Каблук-шпилька</span><span class="td">Маленькая жёсткая точка удара. Самый правдоподобный способ разбить витрину из всех, что перебирали</span></div>
+    </div>
+    <div class="warn"><span class="wi">🎨</span><span class="wt"><b>Цветовая заметка.</b> Голубой деним героини и голубой корпус телефона — один тон. Это работает в плюс, но только если стены галереи тёплые и тёмные. Не меняй терракотовый и оливковый на серый или синий — оба голубых утонут.</span></div>
+    <div class="warn"><span class="wi">🎵</span><span class="wt"><b>Звук.</b> Ставь музыку так, чтобы сильная доля легла ровно на <b>6.4</b> — момент удара. С 6.8 по 8.0 убирай громкость на 60–70%, пока идёт слоумо, и возвращай на полную ровно на <b>8.8</b>, на хард-кате.</span></div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">📝</div>
+      <div>
+        <div class="s-kicker">Seedance 2.0 · 12 сек · 16:9</div>
+        <h2>Промпт</h2>
+      </div>
+    </div>
+    <p class="s-lead">Оба референса загружаются как image-ассеты. Двенадцать приоритетов в конце — это не украшение: они разруливают конфликты, когда модель начинает выбирать между красивым кадром и достоверностью.</p>
+    <div class="s-tag">📎 Английский · вставлять как есть</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Seedance 2.0</span><button class="copy" data-id="c1">Копировать</button></div>
+      <pre id="c1">@image1 = PRODUCT IDENTITY REFERENCE ONLY.
+
+Use @image1 exclusively for the exact visual identity of the PRODUCT: a modern flagship smartphone with a brushed light blue titanium frame and back panel, a large raised rectangular rear camera plateau containing three lenses and a flash, the manufacturer logo centred on the lower back panel, flat side rails with physical side buttons, and softly rounded corners.
+
+Reproduce the exact colour, finish, proportions, camera layout, logo and button placement visible in @image1.
+
+Ignore the white studio background of @image1 completely. Do not reproduce its studio environment, reference lighting, shadows, composition or camera angle.
+
+Reconstruct the PRODUCT naturally inside the generated scene at true real-world scale — approximately 16 centimetres tall and roughly 230 grams. It is a small, light, handheld object.
+
+Do not enlarge the PRODUCT to monument or sculpture scale. The comedy comes from an ordinary everyday object being treated as a priceless artefact, not from changing its size.
+
+SCREEN RULE — IMPORTANT:
+
+The PRODUCT rests BACK PANEL UP throughout the entire film. The display faces downward and is never visible.
+
+Do not show the screen. Do not show any user interface, icons, wallpaper, clock, notifications or glowing display at any moment, including in macro and during the chase.
+
+The visible face of the PRODUCT is always the titanium back panel with its camera plateau and logo.
+
+The PRODUCT is rigid glass and metal. It never flexes, bends, compresses or deforms under pressure.
+
+The PRODUCT remains the exact same recognizable physical object throughout the entire film: on the pedestal, under the glass, during the grab, as it is pulled out, and in the character&#x27;s hands during the final chase.
+
+There is only ONE physical instance of the PRODUCT in the entire scene.
+
+@image1 controls PRODUCT IDENTITY ONLY.
+
+
+@image2 = CHARACTER IDENTITY AND WARDROBE REFERENCE ONLY.
+
+Use @image2 exclusively for the exact recognizable character identity: a young woman with warm olive skin, natural freckles across the nose and cheeks, strong full dark eyebrows, dark brown eyes, and very dark hair pulled back tightly from a centre parting into a long smooth ponytail.
+
+Wardrobe, exactly as in @image2: a tailored light blue denim blazer with strong structured shoulders, visible topstitching and a nipped waist, worn over a crisp white collared shirt, with a matching light blue denim skirt fitted through the hips and flaring below the knee to mid-calf, and pale blue pointed-toe stiletto pump heels.
+
+Ignore the background, environment, lighting and camera composition of @image2.
+
+Preserve the exact same recognizable person and the exact same wardrobe throughout the entire film.
+
+Do not invent additional clothing, jewellery or accessories.
+
+MOVEMENT CONSTRAINT — IMPORTANT:
+
+The denim skirt is fitted through the hips and thighs. It genuinely restricts the character&#x27;s movement.
+
+She cannot bend at the waist, cannot lift a knee high, and cannot take long strides.
+
+Every movement respects this: she bends by lowering herself on both knees with a straight back, she steps in short controlled paces, and when running she takes quick short steps rather than long ones.
+
+The skirt fabric moves as real denim: stiff, heavy, holding its shape, never behaving like light flowing fabric.
+
+
+CREATE ONE 12-SECOND EXTREMELY PHOTOREALISTIC CINEMATIC FILM SEQUENCE.
+
+The supplied reference images control ONLY PRODUCT identity and CHARACTER identity.
+
+Everything else is controlled by this screenplay: environment, museum, pedestal, vitrine, lighting, camera, acting, eyelines, human movement, timing, shoe action, glass break, product grab, editing and final chase.
+
+The film contains TWO DISTINCT SHOTS:
+
+SHOT 1 — approximately 0.0–8.8s: the complete museum theft.
+
+SHOT 2 — approximately 8.8–12.0s: a completely separate waist-up chase shot.
+
+At approximately 8.8 seconds, perform a HARD CUT.
+
+SHOT 2 is a completely new camera setup.
+
+Do not visually continue the gallery composition into Shot 2.
+
+The final chase is mandatory.
+
+
+CINEMATIC WORLD
+
+Create a believable classical art museum gallery, quiet and nearly empty.
+
+Polished stone floor with natural wear and soft reflections. High walls in deep warm terracotta and muted olive tones. Framed dark abstract canvases hanging at a respectful distance. Rope barriers on brass stanchions. A wall-mounted emergency exit sign. Everything reads as a real institution with decades of use, not a clean render.
+
+The warm dark walls are important: they must contrast against the light blue denim of the character and the light blue titanium of the PRODUCT, so both blues separate clearly from the environment.
+
+At the centre of the gallery stands a single low pedestal in dark stone.
+
+On the pedestal sits a rectangular vitrine — a clear glass display case with thin brass edging.
+
+Inside the vitrine, resting on a small angled mount of pale museum fabric, is the exact PRODUCT from @image1, back panel and camera plateau facing upward toward the light, screen face down against the mount.
+
+The PRODUCT is pristine: no fingerprints, no smudges, no scratches, as an object that has been conserved rather than used.
+
+Beside the vitrine, angled on a small stand, is a museum label plate: a small engraved plaque with fine unreadable typography and a catalogue number. The text must remain illegible and unreadable at all times.
+
+A narrow focused ceiling spotlight falls directly onto the PRODUCT, exactly as a museum lights a masterpiece. The brushed titanium catches the light with a soft directional sheen and the three camera lenses hold small bright specular highlights.
+
+The PRODUCT is treated with total institutional seriousness.
+
+Give it believable real-world scale, correct perspective, physical weight, natural contact with the fabric mount, contact shadows and reflected gallery light.
+
+Nothing floats. Nothing looks composited. Nothing resembles a pasted studio photograph.
+
+
+FOR SHOT 1, MOUNT THE CAMERA COMPLETELY STILL on the opposite side of the vitrine, at approximately chest height, looking across the top of the display case toward the PRODUCT and, beyond it, the approaching character.
+
+Use a natural cinematic medium-wide perspective approximately equivalent to a 35mm spherical cinema lens.
+
+The vitrine and PRODUCT occupy the lower and middle portion of the composition.
+
+The gallery space and the character occupy the middle and upper frame.
+
+The framing is wide enough that when the character lowers herself toward the floor, the movement stays readable inside the composition.
+
+The character is seen partly THROUGH the vitrine glass, with physically present reflections across the surface between camera and character.
+
+
+LIGHTING AND FILM LANGUAGE
+
+Museum interior, controlled artificial light.
+
+The gallery ambience is dim, warm and even.
+
+The vitrine spotlight is significantly brighter than the surrounding room, creating a hard pool of light on the PRODUCT and a soft falloff into the gallery.
+
+The character receives believable spill light from the vitrine and from distant gallery fixtures, with natural facial modelling and smooth shadow transitions across her freckled skin.
+
+Use motivated light only.
+
+Glass reflections remain physically present until the vitrine breaks.
+
+The entire video feels like twelve seconds physically cut from a beautifully photographed theatrical crime-comedy feature film.
+
+Use the visual language of premium late-1960s / early-1970s American 35mm cinema:
+
+warm photochemical color response,
+natural warm skin tones,
+creamy highlights,
+restrained saturation,
+rich amber and brown undertones,
+deep neutral blacks with preserved shadow information,
+smooth photochemical highlight roll-off,
+fine irregular organic 35mm film grain,
+subtle highlight halation,
+gentle optical bloom,
+slightly softened micro-contrast,
+natural vintage spherical-lens rendering,
+subtle edge softness,
+realistic optical depth,
+natural focus falloff,
+restrained depth of field,
+and natural theatrical 24fps motion blur.
+
+The image must feel genuinely photographed rather than digitally filtered.
+
+No glossy commercial aesthetic. No artificial HDR. No sterile digital sharpness. No plastic skin.
+
+Maintain EXACTLY THE SAME cinematic color science, film texture and realism during BOTH shots.
+
+
+ACTING DIRECTION — HIGHEST PRIORITY
+
+The character behaves like a real human being, not an AI avatar executing instructions.
+
+All acting is restrained, psychologically motivated and physically believable.
+
+THOUGHT PRECEDES ACTION. CAUSE PRECEDES EFFECT.
+
+The natural reaction rhythm is:
+
+EYES REACT FIRST → TINY PROCESSING PAUSE → HEAD FOLLOWS → TINY PAUSE → BODY FOLLOWS.
+
+Never combine multiple emotional beats into one rushed gesture.
+
+Every important action has a readable beginning, middle and completion.
+
+Allow tiny human pauses. Natural breathing. Natural acceleration and deceleration. Natural body inertia. Natural weight transfer. Natural centre of gravity. Correct human anatomy and joint articulation.
+
+Emotion appears through eyeline, breathing, tiny facial changes, hesitation and posture rather than exaggerated expressions.
+
+No twitching. No sudden body jerks. No robotic transitions. No unnecessary hand movements. No exaggerated comedy acting.
+
+The absurd situation is performed with complete seriousness. The character behaves like a composed, cultured museum visitor for as long as possible, and even the shoe removal is performed with poise rather than urgency.
+
+
+0.0–0.8s — QUIET OPENING
+
+Begin in the empty gallery.
+
+The camera is ABSOLUTELY LOCKED OFF.
+
+The PRODUCT rests under the vitrine glass in its spotlight, camera plateau catching the light.
+
+The gallery is silent and still.
+
+Hold the quiet observational composition.
+
+No character yet. No camera movement.
+
+
+0.8–2.2s — THE VISITOR ARRIVES
+
+The character from @image2 enters the gallery in the background and walks toward the pedestal at an unhurried, respectful museum pace, taking short controlled steps because of the fitted skirt.
+
+The stiletto heels make a soft measured contact with the stone floor with each step.
+
+She stops at a polite viewing distance, hands loosely at her sides, exactly like a person contemplating a work of art.
+
+The posture is upright and composed.
+
+The gaze settles on the PRODUCT.
+
+BOTH EYES physically converge DOWNWARD THROUGH THE GLASS DIRECTLY ONTO THE PRODUCT.
+
+The eyeline must correspond to the PRODUCT&#x27;s actual position inside the vitrine.
+
+No camera-facing glance. No wandering eyes.
+
+
+2.2–3.4s — CONTEMPLATION
+
+She leans in slightly from the upper body, studying the PRODUCT the way one studies brushwork.
+
+She tilts her head a few degrees to one side, considering it from a marginally different angle.
+
+Tiny pause.
+
+She shifts her weight and leans toward the small label plate, reading it briefly.
+
+Then the eyes return to the PRODUCT.
+
+The expression changes very subtly: from polite appreciation to something more private and acquisitive.
+
+The transition is almost invisible. No smirk. No raised eyebrow. No comedic mugging.
+
+
+3.4–4.4s — THE DECISION
+
+She straightens up.
+
+Tiny pause.
+
+The gaze leaves the PRODUCT.
+
+She calmly looks toward the RIGHT, scanning the gallery.
+
+Tiny pause.
+
+She calmly looks toward the LEFT.
+
+She is checking whether anybody is watching.
+
+During this check, allow ONE small unconscious adjustment of the denim blazer lapel or cuff. Use only the existing wardrobe. Do not invent clothing for the gesture. Do not repeat the adjustment.
+
+She glances briefly upward, aware of a camera somewhere above.
+
+Tiny decision beat.
+
+The posture subtly firms.
+
+The eyeline drops downward toward her own foot.
+
+Tiny pause.
+
+The audience understands the decision before she acts.
+
+
+4.4–5.8s — PHYSICALLY REMOVE THE SHOE
+
+Designate ONE hand as the SHOE HAND. Designate the opposite hand as the PRODUCT HAND.
+
+Keep these roles physically consistent for the rest of the film.
+
+The PRODUCT HAND reaches out and rests flat on the top edge of the vitrine frame for balance.
+
+She shifts her body weight onto one leg.
+
+Because the fitted denim skirt prevents her from lifting a knee, she removes the shoe by SLIDING THE FOOT OUT:
+
+The free foot slides slightly forward, the ankle flexes, the heel lifts out of the pump first, and the foot slips forward out of the shoe.
+
+The empty pale blue pump is left standing upright on the stone floor.
+
+The bare foot makes believable contact with the cold polished stone.
+
+Her balance is genuinely affected: a small correction through the supporting leg, a slight shift of the hips, natural weight transfer.
+
+Keeping the PRODUCT HAND on the vitrine, she LOWERS HERSELF STRAIGHT DOWN by bending both knees with a straight back, the denim skirt tightening around her thighs and restricting how far she can go.
+
+The SHOE HAND reaches down and the fingers physically close around the shoe on the floor.
+
+She rises back up in the same controlled way, using the vitrine for support.
+
+The SAME SHOE is now clearly visible held in the SHOE HAND, gripped by the toe box, with the slender stiletto heel pointing outward as a hard striking point.
+
+The PRODUCT HAND leaves the vitrine and hangs empty at her side.
+
+She now stands slightly asymmetrically, one foot bare, one still in its pump.
+
+Hold for a tiny beat so the improvised tool is clearly established.
+
+
+5.8–6.6s — THE HEEL STRIKE
+
+She breaks the vitrine with ONE short, compact, physically credible strike using the STILETTO HEEL OF THE SHOE.
+
+No large theatrical swing. No bare-handed punch. No kick. No elbow. No forearm.
+
+Standing close to the display case, the SHOE HAND elbow bends naturally.
+
+The forearm retracts only a short distance.
+
+Then the forearm accelerates forward and downward in ONE compact controlled arc.
+
+The wrist remains naturally aligned. The fingers remain securely wrapped around the toe box of the shoe.
+
+THE STILETTO HEEL LEADS THE MOTION and is the only part that touches the glass.
+
+Show clear physical causality:
+
+HEEL TIP APPROACHES INTACT GLASS → THE HARD NARROW HEEL PHYSICALLY CONTACTS THE GLASS AT ONE SMALL POINT → THE HAND AND SHOE NATURALLY DECELERATE AGAINST IMPACT → FRACTURE BEGINS EXACTLY AT THE HEEL CONTACT POINT → RADIATING CRACKS SPREAD OUTWARD FROM THAT POINT → ONLY THEN DOES THE VITRINE PANEL COLLAPSE.
+
+The panel fractures into many small realistic tempered-glass fragments.
+
+Fragments fall primarily downward under gravity onto the pedestal and floor, with limited physically plausible inward scattering across the fabric mount.
+
+Small fragments land around the PRODUCT and slide off its polished titanium back without scratching or damaging it.
+
+She naturally reacts to the impact resistance travelling back through the wrist and arm.
+
+A distant alarm begins, but she does not flinch at it.
+
+The bare foot stays clear of the falling glass.
+
+
+6.6–7.0s — DISCARD THE SHOE
+
+After the glass collapses, the SHOE HAND naturally recoils away from the broken vitrine.
+
+She opens her fingers and drops the shoe.
+
+The pump falls to the stone floor and lands with believable weight, tipping onto its side and coming to rest in frame.
+
+The shoe action is now completely finished.
+
+Both hands are now empty.
+
+Tiny natural pause.
+
+No sleeve adjustment. No wiping motion. No unnecessary glass-clearing movement. No random hand action.
+
+
+7.0–8.1s — SIGNATURE PRODUCT GRAB
+
+Only now does the previously empty PRODUCT HAND become active.
+
+Her gaze immediately returns to the PRODUCT.
+
+The PRODUCT HAND smoothly reaches down through the broken panel.
+
+The arm follows a believable anatomical path through the opening.
+
+FOR THE FIRST TIME IN SHOT 1, THE CAMERA BEGINS TO MOVE.
+
+Perform ONE slow, deliberate cinematic PUSH-IN from the original locked position toward the approaching hand and the PRODUCT.
+
+The movement feels like a real controlled cinema-camera push, not a digital zoom.
+
+As the fingertips approach the PRODUCT, temporal cadence gradually decelerates into elegant MICRO SLOW-MOTION.
+
+The hand approaches. The camera approaches. The fingertips come within millimetres of the titanium back panel.
+
+HOLD.
+
+For a brief suspended cinematic beat, almost nothing moves.
+
+The fingertips make first physical contact with the brushed titanium surface.
+
+The fingers begin naturally wrapping around the rigid body, the thumb finding the flat side rail.
+
+Show tactile interaction between skin and metal.
+
+The hand establishes a COMPLETE SECURE GRIP.
+
+HOLD THE COMPLETED GRIP for another brief fraction of a second.
+
+THIS MOMENT MUST BREATHE.
+
+This is the signature visual climax of the theft.
+
+Show tactile cinematic detail: fingertips, natural skin deformation against a hard surface, the brushed grain of the titanium, the machined edges of the camera plateau, specular highlights in the three lenses, faint fresh fingerprints appearing on the polished back where the fingers press, pale museum fabric, the hard spotlight, suspended dust, tiny glass fragments catching the light.
+
+Do not instantly remove the PRODUCT when the fingertips first touch it.
+
+The precise visual rhythm is:
+
+APPROACH → DECELERATE → ALMOST TOUCH → HOLD → FIRST CONTACT → FINGERS CLOSE → COMPLETE GRIP → MICRO-HOLD → RETURN TO NORMAL SPEED.
+
+Then the suspended moment releases.
+
+She decisively lifts the PRODUCT off its mount.
+
+The PRODUCT is rigid glass and metal: it does not flex, bend or compress. It responds with the believable low mass and inertia of a small handheld device.
+
+The screen remains hidden against her palm and fingers.
+
+The PRODUCT never changes identity, colour, finish, camera layout, logo or proportions.
+
+
+8.1–8.8s — REMOVAL / BEGIN ESCAPE
+
+The micro slow-motion sensation releases back into normal theatrical motion.
+
+The camera performs a fast but physically smooth pull-back toward the wider gallery composition.
+
+She pulls the EXACT SAME PRODUCT completely out through the broken panel.
+
+The fabric mount inside the vitrine is now visibly empty, with the small label plate still standing beside it.
+
+She securely possesses the PRODUCT.
+
+She turns away from the pedestal and begins leaving with it, taking the first short uneven steps with one bare foot and one shod foot, restricted by the fitted skirt.
+
+The discarded pump remains on the gallery floor.
+
+Do not spend time showing a long departure.
+
+The theft is complete.
+
+
+8.8s — HARD CUT
+
+SHOT 1 ENDS COMPLETELY.
+
+CUT TO A COMPLETELY NEW CAMERA SETUP.
+
+Do not continue the gallery composition from the same angle.
+
+Do not show the character transitioning from the pedestal into the run.
+
+The next shot begins later, when the chase is ALREADY HAPPENING.
+
+
+8.8–12.0s — SHOT 2 — WAIST-UP MUSEUM CHASE
+
+NEW SHOT.
+
+The SAME character from @image2 is ALREADY RUNNING with the EXACT SAME stolen PRODUCT from @image1.
+
+The location is a long marble museum hall — a different space from the gallery, with columns, high ceilings, polished stone floor, warm dark walls and dark abstract canvases receding into the background.
+
+The camera is positioned DIRECTLY IN FRONT OF the running character, several feet away, facing her.
+
+Frame her approximately FROM THE WAIST UP.
+
+She is LARGE and CENTERED in the foreground.
+
+This is a cinematic medium tracking shot.
+
+The camera moves backward smoothly at the SAME SPEED as she runs, maintaining approximately the SAME WAIST-UP FRAMING throughout the shot.
+
+She runs FORWARD toward the retreating camera.
+
+
+MANDATORY SIMPLE SPATIAL COMPOSITION:
+
+CAMERA
+↓
+RUNNING CHARACTER
+WAIST-UP
+LARGE IN FOREGROUND
+HOLDING STOLEN PRODUCT
+↓
+TWO RUNNING MUSEUM SECURITY GUARDS
+BEHIND THE CHARACTER
+↓
+MARBLE HALL BACKGROUND
+
+
+The EXACT SAME stolen PRODUCT remains clearly visible in her hand, held up against her chest with the titanium back panel and camera plateau facing outward toward the camera.
+
+The screen stays hidden against her palm and is never visible.
+
+The PRODUCT does not disappear. The PRODUCT does not change. The PRODUCT is not hidden behind her body.
+
+She is still running with ONE BARE FOOT and ONE STILETTO PUMP, in a skirt that will not let her stride. She runs in quick short steps with a slightly uneven rhythm and a tightly controlled upper body. Because the framing is waist-up, the feet are not seen — the constraint reads only through the torso, shoulders and the tempo of her movement.
+
+The denim blazer and the ponytail move with real weight.
+
+
+DIRECTLY BEHIND HER, TWO UNIFORMED MUSEUM SECURITY GUARDS ARE RUNNING AFTER HER ON FOOT.
+
+They wear plain dark museum security uniforms with visible ID badges. No firearms.
+
+Both guards are physically located BEHIND the fleeing character.
+
+Both remain clearly visible in the background of the SAME FRAME.
+
+They are pursuing her FROM BEHIND.
+
+They never appear in front of her. They never appear between the camera and her. They never run toward her from the opposite direction.
+
+One guard speaks urgently into a shoulder radio while running. The other visibly shouts toward her and may reach one arm forward.
+
+Keep the choreography simple. They RUN AFTER HER. That is their primary action.
+
+No complex staging. No additional guards. No vehicles.
+
+
+She runs with realistic human body mechanics: natural breathing, natural forward momentum, natural body weight, natural shoulder movement, natural clothing movement, restrained physical urgency.
+
+She does NOT perform exaggerated panic. The face is not blank either. Show believable physical effort and awareness of being chased.
+
+For most of this final shot, she looks FORWARD while running.
+
+Near the END of the shot, she becomes concerned about how close the guards are.
+
+The EYES react first. Tiny human reaction.
+
+Without stopping the run, she naturally rotates her HEAD and slightly rotates the UPPER SHOULDER. The ponytail swings across her shoulder with the motion.
+
+She LOOKS BACK OVER ONE SHOULDER DIRECTLY AT THE TWO GUARDS RUNNING BEHIND.
+
+This is a deliberate glance backward to check HOW CLOSE THEY ARE.
+
+The body continues running forward. The head briefly looks backward.
+
+The PRODUCT remains securely held and clearly visible.
+
+Hold this final cinematic image briefly:
+
+SHE IS LARGE AND WAIST-UP IN THE FOREGROUND, RUNNING WITH THE STOLEN PRODUCT, LOOKING BACK OVER ONE SHOULDER, WHILE TWO SECURITY GUARDS RUN AFTER HER IN THE BACKGROUND.
+
+END WHILE THE CHASE IS STILL HAPPENING.
+
+Do not resolve the chase.
+
+
+FINAL PRIORITIES
+
+PRIORITY 1 — @image2 CHARACTER IDENTITY. Preserve the same recognizable woman and the same denim wardrobe throughout both shots.
+
+PRIORITY 2 — @image1 PRODUCT IDENTITY. Preserve the exact same recognizable smartphone throughout the complete story, at real-life handheld scale, back panel up, screen never visible.
+
+PRIORITY 3 — INSTITUTIONAL SERIOUSNESS. The museum, the vitrine, the spotlight, the label plate and the contemplation are all played completely straight. The comedy comes only from the contrast between the treatment and the object.
+
+PRIORITY 4 — WARDROBE PHYSICS. The fitted denim skirt genuinely restricts her. She never bends at the waist, never lifts a knee high, never takes long strides.
+
+PRIORITY 5 — SHOE PHYSICS. She balances with a hand on the vitrine, slides her foot out of the pump, lowers herself on bent knees to pick it up, breaks the glass ONLY through visible stiletto-heel-to-glass contact, and visibly drops the shoe before reaching for the PRODUCT. The bare fist, palm, knuckles, elbow, forearm or foot NEVER break the glass.
+
+PRIORITY 6 — NATURAL HUMAN ACTING. Every action is readable, restrained and physically motivated.
+
+PRIORITY 7 — PRODUCT EYELINE. During contemplation, both eyes remain physically directed toward the PRODUCT&#x27;s actual position inside the vitrine.
+
+PRIORITY 8 — SIGNATURE GRAB. The grab must contain: approach → deceleration → almost-touch → hold → first contact → fingers close → complete grip → micro-hold → return to normal speed.
+
+PRIORITY 9 — ONE CAMERA EVENT IN SHOT 1. The camera is absolutely locked off from 0.0 to 7.0 seconds, then performs ONE single continuous move.
+
+PRIORITY 10 — HARD CUT. At approximately 8.8 seconds, the gallery scene is completely finished and the film cuts to a NEW chase shot.
+
+PRIORITY 11 — FINAL SHOT COMPOSITION. A SIMPLE WAIST-UP FRONT-FACING TRACKING SHOT. She is large in the foreground, the stolen PRODUCT is visible in her hand with its back panel facing camera, TWO SECURITY GUARDS are RUNNING BEHIND her in the same frame, and she looks back over one shoulder near the end.
+
+PRIORITY 12 — CINEMATIC CONTINUITY. Both shots look like footage from the exact same high-budget theatrical 35mm feature film.
+
+
+MANDATORY STORY CONTINUITY:
+
+PRODUCT under museum glass in a spotlight with a label plate, back panel up → character walks up at a respectful pace in short steps → contemplates it like an artwork → tilts head → reads the label → eyes return to the PRODUCT → expression subtly shifts → straightens up → checks right → checks left → glances up at the camera → decision beat → eyeline drops to her own foot → hand rests on vitrine for balance → weight shifts to one leg → foot slides forward out of the pump → bare foot on stone → lowers herself on bent knees with a straight back → picks up the shoe → rises holding it by the toe box → compact stiletto-heel strike → heel physically contacts glass → fracture radiates from the contact point → vitrine panel collapses → alarm begins → shoe visibly dropped to the floor → opposite empty hand reaches through the opening → camera pushes in → micro slow-motion → almost-touch → hold → first contact on brushed titanium → complete grip → micro-hold → normal speed returns → PRODUCT lifted off the empty mount → she turns away with short uneven steps → HARD CUT → NEW SHOT → she is already running with the exact PRODUCT → waist-up front-facing framing → two security guards running BEHIND her → near the end she looks back over one shoulder → unresolved cut.
+
+
+FINAL IMAGE AND MOTION QUALITY:
+
+Extremely photorealistic. High-budget theatrical cinematic photography. Authentic 35mm film character. Natural human acting. Natural facial performance. Natural eye movement. Realistic anatomy. Correct hands and fingers. Correct feet and toes. Realistic body inertia. Realistic centre of gravity. Realistic single-leg balance. Physically believable tempered glass behavior. Physically believable rigid metal-and-glass product behavior. Natural theatrical motion blur. Stable character identity. Stable PRODUCT identity. Stable exposure. Consistent organic film grain. No temporal flicker. No sudden camera jumps. No robotic movement. No synthetic AI-video appearance.
+
+4K, Ultra HD, rich details, sharp clarity, cinematic texture, natural colors, stable picture.
+
+NEGATIVE / DO NOT: the smartphone screen visible at any moment; any user interface, icons, wallpaper, clock or glowing display; the PRODUCT enlarged to monument or sculpture scale; the PRODUCT bending, flexing or compressing; a second product or duplicate device; a phone case, cover or accessory added to the PRODUCT; readable text on the museum label plate; the vitrine breaking without visible stiletto heel contact; a bare fist, palm, elbow or kick breaking the glass; the shoe teleporting into the hand without a visible removal; both shoes remaining on the feet during the strike; the shoe disappearing after it is dropped; the bare foot reappearing shod later in the film; the character bending at the waist or lifting a knee high in the fitted skirt; the denim skirt behaving like light flowing fabric; the character reacting with exaggerated comedy expressions; camera movement before 7.0 seconds in Shot 1; guards appearing in front of the character or between camera and character; police cars or vehicles replacing the running guards; a static product packshot ending; on-screen text, captions or logos; recognizable reproductions of real famous paintings on the walls.</pre>
+    </div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="s-head">
+      <div class="s-num">🔧</div>
+      <div>
+        <div class="s-kicker">Первая генерация</div>
+        <h2>Что проверить</h2>
+      </div>
+    </div>
+    <p class="s-lead">Пять точек. Если все пять сошлись — ролик готов, остальное вкусовщина.</p>
+    <div class="howto" style="margin-top:16px">
+      <div class="ht">Чек-лист</div>
+      <ol>
+        <li>Экран не появился в кадре и на нём нет интерфейса</li>
+        <li>Туфля реально снимается, а не телепортируется в руку</li>
+        <li>Босая нога осталась босой во втором шоте</li>
+        <li>Камера неподвижна до 6.8 секунды</li>
+        <li>На стенах нет узнаваемых известных картин — для коммерции это риск</li>
+      </ol>
+      <div class="note">💡 Последний пункт важнее, чем кажется: узнаваемая известная картина на стене превращает коммерческий ролик в юридический риск. В негативах это запрещено, но проверяй глазами.</div>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=museum">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=museum">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Один такой ролик закрывает бренду целую рекламную задачу — и стоит как продакшен, а не как «сделай картинку». На обучении даю систему целиком: от первой генерации до портфолио и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=museum">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
