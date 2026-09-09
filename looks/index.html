@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 луков за 11 секунд — сборка ролика | AI Новый Уровень</title>
+<meta name="description" content="Один непрерывный кадр, пять образов, переходы через чёрно-белый оборот. Промпт целиком плюс пять отдельных проходов для посегментной сборки.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5 луков за 11 секунд">
+<meta property="og:description" content="Один кадр, пять образов, переход через чёрно-белый оборот. Вся сборка целиком.">
+<meta property="og:url" content="https://neurocreator2.ru/looks/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.tls{margin-top:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.tl{border:1px solid var(--line);border-radius:13px;padding:14px 12px;background:rgba(200,200,200,.025);text-align:center}
+.tl .te{font-size:19px;display:block}
+.tl .tn{display:block;margin-top:7px;font-size:12.5px;color:var(--ink);font-weight:500;line-height:1.35}
+.tl .tt{display:block;margin-top:4px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8fa8c8}
+@media(max-width:720px){ .tls{grid-template-columns:repeat(2,1fr)} }
+
+.sls{margin-top:16px;display:flex;flex-direction:column;gap:7px;text-align:left}
+.sl{display:grid;grid-template-columns:88px 190px 1fr;gap:12px;align-items:baseline;
+  border:1px solid var(--line);border-radius:11px;padding:10px 14px;background:rgba(200,200,200,.02)}
+.sl.key{border-color:rgba(255,190,100,.3);background:rgba(255,190,100,.045)}
+.sl .sc{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fb4d8;font-weight:600}
+.sl.key .sc{color:#e0b874}
+.sl .sn{font-size:13px;color:var(--ink);font-weight:500}
+.sl .sd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .sl{grid-template-columns:84px 1fr;row-gap:3px} .sl .sd{grid-column:1/-1} }
+
+.assets{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.as{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(13,13,18,.7)}
+.as img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#0a0a0d}
+.as p{padding:9px 11px;font-size:11.5px;color:var(--ink2);line-height:1.4;text-align:left}
+.as p b{display:block;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8fb4d8;margin-bottom:2px}
+@media(max-width:820px){ .assets{grid-template-columns:repeat(2,1fr)} }
+
+.sts{margin-top:16px;display:flex;flex-direction:column;gap:9px;text-align:left}
+.st{display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:start;
+  border:1px solid var(--line);border-radius:13px;padding:13px 16px;background:rgba(200,200,200,.025)}
+.st .sn{width:28px;height:28px;border-radius:50%;border:1px solid rgba(200,200,200,.28);display:flex;
+  align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--c2)}
+.st .sb{font-size:13.5px;color:var(--ink);line-height:1.5}
+.st .sb b{font-weight:600}
+.st .sb span{display:block;margin-top:4px;font-size:12.5px;color:var(--ink3);font-weight:300}
+
+.fxs{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.fx{display:grid;grid-template-columns:290px 1fr;gap:14px;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;background:rgba(200,200,200,.02)}
+.fx .fs{font-size:13px;color:var(--ink);font-weight:500}
+.fx .fa{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.fx i,.sl i,.st i{font-family:ui-monospace,Menlo,monospace;font-style:normal;color:#8fb4d8;font-size:11.5px}
+@media(max-width:760px){ .fx{grid-template-columns:1fr;row-gap:5px} }
+
+.lys{margin-top:16px;display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+.ly{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:rgba(13,13,18,.7);text-align:left}
+.ly .le{font-size:18px}
+.ly .ln{display:block;margin-top:7px;font-size:13.5px;color:var(--ink);font-weight:600}
+.ly .ld{display:block;margin-top:5px;font-size:12.5px;color:var(--ink3);line-height:1.55}
+@media(max-width:620px){ .lys{grid-template-columns:1fr} }
+
+.lk{margin-top:34px;padding-top:28px}
+pre{max-height:340px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Гайд · AI — Новый Уровень</div>
+    <h1>5 луков<br>за <em>11 секунд</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Один непрерывный кадр на белой циклораме. Герой держит позу почти неподвижно, между луками — <b>оборот вокруг себя, на котором весь кадр падает в чистое чёрно-белое</b>. За спиной гигантский телефон, внизу веер цветовых карточек. Всё меняется внутри оборота.</p>
+
+    <div class="tls">
+        <div class="tl"><span class="te">⚪</span><span class="tn">Белый · цветовой шторм</span><span class="tt">0.0—2.2 с</span></div>
+        <div class="tl"><span class="te">⚫</span><span class="tn">Чёрный · кожа</span><span class="tt">2.2—4.4 с</span></div>
+        <div class="tl"><span class="te">🔵</span><span class="tn">Синий · худи</span><span class="tt">4.4—6.6 с</span></div>
+        <div class="tl"><span class="te">⬜</span><span class="tn">Серый · мех</span><span class="tt">6.6—8.8 с</span></div>
+        <div class="tl"><span class="te">🟥</span><span class="tn">Бордо · костюм</span><span class="tt">8.8—11.0 с</span></div>
+    </div>
+    <p class="cta-note" style="margin-top:12px;font-size:12px;color:var(--ink3)">Между луками — переходы. Это единственное быстрое движение в ролике, и цвета в них нет вообще.</p>
+
+    <div class="howto">
+      <div class="ht">Что грузим и в каком порядке</div>
+      <p style="font-size:14px;font-weight:300;color:var(--ink2);line-height:1.7">Порядок загрузки задаёт номера тегов. Сдвинешь хоть один файл — промпт начнёт ссылаться не на тот ассет: герой окажется телефоном, а веер курткой.</p>
+      <div class="sls">
+        <div class="sl"><span class="sc">@image1</span><span class="sn">Телефон голубой</span><span class="sd">Устройство для Look 3</span></div>
+        <div class="sl"><span class="sc">@image2</span><span class="sn">Телефон маджента</span><span class="sd">Устройство для Look 5</span></div>
+        <div class="sl"><span class="sc">@image3</span><span class="sn">Телефон чёрный</span><span class="sd">Устройство для Look 2</span></div>
+        <div class="sl"><span class="sc">@image4</span><span class="sn">Телефон серый</span><span class="sd">Устройство для Look 4</span></div>
+        <div class="sl"><span class="sc">@image5</span><span class="sn">Карта Pantone</span><span class="sd">Только конструкция карточек веера — цвета оттуда не берём</span></div>
+        <div class="sl"><span class="sc">@image6</span><span class="sn">Герой в чёрном</span><span class="sd">Гардероб Look 2</span></div>
+        <div class="sl"><span class="sc">@image7</span><span class="sn">Герой в сером мехе</span><span class="sd">Гардероб Look 4</span></div>
+        <div class="sl"><span class="sc">@image8</span><span class="sn">Герой в бордо</span><span class="sd">Гардероб Look 5</span></div>
+        <div class="sl"><span class="sc">@image9</span><span class="sn">Герой в синем</span><span class="sd">Гардероб Look 3</span></div>
+        <div class="sl key"><span class="sc">@image10</span><span class="sn">Герой в белом</span><span class="sd"><b>Мастер личности</b>: лицо, волосы, борода на весь ролик + гардероб Look 1</span></div>
+        <div class="sl"><span class="sc">@video1</span><span class="sn">Референс движения</span><span class="sd">Кадрирование, ритм, оборот с уходом в ЧБ. Больше ничего</span></div>
+      </div>
+      <div class="warn"><span class="wi">⚠️</span><span class="wt"><b>@image10 — главный.</b> С него берётся лицо для всех пяти луков. Со всех остальных шитов героя берём <b>только одежду</b>. Если модель начнёт тянуть лицо ещё и с @image6 или @image8 — личность поплывёт между луками, это самая частая поломка в такой сцене.</span></div>
+    </div>
+
+    <div class="assets">
+      <div class="as"><img src="hero-white.jpg" alt="Шит героя в белом" loading="lazy"><p><b>@image10</b>Белый — мастер личности</p></div>
+      <div class="as"><img src="hero-black.jpg" alt="Шит героя в коже" loading="lazy"><p><b>@image6</b>Кожаный плащ</p></div>
+      <div class="as"><img src="hero-fur.jpg" alt="Шит героя в мехе" loading="lazy"><p><b>@image7</b>Серый мех</p></div>
+      <div class="as"><img src="fan.jpg" alt="Веер карточек Pantone" loading="lazy"><p><b>@image5</b>Веер карточек</p></div>
+      <div class="as"><img src="ph-blue.jpg" alt="Голубой телефон" loading="lazy"><p><b>@image1</b>Голубой</p></div>
+      <div class="as"><img src="ph-magenta.jpg" alt="Малиновый телефон" loading="lazy"><p><b>@image2</b>Маджента</p></div>
+      <div class="as"><img src="ph-black.jpg" alt="Чёрный телефон" loading="lazy"><p><b>@image3</b>Чёрный</p></div>
+      <div class="as"><img src="ph-grey.jpg" alt="Серый телефон" loading="lazy"><p><b>@image4</b>Титановый серый</p></div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Порядок работы</div>
+      <div class="sts">
+        <div class="st"><span class="sn">1</span><span class="sb"><b>Открыть Genjutsu в режиме Motion Transfer</b><span>Он забирает из исходника движение, камеру и тайминг, а всё остальное пересобирает по референсам. Режим Object Swap не подойдёт — он меняет один элемент и оставляет кадр как есть.</span></span></div>
+        <div class="st"><span class="sn">2</span><span class="sb"><b>Загрузить видео-референс</b><span>Отдельным слотом. Genjutsu принимает от 3 до 30 секунд, одиннадцать проходят спокойно. Берём только кадрирование, ритм и оборот с уходом в ЧБ.</span></span></div>
+        <div class="st"><span class="sn">3</span><span class="sb"><b>Собрать десятку в правильном порядке</b><span>Сначала четыре телефона, потом пантон, потом пять героев. Проверь номера прямо в интерфейсе до старта — переименование постфактум ничего не чинит.</span></span></div>
+        <div class="st"><span class="sn">4</span><span class="sb"><b>Вставить промпт как есть</b><span>Он длинный намеренно: половина объёма — негативы, которые держат телефон прямым, а переход честно чёрно-белым. Режешь негативы — возвращаешь себе кривой телефон.</span></span></div>
+        <div class="st"><span class="sn">5</span><span class="sb"><b>Проверить первую генерацию по трём точкам</b><span>Лицо одинаковое во всех пяти луках. Переход полностью обесцвечен, без тонировки. Телефон стоит вертикально, без завала и трапеции.</span></span></div>
+        <div class="st"><span class="sn">6</span><span class="sb"><b>Чинить точечно</b><span>Не переписывать промпт целиком: найти в негативах строку, отвечающую за поломку, и усилить именно её.</span></span></div>
+      </div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>📝</b> Промпт целиком</a>
+      <a class="m" href="#l1"><b>⚪</b> По лукам</a>
+      <a class="m" href="#glue"><b>✂️</b> Склейка</a>
+      <a class="m" href="#fix"><b>🔧</b> Поломки</a>
+      <a class="m" href="#move"><b>🔁</b> Под свою серию</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">📝</div>
+      <div>
+        <div class="s-kicker">Genjutsu Motion Transfer · 11 сек · 9:16</div>
+        <h2>Промпт целиком</h2>
+      </div>
+    </div>
+    <p class="s-lead">Финальная версия под всю сцену: десять референсов, пять луков, четыре перехода. Двадцать тысяч знаков, из которых <b>половина — негативы</b>. Именно они держат телефон прямым, а переход честно чёрно-белым.</p>
+    <div class="s-tag">📎 Английский · вставлять как есть · негативы не резать</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · вся сцена</span><button class="copy" data-id="c1">Копировать</button></div>
+      <pre id="c1">INPUT ROLES — TEN REFERENCES, EACH WITH A STRICT SCOPE:
+
+@image10 — LOOK 1, THE INTRO, AND THE IDENTITY MASTER. The man&#x27;s face, hair and body come from here and are the identity for the WHOLE film: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, straight strong nose, green-hazel eyes, no make-up. LOOK 1 WARDROBE: a fitted plain white crew-neck cotton tee tucked in, cream off-white wide-leg pleated tailored trousers breaking long over the shoe, black leather square-toe loafers. Take the person and this outfit; take NOTHING of the sheet layout, the panel divisions or the studio lighting.
+@image6 — LOOK 2 WARDROBE, same man: a LONG BLACK LEATHER TRENCH COAT worn open, notch lapels, falling below the knee; a black mandarin-collar shirt buttoned to the throat; a black leather belt with a square metal buckle; straight black trousers; black leather boots. Clothes only; his face, hair and beard stay as in @image10.
+@image3 — THE DEVICE FOR LOOK 2, IN DEEP MATTE BLACK. THIS IS A HARDWARE REFERENCE: the giant phone behind him IS THIS EXACT DEVICE, scaled up to human height. Take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish EXACTLY as photographed here. Take nothing of the four-panel layout or the white sweep.
+@image9 — LOOK 3 WARDROBE, same man: an oversized DEEP NAVY HEAVY-FLEECE HOODIE with a kangaroo pocket and ribbed cuffs and hem; matching deep navy fleece sweatpants with a drawcord and elasticated ankles; a thin white tee showing at the hem; white leather low-top sneakers; a silver chain bracelet on one wrist and a steel watch with a blue dial on the other. Clothes only.
+@image1 — THE DEVICE FOR LOOK 3, IN CLEAN LIGHT STEEL-BLUE. Same hardware reference role as @image3.
+@image7 — LOOK 4 WARDROBE, same man: a GREY FAUX-FUR JACKET with a wide fur collar and long fur pile, worn open; a charcoal ribbed henley beneath, buttoned partway; matching GREY FAUX-FUR WIDE TROUSERS with a darker streaked pile; a metal buckle belt; black chunky lace-up boots with yellow welt stitching. Clothes only.
+@image4 — THE DEVICE FOR LOOK 4, IN NATURAL SILVER-GREY TITANIUM. Same hardware reference role.
+@image8 — LOOK 5 WARDROBE, same man: a BURGUNDY-PLUM TAILORED SUIT — a cropped structured jacket with wide peak lapels and one button at the waist, and matching pleated straight trousers with a turned cuff — over a burgundy silk shirt open at the collar; black polished leather derbies. Clothes only.
+@image2 — THE DEVICE FOR LOOK 5, IN VIVID METALLIC MAGENTA-RASPBERRY. Same hardware reference role.
+@image5 — THE SWATCH FAN, AS A CONSTRUCTION EXAMPLE ONLY. Take from it exactly how the cards are BUILT and SPREAD: square cards, a white label band along the top edge of each, a fabric colour field with a fine pinked zigzag edge, laid out flat and low in a wide overlapping fan like a dealt hand. THIS IMAGE IS ONLY AN EXAMPLE OF THE SHAPE AND LAYOUT — ITS COLOURS ARE NOT USED. In the film the colours of the fan are DIFFERENT IN EVERY LOOK and are set by the colour logic below, and every individual card within the fan carries ITS OWN DISTINCT SHADE. Take no colour, no crop and no lighting from this image.
+
+FROM EVERY REFERENCE TAKE ONLY THE PERSON, THE DEVICE OR THE CARD CONSTRUCTION — never the sheet layout, never the panel splits, never the studio lighting, never the backdrop. THE FACE IS THE SAME IN ALL FIVE LOOKS, taken from @image10: identity locked, same beard length, same hairline, no drift, no ageing, no change of hairstyle.
+
+THE ATTACHED VIDEO @video1 IS THE MASTER MOTION AND TIMING REFERENCE. Take from it: the locked-off full-length framing on a white cyclorama, the subject&#x27;s constant position and scale, the swatch fan along the bottom edge, THE FULL-REVOLUTION SPIN TRANSITION WITH THE ENTIRE FRAME DROPPING TO BLACK AND WHITE DURING THE SPIN AND COLOUR SNAPPING BACK ON THE WAY OUT, the rhythm of roughly two seconds per look, the opening beat where the figure stands with his back to camera before revealing, and THE PERFORMANCE ENERGY — the heavy slow-motion deceleration into an almost motionless hold. TAKE NOTHING ELSE: not the person, not the face, not the hair, not any of the outfits, not the colour palette.
+
+FORMAT: ONE SINGLE CONTINUOUS TAKE, 11 seconds, NO CUTS. ASPECT RATIO 9:16 vertical. NO MUSIC ANYWHERE — real recorded sound only.
+
+THE SHOT — LOCKED OFF: a full-length wide shot on a seamless pure-white studio cyclorama, lens at chest height, level horizon, dead-centre symmetrical. THE CAMERA NEVER MOVES for the entire 11 seconds. He stays on the same mark at the same scale in every look, feet on the white floor with a soft contact shadow, always fully inside frame from the top of his head to his shoes.
+
+HIS PERFORMANCE — GLAMBOT SLOW MOTION, ALMOST MOTIONLESS:
+Shot and played like an awards-show glambot: everything he does is in HEAVY SLOW MOTION with real high-speed-camera weight. Out of each spin he DECELERATES SMOOTHLY INTO HIS POSE and comes almost completely to rest, and then HE BARELY MOVES AT ALL for the rest of the look — no second pose, no gesture, no repositioning. The only things still alive in the hold are the slow trailing settle of his hair and fabric, a slow blink, and the faintest continuing drift of his weight. He is deliberately, luxuriously still. The stillness is the point.
+ONE POSE PER LOOK, LANDED SLOWLY AND HELD. The spin is the only fast movement in the film, and even the spin carries slow-motion weight and inertia rather than snapping.
+
+THE POSES ARE FIXED AND MUST NOT BE SWAPPED — one per look, no others:
+LOOK 1, THE LINE: standing tall and open, one hand slid loosely into the front trouser pocket with the thumb outside, the other arm lifted so the hand rests flat against the waistband at the front, elbow held clear of the body, weight settled on one leg with the other foot turned slightly out so the wide trouser leg falls in a long clean line, chin lifted, gaze straight into the lens.
+LOOK 2, THE COAT: both hands gripping the open front edges of the leather coat at chest height and holding them slightly apart so the coat hangs wide and heavy, feet planted apart, shoulders squared, chin level, a cool unblinking stare into the lens.
+LOOK 3, THE TURN: a three-quarter turn away from camera, both hands pushed into the hoodie&#x27;s kangaroo pocket so the fleece pulls tight across the back, one hip pushed back, shoulders rounded forward, looking back over his shoulder into the lens.
+LOOK 4, TEXTURE: one hand gripping the fur collar and pulling it across his chest, the other set on the belt at his hip, one boot pushed forward, head tipped down with his eyes coming up to the lens.
+LOOK 5, THE BUTTON: a slight turn off-axis, one hand at the single button of the cropped jacket as if just fastening it, the other hand in the trouser pocket, one shoulder dropped back, head tilted a fraction, a small closed-mouth smile, eyes into the lens.
+No pose is ever repeated; no two looks share the same arms, hips and head angle. He never stands with his arms hanging limp.
+
+THE TRANSITIONS — THE FRAME MUST GO FULLY BLACK AND WHITE, THIS IS A PRIORITY FIX:
+At each transition HE SPINS one full revolution on the spot. AT THE EXACT FRAME THE SPIN BEGINS, THE ENTIRE IMAGE BECOMES PURE MONOCHROME — one hundred percent desaturated, true black and white, ZERO colour anywhere: his skin, his hair, his clothes, the giant phone, the swatch fan, the floor, everything. It is an instant hard flip to greyscale, not a fade, not a ramp, not a partial wash, not a tint, not a cool grade — the colour is simply gone.
+THE WHOLE SPIN PLAYS OUT IN BLACK AND WHITE. During it the phone slides up and out through the top of frame while the next rises in from below, and the swatch cards reshuffle.
+AT THE EXACT FRAME THE SPIN ENDS, FULL COLOUR SNAPS BACK instantly, and he is already in the next outfit, decelerating into the new pose. Again an instant hard flip, never a fade.
+Every single transition works this way, all four of them, identically.
+The clothes change entirely inside the monochrome spin — never a dissolve, never a morph, never a fade, never a half-changed outfit.
+
+THE BACKGROUND — EXACTLY ONE GIANT SMARTPHONE AT A TIME:
+Behind him stands ONE enormous smartphone and only one. It is THE SAME DEVICE AS IN THE HARDWARE REFERENCE FOR THAT LOOK, enlarged to human height: a real phone with real metal and real glass, its BACK PANEL turned to camera, standing PERFECTLY UPRIGHT and DEAD CENTRE of frame, its whole body visible from top to bottom, tall enough to stand behind him from above his head down to below his knees. A real device — not a slab, not a card, not a poster, not a panel, not a tablet, not a screen.
+IT MUST CARRY THE DEVICE&#x27;S REAL FEATURES exactly as in the reference: the RAISED SQUARE CAMERA PLATEAU in its upper-left corner, with THREE clearly separate CIRCULAR LENSES in a triangle inside it — each with dark glass, a visible inner barrel and a slim polished metal ring — plus one small round flash and a tiny microphone dot; the polished metal SIDE FRAME with its flat chamfer, thin antenna lines and button reliefs; and the fine brushed metallic finish of the back panel with one soft highlight rolling across it. THE CAMERA PLATEAU AND ALL THREE LENSES STAY FULLY VISIBLE AND UNOBSTRUCTED above and beside him at all times.
+
+IT FACES THE CAMERA SQUARE AND STANDS STRAIGHT: parallel to the camera sensor, ZERO tilt into depth, ZERO foreshortening, ZERO rotation — perfectly vertical and level, its edges parallel to the edges of frame. No lean, no wedge shape, no trapezoid, no narrowing toward one end, no compression, no stretch, no bending. It stands clearly BEHIND him, never in front, never touching him.
+
+THE VERTICAL SLIDE: each new phone RISES INTO FRAME FROM BELOW THE BOTTOM EDGE, sliding smoothly straight up until fully in view and centred behind him, decelerating into place; it then HOLDS COMPLETELY STILL for the whole of his hold; on the spin it SLIDES ON UPWARD and out through the top edge while the next is already rising in from below, so the frame is never without a phone. Always straight vertical motion, always upward, never downward, never sideways, never diagonal, never tumbling or rotating.
+
+THE SWATCH FAN ALONG THE BOTTOM: built exactly as in @image5 — square cards with a blank white label band along the top edge and a fabric colour field with a fine pinked zigzag edge, spread flat and low in a wide overlapping fan across the full width of frame, cropped by the bottom edge, taking up only the bottom strip. Present in EVERY frame, never empty. EVERY CARD IN THE FAN IS A DIFFERENT SHADE, running as a graded sequence from palest to deepest within that look&#x27;s colour family. On each transition the cards reshuffle in monochrome and settle flat again in the new family as the new phone lands. Never a rosette, never a pleated paper fan, never standing on end.
+
+COLOUR LOGIC: HIS OUTFIT, THE GIANT PHONE AND THE SWATCH FAN ARE ALWAYS THE SAME COLOUR FAMILY, though not the same exact tone — the fan bridges the two. Black with black. In LOOK 3 the whole blue family is in play at once: the deep navy fleece on him, the light steel-blue device behind him, and the fan running the full graded ladder between them. Silver-grey with silver-grey. In LOOK 5 the whole magenta-to-burgundy family is in play: the burgundy-plum suit on him, the vivid magenta-raspberry device behind him, and the fan running the full graded ladder between them. The garments keep their own true colour exactly as in their wardrobe reference and are never repainted to match the device. The white cyclorama and his skin are the only neutrals in frame.
+
+OPENING BEAT — 0.0–0.6s: he stands with HIS BACK TO CAMERA, head slightly lowered, only the white tee, the cream wide-leg trousers and his dark hair readable, the first phone already rising into place behind him. At 0.6s he turns slowly to face front and decelerates into the Look 1 pose.
+
+LOOK 1 — 0.6–2.2s | THE COLOUR STORM. The white tee and cream tailoring from @image10, held almost motionless in the line pose. The giant phone behind him CYCLES RAPIDLY THROUGH EVERY COLOUR — green, orange, purple, yellow, silver, pink, teal, black, one after another every few frames, never settling — and the fan below flickers through the same riot, each card a different hue. The device never changes shape while its colour changes.
+
+2.2s — TRANSITION ONE: the spin, in full black and white, as specified above.
+
+LOOK 2 — 2.2–4.4s | BLACK. The long black leather coat and mandarin-collar shirt from @image6 in the coat pose, held. Behind him the deep matte black device from @image3; the fan a graded run of charcoals, graphites and near-blacks, every card different.
+
+4.4s — TRANSITION TWO: the spin, in full black and white.
+
+LOOK 3 — 4.4–6.6s | BLUE. The navy fleece hoodie set from @image9 in the turn pose, held, its deep navy unchanged. Behind him the light steel-blue device from @image1; the fan a graded run from pale ice blue through steel and slate down to deep navy, every card different.
+
+6.6s — TRANSITION THREE: the spin, in full black and white.
+
+LOOK 4 — 6.6–8.8s | SILVER GREY. The grey faux-fur jacket and fur trousers from @image7 in the texture pose, held. Behind him the natural silver-grey titanium device from @image4; the fan a graded run of pale silvers, warm greys and pewter, every card different.
+
+8.8s — TRANSITION FOUR: the spin, in full black and white.
+
+LOOK 5 — 8.8–11.0s | MAGENTA TO BURGUNDY. The burgundy-plum suit and silk shirt from @image8 in the button pose, held, its burgundy unchanged. Behind him the vivid magenta-raspberry device from @image2; the fan a graded run from bright magenta through raspberry and wine down to deep plum, every card different. The shot ends on the held pose with the phone standing centred behind him.
+
+PHYSICS — SLOW AND HEAVY:
+HAIR: on every spin his mid-length wavy hair lifts and swings out from the head with centrifugal force, sweeps across his forehead and neck, and then falls and settles SLOWLY, still drifting after he has stopped. It never stays glued to his head and never moves as one solid block. The beard stays as it is and does not deform.
+CLOTHES, each behaving like its own material and all settling in slow motion after the spin: the wide cream trouser legs swing heavily and ripple with the weight of the wool; the long leather coat flares out in a stiff heavy arc and swings closed with real hide weight, the coat tails lagging behind him; the thick fleece hoodie barely moves and holds its shape while the sweatpants sway at the ankle; the long faux-fur pile ruffles and parts in the airflow, the fur collar shifts and the fur trouser pile lifts and resettles strand by strand; the structured suit jacket holds its tailored shape while the open shirt collar flicks and the pleated trouser legs snap out and back.
+THE GIANT PHONE: a heavy rigid object — it slides up with real mass and decelerates smoothly into its stop, never bending, flexing, wobbling or rotating.
+THE SWATCH CARDS: light card stock with a fabric face — they slide over one another with a papery snap and settle flat, never curling, never standing on end.
+
+ANATOMY — CRITICAL AT FULL LENGTH AND IN EVERY POSE: exactly two arms, two legs, two feet, five correct fingers per hand with natural knuckles and nails, correct through every spin and every pose. Feet sit properly inside the shoes and boots with correct ankles. Correct shoulder, elbow and wrist joints. No melting, no fusing, no extra digits, no backwards joints, no floating feet, no arms passing through his body.
+
+LOOK 1 SEPARATION: the white tee and cream trousers must never merge into the white cyclorama — keep a crisp silhouette, a soft grey contact shadow at his feet, and clear shading in the trouser pleats and the cotton folds.
+
+CONTINUITY: exactly one man in frame at all times, alone, no other people, no reflections of anyone. Same face, same beard, same hair, same height, same mark, same scale, same lighting in all five looks. Exactly one giant phone visible at any moment, centred and upright. Five outfits, five poses and four device colours in the stated order, each appearing exactly once.
+
+LIGHTING: clean even high-key studio light on a white cyclorama — broad soft frontal light with a gentle top fill, one soft contact shadow at his feet and a soft shadow behind the standing phone. Identical in all five looks. Matte natural skin with visible pores and real beard detail, no hot speculars, no coloured spill from the phone.
+
+STYLE AND FINISH: high-end menswear lookbook — crisp, bright, clean, editorial. True-to-life skin tones, accurate saturated garment colours, real product-photography quality on the phone. No grain, no filter, no bloom.
+
+NEGATIVE: no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no fade in or out of monochrome, no colour surviving anywhere during the spin; no second pose inside a look, no gesture during the hold, no repositioning, no walking, no dancing, no fidgeting, no fast movement outside the spin, no normal-speed motion anywhere, no speed ramping; no arms hanging limp, no repeated pose, no neutral standing between looks, no pose hiding the camera plateau, no pose taking him off his mark or cropping his head or feet, no comedy mugging; no garment recoloured to match its device, no navy hoodie turned light blue, no burgundy suit turned magenta; no card without a pinked zigzag edge, no straight-cut swatch edge, no card without a white label band, no text, codes, numbers or gibberish writing on the cards, no tall thin cards, no colours copied from @image5, no fan where all cards are the same shade, no curled or rosette fan, no pleated paper fan, no cards standing on end, no empty bottom edge, no fan in the wrong colour family; no more than one giant phone at a time, no group or stack of phones, no small phones in the background; no phone entering from the top, the side or diagonally, no phone moving downward, no phone tumbling as it travels, no phone sliding during the hold, no phone missing from frame; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid shape, no bending device, no phone wider than tall, no squashed, stretched or compressed device; no tablet, no iPad, no slab, no flat coloured panel, no poster, no printed image of a phone, no screen; no missing camera plateau, no module in the wrong corner, no scattered dark dots instead of lenses, no smeared or merged lenses, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves, no wipes, no flash frames; no dissolve or morph between outfits, no clothes changing outside the spin, no half-changed outfit, no wrong outfit order; no stiff frozen hair, no hair moving as one solid block, no weightless fabric; no face changing between looks, no different man, no identity drift, no shaved or shortened beard, no changed hairstyle, no woman, no person or face or hair or outfit from the reference video; no second person, no duplicate of him; no phone in his hands, no phone touching him; no coloured or gradient background, no location, no set dressing; no white or cream look merging into the white background, no lost silhouette; no readable text or lettering anywhere in frame, no brand names, no logos other than the apple emblem, no captions, no subtitles, no watermarks; no melted or fused hands, no extra fingers or limbs, no deformed feet, no missing contact shadow; no music, no score, no soundtrack, no beat, no dialogue, no voice; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look, no style drift.
+
+AUDIO: NO MUSIC AT ALL — real recorded sound only, time-stretched with the slow motion: quiet studio room tone; a smooth low mechanical slide and a soft settle as each giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle; a long low rush of fabric and hair on each spin. No voices, no dialogue, no beat.</pre>
+    </div>
+  </section>
+
+  <section class="step lk" id="l1">
+    <div class="s-head">
+      <div class="s-num">⚪</div>
+      <div>
+        <div class="s-kicker">Look 1 · 0.0—2.2 с</div>
+        <h2>Белый · цветовой шторм</h2>
+      </div>
+    </div>
+    <p class="s-lead">Единственный сегмент без входящего оборота. Самый нагруженный: белое на белом плюс мигающий цветом продукт — если генерация не заходит, начинай проверку отсюда.</p>
+    <div class="s-tag">📎 @image10 герой в белом (лицо + гардероб) · @image4 телефон · @image5 веер</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Look 1</span><button class="copy" data-id="L1">Копировать</button></div>
+      <pre id="L1">SINGLE CONTINUOUS TAKE, 2.6 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+REFERENCES: @image10 is the IDENTITY MASTER and the wardrobe — a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. He wears a fitted plain white crew-neck cotton tee tucked in, cream off-white wide-leg pleated tailored trousers breaking long over the shoe, black leather square-toe loafers. @image4 is a HARDWARE REFERENCE for the giant phone&#x27;s shape only — silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot. @image5 shows ONLY how the swatch cards are built and spread — square cards, white label band along the top edge, fabric colour field with a fine pinked zigzag edge, laid flat in a wide overlapping fan. Take no colour from @image5. From every reference take only the person, the device shape or the card construction — never the sheet layout, never the panel splits, never the studio lighting.
+
+THE SHOT — LOCKED OFF: full-length wide shot on a seamless pure-white studio cyclorama, lens at chest height, level horizon, dead-centre symmetrical. THE CAMERA NEVER MOVES. He is fully in frame from the top of his head to his shoes, feet on the white floor with a soft grey contact shadow.
+
+0.0–0.6s OPENING BEAT: he stands with HIS BACK TO CAMERA, head slightly lowered, only the white tee, the cream trousers and his dark hair readable. The giant phone is already rising into place behind him.
+
+0.6–1.1s: he turns slowly to face front in HEAVY SLOW MOTION with real high-speed-camera weight, and DECELERATES SMOOTHLY into the pose.
+
+1.1–2.6s THE HOLD: standing tall and open, one hand slid loosely into the front trouser pocket with the thumb outside, the other arm lifted so the hand rests flat against the waistband at the front, elbow held clear of the body, weight settled on one leg with the other foot turned slightly out so the wide trouser leg falls in a long clean line, chin lifted, gaze straight into the lens. HE BARELY MOVES AT ALL. No second pose, no gesture, no repositioning. The only things alive are the slow trailing settle of his hair, the heavy ripple of the wide wool trouser legs, a slow blink, and the faintest drift of his weight. The stillness is the point. The take ends on this held pose.
+
+THE GIANT PHONE: ONE enormous smartphone and only one, the device from @image4 enlarged to human height, its BACK PANEL turned to camera, standing PERFECTLY UPRIGHT and DEAD CENTRE, tall enough to stand from above his head down to below his knees, clearly BEHIND him and never touching him. A real phone with real metal and real glass — not a slab, not a poster, not a tablet, not a screen. It carries the RAISED SQUARE CAMERA PLATEAU in its upper-left corner with THREE clearly separate CIRCULAR LENSES in a triangle, each with dark glass, a visible inner barrel and a slim polished metal ring, plus one round flash and a tiny microphone dot; the plateau and all three lenses stay FULLY VISIBLE AND UNOBSTRUCTED at all times. It faces the camera square and parallel to the sensor: ZERO tilt into depth, ZERO foreshortening, ZERO rotation, edges parallel to the edges of frame, no lean, no wedge, no trapezoid, no bending. It rises straight up from below the bottom edge, decelerates into place, and then HOLDS COMPLETELY STILL.
+
+THE COLOUR STORM: while its shape stays absolutely fixed, THE PHONE CYCLES RAPIDLY THROUGH EVERY COLOUR — green, orange, purple, yellow, silver, pink, teal, black, one after another every few frames, never settling. The fan below flickers through the same riot, every card a different hue. Nothing about the device&#x27;s geometry changes while its colour changes.
+
+THE SWATCH FAN: square cards built as in @image5, spread flat and low in a wide overlapping fan across the full width of frame, cropped by the bottom edge, taking only the bottom strip. Present in every frame, never empty. They are light card stock with a fabric face and settle flat, never curling, never standing on end.
+
+SEPARATION: the white tee and cream trousers must never merge into the white cyclorama — crisp silhouette, soft grey contact shadow, clear shading in the trouser pleats and the cotton folds.
+
+LIGHTING AND FINISH: clean even high-key studio light, broad soft frontal with a gentle top fill, one soft contact shadow at his feet and a soft shadow behind the phone. Matte natural skin with visible pores and real beard detail, no hot speculars. High-end menswear lookbook — crisp, bright, editorial, true-to-life skin tones. No grain, no filter, no bloom.
+
+ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand with natural knuckles and nails. Feet sit properly inside the loafers with correct ankles. Correct shoulder, elbow and wrist joints.
+
+NEGATIVE: no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no normal-speed motion, no speed ramping; no arms hanging limp; no phone changing shape while its colour changes; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone in his hands, no phone touching him; no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge, no colours copied from @image5; no white or cream look merging into the white background, no lost silhouette; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
+
+AUDIO: quiet studio room tone; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a faint papery flick from the swatch cards. No music, no voices.</pre>
+    </div>
+  </section>
+
+  <section class="step lk" id="l2">
+    <div class="s-head">
+      <div class="s-num">⚫</div>
+      <div>
+        <div class="s-kicker">Look 2 · 2.2—4.4 с</div>
+        <h2>Чёрный · кожа</h2>
+      </div>
+    </div>
+    <p class="s-lead">Начинается на обороте в ЧБ — сюда падает склейка.</p>
+    <div class="s-tag">📎 @image10 лицо · @image6 гардероб · @image3 телефон · @image5 веер</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Look 2</span><button class="copy" data-id="L2">Копировать</button></div>
+      <pre id="L2">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image6 is WARDROBE ONLY, same man: a LONG BLACK LEATHER TRENCH COAT worn open, notch lapels, falling below the knee; a black mandarin-collar shirt buttoned to the throat; a black leather belt with a square metal buckle; straight black trousers; black leather boots. @image3 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN DEEP MATTE BLACK, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
+
+THE SHOT — LOCKED OFF: full-length wide shot on a seamless pure-white studio cyclorama, lens at chest height, level horizon, dead-centre symmetrical. THE CAMERA NEVER MOVES. He is fully in frame from the top of his head to his shoes, feet on the white floor with a soft grey contact shadow.
+
+0.0–0.8s THE SPIN, IN FULL BLACK AND WHITE: the take OPENS ALREADY IN PURE MONOCHROME — one hundred percent desaturated, true black and white, ZERO colour anywhere: his skin, his hair, his clothes, the giant phone, the swatch fan, the floor, everything. He SPINS one full revolution on the spot, carrying slow-motion weight and inertia rather than snapping. During the spin the previous phone slides up and out through the top of frame while the black device rises in from below, and the swatch cards reshuffle. THE WHOLE SPIN PLAYS OUT IN BLACK AND WHITE.
+
+AT 0.8s, THE EXACT FRAME THE SPIN ENDS, FULL COLOUR SNAPS BACK INSTANTLY. An instant hard flip, never a fade, never a ramp, never a partial wash, never a tint, never a cool grade. He is already in the black leather coat.
+
+0.8–1.4s: he DECELERATES SMOOTHLY into the pose in HEAVY SLOW MOTION with real high-speed-camera weight.
+
+1.4–3.0s THE HOLD: both hands gripping the open front edges of the leather coat at chest height and holding them slightly apart so the coat hangs wide and heavy, feet planted apart, shoulders squared, chin level, a cool unblinking stare into the lens. HE BARELY MOVES AT ALL. No second pose, no gesture, no repositioning. Alive in the hold: the long leather coat settling out of its stiff heavy arc with real hide weight, the coat tails lagging, the slow trailing settle of his hair, a slow blink. The take ends on this held pose.
+
+THE GIANT PHONE: ONE enormous smartphone and only one, the deep matte black device from @image3 enlarged to human height, its BACK PANEL turned to camera, standing PERFECTLY UPRIGHT and DEAD CENTRE, tall enough to stand from above his head down to below his knees, clearly BEHIND him and never touching him. A real phone with real metal and real glass — not a slab, not a poster, not a tablet, not a screen. RAISED SQUARE CAMERA PLATEAU in the upper-left corner with THREE clearly separate CIRCULAR LENSES in a triangle, each with dark glass, a visible inner barrel and a slim polished metal ring, plus one round flash and a tiny microphone dot; plateau and all three lenses stay FULLY VISIBLE AND UNOBSTRUCTED. Parallel to the sensor: ZERO tilt into depth, ZERO foreshortening, ZERO rotation, edges parallel to frame, no lean, no wedge, no trapezoid, no bending. It rises straight up from below during the spin, decelerates into place, and then HOLDS COMPLETELY STILL for the rest of the take. A heavy rigid object with real mass.
+
+THE SWATCH FAN: square cards built as in @image5 — white label band along the top edge, fabric colour field with a fine pinked zigzag edge — spread flat and low in a wide overlapping fan across the full width of frame, cropped by the bottom edge. Present in every frame. EVERY CARD IS A DIFFERENT SHADE: a graded run of charcoals, graphites and near-blacks. They reshuffle in monochrome during the spin and settle flat in the black family as the phone lands, sliding over one another with a papery snap.
+
+COLOUR LOGIC: his outfit, the giant phone and the fan are all in the black family. The white cyclorama and his skin are the only neutrals in frame.
+
+LIGHTING AND FINISH: clean even high-key studio light, broad soft frontal with a gentle top fill, one soft contact shadow at his feet and a soft shadow behind the phone. Matte natural skin with visible pores and real beard detail, no hot speculars, no coloured spill. High-end menswear lookbook — crisp, bright, editorial. No grain, no filter, no bloom.
+
+ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand with natural knuckles and nails, correct through the spin and the pose. Feet sit properly inside the boots with correct ankles. Correct shoulder, elbow and wrist joints.
+
+NEGATIVE: no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen hair, no hair moving as one solid block, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
+
+AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
+    </div>
+  </section>
+
+  <section class="step lk" id="l3">
+    <div class="s-head">
+      <div class="s-num">🔵</div>
+      <div>
+        <div class="s-kicker">Look 3 · 4.4—6.6 с</div>
+        <h2>Синий · худи</h2>
+      </div>
+    </div>
+    <p class="s-lead">Тёмно-синее худи и голубой телефон — одно семейство, но разный тон. Одежда не перекрашивается под устройство.</p>
+    <div class="s-tag">📎 @image10 лицо · @image9 гардероб · @image1 телефон · @image5 веер</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Look 3</span><button class="copy" data-id="L3">Копировать</button></div>
+      <pre id="L3">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image9 is WARDROBE ONLY, same man: an oversized DEEP NAVY HEAVY-FLEECE HOODIE with a kangaroo pocket and ribbed cuffs and hem; matching deep navy fleece sweatpants with a drawcord and elasticated ankles; a thin white tee showing at the hem; white leather low-top sneakers; a silver chain bracelet on one wrist and a steel watch with a blue dial on the other. @image1 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN CLEAN LIGHT STEEL-BLUE, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
+
+THE SHOT — LOCKED OFF: full-length wide shot on a seamless pure-white studio cyclorama, lens at chest height, level horizon, dead-centre symmetrical. THE CAMERA NEVER MOVES. He is fully in frame from the top of his head to his shoes, feet on the white floor with a soft grey contact shadow.
+
+0.0–0.8s THE SPIN, IN FULL BLACK AND WHITE: the take OPENS ALREADY IN PURE MONOCHROME — one hundred percent desaturated, true black and white, ZERO colour anywhere: his skin, his hair, his clothes, the giant phone, the swatch fan, the floor, everything. He SPINS one full revolution on the spot with slow-motion weight and inertia. During the spin the previous phone slides up and out through the top of frame while the steel-blue device rises in from below, and the swatch cards reshuffle. THE WHOLE SPIN PLAYS OUT IN BLACK AND WHITE.
+
+AT 0.8s, THE EXACT FRAME THE SPIN ENDS, FULL COLOUR SNAPS BACK INSTANTLY. An instant hard flip, never a fade, never a ramp, never a partial wash, never a tint. He is already in the navy fleece.
+
+0.8–1.4s: he DECELERATES SMOOTHLY into the pose in HEAVY SLOW MOTION with real high-speed-camera weight.
+
+1.4–3.0s THE HOLD: a three-quarter turn away from camera, both hands pushed into the hoodie&#x27;s kangaroo pocket so the fleece pulls tight across the back, one hip pushed back, shoulders rounded forward, looking back over his shoulder into the lens. HE BARELY MOVES AT ALL. No second pose, no gesture, no repositioning. Alive in the hold: the slow trailing settle of his hair, the sweatpants swaying at the ankle, a slow blink. The thick fleece holds its shape and barely moves — that heaviness is correct. The take ends on this held pose.
+
+THE GIANT PHONE: ONE enormous smartphone and only one, the light steel-blue device from @image1 enlarged to human height, its BACK PANEL turned to camera, standing PERFECTLY UPRIGHT and DEAD CENTRE, tall enough to stand from above his head down to below his knees, clearly BEHIND him and never touching him. A real phone with real metal and real glass — not a slab, not a poster, not a tablet, not a screen. RAISED SQUARE CAMERA PLATEAU in the upper-left corner with THREE clearly separate CIRCULAR LENSES in a triangle, each with dark glass, a visible inner barrel and a slim polished metal ring, plus one round flash and a tiny microphone dot; plateau and all three lenses stay FULLY VISIBLE AND UNOBSTRUCTED. Parallel to the sensor: ZERO tilt into depth, ZERO foreshortening, ZERO rotation, edges parallel to frame, no lean, no wedge, no trapezoid, no bending. It rises straight up from below during the spin, decelerates into place, then HOLDS COMPLETELY STILL. A heavy rigid object with real mass.
+
+THE SWATCH FAN: square cards built as in @image5 — white label band along the top edge, fabric colour field with a fine pinked zigzag edge — spread flat and low in a wide overlapping fan across the full width of frame, cropped by the bottom edge. Present in every frame. EVERY CARD IS A DIFFERENT SHADE: a graded ladder running from pale ice blue through steel and slate down to deep navy. They reshuffle in monochrome during the spin and settle flat in the blue family as the phone lands.
+
+COLOUR LOGIC: the whole blue family is in play at once — the DEEP NAVY fleece on him, the LIGHT STEEL-BLUE device behind him, and the fan running the full graded ladder between them. THE HOODIE KEEPS ITS OWN TRUE DEEP NAVY exactly as in @image9 and is NEVER repainted to match the device. The white cyclorama and his skin are the only neutrals in frame.
+
+LIGHTING AND FINISH: clean even high-key studio light, broad soft frontal with a gentle top fill, one soft contact shadow at his feet and a soft shadow behind the phone. Matte natural skin with visible pores and real beard detail, no hot speculars, no coloured spill from the phone. High-end menswear lookbook — crisp, bright, editorial. No grain, no filter, no bloom.
+
+ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand with natural knuckles and nails, correct through the spin and the pose. Both hands read clearly inside the kangaroo pocket without fusing into the fabric. Feet sit properly inside the sneakers with correct ankles.
+
+NEGATIVE: no navy hoodie turned light blue, no garment recoloured to match its device; no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen hair, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
+
+AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
+    </div>
+  </section>
+
+  <section class="step lk" id="l4">
+    <div class="s-head">
+      <div class="s-num">⬜</div>
+      <div>
+        <div class="s-kicker">Look 4 · 6.6—8.8 с</div>
+        <h2>Серый · мех</h2>
+      </div>
+    </div>
+    <p class="s-lead">Самый выигрышный лук по фактуре — мех отрабатывает оборот лучше всего.</p>
+    <div class="s-tag">📎 @image10 лицо · @image7 гардероб · @image4 телефон · @image5 веер</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Look 4</span><button class="copy" data-id="L4">Копировать</button></div>
+      <pre id="L4">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image7 is WARDROBE ONLY, same man: a GREY FAUX-FUR JACKET with a wide fur collar and long fur pile, worn open; a charcoal ribbed henley beneath, buttoned partway; matching GREY FAUX-FUR WIDE TROUSERS with a darker streaked pile; a metal buckle belt; black chunky lace-up boots with yellow welt stitching. @image4 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN NATURAL SILVER-GREY TITANIUM, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its brushed finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
+
+THE SHOT — LOCKED OFF: full-length wide shot on a seamless pure-white studio cyclorama, lens at chest height, level horizon, dead-centre symmetrical. THE CAMERA NEVER MOVES. He is fully in frame from the top of his head to his shoes, feet on the white floor with a soft grey contact shadow.
+
+0.0–0.8s THE SPIN, IN FULL BLACK AND WHITE: the take OPENS ALREADY IN PURE MONOCHROME — one hundred percent desaturated, true black and white, ZERO colour anywhere. He SPINS one full revolution on the spot with slow-motion weight and inertia. During the spin the previous phone slides up and out through the top of frame while the titanium device rises in from below, and the swatch cards reshuffle. THE WHOLE SPIN PLAYS OUT IN BLACK AND WHITE.
+
+AT 0.8s, THE EXACT FRAME THE SPIN ENDS, FULL COLOUR SNAPS BACK INSTANTLY. An instant hard flip, never a fade, never a ramp, never a partial wash, never a tint. He is already in the grey fur.
+
+0.8–1.4s: he DECELERATES SMOOTHLY into the pose in HEAVY SLOW MOTION with real high-speed-camera weight.
+
+1.4–3.0s THE HOLD: one hand gripping the fur collar and pulling it across his chest, the other set on the belt at his hip, one boot pushed forward, head tipped down with his eyes coming up to the lens. HE BARELY MOVES AT ALL. No second pose, no gesture, no repositioning. Alive in the hold: the long faux-fur pile still ruffling and parting from the airflow and resettling strand by strand, the fur collar shifting, the fur trouser pile lifting and settling, the slow trailing settle of his hair, a slow blink. The take ends on this held pose.
+
+THE GIANT PHONE: ONE enormous smartphone and only one, the natural silver-grey titanium device from @image4 enlarged to human height, its BACK PANEL turned to camera with the fine brushed metallic finish and one soft highlight rolling across it, standing PERFECTLY UPRIGHT and DEAD CENTRE, tall enough to stand from above his head down to below his knees, clearly BEHIND him and never touching him. A real phone with real metal and real glass — not a slab, not a poster, not a tablet, not a screen. RAISED SQUARE CAMERA PLATEAU in the upper-left corner with THREE clearly separate CIRCULAR LENSES in a triangle, each with dark glass, a visible inner barrel and a slim polished metal ring, plus one round flash and a tiny microphone dot; plateau and all three lenses stay FULLY VISIBLE AND UNOBSTRUCTED and are never covered by the raised fur collar. Parallel to the sensor: ZERO tilt into depth, ZERO foreshortening, ZERO rotation, edges parallel to frame, no lean, no wedge, no trapezoid, no bending. It rises straight up from below during the spin, decelerates into place, then HOLDS COMPLETELY STILL. A heavy rigid object with real mass.
+
+THE SWATCH FAN: square cards built as in @image5 — white label band along the top edge, fabric colour field with a fine pinked zigzag edge — spread flat and low in a wide overlapping fan across the full width of frame, cropped by the bottom edge. Present in every frame. EVERY CARD IS A DIFFERENT SHADE: a graded run of pale silvers, warm greys and pewter. They reshuffle in monochrome during the spin and settle flat in the grey family as the phone lands.
+
+COLOUR LOGIC: his outfit, the giant phone and the fan are all in the silver-grey family. The white cyclorama and his skin are the only neutrals in frame. Because the look and the device sit close in tone, keep the fur reading as a distinct warm-grey pile against the cool brushed metal — the two must not flatten into one grey mass.
+
+LIGHTING AND FINISH: clean even high-key studio light, broad soft frontal with a gentle top fill, one soft contact shadow at his feet and a soft shadow behind the phone. Matte natural skin with visible pores and real beard detail, no hot speculars, no coloured spill. High-end menswear lookbook — crisp, bright, editorial. No grain, no filter, no bloom.
+
+ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand with natural knuckles and nails, correct through the spin and the pose. The hand on the fur collar keeps five clear separate fingers and does not fuse into the pile. Feet sit properly inside the boots with correct ankles.
+
+NEGATIVE: no fur and phone flattening into one undifferentiated grey; no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no pose hiding the camera plateau; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen fur, no fur moving as one solid block, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
+
+AUDIO: quiet studio room tone; a long low rush of fur and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
+    </div>
+  </section>
+
+  <section class="step lk" id="l5">
+    <div class="s-head">
+      <div class="s-num">🟥</div>
+      <div>
+        <div class="s-kicker">Look 5 · 8.8—11.0 с</div>
+        <h2>Бордо · костюм</h2>
+      </div>
+    </div>
+    <p class="s-lead">Финал: заканчивается на удержанной позе, без исходящего оборота.</p>
+    <div class="s-tag">📎 @image10 лицо · @image8 гардероб · @image2 телефон · @image5 веер</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Промпт · Look 5</span><button class="copy" data-id="L5">Копировать</button></div>
+      <pre id="L5">SINGLE CONTINUOUS TAKE, 3.0 seconds, 9:16 vertical, NO CUTS, NO MUSIC — real recorded sound only.
+
+REFERENCES: @image10 is the IDENTITY MASTER — face, hair and beard come from here and never change: a man around thirty, European, lean and tall, fair skin, mid-length dark brown wavy hair pushed back off the forehead and falling to the neck, a full dark beard and moustache, green-hazel eyes. @image8 is WARDROBE ONLY, same man: a BURGUNDY-PLUM TAILORED SUIT — a cropped structured jacket with wide peak lapels and one button at the waist, and matching pleated straight trousers with a turned cuff — over a burgundy silk shirt open at the collar; black polished leather derbies. @image2 is a HARDWARE REFERENCE: the giant phone IS THIS EXACT DEVICE IN VIVID METALLIC MAGENTA-RASPBERRY, scaled up to human height — take its silhouette, proportions, rounded corners, metal side frame with button reliefs and antenna lines, raised square camera plateau with three circular lenses, flash and microphone dot, its emblem and its finish exactly as photographed. Take nothing of its four-panel layout. @image5 shows ONLY how the swatch cards are built and spread; take no colour from it. Never take the sheet layout, the panel splits or the studio lighting from any reference.
+
+THE SHOT — LOCKED OFF: full-length wide shot on a seamless pure-white studio cyclorama, lens at chest height, level horizon, dead-centre symmetrical. THE CAMERA NEVER MOVES. He is fully in frame from the top of his head to his shoes, feet on the white floor with a soft grey contact shadow.
+
+0.0–0.8s THE SPIN, IN FULL BLACK AND WHITE: the take OPENS ALREADY IN PURE MONOCHROME — one hundred percent desaturated, true black and white, ZERO colour anywhere. He SPINS one full revolution on the spot with slow-motion weight and inertia. During the spin the previous phone slides up and out through the top of frame while the magenta device rises in from below, and the swatch cards reshuffle. THE WHOLE SPIN PLAYS OUT IN BLACK AND WHITE.
+
+AT 0.8s, THE EXACT FRAME THE SPIN ENDS, FULL COLOUR SNAPS BACK INSTANTLY. An instant hard flip, never a fade, never a ramp, never a partial wash, never a tint. He is already in the burgundy suit.
+
+0.8–1.4s: he DECELERATES SMOOTHLY into the pose in HEAVY SLOW MOTION with real high-speed-camera weight.
+
+1.4–3.0s THE HOLD: a slight turn off-axis, one hand at the single button of the cropped jacket as if just fastening it, the other hand in the trouser pocket, one shoulder dropped back, head tilted a fraction, a small closed-mouth smile, eyes into the lens. HE BARELY MOVES AT ALL. No second pose, no gesture, no repositioning. Alive in the hold: the open silk shirt collar flicking and settling, the pleated trouser legs snapping out and back, the slow trailing settle of his hair, a slow blink. The structured jacket holds its tailored shape throughout. THE TAKE ENDS ON THIS HELD POSE with the phone standing centred behind him — this is the final shot of the film, so hold it clean and let it rest.
+
+THE GIANT PHONE: ONE enormous smartphone and only one, the vivid metallic magenta-raspberry device from @image2 enlarged to human height, its BACK PANEL turned to camera, standing PERFECTLY UPRIGHT and DEAD CENTRE, tall enough to stand from above his head down to below his knees, clearly BEHIND him and never touching him. A real phone with real metal and real glass — not a slab, not a poster, not a tablet, not a screen. RAISED SQUARE CAMERA PLATEAU in the upper-left corner with THREE clearly separate CIRCULAR LENSES in a triangle, each with dark glass, a visible inner barrel and a slim polished metal ring, plus one round flash and a tiny microphone dot; plateau and all three lenses stay FULLY VISIBLE AND UNOBSTRUCTED. Parallel to the sensor: ZERO tilt into depth, ZERO foreshortening, ZERO rotation, edges parallel to frame, no lean, no wedge, no trapezoid, no bending. It rises straight up from below during the spin, decelerates into place, then HOLDS COMPLETELY STILL. A heavy rigid object with real mass.
+
+THE SWATCH FAN: square cards built as in @image5 — white label band along the top edge, fabric colour field with a fine pinked zigzag edge — spread flat and low in a wide overlapping fan across the full width of frame, cropped by the bottom edge. Present in every frame. EVERY CARD IS A DIFFERENT SHADE: a graded ladder running from bright magenta through raspberry and wine down to deep plum. They reshuffle in monochrome during the spin and settle flat in the magenta family as the phone lands.
+
+COLOUR LOGIC: the whole magenta-to-burgundy family is in play at once — the BURGUNDY-PLUM suit on him, the VIVID MAGENTA-RASPBERRY device behind him, and the fan running the full graded ladder between them. THE SUIT KEEPS ITS OWN TRUE BURGUNDY exactly as in @image8 and is NEVER repainted magenta to match the device. The white cyclorama and his skin are the only neutrals in frame.
+
+LIGHTING AND FINISH: clean even high-key studio light, broad soft frontal with a gentle top fill, one soft contact shadow at his feet and a soft shadow behind the phone. Matte natural skin with visible pores and real beard detail, no hot speculars, no coloured spill from the phone onto his face or shirt. High-end menswear lookbook — crisp, bright, editorial. No grain, no filter, no bloom.
+
+ANATOMY: exactly two arms, two legs, two feet, five correct fingers per hand with natural knuckles and nails, correct through the spin and the pose. The hand at the jacket button reads clearly with five separate fingers. Feet sit properly inside the derbies with correct ankles.
+
+NEGATIVE: no burgundy suit turned magenta, no garment recoloured to match its device; no transition staying in colour, no partial desaturation, no tint instead of true black and white, no gradual fade to greyscale, no colour returning early or late, no colour surviving anywhere during the spin; no camera movement, no pan, no tilt, no zoom, no dolly, no handheld drift; no cuts, no fades, no dissolves; no second pose, no gesture during the hold, no repositioning, no walking, no fidgeting, no fast movement outside the spin, no normal-speed motion, no speed ramping; no arms hanging limp; no leaning or rotated phone, no tilt into depth, no perspective, no foreshortening, no wedge or trapezoid, no bending device, no phone wider than tall; no tablet, no slab, no flat coloured panel, no poster, no screen; no missing camera plateau, no module in the wrong corner, no more or fewer than three lenses, no square lenses, no missing lens rings, no missing flash; no more than one giant phone, no small phones in the background; no phone sliding during the hold, no phone moving downward or sideways, no phone tumbling; no phone in his hands, no phone touching him; no fan in the wrong colour family, no fan where all cards are the same shade, no card without a pinked zigzag edge, no card without a white label band, no text or numbers on the cards, no curled or rosette fan, no cards standing on end, no empty bottom edge; no face changing, no identity drift, no shaved or shortened beard, no changed hairstyle, no different man; no second person, no duplicate of him; no coloured or gradient background, no location, no set dressing; no readable text or lettering anywhere in frame, no captions, no watermarks; no stiff frozen hair, no weightless fabric; no melted or fused hands, no extra fingers, no deformed feet, no missing contact shadow; no plastic or waxy skin, no beauty filter, no AI-smooth face; no grain, no HDR, no CG-render look; no music, no score, no beat, no dialogue, no voice.
+
+AUDIO: quiet studio room tone; a long low rush of fabric and hair on the spin; a smooth low mechanical slide and a soft settle as the giant phone rises into place, then silence while it stands; a slowed papery flick as the swatch cards reshuffle. No music, no voices.</pre>
+    </div>
+  </section>
+
+  <section class="step" id="glue">
+    <div class="s-head">
+      <div class="s-num">✂️</div>
+      <div>
+        <div class="s-kicker">Монтаж</div>
+        <h2>Как склеивать</h2>
+      </div>
+    </div>
+    <p class="s-lead">Пять отдельных проходов нужны тогда, когда одиннадцать секунд одним куском не даются: сломавшийся лук перегенерируется отдельно, остальные четыре остаются как есть.</p>
+    <div class="howto" style="margin-top:18px">
+      <div class="ht">Правило стыка</div>
+      <ol>
+        <li>Каждый сегмент со второго по пятый <b>открывается оборотом в чёрно-белом</b>. Ставь стык на середину этого оборота — там нет ни цвета, ни читаемого костюма, и переход между двумя разными генерациями теряется в движении.</li>
+        <li>Первый сегмент прирастает ко второму тем же способом: конец его холда встык к началу ЧБ.</li>
+        <li>Если сегменты пришли с разным ростом героя или сдвигом по кадру — <b>выравнивай масштабом и позицией до склейки</b>. На белой циклораме любое расхождение видно сразу.</li>
+      </ol>
+      <div class="note">💡 Общее для всех пяти: 9:16, локнутая камера, объектив на высоте груди, герой на одной метке в одном масштабе, лицо всегда с @image10. Веер по нижнему краю есть в каждом кадре.</div>
+    </div>
+  </section>
+
+  <section class="step" id="fix">
+    <div class="s-head">
+      <div class="s-num">🔧</div>
+      <div>
+        <div class="s-kicker">Контроль</div>
+        <h2>Что ломается и где чинить</h2>
+      </div>
+    </div>
+    <p class="s-lead">Девять симптомов и точный адрес в промпте для каждого. <b>Не переписывай промпт целиком</b> — усиливай конкретную строку.</p>
+    <div class="fxs">
+        <div class="fx"><span class="fs">Переход уходит в холодный тон вместо ЧБ</span><span class="fa">Блок <i>THE TRANSITIONS</i>: усилить формулировку про мгновенный жёсткий флип на точном кадре, а не рампу</span></div>
+        <div class="fx"><span class="fs">Телефон завален, сужается кверху, трапецией</span><span class="fa">Абзац <i>IT FACES THE CAMERA SQUARE</i> плюс негативы про tilt, foreshortening, wedge</span></div>
+        <div class="fx"><span class="fs">Вместо телефона плоская плита или планшет</span><span class="fa">Негативы <i>no tablet / no slab / no flat coloured panel</i>; обязательно оставить описание блока камеры с тремя линзами</span></div>
+        <div class="fx"><span class="fs">Лицо меняется между луками</span><span class="fa">Ужесточить строку про <i>identity locked</i> и убедиться, что все шиты кроме @image10 помечены «clothes only»</span></div>
+        <div class="fx"><span class="fs">Синее худи перекрасилось в цвет телефона</span><span class="fa">Блок <i>COLOUR LOGIC</i>: семейство общее, а тон — нет, одежда не перекрашивается под устройство</span></div>
+        <div class="fx"><span class="fs">Веер стал розеткой, карточки встали на ребро</span><span class="fa">Негативы про <i>rosette / pleated paper fan / cards standing on end</i></span></div>
+        <div class="fx"><span class="fs">Белый лук сливается с циклорамой</span><span class="fa">Блок <i>LOOK 1 SEPARATION</i>: силуэт, контактная тень, читаемые складки на брюках</span></div>
+        <div class="fx"><span class="fs">Герой шевелится во время холда</span><span class="fa">Блок <i>HIS PERFORMANCE</i> плюс негативы про second pose, gesture, fidgeting</span></div>
+        <div class="fx"><span class="fs">В кадр протекает человек из клипа-донора</span><span class="fa">Абзац про @video1 и негатив <i>no person or face or hair or outfit from the reference video</i></span></div>
+    </div>
+  </section>
+
+  <section class="step" id="move">
+    <div class="s-head">
+      <div class="s-num">🔁</div>
+      <div>
+        <div class="s-kicker">Своя серия</div>
+        <h2>Как переносить схему</h2>
+      </div>
+    </div>
+    <p class="s-lead">Конструкция держится на четырёх независимых слоях, и любой из них меняется без остальных.</p>
+    <div class="lys">
+        <div class="ly"><span class="le">🧑</span><span class="ln">Личность</span><span class="ld">Один мастер-шит на весь ролик, остальные дают только одежду. Меняешь мастер — меняется герой, промпт не трогаешь</span></div>
+        <div class="ly"><span class="le">👔</span><span class="ln">Гардероб</span><span class="ld">Пять луков, пять поз, ни одна не повторяется. Поза показывает то, ради чего лук взят: рукав, воротник, силуэт, фактуру</span></div>
+        <div class="ly"><span class="le">📱</span><span class="ln">Предмет за спиной</span><span class="ld">Телефон меняется на любой продукт, который стоит вертикально и переживает подъём снизу вверх: флакон, банка, кроссовок на подставке</span></div>
+        <div class="ly"><span class="le">🎨</span><span class="ln">Цветовая рифма</span><span class="ld">Одежда, предмет и веер в одном семействе — это то, что склеивает кадр. Первый лук намеренно выбивается</span></div>
+    </div>
+    <div class="warn"><span class="wi">💡</span><span class="wt"><b>Первый лук — самый нагруженный:</b> белое на белом плюс мигающий цветом продукт. Если генерация не заходит с первого раза, начинай проверку именно с него.</span></div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=looks">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=looks">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Десять референсов, пять образов и один кадр без склеек — это уже не промпт, а режиссура. Такие ролики бренды заказывают вместо съёмочной смены. На обучении даю систему целиком: от первой генерации до портфолио и первых клиентов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=looks">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
