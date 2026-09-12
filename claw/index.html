@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Автомат с игрушками — тренд под любой товар | AI Новый Уровень</title>
+<meta name="description" content="Коготь трижды тянется за товарами: два срыва и победа. Универсальный промпт на 12 секунд — подставляется любой продукт.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Автомат с игрушками — тренд под любой товар">
+<meta property="og:description" content="Два срыва и победа. Универсальный промпт на 12 секунд под любой продукт.">
+<meta property="og:url" content="https://neurocreator2.ru/claw/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.refs4{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.rf{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.72)}
+.rf.prize{border-color:rgba(255,190,100,.3)}
+.rf img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block;background:#0a0a0d}
+.rf .rb{padding:11px 13px;text-align:left}
+.rf .rs{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fb4d8;font-weight:600}
+.rf.prize .rs{color:#e0b874}
+.rf .rt{margin-top:4px;font-size:12.5px;color:var(--ink);font-weight:500}
+.rf .rd{margin-top:3px;font-size:11.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .refs4{grid-template-columns:repeat(2,1fr)} }
+
+.beats{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:76px 26px 170px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fa8c8}
+.beat .be{font-size:15px;text-align:center}
+.beat .bn{font-size:13px;color:var(--ink);font-weight:500}
+.beat .bd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .beat{grid-template-columns:72px 24px 1fr;row-gap:4px} .beat .bd{grid-column:1/-1} }
+
+.libs{margin-top:16px;display:flex;flex-direction:column;gap:9px;text-align:left}
+.lib{border-left:2px solid rgba(255,140,140,.45);padding:2px 0 2px 15px}
+.lib.win{border-left-color:rgba(140,220,160,.5)}
+.lib .ln{display:block;font-size:13px;color:var(--ink);font-weight:600;margin-bottom:4px}
+.lib .lt{display:block;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#9fb6cc;line-height:1.6}
+
+.cks{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.ck{display:grid;grid-template-columns:250px 1fr;gap:14px;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;background:rgba(200,200,200,.02)}
+.ck .cn{font-size:13px;color:var(--ink);font-weight:600}
+.ck .cd{font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:700px){ .ck{grid-template-columns:1fr;row-gap:5px} }
+
+.sts{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.st{display:grid;grid-template-columns:30px 1fr;gap:13px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 15px;background:rgba(200,200,200,.025)}
+.st .sn{width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,200,200,.28);display:flex;
+  align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--c2)}
+.st .sb{font-size:13.5px;color:var(--ink2);line-height:1.5}
+.st .sb b{color:var(--ink);font-weight:600}
+.st .sb a{color:#8fb4d8}
+pre{max-height:360px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Тренд · AI — Новый Уровень</div>
+    <h1>Автомат<br>с <em>игрушками</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Камера стоит <b>внутри автомата</b>, среди призов. Коготь трижды опускается за товарами: первые две попытки срываются, третья вытаскивает главный товар и роняет его в лоток. Двенадцать секунд одним кадром. <b>Промпт универсальный</b> — меняются только поля в квадратных скобках, всё остальное работает как есть.</p>
+
+    <div class="refs4">
+      <div class="rf prize">
+        <img src="ref1-prize.jpg" alt="Главный товар" loading="lazy">
+        <div class="rb"><div class="rs">@image1 · приз</div><div class="rt">Главный товар</div><div class="rd">Его коготь вытащит на третьей попытке</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref2-second.jpg" alt="Второй товар" loading="lazy">
+        <div class="rb"><div class="rs">@image2 · второй</div><div class="rt">Сорвётся</div><div class="rd">На второй попытке</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref3-third.jpg" alt="Третий товар" loading="lazy">
+        <div class="rb"><div class="rs">@image3 · третий</div><div class="rt">Сорвётся</div><div class="rd">На первой попытке</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref4-hero.jpg" alt="Героиня" loading="lazy">
+        <div class="rb"><div class="rs">@image4 · герой</div><div class="rt">За стеклом</div><div class="rd">Лицо крупно + рост в полный рост</div></div>
+      </div>
+    </div>
+    <div class="warn"><span class="wi">⚠️</span><span class="wt"><b>Порядок критичен.</b> Теги привязаны к позиции ассета, а не к имени файла. Перепутаешь — коготь полезет не за тем товаром. Товары грузи на белом или нейтральном фоне, крупно, чтобы читались упаковка и логотип.</span></div>
+
+    <div class="howto">
+      <div class="ht">Раскадровка · 6 битов</div>
+      <div class="beats">
+        <div class="beat"><span class="bt">0–0.8 с</span><span class="be">🕹</span><span class="bn">Тишина</span><span class="bd">Камера внутри автомата, среди призов. Коготь висит наверху</span></div>
+        <div class="beat"><span class="bt">0.8–2.6 с</span><span class="be">❌</span><span class="bn">Попытка 1</span><span class="bd">Коготь берёт третий товар — и срывается по физической причине</span></div>
+        <div class="beat"><span class="bt">2.6–4.6 с</span><span class="be">❌</span><span class="bn">Попытка 2</span><span class="bd">Второй товар выскальзывает. Реакция сдержанная, не пиковая</span></div>
+        <div class="beat"><span class="bt">4.6–8.8 с</span><span class="be">✅</span><span class="bn">Попытка 3</span><span class="bd">Главный товар. Камера впервые едет, микро-слоумо, подъём над кучей</span></div>
+        <div class="beat"><span class="bt">8.8–10.4 с</span><span class="be">📦</span><span class="bn">Падение в лоток</span><span class="bd">Кувырок с реальным весом, оседает по гравитации</span></div>
+        <div class="beat"><span class="bt">10.4–12 с</span><span class="be">✋</span><span class="bn">Забирает</span><span class="bd">Рука входит в лоток, хват, подъём из кадра. Конец ровно здесь</span></div>
+      </div>
+      <div class="note">💡 Реакция героя <b>нарастает</b>: лёгкая досада → сдержанное раздражение → и только на третьей попытке настоящая эмоция. Пик раньше времени убивает всю сцену.</div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Как сделать в Syntx</div>
+      <div class="sts">
+        <div class="st"><span class="sn">1</span><span class="sb">Открыть <a href="https://syntx.ai/welcome/4TnpxLFN" target="_blank" rel="noopener"><b>syntx.ai</b></a></span></div>
+        <div class="st"><span class="sn">2</span><span class="sb">Перейти в раздел <b>Видео</b></span></div>
+        <div class="st"><span class="sn">3</span><span class="sb">Выбрать модель <b>Seedance 2.5</b></span></div>
+        <div class="st"><span class="sn">4</span><span class="sb">Качество <b>720p</b>, длительность <b>12 секунд</b></span></div>
+        <div class="st"><span class="sn">5</span><span class="sb">Приложить <b>4 фото</b> в порядке из таблицы выше</span></div>
+        <div class="st"><span class="sn">6</span><span class="sb">Вставить промпт целиком и запустить</span></div>
+      </div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>✏️</b> Как заполнить</a>
+      <a class="m" href="#s2"><b>📝</b> Промпт</a>
+      <a class="m" href="#s3"><b>🔧</b> Проверка</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">✏️</div>
+      <div>
+        <div class="s-kicker">Шесть полей</div>
+        <h2>Как заполнить промпт</h2>
+      </div>
+    </div>
+    <p class="s-lead">Заполняются один раз, дальше всё работает само.</p>
+    <div class="howto" style="margin-top:18px">
+      <div class="ht">Описания</div>
+      <ol>
+        <li><b>[PRODUCT 1 / 2 / 3 — DESCRIPTION]</b> — описание каждого товара по-английски: форма, цвет, материал, покрытие, где логотип, размер в сантиметрах. Не «ice cream», а <i>«a small tapered paper cup in pale pink, wider at the top than at the base, sealed foil lid, bold magenta lettering, approximately 8 centimetres tall»</i>. Модель видит картинку, но описание не даёт ей переизобретать упаковку.</li>
+        <li><b>[CHARACTER — DESCRIPTION]</b> — кожа, веснушки, брови, цвет глаз, причёска, вся одежда сверху вниз. Тоже по-английски.</li>
+      </ol>
+    </div>
+    <p class="s-lead" style="margin-top:24px">Три оставшихся поля — <b>самое важное во всём промпте</b>. Каждый срыв должен иметь видимую физическую причину, иначе получается «коготь просто не смог» — а это не смешно и не убедительно.</p>
+
+    <div class="howto" style="margin-top:18px">
+      <div class="ht">Библиотека причин срыва · в [FAILURE REASON A] и [B]</div>
+      <div class="libs">
+        <div class="lib"><span class="ln">Конус или стакан, сужается книзу</span><span class="lt">THE CONTAINER IS TAPERED, WIDER AT THE TOP THAN AT THE BASE → THE METAL FINGERS SLIDE DOWNWARD ALONG THE SLOPING WALL → THE OBJECT IS TOO LIGHT TO HOLD THE FINGERS CLOSED → IT SLIPS FREE</span></div>
+        <div class="lib"><span class="ln">Маленький и глянцевый</span><span class="lt">THE OBJECT IS SMALL AND ITS SURFACE IS SMOOTH AND GLOSSY → THE FINGERS CANNOT FIND PURCHASE → PRESSURE BUILDS → IT SQUIRTS OUT SIDEWAYS FROM BETWEEN THE METAL FINGERS</span></div>
+        <div class="lib"><span class="ln">Мягкая пачка или пакет</span><span class="lt">THE PACKAGING IS SOFT AND FLEXIBLE → IT FOLDS AND COMPRESSES UNDER THE METAL FINGERS INSTEAD OF HOLDING ITS SHAPE → THE CONTENTS SHIFT INSIDE → IT SLITHERS OUT OF THE GRIP</span></div>
+        <div class="lib"><span class="ln">Тяжёлый</span><span class="lt">THE OBJECT IS DENSE AND HEAVY FOR ITS SIZE → THE CLAW MOTOR STRAINS AUDIBLY → THE CABLE TENSIONS → THE WEAK SPRING IN THE FINGERS GIVES WAY → IT DROPS BACK</span></div>
+        <div class="lib"><span class="ln">Цилиндр или банка</span><span class="lt">THE OBJECT IS A SMOOTH CYLINDER → THE FINGERS FIND NO FLAT FACE TO PRESS AGAINST → IT ROTATES INSIDE THE GRIP → IT ROLLS OUT AND FALLS BACK</span></div>
+        <div class="lib"><span class="ln">Высокий и узкий</span><span class="lt">THE OBJECT IS TALL AND NARROW → THE CLAW GRIPS TOO HIGH ABOVE ITS CENTRE OF MASS → IT TIPS SIDEWAYS UNDER ITS OWN WEIGHT → IT PIVOTS OUT OF THE FINGERS</span></div>
+      </div>
+    </div>
+
+    <div class="howto" style="margin-top:18px">
+      <div class="ht">Библиотека причин успеха · в [SUCCESS REASON]</div>
+      <p style="font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:6px">Главный товар должен победить за счёт конкретной детали, за которую коготь физически цепляется.</p>
+      <div class="libs">
+        <div class="lib win"><span class="ln">Выступ, рант, ступенька</span><span class="lt">ONE FINGER CATCHES UNDER THE RAISED EDGE → THE HARD STEP GIVES THE METAL A REAL HOOK → THE GRIP LOCKS</span></div>
+        <div class="lib win"><span class="ln">Талия в силуэте</span><span class="lt">THE FINGERS SETTLE INTO THE NARROW WAIST OF THE SILHOUETTE → THE SHAPE ITSELF PREVENTS THEM FROM SLIDING → THE GRIP LOCKS</span></div>
+        <div class="lib win"><span class="ln">Текстурированная поверхность</span><span class="lt">THE SURFACE IS MATTE AND TEXTURED → THE METAL FINDS REAL FRICTION → THE FINGERS HOLD WITHOUT SLIPPING</span></div>
+        <div class="lib win"><span class="ln">Плоские грани</span><span class="lt">THE FINGERS CLOSE FLAT AGAINST TWO PARALLEL FACES → THE PRESSURE DISTRIBUTES EVENLY → THE GRIP LOCKS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">📝</div>
+      <div>
+        <div class="s-kicker">Одна кнопка · всё сразу</div>
+        <h2>Промпт</h2>
+      </div>
+    </div>
+    <p class="s-lead">В буфер уходит весь пакет: промпт целиком, обе библиотеки причин и промпт музыки. Копируешь один раз, дальше подставляешь нужное.</p>
+    <div class="s-tag">📎 Английский · шесть полей в квадратных скобках</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Всё одним куском</span><button class="copy" data-id="c1">Копировать всё</button></div>
+      <pre id="c1">==============================================================================
+ПРОМПТ — АВТОМАТ С ИГРУШКАМИ, 12 СЕК, SEEDANCE 2.5
+Заполни поля в квадратных скобках
+==============================================================================
+
+FOUR REFERENCE IMAGES. EACH DEFINES ONE SUBJECT.
+
+@image1 = THE PRIZE. [PRODUCT 1 — DESCRIPTION: shape, colour, material, finish, logo placement, approximate height in centimetres]
+
+@image2 = THE SECOND ITEM. [PRODUCT 2 — DESCRIPTION: shape, colour, material, finish, logo placement, approximate height in centimetres]
+
+@image3 = THE THIRD ITEM. [PRODUCT 3 — DESCRIPTION: shape, colour, material, finish, logo placement, approximate height in centimetres]
+
+@image4 = THE PLAYER. [CHARACTER — DESCRIPTION: skin, freckles or marks, eyebrows, eye colour, hairstyle, then the full wardrobe from top to bottom]
+
+From this point on, THE PRIZE, THE SECOND ITEM, THE THIRD ITEM and THE PLAYER always mean exactly these four subjects.
+
+Use each reference exclusively for the identity of its own subject: recognizable shape, proportions, colors, materials, surface details, branding, logo, typography, face, hair and wardrobe.
+
+Ignore the white studio backgrounds of all four references completely. Do not reproduce their studio environments, reference lighting, shadows, compositions or camera angles.
+
+THE PRIZE, THE SECOND ITEM and THE THIRD ITEM are three DIFFERENT objects. Each appears exactly ONCE in the entire film. Never merge, swap or duplicate them. Never place branding, lettering or colour from one onto another.
+
+THE PLAYER remains the exact same recognizable person in the exact same wardrobe throughout. Do not invent additional clothing, jewellery or accessories.
+
+
+CREATE ONE 12-SECOND EXTREMELY PHOTOREALISTIC CINEMATIC FILM SEQUENCE.
+
+ONE CONTINUOUS SHOT. NO CUTS.
+
+The references control identity only. Everything else is controlled by this screenplay: environment, arcade cabinet, claw mechanics, prize pile, lighting, camera, acting, eyelines, timing, physics and editing rhythm.
+
+
+CINEMATIC WORLD
+
+Create a believable old arcade hall at night. Worn carpet, scuffed cabinet edges, dust on the glass, fingerprints, a slightly yellowed plastic frame — a real machine that has been used for years, not a clean render.
+
+MOUNT THE CAMERA INSIDE THE CLAW MACHINE CABINET.
+
+Position it low, down among the prizes, at the level of the prize pile, looking slightly upward and outward through the large front glass panel.
+
+Use a natural cinematic medium-wide perspective approximately equivalent to a 35mm spherical cinema lens.
+
+The lower third of the frame is the soft prize pile: worn plush toys, faded fabric, dulled and desaturated colours, natural compression and irregular stacking.
+
+The plush toys are deliberately washed out and colourless. The three products are the only saturated, clean, intact objects in the pile, and they separate from the background because of it.
+
+The upper portion of the frame contains the metal claw hanging on its cable, and beyond the glass, THE PLAYER standing at the machine.
+
+THE PLAYER is clearly visible THROUGH the front glass, with faint realistic reflections of the arcade neon across the surface between camera and character.
+
+PLACEMENT — all three products are visible from the first frame, spaced clearly apart so they never overlap or touch:
+
+THE THIRD ITEM rests on the near-left side of the pile, closest to camera, among the plush toys.
+
+THE PRIZE rests on the far-right side of the pile, well separated from the others, its branded face catching the cabinet light and clearly visible.
+
+THE SECOND ITEM lies in the middle ground between them, deeper in the pile, partly nestled between two soft toys, its printed face turned toward camera and readable.
+
+Each sits among the plush toys as if it has always been part of the prizes.
+
+Give each believable real-world scale, correct perspective, physical weight, natural contact with the soft toys beneath, contact shadows and reflected cabinet light.
+
+Nothing floats. Nothing looks composited. Nothing resembles a pasted studio photograph.
+
+
+LIGHTING AND FILM LANGUAGE
+
+Night interior.
+
+The cabinet&#x27;s own internal fluorescent strip lights the prize pile from above with a slightly cold practical glow.
+
+CHARACTER SEPARATION — IMPORTANT:
+
+The hall behind THE PLAYER is dark. Without deliberate separation the character will collapse into an unreadable silhouette.
+
+Warm arcade neon and cabinet signage behind and to one side must cut a clear rim of light along the hair and the edge of the shoulders, lifting the character off the dark background.
+
+Soft spill from the cabinet&#x27;s own front glass falls on the face from below and in front, keeping the eyes and expression fully readable at all times.
+
+Clothing holds visible specular highlights along its folds, so the material reads as a real fabric rather than as a flat shape.
+
+The face is never lost in shadow.
+
+The interior of the cabinet is brighter than the hall behind the character.
+
+The glass carries physically present reflections, dust and light streaks at all times.
+
+Use motivated practical light only.
+
+The entire video feels like twelve seconds physically cut from a beautifully photographed theatrical feature film.
+
+Use the visual language of premium American 35mm cinema:
+
+warm photochemical color response,
+natural skin tones,
+creamy highlights,
+restrained saturation,
+deep neutral blacks with preserved shadow information,
+smooth photochemical highlight roll-off,
+fine irregular organic 35mm film grain,
+subtle halation around the neon and fluorescent sources,
+gentle optical bloom,
+slightly softened micro-contrast,
+natural vintage spherical-lens rendering,
+realistic optical depth,
+natural focus falloff,
+restrained depth of field,
+and natural theatrical 24fps motion blur.
+
+The image must feel genuinely photographed rather than digitally filtered.
+
+No glossy commercial aesthetic. No artificial HDR. No sterile digital sharpness. No plastic skin.
+
+
+ACTING DIRECTION — HIGHEST PRIORITY
+
+THE PLAYER behaves like a real human being, not an AI avatar executing instructions.
+
+All acting is restrained, psychologically motivated and physically believable.
+
+THOUGHT PRECEDES ACTION. CAUSE PRECEDES EFFECT.
+
+The natural reaction rhythm is:
+
+EYES REACT FIRST → TINY PROCESSING PAUSE → HEAD FOLLOWS → TINY PAUSE → BODY FOLLOWS.
+
+CRITICAL ESCALATION RULE:
+
+The reaction must ESCALATE across the three claw attempts and never peak early.
+
+ATTEMPT 1 — THE THIRD ITEM slips — ordinary mild disappointment.
+ATTEMPT 2 — THE SECOND ITEM escapes the claw — a contained flicker of frustration, a small breath, then the character simply continues.
+ATTEMPT 3 — THE PRIZE is lifted — this is the ONLY moment the character is genuinely affected.
+
+Never combine multiple emotional beats into one rushed gesture.
+
+Every important action has a readable beginning, middle and completion.
+
+Allow tiny human pauses. Natural breathing. Natural acceleration and deceleration. Natural body inertia. Correct human anatomy and joint articulation.
+
+Emotion appears through eyeline, breathing, tiny facial changes, hesitation and posture rather than exaggerated expressions.
+
+No twitching. No sudden body jerks. No robotic transitions. No exaggerated comedy acting.
+
+
+0.0–0.8s — QUIET OPENING
+
+Begin inside the cabinet.
+
+The camera is ABSOLUTELY LOCKED OFF.
+
+The claw hangs still at the top of the frame.
+
+All three products rest in the pile in their established positions.
+
+Beyond the glass, THE PLAYER stands at the machine, hands on the controls, eyes down on the prizes.
+
+Hold the quiet observational composition.
+
+No camera movement.
+
+
+0.8–2.6s — ATTEMPT ONE — THE THIRD ITEM
+
+The character&#x27;s hand moves on the joystick outside the glass.
+
+The claw travels sideways across the top of the frame, decelerates, and stops directly above THE THIRD ITEM.
+
+The claw descends with realistic cable slack and slight pendulum sway.
+
+The metal fingers close around it.
+
+The claw rises.
+
+THE THIRD ITEM lifts clear of the pile, hanging slightly tilted, its surface responding visibly to the pressure of the metal.
+
+Show clear physical causality for the failure:
+
+[FAILURE REASON A — the physical chain that makes the claw lose this specific object]
+
+THE THIRD ITEM falls back into the pile, lands with a soft believable impact, shifts a short distance and settles among the plush toys.
+
+Its packaging is undamaged. Its printed face stays readable.
+
+It remains physically present in the pile for the remainder of the film.
+
+The character reacts with ordinary mild disappointment: a small exhale, a tiny shift of weight, eyes staying on the machine.
+
+No frustration. No large gesture.
+
+
+2.6–4.6s — ATTEMPT TWO — THE SECOND ITEM
+
+The camera remains completely locked off.
+
+The claw travels sideways again, stops above THE SECOND ITEM, and descends into that part of the pile.
+
+The metal fingers close around it.
+
+The claw begins to rise.
+
+Show clear physical causality for the failure:
+
+[FAILURE REASON B — the physical chain that makes the claw lose this specific object]
+
+THE SECOND ITEM leaves the grip, travels a short distance across the pile, contacts a plush toy and comes to rest among the soft toys, still clearly visible.
+
+Its packaging is undamaged and remains closed.
+
+It remains physically present in the pile for the remainder of the film.
+
+The character&#x27;s EYES react first.
+
+Tiny processing pause.
+
+The head tilts very slightly.
+
+A small contained breath. One tiny movement of the jaw.
+
+The character glances briefly to one side, as if checking whether anyone else is in the arcade, then looks back.
+
+The reaction stays small and contained.
+
+
+4.6–8.8s — ATTEMPT THREE — THE PRIZE
+
+The character settles their grip on the joystick.
+
+Tiny decision beat.
+
+The claw travels sideways one final time and stops directly above THE PRIZE.
+
+The claw descends.
+
+FOR THE FIRST TIME, THE CAMERA BEGINS TO MOVE.
+
+Perform ONE slow, deliberate cinematic PUSH-IN from the original locked position toward THE PRIZE and the descending claw.
+
+The movement feels like a real controlled cinema-camera push, not a digital zoom.
+
+The metal fingers open and lower around it.
+
+Show clear physical causality for the success:
+
+[SUCCESS REASON — the specific physical feature that finally gives the claw a real hold]
+
+This is why the third attempt works and the first two did not. The hold must be visible.
+
+As THE PRIZE leaves the pile, temporal cadence gradually decelerates into elegant MICRO SLOW-MOTION.
+
+It rises above the prize pile, rotating gently on the claw.
+
+The camera rises with it in one continuous motion, keeping the branded face visible and readable in an upright reading orientation.
+
+Cabinet light glides across the packaging surface because the camera position changes.
+
+HOLD this brief suspended cinematic beat.
+
+Show tactile cinematic detail: metal against the real material of the packaging, its actual surface finish and print quality, fine dust in the light, the soft pile below with THE THIRD ITEM and THE SECOND ITEM still lying in it, the character&#x27;s face beyond the glass now in soft shallow focus but still clearly lit.
+
+THIS MOMENT MUST BREATHE.
+
+The character&#x27;s reaction finally arrives, and only now:
+
+EYES WIDEN SLIGHTLY → TINY PAUSE → THE HEAD LIFTS TO FOLLOW IT → BREATH HELD.
+
+Restrained. No open mouth. No theatrical shock.
+
+THE PRIZE never changes identity, branding, colour, proportions or design.
+
+
+8.8–10.4s — THE DROP
+
+The micro slow-motion releases back into normal theatrical motion.
+
+The claw travels toward the prize chute.
+
+The camera follows in one smooth continuous movement.
+
+The metal fingers open.
+
+THE PRIZE falls, tumbling once with believable weight and inertia, and lands inside the prize chute.
+
+It settles naturally according to real gravity and its own geometry.
+
+It never lands standing in an artificial display pose.
+
+Nothing separates from it on impact. It is undamaged.
+
+
+10.4–12.0s — THE RETRIEVAL
+
+The camera settles low near the chute opening.
+
+The character&#x27;s hand enters the chute from outside.
+
+The reaching motion is calm, immediate and realistic.
+
+The fingertips make first physical contact with THE PRIZE.
+
+The fingers close around it and establish a COMPLETE SECURE GRIP.
+
+Show natural skin deformation, the real surface texture of the packaging, and the material responding to pressure.
+
+The hand lifts THE PRIZE out of the chute and out of the top of frame.
+
+END the film exactly on this pickup, while the character is still lifting it.
+
+Do not show them walking away. Do not resolve the moment. Do not cut to a product packshot.
+
+
+FINAL PRIORITIES
+
+PRIORITY 1 — CHARACTER IDENTITY. Preserve the same recognizable person and the same wardrobe throughout, with the face always separated from the dark background and clearly readable.
+
+PRIORITY 2 — THREE SEPARATE PRODUCT IDENTITIES. THE PRIZE, THE SECOND ITEM and THE THIRD ITEM are three different objects, each appearing exactly once, each matching its own reference exactly. Never merge, swap, duplicate or cross-brand them.
+
+PRIORITY 3 — THE FIXED ORDER. Exactly three claw attempts: THE THIRD ITEM fails, THE SECOND ITEM fails, THE PRIZE succeeds. The camera angle is identical for the first two attempts.
+
+PRIORITY 4 — PHYSICAL REASONS. Each outcome has a visible physical cause, stated in the beat descriptions above.
+
+PRIORITY 5 — PERSISTENCE. THE THIRD ITEM and THE SECOND ITEM remain visibly lying in the prize pile for the rest of the film after they fall. They never vanish, never return to their original positions, and are never picked up again.
+
+PRIORITY 6 — ESCALATING PERFORMANCE. Mild disappointment, then contained frustration, then genuine restrained reaction. The reaction must never peak before the third attempt.
+
+PRIORITY 7 — CLAW PHYSICS. Cable slack, pendulum sway, realistic grip pressure, believable failures on the first two attempts, believable success on the third.
+
+PRIORITY 8 — ONE CAMERA EVENT. The camera is completely locked off from 0.0 to 4.6 seconds, then performs ONE single continuous move for the remainder of the film.
+
+PRIORITY 9 — CONTINUOUS SINGLE SHOT. No cuts, no transitions, no scene changes.
+
+PRIORITY 10 — PACKAGING INTEGRITY. No product is crushed, torn, opened or damaged at any point.
+
+
+MANDATORY STORY CONTINUITY:
+
+all three products visible in the prize pile, spaced apart → claw descends onto THE THIRD ITEM → grips it → the physical failure occurs → it falls back into the pile → mild disappointment → claw descends onto THE SECOND ITEM → the physical failure occurs → it escapes and lands among the toys → contained frustration → claw descends a third time onto THE PRIZE → the physical hold locks → camera begins its only movement → micro slow-motion → THE PRIZE rises above the pile with the other two still lying below → the character finally reacts → normal speed returns → claw travels to the chute → THE PRIZE drops and settles → hand reaches into the chute → first contact → complete grip → THE PRIZE lifted out of frame → end.
+
+
+FINAL IMAGE AND MOTION QUALITY:
+
+Extremely photorealistic. High-budget theatrical cinematic photography. Authentic 35mm film character. Natural human acting. Natural facial performance. Natural eye movement. Realistic anatomy. Correct hands and fingers. Realistic body inertia. Physically believable claw mechanics. Physically believable packaging materials. Natural theatrical motion blur. Stable character identity. Stable product identities. Stable exposure. Consistent organic film grain. No temporal flicker. No sudden camera jumps. No robotic movement. No synthetic AI-video appearance.
+
+4K, Ultra HD, rich details, sharp clarity, cinematic texture, natural colors, stable picture.
+
+NEGATIVE / DO NOT: the character&#x27;s face falling into shadow or reading as a flat silhouette; any product appearing twice or duplicated in the pile; branding, colour or lettering from one product appearing on another; the products changing size, colour, logo or proportions between attempts; the claw succeeding on the first or second attempt; the failed items disappearing after they fall; the failed items returning to their original positions; any packaging crushed, torn or opened; the character reacting strongly before the third attempt; camera movement before 4.6 seconds; any cut or transition; a static product packshot ending; on-screen text, captions or logos; exaggerated comedy expressions.
+
+
+==============================================================================
+БИБЛИОТЕКА ПРИЧИН СРЫВА — выбери под форму своего товара
+Вставляется в [FAILURE REASON A] и [FAILURE REASON B]
+==============================================================================
+
+— Конус или стакан, сужается книзу
+THE CONTAINER IS TAPERED, WIDER AT THE TOP THAN AT THE BASE → THE METAL FINGERS SLIDE DOWNWARD ALONG THE SLOPING WALL → THE OBJECT IS TOO LIGHT TO HOLD THE FINGERS CLOSED → IT SLIPS FREE
+
+— Маленький и глянцевый
+THE OBJECT IS SMALL AND ITS SURFACE IS SMOOTH AND GLOSSY → THE FINGERS CANNOT FIND PURCHASE → PRESSURE BUILDS → IT SQUIRTS OUT SIDEWAYS FROM BETWEEN THE METAL FINGERS
+
+— Мягкая пачка или пакет
+THE PACKAGING IS SOFT AND FLEXIBLE → IT FOLDS AND COMPRESSES UNDER THE METAL FINGERS INSTEAD OF HOLDING ITS SHAPE → THE CONTENTS SHIFT INSIDE → IT SLITHERS OUT OF THE GRIP
+
+— Тяжёлый
+THE OBJECT IS DENSE AND HEAVY FOR ITS SIZE → THE CLAW MOTOR STRAINS AUDIBLY → THE CABLE TENSIONS → THE WEAK SPRING IN THE FINGERS GIVES WAY → IT DROPS BACK
+
+— Цилиндр или банка
+THE OBJECT IS A SMOOTH CYLINDER → THE FINGERS FIND NO FLAT FACE TO PRESS AGAINST → IT ROTATES INSIDE THE GRIP → IT ROLLS OUT AND FALLS BACK
+
+— Высокий и узкий
+THE OBJECT IS TALL AND NARROW → THE CLAW GRIPS TOO HIGH ABOVE ITS CENTRE OF MASS → IT TIPS SIDEWAYS UNDER ITS OWN WEIGHT → IT PIVOTS OUT OF THE FINGERS
+
+
+==============================================================================
+БИБЛИОТЕКА ПРИЧИН УСПЕХА — за что коготь зацепится
+Вставляется в [SUCCESS REASON]
+==============================================================================
+
+— Выступ, рант, ступенька
+ONE FINGER CATCHES UNDER THE RAISED EDGE → THE HARD STEP GIVES THE METAL A REAL HOOK → THE GRIP LOCKS
+
+— Талия в силуэте
+THE FINGERS SETTLE INTO THE NARROW WAIST OF THE SILHOUETTE → THE SHAPE ITSELF PREVENTS THEM FROM SLIDING → THE GRIP LOCKS
+
+— Текстурированная поверхность
+THE SURFACE IS MATTE AND TEXTURED → THE METAL FINDS REAL FRICTION → THE FINGERS HOLD WITHOUT SLIPPING
+
+— Плоские грани
+THE FINGERS CLOSE FLAT AGAINST TWO PARALLEL FACES → THE PRESSURE DISTRIBUTES EVENLY → THE GRIP LOCKS
+
+
+==============================================================================
+МУЗЫКА — SUNO, 40–60 СЕК, 92 BPM
+==============================================================================
+
+Style: music box instrumental, celesta and glockenspiel melody, soft plucked pizzicato strings, gentle toy piano, childlike and slightly melancholy, sparse and delicate at first, slowly building with warm low strings into a sincere emotional swell, cinematic score, analog warmth, no vocals
+
+NEGATIVE: vocals, lyrics, drums, trap hi-hats, EDM, distorted guitar, heavy bass</pre>
+    </div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🔧</div>
+      <div>
+        <div class="s-kicker">Первая генерация</div>
+        <h2>На что смотреть</h2>
+      </div>
+    </div>
+    <div class="cks">
+        <div class="ck"><span class="cn">Перекрёстный брендинг</span><span class="cd">Три упаковки в куче — модель переносит надписи с одной на другую, особенно если цвета близкие или шрифт кириллический. Лечится разведением товаров по разным углам кучи</span></div>
+        <div class="ck"><span class="cn">Коготь побеждает с первой попытки</span><span class="cd">Самая частая поломка. Усиливай блок с причинами срыва, а не приоритеты</span></div>
+        <div class="ck"><span class="cn">Сорвавшиеся товары исчезают</span><span class="cd">После падения они обязаны остаться лежать в куче до конца ролика</span></div>
+        <div class="ck"><span class="cn">Герой сливается с залом</span><span class="cd">В промпте есть блок CHARACTER SEPARATION с контровым светом. Если всё равно уходит в силуэт — усиливай его, а не общую экспозицию</span></div>
+    </div>
+    <div class="howto" style="margin-top:22px">
+      <div class="ht">Музыка</div>
+      <p style="font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7">Suno не сделает 12 секунд с точными акцентами — генерируй <b>40–60 секунд</b> и подрезай. Темп 92 BPM. Нарастание ставь на <b>4.6</b> — начало третьей попытки. Кульминацию на <b>8.8</b>, когда товар поднимается над кучей. После <b>10.4</b> убирай почти в тишину, чтобы финальный захват рукой прозвучал сухо.</p>
+      <div class="note">💡 Поверх музыки отдельным слоем: гул люминесцентной лампы, мотор когтя, скрип троса, глухой удар товара о лоток.</div>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=claw">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=claw">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Универсальный каркас под любой товар — это то, что продаётся не разово, а как услуга: один промпт закрывает целую линейку продуктов клиента. На обучении даю систему целиком: от первой генерации до портфолио и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=claw">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
