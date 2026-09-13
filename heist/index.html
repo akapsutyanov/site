@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ограбление поезда на мотоцикле — тренд под любой товар | AI Новый Уровень</title>
+<meta name="description" content="Герой догоняет поезд, простреливает замок и находит вагон, набитый твоим товаром. Универсальный промпт на 18 секунд, 16:9, музыка и сборка.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ограбление поезда на мотоцикле">
+<meta property="og:description" content="Вагон, набитый твоим товаром. Универсальный промпт на 18 секунд — вставь себя в кино.">
+<meta property="og:url" content="https://neurocreator2.ru/heist/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.vhero{margin-top:30px;border:1px solid rgba(120,180,255,.22);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vhero video{width:100%;height:auto;display:block;background:#08080a;aspect-ratio:16/9}
+.vhero .vc{padding:11px 14px;text-align:left;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.vhero .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vhero .vt{font-size:12.5px;color:var(--ink2)}
+.refs2{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rf{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.72);display:grid;grid-template-columns:120px 1fr}
+.rf img{width:120px;height:120px;object-fit:cover;object-position:center 30%;display:block;background:#0a0a0d}
+.rf .rb{padding:13px 15px;text-align:left;align-self:center}
+.rf .rs{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fb4d8;font-weight:600}
+.rf .rt{margin-top:4px;font-size:13px;color:var(--ink);font-weight:500}
+.rf .rd{margin-top:4px;font-size:12px;color:var(--ink3);line-height:1.45}
+@media(max-width:640px){ .refs2{grid-template-columns:1fr} }
+
+.beats{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:74px 26px 150px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fa8c8}
+.beat .be{font-size:15px;text-align:center}
+.beat .bn{font-size:13px;color:var(--ink);font-weight:500}
+.beat .bd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .beat{grid-template-columns:70px 24px 1fr;row-gap:4px} .beat .bd{grid-column:1/-1} }
+
+.sts{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.st{display:grid;grid-template-columns:30px 1fr;gap:13px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 15px;background:rgba(200,200,200,.025)}
+.st.hl{border-color:rgba(120,180,255,.3);background:rgba(58,140,220,.06)}
+.st .sn{width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,200,200,.28);display:flex;
+  align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--c2)}
+.st .sb{font-size:13.5px;color:var(--ink2);line-height:1.5}
+.st .sb b{color:var(--ink);font-weight:600}
+.st .sb a{color:#8fb4d8}
+
+.wys{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.wy{border:1px solid var(--line);border-radius:13px;padding:15px 16px;background:rgba(13,13,18,.7);text-align:left}
+.wy .we{font-size:18px}
+.wy .wn{display:block;margin-top:7px;font-size:13.5px;color:var(--ink);font-weight:600}
+.wy .wd{display:block;margin-top:4px;font-size:12px;color:var(--ink3);line-height:1.5}
+
+.cks,.fxs,.mus{margin-top:16px;display:flex;flex-direction:column;gap:7px;text-align:left}
+.ck{display:grid;grid-template-columns:92px 1fr;gap:14px;border:1px solid var(--line);border-radius:11px;padding:11px 15px;background:rgba(200,200,200,.02)}
+.ck .cn{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.ck .cd{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.ck .cd b{color:var(--ink)}
+.fx{display:grid;grid-template-columns:260px 1fr;gap:14px;border:1px solid var(--line);border-radius:11px;padding:11px 15px;background:rgba(200,200,200,.02)}
+.fx .fs{font-size:13px;color:var(--ink);font-weight:600}
+.fx .fa{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.mu{display:grid;grid-template-columns:78px 190px 1fr;gap:12px;border:1px solid var(--line);border-radius:11px;padding:10px 14px;background:rgba(200,200,200,.02)}
+.mu .mt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.mu .mf{font-size:12.5px;color:var(--ink)}
+.mu .mm{font-size:12.5px;color:var(--ink2)}
+.mu .mm b{color:#e0b874}
+@media(max-width:700px){ .fx{grid-template-columns:1fr;row-gap:4px} .mu{grid-template-columns:70px 1fr;row-gap:3px} .mu .mm{grid-column:1/-1} }
+pre{max-height:380px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Тренд · AI — Новый Уровень</div>
+    <h1>Ограбление<br><em>поезда</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Герой на мотоцикле догоняет товарный поезд, простреливает замок, перепрыгивает в вагон — а внутри ящики с соломой, доверху набитые <b>твоим товаром</b>. В финале снимает шлем, улыбается и говорит «Oh, yes.» Восемнадцать секунд, 16:9. Промпт универсальный — менять в нём ничего не нужно.</p>
+
+    <div class="vhero">
+      <video src="result.mp4" poster="poster.jpg" playsinline controls preload="metadata"></video>
+      <div class="vc"><span class="vk">Результат · со звуком</span><span class="vt">18 сек · 16:9 · Seedance 2.5</span></div>
+    </div>
+
+    <div class="refs2">
+      <div class="rf">
+        <img src="ref1-face.jpg" alt="Лицо героя" loading="lazy">
+        <div class="rb"><div class="rs">@Image1 · лицо</div><div class="rt">Только портрет анфас</div><div class="rd">Волосы видны целиком, без очков и головных уборов</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref2-product.jpg" alt="Товар" loading="lazy">
+        <div class="rb"><div class="rs">@Image2 · товар</div><div class="rt">Чистый пэкшот</div><div class="rd">Лицевая сторона в камеру, логотип читается</div></div>
+      </div>
+    </div>
+    <div class="warn"><span class="wi">⚠️</span><span class="wt"><b>В @Image1 — только лицо, не лист персонажа в полный рост.</b> В тестовом прогоне с листом модель взяла одежду с фото и проигнорировала костюм из промпта. Есть только лист — вырежи из него панель с лицом, как в примере выше.</span></div>
+
+    <div class="howto">
+      <div class="ht">Раскадровка · 8 битов</div>
+      <div class="beats">
+        <div class="beat"><span class="bt">0–1.6 с</span><span class="be">🏍</span><span class="bn">Погоня</span><span class="bd">Рядом с поездом на 80 км/ч, пыль и гравий из-под колеса</span></div>
+        <div class="beat"><span class="bt">1.6–3.2 с</span><span class="be">👀</span><span class="bn">Лицо через визор</span><span class="bd">Глаза щурятся от солнца, взгляд на вагоны</span></div>
+        <div class="beat"><span class="bt">3.2–5.0 с</span><span class="be">🚂</span><span class="bn">Общий план</span><span class="bd">Весь поезд — и мотоциклист крупно у центральных вагонов</span></div>
+        <div class="beat"><span class="bt">5.0–6.8 с</span><span class="be">🔫</span><span class="bn">Выстрел</span><span class="bd">Пистолет левой рукой, правая на газе, один выстрел</span></div>
+        <div class="beat"><span class="bt">6.8–7.7 с</span><span class="be">💥</span><span class="bn">Замок в слоумо</span><span class="bd">40% скорости: искры, дужка лопается, замок улетает</span></div>
+        <div class="beat"><span class="bt">7.7–9.5 с</span><span class="be">🪜</span><span class="bn">Прыжок</span><span class="bd">На лестницу вагона. Мотоцикл без седока заваливается в пыль</span></div>
+        <div class="beat"><span class="bt">9.5–11 с</span><span class="be">🚪</span><span class="bn">Дверь</span><span class="bd">Тяжёлая стальная дверь едет вбок по рельсу</span></div>
+        <div class="beat"><span class="bt">11–18 с</span><span class="be">📦</span><span class="bn">Вагон с товаром</span><span class="bd">Шлем снят, облёт ящиков, крупный план товара, «Oh, yes.»</span></div>
+      </div>
+      <div class="note">💡 Размер товара учтён в промпте автоматически: маленький кладётся в ящик десятками, средний группами, крупный по одному на ящик, но ящиков много.</div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Как сделать в Syntx</div>
+      <div class="sts">
+        <div class="st"><span class="sn">1</span><span class="sb">Открыть <a href="https://syntx.ai/welcome/4TnpxLFN" target="_blank" rel="noopener"><b>syntx.ai</b></a></span></div>
+        <div class="st"><span class="sn">2</span><span class="sb">Перейти в раздел <b>Видео</b></span></div>
+        <div class="st"><span class="sn">3</span><span class="sb">Выбрать модель <b>Seedance 2.5</b> — в 2.0 потолок 15 секунд, ролик не влезет</span></div>
+        <div class="st hl"><span class="sn">4</span><span class="sb">Качество <b>720p</b>, формат <b>16:9</b>, длительность <b>18 секунд</b></span></div>
+        <div class="st"><span class="sn">5</span><span class="sb">Приложить <b>2 фото</b>: первым лицо, вторым товар</span></div>
+        <div class="st"><span class="sn">6</span><span class="sb">Вставить основной промпт целиком и запустить</span></div>
+      </div>
+      <div class="note">💡 Отличие от вертикальных трендов — <b>формат 16:9</b>. Промпт написан под широкий кадр: общий план поезда в вертикали не собирается.</div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>✨</b> Почему работает</a>
+      <a class="m" href="#s2"><b>🔧</b> Проверка</a>
+      <a class="m" href="#s3"><b>🎵</b> Музыка</a>
+      <a class="m" href="#s4"><b>🚀</b> Запуск</a>
+      <a class="m" href="#s5"><b>📝</b> Всё копировать</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head"><div class="s-num">✨</div><div><div class="s-kicker">Механика тренда</div><h2>Почему это работает</h2></div></div>
+    <div class="wys">
+        <div class="wy"><span class="we">🎬</span><span class="wn">«Вставь себя в кино»</span><span class="wd">Лицо берётся с фото, костюм общий и не зависит от пола. Переснять шаблон может любой — на этом он и вирусится</span></div>
+        <div class="wy"><span class="we">📦</span><span class="wn">Изобилие</span><span class="wd">Не один товар, а целый вагон ящиков. Фантазия «у меня этого сколько хочу» работает на любом продукте</span></div>
+        <div class="wy"><span class="we">🧩</span><span class="wn">Биты без слов</span><span class="wd">Догнал → выстрел → замок → прыжок → дверь → вагон. Понятно без единой реплики</span></div>
+        <div class="wy"><span class="we">💬</span><span class="wn">«Oh, yes.»</span><span class="wd">Одна фраза во всех версиях — это клей тренда. Не меняйте её</span></div>
+        <div class="wy"><span class="we">⛑</span><span class="wn">Снятие шлема</span><span class="wd">Место шляпы из оригинального шаблона: отдельный бит перед ревилом</span></div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head"><div class="s-num">🔧</div><div><div class="s-kicker">Первая генерация</div><h2>Проверка по таймкодам</h2></div></div>
+    <div class="cks">
+        <div class="ck"><span class="cn">0.0–1.6</span><span class="cd">Костюм из промпта, а не одежда с фото. На мотоцикле нет эмблем реальных марок</span></div>
+        <div class="ck"><span class="cn">1.6–3.2</span><span class="cd">Лицо читается через визор, визор прозрачный</span></div>
+        <div class="ck"><span class="cn">3.2–5.0</span><span class="cd"><b>Мотоциклист есть в общем плане</b> — самая частая ошибка</span></div>
+        <div class="ck"><span class="cn">5.0–6.8</span><span class="cd">Достаёт пистолет левой рукой, правая на газе, один выстрел</span></div>
+        <div class="ck"><span class="cn">6.8–7.7</span><span class="cd">Замок разлетается, искры</span></div>
+        <div class="ck"><span class="cn">7.7–9.5</span><span class="cd">Прыжок на лестницу, мотоцикл без седока заваливается в пыль</span></div>
+        <div class="ck"><span class="cn">9.5–11.0</span><span class="cd">Дверь едет вбок по рельсу, открывается один раз</span></div>
+        <div class="ck"><span class="cn">11.0–18.0</span><span class="cd">Внутри <b>товарный вагон с боковой дверью</b>, а не контейнер с открытым торцом. Товар читается на крупном плане в 13.8. Губы попадают в «Oh, yes.»</span></div>
+    </div>
+    <div class="howto" style="margin-top:20px">
+      <div class="ht">Что пошло не так в тестовом прогоне — и уже исправлено в промпте</div>
+      <div class="fxs">
+        <div class="fx"><span class="fs">Одежда с фото вместо костюма</span><span class="fa">В реф грузили лист персонажа в полный рост. Исправлено: лок «костюм полностью заменяет одежду» + правило грузить только портрет лица</span></div>
+        <div class="fx"><span class="fs">Эмблема реального производителя на мотоцикле</span><span class="fa">Исправлено: «plain unbadged tank» в костюме и в локах</span></div>
+        <div class="fx"><span class="fs">На общем плане пропал мотоциклист</span><span class="fa">Исправлено: камера ближе, герой прописан крупным в нижней трети, отдельный лок на весь общий план</span></div>
+        <div class="fx"><span class="fs">Вагон превратился в морской контейнер</span><span class="fa">Исправлено: описана геометрия товарного вагона — дверь посередине длинной стены, торцы глухие</span></div>
+      </div>
+    </div>
+    <div class="warn"><span class="wi">🔁</span><span class="wt"><b>Поплыл финал — погоню не трогай.</b> На 11.0 уже стоит жёсткая склейка. Сгенерируй только внутренний план отдельным 7-секундным проходом с теми же рефами и приклей к первым 11 секундам. Промпт и команда склейки — в общем блоке ниже, пункты 2 и 3.</span></div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head"><div class="s-num">🎵</div><div><div class="s-kicker">Отдельным слоем</div><h2>Музыка</h2></div></div>
+    <p class="s-lead"><b>Ограбление озвучиваем абсолютно всерьёз</b>, как настоящий боевик. А там, где зритель ждёт эпичного взрыва на ревиле, вместо него вступает музыка «из другого фильма», подходящая товару. Этот анти-дроп и есть шутка: ухо понимает, что в ящиках, раньше глаза.</p>
+    <div class="mus">
+        <div class="mu"><span class="mt">0.0–11.0</span><span class="mf">Погоня, выстрел, прыжок, дверь</span><span class="mm">Серьёзный боевой саундтрек</span></div>
+        <div class="mu"><span class="mt">6.8–7.7</span><span class="mf">Замок в слоумо</span><span class="mm">Музыка проседает, остаются выстрел и искры</span></div>
+        <div class="mu"><span class="mt">11.0–11.8</span><span class="mf">Снимает шлем</span><span class="mm">Нарастание, которое не разрешается</span></div>
+        <div class="mu"><span class="mt">11.8</span><span class="mf">Камера уходит на ящики</span><span class="mm"><b>Анти-дроп:</b> вступает трек под категорию товара</span></div>
+        <div class="mu"><span class="mt">13.8</span><span class="mf">Крупный план товара</span><span class="mm">Пик фразы</span></div>
+        <div class="mu"><span class="mt">17.1</span><span class="mf">«Oh, yes.»</span><span class="mm">Тишина, только гул поезда</span></div>
+        <div class="mu"><span class="mt">17.8</span><span class="mf">Улыбка</span><span class="mm">Короткий музыкальный акцент</span></div>
+    </div>
+    <div class="howto" style="margin-top:20px">
+      <div class="ht">Как собрать</div>
+      <ol>
+        <li><b>Три трека отдельно</b> — в генераторе, где задаётся длительность: Stable Audio или ElevenLabs Music. Звуки погони, выстрел и реплика остаются из генерации Seedance.</li>
+        <li><b>Трек 1</b> один для всех товаров. <b>Треки 2 и 3</b> — пара под категорию: интимные товары, еда, техника, косметика, детские.</li>
+        <li><b>Сборка одной командой ffmpeg</b> — держит последний кадр ещё 1.2 секунды под смех, проседает боевик на слоумо, обрывает его в 11.8 и запускает ревил.</li>
+      </ol>
+      <div class="note">💡 Все музыкальные промпты по категориям и команда сборки — в общем блоке ниже.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="s-head"><div class="s-num">🚀</div><div><div class="s-kicker">Публикация</div><h2>Запуск тренда</h2></div></div>
+    <div class="howto" style="margin-top:16px">
+      <ol>
+        <li><b>Звук загружается как оригинальный.</b> Тренд живёт на кнопке «использовать звук», а звук тренда — весь микс целиком: боевик, анти-дроп, реплика и акцент.</li>
+        <li><b>Первый ролик не выходит один.</b> В первые 48 часов нужны 5–7 версий от разных авторов с разными товарами — это лучший сигнал «это тренд».</li>
+        <li><b>Подпись, которая собирает комментарии:</b> «а что бы вы нашли в своём вагоне? 👇»</li>
+        <li><b>Чувствительные категории.</b> У рекламных кабинетов есть ограничения на продвижение контрацептивов, алкоголя и БАДов. Для органики это не так критично, но перед платным посевом проверь правила.</li>
+        <li><b>Коммерческая лицензия.</b> Проверь, что тариф музыкального генератора разрешает коммерческое использование.</li>
+      </ol>
+      <div class="note">⛑ Есть фирменный шлем? Загрузи его третьим рефом @Image3 — строки для промпта в общем блоке, пункт 7. Надписи и цвета шлема описывай словами, иначе модель их потеряет.</div>
+    </div>
+  </section>
+
+  <section class="step" id="s5">
+    <div class="s-head"><div class="s-num">📝</div><div><div class="s-kicker">Одна кнопка · всё сразу</div><h2>Весь пакет</h2></div></div>
+    <p class="s-lead">В буфер уходит всё: основной промпт, промпт перегенерации финала, склейка, музыка по категориям, сборка и вариант со своим шлемом — разделено заголовками с номерами.</p>
+    <div class="s-tag">📎 Основной промпт — первым блоком · вставлять как есть</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Всё одним куском</span><button class="copy" data-id="c1">Копировать всё</button></div>
+      <pre id="c1">==============================================================================
+1. ОСНОВНОЙ ПРОМПТ — 18 СЕК, 16:9, SEEDANCE 2.5
+Рефы: лицо → @Image1, товар → @Image2. Менять ничего не нужно
+==============================================================================
+
+SCENE CONTEXT
+Present day, in an arid desert under a bright blue sky. The lead character, in a full-face motorcycle helmet with a clear visor, rides a modern adventure motorcycle flat out beside a moving freight train, shoots the padlock off a boxcar door, leaps from the motorcycle onto the moving car, slides the side door open, steps inside, takes off the helmet, and finds the car packed with crates of the same product. The train runs continuously for the whole sequence. Rider and train travel toward frame right; the train runs on the rider&#x27;s left, behind the rider from the camera&#x27;s side.
+
+ACTIVE REFERENCES
+@Image1 — the lead character: identity reference only. Face, facial proportions, hairstyle, hair colour, age impression and body type come from @Image1. The face reads through the clear visor in every helmeted shot, the hair appears as the helmet comes off, and the bare face carries the final shot. Every garment comes from the WARDROBE block and fully replaces whatever is worn in @Image1. A relaxed, low, warm speaking voice natural to the person in @Image1. 100% matches the reference.
+@Image2 — the cargo product: the single item repeated throughout every crate in the boxcar, with its shape, colours, front face, label and logo exactly as in the reference. 100% matches the reference.
+
+LOCATION MAP
+Foreground: hard cracked desert ground, rocks, dry scrub and a rough gravel service road running parallel to the railway. Midground: the freight train — a pair of heavy dark grey modern diesel locomotives pulling a long line of steel boxcars with faded paint, long orange rust streaks running down from every seam and rivet line, iron ladders and grab bars at each car end. Each boxcar is a long closed steel box with one heavy sliding door hung on a horizontal rail in the middle of each long side; both ends of every car are solid steel walls. A line of weathered wooden utility poles runs beside the track. Background: flat desert running to distant barren red-brown mountains, windblown dust hanging low. Light comes from a high hard sun in a bright blue sky, falling from frame left at 55° elevation. The camera works on the shadow side of the rider, on the open-desert side opposite the train.
+
+FIRST FRAME / BLOCKING
+Close side view at chest height, 40° semi-profile on the rider&#x27;s right side. The lead character rides the matte black motorcycle toward frame right wearing a plain matte black full-face motorcycle helmet with a clear visor, visor closed, the eyes, brows and bridge of the nose visible through it, torso leaning slightly forward into the speed, right hand on the throttle. The rust-streaked steel boxcars stream past behind toward frame right. Dust and gravel spray up from the rear wheel.
+
+FORMAT MODE
+Timed multishot. Cuts land only at 1.6s, 3.2s, 5.0s, 6.8s, 7.7s, 9.5s and 11.0s. From 11.0s to 18.0s the camera runs one continuous shot and does not cut on its own.
+
+OPTICS
+0.0s to 1.6s — 29° portrait compression, close side shot opening to reveal rider, motorcycle and train, no drift mid-segment, 29° held to the cut.
+1.6s to 3.2s — 18° natural portrait, CU on the face through the visor, no drift mid-segment, 18° held to the cut.
+3.2s to 5.0s — 63° observational, WS side-on establishing, no drift mid-segment, 63° held to the cut.
+5.0s to 6.8s — 47° neutral, MS side action, no drift mid-segment, 47° held to the cut.
+6.8s to 7.7s — 12° tele-detail, macro ECU on the padlock, no drift mid-segment, 12° held to the cut.
+7.7s to 9.5s — 47° neutral, MS on the jump, no drift mid-segment, 47° held to the cut.
+9.5s to 11.0s — 47° neutral, MS on the car side, no drift mid-segment, 47° held to the cut.
+11.0s to 18.0s — 47° neutral, one continuous interior move, 47° held for the whole move.
+Rectilinear throughout, prime-lens character, natural motion blur, crisp fine detail.
+
+CAMERA
+0.0s to 1.6s: camera vehicle alongside at 80 km/h, 130 cm height, starting close and easing back 2 metres to reveal the motorcycle and the train. 1.6s to 3.2s: tracking at 80 km/h, 150 cm height, on the rider&#x27;s right front at 30° off the line of travel, a slight 1–2 cm road tremor. 3.2s to 5.0s: tracking at 80 km/h from 25 metres out on the desert side, 4 metres high, the central section of the train filling the frame edge to edge and running beyond both edges, the rider large and clearly readable in the lower middle third of frame beside the central cars. 5.0s to 6.8s: tracking at 80 km/h, 150 cm height, the boxcar behind and slightly to frame right of the rider. 6.8s to 7.7s: macro camera riding with the car, locked to the door latch. 7.7s to 9.5s: tracking at 80 km/h close to the rider, 160 cm height. 9.5s to 11.0s: tracking at 80 km/h level with the door, 200 cm height. 11.0s to 18.0s: stabilised glide inside the boxcar as described in ACTION. High-end digital cinema tonal character with wide latitude and gentle highlight roll-off.
+
+ACTION
+0.0s to 1.6s — The lead character rides fast beside the train at 80 km/h, leaning slightly forward, both hands on the bars, the engine howling. Gravel and dust spray up from the rear wheel. The camera eases back and the helmeted head and shoulders, the matte black tank and fairing of the motorcycle and the moving boxcars behind resolve into frame.
+1.6s HARD CUT
+1.6s to 3.2s — Close on the face through the clear visor. The eyes are narrowed against the glare, brows drawn low, fixed ahead. A faint reflection of the passing rust-streaked boxcars slides across the visor surface over the eyes. Fine dust ticks against the visor and streams over the matte black shell. The helmet rides the vibration of the engine and the road; the eyes shift toward the train first, then the head turns slowly after them and holds, focused, calm and determined.
+3.2s HARD CUT
+3.2s to 5.0s — Wide and side-on: the long freight train thunders across the desert toward frame right at 80 km/h, heat shimmer rising off the dark locomotives up front. The lead character on the matte black motorcycle rides parallel beside the central cars at matching speed, large and clearly readable in the lower middle third of frame as a dark figure against the pale desert, a long plume of dust trailing behind the motorcycle and the train.
+5.0s HARD CUT
+5.0s to 6.8s — Riding level with a boxcar, right hand holding the throttle steady, the lead character reaches across with the left hand into a chest holster under the jacket, draws a black semi-automatic pistol, thumbs the safety off, extends the arm toward the boxcar door latch and fires once, the eyes sighting along the arm through the visor. A clear muzzle flash glints on the visor, a spent casing spins away, the recoil travels back through wrist, forearm and shoulder. The motion is confident and smooth: draw, safety, aim, fire.
+6.8s HARD CUT
+6.8s to 7.7s — Plays in slow motion at 40% speed. A heavy rust-spotted steel padlock hangs through the door latch hasp and a fixed steel staple on the car frame, holding the sliding door shut, vibrating with the car. The bullet strikes the lock body. Sparks burst outward in several directions, tiny bright metal fragments flash, the shackle snaps and the lock tears off the hasp and flies away out of frame.
+7.7s HARD CUT
+7.7s to 9.5s — Real time. The lead character holsters the pistol, shifts weight forward, rises to stand on the footpegs with both knees gripping the tank, reaches for the steel ladder at the end of the boxcar, grabs a rung with both hands and steps off the motorcycle onto the bottom rung in one committed move. The riderless motorcycle runs on beside the train for a moment, wobbles, veers away toward the desert and drops onto its side, sliding to a stop across the gravel in a long spray of dust.
+9.5s HARD CUT
+9.5s to 11.0s — The helmeted lead character hangs on the side of the moving boxcar beside its middle door, left hand locked on a steel grab bar, right hand on the door handle, the face set with effort behind the visor, and drives the heavy steel sliding door sideways along its horizontal rail toward frame left. The door grinds open along the rail, flush against the car side. The car shudders, hardware rattles, wind and dust tear past. Far behind, the fallen motorcycle lies in its settling dust cloud.
+11.0s HARD CUT
+11.0s to 11.8s — Inside the boxcar, the camera sits at shoulder height directly behind the lead character, who already stands in the open side doorway in the middle of the car&#x27;s long wall, still in the helmet, facing inward across the car. The door stands open. A main group of crates stands in the middle of the floor and against the far wall opposite the doorway, and more crates fill both closed steel ends of the car; behind the lead character, through the side doorway, the desert streams past in bright sun. The steel floor and walls vibrate, a loose cargo strap sways from a wall ring, dust hangs in the air. The lead character raises both hands to the helmet and lifts it straight up off the head; the hair from @Image1 falls loose over the collar, seen from behind.
+11.8s to 16.2s — As the helmet clears the head, the camera glides forward past the lead character&#x27;s left shoulder, its view running ahead onto the crates, rising to 170 cm height and tilting down so the open tops of the crates are clearly visible, and moves close to the nearest crates. The car is densely packed with open wooden crates lined with golden straw, warm wood and straw glowing against the cold rust-streaked steel. The camera travels in a smooth, unhurried close arc around the main group of crates, sweeping about 180° and continuing toward a near-circle. Every visible crate is filled with repeated instances of @Image2, sized naturally to the product: many pieces per crate for a small item, grouped multiples for a medium item, fewer units per crate across many crates for a large item. In every clearly visible crate, at least one @Image2 item rests on the top layer of straw with its front face, label or logo turned up or slightly toward the camera. At 13.8s the camera settles on one foreground crate and eases in on a single top-facing @Image2 item until it fills the frame, front face and branding crisp and fully readable, holds for 0.8 seconds, then pulls away and continues the same arc through the remaining crates.
+16.2s to 18.0s — The arc completes and the camera comes around to the lead character from inside the car, arriving on the bare face in a close three-quarter view, the bright side doorway and the passing desert behind. The helmet is tucked under the left arm. At 16.6s the lead character pushes the flattened hair back with the right hand, looks at the crates with quiet satisfaction, and a slow pleased smile forms. At 17.1s the lead character says slowly, warmly and slightly drawn out: &quot;Oh, yes.&quot;
+
+PERFORMANCE
+While helmeted, the eyes carry the performance behind the visor — narrowed against glare, steady, tracking the train — and the body carries the rest: squared shoulders, a locked grip, the slow deliberate turn of the head, total economy in the draw and the jump. In the final shot, restrained and grounded: quiet disbelief turning to satisfaction, the smile arriving slowly and staying small. The bare face is real and lived-in: flushed from the heat inside the helmet, a sheen of sweat at the temples and across the forehead, hair damp at the hairline and pressed flat on top, a faint red pressure line across the cheeks from the helmet pads, desert dust settled along the neck and the edges of the hairline, catch-lights from the bright doorway in both eyes. The face keeps @Image1&#x27;s exact identity in every shot. Lip and jaw movement matches the line exactly, with the mouth at rest before and after it.
+
+PHYSICS
+Full gravity and inertia at real speed. The motorcycle leans and skips over the gravel, long-travel suspension working hard, the knobby rear tyre throwing stones. The boxcars sway and knock on their couplings. Recoil travels through the arm and the casing tumbles away. The padlock tears off with real mass and spinning momentum. The jump carries the rider&#x27;s forward momentum into the ladder, the body swinging in against the car. The riderless motorcycle topples with real weight and slides on its side, bars digging into the gravel. The steel door&#x27;s mass makes it start slow and gather speed along the rail. The helmet lifts off with a slight drag of the lining, and the hair falls with its own weight. Inside, straw fibres tremble with the car&#x27;s vibration, the products jostle a millimetre on each rail joint, dust drifts and swirls in the light shafts. Contact shadows under every wheel, boot, crate and product.
+
+LIGHTING
+5600K hard natural desert sun from frame left at 55° elevation, with bright blue skylight filling the shadows outside. The clear visor passes the face through cleanly and carries only faint passing reflections and a thin specular streak of sun along its upper edge; inside the helmet the face sits in soft shade with bounce light from the pale ground lifting the eyes. The matte black helmet shell and motorcycle hold soft broad sheens that keep their shapes readable. Hard glints on the steel ladder rungs and the pistol. Heat shimmer above the locomotives and the gravel. Inside the boxcar, the bright side doorway is the main source, with hard thin shafts of sunlight piercing a row of small rust-eaten holes along the upper walls and a gap along the roof seam, cutting through the suspended dust and laying bright spots and stripes across the straw and the products. In the final shot the doorway rims the hair and cheek with warm light. Haze visible at 30 meters depth outside, rising to thick visible light shafts at 50% dust density inside the car.
+
+COLOR GRADE
+Sun-bleached tan earth and deep saturated blue sky outside, cold grey steel streaked with warm orange rust on the train. The matte black helmet and motorcycle cut dark graphic shapes against the pale desert. Inside the car, cold steel walls surround warm honey-toned crates and golden straw, and the @Image2 items keep their own true colours as the most saturated, most sharply defined surfaces in frame. Rich colour separation, clean contrast, softened highlights.
+
+WARDROBE
+Fixed for the whole sequence, whether the lead character is male or female, and replacing everything worn in @Image1: a plain matte black full-face motorcycle helmet with a clear visor, worn with the visor closed until it comes off inside the car; a worn black leather riding jacket with low-profile padded shoulders and elbows, zipped half open; a plain charcoal cotton t-shirt beneath; a black neck gaiter pulled down loose around the neck; a black nylon chest holster under the jacket carrying a black pistol on the left side; faded dark olive technical riding trousers with reinforced knees; scuffed black leather riding boots with buckles; black leather riding gloves. Desert dust in the leather creases, across the trousers and boots, dulling the matte black helmet shell and speckling the visor edges. The motorcycle is a matte black modern adventure motorcycle with a plain unbadged tank and fairing in clean matte surfaces.
+
+AUDIO
+Diegetic sound only. A high-revving modern twin-cylinder engine note rising and falling with the throttle, the deep diesel rumble of the locomotives and a long low horn blast, steel wheels hammering on rail joints, wind roaring over the helmet, gravel pinging off metal and the visor. The sharp crack of the pistol and the tinkle of the casing. A metallic ping and hiss of sparks as the lock breaks. Boots hitting steel rungs, the motorcycle scraping over gravel. The steel door grinding and rumbling along its rail. Inside the car: steel panels booming softly with each rail joint, fittings rattling, straw rustling, the soft rasp of the helmet lining sliding off. The line &quot;Oh, yes.&quot; spoken low and warm at 17.1s.
+
+STYLE
+Photorealistic contemporary desert heist feature film, large-format widescreen look, fine film grain, drifting desert dust and heat haze, tactile steel, rust, leather, wood, straw and dust, sun-baked premium cinematic realism.
+
+OUTPUT SETTINGS
+16:9, 18 seconds, 4K. Real time in every segment except 6.8s to 7.7s, which runs at 40% slow motion start to finish.
+
+POSITIVE LOCKS
+The lead character carries the exact face, facial proportions, hairstyle, hair colour, age impression and body type of @Image1 in every shot, the eyes and upper face clearly readable through the clear visor in every helmeted close and medium shot. The lead character wears only the WARDROBE outfit in every shot. The plain matte black full-face motorcycle helmet with a clear visor stays on with the visor closed in every shot from 0.0s until it lifts off at 11.0s. The hair from @Image1 falls loose as the helmet comes off, and the bare face carries the final close three-quarter view from 16.2s. The rider is present, large and readable beside the central cars for the whole of the wide shot from 3.2s to 5.0s. The motorcycle stays a matte black modern adventure motorcycle with a plain unbadged tank in every shot it appears in. The train stays a modern diesel freight train of rust-streaked steel boxcars and moves continuously toward frame right at full speed for all 18 seconds. The boxcar&#x27;s steel sliding door in the middle of its long side opens exactly once, from outside, sideways along its rail, between 9.5s and 11.0s, and stands open in every later shot; inside, both ends of the car stay solid steel walls and the bright opening is always the side doorway. From 11.0s the camera moves continuously: behind the lead character → helmet off → past the left shoulder → close arc over the crates → hero close-up on one @Image2 item at 13.8s → continuing arc → the face → &quot;Oh, yes.&quot; Every visible crate holds repeated instances of the same @Image2 item, with at least one top-layer item in each crate showing its front face, label or logo turned up or toward the camera, lying on top of the straw. Cuts land only at 1.6s, 3.2s, 5.0s, 6.8s, 7.7s, 9.5s and 11.0s.
+
+
+==============================================================================
+2. ЕСЛИ ПОПЛЫЛ ФИНАЛ — ВНУТРЕННИЙ ПЛАН ОТДЕЛЬНО, 7 СЕК
+Те же @Image1 и @Image2. Погоню перегенерировать не нужно
+==============================================================================
+
+SCENE CONTEXT
+Present day, inside a steel freight boxcar moving at speed through a sunlit desert. The lead character has just climbed in through the open side door, takes off the helmet, and the camera sweeps around crates packed with the same product before returning to the lead character&#x27;s face. One continuous shot.
+
+ACTIVE REFERENCES
+@Image1 — the lead character: identity reference only. Face, facial proportions, hairstyle, hair colour, age impression and body type come from @Image1. Every garment comes from the WARDROBE block and fully replaces whatever is worn in @Image1. A relaxed, low, warm speaking voice natural to the person in @Image1. 100% matches the reference.
+@Image2 — the cargo product: the single item repeated throughout every crate in the boxcar, with its shape, colours, front face, label and logo exactly as in the reference. 100% matches the reference.
+
+LOCATION MAP
+A long closed steel boxcar with faded, rust-streaked walls. One heavy sliding door stands open in the middle of the near long wall, the bright desert streaming past outside it; both ends of the car are solid steel walls. A main group of open wooden crates lined with golden straw stands in the middle of the floor and against the far wall opposite the doorway, and more crates fill both ends of the car. A row of small rust-eaten holes runs along the upper walls and a gap runs along the roof seam. Light comes mainly from the open side doorway.
+
+FIRST FRAME / BLOCKING
+The camera sits at shoulder height directly behind the lead character, who stands in the open side doorway facing inward across the car, wearing a plain matte black full-face motorcycle helmet with a clear visor and a black leather riding jacket. The crates fill the view past the shoulders; behind the lead character, through the doorway, the desert streams past in bright sun.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own. Real time start to finish.
+
+OPTICS
+47° neutral held for the whole shot, rectilinear, prime-lens character, natural motion blur, crisp fine detail.
+
+CAMERA
+Stabilised glide starting at 160 cm height directly behind the lead character, moving as described in ACTION. High-end digital cinema tonal character with wide latitude and gentle highlight roll-off.
+
+ACTION
+0.0s to 0.8s — The steel floor and walls vibrate with the moving train, a loose cargo strap sways from a wall ring, dust hangs in the air. The lead character raises both hands to the helmet and lifts it straight up off the head; the hair from @Image1 falls loose over the collar, seen from behind.
+0.8s to 5.2s — As the helmet clears the head, the camera glides forward past the lead character&#x27;s left shoulder, its view running ahead onto the crates, rising to 170 cm height and tilting down so the open tops of the crates are clearly visible, and moves close to the nearest crates. The car is densely packed with open wooden crates lined with golden straw, warm wood and straw glowing against the cold steel. The camera travels in a smooth, unhurried close arc around the main group of crates, sweeping about 180° and continuing toward a near-circle. Every visible crate is filled with repeated instances of @Image2, sized naturally to the product: many pieces per crate for a small item, grouped multiples for a medium item, fewer units per crate across many crates for a large item. In every clearly visible crate, at least one @Image2 item rests on the top layer of straw with its front face, label or logo turned up or slightly toward the camera. At 2.8s the camera settles on one foreground crate and eases in on a single top-facing @Image2 item until it fills the frame, front face and branding crisp and fully readable, holds for 0.8 seconds, then pulls away and continues the same arc through the remaining crates.
+5.2s to 7.0s — The arc completes and the camera comes around to the lead character from inside the car, arriving on the bare face in a close three-quarter view, the bright side doorway and the passing desert behind. The helmet is tucked under the left arm. At 5.6s the lead character pushes the flattened hair back with the right hand, looks at the crates with quiet satisfaction, and a slow pleased smile forms. At 6.1s the lead character says slowly, warmly and slightly drawn out: &quot;Oh, yes.&quot;
+
+PERFORMANCE
+Restrained and grounded: quiet disbelief turning to satisfaction, the smile arriving slowly and staying small. The bare face is real and lived-in: flushed from the heat inside the helmet, a sheen of sweat at the temples, hair damp at the hairline and pressed flat on top, a faint red pressure line across the cheeks from the helmet pads, desert dust along the neck and the edges of the hairline, catch-lights from the bright doorway in both eyes. The face keeps @Image1&#x27;s exact identity. Lip and jaw movement matches the line exactly, with the mouth at rest before and after it.
+
+PHYSICS
+The car vibrates continuously with the moving train. The helmet lifts off with a slight drag of the lining, and the hair falls with its own weight. Straw fibres tremble, the products jostle a millimetre on each rail joint, dust drifts and swirls in the light shafts. Contact shadows under every crate, boot and product.
+
+LIGHTING
+5600K. The bright side doorway is the main source, with hard thin shafts of desert sunlight piercing the rust-eaten holes along the upper walls and the gap along the roof seam, cutting through suspended dust at 50% density and laying bright spots and stripes across the straw and the products. In the final moment the doorway rims the hair and cheek with warm light.
+
+WARDROBE
+Replacing everything worn in @Image1: a plain matte black full-face motorcycle helmet with a clear visor, a worn black leather riding jacket zipped half open over a plain charcoal t-shirt, a black neck gaiter loose around the neck, black leather riding gloves, all carrying desert dust.
+
+AUDIO
+Diegetic sound only. Steel panels booming softly with each rail joint, fittings rattling, straw rustling, wind past the open doorway, the soft rasp of the helmet lining sliding off. The line &quot;Oh, yes.&quot; spoken low and warm at 6.1s.
+
+STYLE
+Photorealistic contemporary desert heist feature film, large-format widescreen look, fine film grain, tactile steel, rust, leather, wood, straw and dust, sun-baked premium cinematic realism.
+
+OUTPUT SETTINGS
+16:9, 7 seconds, 4K, real time start to finish.
+
+POSITIVE LOCKS
+The lead character carries the exact face, facial proportions, hairstyle, hair colour, age impression and body type of @Image1 and wears only the WARDROBE outfit. The bright opening is always the side doorway in the middle of the car&#x27;s long wall; both ends of the car stay solid steel walls. The camera moves continuously: behind the lead character → helmet off → past the left shoulder → close arc over the crates → hero close-up on one @Image2 item at 2.8s → continuing arc → the face → &quot;Oh, yes.&quot; Every visible crate holds repeated instances of the same @Image2 item, with at least one top-layer item in each crate showing its front face, label or logo turned up or toward the camera, lying on top of the straw.
+
+
+==============================================================================
+3. СКЛЕЙКА — первые 11 сек основного ролика + новый внутренний план
+Если генерировали в 4K — замените 1280:720 на 3840:2160
+==============================================================================
+
+ffmpeg -i full.mp4 -i interior.mp4 -filter_complex &quot;[0:v]trim=0:11,setpts=PTS-STARTPTS,scale=1280:720,fps=24[v0];[0:a]atrim=0:11,asetpts=PTS-STARTPTS[a0];[1:v]trim=0:7,setpts=PTS-STARTPTS,scale=1280:720,fps=24[v1];[1:a]atrim=0:7,asetpts=PTS-STARTPTS[a1];[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]&quot; -map &quot;[v]&quot; -map &quot;[a]&quot; -c:v libx264 -crf 16 -c:a aac -b:a 256k video.mp4
+
+
+==============================================================================
+4. МУЗЫКА · ТРЕК 1 — ОГРАБЛЕНИЕ (один для всех товаров, 12 сек)
+
+==============================================================================
+
+Instrumental straight-faced epic action heist score, 150 BPM, D minor, 4/4, completely serious and cinematic. Pounding low orchestral drums and taiko on the downbeats, a driving low string ostinato in sixteenth notes, sharp brass stabs, a distorted baritone guitar riff doubling the low strings. Opens at full intensity on the very first downbeat with no intro and drives hard for ten seconds. From 10 to 12 seconds it becomes a tense rising build: a snare roll and a string riser climbing higher, unresolved, ending abruptly at the peak. No vocals. 12 seconds.
+
+
+==============================================================================
+5. МУЗЫКА · ТРЕКИ 2 И 3 — ПОД КАТЕГОРИЮ ТОВАРА
+Трек 2 — анти-дроп на ревиле (6 сек). Трек 3 — финальный акцент после «Oh, yes.» (2 сек)
+==============================================================================
+
+— ИНТИМНЫЕ ТОВАРЫ, БЕЛЬЁ, ПАРФЮМ · трек 2:
+Instrumental smooth sultry slow jam, 75 BPM, F major, 4/4, warm, seductive and quietly tongue-in-cheek, played completely straight. A breathy tenor saxophone melody whose phrase swells to its peak at 2 seconds, lush electric piano chords with gentle tremolo, a round fretless bass sliding between notes, soft brushed drums, a soft wah-wah rhythm guitar. Begins instantly on the first downbeat with the full groove, no intro. Late-night lounge romance. No vocals. 6 seconds.
+
+трек 3:
+Short comedic musical button in F major. One playful wah-wah funk guitar lick, answered by a cheeky tenor saxophone trill, finishing on a single soft cymbal swell that rings out. No vocals. 2 seconds.
+
+— ЕДА, СНЕКИ, НАПИТКИ · трек 2:
+Instrumental wholesome sunny family commercial jingle, 120 BPM, C major, bright and innocent, played completely straight. Strummed ukulele, cheerful whistled melody, glockenspiel, light handclaps and a bouncy upright bass. The whistled phrase reaches its happiest peak at 2 seconds. Begins instantly on the first downbeat, no intro. No vocals. 6 seconds.
+
+трек 3:
+Short comedic musical button in C major. A quick cheerful xylophone run upward ending on a single bright triangle ding. No vocals. 2 seconds.
+
+— ТЕХНИКА И ГАДЖЕТЫ · трек 2:
+Instrumental triumphant 8-bit chiptune victory fanfare, 140 BPM, G major, retro video game level-complete celebration, played completely straight. Square-wave lead melody, fast arpeggios, punchy noise-channel drums, a bouncing triangle-wave bass. The melody hits its highest note at 2 seconds. Begins instantly on the first downbeat, no intro. No vocals. 6 seconds.
+
+трек 3:
+Short comedic chiptune button in G major. One rapid rising 8-bit level-up arpeggio ending on a single bright coin-collect chime. No vocals. 2 seconds.
+
+— КОСМЕТИКА И УХОД · трек 2:
+Instrumental serene luxury spa music, 60 BPM, E major, weightless and pampering, played completely straight. Soft flowing harp arpeggios, shimmering wind chimes, airy warm synth pads, a gentle bamboo flute phrase that blooms fully at 2 seconds. Begins instantly with the full texture, no intro. No vocals. 6 seconds.
+
+трек 3:
+Short musical button in E major. A single resonant crystal singing bowl strike that rings out softly. No vocals. 2 seconds.
+
+— ДЕТСКИЕ ТОВАРЫ И ИГРУШКИ · трек 2:
+Instrumental tender music box lullaby, 90 BPM in 3/4, D major, sweet and innocent, played completely straight. A delicate music box melody with celesta, soft pizzicato strings and a gentle glockenspiel, the melody reaching its sweetest note at 2 seconds. Begins instantly on the first downbeat, no intro. No vocals. 6 seconds.
+
+трек 3:
+Short comedic musical button. A single rubber squeaky toy squeak followed by one clear music box note ringing out. No vocals. 2 seconds.
+
+
+==============================================================================
+6. СБОРКА — video.mp4 + heist.wav + reveal.wav + button.wav
+A, B, C = 0, если генератор выдал ровно заданную длительность
+==============================================================================
+
+ffmpeg -i video.mp4 -i heist.wav -i reveal.wav -i button.wav -filter_complex &quot;[0:v]tpad=stop_mode=clone:stop_duration=1.2[v];[0:a]apad=pad_dur=1.2[dia];[1:a]atrim=start=A:duration=11.8,asetpts=PTS-STARTPTS,volume=0.8,volume=0.3:enable=&#x27;between(t,6.8,7.7)&#x27;,afade=t=out:st=11.78:d=0.02[m1];[2:a]atrim=start=B:duration=5.0,asetpts=PTS-STARTPTS,volume=0.7,afade=t=out:st=4.85:d=0.15,adelay=11800:all=1[m2];[3:a]atrim=start=C:duration=1.4,asetpts=PTS-STARTPTS,volume=0.8,afade=t=out:st=1.0:d=0.4,adelay=17800:all=1[m3];[dia][m1][m2][m3]amix=inputs=4:duration=longest:normalize=0[a]&quot; -map &quot;[v]&quot; -map &quot;[a]&quot; -c:v libx264 -crf 16 -c:a aac -b:a 256k trend_final.mp4
+
+# звук для тренда из готового ролика:
+ffmpeg -i trend_final.mp4 -vn -c:a copy trend_sound.m4a
+
+
+==============================================================================
+7. ВАРИАНТ СО СВОИМ ШЛЕМОМ — шлем третьим рефом @Image3
+Добавить строку в ACTIVE REFERENCES и заменить фразу про шлем в FIRST FRAME, WARDROBE, POSITIVE LOCKS
+==============================================================================
+
+— строка в ACTIVE REFERENCES:
+@Image3 — the helmet: a [shell colour] full-face motorcycle helmet with a clear visor, [stripes, spoiler, emblems], and the word [YOUR LETTERING] in [colour] lettering along the [side]. 100% matches the reference.
+
+— если у шлема яркий цвет, мотоцикл в WARDROBE:
+The motorcycle is a matte black modern adventure motorcycle with a plain unbadged tank and [colour] accent graphics on the tank and front fairing.</pre>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=heist">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=heist">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Шаблон, который бренд может переснять под каждый свой товар, — это не один ролик, а целая рекламная кампания. На обучении даю систему целиком: от первой генерации до портфолио и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=heist">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
