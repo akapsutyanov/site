@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-15T16:48:25Z",
+ "updated": "2026-09-15T17:19:55Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137406402",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-специалист / ИИ контент-креатор (AI-видео)\n🏢 Nedigital · Саратов\n💰 от 40000 до 100000 RUR",
+   "link": "https://hh.ru/vacancy/137406402?tech_source=api",
+   "date": "2026-09-15T20:12:27+0300"
+  },
   {
    "id": "hh/136811534",
    "source": "hh",
@@ -633,14 +641,6 @@
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Самара",
    "link": "https://hh.ru/vacancy/136405712?tech_source=api",
    "date": "2026-09-14T19:56:33+0300"
-  },
-  {
-   "id": "hh/131821613",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Редактор текстов для обучения нейросетей со знанием английского языка (GigaChat)\n🏢 СБЕР · Ульяновск",
-   "link": "https://hh.ru/vacancy/131821613?tech_source=api",
-   "date": "2026-09-14T19:55:31+0300"
   },
   {
    "id": "dnative_job/11497",
