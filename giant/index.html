@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Великан с сумкой — тренд под любые товары | AI Новый Уровень</title>
+<meta name="description" content="Героиня ростом 40 метров переходит дорогу, а из её сумки выпадают товары размером с дом. Универсальный промпт на 12 секунд, 9:16, одним кадром.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Великан с сумкой">
+<meta property="og:description" content="Героиня ростом 40 метров роняет из сумки товары размером с дом. Универсальный промпт под любые три товара.">
+<meta property="og:url" content="https://neurocreator2.ru/giant/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.10);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:72px 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:34px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7.5vw,62px);
+  line-height:1.02;color:var(--ink);margin-top:20px}
+h1 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.author{margin-top:14px;font-size:13px;color:var(--c3);letter-spacing:1px}
+.intro{font-size:15.5px;font-weight:300;color:var(--ink2);max-width:640px;margin:22px auto 0;line-height:1.8}
+.intro b{color:var(--ink);font-weight:500}
+
+/* демо: до / после */
+.demo{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dcell{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7);position:relative}
+.dcell video{width:100%;height:auto;display:block;background:#08080a}
+.dcap{padding:12px 14px;text-align:left}
+.dcap .dk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.dcap .dt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.dcap .dd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.dcell.out{border-color:rgba(120,180,255,.22)}
+.dcell.out .dk{color:#8fa8c8}
+.demo-note{margin-top:12px;font-size:12.5px;color:var(--ink3);text-align:center}
+
+.howto{margin-top:32px;border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(13,13,18,.7);text-align:left}
+.howto .ht{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3);margin-bottom:14px}
+.howto ol{margin:0;padding-left:20px}
+.howto li{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.howto li b{color:var(--ink);font-weight:500}
+.howto .note{margin-top:14px;font-size:13px;color:var(--ink3);line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.howto .note b{color:var(--c2)}
+.warn{margin-top:14px;display:flex;gap:11px;align-items:flex-start;padding:14px 16px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.warn .wi{font-size:15px;flex-shrink:0}
+.warn .wt{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.warn .wt b{color:var(--ink);font-weight:600}
+
+.map{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 4px}
+.map .m{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;
+  padding:8px 16px;font-size:12.5px;color:var(--c2);background:rgba(13,13,18,.6);text-decoration:none;
+  transition:border-color 180ms ease,color 180ms ease}
+.map .m:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+.map .m b{font-size:15px}
+
+.step{margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.s-head{display:flex;align-items:center;gap:18px}
+.s-num{flex-shrink:0;width:56px;height:56px;border-radius:16px;background:rgba(200,200,200,.06);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:26px}
+.s-kicker{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--c3)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5.5vw,36px);
+  color:var(--c1);line-height:1.12;margin-top:3px}
+.s-lead{font-size:14.5px;font-weight:300;color:var(--ink2);margin-top:16px;line-height:1.75}
+.s-lead b{color:var(--ink);font-weight:500}
+.s-tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--c2);
+  background:rgba(200,200,200,.05);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;background:#0a0a0d}
+
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:rgba(200,200,200,.04);
+  border:1px solid rgba(200,200,200,.25);color:var(--c1);padding:14px 26px;border-radius:10px;
+  font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+  transition:border-color 200ms ease,transform 160ms var(--eo)}
+.dl:hover{border-color:rgba(220,220,220,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:9.5px;letter-spacing:1px;color:var(--ink3);font-weight:500;margin-top:2px}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.mclass{margin:56px 0 0;display:flex;gap:22px;align-items:center;padding:22px;
+  border:1px solid rgba(200,200,200,.16);border-radius:20px;background:rgba(13,13,18,.8);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mc-thumb{position:relative;flex-shrink:0;width:230px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  display:block;border:1px solid rgba(200,200,200,.12);transition:transform 200ms var(--eo)}
+.mc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mc-thumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28);transition:background 200ms ease}
+.mc-thumb .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:46px;height:46px;border-radius:50%;background:var(--chrome-grad);display:flex;align-items:center;
+  justify-content:center;color:#0a0a0a;font-size:15px;padding-left:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:transform 200ms var(--eo)}
+.mclass:hover .mc-thumb{transform:scale(1.02)}
+.mclass:hover .mc-thumb::after{background:rgba(6,6,8,.12)}
+.mclass:hover .mc-thumb .pl{transform:translate(-50%,-50%) scale(1.08)}
+.mclass .mc-body{flex:1;min-width:0}
+.mclass .mc-kick{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--c3)}
+.mclass .mc-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--c1);line-height:1.15;margin-top:4px}
+.mclass .mc-d{margin-top:8px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.mclass .mc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--chrome-grad);
+  color:#0a0a0a;padding:14px 30px;border-radius:10px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.mclass .mc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(200,200,200,.26)}
+
+.cta{margin:60px 0 0;padding:44px 32px;text-align:center;border:1px solid rgba(200,200,200,.16);
+  border-radius:22px;background:rgba(13,13,18,.8);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cta h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,6vw,40px);
+  color:var(--ink);line-height:1.1}
+.cta h3 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.cta p{font-size:14.5px;font-weight:300;color:var(--ink2);max-width:520px;margin:18px auto 0;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 40px;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);
+  transition:transform 160ms var(--eo),box-shadow 220ms ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,200,200,.28)}
+.cta small{display:block;margin-top:16px;font-size:12px;color:var(--ink3)}
+.links{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12.5px;color:var(--c2);text-decoration:none;border:1px solid var(--line);
+  border-radius:30px;padding:9px 18px;transition:border-color 180ms ease,color 180ms ease}
+.links a:hover{border-color:rgba(220,220,220,.4);color:var(--c1)}
+
+footer{margin-top:48px;padding:28px 0 46px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:700px){
+  .mclass{flex-direction:column;text-align:center;padding:18px 18px 24px;gap:18px}
+  .mc-thumb{width:100%}
+  .mclass .mc-btn{width:100%;justify-content:center}
+}
+@media(max-width:600px){
+  header{padding:52px 0 10px}
+  .s-head{gap:14px} .s-num{width:48px;height:48px;font-size:22px}
+  pre{font-size:11.5px;max-height:260px;padding:14px}
+  .cta{padding:34px 20px}
+  .demo{grid-template-columns:1fr}
+}
+
+
+/* демо 9:16 + референсы */
+.hero2{margin-top:34px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.vwrap{border:1px solid rgba(120,180,255,.22);border-radius:18px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vwrap video{width:100%;height:auto;display:block;background:#08080a}
+.vcap{padding:12px 14px;text-align:left}
+.vcap .vk{font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:#8fa8c8}
+.vcap .vt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.vcap .vd{margin-top:3px;font-size:12px;color:var(--ink3);line-height:1.5}
+.beats{display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fa8c8}
+.beat .bd{font-size:13px;color:var(--ink);line-height:1.45}
+.beat .bd b{font-weight:600}
+@media(max-width:720px){ .hero2{grid-template-columns:1fr} }
+
+.refs{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.7)}
+.ref img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;background:#0a0a0d}
+.ref .rb{padding:13px 15px}
+.ref .rc{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8fb4d8;font-weight:600}
+.ref .rt{margin-top:4px;font-size:13.5px;color:var(--ink);font-weight:500}
+.ref .rd{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:600px){ .refs{grid-template-columns:1fr} }
+
+.settings{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.set{border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:rgba(13,13,18,.7)}
+.set .sk{font-size:9.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--c3)}
+.set .sv{margin-top:5px;font-size:15px;color:var(--ink);font-weight:500}
+
+
+
+.refs4{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.rf{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,13,18,.72)}
+.rf.prize{border-color:rgba(255,190,100,.3)}
+.rf img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block;background:#0a0a0d}
+.rf .rb{padding:11px 13px;text-align:left}
+.rf .rs{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fb4d8;font-weight:600}
+.rf.prize .rs{color:#e0b874}
+.rf .rt{margin-top:4px;font-size:12.5px;color:var(--ink);font-weight:500}
+.rf .rd{margin-top:3px;font-size:11.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .refs4{grid-template-columns:repeat(2,1fr)} }
+
+.beats{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.beat{display:grid;grid-template-columns:76px 26px 170px 1fr;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:rgba(200,200,200,.025)}
+.beat .bt{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8fa8c8}
+.beat .be{font-size:15px;text-align:center}
+.beat .bn{font-size:13px;color:var(--ink);font-weight:500}
+.beat .bd{font-size:12.5px;color:var(--ink3);line-height:1.45}
+@media(max-width:760px){ .beat{grid-template-columns:72px 24px 1fr;row-gap:4px} .beat .bd{grid-column:1/-1} }
+
+.libs{margin-top:16px;display:flex;flex-direction:column;gap:9px;text-align:left}
+.lib{border-left:2px solid rgba(255,140,140,.45);padding:2px 0 2px 15px}
+.lib.win{border-left-color:rgba(140,220,160,.5)}
+.lib .ln{display:block;font-size:13px;color:var(--ink);font-weight:600;margin-bottom:4px}
+.lib .lt{display:block;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#9fb6cc;line-height:1.6}
+
+.cks{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.ck{display:grid;grid-template-columns:250px 1fr;gap:14px;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;background:rgba(200,200,200,.02)}
+.ck .cn{font-size:13px;color:var(--ink);font-weight:600}
+.ck .cd{font-size:12.5px;color:var(--ink2);line-height:1.5}
+@media(max-width:700px){ .ck{grid-template-columns:1fr;row-gap:5px} }
+
+.sts{margin-top:16px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.st{display:grid;grid-template-columns:30px 1fr;gap:13px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:11px 15px;background:rgba(200,200,200,.025)}
+.st .sn{width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,200,200,.28);display:flex;
+  align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--c2)}
+.st .sb{font-size:13.5px;color:var(--ink2);line-height:1.5}
+.st .sb b{color:var(--ink);font-weight:600}
+.st .sb a{color:#8fb4d8}
+pre{max-height:360px}
+
+
+
+.vids{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:620px;margin-left:auto;margin-right:auto}
+.vv{border:1px solid rgba(120,180,255,.22);border-radius:16px;overflow:hidden;background:rgba(13,13,18,.7)}
+.vv video{width:100%;height:auto;display:block;aspect-ratio:9/16;background:#08080a;object-fit:cover}
+.vv .vc{padding:9px 12px;text-align:left;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8fa8c8}
+.fields{margin-top:16px;display:flex;flex-direction:column;gap:10px;text-align:left}
+.fl{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:rgba(200,200,200,.025)}
+.fl .fn{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8fb4d8;font-weight:600}
+.fl .fd{margin-top:4px;font-size:13px;color:var(--ink2);line-height:1.55}
+.fl .fe{margin-top:8px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#9fb6cc;line-height:1.6;border-left:2px solid rgba(120,180,255,.3);padding-left:12px}
+
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Тренд · AI — Новый Уровень</div>
+    <h1>Великан<br>с <em>сумкой</em></h1>
+    <div class="author">by @alexkapustyanov</div>
+    <p class="intro">Героиня ростом <b>40 метров</b> аккуратно переходит дорогу у дворца, перешагивая машины. Сумка не застёгнута — и из неё один за другим вываливаются <b>три товара размером с дом</b>. Камера лежит прямо на брусчатке. Двенадцать секунд одним кадром, 9:16. <b>Промпт универсальный</b> — заполняются только четыре описания в квадратных скобках.</p>
+
+    <div class="vids">
+      <div class="vv"><video src="result.mp4" poster="poster.jpg" playsinline controls preload="metadata"></video><div class="vc">Пример 1</div></div>
+      <div class="vv"><video src="result2.mp4" poster="poster2.jpg" playsinline controls preload="metadata"></video><div class="vc">Пример 2</div></div>
+    </div>
+
+    <div class="refs4">
+      <div class="rf prize">
+        <img src="ref1-hero.jpg" alt="Главный товар" loading="lazy">
+        <div class="rb"><div class="rs">@image1 · главный</div><div class="rt">Главный товар</div><div class="rd">Падает первым, ближе всех к камере — на 2/3 кадра</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref2-second.jpg" alt="Второй товар" loading="lazy">
+        <div class="rb"><div class="rs">@image2 · второй</div><div class="rt">Второй товар</div><div class="rd">Падает на втором шаге</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref3-third.jpg" alt="Третий товар" loading="lazy">
+        <div class="rb"><div class="rs">@image3 · третий</div><div class="rt">Третий товар</div><div class="rd">Падает следом за вторым</div></div>
+      </div>
+      <div class="rf">
+        <img src="ref4-woman.jpg" alt="Великанша" loading="lazy">
+        <div class="rb"><div class="rs">@image4 · героиня</div><div class="rt">Великанша</div><div class="rd">Лицо крупно + образ в полный рост</div></div>
+      </div>
+    </div>
+    <div class="warn"><span class="wi">⚠️</span><span class="wt"><b>Порядок критичен.</b> Теги привязаны к позиции фото, а не к имени файла: первые три — товары, четвёртая — героиня. Товары грузи на белом фоне, крупно, чтобы читались форма и логотип.</span></div>
+
+    <div class="howto">
+      <div class="ht">Раскадровка · 4 бита</div>
+      <div class="beats">
+        <div class="beat"><span class="bt">0–1.6 с</span><span class="be">👀</span><span class="bn">Оглядывается</span><span class="bd">Стоит у края дороги выше дворца. Голова вниз: смотрит налево, потом направо</span></div>
+        <div class="beat"><span class="bt">1.6–5.4 с</span><span class="be">👜</span><span class="bn">Первый шаг</span><span class="bd">Нога перешагивает фургон, сумка кренится — главный товар переваливается через край и падает прямо к камере</span></div>
+        <div class="beat"><span class="bt">5.4–9.0 с</span><span class="be">🚌</span><span class="bn">Второй шаг</span><span class="bd">Перешагивает автобус. Вываливаются второй и третий товары, каждый выше машин</span></div>
+        <div class="beat"><span class="bt">9.0–12 с</span><span class="be">☝️</span><span class="bn">Замечает</span><span class="bd">Глаза → голова → взгляд на открытую сумку. Приседает и тянет палец к товару, не касаясь. Конец</span></div>
+      </div>
+      <div class="note">💡 Масштаб держится на <b>соседях</b>: машины, окна дворца, плиты брусчатки. Никто из водителей не реагирует — именно это делает великаншу обыденной, а не катастрофой.</div>
+    </div>
+
+    <div class="howto">
+      <div class="ht">Как сделать в Syntx</div>
+      <div class="sts">
+        <div class="st"><span class="sn">1</span><span class="sb">Открыть <a href="https://syntx.ai/welcome/4TnpxLFN" target="_blank" rel="noopener"><b>syntx.ai</b></a></span></div>
+        <div class="st"><span class="sn">2</span><span class="sb">Перейти в раздел <b>Видео</b></span></div>
+        <div class="st"><span class="sn">3</span><span class="sb">Выбрать модель <b>Seedance 2.5</b></span></div>
+        <div class="st"><span class="sn">4</span><span class="sb">Качество <b>720p</b>, формат <b>9:16</b>, длительность <b>12 секунд</b></span></div>
+        <div class="st"><span class="sn">5</span><span class="sb">Приложить <b>4 фото</b> в порядке из таблицы выше</span></div>
+        <div class="st"><span class="sn">6</span><span class="sb">Вставить промпт с заполненными полями и запустить</span></div>
+      </div>
+    </div>
+
+    <div class="map">
+      <a class="m" href="#s1"><b>✏️</b> Как заполнить</a>
+      <a class="m" href="#s2"><b>📝</b> Промпт</a>
+      <a class="m" href="#s3"><b>🔧</b> Проверка</a>
+    </div>
+  </header>
+
+  <section class="step" id="s1">
+    <div class="s-head">
+      <div class="s-num">✏️</div>
+      <div>
+        <div class="s-kicker">Четыре поля</div>
+        <h2>Как заполнить промпт</h2>
+      </div>
+    </div>
+    <p class="s-lead">В начале промпта четыре строки <b>[describe: …]</b>. Замени их описаниями на английском — всё остальное работает как есть. Ниже примеры для товаров из роликов.</p>
+    <div class="fields">
+        <div class="fl"><div class="fn">[@image1 — describe]</div><div class="fd">Главный товар: форма, цвет, материал, покрытие, где логотип и <b>реальный размер в сантиметрах</b>. Без размера модель не понимает, во сколько раз его увеличивать.</div><div class="fe">a matte dark grey handheld hair dryer with a short cylindrical head, a bright fuchsia ring around the air outlet, a long straight grey handle, approximately 25 centimetres long</div></div>
+        <div class="fl"><div class="fn">[@image2 — describe]</div><div class="fd">Второй товар — по той же схеме.</div><div class="fe">a slim rectangular smartphone in glossy magenta aluminium with rounded corners, a triple camera module in the top left corner of the back, a small logo centred on the back, approximately 15 centimetres tall</div></div>
+        <div class="fl"><div class="fn">[@image3 — describe]</div><div class="fd">Третий товар — по той же схеме. Надписи на упаковке пишите словами, иначе модель их размажет.</div><div class="fe">a slim cylindrical brow pencil in brushed silver metal with a white label band and the word LUVU in black capital letters along the barrel, approximately 14 centimetres long</div></div>
+        <div class="fl"><div class="fn">[@image4 — describe]</div><div class="fd">Героиня: кожа, веснушки и родинки, брови, цвет глаз, причёска, затем <b>вся одежда сверху вниз</b>, включая обувь. Сумку описывать не нужно — её задаёт промпт.</div><div class="fe">light olive skin, straight dark eyebrows, dark brown eyes, sleek black hair pulled back into a high ponytail; a black leather high-neck jacket, a long black pleated midi skirt, black leather knee-high boots</div></div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="s-head">
+      <div class="s-num">📝</div>
+      <div>
+        <div class="s-kicker">Одна кнопка · всё сразу</div>
+        <h2>Промпт</h2>
+      </div>
+    </div>
+    <p class="s-lead">Копируешь целиком, заменяешь четыре поля в квадратных скобках — и в Syntx.</p>
+    <div class="s-tag">📎 Английский · четыре поля в квадратных скобках</div>
+    <div class="prompt vid">
+      <div class="p-bar"><span class="p-label">Всё одним куском</span><button class="copy" data-id="c1">Копировать всё</button></div>
+      <pre id="c1">FOUR REFERENCE IMAGES. EACH DEFINES ONE SUBJECT.
+
+@image1 = THE HERO PRODUCT. [describe: shape, colour, material, finish, logo placement, approximate real-life size in centimetres]
+
+@image2 = THE SECOND PRODUCT. [describe: shape, colour, material, finish, logo placement, approximate real-life size in centimetres]
+
+@image3 = THE THIRD PRODUCT. [describe: shape, colour, material, finish, logo placement, approximate real-life size in centimetres]
+
+@image4 = THE WOMAN. [describe: skin, freckles or marks, eyebrows, eye colour, hairstyle, then the full wardrobe from top to bottom]
+
+From this point on, THE HERO PRODUCT, THE SECOND PRODUCT, THE THIRD PRODUCT and THE WOMAN always mean exactly these four subjects.
+
+Use each reference exclusively for the identity of its own subject: recognizable shape, proportions, colors, materials, surface details, branding, logo, typography, face, hair and wardrobe.
+
+Ignore the white studio backgrounds of all four references completely. Do not reproduce their studio environments, reference lighting, shadows, compositions or camera angles.
+
+The three products are three DIFFERENT objects. Never merge, swap or cross-brand them. Never place branding, lettering or colour from one onto another.
+
+EXACTLY THREE OBJECTS FALL IN THIS FILM: THE HERO PRODUCT, THE SECOND PRODUCT and THE THIRD PRODUCT. Nothing else ever falls from the bag or into frame. No extra shoes, boots, bags, accessories, clothing or unbranded props of any kind.
+
+THE WOMAN remains the exact same recognizable person in the exact same wardrobe throughout. Do not invent additional clothing or accessories beyond the shoulder bag described below.
+
+She carries ONE large structured shoulder bag on a strap over one shoulder, in a material consistent with her wardrobe, scaled to her — it is the size of a shipping container relative to the square. The bag has a fold-over flap closure. The flap is NOT fastened, and this is visible from her first appearance: it lifts slightly as she moves. This is the physical cause of everything that falls.
+
+
+CREATE ONE 12-SECOND EXTREMELY PHOTOREALISTIC CINEMATIC FILM SEQUENCE.
+
+VERTICAL 9:16 FORMAT.
+
+ONE CONTINUOUS SHOT. NO CUTS. THE CAMERA NEVER MOVES.
+
+The references control identity only. Everything else is controlled by this screenplay: environment, camera, scale, falling objects, landing behaviour, lighting, acting, timing and physics.
+
+THE PACE OF THIS FILM IS SLOW. In twelve seconds she takes only TWO steps — but those two steps carry her all the way across the road. She is walking, slowly, with enormous mass. She is not standing still and she is not marching in place.
+
+
+GIANT SCALE — HIGHEST PRIORITY
+
+THE WOMAN is enormous. She stands approximately 40 metres tall. Her head and shoulders rise well above the roofline of the palace behind her, and her knee is level with its upper windows.
+
+She is a genuine giant in this world, not an optical illusion and not a trick of the lens. Her body proportions are entirely normal and human — she is simply vast.
+
+SCALE IS ESTABLISHED BY NEIGHBOURS, NOT BY THE CHARACTER.
+
+Ordinary reference objects must remain visible in frame at all times: the moving traffic on the road, the palace facade with its individual windows, the paving slabs, and small human pedestrians far in the background. Without them the scale collapses.
+
+SHE MOVES SLOWLY.
+
+Great mass means great inertia. Every movement takes noticeably longer than the same movement would take an ordinary person: slow acceleration, slow deceleration, long settling of the limbs, visible follow-through in her hair and clothing after the body has stopped.
+
+Never let her move at ordinary human speed. That single mistake instantly reads her as a normal-sized person.
+
+Her weight is felt by the world: a low tremor travels through the square with each footfall, loose grit on the paving jumps, and fine dust lifts where her feet land.
+
+HER SCALE NEVER CHANGES. She does not shrink or grow between beats or between frames.
+
+
+THE PRODUCTS ARE COLOSSAL
+
+The falling objects are scaled to HER, not to the city. On this street they are architecture, not merchandise.
+
+ABSOLUTE SIZE: once landed, THE HERO PRODUCT is roughly the size of a two-storey building — about the length of a city bus and as tall as the first two floors of the palace behind it. The other two products are correspondingly vast.
+
+FRAMING SIZE — THE RELIABLE TEST: because it lands closest to the lens on an ultra-wide, THE HERO PRODUCT must fill AT LEAST TWO THIRDS OF THE FRAME WIDTH and reach roughly HALF THE FRAME HEIGHT once it settles. It dominates the composition completely. THE WOMAN, the road and the palace are all visible ABOVE and AROUND it, small by comparison.
+
+If the product looks like an ordinary object lying on a pavement, the shot has failed.
+
+THE SECOND and THIRD PRODUCTS land further from the lens and are therefore smaller in frame, but each still spans a significant portion of the frame width and stands taller than the vehicles on the road behind them.
+
+THE COMPARISON MUST BE IN THE FRAME: at least once, a car passes along the road directly behind a landed product, and the car is TINY against it — a fraction of its height, a small moving shape beside a wall of packaging.
+
+This is a faithful proportional scale-up of each object, never a redesign. Every proportion, ratio, material, logo and letterform stays exactly as in its reference — simply seen at a size where the street reads it as monumental.
+
+Do not simplify, thicken, stretch or &quot;adapt&quot; any packaging for the larger size. Do not invent additional seams, panels, detail or text that would only exist on a large object.
+
+At this size the real material must be visible in full: the actual surface finish rendered across metres, the actual print quality, the actual texture and grain of the packaging or leather.
+
+
+THE CAMERA
+
+PLACE THE CAMERA PHYSICALLY ON THE GROUND.
+
+The lens sits directly on the stone paving, a few centimetres above the surface, tilted slightly upward.
+
+Use an ULTRA-WIDE perspective approximately equivalent to a 14mm spherical lens, with the mild natural barrel distortion such a lens produces: straight lines bowing gently at the frame edges, enormous exaggerated depth between foreground and background.
+
+The camera is ABSOLUTELY LOCKED OFF for the entire film. It never pans, tilts, pushes, rises or drifts. Not one frame of camera movement.
+
+FRAME STRUCTURE — four depth planes that never change:
+
+FOREGROUND, bottom edge: the stone paving surface itself, rendered huge and out of focus — individual grit, small pebbles, the mortar lines between slabs.
+
+NEAR MIDGROUND, centre and filling most of the frame once the first product lands: the patch of paving in front of the lens where the products land. Everything that falls lands HERE, and the landed objects become the dominant mass of the composition, towering in the lower two thirds of the frame.
+
+FAR MIDGROUND: the road, crossing the frame horizontally, BEYOND the landing zone so passing vehicles never block the landed products. This is where she walks.
+
+BACKGROUND, upper half: the palace and the sky.
+
+
+CINEMATIC WORLD
+
+A large open public square in a northern European capital on a bright day.
+
+Behind THE WOMAN stands a grand pale stone baroque palace facade: a tall arched gateway at its centre, ornamental sculpture along its roofline, rows of tall windows, a stone balustrade running along the front.
+
+The square is paved in large irregular grey stone slabs with visible mortar joints, scattered grit and small pebbles.
+
+THE ROAD:
+
+A normal city road runs across the square in the FAR MIDGROUND, between the landing zone and the palace, crossing the frame horizontally from one edge to the other. It is wide enough that crossing it takes her two full strides.
+
+Ordinary traffic uses it throughout the film at ordinary speed: several cars, a delivery van, a city bus, spaced irregularly as real traffic is.
+
+The vehicles are completely normal in size. They are the primary measure of everything else in the frame.
+
+The traffic never stops, never swerves, never crashes and never reacts to her. The drivers do not look up. Their obliviousness is deliberate and is what makes the scale read as ordinary rather than as a disaster.
+
+A few ordinary pedestrians are visible far in the background, tiny against her. They never react either.
+
+The sky fills the upper part of the frame: deep saturated blue with large bright cumulus clouds, high contrast, strong definition in the cloud edges.
+
+Everything is real, lived-in and unremarkable. This is a real city square, not a clean render.
+
+
+LIGHTING AND FILM LANGUAGE
+
+Bright daylight, high sun on a clear day.
+
+Hard sunlight from behind and above the camera rakes across the paving, picking out the texture of the stone.
+
+Because the landed objects are the size of buildings, each casts a vast architectural shadow that falls across the paving, across the road and over the passing vehicles, darkening them as they drive through it.
+
+THE WOMAN casts a genuine enormous shadow that sweeps across the square, the road and the traffic as she moves. The shadow travels with her as she advances, which is one more proof that she is covering ground.
+
+The palace facade is bright and holds full highlight detail. The sky retains full cloud structure and never blows out to white.
+
+The products are the most saturated masses in the frame and separate hard from the neutral grey stone.
+
+Use natural daylight only.
+
+The look is HIGH-SATURATION CONTEMPORARY FASHION FILM:
+
+deep punchy colour,
+rich saturated blues in the sky,
+strong colour separation between the products and the grey stone,
+crisp contrast,
+clean digital capture with a slight filmic grade,
+natural skin tones,
+deep but detailed shadows,
+fine subtle grain,
+sharp foreground micro-texture,
+realistic optical depth from the ultra-wide lens,
+and natural 24fps motion blur.
+
+The image must feel genuinely photographed on a real camera lying on a real street.
+
+No dreamy haze. No washed-out pastel grade. No artificial HDR. No plastic skin. No videogame, CGI monster-movie or kaiju look.
+
+
+THE FALLING OBJECTS — FULLY REALISTIC PHYSICS
+
+Nothing falls out of the empty sky. Each of the three products is TIPPED OUT of her open shoulder bag by the movement of the bag itself.
+
+THE GRAMMAR OF THE SPILL — IMPORTANT:
+
+The bag is the active thing. The products are entirely passive. They have no momentum of their own and never propel themselves.
+
+Show the causal chain: HER TORSO ROTATES AS SHE SHIFTS HER WEIGHT → THE BAG SWINGS ON ITS STRAP AND TURNS PAST HORIZONTAL → THE UNFASTENED FLAP FALLS OPEN UNDER ITS OWN WEIGHT → THE CONTENTS INSIDE SHIFT AND SLUMP TOWARD THE OPENING → GRAVITY TAKES THEM OVER THE LIP → THEY SIMPLY FALL.
+
+At the moment of release the product is barely moving. It emerges slowly, tipping over the edge of the opening the way something slides off a tilted shelf, and only then begins to accelerate downward under gravity alone.
+
+It must never be ejected, launched, flung, shot out, thrown or pushed. It never leaves the bag faster than the bag itself is moving. There is no outward or upward velocity at the moment of release — only the slow topple over the lip and then the fall.
+
+The first fraction of the fall is slow. The speed comes from the height, not from the exit.
+
+She does not notice. Her attention stays on the road at her feet. She never looks at the bag, never checks it, never opens or shakes it on purpose.
+
+THE FALL:
+
+The objects leave the bag from her shoulder height — an enormous distance relative to the street — and fall the entire way to the ground.
+
+Each fall is completely physically real: correct gravitational acceleration from a near standstill, correct increasing speed, correct motion blur, correct tumbling rotation from air resistance. Denser objects tumble less; lighter and flatter ones tumble more.
+
+Because these are building-sized masses falling from that height, they arrive with tremendous speed and momentum, and they grow enormously in frame as they approach the lens.
+
+THE LANDING — FULLY REALISTIC, NO STYLIZATION:
+
+Each object hits the stone hard and behaves exactly as that real object would at that mass and speed.
+
+It does NOT come to rest standing upright. It does NOT arrive in a display pose.
+
+On impact: a colossal heavy strike, a great burst of dust and grit thrown outward across the paving, a genuine bounce or skid, one or two secondary impacts, a long slide across the stone, and then it comes to rest wherever the physics leaves it — on its side, at an angle, rocking to a stop, however it actually falls.
+
+Rigid objects strike hard and bounce or skid. Soft objects hit with a dull heavy impact, deform on contact, recover their shape and settle without bouncing. Objects with straps or cords whip on impact and trail loose across the stone.
+
+Each landing sends a visible shockwave of dust rolling outward past the lens.
+
+BRANDING VISIBILITY, IN SPITE OF REALISM:
+
+Although the landings are uncontrolled, each of the three products happens to come to rest with its branded face turned toward the lens and readable. This is the one piece of luck in an otherwise fully physical sequence.
+
+Nothing is ever damaged. No scuffs, no dents, no tears, no scratches. The stone beneath is not cracked.
+
+Once an object has settled it STAYS exactly where it settled, in frame, for the rest of the film. Nothing vanishes and nothing moves again.
+
+
+ACTING DIRECTION
+
+THE WOMAN behaves like a real human being who simply happens to be enormous.
+
+She is not a monster and not a spectacle. She is a composed woman crossing a busy road, concentrating on where she puts her feet.
+
+She never roars, never stomps deliberately, never threatens, never performs power, never acknowledges the camera, never poses.
+
+All acting is restrained, psychologically motivated and physically believable.
+
+THOUGHT PRECEDES ACTION. CAUSE PRECEDES EFFECT.
+
+EYES REACT FIRST → TINY PROCESSING PAUSE → HEAD FOLLOWS → TINY PAUSE → BODY FOLLOWS. At her scale each of these pauses lasts longer.
+
+HER CENTRAL BEHAVIOUR — CROSSING THE ROAD:
+
+Her whole attention is on the traffic beneath her. She is careful the way a person is careful stepping through a room of sleeping animals: she does not want to hurt anything.
+
+Her head stays angled DOWNWARD toward the road for most of the film, her eyes scanning the moving vehicles.
+
+Before each step she looks left along the road, then right, checking what is coming. Her head turns slowly and deliberately between the two directions.
+
+THE ANATOMY OF ONE STEP — this is the core action:
+
+WEIGHT SHIFTS onto the standing leg →
+THE OTHER FOOT LIFTS high, the knee rising, the sole clearing a vehicle&#x27;s roof →
+A BRIEF HOLD while the vehicle passes underneath — one beat only, not a long pause →
+THE FOOT TRAVELS FORWARD THROUGH THE AIR, moving a genuine distance across the road, not merely up and down →
+IT COMES DOWN DECISIVELY on the empty asphalt ahead, in one committed movement with the weight behind it →
+CONTACT, firm and heavy: a tremor through the road, a burst of dust outward, nearby vehicles rocking on their suspension →
+THE WEIGHT TRANSFERS FULLY FORWARD onto the new leg. The hips move forward over the foot. The trailing leg leaves the ground behind her and follows →
+HER WHOLE BODY HAS ADVANCED. Her hair and clothing settle a moment after she stops.
+
+CRITICAL: EACH STEP CARRIES HER FORWARD ACROSS THE GROUND.
+
+This is walking, slowly — not marching in place and not standing still while lifting a leg.
+
+Her position in the frame must visibly change between steps. She starts the film on the near side of the road and finishes it on the far side, clearly closer to the palace, having covered real distance.
+
+THE RHYTHM OF THE STEP: the lift is slow and careful, the hold is one beat, and then the DESCENT AND PLANTING ARE NOTICEABLY QUICKER. Once she has decided where the foot goes, it goes. The foot travels forward and lands firmly in one movement, without hovering or drifting down.
+
+It is the deliberation that is slow, not the execution. A person crossing a busy road takes a long time deciding and then moves decisively.
+
+She completes TWO such steps in the film. No more. The slowness lives in the pauses between steps, not in the planting.
+
+She never crushes, kicks or touches a single vehicle. The care is deliberate and readable throughout.
+
+She never flinches at the objects falling from her bag and never looks up at the sky.
+
+Natural breathing. Natural weight transfer. Natural body inertia. Correct human anatomy and joint articulation.
+
+No exaggerated expressions. No theatrical gestures. No comic wobbling.
+
+
+0.0–1.6s — OPENING
+
+Begin with the locked-off ground-level composition.
+
+THE WOMAN stands in the far midground at the NEAR EDGE of the road, towering far above the palace behind her, the open-flapped bag at her side.
+
+The paving in front of the lens is completely empty.
+
+Traffic moves normally along the road at her feet. A car crosses the frame beneath her.
+
+Her head is angled down. She looks LEFT along the road, then slowly RIGHT, judging the traffic before she moves.
+
+A low tremor travels through the square as she shifts her weight.
+
+Hold this beat so the geometry registers: the huge empty stone foreground, the ordinary traffic, her vast figure against the clouds, the palace tiny beneath her.
+
+
+1.6–5.4s — THE FIRST STEP, AND THE HERO PRODUCT FALLS
+
+Her weight shifts onto one leg.
+
+The other foot lifts high, the knee rising, the sole clearing the roof of a delivery van approaching beneath her. One beat of hold as the van passes underneath.
+
+As her torso rotates with the raised leg, the bag swings forward on its strap and turns past horizontal. The unfastened flap falls open under its own weight.
+
+Inside, the contents shift toward the opening. THE HERO PRODUCT slumps over the lip and tips out, barely moving as it leaves.
+
+Then gravity takes it. It falls the full height of the frame, accelerating from almost nothing, tumbling, growing enormously as it nears the ground until it fills the width of the frame.
+
+It strikes the paving in the NEAR MIDGROUND closest to camera with a colossal impact, throwing a great shockwave of dust and grit rolling outward past the lens, bounces heavily once, skids across the stone and rocks to a stop on its side at an angle — but with its branded face turned toward the lens and fully readable.
+
+A car passes along the road directly behind it as it settles, driving on without slowing. The car is tiny against it — a small moving shape at the foot of a wall of packaging, a fraction of its height.
+
+THE HERO PRODUCT now fills at least two thirds of the frame width and reaches roughly half the frame height. It is the dominant mass of the composition. THE WOMAN, the road and the palace are visible above and around it, small by comparison.
+
+Show its real material across that scale: the surface finish rendered over metres, the print quality, the texture and grain.
+
+It holds this position for the remainder of the film, and its shadow falls across the road behind it.
+
+Meanwhile her raised foot travels forward through the air and comes down decisively on the empty asphalt on the far side — one committed movement, the weight behind it, landing firmly. The road trembles, dust bursts outward, the nearest cars rock on their suspension.
+
+Her hips move forward over the planted foot. Her trailing leg leaves the ground behind her and follows.
+
+Her whole body has advanced across the frame. Her hair settles a moment after she stops.
+
+She has not noticed the spill. Her eyes are on the traffic.
+
+
+5.4–9.0s — THE SECOND STEP, AND THE OTHER TWO FALL
+
+She straightens and looks LEFT along the road, then slowly RIGHT, judging the next gap.
+
+Her weight shifts onto the other leg.
+
+Her second foot lifts high and holds one beat while a city bus passes beneath it.
+
+The bag swings forward again and the open flap tips a second time.
+
+THE SECOND PRODUCT slumps over the lip and tips out with no momentum of its own, then falls the full height, strikes the stone BEHIND and to one side of the hero product with a heavy impact and its own burst of dust, bounces, slides and settles at its own uncontrolled angle — branded face toward the lens, standing taller than the vehicles on the road behind it.
+
+A moment later THE THIRD PRODUCT tips out of the same opening the same way, falls, hits the paving on the other side, deforms or bounces according to its real material, and comes to rest — branded face toward the lens, equally vast.
+
+All three products are now on the ground, clearly separated, none overlapping, all readable, together filling the lower two thirds of the composition.
+
+Traffic continues to pass behind them, tiny by comparison, driving through their shadows.
+
+Meanwhile her raised foot travels forward across the remaining width of the road and comes down decisively behind the bus, landing firmly in one committed movement. Tremor, dust, vehicles rocking.
+
+Her hips move forward over it. The trailing leg follows.
+
+She has now fully crossed the road and stands clearly closer to the palace than when the film began.
+
+She still has not noticed. Her eyeline stays on the asphalt.
+
+
+9.0–12.0s — SHE NOTICES AND REACHES
+
+Now settled on both feet on the far side, she finally catches the movement below.
+
+Her EYES react first.
+
+Tiny processing pause.
+
+Her head turns down toward the three vast objects lying on the paving.
+
+Tiny pause.
+
+She glances sideways at her own open bag, and understands.
+
+She lowers herself toward them in one slow weighted movement — the knees bending, the back staying straight, one hand going down toward the stone for balance. The descent takes real time and carries real mass.
+
+Because of the ultra-wide lens and her closeness, that hand comes near the camera and is rendered enormous and distorted at the frame edge — and even at her scale, the products beneath it are large enough that her palm would not cover one.
+
+She settles into the crouch. Her hair swings forward and settles a moment after her body has stopped.
+
+She extends one finger toward THE HERO PRODUCT with care — but she does not touch it and does not pick anything up. The finger stops just short.
+
+HOLD this suspended beat: her enormous hand above the product, the branded face readable beneath it, the traffic still crossing behind her.
+
+Behind her, a bus passes along the road, tiny against her forearm.
+
+END here, with her finger still hovering short of the product.
+
+The three products lie untouched in the foreground, branded faces toward camera, filling the lower two thirds of the frame, with ordinary traffic still crossing the road behind.
+
+Do not resolve the scene. Do not have her pick anything up. Do not cut to a product packshot. Do not add text.
+
+
+FINAL PRIORITIES
+
+PRIORITY 1 — THE PRODUCTS ARE COLOSSAL. Once landed, THE HERO PRODUCT fills at least two thirds of the frame width and half the frame height, roughly the size of a two-storey building. The other two products are correspondingly vast and stand taller than the vehicles behind them. Passing cars are tiny against them. If any product reads as an ordinary-sized object on a pavement, the shot has failed.
+
+PRIORITY 2 — GIANT SCALE, STABLE. She is approximately 40 metres tall in every frame and never shrinks toward normal size. Scale anchors — traffic, palace windows, paving slabs, distant pedestrians — stay visible throughout.
+
+PRIORITY 3 — TWO STEPS THAT COVER REAL DISTANCE. She takes exactly two steps in twelve seconds, and each one carries her forward across the ground. Her position in frame visibly changes: she begins on the near side of the road and ends on the far side, clearly closer to the palace. She never marches in place and never stays in the same spot.
+
+PRIORITY 4 — THE STEP RHYTHM. The lift is slow and the hold is one beat, but the descent and planting are quick and committed. The foot never hovers, drifts or floats down. It lands firmly with the weight behind it.
+
+PRIORITY 5 — THE BAG TIPS THEM OUT. The bag is active, the products are passive. Each product slumps over the lip of the open flap with almost no velocity and then falls under gravity alone. Nothing is ever ejected, launched, flung or propelled out of the bag.
+
+PRIORITY 6 — SHE LOOKS DOWN AND CHECKS. Head angled down throughout, looking left then right along the road before each step. She never crushes, kicks or touches a vehicle.
+
+PRIORITY 7 — EXACTLY THREE FALLING OBJECTS. Only the three branded products fall. No shoes, boots, accessories or unbranded props of any kind ever appear.
+
+PRIORITY 8 — FULLY REALISTIC FALLING AND LANDING. Real gravitational acceleration from a near standstill, colossal impact, real bounce, skid, deformation and settling, with great shockwaves of dust. Objects come to rest at uncontrolled angles, on their sides, wherever the physics leaves them. Nothing lands standing upright or in a display pose.
+
+PRIORITY 9 — BRANDED FACES READABLE. Despite the uncontrolled landings, each of the three products happens to settle with its branded face toward the lens and readable.
+
+PRIORITY 10 — FAITHFUL SCALE-UP. The products are proportional enlargements with every proportion, material, logo and letterform identical to their references. Nothing redesigned, simplified or invented for the larger size.
+
+PRIORITY 11 — THE CAMERA IS ON THE GROUND AND NEVER MOVES. Lens resting on the paving, ultra-wide, locked off for all twelve seconds. Zero camera movement in any frame.
+
+PRIORITY 12 — PERSISTENCE. Landed objects stay exactly where they settled, in frame, to the final frame. Nothing vanishes, nothing moves twice, nothing is collected or touched.
+
+PRIORITY 13 — PRODUCT IDENTITIES. Three different branded objects, each matching its own reference exactly, spaced apart, never overlapping, never cross-branded.
+
+PRIORITY 14 — SLOW GIANT MOVEMENT AND AN OBLIVIOUS WORLD. All her motion carries great mass. She never roars, stomps deliberately, poses or acknowledges the camera. Traffic and pedestrians never react.
+
+PRIORITY 15 — CONTINUOUS SINGLE SHOT. No cuts, no transitions, no scene changes.
+
+
+MANDATORY STORY CONTINUITY:
+
+empty stone foreground, ordinary traffic crossing the road, she stands at the near edge of the road towering above the palace with her bag flap open → head down, she looks left along the road, then right → weight shifts, one foot lifts high, clearing a van&#x27;s roof, one beat of hold as it passes → her torso rotates, the bag swings and turns past horizontal, the flap falls open under its own weight → the hero product slumps over the lip and tips out with almost no velocity → gravity takes it, it accelerates from nothing, tumbling and growing enormously the full height of the frame → it strikes the stone with a colossal impact, throws a shockwave of dust past the lens, bounces, skids and rocks to a stop on its side, branded face toward the lens, filling two thirds of the frame width → a car passes behind it and is tiny against it → her foot travels forward and comes down decisively on the far side, landing firmly, tremor and dust → her hips move forward, the trailing leg follows, her whole body has advanced → she looks left and right again → weight shifts, the second foot lifts high and holds one beat while a bus passes beneath → the bag tips again, the second and third products slump over the lip and fall, impact, bounce and settle at their own uncontrolled angles, branded faces toward the lens, each taller than the vehicles behind → her foot travels forward and lands firmly behind the bus, hips forward, trailing leg follows → she has fully crossed the road and stands closer to the palace → she finally notices, eyes first, then head, then a glance at her open bag → she lowers herself into a slow crouch, knees bending, one hand reaching down, enormous at the frame edge → her hair settles after her body → she extends one careful finger toward the hero product and stops just short of touching it → hold → a bus passes behind her, tiny against her forearm → end with the finger still hovering.
+
+
+FINAL IMAGE AND MOTION QUALITY:
+
+Extremely photorealistic. Contemporary high-saturation fashion film photography. Natural human walking at giant scale, with real forward locomotion. Realistic anatomy. Correct hands and fingers, including at the distorted frame edge. Realistic body inertia and mass. Realistic single-leg balance. Fully physical falling, impact, bounce and settling behaviour at architectural scale. Realistic vehicle behaviour. Correct ultra-wide lens distortion. Crisp foreground micro-texture in the stone. Natural motion blur. Stable character identity. Stable product identities. Stable scale. Stable exposure. Consistent grain. No temporal flicker. No camera jumps. No robotic movement. No synthetic AI-video appearance.
+
+4K, Ultra HD, rich details, sharp clarity, natural colors, stable picture.
+
+NEGATIVE / DO NOT: the products rendered at ordinary real-life size; the products rendered merely car-sized or smaller; the hero product occupying less than two thirds of the frame width once landed; the products reading as normal merchandise lying on a pavement; cars appearing comparable in size to a landed product; products being ejected, launched, flung, shot out, thrown or pushed from the bag; products leaving the bag with their own momentum, sideways or upward velocity; products popping out as if spring-loaded; the foot hovering, hesitating or drifting downward slowly on the descent; the foot planting weakly or without impact; the woman marching in place; the woman lifting a leg without then moving forward on it; the woman remaining in the same position in frame for the whole film; her foot returning to the spot it lifted from; no visible change in her distance from the palace between the first and last frame; the woman taking more than two steps; the woman walking at a normal cadence or hurrying; her finger making contact with any product; her touching, nudging or moving anything; any object other than the three branded products falling or appearing in frame; shoes, boots, accessories, clothing or unbranded props falling from the bag; objects landing standing upright, in a display pose or as though placed; objects floating, drifting or falling in slow motion; objects landing without impact, dust, bounce or skid; the woman shrinking to normal human size in any frame; the woman moving at ordinary human speed; the woman stepping on, crushing, kicking or touching any vehicle; the woman walking straight ahead without looking down or checking the road; the frame losing its scale anchors so that no traffic, palace windows or paving slabs remain visible; the road empty of traffic; traffic stopping, swerving, crashing or reacting to her; vehicles scaled wrongly so they read as toys or as full-size relative to her; vehicles driving in front of the landed products and obscuring them; the products redesigned, simplified or given invented detail at large scale; altered logo, invented text or changed proportions; objects falling from an empty sky with no visible source; the bag bursting, tearing or being deliberately opened; her noticing the spill before she has crossed the road; her picking anything up; any product landing face-down so its branding is unreadable; a monster-movie or kaiju aesthetic; the woman roaring, snarling, stomping deliberately or acknowledging the camera; any camera movement, pan, tilt, push or drift; the camera lifting off the ground; the paving cracking or breaking; products overlapping or touching each other; branding or lettering from one product appearing on another; the sky blowing out to flat white; any cut or transition; a static product packshot ending; on-screen text, captions or logos.</pre>
+    </div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="s-head">
+      <div class="s-num">🔧</div>
+      <div>
+        <div class="s-kicker">Первая генерация</div>
+        <h2>На что смотреть</h2>
+      </div>
+    </div>
+    <div class="cks">
+        <div class="ck"><span class="cn">Товары обычного размера</span><span class="cd">Главный провал. Тест простой: приземлившийся главный товар занимает <b>минимум 2/3 ширины кадра</b>, а машины за ним крошечные. Лежит «как на тротуаре» — перегенерируй</span></div>
+        <div class="ck"><span class="cn">Из сумки выпало лишнее</span><span class="cd">В тестовых прогонах вместе с товарами вывалились сапоги. Промпт это запрещает, но лучше страхуйся: полностью опиши обувь героини в [@image4] и не бери в товары обувь</span></div>
+        <div class="ck"><span class="cn">Товары встали как на витрине</span><span class="cd">Приземление должно быть физичным: удар, пыль, отскок, товар лежит под случайным углом. Стоят ровно в ряд — генерация не удалась</span></div>
+        <div class="ck"><span class="cn">Шагает на месте</span><span class="cd">За 12 секунд ровно два шага, и она обязана перейти дорогу — в финале ближе ко дворцу, чем в начале</span></div>
+        <div class="ck"><span class="cn">Товары «выстреливают»</span><span class="cd">Сумка активна, товары пассивны: переваливаются через край почти без скорости и только потом разгоняются</span></div>
+        <div class="ck"><span class="cn">Камера поехала</span><span class="cd">Камера лежит на брусчатке и не двигается все 12 секунд — ни наезда, ни панорамы</span></div>
+    </div>
+    <div class="howto" style="margin-top:22px">
+      <div class="ht">Звук</div>
+      <p style="font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7">Под ролик хорошо ложится спокойный городской фон и <b>низкий глухой удар</b> на каждом шаге и приземлении товара: на <b>~3.5</b>, <b>~5</b>, <b>~7</b> и <b>~8.5 секунде</b>. После 9.0 оставь почти тишину — момент, когда она замечает товары, звучит сильнее без музыки.</p>
+    </div>
+  </section>
+
+  <div class="mclass">
+    <a class="mc-thumb" href="https://neurocreator2.ru/bonus/?from=giant">
+      <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy" width="800" height="450">
+      <span class="pl">▶</span>
+    </a>
+    <div class="mc-body">
+      <div class="mc-kick">Бесплатный мастер-класс</div>
+      <div class="mc-t">Как это собирается — от идеи до ролика</div>
+      <div class="mc-d">Показываю весь процесс вживую: инструменты, генерация, разбор готовой сцены. И там же ждёт подарок.</div>
+      <a class="mc-btn" href="https://neurocreator2.ru/bonus/?from=giant">Смотреть мастер-класс →</a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Хочешь снимать такое <em>на заказ</em>?</h3>
+    <p>Один каркас — и три товара клиента превращаются в ролик, который останавливает ленту. Такое продаётся не разово, а как услуга под целую линейку. На обучении даю систему целиком: от первой генерации до портфолио и первых заказов. Приходи на экскурсию — покажу платформу изнутри и работы учеников, разберу твою ситуацию. Ничего продавать не буду.</p>
+    <a class="btn" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=giant">Записаться на экскурсию →</a>
+    <small>Бесплатно · созвон 30–40 минут · места ограничены</small>
+    <div class="links">
+      <a href="https://t.me/akapustyanov" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@akapustyanov" target="_blank" rel="noopener">YouTube</a>
+      <a href="../guides/">Все гайды</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Спасибо за ваши комментарии и поддержку ❤️<br>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el=document.getElementById(btn.dataset.id), txt=el.innerText;
+    var done=function(){
+      var old=btn.textContent;
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1800);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt,done);});
+    } else { fallback(txt,done); }
+  });
+});
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
