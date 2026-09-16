@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-16T12:18:03Z",
+ "updated": "2026-09-16T12:49:39Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136852470",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SEO специалист / AI продвижение\n🏢 Гараж САО · Сергиев Посад (Московская область)\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/136852470?tech_source=api",
+   "date": "2026-09-16T15:17:41+0300"
+  },
   {
    "id": "hh/137440056",
    "source": "hh",
@@ -9,6 +17,14 @@
    "text": "AI инженер\n🏢 ГКУ Инфогород · Москва",
    "link": "https://hh.ru/vacancy/137440056?tech_source=api",
    "date": "2026-09-16T14:48:05+0300"
+  },
+  {
+   "id": "hh/136455451",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Content Creator (Photo & Video)\n🏢 Лаборатория Маркетинга · Москва\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/136455451?tech_source=api",
+   "date": "2026-09-16T14:46:06+0300"
   },
   {
    "id": "hh/136454690",
@@ -577,22 +593,6 @@
    "text": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)\n🏢 Topface Media · Казань",
    "link": "https://hh.ru/vacancy/136416208?tech_source=api",
    "date": "2026-09-15T16:45:04+0300"
-  },
-  {
-   "id": "hh/127886288",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель по внедрению AI\n🏢 Grand Line · Москва",
-   "link": "https://hh.ru/vacancy/127886288?tech_source=api",
-   "date": "2026-09-15T16:41:36+0300"
-  },
-  {
-   "id": "hh/137387268",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Архитектор ИИ (AI Architect)\n🏢 ТК Машкрепеж-НН · Нижний Новгород",
-   "link": "https://hh.ru/vacancy/137387268?tech_source=api",
-   "date": "2026-09-15T16:26:49+0300"
   },
   {
    "id": "comeinlena/6331",
