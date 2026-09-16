@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-16T12:49:39Z",
+ "updated": "2026-09-16T13:21:08Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136690075",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель отдела внедрения искусственного интеллекта (ИИ)\n🏢 Финансовый Дом «Солид» · Москва",
+   "link": "https://hh.ru/vacancy/136690075?tech_source=api",
+   "date": "2026-09-16T16:12:49+0300"
+  },
   {
    "id": "hh/136852470",
    "source": "hh",
@@ -585,14 +593,6 @@
    "text": "Наставник образовательных программ по ИИ в Хекслете\n🏢 Хекслет · Москва",
    "link": "https://hh.ru/vacancy/137392546?tech_source=api",
    "date": "2026-09-15T17:05:20+0300"
-  },
-  {
-   "id": "hh/136416208",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)\n🏢 Topface Media · Казань",
-   "link": "https://hh.ru/vacancy/136416208?tech_source=api",
-   "date": "2026-09-15T16:45:04+0300"
   },
   {
    "id": "comeinlena/6331",
