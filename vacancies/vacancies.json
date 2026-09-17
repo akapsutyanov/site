@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-17T08:23:37Z",
+ "updated": "2026-09-17T08:55:18Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/135974920",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Video designer / ИИ видеодизайнер (Gamedev)\n🏢 Студия Кефир · Москва",
+   "link": "https://hh.ru/vacancy/135974920?tech_source=api",
+   "date": "2026-09-17T11:21:11+0300"
+  },
   {
    "id": "hh/136777089",
    "source": "hh",
@@ -9,6 +17,14 @@
    "text": "Full-Stack разработчик / Специалист по применению ИИ\n🏢 Группа Компаний «ОСНОВА» · Москва\n💰 до 344828 RUR",
    "link": "https://hh.ru/vacancy/136777089?tech_source=api",
    "date": "2026-09-17T11:09:56+0300"
+  },
+  {
+   "id": "hh/136674324",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "2D AI художник\n🏢 Pixel Talent · Москва",
+   "link": "https://hh.ru/vacancy/136674324?tech_source=api",
+   "date": "2026-09-17T10:52:37+0300"
   },
   {
    "id": "hh/137471351",
@@ -649,22 +665,6 @@
    "text": "SMM работа, вакансии, фриланс\npinned «\n💰\n150 000 ₽ за одну сделку без опыта   Это больше, чем многие получают за месяц работы по найму.  Пока одни жалуются на жизнь, а другие ждут повышения зарплаты, кто-то зарабатывает на недвижимости уже сегодня.\n🔥\nОткрыт набор на обучение агентов по недвижимости…\n»",
    "link": "https://t.me/vacancysmm/16960",
    "date": "2026-09-16T10:56:07+00:00"
-  },
-  {
-   "id": "hh/137423281",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ-монтажёр / AI-креатор (Reels / TikTok / Shorts) в контент-завод\n🏢 Кисикс · Москва\n💰 от 120000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137423281?tech_source=api",
-   "date": "2026-09-16T10:45:54+0300"
-  },
-  {
-   "id": "hh/137421638",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер продукта в VK AI Space\n🏢 VK · Москва",
-   "link": "https://hh.ru/vacancy/137421638?tech_source=api",
-   "date": "2026-09-16T10:40:46+0300"
   },
   {
    "id": "work_editor/6538",
