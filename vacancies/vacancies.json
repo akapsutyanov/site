@@ -1,7 +1,39 @@
 {
- "updated": "2026-09-20T14:14:52Z",
+ "updated": "2026-09-20T14:46:22Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137498308",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Копирайтер / контент менеджер с ИИ\n🏢 Интервуд · Красноярск",
+   "link": "https://hh.ru/vacancy/137498308?tech_source=api",
+   "date": "2026-09-20T17:32:22+0300"
+  },
+  {
+   "id": "hh/137497271",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Вайбкодер/специалист по созданию AI-инструментов, интеграций\n🏢 Expotestdrive · Москва\n💰 от 80000 до 120000 RUR",
+   "link": "https://hh.ru/vacancy/137497271?tech_source=api",
+   "date": "2026-09-20T17:09:58+0300"
+  },
+  {
+   "id": "hh/137018182",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам AI-решений (B2B)\n🏢 АТЛАНТ КОНСАЛТ · Екатеринбург\n💰 от 100000 до 500000 RUR",
+   "link": "https://hh.ru/vacancy/137018182?tech_source=api",
+   "date": "2026-09-20T16:59:52+0300"
+  },
+  {
+   "id": "hh/136563592",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-специалист / Prompt Engineer (специалист по нейросетям)\n🏢 Елисеев Максим Анатольевич · Москва",
+   "link": "https://hh.ru/vacancy/136563592?tech_source=api",
+   "date": "2026-09-20T16:56:24+0300"
+  },
   {
    "id": "hh/137256407",
    "source": "hh",
@@ -585,38 +617,6 @@
    "text": "Ассистент / Стажёр в сфере ИИ\n🏢 Valanatoys · Долиновка\n💰 от 15000 RUR",
    "link": "https://hh.ru/vacancy/137540418?tech_source=api",
    "date": "2026-09-18T19:15:09+0300"
-  },
-  {
-   "id": "hh/136811534",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор\n🏢 Первый Слой · Москва\n💰 от 90000 до 110000 RUR",
-   "link": "https://hh.ru/vacancy/136811534?tech_source=api",
-   "date": "2026-09-18T19:12:31+0300"
-  },
-  {
-   "id": "hh/137400855",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-помощник / Креатор коротких AI-видео (ИИ-видео)\n🏢 П4 · Москва\n💰 от 20000 до 25000 RUR",
-   "link": "https://hh.ru/vacancy/137400855?tech_source=api",
-   "date": "2026-09-18T18:43:38+0300"
-  },
-  {
-   "id": "hh/136744726",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-специалист по управлению контентом\n🏢 Оконный континент · Москва",
-   "link": "https://hh.ru/vacancy/136744726?tech_source=api",
-   "date": "2026-09-18T18:32:57+0300"
-  },
-  {
-   "id": "hh/136966816",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Коммуникационный дизайнер | AI-дизайнер\n🏢 Студия Чижова · Санкт-Петербург\n💰 от 110000 до 120000 RUR",
-   "link": "https://hh.ru/vacancy/136966816?tech_source=api",
-   "date": "2026-09-18T18:03:25+0300"
   },
   {
    "id": "SearchEditorr/3917",
