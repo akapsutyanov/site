@@ -1,7 +1,23 @@
 {
- "updated": "2026-09-20T08:27:40Z",
+ "updated": "2026-09-20T08:59:09Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/135974920",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Video designer / ИИ видеодизайнер (Gamedev)\n🏢 Студия Кефир · Москва",
+   "link": "https://hh.ru/vacancy/135974920?tech_source=api",
+   "date": "2026-09-20T11:21:11+0300"
+  },
+  {
+   "id": "hh/136674324",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "2D AI художник\n🏢 Pixel Talent · Москва",
+   "link": "https://hh.ru/vacancy/136674324?tech_source=api",
+   "date": "2026-09-20T10:52:37+0300"
+  },
   {
    "id": "hh/136673199",
    "source": "hh",
@@ -601,22 +617,6 @@
    "text": "Руководитель в SpeShu.AI (российский сервис нейросетей)\n🏢 Центр Национальных Интеллектуальных Систем · Москва",
    "link": "https://hh.ru/vacancy/137530309?tech_source=api",
    "date": "2026-09-18T14:49:52+0300"
-  },
-  {
-   "id": "hh/137530290",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Тестировщик в SpeShu.AI (российский сервис нейросетей)\n🏢 Центр Национальных Интеллектуальных Систем · Москва",
-   "link": "https://hh.ru/vacancy/137530290?tech_source=api",
-   "date": "2026-09-18T14:49:25+0300"
-  },
-  {
-   "id": "hh/137530265",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Маркетолог в SpeShu.AI (российский сервис нейросетей)\n🏢 Центр Национальных Интеллектуальных Систем · Москва",
-   "link": "https://hh.ru/vacancy/137530265?tech_source=api",
-   "date": "2026-09-18T14:48:56+0300"
   },
   {
    "id": "mediajobs_ru/6129",
