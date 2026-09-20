@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-20T10:02:29Z",
+ "updated": "2026-09-20T10:34:01Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137553542",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам в Школу обучения нейросетям (оффлайн)\n🏢 Творческое образование · Москва\n💰 от 109600 до 160500 RUR",
+   "link": "https://hh.ru/vacancy/137553542?tech_source=api",
+   "date": "2026-09-20T13:20:54+0300"
+  },
   {
    "id": "hh/136886119",
    "source": "hh",
@@ -609,14 +617,6 @@
    "text": "Content Lead / Контент-продюсер (AI & Video)\n🏢 DiagnoCat · Москва",
    "link": "https://hh.ru/vacancy/136796213?tech_source=api",
    "date": "2026-09-18T14:54:08+0300"
-  },
-  {
-   "id": "hh/137530323",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ассистент в SpeShu. AI (российский сервис нейросетей)\n🏢 Центр Национальных Интеллектуальных Систем · Москва",
-   "link": "https://hh.ru/vacancy/137530323?tech_source=api",
-   "date": "2026-09-18T14:50:10+0300"
   },
   {
    "id": "mediajobs_ru/6129",
