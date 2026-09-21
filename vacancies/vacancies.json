@@ -1,7 +1,39 @@
 {
- "updated": "2026-09-21T08:42:02Z",
+ "updated": "2026-09-21T09:13:57Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137581078",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель в детский клуб по обучению работе с нейросетями\n🏢 Нейроджимми (ИП Гримайло Екатерина Игоревна) · Пенза",
+   "link": "https://hh.ru/vacancy/137581078?tech_source=api",
+   "date": "2026-09-21T11:54:25+0300"
+  },
+  {
+   "id": "hh/137580879",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Помощник руководителя с опытом рекрутинга и работы с ИИ\n🏢 King System AI · Москва\n💰 от 70000 до 120000 RUR",
+   "link": "https://hh.ru/vacancy/137580879?tech_source=api",
+   "date": "2026-09-21T11:51:12+0300"
+  },
+  {
+   "id": "hh/137580331",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Дизайнер/Графический дизайнер/AI-Visualizer\n🏢 РПК Коперник · Рязань\n💰 от 50000 до 90000 RUR",
+   "link": "https://hh.ru/vacancy/137580331?tech_source=api",
+   "date": "2026-09-21T11:44:04+0300"
+  },
+  {
+   "id": "hh/136929441",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес-ассистент с нейросетями и вайб-кодингом\n🏢 Идеальный турник · Санкт-Петербург\n💰 от 30000 до 30000 RUR",
+   "link": "https://hh.ru/vacancy/136929441?tech_source=api",
+   "date": "2026-09-21T11:42:09+0300"
+  },
   {
    "id": "hh/136653961",
    "source": "hh",
@@ -17,6 +49,22 @@
    "text": "Executive AI Assistant / Координатор CEO\n🏢 WMT · Москва\n💰 от 220000 RUR",
    "link": "https://hh.ru/vacancy/137577750?tech_source=api",
    "date": "2026-09-21T11:15:04+0300"
+  },
+  {
+   "id": "hh/137145781",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по Digital PR и представленности брендов в ИИ\n🏢 ЛАЙМА - ЛЮКС РУС · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/137145781?tech_source=api",
+   "date": "2026-09-21T11:10:20+0300"
+  },
+  {
+   "id": "hh/137517674",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения нейросетям (GPT/AI агенты/ПРОМТы)\n🏢 xHuman Sales · Москва\n💰 от 200000 до 300000 RUR",
+   "link": "https://hh.ru/vacancy/137517674?tech_source=api",
+   "date": "2026-09-21T10:59:22+0300"
   },
   {
    "id": "hh/137574951",
@@ -489,54 +537,6 @@
    "text": "2D AI художник\n🏢 Pixel Talent · Москва",
    "link": "https://hh.ru/vacancy/136674324?tech_source=api",
    "date": "2026-09-20T10:52:37+0300"
-  },
-  {
-   "id": "hh/136673199",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по автоматизации бизнес-процессов и AI\n🏢 Группа МЕТТАТРОН · Москва\n💰 от 150000 до 220000 RUR",
-   "link": "https://hh.ru/vacancy/136673199?tech_source=api",
-   "date": "2026-09-20T10:38:20+0300"
-  },
-  {
-   "id": "hh/137089022",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Intern Product Manager / AI Product Builder (Vibe Coding)\n🏢 LENIVINS.AI · Москва",
-   "link": "https://hh.ru/vacancy/137089022?tech_source=api",
-   "date": "2026-09-20T09:13:25+0300"
-  },
-  {
-   "id": "hh/136530604",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам обучения нейросетям (GPT/AI / ПРОМТы)\n🏢 xHuman Sales · Санкт-Петербург\n💰 от 200000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/136530604?tech_source=api",
-   "date": "2026-09-20T09:00:24+0300"
-  },
-  {
-   "id": "hh/136529034",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO специалист (ИИ)\n🏢 Ulaev Agency · Винсады\n💰 от 40000 до 70000 RUR",
-   "link": "https://hh.ru/vacancy/136529034?tech_source=api",
-   "date": "2026-09-20T08:41:24+0300"
-  },
-  {
-   "id": "hh/137285458",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ведущий менеджер по продажам (EdTech / AI продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Москва\n💰 от 120000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137285458?tech_source=api",
-   "date": "2026-09-20T07:52:23+0300"
-  },
-  {
-   "id": "hh/137285459",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ведущий менеджер по продажам (EdTech / AI продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Екатеринбург\n💰 от 120000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137285459?tech_source=api",
-   "date": "2026-09-20T07:52:23+0300"
   },
   {
    "id": "vacancysmm/16982",
