@@ -468,7 +468,12 @@ body.expired .plan .reg{display:inline}
 <script>
 (function(){
   var KEY='nc_offer_start', DUR=48*3600*1000, start=Date.now();
-  try{ var s=parseInt(localStorage.getItem(KEY),10); if(s>0&&s<=Date.now()) start=s; else localStorage.setItem(KEY,String(start)); }catch(e){}
+  var q=location.search;
+  if(/[?&]preview\b/.test(q)){ document.getElementById('tv').textContent='48:00:00'; return; }
+  try{
+    if(/[?&]reset\b/.test(q)) localStorage.removeItem(KEY);
+    var s=parseInt(localStorage.getItem(KEY),10); if(s>0&&s<=Date.now()) start=s; else localStorage.setItem(KEY,String(start));
+  }catch(e){}
   var tv=document.getElementById('tv');
   function pad(n){return (n<10?'0':'')+n;}
   function tick(){
