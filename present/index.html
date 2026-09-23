@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI — Новый Уровень 2026 · презентация</title>
+<meta name="description" content="Сопровождение по AI-контенту: программа, форматы обучения, работы учеников.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI — Новый Уровень 2026 · презентация">
+<meta property="og:description" content="Сопровождение по AI-контенту: программа, форматы обучения, работы учеников.">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#5c5c5c; --line:rgba(200,200,200,.10);
+  --gold:#e0b874;
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.deck{scroll-snap-type:y mandatory;height:100vh;overflow-y:auto;overflow-x:hidden}
+.slide{scroll-snap-align:start;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:74px 22px 66px;max-width:1080px;margin:0 auto;width:100%;position:relative}
+.kick{font-size:10px;font-weight:700;letter-spacing:3.4px;text-transform:uppercase;color:var(--c3);text-align:center}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,8vw,74px);line-height:1.02;text-align:center;margin-top:18px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,5.4vw,48px);line-height:1.06;text-align:center;margin-top:14px}
+em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.lead{margin:18px auto 0;max-width:640px;text-align:center;font-size:15px;font-weight:300;color:var(--ink2);line-height:1.8}
+.lead b{color:var(--ink);font-weight:500}
+.grid{margin-top:26px;display:grid;gap:11px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+.card{border:1px solid var(--line);border-radius:16px;padding:20px 18px;background:rgba(13,13,18,.72);text-align:left}
+.card.hot{border-color:rgba(224,184,116,.34)}
+.card .ci{font-size:20px}
+.card .ct{margin-top:8px;font-size:15px;font-weight:600;color:var(--ink)}
+.card .cd{margin-top:6px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.num{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.num div{border:1px solid var(--line);border-radius:14px;padding:16px 12px;background:rgba(13,13,18,.7);text-align:center}
+.num .nv{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--c1);line-height:1}
+.num .nl{margin-top:5px;font-size:11px;color:var(--ink3);line-height:1.4}
+.list{margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.li{position:relative;padding:11px 14px 11px 34px;border:1px solid var(--line);border-radius:12px;background:rgba(200,200,200,.02);
+  font-size:13.4px;font-weight:300;color:var(--ink2);line-height:1.55;text-align:left}
+.li::before{content:'✓';position:absolute;left:14px;top:11px;color:var(--c2);font-size:12px}
+.li b{color:var(--ink);font-weight:600}
+.mods{margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.mod{border:1px solid var(--line);border-radius:13px;padding:14px 16px;background:rgba(200,200,200,.02);text-align:left}
+.mod .mn{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--gold)}
+.mod .mt{margin-top:3px;font-size:14px;font-weight:600;color:var(--ink)}
+.mod .md{margin-top:4px;font-size:12.4px;font-weight:300;color:var(--ink3);line-height:1.55}
+.chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{border:1px solid var(--line);border-radius:20px;padding:8px 15px;font-size:12.5px;color:var(--ink2)}
+.vids{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.vf{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#08080a}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.lesson{margin-top:22px;position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#08080a}
+.lesson iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:8px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 38px;border-radius:10px;font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 8px 26px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.5);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn2{display:inline-flex;align-items:center;gap:10px;margin-top:8px;border:1px solid rgba(200,200,200,.25);color:var(--c2);
+  padding:16px 34px;border-radius:10px;font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none}
+.btns{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hint{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:var(--ink3)}
+.dots{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:5}
+.dots a{width:7px;height:7px;border-radius:50%;background:rgba(200,200,200,.22);display:block;transition:.25s}
+.dots a:hover{background:var(--c2);transform:scale(1.3)}
+.pill{display:inline-block;margin:0 auto;border:1px solid rgba(224,184,116,.35);border-radius:20px;padding:6px 14px;
+  font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.note{margin-top:20px;font-size:12.5px;color:var(--ink3);text-align:center;line-height:1.6}
+@media(max-width:860px){ .g3,.g4{grid-template-columns:repeat(2,1fr)} .num{grid-template-columns:repeat(2,1fr)} .vids{grid-template-columns:1fr} .list,.mods{grid-template-columns:1fr} .dots{display:none} .slide{padding:64px 18px 58px} }
+@media(max-width:560px){ .g2,.g3,.g4{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="dots"><a href="#s1" aria-label="Слайд 1"></a><a href="#s2" aria-label="Слайд 2"></a><a href="#s3" aria-label="Слайд 3"></a><a href="#s4" aria-label="Слайд 4"></a><a href="#s5" aria-label="Слайд 5"></a><a href="#s6" aria-label="Слайд 6"></a><a href="#s7" aria-label="Слайд 7"></a><a href="#s8" aria-label="Слайд 8"></a><a href="#s9" aria-label="Слайд 9"></a><a href="#s10" aria-label="Слайд 10"></a><a href="#s11" aria-label="Слайд 11"></a><a href="#s12" aria-label="Слайд 12"></a><a href="#s13" aria-label="Слайд 13"></a></div>
+<div class="deck" id="deck">
+
+  <section class="slide" id="s1">
+    <div class="kick">Сопровождение · 2026</div>
+    <h1>AI — Новый<br><em>Уровень</em></h1>
+    <p class="lead">Профессия AI-контент-мейкера с нуля: <b>6 недель, 6 модулей, личное сопровождение</b>. Учу снимать ролики, которые заказывают бренды, и превращать это в работу.</p>
+    <div class="num">
+      <div><div class="nv">6</div><div class="nl">недель</div></div>
+      <div><div class="nv">6</div><div class="nl">модулей</div></div>
+      <div><div class="nv">3</div><div class="nl">AI-ролика в портфолио</div></div>
+      <div><div class="nv">12+</div><div class="nl">нейросетей в стеке</div></div>
+    </div>
+    <div class="note">Александр Капустьянов · AI-креатор</div>
+    <div class="hint">↓ листайте</div>
+  </section>
+
+  <section class="slide" id="s2">
+    <div class="kick">Для кого</div>
+    <h2>Узнай себя<br><em>в одном из этих</em></h2>
+    <div class="grid g4"><div class="card"><div class="ci">🎯</div><div class="ct">Хочешь сменить профессию</div><div class="cd">Надоел найм. Хочешь работать на себя, выбирать задачи и сам решать, сколько работать.</div></div><div class="card"><div class="ci">📊</div><div class="ct">Пробовал, но нет системы</div><div class="cd">Делал AI-ролики хаотично — нужна последовательность и стратегия роста.</div></div><div class="card"><div class="ci">💼</div><div class="ct">Хочешь работать с брендами</div><div class="cd">Видишь, как бренды заказывают AI-контент, и хочешь стать тем, кому его заказывают.</div></div><div class="card"><div class="ci">🎬</div><div class="ct">Блогер или контент-мейкер</div><div class="cd">Снимаешь контент и хочешь поднять качество и монетизацию через нейросети.</div></div></div>
+  </section>
+
+  <section class="slide" id="s3">
+    <div class="kick">Результат</div>
+    <h2>Что ты получишь<br><em>за 6 недель</em></h2>
+    <p class="lead">Программа заканчивается не сертификатом, а собранным портфолио и понятной системой работы с клиентами.</p>
+    <div class="list"><div class="li"><b>Профессия AI-креатора</b> с нуля</div><div class="li">Упакованные соцсети и продающее портфолио</div><div class="li"><b>3 киношных AI-ролика</b> в портфолио</div><div class="li">Стратегия роста блога и набора аудитории</div><div class="li">Скрипты продаж и переговоров с брендами</div><div class="li">Система работы с клиентами, а не разовая удача</div></div>
+  </section>
+
+  <section class="slide" id="s4">
+    <div class="kick">Работы учеников</div>
+    <h2>Сделано руками<br><em>наших студентов</em></h2>
+    <div class="vids"><div class="vf"><iframe src="https://kinescope.io/embed/3sUuKLpgcMeP6HochRXvch?muted=1&amp;loop=1" allow="autoplay; fullscreen" loading="lazy" title="Работа ученика" allowfullscreen></iframe></div><div class="vf"><iframe src="https://kinescope.io/embed/bAbndx1F8dGVWM3a2Ak5V5?muted=1&amp;loop=1" allow="autoplay; fullscreen" loading="lazy" title="Работа ученика" allowfullscreen></iframe></div><div class="vf"><iframe src="https://kinescope.io/embed/iRmXYfYsXdZgRKpdj87vZe?muted=1&amp;loop=1" allow="autoplay; fullscreen" loading="lazy" title="Работа ученика" allowfullscreen></iframe></div></div>
+  </section>
+
+  <section class="slide" id="s5">
+    <div class="kick">Программа</div>
+    <h2>Полный путь<br><em>от инструментов до заказов</em></h2>
+    <div class="mods"><div class="mod"><div class="mn">01</div><div class="mt">Основы и стратегия</div><div class="md">Мышление AI-креатора, ChatGPT и Midjourney, контент-план на первый месяц</div></div><div class="mod"><div class="mn">02</div><div class="mt">Покупка нейросетей</div><div class="md">Какие сервисы нужны на каждом этапе, где дешевле, как не переплачивать</div></div><div class="mod"><div class="mn">РЕЖ</div><div class="mt">Режиссёрский блок</div><div class="md">Насмотренность, референсы, свет и кадр, собственный визуальный стиль</div></div><div class="mod"><div class="mn">ТЕХ</div><div class="mt">Технический блок</div><div class="md">Промпт-инжиниринг и разбор всего стека: Midjourney, Veo, Kling, Seedance, Higgsfield</div></div><div class="mod"><div class="mn">03</div><div class="mt">Практика</div><div class="md">Нейрофотосессия, предметка, герой, мультфильм, кинематографичное видео</div></div><div class="mod"><div class="mn">04</div><div class="mt">Упаковка</div><div class="md">Соцсети, профиль, портфолио, которое продаёт само</div></div><div class="mod"><div class="mn">05</div><div class="mt">Клиенты и продажи</div><div class="md">Где искать заказы, скрипты, переговоры, воронка от подписчика к клиенту</div></div><div class="mod"><div class="mn">06</div><div class="mt">Масштабирование</div><div class="md">Повышение чека, делегирование, система, которая держится годами</div></div></div>
+  </section>
+
+  <section class="slide" id="s6">
+    <div class="kick">Инструменты</div>
+    <h2>Профессиональный<br><em>AI-стек</em></h2>
+    <p class="lead">Разбираем не одну модную нейросеть, а весь рабочий набор — и учим выбирать под задачу, не переплачивая за лишние подписки.</p>
+    <div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Midjourney</span><span class="chip">Veo 3.1</span><span class="chip">Kling</span><span class="chip">Seedance</span><span class="chip">Seedream</span><span class="chip">KREA AI</span><span class="chip">RUNWAY</span><span class="chip">Flora</span><span class="chip">Higgsfield</span><span class="chip">Nano Banana Pro</span><span class="chip">CapCut Pro</span></div>
+  </section>
+
+  <section class="slide" id="s7">
+    <div class="kick">Как проходит обучение</div>
+    <h2>Учёба, а не<br><em>папка с видео</em></h2>
+    <div class="grid g4"><div class="card"><div class="ci">🎓</div><div class="ct">Платформа</div><div class="cd">Все уроки в записи: смотришь с телефона или компьютера, в удобном темпе</div></div><div class="card"><div class="ci">✍️</div><div class="ct">Проверка заданий</div><div class="cd">Присылаешь работу — получаешь разбор, а не «молодец, продолжай»</div></div><div class="card"><div class="ci">🎙</div><div class="ct">Живые встречи</div><div class="cd">Еженедельные Q&amp;A и разборы работ — вопросы закрываются сразу</div></div><div class="card"><div class="ci">👥</div><div class="ct">Закрытый чат</div><div class="cd">Комьюнити, где выкладывают работы, делятся находками и заказами</div></div></div>
+  </section>
+
+  <section class="slide" id="s8">
+    <div class="kick">Пример урока</div>
+    <h2>Загляни<br><em>внутрь обучения</em></h2>
+    <p class="lead">Один урок целиком — посмотрите, как подаётся материал, прежде чем принимать решение.</p>
+    <div class="lesson"><iframe src="https://kinescope.io/embed/qkuQ8ZcXcUo8v8Cci4PRNu" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" loading="lazy" title="Пример урока" allowfullscreen></iframe></div>
+  </section>
+
+  <section class="slide" id="s9">
+    <div class="kick">Чем мы отличаемся</div>
+    <h2>Мини-группы<br>и <em>личная проработка</em></h2>
+    <p class="lead">У больших блогеров поток на тысячу человек и кураторы. У нас маленькие группы, и работы смотрю лично я — поэтому в обучении видно тебя, а не среднего ученика.</p>
+    <div class="grid g3">
+      <div class="card"><div class="ci">👤</div><div class="ct">Я знаю твоё имя</div><div class="cd">На любом формате: разборы идут по твоим работам и твоей цели, а не по общему шаблону.</div></div>
+      <div class="card"><div class="ci">🎯</div><div class="ct">Маршрут под тебя</div><div class="cd">Задания адаптируются под уровень: новичку — с нуля, практикующему — сразу вглубь.</div></div>
+      <div class="card"><div class="ci">🤝</div><div class="ct">Мало мест</div><div class="cd">Личные форматы ограничены: столько людей я реально могу вести сам.</div></div>
+    </div>
+  </section>
+
+  <section class="slide" id="s10">
+    <div class="kick">Форматы обучения</div>
+    <h2>Четыре формата —<br><em>разная глубина</em></h2>
+    <p class="lead">Программа у всех одна. Отличается то, <b>сколько личного внимания</b> ты получаешь.</p>
+    <div class="grid g4"><div class="card"><div class="ct">Базовый</div><div class="cd">Все материалы курса, проходишь сам в своём темпе</div></div><div class="card"><div class="ct">Мастер-группа</div><div class="cd">Материалы + проверка работ, живые разборы, чат и пожизненный доступ</div></div><div class="card"><div class="ct">Личное сопровождение</div><div class="cd">Всё из Мастер-группы + личные созвоны, база заказчиков, работа один на один</div></div><div class="card"><div class="ct">Партнёрство</div><div class="cd">Полгода вместе на реальных заказах. Два места, только по приглашению</div></div></div>
+    <div class="note">Стоимость и условия — отдельным сообщением: подберём формат под твою цель.</div>
+  </section>
+
+  <section class="slide" id="s11">
+    <div class="kick">Гарантии</div>
+    <h2>Ты ничем<br><em>не рискуешь</em></h2>
+    <div class="grid g2">
+      <div class="card"><div class="ci">🛡</div><div class="ct">7 дней на «Базовом»</div><div class="cd">Полный возврат без объяснений — просто напиши.</div></div>
+      <div class="card"><div class="ci">🛡</div><div class="ct">14 дней на «Мастер-группе»</div><div class="cd">Больше времени убедиться, что формат твой. Возврат без вопросов.</div></div>
+    </div>
+  </section>
+
+  <section class="slide" id="s12">
+    <div class="kick">Отзывы</div>
+    <h2>Реальные отзывы<br><em>из Telegram</em></h2>
+    <p class="lead">Скрины, видео и истории учеников — без фильтра, в отдельном канале.</p>
+    <div class="btns"><a class="btn2" href="https://t.me/+cC8YPOfV1yI4ZDcy" target="_blank" rel="noopener">Смотреть отзывы →</a></div>
+  </section>
+
+  <section class="slide" id="s13">
+    <div class="kick">Дальше</div>
+    <h2>Подберём формат<br><em>под твою цель</em></h2>
+    <p class="lead">Напиши — задам пару вопросов, подскажу, какой формат подходит, и пришлю условия. Ничего продавать вдогонку не буду.</p>
+    <div class="btns">
+      <a class="btn" href="https://t.me/foms_fit?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%9F%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D0%BB%28%D0%B0%29%20%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%E2%80%94%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F." target="_blank" rel="noopener">Написать в Telegram →</a>
+      <a class="btn2" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=present" target="_blank" rel="noopener">Записаться на экскурсию</a>
+    </div>
+    <div class="note">© 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766<br>Доход не гарантирован. Информация не является публичной офертой.</div>
+  </section>
+
+</div>
+<script>
+document.addEventListener('keydown',function(e){
+  var d=document.getElementById('deck'), s=Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var cur=s.findIndex(function(x){return x.getBoundingClientRect().top>-40;});
+  if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' '){ if(s[cur+1]) s[cur+1].scrollIntoView(); e.preventDefault(); }
+  if(e.key==='ArrowUp'||e.key==='PageUp'){ if(s[cur-1]) s[cur-1].scrollIntoView(); e.preventDefault(); }
+});
+</script>
+</body>
+</html>
