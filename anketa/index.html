@@ -529,12 +529,12 @@ body {
       <div class="slot-grid" id="slotPicker"></div>
     </div>
 
-    <a class="tg-btn off" id="tgBtn" href="https://t.me/newhndrx" target="_blank" rel="noopener">
+    <a class="tg-btn off" id="tgBtn" href="https://t.me/foms_fit" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
       <span id="tgLabel">Подтвердить время в Telegram</span>
     </a>
     <p class="tg-hint" id="tgHint">Сначала выбери время выше</p>
-    <p class="success-note" id="okNote">Без этого шага время не закрепится — я подтвержу его в ответ. Не открылся Telegram? Напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a></p>
+    <p class="success-note" id="okNote">Без этого шага время не закрепится — я подтвержу его в ответ. Не открылся Telegram? Напиши сам(а): <a href="https://t.me/foms_fit" target="_blank" rel="noopener" style="color:var(--g2)">@foms_fit</a></p>
 
     <div class="success-steps" style="margin-top:26px">
       <div class="s-step"><span class="s-num">1</span><span id="okStep1"><b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и подтвержу слот.</span></div>
@@ -631,7 +631,7 @@ function buildSlotPicker(){
             + (nm ? ' Меня зовут ' + nm + '.' : '')
             + ' Удобное время: ' + val;
     var tg = document.getElementById('tgBtn');
-    tg.href = 'https://t.me/newhndrx?text=' + encodeURIComponent(msg);
+    tg.href = 'https://t.me/foms_fit?text=' + encodeURIComponent(msg);
     tg.classList.remove('off');
     document.getElementById('tgHint').textContent = 'Сообщение уже написано — просто отправь его';
   });
@@ -719,12 +719,12 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
       document.getElementById('okTitle').innerHTML = 'Анкета <span class="gold-text">принята</span>';
       document.getElementById('okSub').innerHTML = 'Спасибо! Остался один шаг — <b>напиши мне в Telegram</b>, расскажу детали обучения и отвечу на вопросы. Сообщение уже написано.';
       document.getElementById('okStep1').innerHTML = '<b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и отвечу лично.';
-      document.getElementById('okNote').innerHTML = 'Не открылся Telegram? Напиши сам(а): <a href="https://t.me/newhndrx" target="_blank" rel="noopener" style="color:var(--g2)">@newhndrx</a>';
+      document.getElementById('okNote').innerHTML = 'Не открылся Telegram? Напиши сам(а): <a href="https://t.me/foms_fit" target="_blank" rel="noopener" style="color:var(--g2)">@foms_fit</a>';
       var msg0 = 'Привет! Заполнил(а) анкету'
                + (name ? ', меня зовут ' + name : '')
                + '. Хочу узнать детали обучения.';
       var tg0 = document.getElementById('tgBtn');
-      tg0.href = 'https://t.me/newhndrx?text=' + encodeURIComponent(msg0);
+      tg0.href = 'https://t.me/foms_fit?text=' + encodeURIComponent(msg0);
       tg0.classList.remove('off');
       document.getElementById('tgLabel').textContent = 'Написать в Telegram';
       document.getElementById('tgHint').textContent = 'Сообщение уже написано — просто отправь его';
