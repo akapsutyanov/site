@@ -1,7 +1,31 @@
 {
- "updated": "2026-09-24T11:57:56Z",
+ "updated": "2026-09-24T12:30:10Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137753391",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Главный бизнес-аналитик (внедрение ИИ, проектная деятельность)\n🏢 ППК Роскадастр · Москва\n💰 от 110000 RUR",
+   "link": "https://hh.ru/vacancy/137753391?tech_source=api",
+   "date": "2026-09-24T15:25:08+0300"
+  },
+  {
+   "id": "hh/137753307",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Главный бизнес-аналитик (внедрение ИИ, анализ процессов)\n🏢 ППК Роскадастр · Москва\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/137753307?tech_source=api",
+   "date": "2026-09-24T15:23:08+0300"
+  },
+  {
+   "id": "hh/137752181",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Game Creator\n🏢 Azur Games · Москва",
+   "link": "https://hh.ru/vacancy/137752181?tech_source=api",
+   "date": "2026-09-24T15:00:44+0300"
+  },
   {
    "id": "hh/137746875",
    "source": "hh",
@@ -497,30 +521,6 @@
    "text": "SEO/AI-специалист\n🏢 Вебпрактик · Ростов-на-Дону",
    "link": "https://hh.ru/vacancy/136689243?tech_source=api",
    "date": "2026-09-23T14:21:14+0300"
-  },
-  {
-   "id": "hh/137703022",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по работе с ИИ\n🏢 Алабуга, ОЭЗ ППТ · Уфа\n💰 от 90000 RUR",
-   "link": "https://hh.ru/vacancy/137703022?tech_source=api",
-   "date": "2026-09-23T14:11:32+0300"
-  },
-  {
-   "id": "hh/137703023",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по работе с ИИ\n🏢 Алабуга, ОЭЗ ППТ · Казань\n💰 от 90000 RUR",
-   "link": "https://hh.ru/vacancy/137703023?tech_source=api",
-   "date": "2026-09-23T14:11:32+0300"
-  },
-  {
-   "id": "hh/137703024",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по работе с ИИ\n🏢 Алабуга, ОЭЗ ППТ · Набережные Челны\n💰 от 90000 RUR",
-   "link": "https://hh.ru/vacancy/137703024?tech_source=api",
-   "date": "2026-09-23T14:11:32+0300"
   },
   {
    "id": "comeinlena/6374",
