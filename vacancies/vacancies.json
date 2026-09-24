@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-24T12:30:10Z",
+ "updated": "2026-09-24T13:02:20Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137492777",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Автор курса \"Нейросети для соцсетей и блога\" в Практикум\n🏢 Яндекс · Москва",
+   "link": "https://hh.ru/vacancy/137492777?tech_source=api",
+   "date": "2026-09-24T15:52:46+0300"
+  },
   {
    "id": "hh/137753391",
    "source": "hh",
@@ -25,6 +33,14 @@
    "text": "AI Game Creator\n🏢 Azur Games · Москва",
    "link": "https://hh.ru/vacancy/137752181?tech_source=api",
    "date": "2026-09-24T15:00:44+0300"
+  },
+  {
+   "id": "hh/136796213",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Content Lead / Контент-продюсер (AI & Video)\n🏢 DiagnoCat · Москва",
+   "link": "https://hh.ru/vacancy/136796213?tech_source=api",
+   "date": "2026-09-24T14:54:08+0300"
   },
   {
    "id": "hh/137746875",
@@ -505,22 +521,6 @@
    "text": "Разработчик AI-решений (Москва, гибрид)\n🏢 DOGMA · Москва",
    "link": "https://hh.ru/vacancy/137704635?tech_source=api",
    "date": "2026-09-23T14:38:11+0300"
-  },
-  {
-   "id": "hh/137704002",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Продюсер ИИ Драм (ИИ-сериалов)\n🏢 Brilic Media · Москва",
-   "link": "https://hh.ru/vacancy/137704002?tech_source=api",
-   "date": "2026-09-23T14:26:22+0300"
-  },
-  {
-   "id": "hh/136689243",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO/AI-специалист\n🏢 Вебпрактик · Ростов-на-Дону",
-   "link": "https://hh.ru/vacancy/136689243?tech_source=api",
-   "date": "2026-09-23T14:21:14+0300"
   },
   {
    "id": "comeinlena/6374",
