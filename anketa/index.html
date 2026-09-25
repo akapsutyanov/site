@@ -329,6 +329,11 @@ body {
 .wbtn.blue{background:linear-gradient(135deg,#3aa2e0,#2b7cc0);border-color:transparent;color:#fff;-webkit-text-fill-color:#fff;
   box-shadow:0 10px 26px rgba(58,162,224,.26)}
 @media(max-width:620px){ .wait-grid{grid-template-columns:1fr} .wait-title{font-size:25px} }
+
+.form-disc{max-width:640px;margin:0 auto 22px;border:1px dashed rgba(200,200,200,.2);border-radius:14px;padding:18px 20px;background:rgba(255,255,255,.015)}
+.form-disc p{font-size:13px;font-weight:300;color:var(--ink3);line-height:1.7}
+.form-disc p+p{margin-top:8px}
+.form-disc b{color:var(--ink2);font-weight:600}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -384,7 +389,11 @@ body {
   })();
   </script>
 
-  <form class="form-card" id="mainForm" novalidate>
+  <div class="form-disc top">
+  <p><b>Заполнение ни к чему не обязывает.</b> Это просто знакомство: посмотрим вашу ситуацию на созвоне и решим, подходит вам формат или нет.</p>
+  <p><b>Спам мы не любим.</b> Пишу лично и только по делу — подтвердить время и прислать ваш план после разбора. Никаких рассылок «каждый вторник».</p>
+</div>
+<form class="form-card" id="mainForm" novalidate>
 
     <!-- Q1: ИМЯ -->
     <div class="q-block">
@@ -565,7 +574,7 @@ body {
 
     <div class="success-steps" style="margin-top:26px">
       <div class="s-step"><span class="s-num">1</span><span id="okStep1"><b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и подтвержу слот.</span></div>
-      <div class="s-step"><span class="s-num">2</span><span>Экскурсия — это <b>созвон 30–40 минут</b>: покажу платформу изнутри, разберём твою ситуацию и составим пошаговый план.</span></div>
+      <div class="s-step"><span class="s-num">2</span><span>Экскурсия — это <b>созвон 25 минут</b>: покажу платформу изнутри, разберём твою ситуацию и составим пошаговый план.</span></div>
     </div>
 
     <div class="wait">
