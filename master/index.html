@@ -1204,6 +1204,84 @@ footer {
 .vaBtns{animation-delay:.58s}
 .vaStats{animation-delay:.7s}
 @media(prefers-reduced-motion:reduce){ .vaBadge,.vaEyebrow,.vaTitle,.vaSub,.vaPills,.vaBtns,.vaStats{animation:none} }
+
+/* ── АВТОР ── */
+.author-section{padding:96px 24px;max-width:1200px;margin:0 auto}
+.author-grid{display:grid;grid-template-columns:400px 1fr;gap:54px;align-items:center;margin-top:44px}
+.author-photo{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(200,200,200,.14);box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.author-photo img{width:100%;height:auto;display:block}
+.author-lead{font-size:19px;font-weight:300;color:var(--ink2);line-height:1.8}
+.author-lead b{color:var(--ink);font-weight:500}
+.author-nums{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.author-nums div{border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:18px 16px;background:rgba(13,13,18,.6)}
+.author-nums .an{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1;color:var(--c1)}
+.author-nums .al{margin-top:7px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink3)}
+.author-list{margin-top:26px;display:flex;flex-direction:column;gap:11px}
+.author-list div{position:relative;padding-left:26px;font-size:15px;font-weight:300;color:var(--ink2);line-height:1.6}
+.author-list div::before{content:'→';position:absolute;left:0;color:var(--c2)}
+.author-list b{color:var(--ink);font-weight:600}
+@media(max-width:900px){ .author-grid{grid-template-columns:1fr;gap:28px} .author-nums{grid-template-columns:1fr} }
+
+/* ── ЭКСКУРСИЯ ── */
+.exc-section{padding:96px 24px;max-width:1100px;margin:0 auto}
+.exc-card{margin-top:42px;border:1px solid rgba(200,200,200,.14);border-radius:24px;padding:44px 40px;
+  background:radial-gradient(ellipse 80% 70% at 10% 0%,rgba(200,170,110,.07),transparent 62%),rgba(13,13,18,.8)}
+.exc-lead{font-size:18px;font-weight:300;color:var(--ink2);line-height:1.8;max-width:760px}
+.exc-lead b{color:var(--ink);font-weight:500}
+.exc-grid{margin-top:32px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.exc-item{display:grid;grid-template-columns:34px 1fr;gap:14px;border:1px solid rgba(200,200,200,.1);border-radius:14px;padding:16px 18px;background:rgba(255,255,255,.02)}
+.exc-item .ei{font-size:18px}
+.exc-item .et{font-size:14.5px;color:var(--ink);font-weight:600}
+.exc-item .ed{margin-top:4px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.exc-facts{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.exc-facts span{border:1px solid rgba(200,200,200,.16);border-radius:30px;padding:10px 18px;font-size:13px;color:var(--ink2)}
+.exc-no{margin-top:26px;padding:18px 20px;border-left:2px solid rgba(224,184,116,.5);font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7}
+.exc-no b{color:var(--ink)}
+.exc-cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 38px;border-radius:10px;font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5)}
+@media(max-width:820px){ .exc-grid{grid-template-columns:1fr} .exc-card{padding:30px 22px} }
+
+/* ── КЕЙСЫ БЫЛО/СТАЛО ── */
+.cases-section{padding:96px 24px;max-width:1200px;margin:0 auto}
+.cases-grid{margin-top:44px;display:flex;flex-direction:column;gap:18px}
+.case{border:1px solid rgba(200,200,200,.12);border-radius:22px;padding:30px 32px;background:rgba(13,13,18,.72)}
+.case-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.case-name{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--c1);line-height:1.1}
+.case-tag{border:1px solid rgba(200,200,200,.18);border-radius:20px;padding:6px 13px;font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.case-ba{margin-top:22px;display:grid;grid-template-columns:1fr 54px 1fr;gap:16px;align-items:center}
+.case-col{border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:20px 22px;background:rgba(255,255,255,.02)}
+.case-col.after{border-color:rgba(142,230,164,.28);background:rgba(142,230,164,.05)}
+.case-lbl{font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--ink3)}
+.case-col.after .case-lbl{color:#8ee6a4}
+.case-txt{margin-top:10px;font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.7}
+.case-txt b{color:var(--ink);font-weight:600}
+.case-arrow{text-align:center;font-size:24px;color:var(--ink3)}
+.case-how{margin-top:18px;font-size:13.5px;font-weight:300;color:var(--ink3);line-height:1.7}
+.case-how b{color:var(--c2);font-weight:600}
+@media(max-width:820px){ .case-ba{grid-template-columns:1fr;gap:10px} .case-arrow{transform:rotate(90deg)} .case{padding:24px 20px} }
+
+.exc-disc{margin-top:24px;border:1px dashed rgba(200,200,200,.22);border-radius:14px;padding:18px 20px;background:rgba(255,255,255,.015)}
+.exc-disc p{font-size:13.5px;font-weight:300;color:var(--ink3);line-height:1.7}
+.exc-disc p+p{margin-top:8px}
+.exc-disc b{color:var(--ink2);font-weight:600}
+
+/* автор — круглое фото */
+.author-grid{grid-template-columns:330px 1fr!important;align-items:start!important}
+.author-photo{border-radius:50%!important;overflow:hidden;border:1px solid rgba(224,184,116,.28)!important;
+  box-shadow:0 26px 60px rgba(0,0,0,.6),0 0 60px rgba(224,184,116,.10)!important;max-width:330px}
+.author-photo img{border-radius:50%}
+@media(max-width:900px){ .author-grid{grid-template-columns:1fr!important;justify-items:center} .author-photo{max-width:230px} }
+/* дисклеймер сверху карточки экскурсии */
+.exc-disc{margin:0 0 26px!important}
+/* ссылка на папку отзывов */
+.proof{margin-top:26px;border:1px solid rgba(200,200,200,.14);border-radius:20px;padding:26px 28px;
+  background:rgba(13,13,18,.72);display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.proof .pt{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--c1);line-height:1.2}
+.proof .pd{margin-top:7px;font-size:14px;font-weight:300;color:var(--ink2);line-height:1.6;max-width:640px}
+.proof a{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(200,200,200,.25);border-radius:10px;
+  padding:15px 28px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--c2);text-decoration:none;white-space:nowrap}
+.proof a:hover{color:var(--c1);border-color:rgba(220,220,220,.5)}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1229,9 +1307,11 @@ footer {
   <a href="#" class="nav-logo">AI — Новый Уровень 2026</a>
   <ul class="nav-links">
     <li><a href="#works">Работы</a></li>
+    <li><a href="#author">Автор</a></li>
     <li><a href="#forwho">Для кого</a></li>
     <li><a href="#program">Программа</a></li>
     <li><a href="#outcomes">Результаты</a></li>
+    <li><a href="#cases">Кейсы</a></li>
     <li><a href="#reviews">Отзывы</a></li>
     <li><a href="#pricing">Тарифы</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -1255,11 +1335,11 @@ footer {
 </div>
 
 <!-- плавающая кнопка (появляется при скролле) -->
-<a href="https://neurocreator2.ru/anketa?from=excursion" class="floating-cta" id="floatingCta">Записаться на экскурсию →</a>
+<a href="#excursion" class="floating-cta" id="floatingCta">Записаться на экскурсию →</a>
 
 <!-- HERO · вариант A -->
 <section class="vaHero">
-  <div class="vaMosaic"><div class="vaCol"><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""></div><div class="vaCol"><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""></div><div class="vaCol"><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""></div><div class="vaCol"><img src="../master/hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../master/hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""></div></div>
+  <div class="vaMosaic"><div class="vaCol"><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""></div><div class="vaCol"><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""></div><div class="vaCol"><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""></div><div class="vaCol"><img src="hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""></div></div>
   <div class="vaScrim"></div>
   <div class="vaWrap">
     <div class="vaBadge"><i></i>Сопровождение · 2026</div>
@@ -1272,7 +1352,7 @@ footer {
       <div class="vaPill"><span>✅</span> Разборы лично</div>
     </div>
     <div class="vaBtns">
-      <a href="https://neurocreator2.ru/anketa?from=excursion" class="btn-primary">Записаться на экскурсию →</a>
+      <a href="#excursion" class="btn-primary">Записаться на экскурсию →</a>
       <a href="#program" class="btn-secondary">Смотреть программу</a>
     </div>
     <div class="vaStats">
@@ -1368,6 +1448,33 @@ footer {
 
   </div>
 </section>
+
+
+<div class="divider"></div>
+
+<!-- АВТОР -->
+<section class="author-section" id="author">
+  <div class="section-label reveal">Автор</div>
+  <h2 class="section-title reveal">Кто будет<br><em>вести вас лично</em></h2>
+  <div class="author-grid reveal">
+    <div class="author-photo"><img src="author-round.jpg" alt="Александр Капустьянов" loading="lazy"></div>
+    <div>
+      <p class="author-lead"><b>Александр Капустьянов.</b> Четырнадцать лет я писал музыку — альбомы, концерты, клип на ТВ. Параллельно работал везде, где платили: от склада Adidas до бомбоубежища. Потом ушёл в контент и уже <b>восемь лет</b> снимаю и монтирую — сначала камерой, последние <b>три года</b> нейросетями, с тех пор как они вообще появились.</p>
+      <p class="author-lead" style="margin-top:18px">Я не пришёл в ИИ на хайпе и не пересказываю чужие курсы. Я прошёл весь путь сам: от «поздно начинать» до профессии, которой ещё пять лет назад не существовало. Поэтому учу не кнопкам, а ремеслу — тому, что остаётся, когда нейросети в очередной раз обновятся.</p>
+      <div class="author-nums">
+        <div><div class="an">8 лет</div><div class="al">в индустрии контента</div></div>
+        <div><div class="an">3 года</div><div class="al">в нейросетях — с их появления</div></div>
+        <div><div class="an">2,4 млн</div><div class="al">просмотров за 30 дней</div></div>
+      </div>
+      <div class="author-list">
+        <div><b>Съёмка и монтаж — фундамент.</b> Знаю, как работает свет, кадр и ритм, поэтому мои AI-ролики выглядят как съёмка, а не как генерация</div>
+        <div><b>Веду мини-группы лично</b> — смотрю работы учеников сам, без кураторов и «проверяющих»</div>
+        <div><b>Работаю с брендами</b> — ролики, карточки товаров и визуал, которые идут в реальную рекламу</div>
+        <div><b>35 000 подписчиков и 0 ₽ на рекламу</b> — весь рост на собственном контенте, 90% просмотров от тех, кто на меня не подписан</div>
+      </div>
+    </div>
+  </div>
+  </section>
 
 <div class="divider"></div>
 
@@ -1484,6 +1591,56 @@ footer {
     </div>
   </div>
 </section>
+
+
+<div class="divider"></div>
+
+<!-- КЕЙСЫ -->
+<section class="cases-section" id="cases">
+  <div class="section-label reveal">Кейсы</div>
+  <h2 class="section-title reveal">Было — стало<br><em>без прикрас</em></h2>
+  <div class="cases-grid reveal">
+
+    <div class="case">
+      <div class="case-head"><div class="case-name">Сан Саныч</div><span class="case-tag">42 года · барбер</span><span class="case-tag">с нуля</span></div>
+      <div class="case-ba">
+        <div class="case-col"><div class="case-lbl">Было</div><div class="case-txt">Барбер, <b>ни дня не работал с нейросетями</b>. Друзья крутили пальцем у виска: «какой ИИ в 42?». Ни портфолио, ни блога.</div></div>
+        <div class="case-arrow">→</div>
+        <div class="case-col after"><div class="case-lbl">Стало</div><div class="case-txt">Ролик на <b>120 000 просмотров</b>, <b>+600 подписчиков</b>, первый платный заказ и бартер с блогером. Собрал себе сайт-портфолио за вечер.</div></div>
+      </div>
+      <div class="case-how"><b>Что сделали:</b> начали не с кнопок, а с направления — под его нишу. Дальше первые работы, упаковка профиля и выход в рилсы по форматам курса.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-head"><div class="case-name">Андрей</div><span class="case-tag">первые заказы</span><span class="case-tag">за месяц</span></div>
+      <div class="case-ba">
+        <div class="case-col"><div class="case-lbl">Было</div><div class="case-txt">«Я не творческий» и «слишком много новой информации». Первому клиенту <b>сказал «я не могу»</b> — побоялся взяться.</div></div>
+        <div class="case-arrow">→</div>
+        <div class="case-col after"><div class="case-lbl">Стало</div><div class="case-txt">Сдал первый заказ, следом — <b>ролик для тату-студии</b>. То, что раньше не получалось за целый день, начал делать за 30 минут.</div></div>
+      </div>
+      <div class="case-how"><b>Что сделали:</b> разобрали страх «не получится» на конкретные шаги и довели до первой сдачи работы. Дальше скилл начал нарабатываться сам.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-head"><div class="case-name">Мила</div><span class="case-tag">33 года · второй декрет</span><span class="case-tag">поиск себя</span></div>
+      <div class="case-ba">
+        <div class="case-col"><div class="case-lbl">Было</div><div class="case-txt">Второй декрет, долгий поиск себя. Самое страшное — деньги: <b>все нейросети платные</b>, за каждую генерацию и каждый токен переживала.</div></div>
+        <div class="case-arrow">→</div>
+        <div class="case-col after"><div class="case-lbl">Стало</div><div class="case-txt">Работает с нейросетями спокойно и уверенно, есть свои работы и понимание, за что платят. Страх денег ушёл.</div></div>
+      </div>
+      <div class="case-how"><b>Что сделали:</b> собрали минимальный набор инструментов вместо десяти подписок и выстроили режим, который реально помещается в день с детьми.</div>
+    </div>
+
+  </div>
+  
+    <div class="proof">
+      <div>
+        <div class="pt">Не верь на слово — <em>посмотри сам</em></div>
+        <div class="pd">Все отзывы учеников целиком, без нарезок, и их работы — в одной папке. Видео, скрины переписок, готовые ролики.</div>
+      </div>
+      <a href="https://t.me/+cC8YPOfV1yI4ZDcy" target="_blank" rel="noopener">Открыть отзывы и работы →</a>
+    </div>
+  </section>
 
 <div class="divider"></div>
 
@@ -1884,130 +2041,6 @@ footer {
 
 <div class="divider"></div>
 
-<!-- PAYMENT METHODS — способы оплаты -->
-<section class="payment-section" id="payment">
-  <div class="section-label reveal">Оплата</div>
-  <h2 class="section-title reveal">Способы<br><em>оплаты</em></h2>
-  <div class="payment-grid reveal">
-
-    <div class="payment-card">
-      <span class="payment-icon">💳</span>
-      <div class="payment-name">Полная оплата</div>
-      <div class="payment-desc">Внести полную стоимость картой банка РФ или иностранной картой. Место фиксируется сразу.</div>
-    </div>
-
-    <div class="payment-card">
-      <span class="payment-icon">🔒</span>
-      <div class="payment-name">Предоплата</div>
-      <div class="payment-desc">Внести предоплату — она фиксирует за вами место и стоимость. Доплатить полную сумму до старта программы.</div>
-    </div>
-
-    <div class="payment-card">
-      <span class="payment-icon">🏦</span>
-      <div class="payment-name">Рассрочка банка</div>
-      <div class="payment-desc">Оформить рассрочку от банка до 12 месяцев — для граждан РФ и стран СНГ. Без переплаты.</div>
-    </div>
-
-    <div class="payment-card special">
-      <span class="payment-icon">🌍</span>
-      <div class="payment-name">Внутренняя рассрочка</div>
-      <div class="payment-desc">3 платежа от нас — для тех, кто живёт за границей. Первый платёж сейчас, остальные 2 во время обучения.</div>
-      <a href="#contact" class="payment-cta">Оставить заявку →</a>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- BONUSES — бонусы -->
-<section class="bonuses-section" id="bonuses">
-  <div class="section-label reveal">Подарки</div>
-  <h2 class="section-title reveal">Бонусы сразу после<br><em>покупки курса</em></h2>
-  <div class="bonuses-grid reveal">
-
-    <div class="bonus-card">
-      <div class="bonus-index">01</div>
-      <div class="bonus-body">
-        <div class="bonus-tag">PDF-гайд</div>
-        <div class="bonus-title">10 атмосферных стилей Midjourney + инструкция</div>
-        <div class="bonus-desc">Готовые промпты для 10 кинематографических стилей от автора с разбором каждого. Скопируй и используй сразу.</div>
-      </div>
-    </div>
-
-    <div class="bonus-card">
-      <div class="bonus-index">02</div>
-      <div class="bonus-body">
-        <div class="bonus-tag">PDF-гайд</div>
-        <div class="bonus-title">Лучшие AI-криэйторы мира для вдохновения</div>
-        <div class="bonus-desc">Подборка топовых авторов, чьи работы стоит изучить. Насмотренность — основа качественного AI-контента.</div>
-      </div>
-    </div>
-
-    <div class="bonus-card">
-      <div class="bonus-index">03</div>
-      <div class="bonus-body">
-        <div class="bonus-tag">Чек-лист</div>
-        <div class="bonus-title">Какая нейросеть лучшая прямо сейчас для разных задач</div>
-        <div class="bonus-desc">Актуальный сравнительный обзор инструментов: что выбрать для изображений, видео, озвучки и монтажа в 2026 году.</div>
-      </div>
-    </div>
-
-    <div class="bonus-card">
-      <div class="bonus-index">04</div>
-      <div class="bonus-body">
-        <div class="bonus-tag">Видеокурс</div>
-        <div class="bonus-title">Пак уроков по профессиональному монтажу</div>
-        <div class="bonus-desc">От AI-криэйтора-режиссёра — ученицы автора. Полноценный мини-курс по монтажу AI-роликов, которые выглядят дорого.</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- FAQ -->
-<section class="section faq-section" id="faq">
-  <div class="section-label reveal">Вопросы</div>
-  <h2 class="section-title reveal">Частые<br><em>вопросы</em></h2>
-  <div class="faq-list reveal">
-
-    <div class="faq-item">
-      <button class="faq-q">Подойдёт ли мне, если я новичок и с ИИ на «вы»?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>Да. Программа построена с нуля: первые модули — основы, мышление и базовые инструменты. Идём пошагово, а личное сопровождение не даёт застрять. Большинство учеников стартуют вообще без опыта.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Сколько времени нужно уделять?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>В среднем 3–5 часов в неделю. Уроки короткие и прикладные, всё в записи — смотришь в удобное время. Главное — делать практику, именно на ней строится результат.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">А если не получится — есть гарантия?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>Да. Мы сопровождаем до первого результата: если выполняешь задания и не выходишь на оговорённый результат — продолжаем работать с тобой бесплатно, пока не получится.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Нужен ли мощный компьютер или платные подписки?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>Нет. Достаточно обычного ноутбука, а многое делается и с телефона. Нужные нейросети мы показываем, а оплату ключевых подписок берём на себя на время обучения (на VIP-тарифе).</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Когда старт и как проходит обучение?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>Обучение онлайн: уроки в записи + личное сопровождение и разборы. Дату старта ближайшего потока уточним при записи. Доступ к материалам остаётся у тебя.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Реально ли выйти на доход и когда первые деньги?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>Первые AI-ролики и первые клиенты у учеников появляются уже на 3–5 неделе. Цель программы — система выхода на 100 000 ₽+ в месяц. Скорость зависит от твоей практики — мы даём пошаговый путь.</p></div>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="section-label reveal">Тарифы</div>
@@ -2138,6 +2171,130 @@ footer {
 
 <div class="divider"></div>
 
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="section-label reveal">Вопросы</div>
+  <h2 class="section-title reveal">Частые<br><em>вопросы</em></h2>
+  <div class="faq-list reveal">
+
+    <div class="faq-item">
+      <button class="faq-q">Подойдёт ли мне, если я новичок и с ИИ на «вы»?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Да. Программа построена с нуля: первые модули — основы, мышление и базовые инструменты. Идём пошагово, а личное сопровождение не даёт застрять. Большинство учеников стартуют вообще без опыта.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Сколько времени нужно уделять?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>В среднем 3–5 часов в неделю. Уроки короткие и прикладные, всё в записи — смотришь в удобное время. Главное — делать практику, именно на ней строится результат.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">А если не получится — есть гарантия?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Да. Мы сопровождаем до первого результата: если выполняешь задания и не выходишь на оговорённый результат — продолжаем работать с тобой бесплатно, пока не получится.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Нужен ли мощный компьютер или платные подписки?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Нет. Достаточно обычного ноутбука, а многое делается и с телефона. Нужные нейросети мы показываем, а оплату ключевых подписок берём на себя на время обучения (на VIP-тарифе).</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Когда старт и как проходит обучение?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Обучение онлайн: уроки в записи + личное сопровождение и разборы. Дату старта ближайшего потока уточним при записи. Доступ к материалам остаётся у тебя.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Реально ли выйти на доход и когда первые деньги?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Первые AI-ролики и первые клиенты у учеников появляются уже на 3–5 неделе. Цель программы — система выхода на 100 000 ₽+ в месяц. Скорость зависит от твоей практики — мы даём пошаговый путь.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PAYMENT METHODS — способы оплаты -->
+<section class="payment-section" id="payment">
+  <div class="section-label reveal">Оплата</div>
+  <h2 class="section-title reveal">Способы<br><em>оплаты</em></h2>
+  <div class="payment-grid reveal">
+
+    <div class="payment-card">
+      <span class="payment-icon">💳</span>
+      <div class="payment-name">Полная оплата</div>
+      <div class="payment-desc">Внести полную стоимость картой банка РФ или иностранной картой. Место фиксируется сразу.</div>
+    </div>
+
+    <div class="payment-card">
+      <span class="payment-icon">🔒</span>
+      <div class="payment-name">Предоплата</div>
+      <div class="payment-desc">Внести предоплату — она фиксирует за вами место и стоимость. Доплатить полную сумму до старта программы.</div>
+    </div>
+
+    <div class="payment-card">
+      <span class="payment-icon">🏦</span>
+      <div class="payment-name">Рассрочка банка</div>
+      <div class="payment-desc">Оформить рассрочку от банка до 12 месяцев — для граждан РФ и стран СНГ. Без переплаты.</div>
+    </div>
+
+    <div class="payment-card special">
+      <span class="payment-icon">🌍</span>
+      <div class="payment-name">Внутренняя рассрочка</div>
+      <div class="payment-desc">3 платежа от нас — для тех, кто живёт за границей. Первый платёж сейчас, остальные 2 во время обучения.</div>
+      <a href="#contact" class="payment-cta">Оставить заявку →</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BONUSES — бонусы -->
+<section class="bonuses-section" id="bonuses">
+  <div class="section-label reveal">Подарки</div>
+  <h2 class="section-title reveal">Бонусы сразу после<br><em>покупки курса</em></h2>
+  <div class="bonuses-grid reveal">
+
+    <div class="bonus-card">
+      <div class="bonus-index">01</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">PDF-гайд</div>
+        <div class="bonus-title">10 атмосферных стилей Midjourney + инструкция</div>
+        <div class="bonus-desc">Готовые промпты для 10 кинематографических стилей от автора с разбором каждого. Скопируй и используй сразу.</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-index">02</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">PDF-гайд</div>
+        <div class="bonus-title">Лучшие AI-криэйторы мира для вдохновения</div>
+        <div class="bonus-desc">Подборка топовых авторов, чьи работы стоит изучить. Насмотренность — основа качественного AI-контента.</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-index">03</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">Чек-лист</div>
+        <div class="bonus-title">Какая нейросеть лучшая прямо сейчас для разных задач</div>
+        <div class="bonus-desc">Актуальный сравнительный обзор инструментов: что выбрать для изображений, видео, озвучки и монтажа в 2026 году.</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-index">04</div>
+      <div class="bonus-body">
+        <div class="bonus-tag">Видеокурс</div>
+        <div class="bonus-title">Пак уроков по профессиональному монтажу</div>
+        <div class="bonus-desc">От AI-криэйтора-режиссёра — ученицы автора. Полноценный мини-курс по монтажу AI-роликов, которые выглядят дорого.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- FIT / NOT FIT -->
 <section class="fit-section">
   <div class="section-label reveal">Честно о программе</div>
@@ -2165,6 +2322,36 @@ footer {
   </div>
 </section>
 
+
+<div class="divider"></div>
+
+<!-- ЭКСКУРСИЯ -->
+<section class="exc-section" id="excursion">
+  <div class="section-label reveal">Первый шаг</div>
+  <h2 class="section-title reveal">Что такое<br><em>экскурсия</em></h2>
+  <div class="exc-card reveal">
+    <div class="exc-disc">
+      <p><b>Запись ни к чему не обязывает.</b> Это просто разговор: посмотрим на вашу ситуацию и решим, подходит вам формат или нет. Не подойдёт — так и скажу.</p>
+      <p>И да — <b>спам мы тоже не любим</b>. Пишу лично и только по делу: подтвердить время и прислать ваш план после созвона.</p>
+    </div>
+        <p class="exc-lead">Экскурсия — это <b>живой созвон один на один со мной</b>. Не вебинар, не запись и не разговор с менеджером. Мы смотрим на вашу ситуацию и решаем, стоит ли вам вообще этим заниматься.</p>
+    <div class="exc-grid">
+      <div class="exc-item"><span class="ei">🎯</span><div><div class="et">Разберём вашу точку А</div><div class="ed">Где вы сейчас, что уже пробовали и что именно не получается</div></div></div>
+      <div class="exc-item"><span class="ei">🖥</span><div><div class="et">Покажу платформу изнутри</div><div class="ed">Уроки, задания, чат — живой экран, а не слайды и описания</div></div></div>
+      <div class="exc-item"><span class="ei">✨</span><div><div class="et">Сделаем кадр вместе</div><div class="ed">Прямо на созвоне соберём пример с вашим товаром или вашим лицом</div></div></div>
+      <div class="exc-item"><span class="ei">🗺</span><div><div class="et">Соберу маршрут</div><div class="ed">План на ближайшие недели — он остаётся вам в любом случае</div></div></div>
+    </div>
+    <div class="exc-facts">
+      <span>⏱ 25 минут</span>
+      <span>👤 Один на один</span>
+      <span>💬 В Telegram или Zoom</span>
+      <span>🎁 Бесплатно</span>
+    </div>
+    <div class="exc-no"><b>Чего не будет:</b> давления, «последних мест до полуночи» и обязательства что-то покупать. Если формат вам не подходит — скажу об этом прямо и посоветую, что делать самостоятельно.</div>
+    <a class="exc-cta" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=master_exc">Записаться на экскурсию →</a>
+  </div>
+</section>
+
 <div class="divider"></div>
 
 <!-- CTA FINAL -->
@@ -2172,7 +2359,7 @@ footer {
   <h2 class="cta-title reveal">Начни сейчас.<br><em>Первый результат — через неделю.</em></h2>
   <p class="cta-sub reveal">Ещё сомневаешься? Запишись на <strong>бесплатную экскурсию по обучению</strong> — покажем платформу изнутри, разберём программу под твою цель и ответим на все вопросы. Без обязательств.</p>
   <div class="cta-btns reveal">
-    <a href="https://neurocreator2.ru/anketa?from=excursion" class="btn-primary">Записаться на экскурсию →</a>
+    <a href="#excursion" class="btn-primary">Записаться на экскурсию →</a>
     <a href="#pricing" class="btn-secondary">Выбрать тариф</a>
   </div>
   <p class="cta-tg reveal">Остались вопросы? <a href="https://t.me/newhndrx" target="_blank" rel="noopener">Написать в Telegram</a></p>
