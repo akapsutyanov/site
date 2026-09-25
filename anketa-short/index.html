@@ -335,6 +335,7 @@ body {
 .form-disc p{font-size:13px;font-weight:300;color:var(--ink3);line-height:1.7}
 .form-disc p+p{margin-top:8px}
 .form-disc b{color:var(--ink2);font-weight:600}
+.form-disc.top{max-width:640px;margin:0 auto 22px}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -392,7 +393,12 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
   })();
   </script>
 
-  <form class="form-card" id="mainForm" novalidate>
+  <div class="form-disc top">
+        <p><b>Заполнение ни к чему не обязывает.</b> Это просто знакомство: посмотрим вашу ситуацию на созвоне и решим, подходит вам формат или нет.</p>
+        <p><b>Спам мы не любим.</b> Пишу лично и только по делу — подтвердить время и прислать ваш план после разбора. Никаких рассылок «каждый вторник».</p>
+      </div>
+
+<form class="form-card" id="mainForm" novalidate>
 
     <!-- Q1: ИМЯ -->
     <div class="q-block">
@@ -470,10 +476,6 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
       <div class="error-msg" id="goal-error">Пожалуйста, выбери хотя бы один вариант</div>
     </div>
 
-      <div class="form-disc">
-        <p><b>Заполнение ни к чему не обязывает.</b> Это просто знакомство: посмотрим вашу ситуацию на созвоне и решим, подходит вам формат или нет.</p>
-        <p><b>Спам мы не любим.</b> Пишу лично и только по делу — подтвердить время и прислать ваш план после разбора. Никаких рассылок «каждый вторник».</p>
-      </div>
     <!-- SUBMIT -->
     <div class="submit-wrap">
       <button type="submit" class="btn-submit" id="submitBtn">Отправить анкету →</button>

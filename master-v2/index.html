@@ -1266,6 +1266,23 @@ footer {
 .exc-disc p{font-size:13.5px;font-weight:300;color:var(--ink3);line-height:1.7}
 .exc-disc p+p{margin-top:8px}
 .exc-disc b{color:var(--ink2);font-weight:600}
+
+/* автор — круглое фото */
+.author-grid{grid-template-columns:330px 1fr!important;align-items:start!important}
+.author-photo{border-radius:50%!important;overflow:hidden;border:1px solid rgba(224,184,116,.28)!important;
+  box-shadow:0 26px 60px rgba(0,0,0,.6),0 0 60px rgba(224,184,116,.10)!important;max-width:330px}
+.author-photo img{border-radius:50%}
+@media(max-width:900px){ .author-grid{grid-template-columns:1fr!important;justify-items:center} .author-photo{max-width:230px} }
+/* дисклеймер сверху карточки экскурсии */
+.exc-disc{margin:0 0 26px!important}
+/* ссылка на папку отзывов */
+.proof{margin-top:26px;border:1px solid rgba(200,200,200,.14);border-radius:20px;padding:26px 28px;
+  background:rgba(13,13,18,.72);display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.proof .pt{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--c1);line-height:1.2}
+.proof .pd{margin-top:7px;font-size:14px;font-weight:300;color:var(--ink2);line-height:1.6;max-width:640px}
+.proof a{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(200,200,200,.25);border-radius:10px;
+  padding:15px 28px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--c2);text-decoration:none;white-space:nowrap}
+.proof a:hover{color:var(--c1);border-color:rgba(220,220,220,.5)}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1443,7 +1460,7 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
   <div class="section-label reveal">Автор</div>
   <h2 class="section-title reveal">Кто будет<br><em>вести вас лично</em></h2>
   <div class="author-grid reveal">
-    <div class="author-photo"><img src="author.jpg" alt="Александр Капустьянов" loading="lazy"></div>
+    <div class="author-photo"><img src="author-round.jpg" alt="Александр Капустьянов" loading="lazy"></div>
     <div>
       <p class="author-lead"><b>Александр Капустьянов.</b> Четырнадцать лет я писал музыку — альбомы, концерты, клип на ТВ. Параллельно работал везде, где платили: от склада Adidas до бомбоубежища. Потом ушёл в контент и уже <b>восемь лет</b> снимаю и монтирую — сначала камерой, последние <b>три года</b> нейросетями, с тех пор как они вообще появились.</p>
       <p class="author-lead" style="margin-top:18px">Я не пришёл в ИИ на хайпе и не пересказываю чужие курсы. Я прошёл весь путь сам: от «поздно начинать» до профессии, которой ещё пять лет назад не существовало. Поэтому учу не кнопкам, а ремеслу — тому, что остаётся, когда нейросети в очередной раз обновятся.</p>
@@ -1618,6 +1635,14 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
     </div>
 
   </div>
+  
+    <div class="proof">
+      <div>
+        <div class="pt">Не верь на слово — <em>посмотри сам</em></div>
+        <div class="pd">Все отзывы учеников целиком, без нарезок, и их работы — в одной папке. Видео, скрины переписок, готовые ролики.</div>
+      </div>
+      <a href="https://t.me/+cC8YPOfV1yI4ZDcy" target="_blank" rel="noopener">Открыть отзывы и работы →</a>
+    </div>
   </section>
 
 <div class="divider"></div>
@@ -2308,7 +2333,11 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
   <div class="section-label reveal">Первый шаг</div>
   <h2 class="section-title reveal">Что такое<br><em>экскурсия</em></h2>
   <div class="exc-card reveal">
-    <p class="exc-lead">Экскурсия — это <b>живой созвон один на один со мной</b>. Не вебинар, не запись и не разговор с менеджером. Мы смотрим на вашу ситуацию и решаем, стоит ли вам вообще этим заниматься.</p>
+    <div class="exc-disc">
+      <p><b>Запись ни к чему не обязывает.</b> Это просто разговор: посмотрим на вашу ситуацию и решим, подходит вам формат или нет. Не подойдёт — так и скажу.</p>
+      <p>И да — <b>спам мы тоже не любим</b>. Пишу лично и только по делу: подтвердить время и прислать ваш план после созвона.</p>
+    </div>
+        <p class="exc-lead">Экскурсия — это <b>живой созвон один на один со мной</b>. Не вебинар, не запись и не разговор с менеджером. Мы смотрим на вашу ситуацию и решаем, стоит ли вам вообще этим заниматься.</p>
     <div class="exc-grid">
       <div class="exc-item"><span class="ei">🎯</span><div><div class="et">Разберём вашу точку А</div><div class="ed">Где вы сейчас, что уже пробовали и что именно не получается</div></div></div>
       <div class="exc-item"><span class="ei">🖥</span><div><div class="et">Покажу платформу изнутри</div><div class="ed">Уроки, задания, чат — живой экран, а не слайды и описания</div></div></div>
@@ -2322,10 +2351,6 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
       <span>🎁 Бесплатно</span>
     </div>
     <div class="exc-no"><b>Чего не будет:</b> давления, «последних мест до полуночи» и обязательства что-то покупать. Если формат вам не подходит — скажу об этом прямо и посоветую, что делать самостоятельно.</div>
-    <div class="exc-disc">
-      <p><b>Запись ни к чему не обязывает.</b> Это просто разговор: посмотрим на вашу ситуацию и решим, подходит вам формат или нет. Не подойдёт — так и скажу.</p>
-      <p>И да — <b>спам мы тоже не любим</b>. Пишу лично и только по делу: подтвердить время и прислать ваш план после созвона.</p>
-    </div>
     <a class="exc-cta" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=master_exc">Записаться на экскурсию →</a>
   </div>
 </section>
