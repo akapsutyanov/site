@@ -1044,6 +1044,166 @@ footer {
 .review-lightbox.open { display: flex; }
 .review-lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 12px; box-shadow: 0 30px 90px rgba(0,0,0,0.7); }
 
+/* ===== HERO VARIANT A ===== */
+.vaHero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid rgba(200,200,200,.07)}
+.vaMosaic{position:absolute;inset:-8% -4%;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;transform:rotate(-8deg) scale(1.28);opacity:.5}
+.vaCol{display:flex;flex-direction:column;gap:14px;animation:vaDrift 34s linear infinite}
+.vaCol:nth-child(2){animation-duration:44s;animation-direction:reverse}
+.vaCol:nth-child(3){animation-duration:38s}
+.vaCol:nth-child(4){animation-duration:50s;animation-direction:reverse}
+.vaCol img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;display:block;filter:saturate(.92) contrast(1.05)}
+@keyframes vaDrift{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.vaScrim{position:absolute;inset:0;z-index:2;background:
+  linear-gradient(90deg,rgba(6,6,8,.97) 0%,rgba(6,6,8,.93) 38%,rgba(6,6,8,.55) 64%,rgba(6,6,8,.78) 100%),
+  radial-gradient(ellipse 60% 70% at 14% 50%, rgba(6,6,8,.92), transparent 72%),
+  linear-gradient(180deg,rgba(6,6,8,.85) 0%,transparent 22%,transparent 72%,rgba(6,6,8,.95) 100%)}
+.vaWrap{position:relative;z-index:3;max-width:1240px;margin:0 auto;padding:0 40px;width:100%}
+.vaBadge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(200,200,200,.2);border-radius:30px;padding:8px 16px;
+  font-size:10px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--c2);background:rgba(13,13,18,.6)}
+.vaBadge i{width:6px;height:6px;border-radius:50%;background:#8ee6a4;display:block}
+.vaTitle{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(46px,6vw,84px);line-height:.98;margin-top:22px;color:var(--c1);max-width:900px}
+.vaTitle em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.vaSub{margin-top:22px;max-width:560px;font-size:16px;font-weight:300;color:var(--ink2);line-height:1.75}
+.vaSub b{color:var(--ink);font-weight:500}
+.vaRoute{margin-top:32px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.vaRoute span{border:1px solid rgba(200,200,200,.12);border-radius:12px;padding:11px 16px;font-size:13px;color:var(--ink);background:rgba(13,13,18,.72)}
+.vaRoute i{color:var(--ink3);font-style:normal}
+.vaBtns{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.vaScroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:4;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--ink3)}
+@media(max-width:900px){ .vaMosaic{grid-template-columns:repeat(3,1fr);opacity:.34} .vaScrim{background:linear-gradient(180deg,rgba(6,6,8,.92),rgba(6,6,8,.82) 40%,rgba(6,6,8,.95))} .vaWrap{padding:0 22px} }
+
+/* ===== HERO A · доп. элементы и мобильная раскладка ===== */
+.vaEyebrow{margin-top:14px;font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.vaPills{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+.vaPill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(200,200,200,.14);border-radius:30px;
+  padding:9px 16px;font-size:12.5px;color:var(--ink2);background:rgba(13,13,18,.72)}
+.vaPill span{font-size:14px}
+.vaStats{margin-top:34px;display:flex;gap:34px;flex-wrap:wrap}
+.vaStats .vsN{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--c1);line-height:1;
+  background:var(--chrome-shine);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 8s linear infinite}
+.vaStats .vsL{margin-top:5px;font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:var(--ink3)}
+@media(max-width:900px){
+  .vaHero{min-height:100vh;padding:104px 0 46px;align-items:center}
+  .vaWrap{padding:0 20px;text-align:center}
+  .vaMosaic{grid-template-columns:repeat(3,1fr);opacity:.42;transform:rotate(-6deg) scale(1.45)}
+  .vaScrim{background:linear-gradient(180deg,rgba(6,6,8,.92) 0%,rgba(6,6,8,.72) 30%,rgba(6,6,8,.86) 62%,rgba(6,6,8,.97) 100%)}
+  .vaTitle{font-size:clamp(34px,10vw,46px);margin-top:14px}
+  .vaSub{margin:16px auto 0;max-width:420px;font-size:14px}
+  .vaRoute{display:none}
+  .vaPills{margin-top:20px;justify-content:center;gap:8px}
+  .vaPill{font-size:11.5px;padding:8px 13px}
+  .vaBtns{margin-top:22px;flex-direction:column;gap:10px}
+  .vaBtns .btn-primary,.vaBtns .btn-secondary{width:100%;justify-content:center;text-align:center}
+  .vaStats{margin-top:26px;justify-content:center;gap:22px}
+  .vaStats .vsN{font-size:28px}
+}
+
+/* ===== HERO A · воздух ===== */
+.vaWrap{padding:0 48px}
+.vaBadge{padding:9px 18px;letter-spacing:2.8px}
+.vaEyebrow{margin-top:20px;letter-spacing:4.5px}
+.vaTitle{margin-top:26px;line-height:1.04;letter-spacing:-.5px}
+.vaSub{margin-top:28px;max-width:620px;font-size:17px;line-height:1.85}
+.vaRoute{margin-top:36px;gap:14px}
+.vaRoute span{padding:12px 18px;font-size:13.5px}
+.vaPills{margin-top:32px;gap:12px}
+.vaPill{padding:11px 18px;font-size:13px}
+.vaBtns{margin-top:40px;gap:14px}
+.vaStats{margin-top:48px;gap:0}
+.vaStats>div{padding:0 34px;border-left:1px solid rgba(200,200,200,.12)}
+.vaStats>div:first-child{padding-left:0;border-left:0}
+.vaStats .vsL{margin-top:7px}
+.vaScroll{bottom:32px}
+@media(max-width:900px){
+  .vaHero{padding:120px 0 64px}
+  .vaWrap{padding:0 24px}
+  .vaBadge{font-size:9.5px;padding:8px 15px}
+  .vaEyebrow{display:none}
+  .vaTitle{margin-top:22px;font-size:clamp(32px,8.8vw,44px);line-height:1.1}
+  .vaSub{margin:20px auto 0;max-width:360px;font-size:14.5px;line-height:1.8}
+  .vaPills{margin-top:28px;gap:9px}
+  .vaPill{font-size:11.5px;padding:9px 14px}
+  .vaBtns{margin-top:32px;gap:12px}
+  .vaBtns .btn-primary,.vaBtns .btn-secondary{padding:17px 20px}
+  .vaStats{margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px 10px;max-width:330px;margin-left:auto;margin-right:auto}
+  .vaStats>div{padding:0;border-left:0}
+  .vaStats .vsN{font-size:30px}
+  .vaStats .vsL{font-size:9.5px;letter-spacing:1.8px}
+  .vaScroll{bottom:20px}
+}
+
+/* ===== HERO A · мобильная доводка ===== */
+@media(max-width:900px){
+  .vaHero{padding:112px 0 56px}
+  .vaWrap{padding:0 26px}
+  .vaTitle{margin-top:24px;font-size:clamp(33px,9vw,46px);line-height:1.12}
+  .vaSub{margin:22px auto 0;max-width:100%;font-size:15px;line-height:1.75}
+  .vaPills{margin-top:30px;gap:10px}
+  .vaBtns{margin-top:34px}
+  .vaStats{margin-top:40px;gap:26px 14px;max-width:320px}
+  .vaMosaic{opacity:.46}
+  .vaScrim{background:linear-gradient(180deg,rgba(6,6,8,.90) 0%,rgba(6,6,8,.62) 26%,rgba(6,6,8,.80) 58%,rgba(6,6,8,.97) 100%)}
+}
+
+/* ===== HERO A · правки ===== */
+@media(min-width:901px){ .vaBadge{display:none} .vaEyebrow{margin-top:0} }
+@media(max-width:900px){ .vaBtns{margin-top:54px} .vaStats{margin-top:44px} }
+
+/* ===== HERO A · кнопки ниже на мобильном ===== */
+@media(max-width:900px){
+  .vaPills{margin-top:34px}
+  .vaBtns{margin-top:86px}
+  .vaStats{margin-top:52px}
+  .vaHero{padding:104px 0 62px}
+}
+
+/* ===== HERO A · контент к низу на мобильном ===== */
+@media(max-width:900px){
+  .vaHero{align-items:flex-end;padding:96px 0 84px}
+  .vaPills{margin-top:30px}
+  .vaBtns{margin-top:40px}
+  .vaStats{margin-top:42px}
+  .vaScroll{bottom:26px}
+}
+
+/* ===== HERO A · кнопка у самого низа (мобильный) ===== */
+@media(max-width:900px){
+  .vaHero{align-items:flex-end;padding:92px 0 26px}
+  .vaWrap{display:flex;flex-direction:column}
+  .vaBadge{order:1;align-self:center}
+  .vaTitle{order:2}
+  .vaSub{order:3}
+  .vaPills{order:4}
+  .vaStats{order:5;margin-top:36px}
+  .vaBtns{order:6;margin-top:30px;margin-bottom:0}
+  .vaScroll{display:none}
+}
+
+/* ===== HERO A · возврат порядка: кнопки над цифрами ===== */
+@media(max-width:900px){
+  .vaHero{align-items:flex-end;padding:96px 0 76px}
+  .vaWrap{display:block}
+  .vaBadge,.vaTitle,.vaSub,.vaPills,.vaBtns,.vaStats{order:initial}
+  .vaPills{margin-top:30px}
+  .vaBtns{margin-top:38px}
+  .vaStats{margin-top:40px}
+  .vaScroll{display:block;bottom:24px}
+}
+
+/* ===== HERO A · сдвиг блока вниз на 20px ===== */
+@media(max-width:900px){ .vaHero{padding:96px 0 56px} .vaScroll{bottom:18px} }
+
+/* ===== HERO A · появление при загрузке ===== */
+@keyframes vaUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.vaBadge,.vaEyebrow,.vaTitle,.vaSub,.vaPills,.vaBtns,.vaStats{animation:vaUp .8s cubic-bezier(.23,1,.32,1) both}
+.vaBadge{animation-delay:.05s}
+.vaEyebrow{animation-delay:.12s}
+.vaTitle{animation-delay:.2s}
+.vaSub{animation-delay:.34s}
+.vaPills{animation-delay:.46s}
+.vaBtns{animation-delay:.58s}
+.vaStats{animation-delay:.7s}
+@media(prefers-reduced-motion:reduce){ .vaBadge,.vaEyebrow,.vaTitle,.vaSub,.vaPills,.vaBtns,.vaStats{animation:none} }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1097,51 +1257,32 @@ footer {
 <!-- плавающая кнопка (появляется при скролле) -->
 <a href="https://neurocreator2.ru/anketa?from=excursion" class="floating-cta" id="floatingCta">Записаться на экскурсию →</a>
 
-<!-- HERO -->
-<section class="hero">
-
-  <!-- ▼▼▼ ВИДЕО-ФОН: положи свои файлы рядом с этим HTML и оставь те же имена ▼▼▼
-       hero.mp4  — основное видео (H.264, без звука, 6–12 сек, зациклено)
-       hero.webm — то же видео в WebM (необязательно, но легче и чётче)
-       hero-poster.jpg — кадр-заставка (показывается, пока видео грузится / если не запустилось)
-       Совет: 1920×1080, до ~5 МБ. Можно удалить <video> и оставить только <img class="hero-poster">,
-       если решишь обойтись картинкой. ▲▲▲ -->
-  <div class="hero-media">
-    <img class="hero-poster" src="hero-poster.jpg" alt="" aria-hidden="true" onerror="this.style.display='none'"
-         data-desktop="hero-poster.jpg" data-mobile="hero-poster-mobile.jpg">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto"
-           data-desktop="hero.mp4" data-mobile="hero-mobile.mp4"
-           data-poster-desktop="hero-poster.jpg" data-poster-mobile="hero-poster-mobile.jpg"></video>
-    <div class="hero-scrim"></div>
-  </div>
-
-  <div class="hero-wrap">
-    <div class="hero-left">
-      <div class="hero-badge" id="heroBadge"><span class="badge-dot"></span>Сопровождение · 2026</div>
-      <div class="hero-eyebrow" id="heroEyebrow">Сопровождение по AI-контенту</div>
-      <h1 class="hero-title" id="heroTitle">AI —<br><span>Новый</span><br>Уровень<br>2026</h1>
-      <p class="hero-sub" id="heroSub">6 недель · 6 модулей · Личное сопровождение.<br>Освой <strong>профессию AI-контент-мейкера</strong> и выстрой путь к доходу — <strong>с нуля</strong>.</p>
-      <div class="hero-pills" id="heroPills">
-        <div class="pill"><span class="pill-icon">🚀</span> Доход на AI-контенте</div>
-        <div class="pill"><span class="pill-icon">👥</span> Рост аудитории</div>
-        <div class="pill"><span class="pill-icon">✅</span> Сопровождение до результата</div>
-      </div>
-      <div class="hero-ctas" id="heroCtas">
-        <a href="#pricing" class="btn-primary"><span class="btn-label">Выбрать формат</span><span class="btn-arrow">→</span></a>
-        <a href="#program" class="btn-secondary"><span class="btn-label">Смотреть программу</span></a>
-      </div>
-      <div class="hero-stats" id="heroStats">
-        <div class="stat"><div class="stat-num">100К+</div><div class="stat-label">₽ — цель дохода</div></div>
-        <div class="stat"><div class="stat-num">6</div><div class="stat-label">Недель</div></div>
-        <div class="stat"><div class="stat-num">3</div><div class="stat-label">AI-ролика</div></div>
-        <div class="stat"><div class="stat-num">10К+</div><div class="stat-label">цель по аудитории</div></div>
-      </div>
+<!-- HERO · вариант A -->
+<section class="vaHero">
+  <div class="vaMosaic"><div class="vaCol"><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""></div><div class="vaCol"><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""></div><div class="vaCol"><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""></div><div class="vaCol"><img src="../master/hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../master/hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""></div></div>
+  <div class="vaScrim"></div>
+  <div class="vaWrap">
+    <div class="vaBadge"><i></i>Сопровождение · 2026</div>
+    <div class="vaEyebrow">Сопровождение по AI-контенту</div>
+    <h1 class="vaTitle">Снимай рекламу,<br>которой <em>ещё не было</em></h1>
+    <p class="vaSub">Профессия AI-контент-мейкера за <b>6 недель</b>. Учу собирать ролики для брендов на нейросетях — от идеи до клиента, в мини-группе, где каждую работу смотрю лично.</p>
+    <div class="vaPills">
+      <div class="vaPill"><span>🎬</span> Ролики для брендов</div>
+      <div class="vaPill"><span>👥</span> Мини-группа</div>
+      <div class="vaPill"><span>✅</span> Разборы лично</div>
+    </div>
+    <div class="vaBtns">
+      <a href="https://neurocreator2.ru/anketa?from=excursion" class="btn-primary">Записаться на экскурсию →</a>
+      <a href="#program" class="btn-secondary">Смотреть программу</a>
+    </div>
+    <div class="vaStats">
+      <div><div class="vsN">6</div><div class="vsL">недель</div></div>
+      <div><div class="vsN">3</div><div class="vsL">AI-ролика</div></div>
+      <div><div class="vsN">12+</div><div class="vsL">нейросетей</div></div>
+      <div><div class="vsN">15</div><div class="vsL">мест в потоке</div></div>
     </div>
   </div>
-  <a href="#works" class="hero-scroll" aria-label="Листай вниз">
-    <span>Листай</span>
-    <span class="scroll-line"></span>
-  </a>
+  <div class="vaScroll">Листай</div>
 </section>
 
 <!-- TICKER -->
