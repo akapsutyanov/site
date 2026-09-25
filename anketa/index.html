@@ -302,6 +302,33 @@ body {
   .q-block { padding: 20px 18px; }
   .form-title { letter-spacing: -1.5px; }
 }
+
+/* ── Пока ждём созвона ── */
+.wait{margin-top:34px;padding-top:30px;border-top:1px solid rgba(200,200,200,.10)}
+.wait-eyebrow{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--ink3)}
+.wait-title{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:300;color:var(--ink);margin:8px 0 20px;line-height:1.15}
+.wait-title em{font-style:italic;background:var(--gold-shine);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.wait-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}
+.wtile{border:1px solid rgba(200,200,200,.12);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.02);display:flex;flex-direction:column}
+.wtile.tg{border-color:rgba(58,162,224,.28);background:linear-gradient(180deg,rgba(58,162,224,.07),rgba(255,255,255,.02))}
+.wthumb{position:relative;display:block;aspect-ratio:16/9;overflow:hidden}
+.wthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.wthumb::after{content:'';position:absolute;inset:0;background:rgba(6,6,8,.28)}
+.wplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,#f8f8f8,#cfcfcf);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-size:15px;padding-left:3px;
+  box-shadow:0 8px 22px rgba(0,0,0,.5)}
+.wbody{padding:16px 18px 18px;display:flex;flex-direction:column;height:100%}
+.wic{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#3aa2e0,#2b7cc0);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.wic svg{width:20px;height:20px;fill:#fff;margin-left:-1px}
+.wt{font-size:16px;font-weight:600;color:var(--ink)}
+.wd{margin-top:7px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6;flex:1}
+.wbtn{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;padding:13px 18px;border-radius:10px;
+  border:1px solid rgba(200,200,200,.22);color:var(--ink);text-decoration:none;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;
+  transition:transform .25s,border-color .25s}
+.wbtn:hover{transform:translateY(-2px);border-color:rgba(220,220,220,.45)}
+.wbtn.blue{background:linear-gradient(135deg,#3aa2e0,#2b7cc0);border-color:transparent;color:#fff;-webkit-text-fill-color:#fff;
+  box-shadow:0 10px 26px rgba(58,162,224,.26)}
+@media(max-width:620px){ .wait-grid{grid-template-columns:1fr} .wait-title{font-size:25px} }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -539,22 +566,32 @@ body {
     <div class="success-steps" style="margin-top:26px">
       <div class="s-step"><span class="s-num">1</span><span id="okStep1"><b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и подтвержу слот.</span></div>
       <div class="s-step"><span class="s-num">2</span><span>Экскурсия — это <b>созвон 30–40 минут</b>: покажу платформу изнутри, разберём твою ситуацию и составим пошаговый план.</span></div>
-      <div class="s-step"><span class="s-num">3</span><span>А пока — <b>посмотри бонусное видео</b>: за несколько минут поймёшь, как устроена профессия AI-контент-мейкера. <a href="https://neurocreator2.ru/bonus/" style="color:var(--g2)">Смотреть →</a></span></div>
     </div>
 
-    <div class="community">
-      <div class="cm-ic"><svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div>
-      <div class="cm-eyebrow">Пока ждёшь ответа</div>
-      <div class="cm-title">Заходи в <em>AI-комьюнити</em></div>
-      <p class="cm-sub">Закрытый чат, где мы разбираем нейросети каждый день. Вход бесплатный — просто будь своим.</p>
-      <ul class="cm-list">
-        <li>Готовые промпты и разборы — можно брать и делать</li>
-        <li>Свежие инструменты: что появилось и стоит ли тратить время</li>
-        <li>Работы участников и обратная связь по своим</li>
-        <li>Вопросы можно задавать любые — тут все начинали с нуля</li>
-      </ul>
-      <a class="cm-btn" href="https://t.me/+n73CTNryF744N2I6" target="_blank" rel="noopener">Вступить в комьюнити →</a>
-      <p class="cm-note">Открывается в Telegram · выйти можно в любой момент</p>
+    <div class="wait">
+      <div class="wait-eyebrow" id="waitEyebrow">Пока ждём созвона</div>
+      <div class="wait-title">Два дела на <em>ближайший вечер</em></div>
+      <div class="wait-grid">
+        <div class="wtile">
+          <a class="wthumb" href="https://neurocreator2.ru/bonus/?from=anketa" target="_blank" rel="noopener">
+            <img src="../assets/masterclass.jpg" alt="Мастер-класс" loading="lazy">
+            <span class="wplay">▶</span>
+          </a>
+          <div class="wbody">
+            <div class="wt">Мастер-класс</div>
+            <div class="wd" id="waitMcText">Весь процесс вживую: инструменты, генерация, разбор готовой сцены. Посмотри до созвона — разберём твои вопросы по нему.</div>
+            <a class="wbtn" href="https://neurocreator2.ru/bonus/?from=anketa" target="_blank" rel="noopener">Смотреть мастер-класс →</a>
+          </div>
+        </div>
+        <div class="wtile tg">
+          <div class="wbody">
+            <div class="wic"><svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div>
+            <div class="wt">AI-комьюнити</div>
+            <div class="wd">Закрытый чат, где каждый день разбираем нейросети: промпты, свежие инструменты, работы участников.</div>
+            <a class="wbtn blue" href="https://t.me/+n73CTNryF744N2I6" target="_blank" rel="noopener">Вступить в чат →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -719,6 +756,8 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
       document.getElementById('okTitle').innerHTML = 'Анкета <span class="gold-text">принята</span>';
       document.getElementById('okSub').innerHTML = 'Спасибо! Остался один шаг — <b>напиши мне в Telegram</b>, расскажу детали обучения и отвечу на вопросы. Сообщение уже написано.';
       document.getElementById('okStep1').innerHTML = '<b>Отправь сообщение</b> кнопкой выше — так я увижу тебя в чате и отвечу лично.';
+      var we=document.getElementById('waitEyebrow'); if(we) we.textContent='Пока я отвечаю';
+      var wm=document.getElementById('waitMcText'); if(wm) wm.textContent='Весь процесс вживую: инструменты, генерация, разбор готовой сцены. Посмотри — и сразу поймёшь, как это устроено.';
       document.getElementById('okNote').innerHTML = 'Не открылся Telegram? Напиши сам(а): <a href="https://t.me/foms_fit" target="_blank" rel="noopener" style="color:var(--g2)">@foms_fit</a>';
       var msg0 = 'Привет! Заполнил(а) анкету'
                + (name ? ', меня зовут ' + name : '')
