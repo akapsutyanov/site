@@ -1,7 +1,31 @@
 {
- "updated": "2026-09-26T11:14:38Z",
+ "updated": "2026-09-26T11:46:34Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137702836",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор-аналитик по работе с нейросетями\n🏢 Транском · Екатеринбург",
+   "link": "https://hh.ru/vacancy/137702836?tech_source=api",
+   "date": "2026-09-26T14:08:28+0300"
+  },
+  {
+   "id": "hh/137110757",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам на вводном уроке (обучение для детей по Нейросетям)\n🏢 Квантастика · Казань\n💰 от 100000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/137110757?tech_source=api",
+   "date": "2026-09-26T14:07:32+0300"
+  },
+  {
+   "id": "hh/136892176",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Developer Intern / Стажер-разработчик\n🏢 Секретные Агенты · Краснознаменск (Московская область)",
+   "link": "https://hh.ru/vacancy/136892176?tech_source=api",
+   "date": "2026-09-26T13:53:52+0300"
+  },
   {
    "id": "hh/137312367",
    "source": "hh",
@@ -747,22 +771,6 @@
    "date": "2026-09-25T07:44:04+0300"
   },
   {
-   "id": "hh/137032679",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам (теплый трафик, AI-продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Санкт-Петербург\n💰 от 100000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137032679?tech_source=api",
-   "date": "2026-09-25T07:42:39+0300"
-  },
-  {
-   "id": "hh/137032680",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам (теплый трафик, AI-продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Сочи\n💰 от 100000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137032680?tech_source=api",
-   "date": "2026-09-25T07:42:39+0300"
-  },
-  {
    "id": "jobforjunior/8498",
    "source": "telegram",
    "channel": "jobforjunior",
@@ -809,14 +817,6 @@
    "text": "Senior дизайнер\n🏢 Сбербанк России, ПАО · Город Москва\n💰 от 150000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/108d15b4-b8e1-11f1-a976-fd3d2b53720b",
    "date": "2026-09-25"
-  },
-  {
-   "id": "hh/135327339",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Artist / Generative Artist\n🏢 Судоргин Иван Владимирович · Москва\n💰 от 120000 RUR",
-   "link": "https://hh.ru/vacancy/135327339?tech_source=api",
-   "date": "2026-09-24T20:24:09+0300"
   },
   {
    "id": "SearchEditorr/3937",
