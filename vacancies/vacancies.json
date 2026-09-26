@@ -1,7 +1,55 @@
 {
- "updated": "2026-09-26T07:09:14Z",
+ "updated": "2026-09-26T07:51:56Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137678697",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-инженер (LLM, локальные модели)\n🏢 Яковлев Валерий Валерьевич · Москва\n💰 от 150000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/137678697?tech_source=api",
+   "date": "2026-09-26T10:21:24+0300"
+  },
+  {
+   "id": "hh/137678293",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-дизайнер/программист в офис\n🏢 Чухина Наталья Михайловна · Брянск\n💰 от 55000 до 60000 RUR",
+   "link": "https://hh.ru/vacancy/137678293?tech_source=api",
+   "date": "2026-09-26T10:15:28+0300"
+  },
+  {
+   "id": "hh/137089022",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Intern Product Manager / AI Product Builder (Vibe Coding)\n🏢 LENIVINS.AI · Москва",
+   "link": "https://hh.ru/vacancy/137089022?tech_source=api",
+   "date": "2026-09-26T09:13:25+0300"
+  },
+  {
+   "id": "hh/137672270",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения нейросетям (GPT/AI / ПРОМТы)\n🏢 xHuman Sales · Санкт-Петербург\n💰 от 200000 до 300000 RUR",
+   "link": "https://hh.ru/vacancy/137672270?tech_source=api",
+   "date": "2026-09-26T09:08:43+0300"
+  },
+  {
+   "id": "hh/137285458",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ведущий менеджер по продажам (EdTech / AI продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Москва\n💰 от 120000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/137285458?tech_source=api",
+   "date": "2026-09-26T07:52:23+0300"
+  },
+  {
+   "id": "hh/137285459",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ведущий менеджер по продажам (EdTech / AI продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Екатеринбург\n💰 от 120000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/137285459?tech_source=api",
+   "date": "2026-09-26T07:52:23+0300"
+  },
   {
    "id": "hh/137811958",
    "source": "hh",
@@ -721,54 +769,6 @@
    "text": "Руководитель направления ИИ (цифровые аватары)\n🏢 Highpro · Ульяновск\n💰 от 250000 до 350000 RUR",
    "link": "https://hh.ru/vacancy/137610029?tech_source=api",
    "date": "2026-09-24T18:22:54+0300"
-  },
-  {
-   "id": "hh/137765730",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению ИИ.\n🏢 Увелка ООО «Ресурс» · Челябинск\n💰 от 200000 до 350000 RUR",
-   "link": "https://hh.ru/vacancy/137765730?tech_source=api",
-   "date": "2026-09-24T18:11:00+0300"
-  },
-  {
-   "id": "hh/136966816",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Коммуникационный дизайнер | AI-дизайнер\n🏢 Студия Чижова · Санкт-Петербург\n💰 от 110000 до 120000 RUR",
-   "link": "https://hh.ru/vacancy/136966816?tech_source=api",
-   "date": "2026-09-24T18:03:25+0300"
-  },
-  {
-   "id": "hh/137765343",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Executive AI Assistant / Координатор CEO\n🏢 WMT · Москва\n💰 от 220000 RUR",
-   "link": "https://hh.ru/vacancy/137765343?tech_source=api",
-   "date": "2026-09-24T17:56:10+0300"
-  },
-  {
-   "id": "hh/137538973",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)\n🏢 Topface Media · Казань",
-   "link": "https://hh.ru/vacancy/137538973?tech_source=api",
-   "date": "2026-09-24T17:53:42+0300"
-  },
-  {
-   "id": "hh/137765279",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Наставник на курс «Нейросети для продакт-менеджера» в Практикум\n🏢 Яндекс · Москва",
-   "link": "https://hh.ru/vacancy/137765279?tech_source=api",
-   "date": "2026-09-24T17:52:33+0300"
-  },
-  {
-   "id": "hh/136964852",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-амбассадор образовательного проекта\n🏢 МГК Информпроект · Москва\n💰 от 120000 RUR",
-   "link": "https://hh.ru/vacancy/136964852?tech_source=api",
-   "date": "2026-09-24T17:28:32+0300"
   },
   {
    "id": "work_editor/6570",
