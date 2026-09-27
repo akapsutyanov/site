@@ -1,7 +1,31 @@
 {
- "updated": "2026-09-27T14:14:37Z",
+ "updated": "2026-09-27T14:46:46Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136964852",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-амбассадор образовательного проекта\n🏢 МГК Информпроект · Москва\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/136964852?tech_source=api",
+   "date": "2026-09-27T17:28:32+0300"
+  },
+  {
+   "id": "hh/137606913",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор / AI-дизайнер\n🏢 Созвездие Красоты - Smart Buy · Москва",
+   "link": "https://hh.ru/vacancy/137606913?tech_source=api",
+   "date": "2026-09-27T17:22:37+0300"
+  },
+  {
+   "id": "hh/137393976",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по нейросетям\n🏢 Мусиенко Иван Александрович · Москва\n💰 от 80000 RUR",
+   "link": "https://hh.ru/vacancy/137393976?tech_source=api",
+   "date": "2026-09-27T17:20:23+0300"
+  },
   {
    "id": "hh/137599900",
    "source": "hh",
@@ -545,30 +569,6 @@
    "text": "Маркетолог-продюсер (контент, видео, нейросети)\n🏢 РЕАЛИСТ - ГК АЛЕКСАНДР Недвижимость · Санкт-Петербург\n💰 от 120000 RUR",
    "link": "https://hh.ru/vacancy/137453654?tech_source=api",
    "date": "2026-09-25T19:33:30+0300"
-  },
-  {
-   "id": "hh/137221647",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-маркетолог — ИИ-стартап (Telegram, рассылки, сайт)\n🏢 Поехали · Москва\n💰 от 100000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/137221647?tech_source=api",
-   "date": "2026-09-25T19:19:11+0300"
-  },
-  {
-   "id": "hh/137808554",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ инженер / Технический маркетолог\n🏢 Корстоун · Москва\n💰 от 150000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137808554?tech_source=api",
-   "date": "2026-09-25T18:28:09+0300"
-  },
-  {
-   "id": "hh/137808520",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Content Creator/Режиссер\n🏢 Группа Адмитад · Москва",
-   "link": "https://hh.ru/vacancy/137808520?tech_source=api",
-   "date": "2026-09-25T18:25:31+0300"
   },
   {
    "id": "SearchEditorr/3948",
