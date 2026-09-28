@@ -1,7 +1,23 @@
 {
- "updated": "2026-09-28T16:50:06Z",
+ "updated": "2026-09-28T17:21:44Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/134940377",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Тамбов",
+   "link": "https://hh.ru/vacancy/134940377?tech_source=api",
+   "date": "2026-09-28T20:18:01+0300"
+  },
+  {
+   "id": "hh/137880577",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам корпоративного обучения работе с ИИ (B2B, со своей базой)\n🏢 Сулейманов Самат Азатович · Казань\n💰 от 300000 RUR",
+   "link": "https://hh.ru/vacancy/137880577?tech_source=api",
+   "date": "2026-09-28T19:58:32+0300"
+  },
   {
    "id": "hh/137662236",
    "source": "hh",
@@ -601,22 +617,6 @@
    "text": "AI-дизайнер\n🏢 Ушакова Валерия Вячеславовна · Екатеринбург",
    "link": "https://hh.ru/vacancy/137828864?tech_source=api",
    "date": "2026-09-27T19:40:44+0300"
-  },
-  {
-   "id": "hh/136811534",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор\n🏢 Первый Слой · Москва\n💰 от 90000 до 110000 RUR",
-   "link": "https://hh.ru/vacancy/136811534?tech_source=api",
-   "date": "2026-09-27T19:12:31+0300"
-  },
-  {
-   "id": "hh/137400855",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-помощник / Креатор коротких AI-видео (ИИ-видео)\n🏢 П4 · Москва\n💰 от 20000 до 25000 RUR",
-   "link": "https://hh.ru/vacancy/137400855?tech_source=api",
-   "date": "2026-09-27T18:43:38+0300"
   },
   {
    "id": "SearchEditorr/3956",
