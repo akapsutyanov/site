@@ -1,7 +1,87 @@
 {
- "updated": "2026-09-28T17:21:44Z",
+ "updated": "2026-09-28T17:53:16Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/133954038",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Владимир",
+   "link": "https://hh.ru/vacancy/133954038?tech_source=api",
+   "date": "2026-09-28T20:27:51+0300"
+  },
+  {
+   "id": "hh/134940833",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Балашиха (Московская область)",
+   "link": "https://hh.ru/vacancy/134940833?tech_source=api",
+   "date": "2026-09-28T20:27:20+0300"
+  },
+  {
+   "id": "hh/134940734",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Рязань",
+   "link": "https://hh.ru/vacancy/134940734?tech_source=api",
+   "date": "2026-09-28T20:26:50+0300"
+  },
+  {
+   "id": "hh/134940630",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Липецк",
+   "link": "https://hh.ru/vacancy/134940630?tech_source=api",
+   "date": "2026-09-28T20:26:20+0300"
+  },
+  {
+   "id": "hh/134940593",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Набережные Челны",
+   "link": "https://hh.ru/vacancy/134940593?tech_source=api",
+   "date": "2026-09-28T20:25:33+0300"
+  },
+  {
+   "id": "hh/134940553",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Ставрополь",
+   "link": "https://hh.ru/vacancy/134940553?tech_source=api",
+   "date": "2026-09-28T20:24:50+0300"
+  },
+  {
+   "id": "hh/134940497",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Тверь",
+   "link": "https://hh.ru/vacancy/134940497?tech_source=api",
+   "date": "2026-09-28T20:23:41+0300"
+  },
+  {
+   "id": "hh/134940468",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Тольятти",
+   "link": "https://hh.ru/vacancy/134940468?tech_source=api",
+   "date": "2026-09-28T20:22:23+0300"
+  },
+  {
+   "id": "hh/134940441",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Иваново (Ивановская область)",
+   "link": "https://hh.ru/vacancy/134940441?tech_source=api",
+   "date": "2026-09-28T20:21:10+0300"
+  },
+  {
+   "id": "hh/134940417",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Псков",
+   "link": "https://hh.ru/vacancy/134940417?tech_source=api",
+   "date": "2026-09-28T20:19:04+0300"
+  },
   {
    "id": "hh/134940377",
    "source": "hh",
@@ -14,7 +94,7 @@
    "id": "hh/137880577",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "Менеджер по продажам корпоративного обучения работе с ИИ (B2B, со своей базой)\n🏢 Сулейманов Самат Азатович · Казань\n💰 от 300000 RUR",
+   "text": "Менеджер по продажам корпоративного обучения работе с ИИ\n🏢 Сулейманов Самат Азатович · Казань\n💰 от 300000 RUR",
    "link": "https://hh.ru/vacancy/137880577?tech_source=api",
    "date": "2026-09-28T19:58:32+0300"
   },
@@ -491,70 +571,6 @@
    "date": "2026-09-28T09:44:15+0300"
   },
   {
-   "id": "hh/135757190",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI application security engineer\n🏢 Контур · Екатеринбург",
-   "link": "https://hh.ru/vacancy/135757190?tech_source=api",
-   "date": "2026-09-28T09:25:56+0300"
-  },
-  {
-   "id": "hh/137188472",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ассистент руководителя с опытом работы с нейросетями, удалённо\n🏢 Типак · Санкт-Петербург\n💰 от 100000 RUR",
-   "link": "https://hh.ru/vacancy/137188472?tech_source=api",
-   "date": "2026-09-28T09:17:36+0300"
-  },
-  {
-   "id": "hh/136778189",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Графический дизайнер / AI-дизайнер (маркетплейсы, e-commerce)\n🏢 ТДЛ Текстиль · Иваново (Ивановская область)",
-   "link": "https://hh.ru/vacancy/136778189?tech_source=api",
-   "date": "2026-09-28T08:51:47+0300"
-  },
-  {
-   "id": "hh/137838261",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам (теплый трафик, AI-продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Москва\n💰 от 100000 до 180000 RUR",
-   "link": "https://hh.ru/vacancy/137838261?tech_source=api",
-   "date": "2026-09-28T08:37:45+0300"
-  },
-  {
-   "id": "hh/136964817",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по AI-генерации и ретуши (Middle / Middle+)\n🏢 INCANTO · Москва",
-   "link": "https://hh.ru/vacancy/136964817?tech_source=api",
-   "date": "2026-09-28T08:37:41+0300"
-  },
-  {
-   "id": "hh/137836068",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Бортовой оператор / Водитель на обучение нейросетей (автомобиль компании)\n🏢 Карьерный Компас · Москва\n💰 от 117000 до 134000 RUR",
-   "link": "https://hh.ru/vacancy/137836068?tech_source=api",
-   "date": "2026-09-28T07:44:31+0300"
-  },
-  {
-   "id": "hh/137032679",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам (теплый трафик, AI-продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Санкт-Петербург\n💰 от 100000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137032679?tech_source=api",
-   "date": "2026-09-28T07:42:39+0300"
-  },
-  {
-   "id": "hh/137032680",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам (теплый трафик, AI-продукт)\n🏢 Высшая Школа Исскуственного Интелекта · Сочи\n💰 от 100000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/137032680?tech_source=api",
-   "date": "2026-09-28T07:42:39+0300"
-  },
-  {
    "id": "vacancysmm/17024",
    "source": "telegram",
    "channel": "vacancysmm",
@@ -601,22 +617,6 @@
    "text": "Специалист Управления маркетинга и медиакоммуникаций\n🏢 ФГБОУ ВО Санкт-Петербургский государственный университет · Город Санкт-Петербург\n💰 от 86300 руб.",
    "link": "https://trudvsem.ru/vacancy/card/7226c750-02f1-11eb-8600-bfd13399602c/44f09b54-bb21-11f1-9ace-3fec7ae36db8",
    "date": "2026-09-28"
-  },
-  {
-   "id": "hh/137830852",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Video Creator / AI-креатор рекламных роликов\n🏢 Спиридонов Павел Игоревич · Москва\n💰 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/137830852?tech_source=api",
-   "date": "2026-09-27T22:33:23+0300"
-  },
-  {
-   "id": "hh/137828864",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-дизайнер\n🏢 Ушакова Валерия Вячеславовна · Екатеринбург",
-   "link": "https://hh.ru/vacancy/137828864?tech_source=api",
-   "date": "2026-09-27T19:40:44+0300"
   },
   {
    "id": "SearchEditorr/3956",
