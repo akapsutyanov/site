@@ -1,7 +1,15 @@
 {
- "updated": "2026-09-28T18:56:19Z",
+ "updated": "2026-09-28T19:27:48Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137882689",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "ИИ сценарист / Редактор ИИ сценариев\n🏢 Олифиренко Анна Владимировна · Москва\n💰 от 1000 USD",
+   "link": "https://hh.ru/vacancy/137882689?tech_source=api",
+   "date": "2026-09-28T22:13:15+0300"
+  },
   {
    "id": "hh/133954038",
    "source": "hh",
@@ -585,14 +593,6 @@
    "text": "AI-инженер\n🏢 СБЕР · Москва",
    "link": "https://hh.ru/vacancy/137843996?tech_source=api",
    "date": "2026-09-28T09:58:40+0300"
-  },
-  {
-   "id": "hh/137842930",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ассистент руководителя — с обучением нейросетям\n🏢 Вывеска 2.0 · Москва\n💰 от 20000 RUR",
-   "link": "https://hh.ru/vacancy/137842930?tech_source=api",
-   "date": "2026-09-28T09:44:15+0300"
   },
   {
    "id": "vacancysmm/17024",
