@@ -1,7 +1,31 @@
 {
- "updated": "2026-09-30T07:03:16Z",
+ "updated": "2026-09-30T07:35:41Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137940633",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель курсов программирования и нейросетей (очно, Казань)\n🏢 Учебный Центр МатРИЦА · Казань",
+   "link": "https://hh.ru/vacancy/137940633?tech_source=api",
+   "date": "2026-09-30T10:14:33+0300"
+  },
+  {
+   "id": "hh/137939953",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Fullstack Software Engineer (AI & Video / Agents)\n🏢 Devhunt · Москва",
+   "link": "https://hh.ru/vacancy/137939953?tech_source=api",
+   "date": "2026-09-30T10:03:47+0300"
+  },
+  {
+   "id": "hh/137939786",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "2D AI Artist\n🏢 Маналот Геймз · Москва",
+   "link": "https://hh.ru/vacancy/137939786?tech_source=api",
+   "date": "2026-09-30T10:01:23+0300"
+  },
   {
    "id": "hh/137728437",
    "source": "hh",
@@ -729,30 +753,6 @@
    "text": "SEO-специалист\n🏢 ООО \"34ВЕБ\" · Волгоградская область\n💰 от 122000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1163443069393/5f677150-bbdc-11f1-9cc9-650e4380c986",
    "date": "2026-09-29"
-  },
-  {
-   "id": "hh/137811958",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-маркетолог в AI-агентство\n🏢 ПрофайлЛаб · Москва\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/137811958?tech_source=api",
-   "date": "2026-09-28T22:28:15+0300"
-  },
-  {
-   "id": "hh/137882689",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ сценарист / Редактор ИИ сценариев\n🏢 Олифиренко Анна Владимировна · Москва\n💰 от 1000 USD",
-   "link": "https://hh.ru/vacancy/137882689?tech_source=api",
-   "date": "2026-09-28T22:13:15+0300"
-  },
-  {
-   "id": "hh/133954038",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Владимир",
-   "link": "https://hh.ru/vacancy/133954038?tech_source=api",
-   "date": "2026-09-28T20:27:51+0300"
   },
   {
    "id": "SearchEditorr/3962",
