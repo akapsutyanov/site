@@ -1,7 +1,39 @@
 {
- "updated": "2026-10-01T16:24:47Z",
+ "updated": "2026-10-01T16:56:06Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138030598",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Видеомонтажер/motion designer VSL (нейросети)\n🏢 Игнатьев Антон · Санкт-Петербург\n💰 от 65000 до 65000 RUR",
+   "link": "https://hh.ru/vacancy/138030598?tech_source=api",
+   "date": "2026-10-01T19:44:47+0300"
+  },
+  {
+   "id": "hh/137662236",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "HR-generalist (подбор, адаптация, ИИ-инструменты)\n🏢 ВиваСити · Санкт-Петербург\n💰 от 100000 до 130000 RUR",
+   "link": "https://hh.ru/vacancy/137662236?tech_source=api",
+   "date": "2026-10-01T19:34:10+0300"
+  },
+  {
+   "id": "hh/137453654",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Маркетолог-продюсер (контент, видео, нейросети)\n🏢 РЕАЛИСТ - ГК АЛЕКСАНДР Недвижимость · Санкт-Петербург\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/137453654?tech_source=api",
+   "date": "2026-10-01T19:33:30+0300"
+  },
+  {
+   "id": "hh/137221647",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент-маркетолог — ИИ-стартап (Telegram, рассылки, сайт)\n🏢 Поехали · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/137221647?tech_source=api",
+   "date": "2026-10-01T19:19:11+0300"
+  },
   {
    "id": "hh/137330720",
    "source": "hh",
@@ -569,38 +601,6 @@
    "text": "Team Lead ML Engineer (Gen AI)\n🏢 LionAdverts · Москва",
    "link": "https://hh.ru/vacancy/137979275?tech_source=api",
    "date": "2026-09-30T18:17:58+0300"
-  },
-  {
-   "id": "hh/136966816",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Коммуникационный дизайнер | AI-дизайнер\n🏢 Студия Чижова · Санкт-Петербург\n💰 от 110000 до 120000 RUR",
-   "link": "https://hh.ru/vacancy/136966816?tech_source=api",
-   "date": "2026-09-30T18:03:25+0300"
-  },
-  {
-   "id": "hh/137538973",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)\n🏢 Topface Media · Казань",
-   "link": "https://hh.ru/vacancy/137538973?tech_source=api",
-   "date": "2026-09-30T17:53:42+0300"
-  },
-  {
-   "id": "hh/137978579",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Разработчик ИИ-решений\n🏢 Торговый Дом Лотос · Казань\n💰 от 150000 RUR",
-   "link": "https://hh.ru/vacancy/137978579?tech_source=api",
-   "date": "2026-09-30T17:52:03+0300"
-  },
-  {
-   "id": "hh/137977857",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по настройке ИИ-ботов\n🏢 Автохолдинг Динамика · Череповец\n💰 от 60000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/137977857?tech_source=api",
-   "date": "2026-09-30T17:31:30+0300"
   },
   {
    "id": "work_editor/6595",
