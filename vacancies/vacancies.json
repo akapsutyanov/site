@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-01T17:58:57Z",
+ "updated": "2026-10-01T18:30:24Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138031502",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам / партнёр по продаже AI-программы\n🏢 Сайфутдинов Рашит Равильевич · Казань\n💰 от 150000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/138031502?tech_source=api",
+   "date": "2026-10-01T21:22:27+0300"
+  },
   {
    "id": "hh/138030598",
    "source": "hh",
@@ -593,14 +601,6 @@
    "text": "Менеджер по продукту AI ассистент в личном кабинете продавца, LLM\n🏢 Ozon · Москва",
    "link": "https://hh.ru/vacancy/137979338?tech_source=api",
    "date": "2026-09-30T18:22:06+0300"
-  },
-  {
-   "id": "hh/137979275",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Team Lead ML Engineer (Gen AI)\n🏢 LionAdverts · Москва",
-   "link": "https://hh.ru/vacancy/137979275?tech_source=api",
-   "date": "2026-09-30T18:17:58+0300"
   },
   {
    "id": "work_editor/6595",
