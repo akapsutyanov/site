@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мастер-класс: AI-мультфильм | AI — Новый Уровень 2026</title>
+<meta name="description" content="Мастер-класс: собираем вирусный AI-мультфильм из четырёх сцен — от фразы до сборки. Видео и все промпты на одной странице.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Мастер-класс: AI-мультфильм · AI — Новый Уровень 2026">
+<meta property="og:description" content="Видео мастер-класса и все промпты мультфильма «Мне сейчас не до тебя».">
+<meta property="og:url" content="https://neurocreator2.ru/mult-video/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.1);
+  --eo:cubic-bezier(.22,.61,.36,1);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.6;
+  min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.06),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px;width:100%}
+
+header{text-align:center;padding:64px 0 36px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:36px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(36px,6vw,60px);
+  line-height:1.02;color:var(--ink);margin-top:22px}
+h1 em,h2 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.sub{font-size:14px;font-weight:300;color:var(--ink2);max-width:560px;margin:16px auto 0;line-height:1.8}
+
+.player{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;
+  background:var(--bg2);border:1px solid rgba(200,200,200,.12);
+  box-shadow:0 30px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.06)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:44px 0 10px}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:17px 42px;border-radius:8px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 6px 28px rgba(160,160,160,.1),inset 0 1px 0 rgba(255,255,255,.55);
+  transition:transform .35s var(--eo),box-shadow .35s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 46px rgba(220,220,220,.42)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:rgba(200,200,200,.02);
+  border:1px solid rgba(200,200,200,.22);color:var(--c2);padding:17px 42px;border-radius:8px;
+  font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;
+  transition:color .35s,border-color .35s,transform .35s}
+.btn-secondary:hover{color:var(--c1);border-color:rgba(220,220,220,.5);transform:translateY(-3px)}
+.disclaimer{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:16px 18px;
+  border:1px solid rgba(255,190,100,.22);border-radius:12px;background:rgba(255,190,100,.04)}
+.disclaimer .dz{font-size:17px;line-height:1.3;flex-shrink:0}
+.disclaimer .dt{font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.65}
+.disclaimer .dt b{color:var(--ink);font-weight:600}
+.disclaimer .dt a{color:#e8c88a;text-decoration:underline;text-underline-offset:3px}
+.cta-hints{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.hint{font-size:11px;color:var(--ink3);letter-spacing:.5px;max-width:280px;text-align:center}
+
+/* разбор */
+.offer{margin:56px 0 0;padding:32px 30px;border:1px solid rgba(200,200,200,.16);border-radius:20px;
+  background:rgba(13,13,18,.8);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.offer h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4.4vw,40px);line-height:1.1;text-align:center}
+.offer .lead{font-size:14px;font-weight:300;color:var(--ink2);text-align:center;max-width:560px;margin:12px auto 0;line-height:1.75}
+.offer ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 0}
+.offer li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;
+  background:rgba(200,200,200,.02);font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.6}
+.offer li b{color:var(--ink);font-weight:600}
+.offer li .n{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:#0a0a0a;background:var(--chrome-grad)}
+.offer .ctas{margin:28px 0 8px}
+
+/* промпты */
+.prompts-head{text-align:center;margin:84px 0 6px}
+.prompts-head h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,5vw,48px);line-height:1.05;margin-top:18px}
+.prompts-head p{font-size:14px;font-weight:300;color:var(--ink2);max-width:600px;margin:12px auto 0;line-height:1.8}
+.howto{margin-top:26px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:rgba(200,200,200,.02)}
+.howto .ht{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--c2)}
+.howto ol{margin:10px 0 0 18px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.75}
+.howto b{color:var(--ink);font-weight:600}
+.howto code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#d8d8d8;
+  background:rgba(200,200,200,.08);padding:1px 6px;border-radius:5px}
+
+.phrases{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.phrase{font-size:13px;color:var(--c2);border:1px solid rgba(200,200,200,.18);border-radius:999px;padding:7px 14px;
+  background:rgba(200,200,200,.03);cursor:pointer;font-family:inherit;transition:border-color .2s,color .2s}
+.phrase:hover{border-color:rgba(220,220,220,.5);color:var(--c1)}
+.phrase.done{border-color:rgba(140,220,160,.5);color:#a8e8b8}
+
+.step{margin-top:54px}
+.s-head{display:flex;gap:14px;align-items:center}
+.s-num{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;
+  border:1px solid var(--line);background:rgba(200,200,200,.03);flex-shrink:0}
+.s-kicker{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3)}
+.s-head h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3.6vw,34px);line-height:1.1}
+
+.prompt{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(10,10,14,.85)}
+.prompt.vid{border-color:rgba(120,180,255,.16)}
+.prompt.vid .p-label{color:#8fa8c8}
+.prompt.txt{border-color:rgba(220,190,130,.18)}
+.prompt.txt .p-label{color:#cdb68a}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;
+  border-bottom:1px solid var(--line);background:rgba(200,200,200,.03)}
+.p-label{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--c3)}
+.p-sub{display:block;margin-top:3px;font-size:12px;font-weight:300;color:var(--ink2);line-height:1.5}
+.copy{background:var(--chrome-grad);color:#0a0a0a;border:none;border-radius:7px;padding:8px 18px;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  white-space:nowrap;flex-shrink:0;transition:transform 150ms var(--eo),box-shadow 200ms ease}
+.copy:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,200,200,.25)}
+.copy:active{transform:scale(.97)}
+.copy.done{background:linear-gradient(135deg,#8ee6a4,#5cd17a);color:#04210c}
+pre{margin:0;padding:18px;max-height:320px;overflow:auto;white-space:pre-wrap;word-wrap:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.65;color:#b8b8b8}
+pre::-webkit-scrollbar{width:8px}
+pre::-webkit-scrollbar-thumb{background:rgba(200,200,200,.18);border-radius:4px}
+
+.final{margin:70px 0 0;text-align:center}
+.final p{font-size:14px;font-weight:300;color:var(--ink2);max-width:520px;margin:0 auto;line-height:1.8}
+
+@media(max-width:600px){
+  header{padding:48px 0 28px}
+  .ctas{flex-direction:column;align-items:stretch}
+  .btn-primary,.btn-secondary{justify-content:center;padding:17px 22px}
+  .cta-hints{flex-direction:column;align-items:center;gap:6px}
+  .offer{padding:26px 18px}
+  .offer ul{grid-template-columns:1fr}
+  .p-bar{align-items:flex-start}
+}
+
+footer{margin-top:80px;padding:34px 0 44px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+</style>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112349326', 'ym');
+
+    ym(112349326, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112349326" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div class="bg-glow"></div>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Мастер-класс · AI — Новый Уровень 2026</div>
+    <h1>Вирусный AI-<em>мультфильм</em></h1>
+    <p class="sub">Собираем ролик из четырёх сцен — от фразы, которая цепляет, до готового мультфильма с голосом, музыкой и субтитрами. Открывай нейросети и делай по ходу.</p>
+  </header>
+
+  <div class="player">
+    <iframe src="https://www.youtube.com/embed/6Sn_wUtTf0s?rel=0&amp;modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Мастер-класс: AI-мультфильм" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+
+  <div class="disclaimer">
+    <span class="dz">⚠️</span>
+    <div class="dt">
+      <b>Не закрывай эту страницу</b> — ниже запись на разбор и все промпты из мастер-класса с кнопкой «Копировать».<br>
+      Если видео не запускается — <a href="https://youtu.be/6Sn_wUtTf0s" target="_blank" rel="noopener">смотри на YouTube</a> и возвращайся сюда.
+    </div>
+  </div>
+
+  <div class="ctas">
+    <a class="btn-primary" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=mult_video&amp;utm_medium=page&amp;utm_campaign=mult_mk">Записаться на разбор →</a>
+    <a class="btn-secondary" href="#prompts">Забрать промпты ↓</a>
+  </div>
+  <div class="cta-hints">
+    <div class="hint">Бесплатно · один на один · около 45 минут</div>
+    <div class="hint">Все 11 промптов мультфильма — ниже на странице</div>
+  </div>
+
+  <section class="offer">
+    <h2>Разбор твоего <em>ролика</em></h2>
+    <p class="lead">Живой созвон со мной один на один. Приходи с мультиком, который собрал по мастер-классу, — даже если герой поплыл и звук кривой.</p>
+    <ul>
+      <li><span class="n">1</span><div><b>Смотрим твой ролик.</b> Скажу прямо, что работает, а что я бы переделал и почему.</div></li>
+      <li><span class="n">2</span><div><b>Разбираем, где ты сейчас</b> и чего не хватает именно тебе.</div></li>
+      <li><span class="n">3</span><div><b>Выбираем воронку:</b> просмотры, аудитория или деньги. От этого зависит всё остальное.</div></li>
+      <li><span class="n">4</span><div><b>Собираем маршрут на шесть недель.</b> Пришлю его текстом после созвона — он твой в любом случае.</div></li>
+    </ul>
+    <div class="ctas">
+      <a class="btn-primary" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=mult_video&amp;utm_medium=page&amp;utm_campaign=mult_mk">Заполнить анкету →</a>
+    </div>
+    <div class="cta-hints"><div class="hint">Семь вопросов, минуты три. Читаю анкету перед созвоном и готовлюсь под тебя.</div></div>
+  </section>
+
+  <div class="prompts-head" id="prompts">
+    <div class="eyebrow">Материалы мастер-класса</div>
+    <h2>Все <em>промпты</em> мультфильма</h2>
+    <p>«Мне сейчас не до тебя» — четыре сцены, одна кухня, два героя. Идут в том порядке, в котором я делал ролик: история → мир и герои → сцены.</p>
+  </div>
+
+  <div class="howto">
+    <div class="ht">Как пользоваться</div>
+    <ol>
+      <li>Иди строго по порядку: каждая следующая генерация опирается на картинки из предыдущих.</li>
+      <li><code>@image1</code>, <code>@image2</code>… — это картинки, которые ты прикладываешь к промпту. В подписи над каждым промптом написано, что и в каком порядке загружать.</li>
+      <li>В первом промпте замени <b>[ТВОЯ ФРАЗА]</b> на свою. Если своей пока нет — возьми из списка ниже, нажатие копирует фразу.</li>
+    </ol>
+    <div class="phrases">
+      <button class="phrase">Потерпи</button>
+      <button class="phrase">Тебе показалось</button>
+      <button class="phrase">Не выдумывай</button>
+      <button class="phrase">Ты же сильная</button>
+      <button class="phrase">Все так живут</button>
+      <button class="phrase">Мне сейчас не до тебя</button>
+      <button class="phrase">Вот вырастешь — поймёшь</button>
+    </div>
+  </div>
+
+  <section class="step">
+    <div class="s-head"><div class="s-num">📝</div><div><div class="s-kicker">Шаг 1</div><h2>История</h2></div></div>
+    <div class="prompt txt">
+      <div class="p-bar"><div><span class="p-label">01 · Сценарий истории</span><span class="p-sub">Claude. Вместо [ТВОЯ ФРАЗА] — фраза из банка.</span></div><button class="copy" data-id="p1">Копировать</button></div>
+      <pre id="p1">Ты — сценарист коротких анимационных роликов для рилсов. Длительность 25–30 секунд, четыре сцены.
+
+Фраза, вокруг которой строится история: «[ТВОЯ ФРАЗА]»
+
+Предложи 5 вариантов истории. Для каждого:
+— одна ситуация: где, когда, кто говорит фразу и кому;
+— конфликт: что герой хочет и что ему мешает;
+— поворот: момент, после которого смысл фразы переворачивается;
+— последний кадр, после которого хочется поставить лайк.
+
+Требования:
+— вся история в одной комнате;
+— главный герой один, второстепенный — не больше одного, и его можно показать со спины или по рукам;
+— фраза звучит в самом начале;
+— поворот должно быть видно без слов — через действие или предмет;
+— никакой морали и выводов, без флешбеков;
+— пиши сухо, без прилагательных.</pre>
+    </div>
+  </section>
+  <section class="step">
+    <div class="s-head"><div class="s-num">🎨</div><div><div class="s-kicker">Шаги 2–8</div><h2>Мир и герои</h2></div></div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">02 · Локация — кухня</span><span class="p-sub">Nano Banana Pro. @image1 — референс стиля рендера.</span></div><button class="copy" data-id="p2">Копировать</button></div>
+      <pre id="p2">@image1 — THE RENDER: materials, finish, level of stylization and surface quality match this reference exactly. Take ONLY the render style from it, never the character. No people appear anywhere in this image.
+
+An empty small cosy kitchen on an autumn evening, in a stylized 3D feature-animation world where every surface is soft and touchable: velvet nap, chunky knit, bouclé, brushed cotton and plush, with rounded soft forms and no sharp edges anywhere in the room.
+
+In the centre, a round oak table with softly rounded edges and two low chairs upholstered in oatmeal bouclé with small dusty terracotta knitted cushions tied to their backs. On the table, a closed laptop pushed to one side, a ceramic mug with a chunky knitted cosy around it, and a jar of coloured pencils. Directly above the table hangs a single pendant lamp with a soft knitted shade, low over the surface, its fibres glowing where the light passes through.
+
+On the left wall, a tall window with the lower half of its frame at table height, soft linen curtains pushed open and gathered in heavy folds, a small knitted cushion sitting on the wide wooden sill. Beyond the glass, a quiet evening street with a lamp post, a low fence and a wet pavement thick with fallen amber and ginger leaves, a few of them caught mid-fall.
+
+Against the right wall, a cream fridge with deeply rounded corners and a soft matte finish, its entire front covered edge to edge in dozens of children&#x27;s drawings held by small coloured magnets, overlapping each other and curling at the corners — the drawings read as soft bright shapes of colour with no legible content and no lettering anywhere.
+
+Along the back wall, cream cabinets with rounded edges and wooden handles, a warm oak counter, a white ceramic sink, a kettle, and open shelves holding ceramic mugs and jars. A chunky knitted pot holder hangs from a wooden hook. In the back right corner, an open doorway to a dark hallway with a worn wooden threshold and a low strip of light on the floor beyond. A thick woven rug with a soft wavy edge on the warm oak floor, slightly rucked at one corner, and a plush folded blanket slung over the back of one chair.
+
+Autumn evening light: the knitted pendant lamp above the table as a warm 3000K key, making a tight soft pool of light on the table and leaving the corners of the room in gentle shadow; cold blue 8500K dusk pressing in through the window from the left as the second source, falling across the floor as a pale rectangle. The warm lamp light and the cold window light stay clearly separate and never blend in the middle of the room — the table sits in the warm half, the fridge and the doorway in the cold half.
+
+Soft cinematic lighting, shallow depth of field, fine natural film grain and gentle bloom. Palette of 60% warm oatmeal cream and oak, 30% muted navy dusk, 10% dusty terracotta and amber. Vertical composition, eye-level view facing the table with the window on the left and the fridge on the right, rule of thirds, no people and no animals in frame. Premium stylized 3D render, tactile handmade plush and knit micro-texture.
+
+No text, no letters, no numbers and no legible signage anywhere, including on the drawings on the fridge.</pre>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">03 · Мама — персонаж</span><span class="p-sub">Nano Banana Pro, без референсов.</span></div><button class="copy" data-id="p3">Копировать</button></div>
+      <pre id="p3">A stylized 3D feature-animation character in the style of a high-end designer art toy, full-body front view on a flat mid-grey studio backdrop. A woman of about thirty-five, standing with her weight on one leg, both hands wrapped around a mug held close to her chest, looking slightly off-camera with a tired, distracted, faintly guilty expression.
+
+Face and body design: a tall elongated figure about eight heads tall with a small head on a very long slender neck, narrow pointed shoulders, long thin limbs and long bony fingers. Narrow almond eyes set wide apart with heavy upper lids and very small pupils, thin low-set brows, a long thin nose, a small precise mouth, sharp cheekbones and a pointed chin. Faint shadows under her eyes.
+
+Her skin is soft flocked velvet: a matte painted-vinyl base covered in a fine dense peach-fuzz nap that glows softly along every edge of her silhouette, with a subtle dusting of iridescent glitter in the pile that sparkles on her cheekbones, collarbones, shoulders and hands. A light scatter of freckles across the nose and cheeks, blush on the nose and ears.
+
+Her dark brown, almost black hair is one clean sculpted silhouette, gathered into a low messy bun at the nape with several loose strands falling around her face and along her neck, made of soft matte felted plush with a fine velvety nap and only a gentle sheen on top, keeping a crisp sculpted shape. A pair of thin-rimmed round reading glasses is pushed up onto the top of her head, resting in her hair and holding it back, never on her nose.
+
+She wears a very oversized soft pale grey chunky hand-knitted cardigan with big visible stitches, a fuzzy halo of loose fibers, deep patch pockets and sleeves falling past her wrists, worn open and hanging almost to mid-thigh. Underneath, a plain cream cotton long-sleeve top. Soft charcoal brushed-cotton trousers with a gentle drape, and cream plush house socks. A thin gold wedding ring.
+
+Everything in the frame is soft and touchable: velvet nap, felted plush, chunky knit and brushed fabric, with rounded soft forms and no hard shiny surfaces except the thin glasses frames. Soft cinematic lighting: one warm key light at 3500K from the left, gentle falloff, a delicate sparkling rim light along her silhouette, shallow macro depth of field, fine natural film grain and gentle bloom. Palette of 60% pale grey, 30% cream, 10% charcoal and warm gold. Premium stylized 3D render, tactile handmade plush and knit micro-texture, clean empty background.
+
+The round glasses pushed up into her hair and the loose strands escaping the low bun are the two defining features of this character and must be clearly visible. No text, no letters, no logos and no numbers anywhere.</pre>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">04 · Мама — карта героя</span><span class="p-sub">Nano Banana Pro. @image1 — готовая мама из шага 3.</span></div><button class="copy" data-id="p4">Копировать</button></div>
+      <pre id="p4">@image1 — THE CHARACTER. 100% matches this reference for identity, face, hair, wardrobe and proportions. Nothing is redrawn or reinterpreted. Take ONLY the character from the reference — not its background, not its framing and not its lighting.
+
+A character model sheet: three panels on one flat mid-grey studio backdrop, even soft studio lighting, the same character in all three panels with identical design, identical wardrobe and identical scale, standing on the same ground line.
+
+LEFT PANEL: full-body front view, standing straight in a neutral relaxed pose, arms slightly away from the body, hands empty, looking directly forward.
+CENTRE PANEL: full-body back view, the same neutral pose, showing the low messy bun at the nape with loose strands falling along the neck, the round glasses resting on top of her head, and the back of the oversized chunky knit cardigan hanging almost to mid-thigh.
+RIGHT PANEL: a close-up head-and-shoulders portrait, three-quarter angle, neutral calm expression, showing the round glasses pushed up into her hair, the loose strands escaping the bun, the freckles and the faint shadows under her eyes in full detail.
+
+Stylized 3D feature-animation art-toy render: soft flocked velvet skin with a fine peach-fuzz nap and a subtle iridescent glitter dusting, felted plush hair holding a crisp sculpted shape, chunky knit and brushed fabric, rounded soft forms, no hard shiny surfaces except the thin glasses frames and the thin gold wedding ring. Even soft studio lighting with a delicate sparkling rim, fine natural film grain, shallow depth of field. Clean empty mid-grey background.
+
+Exactly two arms, two legs and ten fingers. No text, no letters, no logos and no numbers anywhere.</pre>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">05 · Дочка — персонаж</span><span class="p-sub">Nano Banana Pro. @image1 — мама, только как референс стиля рендера.</span></div><button class="copy" data-id="p5">Копировать</button></div>
+      <pre id="p5">A stylized 3D feature-animation character in the style of a high-end designer art toy, full-body front view on a flat mid-grey studio backdrop.
+
+@image1 — THE RENDER: materials, finish, level of stylization and lighting match this reference exactly. Take ONLY the render style from it, never the character, never the wardrobe. The woman in the reference does not appear anywhere in this image.
+
+A girl of about six years old, standing with her feet slightly turned in and her weight on both legs, holding a folded sheet of paper against her chest with both hands, looking slightly off-camera with a hopeful, patient, quietly waiting expression.
+
+Face and body design: a small slender figure about five and a half heads tall, with a head a little larger in proportion than an adult&#x27;s but never oversized, a thin neck, narrow sloping shoulders, thin arms and legs and small fingers. Narrow almond eyes set wide apart with heavy upper lids and small pupils, thin brows set low, a small straight nose, a small soft mouth, round cheeks and a little pointed chin. A dense scatter of freckles across the nose and both cheeks.
+
+Her skin is soft flocked velvet: a matte painted-vinyl base covered in a fine dense peach-fuzz nap that glows softly along every edge of her silhouette, with a subtle dusting of iridescent glitter in the pile that sparkles on her cheeks, forehead and knuckles. Blush on the nose, cheeks and ears.
+
+Her hair is warm ginger-red, parted in the middle and worked into two braids that hang down past her shoulders, each one finished with a small bright blue elastic band, with fine wisps escaping at the temples. The hair is soft matte felted plush with a fine velvety nap and no sheen, holding a crisp sculpted shape, and each braid reads as a clean sculpted three-strand form rather than individual hairs.
+
+She wears a soft butter-yellow brushed-cotton pyjama set: a long-sleeve top with a rounded collar and small wooden buttons, slightly too big at the cuffs, and matching loose pyjama trousers gathered at the ankle. Thick cream plush socks, slightly slouched.
+
+Everything in the frame is soft and touchable: velvet nap, felted plush and brushed cotton, with rounded soft forms and no hard shiny surfaces. Soft cinematic lighting: one warm key light at 3500K from the left, gentle falloff, a delicate sparkling rim light along her silhouette, shallow macro depth of field, fine natural film grain and gentle bloom. Palette of 60% butter yellow, 30% ginger red, 10% bright blue and cream. Premium stylized 3D render, tactile handmade plush and knit micro-texture, clean empty background.
+
+The two ginger braids with their bright blue elastic bands and the freckles across both cheeks are the defining features of this character and must be clearly visible. Exactly two arms, two legs and ten fingers. No text, no letters, no logos and no numbers anywhere.</pre>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">06 · Дочка — карта героя</span><span class="p-sub">Nano Banana Pro. @image1 — готовая дочка из шага 5.</span></div><button class="copy" data-id="p6">Копировать</button></div>
+      <pre id="p6">@image1 — THE CHARACTER. 100% matches this reference for identity, face, hair, wardrobe and proportions. Nothing is redrawn or reinterpreted. Take ONLY the character from the reference — not its background, not its framing and not its lighting.
+
+A character model sheet: three panels on one flat mid-grey studio backdrop, even soft studio lighting, the same character in all three panels with identical design, identical wardrobe and identical scale, standing on the same ground line.
+
+LEFT PANEL: full-body front view, standing straight in a neutral relaxed pose, arms slightly away from the body, hands empty, looking directly forward.
+CENTRE PANEL: full-body back view, the same neutral pose, showing the two ginger braids hanging down her back with their bright blue elastic bands, the centre parting, and the back of the butter-yellow pyjama top with its slightly too-long cuffs.
+RIGHT PANEL: a close-up head-and-shoulders portrait, three-quarter angle, neutral calm expression, showing the two ginger braids with their bright blue elastic bands and the dense freckles across her nose and cheeks in full detail.
+
+Stylized 3D feature-animation art-toy render: soft flocked velvet skin with a fine peach-fuzz nap and a subtle iridescent glitter dusting, felted plush hair holding a crisp sculpted shape, chunky knit and brushed fabric, rounded soft forms, no hard shiny surfaces anywhere. Even soft studio lighting with a delicate sparkling rim, fine natural film grain, shallow depth of field. Clean empty mid-grey background.
+
+Exactly two arms, two legs and ten fingers. No text, no letters, no logos and no numbers anywhere.</pre>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">07 · Рисунок — до</span><span class="p-sub">Nano Banana Pro, без референсов.</span></div><button class="copy" data-id="p7">Копировать</button></div>
+      <pre id="p7">A single sheet of slightly crumpled white paper, shot flat and straight-on, filling the frame on a flat mid-grey studio backdrop. On it, a drawing made by a six-year-old child in wax crayon and felt-tip pen: thick uneven wobbly strokes with visible crayon texture and gaps, flat perspective, no shading, patchy colouring that goes outside the lines.
+
+The composition on the paper, exactly as a small child would lay it out: a thick dark vertical line runs down the page a little right of the middle, drawn as a simple window frame with a rectangle of blue scribble on its right side.
+
+On the LEFT of that line, filling most of the page and drawn very large: a woman sitting at a table, seen from the side. She has a round head with a dark brown scribbled bun on top, two small circles for glasses pushed up into the hair, a wide body coloured in grey crayon with long sweeping strokes for a big cardigan, and simple thick arms reaching forward to a grey rectangle standing on the table — a laptop. Her face has two dots for eyes and a short straight line for a mouth.
+
+On the RIGHT of the line, outside the window and drawn very small, barely a quarter of the woman&#x27;s height: a little girl standing alone. She has a round head with two orange braids sticking out sideways, a small body in a yellow crayon dress, thin stick arms hanging down, two dots for eyes and a short straight line for a mouth. She stands on a band of pale blue and white scribble along the bottom — snow — with small crosses and dots scattered in the air above her as snowflakes.
+
+There is a wide empty gap of bare white paper between the woman and the girl. The woman is many times larger than the girl.
+
+The paper itself is soft matte white with a visible fibrous texture, one soft crease across a corner and slightly furred edges. Even soft studio lighting from the left, very shallow falloff, fine natural film grain, no gloss and no reflections anywhere. Flat straight-on view, the sheet perfectly parallel to the camera, clean empty mid-grey background around it.
+
+The drawing is naive, uneven and clearly made by a young child — never neat, never professional, never an adult illustration. No text, no letters, no numbers, no signature and no title anywhere on the paper.</pre>
+    </div>
+    <div class="prompt">
+      <div class="p-bar"><div><span class="p-label">08 · Рисунок — после</span><span class="p-sub">Nano Banana Pro. @image1 — рисунок «до» из шага 7.</span></div><button class="copy" data-id="p8">Копировать</button></div>
+      <pre id="p8">@image1 — the child&#x27;s drawing. CHANGE: one single new figure is added to the right-hand side of the page, outside the window, standing next to the little girl on the band of snow — a second woman, drawn to the same small size as the girl, not large. She has a round head with a dark brown bun, two small circles for glasses in her hair and a wide grey body, matching the woman already drawn on the left of the page but shrunk down to the girl&#x27;s scale. Her near arm reaches down and across, and a single clear line joins her hand to the girl&#x27;s hand so that the two of them are holding hands.
+
+This new figure is drawn in a DIFFERENT hand from the rest of the page: thinner, steadier, more controlled lines in dark pencil and a lighter grey colouring, visibly made by an adult rather than by the child. It sits in the empty white space beside the girl without overlapping her.
+
+PRESERVE EXACTLY: the sheet of paper itself with its crease, its fibrous texture and its furred edges; the large woman at the table on the left and her laptop; the thick vertical window line and the blue scribble; the little girl with her orange braids and yellow dress; the band of snow and the scattered snowflakes; every existing crayon stroke, colour and imperfection; the framing, the flat straight-on angle, the lighting and the mid-grey background. Everything not named in CHANGE stays identical to the reference, in the same position and at the same size.
+
+No text, no letters, no numbers, no signature and no title anywhere on the paper.</pre>
+    </div>
+  </section>
+  <section class="step">
+    <div class="s-head"><div class="s-num">🎬</div><div><div class="s-kicker">Шаги 9–11</div><h2>Сцены в Seedance</h2></div></div>
+    <div class="prompt vid">
+      <div class="p-bar"><div><span class="p-label">09 · Сцена 1 — фраза и ситуация</span><span class="p-sub">Seedance 2.5 · 11 секунд · 3 кадра. @image1 — мама, @image2 — дочка, @image3 — кухня, @image4 — рисунок «до».</span></div><button class="copy" data-id="p9">Копировать</button></div>
+      <pre id="p9">SCENE CONTEXT
+ANIMATION RULE FIRST: characters animated ON TWOS (stepped 12 fps, held frames on strong poses), secondary action throughout, all twelve principles of animation with feature-film polish — this governs every shot. ACTING RULE — UNDERPLAY: the performance is small and contained; nothing is played big. NO mugging, no cartoon-wide eyes, no skyrocketing brows, no flailing arms, no theatrical trembling, NO TEARS in this scene. Emotion reads through tempo and small precise things: how long the child&#x27;s hand stays up before it drops, how the mother&#x27;s typing does not change rhythm for a single beat, one swallow, a shoulder lowering. Every emotional change has a visible CAUSE on screen. A blank, vacant or dead face is the worst possible failure: the mother is not cruel and not angry, she is deep inside a task and answers on autopilot without hearing herself; the girl is not sulking and not crying, she simply accepts the answer the way a child accepts weather. Every gaze rests on a concrete thing — the screen, the drawing, the tabletop — never on nothing. COMPOSITION LAW — THE FRAME TELLS THE STORY: never a centred subject, never a symmetrical layout. The mother holds the LEFT third of frame, lit warm from the lamp above. The child exists only at the EDGES of the adult frame: first as a hand entering from the BOTTOM, then as a back crossing the DEPTH. Her face is never shown at any point in this scene, not even partially. The camera never lowers to her and never follows her. VOICE RULE: exactly two voice moments, both in RUSSIAN. The girl&#x27;s is small, light and hopeful, spoken from below frame. The mother&#x27;s is flat, fast and absent, spoken without any pause in her typing, never theatrical, never cruel, never raised. TEXT RULE: NO text, letters, numbers, symbols, subtitles or UI anywhere in frame; the laptop screen reads as a soft glow with no legible content, and the drawings on the fridge read as shapes of colour with no legible content. CAMERA RULE: super-cinematic, slightly documentary, alive — locked frames carry a breathing operator with weight; the camera only moves with a dramatic job. THE DEVICE — THE FRAME THAT DOES NOT REACT: the camera is built around the adult and stays there. A child&#x27;s hand comes into it from below and leaves; a child&#x27;s back crosses it in the depth; a sheet of paper is placed inside it. The framing never adjusts to any of that, and that refusal is the whole scene. CUT STRUCTURE — 2 hard cuts, 3 shots, 11.0 s. Real time throughout, no slow motion, no speed ramps.
+
+ACTIVE REFERENCES
+@image1 — THE MOTHER, about thirty-five. 100% matches the reference for identity, design, hair, the round glasses pushed up into her hair, wardrobe and proportions; take ONLY her design from it, never its background, framing or lighting. Acting: she types steadily with her eyes locked on the screen → the hand with the drawing enters at the bottom of frame and she does not look at it → she says her line without the smallest pause in her typing → afterwards she keeps typing at exactly the same rhythm, and nothing in her face changes.
+@image2 — THE GIRL, six years old. 100% matches the reference for identity, design, the two ginger braids with bright blue elastic bands and the butter-yellow pyjamas, never redrawn. HER FACE IS NEVER VISIBLE IN THIS SCENE, not from the front, not in profile and not partially. In shot 1 only her hand and forearm enter from the bottom of frame. In shot 2 she is seen strictly from behind, her braids and the back of her pyjama top filling the foreground. In shot 3 only her hands are in frame. Acting: the hand holding the drawing lifts and offers it, holds raised for a long beat after the answer, and then lowers slowly out of frame; in shot 2 her shoulders drop a centimetre and she turns away without hurrying; in shot 3 her hands place the sheet down carefully and smooth it once before leaving.
+@image3 — THE KITCHEN: the location and its materials, palette and light, on an autumn evening.
+@image4 — THE DRAWING: the child&#x27;s drawing on its sheet of paper. 100% matches the reference for its paper, its crease and every crayon stroke; it is held and placed inside this location and lit by its light, never a cut-out, never floating. Its drawn side is turned AWAY from camera throughout this scene and its content is never visible.
+Render style, materials and finish match the references exactly: stylized 3D animated feature look, soft flocked velvet skin, felted plush hair, chunky knit and bouclé fabrics, rounded soft forms, fine film grain and gentle bloom. Nothing photoreal, nothing glossy.
+
+LOCATION MAP
+The kitchen on an autumn evening. The mother sits at the round oak table on the left of frame with the laptop in front of her, the knitted pendant lamp low above her. The window with the blue dusk street is beyond her on the far left. The fridge covered in drawings stands on the right wall, in the cold half of the room, with the dark doorway to the hallway in the back right corner.
+
+FIRST FRAME
+A close-up of the mother at the table in the left third of frame, three-quarter from the side, her face lit warm from the lamp above, her eyes on the laptop screen, her fingers on the keys, the cold blue window light behind her shoulder and the room falling away into shadow.
+
+FORMAT MODE
+Vertical 9:16 throughout.
+
+OPTICS
+Shot 1: 29 degrees FOV, T2.0, focus locked on her eyes; the bottom of frame where the hand enters is slightly soft and stays soft. Shot 2: 47 degrees FOV, T1.8, focus on the mother in the depth, the child&#x27;s braids and shoulders a large soft mass across the foreground, never brought into focus. Shot 3: 63 degrees FOV macro, T1.8, focus on the sheet of paper as it lands.
+
+CAMERA
+Shot 1 (0.0–4.6 s): locked close-up at the mother&#x27;s eye level, breathing operator, no move, no reframe when the hand enters.
+Shot 2 (4.6–8.0 s): locked over-the-shoulder frame from behind the child, the camera at the child&#x27;s shoulder height, no move; it does not follow her when she leaves.
+Shot 3 (8.0–11.0 s): locked macro looking down at the tabletop by the window, no move.
+
+ACTION SEQUENCE
+0.0–1.6 s — the mother types steadily, her eyes on the screen. A small hand holding a sheet of paper rises into the bottom of frame from below, offering it up toward her.
+1.6–2.6 s — from below frame, a small hopeful voice says in Russian: &quot;Мам, смотри…&quot;
+2.6–4.0 s — her typing does not change rhythm. Without lifting her eyes she says in Russian, flat and fast: &quot;Мне сейчас не до тебя.&quot; She keeps typing.
+4.0–4.6 s — the raised hand stays up one beat too long, then lowers slowly out of frame. HARD CUT.
+4.6–8.0 s — from behind the child: her ginger braids and the back of her yellow pyjama top fill the foreground, soft and out of focus; past her, small and sharp in the depth, the mother keeps typing in her pool of lamplight and never looks up. The child&#x27;s shoulders drop a centimetre. She turns and walks out of frame to the right, toward the window. The mother does not move. HARD CUT.
+8.0–11.0 s — macro on the tabletop beside the window: two small hands come in and lay the sheet of paper down FACE DOWN on the wood, so only its blank back is visible. One hand smooths it flat with two short strokes, hesitates for half a second, and withdraws. Bare feet pad away out of frame. The keyboard keeps clicking off-frame, in exactly the same rhythm as before. The blank sheet lies still in the cold light from the window.
+
+ANIMATION STYLE
+Stepped animation on twos with held poses, feature-film polish, soft weighty overlapping motion in the knitted cardigan, the braids and the loose pyjama sleeves.
+
+PHYSICS
+Real weight everywhere: the sheet of paper bends under its own weight as it is held up and settles with a soft flex when it is laid down, the braids swing and settle a beat after the head turns, the cardigan sleeve drags on the table edge, the chair holds the mother&#x27;s body without shifting.
+
+LIGHTING
+The knitted pendant lamp above the table as a warm 3000K key, lighting the mother and the laptop in a tight soft pool; cold blue 8500K dusk from the window on the left as the second source, rimming her shoulder and falling across the far end of the table where the paper is placed; the rest of the room in gentle shadow. The mother sits in the warm light; the sheet of paper is laid down in the cold light.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. Diegetic only: steady unbroken typing on a laptop keyboard, a fridge hum, a clock, the soft rustle of paper, bare feet on a wooden floor, a chair creaking faintly, wind and distant traffic beyond the window. The typing never stops and never changes rhythm at any point in the scene. The girl&#x27;s line and the mother&#x27;s line in Russian.
+
+QUALITY
+Feature-animation quality, tactile plush and knit micro-texture, fine natural film grain, gentle bloom on the lamp and the laptop screen, no banding, no smearing.
+
+TECHNICAL PARAMETERS
+Vertical 9:16, 24 fps, real time, 11.0 seconds total, 3 shots, 2 hard cuts.
+
+POSITIVE LOCKS
+Exactly two characters in the whole scene and no one else. The girl&#x27;s face is never visible at any point, in any shot, from any angle. The mother never looks up from the screen and never stops typing. The camera never lowers toward the child and never follows her. The drawing lies face down and its drawn side is never seen. Exactly two arms and ten fingers on every character. No text, letters or numbers anywhere. No music of any kind.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar"><div><span class="p-label">10 · Сцена 2 — поворот</span><span class="p-sub">Seedance 2.5 · 8 секунд · 3 кадра. @image1 — последний кадр сцены 1, @image2 — мама, @image3 — кухня, @image4 — рисунок «до».</span></div><button class="copy" data-id="p10">Копировать</button></div>
+      <pre id="p10">SCENE CONTEXT
+ANIMATION RULE FIRST: characters animated ON TWOS (stepped 12 fps, held frames on strong poses), secondary action throughout, all twelve principles of animation with feature-film polish. ACTING RULE — UNDERPLAY, AND THIS IS THE TURN OF THE FILM: it is played almost motionless. NO gasp, no hand over the mouth, no widening eyes, no sobbing, NO TEARS. Her entire reaction is this much: the breath stops, the eyes move once across the page, the jaw loosens, and she does not blink for a long time. A blank, vacant or dead face is the worst possible failure: she is reading her own daughter&#x27;s account of her, understanding it completely, and has nowhere to put it. Every gaze rests on a concrete thing — the paper, the small figure in the corner of the drawing, the empty gap between the two figures — never on nothing. COMPOSITION LAW — THE FRAME TELLS THE STORY: never a centred subject except in the overhead, which is deliberately graphic and flat. In shot 1 the windowsill runs as a diagonal across the frame with the sheet lying off-centre on it and the cold glass in the upper left. In shot 2 the round table reads as a perfect circle and the sheet lands off-centre in the warm pool of the lamp. In shot 3 she holds the RIGHT third of frame, turned slightly toward the window on the left; the warm lamp is high and behind her right shoulder, the cold window light reaches her from the far left, and the two fall across her features naturally, following the shape of her brow, nose and cheekbone. The frame keeps one consistent warm evening palette throughout. VOICE RULE: NO speech at all in this scene. Nobody speaks, no mouth forms words, no voice-over is heard. This silence is the point and it sits between the two spoken scenes on either side. TEXT RULE: NO text, letters, numbers or symbols anywhere in frame, including on the drawing itself and on the drawings on the fridge. CAMERA RULE: all three frames are locked off with only a breathing operator. THE DEVICE — THE SHEET IS CARRIED FROM THE COLD INTO THE WARM, AND TURNED OVER ON SCREEN: the scene follows one object across three still frames. It is lifted from the cold windowsill with its drawn side still hidden, it is carried into the warm pool of the lamp on the table, and only there is it turned face up, in full view of the audience. The reveal happens in the overhead frame, with no face in it at all; then the face is shown with no drawing in it at all. CUT STRUCTURE — 2 hard cuts, 3 shots, 8.0 s. Real time throughout, no slow motion.
+
+ACTIVE REFERENCES
+@image1 — THE OPENING FRAME AND THE LIGHT: the final frame of the previous scene. Shot 1 begins in exactly this framing, at exactly this camera height and angle, with exactly this light: the wide wooden windowsill running diagonally across the frame, the sheet of paper lying face down on it with its blank back up and its edges slightly furred and curled, the window frame and the cold blue dusk with its scattered droplets beyond the glass in the upper left, and the soft warm bounce falling across the sill from the room. Nothing about this frame is changed at the start of the scene.
+@image2 — THE MOTHER, about thirty-five. 100% matches the reference for identity, design, hair, the round glasses pushed up into her hair, wardrobe and proportions; take ONLY her design from it, never its background, framing or lighting. In shots 1 and 2 only her hands, forearms and the sleeve of her grey knitted cardigan are visible, and in shot 2 also the top of her head from directly above; her face is not seen until shot 3. Acting arc: her hand enters the sill frame slowly and stops just short of the paper for half a beat before touching it → she picks the sheet up by one corner, keeping it face down, and draws it out of frame → on the table she sets it down face down, pauses, then turns it over → her hands withdraw and rest flat on either side of it → her eyes travel once across the page, left to right, and stop at the far corner → her breath stops → her jaw loosens → she does not blink and she does not move again.
+@image3 — THE KITCHEN: the location and its materials, palette and light, on an autumn evening.
+@image4 — THE DRAWING: the child&#x27;s drawing. 100% matches the reference for its paper, its crease, every crayon stroke, every colour and the exact position of every figure on the page. It is handled inside this location and lit by its light, never a cut-out, never floating, never redrawn and never rearranged. Its drawn side stays completely hidden until the moment it is turned over in shot 2.
+Render style, materials and finish match the references exactly: stylized 3D animated feature look, soft flocked velvet skin, felted plush hair, chunky knit and bouclé fabrics, rounded soft forms, fine film grain and gentle bloom. Nothing photoreal, nothing glossy.
+
+LOCATION MAP
+The kitchen on an autumn evening. The tall window with its wide wooden sill is on the left, the blue dusk street beyond the glass. The round oak table stands in the centre of the room under the knitted pendant lamp, with the closed laptop and a ceramic mug pushed to one side. The fridge and the dark doorway are deep in the cold half of the room.
+
+FIRST FRAME
+Exactly the framing of the reference: a high close view of the wide wooden windowsill running diagonally across frame, the sheet of paper lying face down on it with its blank back up, the window frame and the cold blue dusk with scattered droplets beyond the glass in the upper left. No hands in frame yet.
+
+FORMAT MODE
+Vertical 9:16 throughout.
+
+OPTICS
+Shot 1: 47 degrees FOV, T2.2, shallow focus on the surface of the sheet, the glass and the street beyond dissolving into soft blue. Shot 2: 47 degrees FOV pointing exactly straight down, T4.0, the whole tabletop and the whole sheet sharp edge to edge. Shot 3: 18 degrees FOV, T1.8, extremely shallow focus on her eyes, the kitchen behind her reduced to soft shapes.
+
+CAMERA
+Shot 1 (0.0–2.6 s): locked on the windowsill in the reference framing, breathing operator, no move.
+Shot 2 (2.6–5.2 s): a perfect overhead at exactly 90 degrees straight down onto the round table, completely locked, a faint operator&#x27;s breath only.
+Shot 3 (5.2–8.0 s): a locked tight close-up at her eye level, no move.
+
+ACTION SEQUENCE
+0.0–0.8 s — the sheet lies face down on the sill exactly as it was left, nothing moving but one droplet sliding on the glass behind it.
+0.8–2.6 s — a woman&#x27;s hand in a grey knitted sleeve enters from the right and stops just short of the paper for half a beat. Then it takes the sheet by one corner, lifts it — keeping it face down, the drawn side never turning toward camera — and draws it out of frame to the right. The camera holds on the empty sill for the last few frames. HARD CUT.
+2.6–3.6 s — seen from directly above: the round table reads as a perfect circle in the warm pool of the pendant lamp. Her hands come into frame from the bottom and set the sheet down on the wood, still face down, in front of her. The top of her head with its low dark bun is visible at the bottom edge. Her hands pause.
+3.6–4.4 s — she turns the sheet over. The drawing comes up into the warm light and lies open and flat, readable edge to edge: a very large woman seated at a laptop filling most of the page, a thick drawn window line, and far on the other side of it, outside and tiny, a little girl with two orange braids standing alone on a band of blue and white snow with snowflakes scattered above her, a wide empty gap of bare paper between them.
+4.4–5.2 s — both her hands withdraw and come to rest flat on the table on either side of the drawing. Nothing moves. The paper&#x27;s crease lifts slightly off the wood. HARD CUT.
+5.2–8.0 s — a tight close-up of her face. Her eyes travel once across the page below frame, left to right, and stop. Her breath stops. Her jaw loosens a few millimetres. She does not blink. She does not move again until the frame ends.
+
+ANIMATION STYLE
+Stepped animation on twos with held poses, feature-film polish, almost everything held; the only motion is the hand, the sheet, and the breath.
+
+PHYSICS
+Real weight: the sheet peels off the sill with a dry whisper and sags under its own weight as it is lifted by one corner, the furred edges flex, it settles onto the tabletop with a soft slap, the crease lifts slightly off the wood and stays lifted, the knitted sleeve drags and bunches against the wood, her hands press into the table with real contact.
+
+LIGHTING
+Shot 1: exactly the light of the reference — cold blue 8500K dusk through the glass as the dominant source, with a soft warm bounce from the room falling across the sill from the right, deep soft shadow under the window frame. Shot 2: the knitted pendant lamp directly overhead as a warm 3000K key, a soft circular pool on the tabletop with the edges of the table falling into gentle shadow — the sheet is now entirely in warm light, where a moment ago it was entirely in cold. Shot 3: natural two-source portrait lighting, never a graphic effect. The knitted pendant lamp is the warm 3000K key, placed high and slightly behind her right shoulder, wrapping the right side of her forehead, cheekbone and jaw in warm light and leaving the left side of her face in soft shadow. The cold blue 8500K dusk from the window reaches only the far edge of that shadow side, as a thin cool rim along her left cheekbone, the left edge of her nose and her left jawline. Between the two the light falls off smoothly along the contours of her face, following the bridge of the nose and the line of the cheekbone, with a soft gradient and no hard edge anywhere. The room behind her stays in one warm evening palette; only the shadow side of her face carries the cool note.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. NO SPEECH of any kind. Diegetic only: a fridge hum, a clock, wind and a far-off car beyond the window, paper peeling off a wooden sill, a knitted sleeve dragging on wood, the soft slap of paper landing on a tabletop, the dry rustle of it being turned, and then near-total room silence held under the last shot.
+
+QUALITY
+Feature-animation quality, tactile plush and knit micro-texture, fine natural film grain, gentle bloom on the lamp and the window, no banding, no smearing.
+
+TECHNICAL PARAMETERS
+Vertical 9:16, 24 fps, real time, 8.0 seconds total, 3 shots, 2 hard cuts, zero camera movement anywhere.
+
+POSITIVE LOCKS
+Shot 1 opens in exactly the framing, angle and light of the reference frame, with the sheet face down and no hands in frame. The drawn side of the sheet stays completely hidden through all of shot 1 and the first half of shot 2, and is revealed only at the moment it is turned over on the table. Shot 2 is a true overhead at exactly 90 degrees: the round table reads as a perfect circle, only the top of her head and her hands are visible, and no walls and no horizon appear anywhere. Her face is not visible until shot 3. The drawing is not visible in shot 3 at all. In shot 3 her face is lit by one warm key from the right and one cool rim on the left shadow side, falling off naturally along her features; there is no hard line across her face, no straight vertical edge, no two-tone colouring and no split-screen effect anywhere in the frame, and the image reads as one continuous naturally lit shot. Only one character is in frame in this scene and nobody else. Nobody speaks at any point. The drawing matches its reference exactly, with the woman drawn large on one side, the girl drawn tiny on the other, and the empty gap between them unchanged. Exactly two arms and ten fingers. No text, letters or numbers anywhere, including on the drawing. No music of any kind.</pre>
+    </div>
+    <div class="prompt vid">
+      <div class="p-bar"><div><span class="p-label">11 · Сцена 3 — финал</span><span class="p-sub">Seedance 2.5 · 9 секунд · 2 кадра. @image1 — мама, @image2 — дочка, @image3 — кухня, @image4 — рисунок «после».</span></div><button class="copy" data-id="p11">Копировать</button></div>
+      <pre id="p11">SCENE CONTEXT
+ANIMATION RULE FIRST: characters animated ON TWOS (stepped 12 fps, held frames on strong poses), secondary action throughout, all twelve principles of animation with feature-film polish. ACTING RULE — the only place in the film where anything opens up, and it opens quietly: no hugging, no crying, no apology speech, no beaming smile, NO TEARS. The mother does not explain herself and does not ask forgiveness; she sits down on the floor and draws. The girl does not forgive out loud; she simply watches the pencil and then leans her shoulder into her mother&#x27;s arm. A blank, vacant or dead face is the worst possible failure: the mother is careful and a little afraid of being refused; the girl is guarded for the first seconds and then, very simply, is not. THE PAYOFF OF THE WHOLE FILM: this is the FIRST time the audience sees the girl&#x27;s face. Until this moment she has existed only as a hand and a back. COMPOSITION LAW — THE FRAME TELLS THE STORY: never a centred subject, never a symmetrical layout. The scene begins framed at adult standing height, with the girl small and low in the lower right of frame in the dark doorway. As the mother lowers herself, the camera lowers with her, and by the end both heads are at the same height in the same frame, warm lamplight behind them. VOICE RULE: exactly ONE voice moment, in RUSSIAN, spoken by the mother very quietly, close to the child, warm and careful, almost unsure — do not whisper, speak quietly in Russian. The girl does not speak at all, and her answer is physical. TEXT RULE: NO text, letters, numbers or symbols anywhere in frame, including on the drawing. CAMERA RULE: super-cinematic, slightly documentary, alive. THE DEVICE — THE ONLY CAMERA MOVE IN THE FILM, AND IT GOES DOWN: the camera has been locked off for the entire film. Here, once, it lowers from adult eye height to the floor, following the mother down to the child&#x27;s level, and stays there. Nothing else in the film moves the camera. CUT STRUCTURE — 1 hard cut, 2 shots, 9.0 s. Real time throughout, no slow motion.
+
+ACTIVE REFERENCES
+@image1 — THE MOTHER, about thirty-five. 100% matches the reference for identity, design, hair, the round glasses pushed up into her hair, wardrobe and proportions; take ONLY her design from it, never its background, framing or lighting. Acting arc: she comes into the doorway holding the sheet of paper and a pencil → she stops, hesitates one beat → she lowers herself all the way down to the floor and sits beside the girl, her back against the door frame → she lays the paper on her knees and begins to draw, carefully and slowly → she turns her head to the girl and asks her question very quietly → she keeps her eyes on the child and waits.
+@image2 — THE GIRL, six years old. 100% matches the reference for identity, design, the two ginger braids with bright blue elastic bands and the butter-yellow pyjamas, never redrawn. She is seen from behind and in profile at first, and her face is revealed fully for the first time only as the camera arrives at floor level. Acting: she sits on the floor in the doorway with her knees pulled up and her arms around them, looking down → she does not look up when her mother appears → as the pencil starts moving her eyes track it → her arms loosen from around her knees → at the question she looks up at her mother and leans her shoulder against her mother&#x27;s arm. She does not speak and does not smile widely; the change is small.
+@image3 — THE KITCHEN: the location and its materials, palette and light, on an autumn evening, including the dark doorway to the hallway in the back right corner.
+@image4 — THE DRAWING, FINISHED VERSION: the child&#x27;s drawing with the second small figure of the woman added beside the girl, the two of them holding hands. 100% matches the reference for its paper, its crease, every original crayon stroke and the added pencil figure. It is held inside this location and lit by its light, never a cut-out, never floating.
+Render style, materials and finish match the references exactly: stylized 3D animated feature look, soft flocked velvet skin, felted plush hair, chunky knit and bouclé fabrics, rounded soft forms, fine film grain and gentle bloom. Nothing photoreal, nothing glossy.
+
+LOCATION MAP
+The kitchen on an autumn evening, looking toward the open doorway in the back right corner. The girl sits on the floor on the threshold, half in the dark hallway and half in the kitchen. The knitted pendant lamp glows warm behind the camera over the table; the cold blue window light falls across the floor from the left. The fridge covered in drawings stands against the right wall above them.
+
+FIRST FRAME
+A wide shot from adult standing height looking down toward the doorway: the girl small and low in the lower right of frame, sitting on the threshold with her knees pulled up and her back to camera, the dark hallway beyond her, the warm kitchen light reaching only to the edge of her.
+
+FORMAT MODE
+Vertical 9:16 throughout.
+
+OPTICS
+Shot 1: a single 29 degrees FOV, T2.0; focus begins on the girl and stays with the two of them as the camera descends, both faces landing in the same focal plane by the end. Shot 2: 63 degrees FOV macro, T2.8, focus flat on the surface of the paper so the whole drawing is sharp edge to edge.
+
+CAMERA
+Shot 1 (0.0–7.0 s): one continuous take. The camera starts at adult standing height, locked, and after 1.5 seconds begins to descend smoothly and slowly, following the mother down, tilting a few degrees as it goes, until it reaches floor level and comes to a complete stop with both heads in frame at the same height. After it stops it does not move again. This is the only camera movement in the entire film.
+Shot 2 (7.0–9.0 s): a locked macro, no move.
+
+ACTION SEQUENCE
+0.0–1.5 s — the girl sits on the threshold with her knees pulled up and her arms around them, her back to camera, looking down. The mother comes into the top of frame holding the sheet of paper and a pencil, and stops.
+1.5–3.4 s — she lowers herself all the way to the floor and sits down beside the girl, her back against the door frame. The camera descends with her and keeps descending. The girl does not look up.
+3.4–5.4 s — the camera arrives at floor level and stops; for the first time in the film the girl&#x27;s face is fully visible, lit warm from the kitchen. The mother lays the paper across her own knees, where the girl can see it, and begins to draw with the pencil, slowly and carefully. The girl&#x27;s eyes move to the pencil and follow it. Her arms loosen from around her knees.
+5.4–7.0 s — the mother stops drawing, turns her head to the girl and says very quietly in Russian, warm and careful: &quot;Покажешь, что ещё нарисовала?&quot; The girl looks up at her and leans her shoulder against her mother&#x27;s arm. HARD CUT.
+7.0–9.0 s — macro on the drawing resting across the mother&#x27;s knees, lit warm: the large woman at her laptop on one side of the drawn window line, and on the other side, outside on the snow, the little girl — and now beside her a second, small woman drawn in thinner pencil, the two of them joined hand to hand. The frame holds completely still. One hand stays resting on the edge of the paper.
+
+ANIMATION STYLE
+Stepped animation on twos with held poses, feature-film polish; slow weighted movement with soft overlapping action in the knitted cardigan, the braids and the loose pyjama fabric.
+
+PHYSICS
+Real weight and contact: the floor takes the mother&#x27;s weight as she sits and her cardigan bunches under her, the paper flexes over her knees and the crease lifts, the pencil presses into the paper with real resistance, the girl&#x27;s lean genuinely shifts her mother&#x27;s arm a centimetre.
+
+LIGHTING
+The knitted pendant lamp over the table behind the camera as a warm 3000K key, reaching across the floor and lighting both of them from the front as they come down to the same level; the cold blue 8500K window light falling across the floor from the left behind them; the dark hallway beyond the doorway almost black. As the camera descends, both faces come into the warm half of the room together for the first time in the film.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING, NO SWELL OF ANY KIND. Diegetic only: footsteps on a wooden floor, a body settling onto the floor and fabric bunching, paper being laid flat, the soft scratch of a pencil on paper, a fridge hum far off, a clock, wind beyond the window, two quiet breaths. Over the final macro everything thins out to the room tone and one breath. The mother&#x27;s single line in Russian, very quiet and close.
+
+QUALITY
+Feature-animation quality, tactile plush and knit micro-texture, fine natural film grain, gentle bloom on the lamp, no banding, no smearing.
+
+TECHNICAL PARAMETERS
+Vertical 9:16, 24 fps, real time, 9.0 seconds total, 2 shots, 1 hard cut, one single downward camera move inside shot 1.
+
+POSITIVE LOCKS
+Exactly two characters in frame and nobody else. The camera moves only once, downward, and then stops permanently. The girl&#x27;s face becomes visible only after the camera reaches floor level. The mother sits all the way down on the floor and never stays standing. The girl never speaks. The added figure in the drawing is small, the same size as the girl, drawn in a thinner pencil line, and the two figures are joined hand to hand. Exactly two arms and ten fingers on every character. No text, letters or numbers anywhere, including on the drawing. No music of any kind.</pre>
+    </div>
+  </section>
+
+  <div class="final">
+    <p>Собрал свой мультфильм? Приходи с ним на разбор — с готовым роликом в руках он полезнее в десять раз.</p>
+    <div class="ctas">
+      <a class="btn-primary" href="https://neurocreator2.ru/anketa?from=excursion&amp;utm_source=mult_video&amp;utm_medium=page&amp;utm_campaign=mult_mk">Записаться на разбор →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a><br>
+  Доход не гарантирован. Информация на сайте не является публичной офертой.
+</footer>
+
+<script>
+function copyText(txt, cb){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(cb).catch(function(){fallback(txt,cb);});
+  } else { fallback(txt,cb); }
+}
+function fallback(txt,cb){
+  var ta=document.createElement('textarea');
+  ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var txt=document.getElementById(btn.dataset.id).innerText;
+    copyText(txt,function(){
+      btn.textContent='Скопировано ✓'; btn.classList.add('done');
+      setTimeout(function(){btn.textContent='Копировать'; btn.classList.remove('done');},1800);
+    });
+  });
+});
+document.querySelectorAll('.phrase').forEach(function(b){
+  b.addEventListener('click',function(){
+    copyText(b.textContent,function(){
+      b.classList.add('done');
+      setTimeout(function(){b.classList.remove('done');},1400);
+    });
+  });
+});
+</script>
+</body>
+</html>
