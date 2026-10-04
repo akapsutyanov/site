@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-04T12:25:22Z",
+ "updated": "2026-10-04T12:57:27Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137867944",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SEO/AI-редактор / Специалист по AI-контенту\n🏢 Вебпрактик · Ростов-на-Дону",
+   "link": "https://hh.ru/vacancy/137867944?tech_source=api",
+   "date": "2026-10-04T15:01:10+0300"
+  },
   {
    "id": "hh/137864514",
    "source": "hh",
@@ -537,14 +545,6 @@
    "text": "ИИ-креатор\n🏢 Esterk Lux Parfum · Москва",
    "link": "https://hh.ru/vacancy/133809298?tech_source=api",
    "date": "2026-10-02T17:42:05+0300"
-  },
-  {
-   "id": "hh/137498308",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Копирайтер / контент менеджер с ИИ\n🏢 Интервуд · Красноярск\n💰 от 70000 до 80000 RUR",
-   "link": "https://hh.ru/vacancy/137498308?tech_source=api",
-   "date": "2026-10-02T17:32:22+0300"
   },
   {
    "id": "SearchEditorr/3983",
