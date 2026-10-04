@@ -95,6 +95,23 @@ h1 em,h2 em{font-style:italic;background:var(--chrome-shine);background-size:200
 .howto code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#d8d8d8;
   background:rgba(200,200,200,.08);padding:1px 6px;border-radius:5px}
 
+.tool{margin-top:30px;display:flex;gap:24px;align-items:center;justify-content:space-between;padding:24px 26px;
+  border:1px solid rgba(200,200,200,.18);border-radius:18px;background:rgba(13,13,18,.8);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.tool-k{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3)}
+.tool-t{margin-top:6px;font-size:16px;font-weight:600;color:var(--ink);line-height:1.4}
+.tool-l p{margin-top:6px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.65}
+.tool-r{display:flex;flex-direction:column;gap:10px;flex-shrink:0;min-width:230px}
+.tool-r .btn-primary{justify-content:center;padding:15px 26px}
+.promo{display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 16px;border-radius:8px;cursor:pointer;
+  border:1px dashed rgba(220,220,220,.4);background:rgba(200,200,200,.03);font-family:inherit;color:var(--ink);
+  transition:border-color .2s,background .2s}
+.promo:hover{border-color:rgba(240,240,240,.7);background:rgba(200,200,200,.06)}
+.promo-k{font-size:9.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--c3)}
+.promo-v{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;font-weight:600;letter-spacing:1.5px}
+.promo-c{font-size:10px;color:var(--ink3)}
+.promo.done{border-color:rgba(140,220,160,.6)}
+.promo.done .promo-c{color:#a8e8b8}
+@media(max-width:700px){.tool{flex-direction:column;align-items:stretch}.tool-r{min-width:0}}
 .phrases{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .phrase{font-size:13px;color:var(--c2);border:1px solid rgba(200,200,200,.18);border-radius:999px;padding:7px 14px;
   background:rgba(200,200,200,.03);cursor:pointer;font-family:inherit;transition:border-color .2s,color .2s}
@@ -177,7 +194,7 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
   <div class="disclaimer">
     <span class="dz">⚠️</span>
     <div class="dt">
-      <b>Не закрывай эту страницу</b> — ниже запись на разбор и все промпты из мастер-класса с кнопкой «Копировать».<br>
+      <b>Не закрывай эту страницу</b> — ниже запись на разбор, все промпты из мастер-класса и ссылка на Syntx с промокодом на скидку.<br>
       Если видео не запускается — <a href="https://youtu.be/6Sn_wUtTf0s" target="_blank" rel="noopener">смотри на YouTube</a> и возвращайся сюда.
     </div>
   </div>
@@ -210,6 +227,18 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
     <div class="eyebrow">Материалы мастер-класса</div>
     <h2>Все <em>промпты</em> мультфильма</h2>
     <p>«Мне сейчас не до тебя» — четыре сцены, одна кухня, два героя. Идут в том порядке, в котором я делал ролик: история → мир и герои → сцены.</p>
+  </div>
+
+  <div class="tool">
+    <div class="tool-l">
+      <div class="tool-k">Где всё делаем</div>
+      <div class="tool-t">Syntx — все нейросети из мастер-класса в одном месте</div>
+      <p>Nano Banana Pro, Seedance 2.5, озвучка и музыка — одна подписка вместо десяти. По промокоду — скидка на первую покупку.</p>
+    </div>
+    <div class="tool-r">
+      <a class="btn-primary" href="https://syntx.ai/welcome/4TnpxLFN" target="_blank" rel="noopener">Открыть Syntx →</a>
+      <button class="promo" id="promo" title="Скопировать промокод"><span class="promo-k">Промокод</span><span class="promo-v">KAPUSTYANOV</span><span class="promo-c">копировать</span></button>
+    </div>
   </div>
 
   <div class="howto">
@@ -576,6 +605,13 @@ document.querySelectorAll('.copy').forEach(function(btn){
       btn.textContent='Скопировано ✓'; btn.classList.add('done');
       setTimeout(function(){btn.textContent='Копировать'; btn.classList.remove('done');},1800);
     });
+  });
+});
+var promo=document.getElementById('promo');
+promo.addEventListener('click',function(){
+  copyText('KAPUSTYANOV',function(){
+    promo.classList.add('done'); promo.querySelector('.promo-c').textContent='скопировано ✓';
+    setTimeout(function(){promo.classList.remove('done'); promo.querySelector('.promo-c').textContent='копировать';},1800);
   });
 });
 document.querySelectorAll('.phrase').forEach(function(b){
