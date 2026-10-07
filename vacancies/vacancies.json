@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-07T19:03:12Z",
+ "updated": "2026-10-07T19:45:52Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137811958",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент-маркетолог в AI-агентство\n🏢 ПрофайлЛаб · Москва\n💰 от 70000 RUR",
+   "link": "https://hh.ru/vacancy/137811958?tech_source=api",
+   "date": "2026-10-07T22:28:15+0300"
+  },
   {
    "id": "hh/138233364",
    "source": "hh",
@@ -683,14 +691,6 @@
    "date": "2026-10-06T20:38:25+0300"
   },
   {
-   "id": "hh/137610029",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель направления ИИ (цифровые аватары)\n🏢 Highpro · Ульяновск\n💰 от 250000 до 350000 RUR",
-   "link": "https://hh.ru/vacancy/137610029?tech_source=api",
-   "date": "2026-10-06T18:22:54+0300"
-  },
-  {
    "id": "jobforjunior/8529",
    "source": "telegram",
    "channel": "jobforjunior",
@@ -1283,14 +1283,6 @@
    "date": "2026-09-29"
   },
   {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "date": "2026-09-29"
-  },
-  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1320,6 +1312,14 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
+   "date": "2026-09-29"
+  },
+  {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
