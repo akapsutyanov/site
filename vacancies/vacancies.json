@@ -1,14 +1,38 @@
 {
- "updated": "2026-10-07T15:18:30Z",
+ "updated": "2026-10-07T15:50:40Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137808554",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "ИИ инженер / Технический маркетолог\n🏢 Корстоун · Москва\n💰 от 150000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/137808554?tech_source=api",
+   "date": "2026-10-07T18:28:09+0300"
+  },
   {
    "id": "hh/138231442",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "Промпт режиссер для создания видеос помощью ИИ\n🏢 УЗ Офтальмологическая клиника Видеаль · Омск\n💰 от 50000 до 80000 RUR",
+   "text": "Промпт режиссер для создания видео с помощью ИИ\n🏢 УЗ Офтальмологическая клиника Видеаль · Омск\n💰 от 50000 до 80000 RUR",
    "link": "https://hh.ru/vacancy/138231442?tech_source=api",
    "date": "2026-10-07T18:06:16+0300"
+  },
+  {
+   "id": "hh/137877754",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Копирайтер / контент-менеджер по работе с нейросетями\n🏢 КручуВерчу · Москва\n💰 от 60000 RUR",
+   "link": "https://hh.ru/vacancy/137877754?tech_source=api",
+   "date": "2026-10-07T17:58:50+0300"
+  },
+  {
+   "id": "hh/138028309",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-креатор / Ведущий YouTube-канала про нейросети / AI-автор / AI-эксперт\n🏢 GameSport · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/138028309?tech_source=api",
+   "date": "2026-10-07T17:51:48+0300"
   },
   {
    "id": "hh/136693506",
@@ -665,30 +689,6 @@
    "text": "Associate Product Manager (APM)\nGoKwik\nis an Indian technology company (SaaS platform) that helps create smart IT tools for e-commerce websites.\nMore details in Monika Bisht's\npost on LinkedIn\n.\nБольше вакансий для продактов и проджектов:\n@forproducts",
    "link": "https://t.me/jobforjunior/8529",
    "date": "2026-10-06T17:50:57+00:00"
-  },
-  {
-   "id": "hh/138186330",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO-специалист (техническое SEO + разработка с нейросетями)\n🏢 Маркетинг Прозрачно · Екатеринбург\n💰 от 90000 RUR",
-   "link": "https://hh.ru/vacancy/138186330?tech_source=api",
-   "date": "2026-10-06T17:46:33+0300"
-  },
-  {
-   "id": "hh/138185700",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор (фото и видео)\n🏢 Профессиональные Люди · Новосибирск\n💰 от 150000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/138185700?tech_source=api",
-   "date": "2026-10-06T17:26:25+0300"
-  },
-  {
-   "id": "hh/137606913",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор / AI-дизайнер\n🏢 Созвездие Красоты - Smart Buy · Москва",
-   "link": "https://hh.ru/vacancy/137606913?tech_source=api",
-   "date": "2026-10-06T17:22:37+0300"
   },
   {
    "id": "forallmedia/4265",
