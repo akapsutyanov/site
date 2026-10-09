@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-09T10:54:56Z",
+ "updated": "2026-10-09T11:27:31Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138305158",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам B2B (AI направление)\n🏢 Spirit digital · Тамбов\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/138305158?tech_source=api",
+   "date": "2026-10-09T14:07:54+0300"
+  },
+  {
+   "id": "hh/138304678",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Performance-маркетолог (Яндекс Директ, VK, in-app) в AI-продукты\n🏢 Post Punk Publishing · Москва\n💰 от 200000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/138304678?tech_source=api",
+   "date": "2026-10-09T13:58:21+0300"
+  },
   {
    "id": "hh/135341881",
    "source": "hh",
@@ -577,22 +593,6 @@
    "text": "Контент-менеджер / AI-редактор (SEO & GEO) в digital-агентство\n🏢 MD Marketing · Нижний Новгород\n💰 от 80000 до 120000 RUR",
    "link": "https://hh.ru/vacancy/138266580?tech_source=api",
    "date": "2026-10-08T15:00:23+0300"
-  },
-  {
-   "id": "hh/138265675",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению искусственного интеллекта\n🏢 Ремонтно-механический завод · Казань",
-   "link": "https://hh.ru/vacancy/138265675?tech_source=api",
-   "date": "2026-10-08T14:44:31+0300"
-  },
-  {
-   "id": "hh/138265632",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Графический дизайнер / AI-дизайнер (Real Estate)\n🏢 WIAM · Владивосток",
-   "link": "https://hh.ru/vacancy/138265632?tech_source=api",
-   "date": "2026-10-08T14:43:41+0300"
   },
   {
    "id": "jobforpr/4093",
@@ -1339,14 +1339,6 @@
    "date": "2026-09-29"
   },
   {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "date": "2026-09-29"
-  },
-  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1376,6 +1368,14 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
+   "date": "2026-09-29"
+  },
+  {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
