@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-09T16:50:05Z",
+ "updated": "2026-10-09T17:22:04Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138321741",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Java-разработчик (ИИ-обогащённая разработка)\n🏢 Diasoft · Москва",
+   "link": "https://hh.ru/vacancy/138321741?tech_source=api",
+   "date": "2026-10-09T19:59:43+0300"
+  },
   {
    "id": "hh/137610029",
    "source": "hh",
@@ -691,14 +699,6 @@
    "date": "2026-10-08T17:09:25+0300"
   },
   {
-   "id": "hh/136325140",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI дизайнер\n🏢 Медиа Бизнес Солюшенс · Москва",
-   "link": "https://hh.ru/vacancy/136325140?tech_source=api",
-   "date": "2026-10-08T17:07:59+0300"
-  },
-  {
    "id": "comeinlena/6459",
    "source": "telegram",
    "channel": "comeinlena",
@@ -1339,6 +1339,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1368,14 +1376,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
