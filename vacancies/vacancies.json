@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-10T12:59:01Z",
+ "updated": "2026-10-10T14:18:56Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138068543",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-менеджер / контент-администратор (с AI)\n🏢 Дымченко Екатерина Юрьевна · Краснодар",
+   "link": "https://hh.ru/vacancy/138068543?tech_source=api",
+   "date": "2026-10-10T16:40:03+0300"
+  },
   {
    "id": "hh/137867944",
    "source": "hh",
@@ -601,14 +609,6 @@
    "text": "Контент-менеджер (AI reels, карусели)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 180000 RUR",
    "link": "https://hh.ru/vacancy/138158615?tech_source=api",
    "date": "2026-10-09T09:58:48+0300"
-  },
-  {
-   "id": "hh/137728437",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам обучения нейросетям (ИИ)\n🏢 xHuman Sales · Москва\n💰 от 200000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/137728437?tech_source=api",
-   "date": "2026-10-09T09:38:24+0300"
   },
   {
    "id": "smmlancer/8746",
