@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-10T19:42:59Z",
+ "updated": "2026-10-10T20:22:33Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138332054",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по нейросетям\n🏢 Владимиров Алексей Родионович · Новая Усмань\n💰 от 25000 до 85000 RUR",
+   "link": "https://hh.ru/vacancy/138332054?tech_source=api",
+   "date": "2026-10-10T22:44:47+0300"
+  },
+  {
+   "id": "hh/138332055",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по нейросетям\n🏢 Владимиров Алексей Родионович · Воронеж\n💰 от 25000 до 85000 RUR",
+   "link": "https://hh.ru/vacancy/138332055?tech_source=api",
+   "date": "2026-10-10T22:44:47+0300"
+  },
   {
    "id": "hh/137811958",
    "source": "hh",
@@ -697,22 +713,6 @@
    "text": "Менеджер по продажам в онлайн-школу (SMM и нейросети)\n🏢 SMM-академия Михаила Христосенко · Краснодар\n💰 от 85000 RUR",
    "link": "https://hh.ru/vacancy/138294272?tech_source=api",
    "date": "2026-10-09T11:00:06+0300"
-  },
-  {
-   "id": "hh/137517674",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам обучения нейросетям (GPT/AI агенты/ПРОМТы)\n🏢 xHuman Sales · Москва\n💰 от 200000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/137517674?tech_source=api",
-   "date": "2026-10-09T10:59:22+0300"
-  },
-  {
-   "id": "hh/138293145",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по B2B-продажам (SEO и AI-продвижение)\n🏢 King System AI · Москва\n💰 от 112000 до 140000 RUR",
-   "link": "https://hh.ru/vacancy/138293145?tech_source=api",
-   "date": "2026-10-09T10:45:22+0300"
   },
   {
    "id": "work_editor/6632",
