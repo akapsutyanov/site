@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-10T14:18:56Z",
+ "updated": "2026-10-10T14:58:03Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137806540",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор / AI-фотограф/ Нейрофотограф\n🏢 LD LATTE · Москва\n💰 от 60000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/137806540?tech_source=api",
+   "date": "2026-10-10T17:15:01+0300"
+  },
+  {
+   "id": "hh/138090482",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Начинающий AI Automation Specialist / Специалист по AI и автоматизации\n🏢 LOOK.IN store · Москва\n💰 от 70000 RUR",
+   "link": "https://hh.ru/vacancy/138090482?tech_source=api",
+   "date": "2026-10-10T17:00:43+0300"
+  },
   {
    "id": "hh/138068543",
    "source": "hh",
@@ -593,22 +609,6 @@
    "text": "AI-маркетолог/ассистент коммерческого директора\n🏢 Клиника Здоровье · Королев (Московская область)\n💰 от 135000 RUR",
    "link": "https://hh.ru/vacancy/138290448?tech_source=api",
    "date": "2026-10-09T10:02:45+0300"
-  },
-  {
-   "id": "hh/137939786",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "2D AI Artist\n🏢 Маналот Геймз · Москва",
-   "link": "https://hh.ru/vacancy/137939786?tech_source=api",
-   "date": "2026-10-09T10:01:23+0300"
-  },
-  {
-   "id": "hh/138158615",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-менеджер (AI reels, карусели)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 180000 RUR",
-   "link": "https://hh.ru/vacancy/138158615?tech_source=api",
-   "date": "2026-10-09T09:58:48+0300"
   },
   {
    "id": "smmlancer/8746",
