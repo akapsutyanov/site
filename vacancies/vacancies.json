@@ -1,7 +1,31 @@
 {
- "updated": "2026-10-11T13:27:53Z",
+ "updated": "2026-10-11T13:59:19Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138138185",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Python AI Automation Engineer\n🏢 Фудтех Ресторанные Технологии · Москва",
+   "link": "https://hh.ru/vacancy/138138185?tech_source=api",
+   "date": "2026-10-11T16:23:52+0300"
+  },
+  {
+   "id": "hh/138137486",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Lead AI-креатор / лид команды AI-контента\n🏢 Фейсес · Москва",
+   "link": "https://hh.ru/vacancy/138137486?tech_source=api",
+   "date": "2026-10-11T16:13:43+0300"
+  },
+  {
+   "id": "hh/138270661",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-специалист / специалист по AI-автоматизации\n🏢 ZAVOZ · Воронеж\n💰 от 80000 RUR",
+   "link": "https://hh.ru/vacancy/138270661?tech_source=api",
+   "date": "2026-10-11T15:56:55+0300"
+  },
   {
    "id": "hh/136557579",
    "source": "hh",
@@ -553,30 +577,6 @@
    "text": "Разработчик по нейросетям и глубокому обучению в команду распознавания окружения\n🏢 Navio · Москва",
    "link": "https://hh.ru/vacancy/136496402?tech_source=api",
    "date": "2026-10-09T17:58:11+0300"
-  },
-  {
-   "id": "hh/137538973",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)\n🏢 Topface Media · Казань",
-   "link": "https://hh.ru/vacancy/137538973?tech_source=api",
-   "date": "2026-10-09T17:53:42+0300"
-  },
-  {
-   "id": "hh/137606913",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор / AI-дизайнер\n🏢 Созвездие Красоты - Smart Buy · Москва",
-   "link": "https://hh.ru/vacancy/137606913?tech_source=api",
-   "date": "2026-10-09T17:22:37+0300"
-  },
-  {
-   "id": "hh/137393976",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по нейросетям\n🏢 Мусиенко Иван Александрович · Москва\n💰 от 80000 RUR",
-   "link": "https://hh.ru/vacancy/137393976?tech_source=api",
-   "date": "2026-10-09T17:20:23+0300"
   },
   {
    "id": "work_editor/6635",
