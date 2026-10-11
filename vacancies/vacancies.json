@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-11T19:14:50Z",
+ "updated": "2026-10-11T19:46:16Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137557543",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер вводного урока по Нейросетям в онлайн-школу (продажи)\n🏢 Квантастика · Москва\n💰 от 110000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/137557543?tech_source=api",
+   "date": "2026-10-11T21:51:38+0300"
+  },
   {
    "id": "hh/138338876",
    "source": "hh",
@@ -577,14 +585,6 @@
    "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
    "link": "https://hh.ru/vacancy/133039518?tech_source=api",
    "date": "2026-10-10T11:52:32+0300"
-  },
-  {
-   "id": "hh/137425678",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Lead\n🏢 Платформа ТРИМ · Москва",
-   "link": "https://hh.ru/vacancy/137425678?tech_source=api",
-   "date": "2026-10-10T11:11:57+0300"
   },
   {
    "id": "vacancysmm/17101",
@@ -1363,14 +1363,6 @@
    "date": "2026-09-29"
   },
   {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "date": "2026-09-29"
-  },
-  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1400,6 +1392,14 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
+   "date": "2026-09-29"
+  },
+  {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
