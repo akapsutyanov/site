@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-11T08:42:29Z",
+ "updated": "2026-10-11T09:14:25Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137902342",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам ИИ-решений\n🏢 Инжиниринговый Инвестиционный Центр · Москва\n💰 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/137902342?tech_source=api",
+   "date": "2026-10-11T11:40:32+0300"
+  },
   {
    "id": "hh/137679954",
    "source": "hh",
@@ -648,14 +656,6 @@
    "channel": "hh.ru",
    "text": "Продюсер AI-видео\n🏢 VVP Group · Москва",
    "link": "https://hh.ru/vacancy/135341881?tech_source=api",
-   "date": "2026-10-09T13:35:45+0300"
-  },
-  {
-   "id": "hh/135343379",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Креативный продюсер AI-анимации\n🏢 VVP Group · Москва",
-   "link": "https://hh.ru/vacancy/135343379?tech_source=api",
    "date": "2026-10-09T13:35:45+0300"
   },
   {
