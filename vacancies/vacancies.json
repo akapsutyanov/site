@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-11T07:07:02Z",
+ "updated": "2026-10-11T07:39:03Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/136160341",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI application security engineer\n🏢 Контур · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/136160341?tech_source=api",
+   "date": "2026-10-11T10:21:43+0300"
+  },
   {
    "id": "hh/137672270",
    "source": "hh",
@@ -699,14 +707,6 @@
    "date": "2026-10-09T12:05:37+0300"
   },
   {
-   "id": "hh/137580879",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Помощник руководителя / рекрутер (AI-проекты)\n🏢 King System AI · Москва\n💰 от 70000 до 120000 RUR",
-   "link": "https://hh.ru/vacancy/137580879?tech_source=api",
-   "date": "2026-10-09T11:51:12+0300"
-  },
-  {
    "id": "smmlancer/8747",
    "source": "telegram",
    "channel": "smmlancer",
@@ -1363,6 +1363,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1392,14 +1400,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
