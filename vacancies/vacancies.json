@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-12T12:05:57Z",
+ "updated": "2026-10-12T12:39:10Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138386408",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по работе с данными и AI-автоматизации\n🏢 АртПринт · Рязань\n💰 от 60000 RUR",
+   "link": "https://hh.ru/vacancy/138386408?tech_source=api",
+   "date": "2026-10-12T15:05:35+0300"
+  },
   {
    "id": "hh/138379175",
    "source": "hh",
@@ -553,14 +561,6 @@
    "text": "2D AI художник\n🏢 Pixel Talent · Москва",
    "link": "https://hh.ru/vacancy/136674324?tech_source=api",
    "date": "2026-10-11T12:08:44+0300"
-  },
-  {
-   "id": "hh/137902342",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам ИИ-решений\n🏢 Инжиниринговый Инвестиционный Центр · Москва\n💰 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/137902342?tech_source=api",
-   "date": "2026-10-11T11:40:32+0300"
   },
   {
    "id": "comeinlena/6468",
@@ -1387,14 +1387,6 @@
    "date": "2026-09-29"
   },
   {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "date": "2026-09-29"
-  },
-  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1424,6 +1416,14 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
+   "date": "2026-09-29"
+  },
+  {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
