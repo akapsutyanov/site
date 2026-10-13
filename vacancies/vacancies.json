@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-13T13:25:28Z",
+ "updated": "2026-10-13T13:59:40Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138441699",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор\n🏢 ФАКТОР · Москва",
+   "link": "https://hh.ru/vacancy/138441699?tech_source=api",
+   "date": "2026-10-13T16:24:43+0300"
+  },
   {
    "id": "hh/138440721",
    "source": "hh",
@@ -537,14 +545,6 @@
    "text": "Маркетолог по ИИ-контенту и автоматизации (AI, SMM)\n🏢 Джиэсэс Косметикс · Москва",
    "link": "https://hh.ru/vacancy/137961475?tech_source=api",
    "date": "2026-10-12T17:46:59+0300"
-  },
-  {
-   "id": "hh/138396558",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Tech Lead / Руководитель проектов разработки AI-платформы\n🏢 ГК Орбита · Москва",
-   "link": "https://hh.ru/vacancy/138396558?tech_source=api",
-   "date": "2026-10-12T17:23:25+0300"
   },
   {
    "id": "jobforjunior/8540",
