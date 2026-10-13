@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-13T19:15:21Z",
+ "updated": "2026-10-13T19:46:43Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137811958",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент-маркетолог в AI-агентство\n🏢 ПрофайлЛаб · Москва\n💰 от 70000 RUR",
+   "link": "https://hh.ru/vacancy/137811958?tech_source=api",
+   "date": "2026-10-13T22:28:15+0300"
+  },
   {
    "id": "hh/138448763",
    "source": "hh",
@@ -593,14 +601,6 @@
    "text": "Менеджер в школу SMM и нейросетей\n🏢 SMM-академия Михаила Христосенко · Кострома\n💰 от 80000 RUR",
    "link": "https://hh.ru/vacancy/137842961?tech_source=api",
    "date": "2026-10-13T09:44:21+0300"
-  },
-  {
-   "id": "hh/137993619",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-менеджер (ведение сайтов + нейросети)\n🏢 Sindima · Нижний Новгород",
-   "link": "https://hh.ru/vacancy/137993619?tech_source=api",
-   "date": "2026-10-13T09:40:27+0300"
   },
   {
    "id": "smmlancer/8755",
@@ -1411,6 +1411,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1440,14 +1448,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
