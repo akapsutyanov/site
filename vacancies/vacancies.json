@@ -1,12 +1,20 @@
 {
- "updated": "2026-10-13T12:53:19Z",
+ "updated": "2026-10-13T13:25:28Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138440721",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "ИИ Копирайтер / ИИ Редактор / ИИ Автор\n🏢 Palme School inc · Москва\n💰 до 1000 USD",
+   "link": "https://hh.ru/vacancy/138440721?tech_source=api",
+   "date": "2026-10-13T16:02:54+0300"
+  },
   {
    "id": "hh/138438948",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "AI-креатора / Нейрофотограф маркетплейсов\n🏢 Eberron (ИП Овчинников Данил Романович) · Москва\n💰 от 60000 до 75000 RUR",
+   "text": "AI-креатор/ Нейрофотограф маркетплейсов\n🏢 Eberron (ИП Овчинников Данил Романович) · Москва\n💰 от 60000 до 75000 RUR",
    "link": "https://hh.ru/vacancy/138438948?tech_source=api",
    "date": "2026-10-13T15:34:05+0300"
   },
@@ -537,14 +545,6 @@
    "text": "Tech Lead / Руководитель проектов разработки AI-платформы\n🏢 ГК Орбита · Москва",
    "link": "https://hh.ru/vacancy/138396558?tech_source=api",
    "date": "2026-10-12T17:23:25+0300"
-  },
-  {
-   "id": "hh/137606913",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор / AI-дизайнер\n🏢 Созвездие Красоты - Smart Buy · Москва",
-   "link": "https://hh.ru/vacancy/137606913?tech_source=api",
-   "date": "2026-10-12T17:22:37+0300"
   },
   {
    "id": "jobforjunior/8540",
