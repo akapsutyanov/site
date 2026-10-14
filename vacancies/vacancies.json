@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-14T11:24:10Z",
+ "updated": "2026-10-14T11:56:42Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138480481",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес-ассистент (AI Coordinator)\n🏢 Голубева Евгения Викторовна · Москва\n💰 от 80000 RUR",
+   "link": "https://hh.ru/vacancy/138480481?tech_source=api",
+   "date": "2026-10-14T14:35:22+0300"
+  },
   {
    "id": "hh/138479268",
    "source": "hh",
@@ -9,6 +17,14 @@
    "text": "Веб-дизайнер (сайты с помощью ИИ)\n🏢 Волков Роман Алексеевич · Москва\n💰 от 7000 RUR",
    "link": "https://hh.ru/vacancy/138479268?tech_source=api",
    "date": "2026-10-14T14:08:49+0300"
+  },
+  {
+   "id": "hh/137702836",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор-аналитик по работе с нейросетями\n🏢 Транском · Екатеринбург",
+   "link": "https://hh.ru/vacancy/137702836?tech_source=api",
+   "date": "2026-10-14T14:08:28+0300"
   },
   {
    "id": "hh/138479021",
@@ -25,6 +41,14 @@
    "text": "Менеджер по продажам онлайн-курсов по Нейросетям\n🏢 BS University · Самара\n💰 от 85000 до 120000 RUR",
    "link": "https://hh.ru/vacancy/138479022?tech_source=api",
    "date": "2026-10-14T14:03:51+0300"
+  },
+  {
+   "id": "hh/138262827",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-дизайнер / Дизайнер инфографики (маркетплейсы)\n🏢 Кирилюк Сергей Александрович · Москва",
+   "link": "https://hh.ru/vacancy/138262827?tech_source=api",
+   "date": "2026-10-14T13:56:58+0300"
   },
   {
    "id": "hh/138477271",
@@ -553,30 +577,6 @@
    "text": "ИИ Копирайтер / ИИ Редактор / ИИ Автор\n🏢 Palme School inc · Москва\n💰 до 1000 USD",
    "link": "https://hh.ru/vacancy/138440721?tech_source=api",
    "date": "2026-10-13T16:02:54+0300"
-  },
-  {
-   "id": "hh/138438948",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор/ Нейрофотограф маркетплейсов\n🏢 Eberron (ИП Овчинников Данил Романович) · Москва\n💰 от 60000 до 75000 RUR",
-   "link": "https://hh.ru/vacancy/138438948?tech_source=api",
-   "date": "2026-10-13T15:34:05+0300"
-  },
-  {
-   "id": "hh/138438858",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор / Креатор\n🏢 Папа Даня (ИП Морозов Даниил Сергеевич) · Москва\n💰 от 40000 до 50000 RUR",
-   "link": "https://hh.ru/vacancy/138438858?tech_source=api",
-   "date": "2026-10-13T15:32:33+0300"
-  },
-  {
-   "id": "hh/138436849",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Категорийный менеджер с ИИ-подходом (AI-native Product Manager)\n🏢 Правила Мебели · Москва\n💰 от 180000 RUR",
-   "link": "https://hh.ru/vacancy/138436849?tech_source=api",
-   "date": "2026-10-13T15:07:03+0300"
   },
   {
    "id": "dddwork/5226",
@@ -1411,6 +1411,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1440,14 +1448,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
