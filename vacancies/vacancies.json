@@ -1,7 +1,31 @@
 {
- "updated": "2026-10-14T08:07:56Z",
+ "updated": "2026-10-14T08:40:12Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138467449",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по внедрению AI-решений (AI Deployment)\n🏢 РУССМАРКЕТ · Москва\n💰 от 130000 RUR",
+   "link": "https://hh.ru/vacancy/138467449?tech_source=api",
+   "date": "2026-10-14T11:25:11+0300"
+  },
+  {
+   "id": "hh/138467166",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Python Developer AI team (в офис, г. Йошкар-Ола)\n🏢 TravelLine · Йошкар-Ола",
+   "link": "https://hh.ru/vacancy/138467166?tech_source=api",
+   "date": "2026-10-14T11:21:07+0300"
+  },
+  {
+   "id": "hh/138466469",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Дата-инженер (AI-driven Development / Fullstack)\n🏢 USETECH · Москва",
+   "link": "https://hh.ru/vacancy/138466469?tech_source=api",
+   "date": "2026-10-14T11:09:27+0300"
+  },
   {
    "id": "hh/138466029",
    "source": "hh",
@@ -513,30 +537,6 @@
    "text": "Стажер по автоматизации и нейросетям\n🏢 WELCS · Москва\n💰 от 60000 до 90000 RUR",
    "link": "https://hh.ru/vacancy/138423693?tech_source=api",
    "date": "2026-10-13T12:41:27+0300"
-  },
-  {
-   "id": "hh/138423067",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Видео-монтажёр / AI Video Creator для Ozon и Wildberries\n🏢 Компания Сталькрепеж · Москва\n💰 от 110000 до 130000 RUR",
-   "link": "https://hh.ru/vacancy/138423067?tech_source=api",
-   "date": "2026-10-13T12:30:48+0300"
-  },
-  {
-   "id": "hh/138422962",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-редактор\n🏢 Текарт, маркетинговая группа · Тула",
-   "link": "https://hh.ru/vacancy/138422962?tech_source=api",
-   "date": "2026-10-13T12:28:27+0300"
-  },
-  {
-   "id": "hh/138422382",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "GEO Lead / Руководитель GEO-направления (AI Search / Digital Marketing)\n🏢 Умный Сервис · Москва\n💰 от 300000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/138422382?tech_source=api",
-   "date": "2026-10-13T12:22:09+0300"
   },
   {
    "id": "vacancysmm/17116",
