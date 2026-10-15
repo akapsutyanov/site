@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-15T19:13:57Z",
+ "updated": "2026-10-15T19:45:26Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138532491",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по работе с нейросетями (AI-специалист)\n🏢 Профиаи · Екатеринбург\n💰 от 60000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/138532491?tech_source=api",
+   "date": "2026-10-15T22:27:57+0300"
+  },
   {
    "id": "hh/138028309",
    "source": "hh",
@@ -577,14 +585,6 @@
    "text": "Менеджер проектов по запуску персонализированных кампаний (маркетинг генеративного ИИ)\n🏢 СБЕР · Москва",
    "link": "https://hh.ru/vacancy/138493072?tech_source=api",
    "date": "2026-10-14T21:01:00+0300"
-  },
-  {
-   "id": "hh/138492287",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер Wildberries (ChatGPT, Claude)\n🏢 Савченко С.С. · Саратов\n💰 от 70000 до 90000 RUR",
-   "link": "https://hh.ru/vacancy/138492287?tech_source=api",
-   "date": "2026-10-14T20:02:57+0300"
   },
   {
    "id": "mediajobs_ru/6153",
