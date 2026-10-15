@@ -1,7 +1,39 @@
 {
- "updated": "2026-10-15T08:32:09Z",
+ "updated": "2026-10-15T09:03:45Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138512545",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-фотограф (специалист по генерации fashion-контента)\n🏢 Леди и Джентльмен · Москва",
+   "link": "https://hh.ru/vacancy/138512545?tech_source=api",
+   "date": "2026-10-15T11:57:09+0300"
+  },
+  {
+   "id": "hh/138511851",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Креатор/ видеомонтажер\n🏢 Lerteco · Москва",
+   "link": "https://hh.ru/vacancy/138511851?tech_source=api",
+   "date": "2026-10-15T11:48:36+0300"
+  },
+  {
+   "id": "hh/138294272",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам в онлайн-школу (SMM и нейросети)\n🏢 SMM-академия Михаила Христосенко · Краснодар\n💰 от 85000 RUR",
+   "link": "https://hh.ru/vacancy/138294272?tech_source=api",
+   "date": "2026-10-15T11:00:06+0300"
+  },
+  {
+   "id": "hh/137517674",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения нейросетям (GPT/AI агенты/ПРОМТы)\n🏢 xHuman Sales · Москва\n💰 от 200000 до 300000 RUR",
+   "link": "https://hh.ru/vacancy/137517674?tech_source=api",
+   "date": "2026-10-15T10:59:22+0300"
+  },
   {
    "id": "hh/138293145",
    "source": "hh",
@@ -521,38 +553,6 @@
    "text": "CRM & Digital Product Manager (Retention / AI-marketing)\n🏢 Амариста · Москва",
    "link": "https://hh.ru/vacancy/138470765?tech_source=api",
    "date": "2026-10-14T11:53:46+0300"
-  },
-  {
-   "id": "hh/138470761",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Разработчик AI-автоматизации и аналитики (AI Automation Engineer / Python & Data Developer)\n🏢 Art Family · Москва\n💰 от 100000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/138470761?tech_source=api",
-   "date": "2026-10-14T11:53:38+0300"
-  },
-  {
-   "id": "hh/138469727",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Full-Stack Developer / Vibe Coder\n🏢 Харин Александр Сергеевич · Барнаул\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/138469727?tech_source=api",
-   "date": "2026-10-14T11:44:03+0300"
-  },
-  {
-   "id": "hh/138467449",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению AI-решений (AI Deployment)\n🏢 РУССМАРКЕТ · Москва\n💰 от 130000 RUR",
-   "link": "https://hh.ru/vacancy/138467449?tech_source=api",
-   "date": "2026-10-14T11:25:11+0300"
-  },
-  {
-   "id": "hh/138467166",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Python Developer AI team (в офис, г. Йошкар-Ола)\n🏢 TravelLine · Йошкар-Ола",
-   "link": "https://hh.ru/vacancy/138467166?tech_source=api",
-   "date": "2026-10-14T11:21:07+0300"
   },
   {
    "id": "work_editor/6652",
