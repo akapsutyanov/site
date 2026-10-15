@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-15T09:03:45Z",
+ "updated": "2026-10-15T09:45:44Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138514107",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Growth инженер / Growth маркетолог (AI-First Inbound Video & LeadGen)\n🏢 Игнатьев Алексей Михайлович · Луганск\n💰 от 200000 RUR",
+   "link": "https://hh.ru/vacancy/138514107?tech_source=api",
+   "date": "2026-10-15T12:31:57+0300"
+  },
   {
    "id": "hh/138512545",
    "source": "hh",
@@ -9,6 +17,14 @@
    "text": "AI-фотограф (специалист по генерации fashion-контента)\n🏢 Леди и Джентльмен · Москва",
    "link": "https://hh.ru/vacancy/138512545?tech_source=api",
    "date": "2026-10-15T11:57:09+0300"
+  },
+  {
+   "id": "hh/137580879",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Помощник руководителя / рекрутер (AI-проекты)\n🏢 King System AI · Москва\n💰 от 70000 до 120000 RUR",
+   "link": "https://hh.ru/vacancy/137580879?tech_source=api",
+   "date": "2026-10-15T11:51:12+0300"
   },
   {
    "id": "hh/138511851",
@@ -537,22 +553,6 @@
    "text": "2D AI художник\n🏢 Pixel Talent · Москва",
    "link": "https://hh.ru/vacancy/136674324?tech_source=api",
    "date": "2026-10-14T12:08:44+0300"
-  },
-  {
-   "id": "hh/138470773",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам (AI для fashion, e-retail)\n🏢 Интеллектуальные социальные системы · Москва",
-   "link": "https://hh.ru/vacancy/138470773?tech_source=api",
-   "date": "2026-10-14T11:53:53+0300"
-  },
-  {
-   "id": "hh/138470765",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "CRM & Digital Product Manager (Retention / AI-marketing)\n🏢 Амариста · Москва",
-   "link": "https://hh.ru/vacancy/138470765?tech_source=api",
-   "date": "2026-10-14T11:53:46+0300"
   },
   {
    "id": "work_editor/6652",
