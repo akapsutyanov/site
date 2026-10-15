@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T08:00:24Z",
+ "updated": "2026-10-15T08:32:09Z",
  "count": 190,
  "items": [
   {
@@ -209,6 +209,14 @@
    "text": "Контент-креатор / AI-креатор (TikTok)\n🏢 Тибейкина Екатерина Васильевна · Москва\n💰 от 100000 до 150000 RUR",
    "link": "https://hh.ru/vacancy/138276601?tech_source=api",
    "date": "2026-10-14T17:19:03+0300"
+  },
+  {
+   "id": "hh/138488643",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор (стажёр)\n🏢 Napoleon IT · Челябинск",
+   "link": "https://hh.ru/vacancy/138488643?tech_source=api",
+   "date": "2026-10-14T17:11:26+0300"
   },
   {
    "id": "hh/137920928",
@@ -545,14 +553,6 @@
    "text": "Python Developer AI team (в офис, г. Йошкар-Ола)\n🏢 TravelLine · Йошкар-Ола",
    "link": "https://hh.ru/vacancy/138467166?tech_source=api",
    "date": "2026-10-14T11:21:07+0300"
-  },
-  {
-   "id": "hh/138466469",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дата-инженер (AI-driven Development / Fullstack)\n🏢 USETECH · Москва",
-   "link": "https://hh.ru/vacancy/138466469?tech_source=api",
-   "date": "2026-10-14T11:09:27+0300"
   },
   {
    "id": "work_editor/6652",
@@ -1411,6 +1411,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1440,14 +1448,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
