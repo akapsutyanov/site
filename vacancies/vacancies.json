@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T09:21:07Z",
+ "updated": "2026-10-16T09:53:02Z",
  "count": 190,
  "items": [
   {
@@ -11,12 +11,28 @@
    "date": "2026-10-16T12:16:58+0300"
   },
   {
+   "id": "hh/137789270",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Head of Marketing в онлайн-школу по нейросетям\n🏢 Величко Cветлана Николаевна · Москва\n💰 от 100000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/137789270?tech_source=api",
+   "date": "2026-10-16T11:59:46+0300"
+  },
+  {
    "id": "hh/138550040",
    "source": "hh",
    "channel": "hh.ru",
    "text": "B2B-маркетолог / AI, ABM, Outbound\n🏢 Сервер Молл · Санкт-Петербург\n💰 от 130000 RUR",
    "link": "https://hh.ru/vacancy/138550040?tech_source=api",
    "date": "2026-10-16T11:59:45+0300"
+  },
+  {
+   "id": "hh/133039518",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/133039518?tech_source=api",
+   "date": "2026-10-16T11:52:32+0300"
   },
   {
    "id": "hh/138548344",
@@ -561,22 +577,6 @@
    "text": "AI-фотограф (специалист по генерации fashion-контента)\n🏢 Леди и Джентльмен · Москва",
    "link": "https://hh.ru/vacancy/138512545?tech_source=api",
    "date": "2026-10-15T11:57:09+0300"
-  },
-  {
-   "id": "hh/137580879",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Помощник руководителя / рекрутер (AI-проекты)\n🏢 King System AI · Москва\n💰 от 70000 до 120000 RUR",
-   "link": "https://hh.ru/vacancy/137580879?tech_source=api",
-   "date": "2026-10-15T11:51:12+0300"
-  },
-  {
-   "id": "hh/138511851",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Креатор/ видеомонтажер\n🏢 Lerteco · Москва",
-   "link": "https://hh.ru/vacancy/138511851?tech_source=api",
-   "date": "2026-10-15T11:48:36+0300"
   },
   {
    "id": "comeinreels/1799",
@@ -1435,6 +1435,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1464,14 +1472,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
