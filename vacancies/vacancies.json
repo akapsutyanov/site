@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-16T07:13:03Z",
+ "updated": "2026-10-16T07:45:02Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137628138",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Программист 1C со знанием AI\n🏢 ВИТАТРАНС · Челябинск",
+   "link": "https://hh.ru/vacancy/137628138?tech_source=api",
+   "date": "2026-10-16T10:31:27+0300"
+  },
+  {
+   "id": "hh/137625989",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор/IT- специалист/AI Creator (генеративный дизайн и маркетинг)\n🏢 Архитектурное бюро Виинапуу · Красноярск\n💰 от 60000 до 100000 RUR",
+   "link": "https://hh.ru/vacancy/137625989?tech_source=api",
+   "date": "2026-10-16T10:17:10+0300"
+  },
   {
    "id": "hh/138543528",
    "source": "hh",
@@ -11,12 +27,28 @@
    "date": "2026-10-16T10:02:55+0300"
   },
   {
+   "id": "hh/137624751",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Помощник/ассистент руководителя в сфере ИИ\n🏢 Миргород Дмитрий Сергеевич · Новосибирск\n💰 от 40000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/137624751?tech_source=api",
+   "date": "2026-10-16T10:01:27+0300"
+  },
+  {
    "id": "hh/138542982",
    "source": "hh",
    "channel": "hh.ru",
    "text": "Специалист разметки данных по обучению нейросетей нового поколения\n🏢 СБЕР · Ульяновск\n💰 от 59000 до 75800 RUR",
    "link": "https://hh.ru/vacancy/138542982?tech_source=api",
    "date": "2026-10-16T09:54:40+0300"
+  },
+  {
+   "id": "hh/137842961",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер в школу SMM и нейросетей\n🏢 SMM-академия Михаила Христосенко · Кострома\n💰 от 80000 RUR",
+   "link": "https://hh.ru/vacancy/137842961?tech_source=api",
+   "date": "2026-10-16T09:44:21+0300"
   },
   {
    "id": "hh/137993619",
@@ -561,38 +593,6 @@
    "text": "2D AI Artist\n🏢 Маналот Геймз · Москва",
    "link": "https://hh.ru/vacancy/137939786?tech_source=api",
    "date": "2026-10-15T10:01:23+0300"
-  },
-  {
-   "id": "hh/138158615",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-менеджер (AI reels, карусели)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 180000 RUR",
-   "link": "https://hh.ru/vacancy/138158615?tech_source=api",
-   "date": "2026-10-15T09:58:48+0300"
-  },
-  {
-   "id": "hh/138504430",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI UGC-креатор\n🏢 ТВОЕ · Москва",
-   "link": "https://hh.ru/vacancy/138504430?tech_source=api",
-   "date": "2026-10-15T09:55:19+0300"
-  },
-  {
-   "id": "hh/138504029",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам обучения нейросетям (GPT/AI / ПРОМТы)\n🏢 xHuman Sales · Тюмень\n💰 от 200000 RUR",
-   "link": "https://hh.ru/vacancy/138504029?tech_source=api",
-   "date": "2026-10-15T09:49:01+0300"
-  },
-  {
-   "id": "hh/137728437",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам обучения нейросетям (ИИ)\n🏢 xHuman Sales · Москва\n💰 от 200000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/137728437?tech_source=api",
-   "date": "2026-10-15T09:38:24+0300"
   },
   {
    "id": "comeinlena/6489",
