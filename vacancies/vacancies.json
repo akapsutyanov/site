@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-17T10:13:52Z",
+ "updated": "2026-10-17T10:45:24Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137553542",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам в Школу обучения нейросетям\n🏢 Творческое образование · Москва\n💰 от 109600 до 160500 RUR",
+   "link": "https://hh.ru/vacancy/137553542?tech_source=api",
+   "date": "2026-10-17T13:20:54+0300"
+  },
+  {
+   "id": "hh/138123663",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Python-разработчик AI-сервисов (LLM / RAG)\n🏢 QSOFT · Москва",
+   "link": "https://hh.ru/vacancy/138123663?tech_source=api",
+   "date": "2026-10-17T12:58:35+0300"
+  },
   {
    "id": "hh/138256771",
    "source": "hh",
@@ -747,22 +763,6 @@
    "date": "2026-10-16T06:00:45+00:00"
   },
   {
-   "id": "hh/138532491",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по работе с нейросетями (AI-специалист)\n🏢 Профиаи · Екатеринбург\n💰 от 60000 до 250000 RUR",
-   "link": "https://hh.ru/vacancy/138532491?tech_source=api",
-   "date": "2026-10-15T22:27:57+0300"
-  },
-  {
-   "id": "hh/138028309",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-контент-креатор / Ведущий YouTube-канала про нейросети / AI-автор / AI-эксперт\n🏢 GameSport · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/138028309?tech_source=api",
-   "date": "2026-10-15T18:48:26+0300"
-  },
-  {
    "id": "comeinlena/6492",
    "source": "telegram",
    "channel": "comeinlena",
@@ -1435,6 +1435,14 @@
    "date": "2026-09-29"
   },
   {
+   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
+   "date": "2026-09-29"
+  },
+  {
    "id": "tv/0d7cbd74-bbcb-11f1-bd0c-e5f68bcce605",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1464,14 +1472,6 @@
    "channel": "Работа России",
    "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Республика Татарстан (Татарстан)\n💰 от 72000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d500824-bbcb-11f1-b63c-790d10f69fe4",
-   "date": "2026-09-29"
-  },
-  {
-   "id": "tv/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 Сбербанк России, ПАО · Липецкая область\n💰 от 72000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/0d82ff04-bbcb-11f1-8cf6-8b368b451eb4",
    "date": "2026-09-29"
   },
   {
