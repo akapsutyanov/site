@@ -750,6 +750,8 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
   btn.disabled = true;
   btn.textContent = 'Отправляю...';
 
+  if (window.ncPing) ncPing(Object.assign({ kind: 'anketa' }, payload));
+
   var formData = new URLSearchParams();
   Object.keys(payload).forEach(function(k) { formData.append(k, payload[k]); });
 
@@ -790,5 +792,6 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
 });
 </script>
 
+<script src="/assets/lead-ping.js" defer></script>
 </body>
 </html>

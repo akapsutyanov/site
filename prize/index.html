@@ -458,11 +458,13 @@ function submitLead(prizeName){
     money:    answers.money,    // В5 фин.цель
     temp:     answers.temp      // В6 температура лида
   };
+  if (window.ncPing) ncPing(Object.assign({ kind: 'quiz' }, payload));
   if (!QUIZ_SCRIPT_URL || QUIZ_SCRIPT_URL.indexOf('http') !== 0) return;  // URL ещё не задан
   var body = new URLSearchParams();
   Object.keys(payload).forEach(function(k){ body.append(k, payload[k]); });
   fetch(QUIZ_SCRIPT_URL, { method:'POST', mode:'no-cors', body:body }).catch(function(){});
 }
 </script>
+<script src="/assets/lead-ping.js" defer></script>
 </body>
 </html>
