@@ -253,7 +253,7 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
     <a class="btn-primary" href="https://t.me/newhndrx?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%F0%9F%91%8B%20%D0%AF%20%D0%B1%D1%8B%D0%BB%28%D0%B0%29%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%B5%20%D0%BF%D1%80%D0%BE%20AI-%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BA%D0%B8.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%20%D0%B2%D0%B5%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%B0%20%E2%80%94%2035%20990%20%E2%82%BD.%20%D0%A0%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%2C%20%D0%BA%D0%B0%D0%BA%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%3F" target="_blank" rel="noopener">Забрать место по спеццене →</a>
     <a class="btn-secondary" href="#offer">Что входит</a>
   </div>
-  <p class="note hero-dl">Спецусловие действует 48 часов после вебинара<span class="left"></span></p>
+  <p class="note hero-dl">Спецусловие действует 48 часов — до 23 октября, 21:00 МСК<span class="left"></span></p>
   <p class="note">Оплата не списывается сразу — сначала короткий разговор в Telegram</p>
   <div class="hero-img"><img src="../mult-mk/reels-row.jpg" alt="Мультфильмы автора: «Потерпи» — 1,6 млн, «Невидимая» — 255 тыс., «Показалось» — 933 тыс. просмотров"></div>
 </div>
@@ -390,7 +390,7 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
       <p class="small">Откроется Telegram с готовым сообщением. Оплата не списывается — сначала разговор</p>
     </div>
   </div>
-  <div class="deadline" id="deadline">До конца спецусловия: <b id="dl-left">—</b></div>
+  <div class="deadline" id="deadline">До конца спецусловия: <b id="dl-left">—</b> · до 23 октября, 21:00 МСК</div>
   <div class="terms">
     <div class="term"><b>💳 Рассрочка банка</b>до 12 месяцев без переплаты — около 3 000 ₽ в месяц</div>
     <div class="term"><b>🔒 Предоплата</b>фиксирует место и спеццену, остальное — до старта потока</div>
@@ -479,7 +479,7 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
 <script>
 /* Дедлайн спецусловия. Пусто — плашка со временем не показывается.
    Формат: '2026-10-20T23:59:00+03:00' (время московское). */
-var DEADLINE = '';
+var DEADLINE = '2026-10-23T21:00:00+03:00';
 
 (function(){
   if (!DEADLINE) return;
@@ -490,7 +490,7 @@ var DEADLINE = '';
     document.body.classList.add('expired');
     box.innerHTML = 'Спецусловие для участников вебинара закончилось. Напиши — расскажу, какие условия есть сейчас.';
     box.classList.add('on');
-    document.querySelector('.hero-dl').textContent = 'Спецусловие для участников вебинара завершилось';
+    document.querySelector('.hero-dl').textContent = 'Спецусловие для участников вебинара завершилось 23 октября';
     document.querySelectorAll('a.btn-primary').forEach(function(a){ a.textContent = 'Узнать текущие условия →'; });
   }
   function tick(){
