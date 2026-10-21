@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-21T17:28:47Z",
+ "updated": "2026-10-21T17:59:28Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138725570",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Инженер по качеству продукта «Технолог.ИИ»\n🏢 Иванов Игорь Николаевич · Москва\n💰 от 75000 до 115000 RUR",
+   "link": "https://hh.ru/vacancy/138725570?tech_source=api",
+   "date": "2026-10-21T20:30:31+0300"
+  },
   {
    "id": "hh/138723381",
    "source": "hh",
@@ -17,6 +25,14 @@
    "text": "AI-контент-креатор / Ведущий YouTube-канала про нейросети / AI-автор / AI-эксперт\n🏢 GameSport · Санкт-Петербург",
    "link": "https://hh.ru/vacancy/138028309?tech_source=api",
    "date": "2026-10-21T18:48:26+0300"
+  },
+  {
+   "id": "jobforjunior/8572",
+   "source": "telegram",
+   "channel": "jobforjunior",
+   "text": "Junior DevOps Engineer\nTradias\nis a German regulated crypto trading platform and institutional-grade liquidity provider.\nLebanon.\nMore details in Perla Nahlous's\npost on LinkedIn\n.\nБольше вакансий DevOps и Sysadmins:\n@fordevops",
+   "link": "https://t.me/jobforjunior/8572",
+   "date": "2026-10-21T17:47:58+00:00"
   },
   {
    "id": "hh/138721487",
@@ -699,14 +715,6 @@
    "date": "2026-10-20T17:09:25+0300"
   },
   {
-   "id": "hh/138070749",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SMM-менеджер в ИИ Агентство\n🏢 Карасев Евгений Вячеславович · Дубки (Саратовская область)\n💰 от 24000 до 56000 RUR",
-   "link": "https://hh.ru/vacancy/138070749?tech_source=api",
-   "date": "2026-10-20T17:03:20+0300"
-  },
-  {
    "id": "work_editor/6679",
    "source": "telegram",
    "channel": "work_editor",
@@ -1177,14 +1185,6 @@
    "text": "Специалист по маркетингу\n🏢 ООО \"ПОВОРИНА\" · Республика Татарстан (Татарстан)\n💰 от 130000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1241600055509/2aff9b8e-cb9b-11f1-9781-753202b4ca83",
    "date": "2026-10-19"
-  },
-  {
-   "id": "SearchEditorr/4040",
-   "source": "telegram",
-   "channel": "SearchEditorr",
-   "text": "Ищем монтажера\n🔍\nОписание проекта:\nМонтаж длинных видео (до 60 минут) на постоянной основе.\nЗадачи:\n– Сборка и монтаж роликов\n– Поддержание регулярного темпа работы\nТребования:\n– Наличие примеров работ (кейсов)\n– Готовность работать с длинным форматом\nУсловия:\n– Постоянная занятость\n– Оплата: до 6 000 ₽ за одно видео\n#монтаж\n#ищу\n#Видеомонтаж\n#ищу_монтаж",
-   "link": "https://t.me/SearchEditorr/4040",
-   "date": "2026-10-18T16:33:23+00:00"
   },
   {
    "id": "tv/72f03006-c892-11f1-999a-2f7506c6dfb2",
