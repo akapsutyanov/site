@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 дня в AI — Новый Уровень за 990 ₽ | Попробуй обучение изнутри</title>
+<meta name="description" content="Три дня внутри обучения «AI — Новый Уровень»: модуль 1, урок по карте персонажа, мастер-класс по AI-мультикам и личный разбор твоей работы. 990 ₽ — засчитаем в оплату программы.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="icon" type="image/png" href="../master/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="3 дня в AI — Новый Уровень за 990 ₽">
+<meta property="og:description" content="Попробуй обучение изнутри: уроки, задание и личный разбор. 990 ₽ засчитаем в программу.">
+<meta property="og:url" content="https://neurocreator2.ru/3dnya/">
+<meta property="og:image" content="https://neurocreator2.ru/master/og-image.jpg">
+<meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060608; --bg2:#0d0d12; --c1:#f4f4f4; --c2:#c8c8c8; --c3:#888;
+  --ink:#e8e8e8; --ink2:#a0a0a0; --ink3:#585858; --line:rgba(200,200,200,.1); --gold:#e8c88a;
+  --eo:cubic-bezier(.22,.61,.36,1);
+  --chrome-grad:linear-gradient(135deg,#f8f8f8 0%,#d0d0d0 40%,#888 100%);
+  --chrome-shine:linear-gradient(105deg,#444 0%,#d0d0d0 35%,#f8f8f8 50%,#d0d0d0 65%,#444 100%);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(160,160,160,.07),transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 100%,rgba(120,120,120,.05),transparent 55%)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px;width:100%}
+section.wrap{margin-top:96px}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;color:var(--c3)}
+.eyebrow::before,.eyebrow::after{content:'';display:block;height:1px;width:36px}
+.eyebrow::before{background:linear-gradient(to right,transparent,var(--c3))}
+.eyebrow::after{background:linear-gradient(to left,transparent,var(--c3))}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--ink)}
+h1{font-size:clamp(40px,6.6vw,72px);line-height:1}
+h2{font-size:clamp(32px,4.8vw,50px);line-height:1.05;margin-top:16px}
+h1 em,h2 em{font-style:italic;background:var(--chrome-shine);background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 7s linear infinite}
+.lead{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.85;max-width:640px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.lead b{color:var(--ink);font-weight:600}
+
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--chrome-grad);color:#0a0a0a;
+  padding:18px 40px;border-radius:8px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;box-shadow:0 6px 28px rgba(160,160,160,.1),inset 0 1px 0 rgba(255,255,255,.55);
+  transition:transform .35s var(--eo),box-shadow .35s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 46px rgba(220,220,220,.4)}
+.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:rgba(200,200,200,.02);
+  border:1px solid rgba(200,200,200,.22);color:var(--c2);padding:18px 34px;border-radius:8px;
+  font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;
+  transition:color .35s,border-color .35s,transform .35s}
+.btn-secondary:hover{color:var(--c1);border-color:rgba(220,220,220,.5);transform:translateY(-3px)}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.center .ctas{justify-content:center}
+.note{font-size:11.5px;color:var(--ink3);margin-top:14px;letter-spacing:.3px}
+
+.card{border:1px solid var(--line);border-radius:18px;background:rgba(13,13,18,.72);padding:24px}
+
+/* hero */
+.hero{padding:70px 0 0;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:26px;padding:8px 16px;border-radius:999px;
+  border:1px solid rgba(232,200,138,.3);background:rgba(232,200,138,.06);color:var(--gold);font-size:11.5px;font-weight:600;letter-spacing:.6px}
+.hero .lead{margin:22px auto 0}
+.offerline{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:30px;
+  padding:14px 22px;border:1px solid rgba(200,200,200,.16);border-radius:14px;background:rgba(13,13,18,.7)}
+.offerline s{color:var(--ink3);font-size:15px}
+.offerline .now{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1;color:var(--ink)}
+.offerline .what{font-size:12.5px;color:var(--ink2);text-align:left;line-height:1.5}
+.offerline .what b{color:var(--ink)}
+.hero-img{margin:46px auto 0;max-width:820px;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.hero-img img{display:block;width:100%}
+
+/* шаги: пять способов */
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:34px}
+.st{padding:16px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(13,13,18,.6);text-align:center}
+.st .ok{width:26px;height:26px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(140,220,160,.12);border:1px solid rgba(140,220,160,.35);color:#9fe0b2;font-size:13px}
+.st b{display:block;font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.st span{display:block;font-size:11px;color:var(--ink3);margin-top:4px;line-height:1.4}
+.punch{margin-top:26px;font-size:15px;color:var(--ink2);font-weight:300;line-height:1.8}
+.punch b{color:var(--ink);font-weight:600}
+
+/* шесть дверей */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.door{position:relative;padding:22px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(13,13,18,.6)}
+.door .ic{font-size:22px}
+.door b{display:block;margin-top:10px;font-size:15px;font-weight:600;color:var(--ink)}
+.door p{margin-top:6px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.65}
+.door .tag{position:absolute;top:16px;right:16px;font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+  color:#9fe0b2;border:1px solid rgba(140,220,160,.35);border-radius:999px;padding:3px 9px}
+.door.done{border-color:rgba(140,220,160,.25)}
+
+/* три воронки */
+.funnels{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center;margin-top:34px}
+.fn{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+.fn:last-child{border-bottom:0}
+.fn .n{flex-shrink:0;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;
+  color:#0a0a0a;background:var(--chrome-grad)}
+.fn.have .n{background:rgba(140,220,160,.15);color:#9fe0b2;border:1px solid rgba(140,220,160,.4)}
+.fn b{display:block;font-size:15px;color:var(--ink)}
+.fn p{margin-top:4px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.7}
+.fn .lbl{display:inline-block;margin-left:8px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#9fe0b2}
+.fn .lbl.no{color:var(--gold)}
+.statimg{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.statimg img{display:block;width:100%}
+.statcap{font-size:12px;color:var(--ink3);margin-top:10px;line-height:1.6}
+
+/* программа */
+.mods{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:34px}
+.mod{padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:rgba(13,13,18,.6)}
+.mod .num{font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1;color:var(--c3)}
+.mod b{display:block;margin-top:8px;font-size:15px;font-weight:600;color:var(--ink)}
+.mod p{margin-top:6px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.65}
+.mod .res{margin-top:10px;font-size:12px;color:#9fe0b2}
+.mod.wide{grid-column:1/-1}
+
+/* кейсы */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.case b{display:block;font-size:16px;color:var(--ink)}
+.case .who{font-size:12px;color:var(--ink3);margin-top:2px}
+.case .row{margin-top:14px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.65}
+.case .row i{display:block;font-style:normal;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--c3);margin-bottom:3px}
+.case .row.to i{color:#9fe0b2}
+.case .row strong{color:var(--ink);font-weight:600}
+
+/* предложение */
+.offer{margin-top:34px;display:grid;grid-template-columns:1fr 1.25fr;gap:16px;align-items:stretch}
+.tar{padding:28px 26px;border:1px solid var(--line);border-radius:20px;background:rgba(13,13,18,.6);display:flex;flex-direction:column}
+.tar .k{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--c3)}
+.tar h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px;margin-top:8px;color:var(--ink)}
+.tar .price{margin-top:14px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tar .price .p{font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1;color:var(--ink)}
+.tar .price s{font-size:17px;color:var(--ink3)}
+.tar ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.tar li{display:flex;gap:10px;font-size:13.5px;font-weight:300;color:var(--ink2);line-height:1.55}
+.tar li::before{content:'✓';color:var(--c3);flex-shrink:0}
+.tar li.plus{color:var(--ink)}
+.tar li.no{color:var(--ink3);text-decoration:line-through;text-decoration-color:rgba(200,200,200,.25)}
+.tar li.no::before{content:'—';color:var(--ink3)}
+.tar .role{margin-top:6px;font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.tar .role em{font-style:italic;color:var(--c2)}
+.tar .guar{margin-top:16px;font-size:12.5px;color:var(--ink2)}
+.tar li.plus::before{content:'+';color:#9fe0b2;font-weight:700}
+.tar.best{border-color:rgba(232,200,138,.4);background:linear-gradient(180deg,rgba(232,200,138,.06),rgba(13,13,18,.75) 40%);
+  box-shadow:0 30px 80px -30px rgba(232,200,138,.25)}
+.tar.best .k{color:var(--gold)}
+.tar.best .save{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;color:#0a0a0a;background:var(--gold);
+  border-radius:999px;padding:4px 12px;align-self:flex-start}
+.tar .btn-primary,.tar .btn-secondary{margin-top:24px;width:100%}
+.tar .small{font-size:11.5px;color:var(--ink3);margin-top:10px;text-align:center}
+.terms{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.term{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(13,13,18,.6);font-size:13px;color:var(--ink2);line-height:1.6}
+.term b{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+.deadline{display:none;margin-top:20px;padding:14px 18px;border-radius:14px;border:1px solid rgba(232,200,138,.3);
+  background:rgba(232,200,138,.05);text-align:center;font-size:13px;color:var(--ink2)}
+.deadline b{color:var(--gold);font-variant-numeric:tabular-nums}
+.deadline.on{display:block}
+.hero-dl{color:var(--gold)!important}
+.hero-dl .left b{font-variant-numeric:tabular-nums}
+
+/* автор */
+.author{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:center;margin-top:34px}
+.author img{width:220px;height:220px;border-radius:50%;object-fit:cover;border:1px solid rgba(200,200,200,.2)}
+.author p{font-size:14.5px;font-weight:300;color:var(--ink2);line-height:1.85}
+.author p+p{margin-top:12px}
+.nums{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px}
+.nums div{font-size:12px;color:var(--ink3);line-height:1.4}
+.nums b{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:var(--ink)}
+
+/* отзывы */
+.revs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;align-items:start}
+.revs img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+
+/* вопросы */
+.faq{margin-top:30px;max-width:780px}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;list-style:none;font-size:15px;font-weight:500;color:var(--ink);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--c3);font-size:20px;line-height:1;transition:transform .3s var(--eo)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:10px;font-size:14px;font-weight:300;color:var(--ink2);line-height:1.8}
+
+section.wrap.final{margin-top:110px;text-align:center}
+
+/* липкая кнопка на телефоне */
+body.expired .offerline,body.expired .save{opacity:.45}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none}
+.sticky .btn-primary{width:100%;padding:16px 20px}
+
+@media(max-width:900px){
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .doors,.cases{grid-template-columns:1fr 1fr}
+  .funnels,.offer{grid-template-columns:1fr}
+  .revs{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  section.wrap{margin-top:70px}
+  .steps{grid-template-columns:1fr 1fr}
+  .doors,.cases,.mods,.terms{grid-template-columns:1fr}
+  .author{grid-template-columns:1fr;text-align:center}
+  .author img{margin:0 auto;width:160px;height:160px}
+  .nums{justify-content:center}
+  .ctas{flex-direction:column;align-items:stretch}
+  .offerline{flex-direction:column;gap:8px}
+  .offerline .what{text-align:center}
+  .sticky.show{display:block}
+  footer{padding-bottom:90px}
+}
+
+footer{margin-top:100px;padding:34px 0 44px;text-align:center;font-size:11px;color:var(--ink3);
+  border-top:1px solid rgba(200,200,200,.06);line-height:1.9}
+footer a{color:var(--c3);text-decoration:underline;text-underline-offset:3px}
+</style>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110333069', 'ym');
+
+    ym(110333069, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110333069" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<style>
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.day{border:1px solid var(--line);border-radius:18px;padding:26px 24px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
+.day .dn{font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--c3)}
+.day h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:28px;line-height:1.1;margin:10px 0 12px;color:var(--c1)}
+.day p{font-size:13.5px;font-weight:300;line-height:1.7;color:var(--ink2)}
+.day b{color:var(--ink);font-weight:500}
+.bonus{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.bonus div{border:1px dashed rgba(200,200,200,.18);border-radius:14px;padding:16px 18px;font-size:13px;line-height:1.6;color:var(--ink2)}
+.bonus b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.shots a{display:block;border-radius:14px;overflow:hidden;border:1px solid rgba(200,200,200,.14);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.shots img{display:block;width:100%;height:auto}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;counter-reset:h}
+.how div{counter-increment:h;border:1px solid var(--line);border-radius:14px;padding:18px;font-size:13px;line-height:1.6;color:var(--ink2)}
+.how div::before{content:counter(h);display:flex;width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,200,200,.3);align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--c1);margin-bottom:10px}
+.how b{color:var(--ink);font-weight:500}
+.credit{margin:40px auto 0;max-width:720px;text-align:center;border:1px solid rgba(232,200,138,.35);border-radius:18px;padding:24px 22px;background:rgba(232,200,138,.04)}
+.credit b{color:var(--gold)}
+@media (max-width:820px){.days,.bonus,.how,.shots{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+
+<!-- ═══ HERO ═══ -->
+<div class="wrap hero">
+  <div class="badge">🧪 Проба обучения · 3 дня</div>
+  <h1>3 дня в <em>AI — Новый Уровень</em></h1>
+  <p class="lead">Зайди внутрь обучения до того, как решаться на программу. Три дня в кабинете ученика: уроки, своё первое задание и мой личный разбор твоей работы.</p>
+  <div class="offerline">
+    <span class="now">990 ₽</span>
+    <span class="what"><b>Доступ на 3 дня</b><br>засчитаем в оплату программы</span>
+  </div>
+  <div class="ctas" style="justify-content:center">
+    <a class="btn-primary" href="https://payform.ru/kvcRaZR/" target="_blank" rel="noopener">Забрать 3 дня за 990 ₽ →</a>
+    <a class="btn-secondary" href="#days">Что внутри</a>
+  </div>
+  <p class="note">После оплаты входишь в кабинет через Telegram — доступ открываю в течение часа</p>
+  <div class="hero-img"><img src="../mult-mk/reels-row.jpg" alt="Мультфильмы автора: «Потерпи» — 1,6 млн, «Невидимая» — 255 тыс., «Показалось» — 933 тыс. просмотров"></div>
+</div>
+
+<!-- ═══ ТРИ ДНЯ ═══ -->
+<section class="wrap" id="days">
+  <div class="center">
+    <div class="eyebrow">План на три дня</div>
+    <h2>Что ты <em>успеешь</em></h2>
+    <p class="lead" style="margin-top:16px">Не «посмотреть пару видео», а пройти кусок настоящего пути — от подготовки до первой работы с разбором.</p>
+  </div>
+  <div class="days">
+    <div class="day"><div class="dn">День 1</div><h3>Готов к работе за вечер</h3><p>Весь <b>первый модуль</b>: брифинг, обзор сервисов и <b>какие подписки нужны</b> — и как купить их без переплат.</p></div>
+    <div class="day"><div class="dn">День 2</div><h3>Свой герой</h3><p>Урок <b>«Создание карты персонажа и локации»</b> из модуля портфолио. Собираешь героя, который не «плывёт» от кадра к кадру — основа любого ролика.</p></div>
+    <div class="day"><div class="dn">День 3</div><h3>Мой разбор</h3><p>Отправляешь мне свою карту героя — <b>разбираю лично в течение 24 часов</b>: что работает, что поправить и как из этого сделать работу в портфолио.</p></div>
+  </div>
+  <div class="bonus">
+    <div><b>🎬 Бонус — мастер-класс</b>Вирусный AI-мультфильм целиком: от фразы до готового ролика, 11 промптов внутри.</div>
+    <div><b>💼 Свежие заказы</b>Подборка заказов и вакансий для AI-креаторов — обновляется каждый день.</div>
+    <div><b>🛟 Служба заботы</b>Что-то не получается — пишешь в кабинете, отвечает живой человек.</div>
+  </div>
+</section>
+
+<!-- ═══ КАБИНЕТ ═══ -->
+<section class="wrap">
+  <div class="center">
+    <div class="eyebrow">Где проходит</div>
+    <h2>Кабинет <em>ученика</em></h2>
+    <p class="lead" style="margin-top:16px">Тот же кабинет, в котором учатся в программе. Всё в одном месте: уроки, прогресс, задание и ответ на него.</p>
+  </div>
+  <div class="shots">
+    <a href="https://app.neurocreator2.ru/tour?utm_source=3dnya" target="_blank" rel="noopener"><img src="../master/cabinet/cab-home.jpg" alt="Главная кабинета" loading="lazy"></a>
+    <a href="https://app.neurocreator2.ru/tour?utm_source=3dnya" target="_blank" rel="noopener"><img src="../master/cabinet/cab-course.jpg" alt="Программа в кабинете" loading="lazy"></a>
+  </div>
+  <p class="note" style="text-align:center;margin-top:16px">Хочешь посмотреть сначала? <a href="https://app.neurocreator2.ru/tour?utm_source=3dnya" target="_blank" rel="noopener" style="color:var(--c2)">Открой демо-кабинет</a> — без регистрации</p>
+</section>
+
+<!-- ═══ КАК ЭТО РАБОТАЕТ ═══ -->
+<section class="wrap" id="offer">
+  <div class="center">
+    <div class="eyebrow">Как это работает</div>
+    <h2>Четыре <em>шага</em></h2>
+  </div>
+  <div class="how">
+    <div><b>Оплачиваешь 990 ₽</b> по кнопке ниже — картой или по СБП.</div>
+    <div><b>Входишь в кабинет</b> через Telegram — страница после оплаты подскажет, куда нажать.</div>
+    <div><b>Я открываю доступ</b> — обычно в течение часа. Бот присылает план на три дня.</div>
+    <div><b>Три полных дня</b> учишься, делаешь задание и получаешь мой разбор.</div>
+  </div>
+  <div class="credit">
+    <p class="lead" style="margin:0 auto">Решишь остаться — <b>990 ₽ засчитаем в оплату программы</b>. Прогресс, опыт и разбор сохранятся в кабинете.</p>
+  </div>
+  <div class="ctas" style="justify-content:center;margin-top:30px">
+    <a class="btn-primary" href="https://payform.ru/kvcRaZR/" target="_blank" rel="noopener">Забрать 3 дня за 990 ₽ →</a>
+  </div>
+</section>
+
+<!-- ═══ АВТОР ═══ -->
+<section class="wrap">
+  <div class="center">
+    <div class="eyebrow">Кто разбирает твою работу</div>
+    <h2>Смотрю <em>лично</em></h2>
+  </div>
+  <div class="author">
+    <img src="../master/author-round.jpg" alt="Александр Капустьянов" loading="lazy">
+    <div>
+      <p>Меня зовут Саша, я AI-креатор. Восемь лет снимаю и монтирую — сначала камерой, последние три года нейросетями. Делаю ролики для брендов и работаю с зарубежными компаниями.</p>
+      <p>Карту героя в пробе разбираю сам, без кураторов-«проверяющих». Так ты сразу поймёшь, как я веду обучение — и подходит ли оно тебе.</p>
+      <div class="nums">
+        <div><b>2,4 млн</b>просмотров за 30 дней</div>
+        <div><b>35 000</b>подписчиков без рекламы</div>
+        <div><b>3 года</b>в нейросетях</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ВОПРОСЫ ═══ -->
+<section class="wrap">
+  <div class="center">
+    <div class="eyebrow">Вопросы</div>
+    <h2>Частые <em>вопросы</em></h2>
+  </div>
+  <div class="faq" style="margin-left:auto;margin-right:auto">
+    <details><summary>Когда начинаются три дня?</summary>
+      <p>С момента, когда я открою доступ — обычно в течение часа после оплаты и входа в кабинет. Дальше у тебя три полных дня, бот напомнит, сколько осталось.</p></details>
+    <details><summary>Я новичок. Справлюсь?</summary>
+      <p>Да. Проба начинается с первого модуля — подготовки к работе: какие сервисы нужны и как их настроить. Карта героя — первая практическая работа, с ней справляются и без опыта.</p></details>
+    <details><summary>Что будет через три дня?</summary>
+      <p>Уроки закроются, а прогресс и разбор останутся в кабинете. Если решишь перейти в программу — 990 ₽ засчитаем в оплату, и ты продолжишь с того же места.</p></details>
+    <details><summary>Как я получу доступ после оплаты?</summary>
+      <p>После оплаты откроется страница с кнопкой «Войти в кабинет» — входишь через Telegram, я сверяю оплату и открываю пробу. Если что-то пошло не так — напиши мне, разберусь.</p></details>
+    <details><summary>Чем проба отличается от программы?</summary>
+      <p>В пробе — первый модуль, один урок из портфолио, бонусный мастер-класс и одно задание с разбором. В программе — все шесть модулей, три кейса в портфолио, проверка всех заданий, чат группы и путь до первых клиентов.</p></details>
+  </div>
+</section>
+
+<!-- ═══ ФИНАЛ ═══ -->
+<section class="wrap final">
+  <div class="eyebrow">Следующий шаг</div>
+  <h2>Три дня —<br><em>и ты знаешь, твоё ли это</em></h2>
+  <p class="lead" style="margin:16px auto 0">990 ₽, доступ к кабинету и мой разбор твоей первой работы. Решишь остаться — сумма засчитается.</p>
+  <div class="ctas" style="justify-content:center">
+    <a class="btn-primary" href="https://payform.ru/kvcRaZR/" target="_blank" rel="noopener">Забрать 3 дня за 990 ₽ →</a>
+    <a class="btn-secondary" href="https://t.me/newhndrx?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%20%C2%AB3%20%D0%B4%D0%BD%D1%8F%20%D0%B2%20AI%20%E2%80%94%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C%C2%BB.%20%D0%95%D1%81%D1%82%D1%8C%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%3A" target="_blank" rel="noopener">Сначала задать вопрос</a>
+  </div>
+</section>
+
+<div class="sticky" id="sticky"><a class="btn-primary" href="https://payform.ru/kvcRaZR/" target="_blank" rel="noopener">3 дня за 990 ₽ →</a></div>
+
+<footer>
+  © 2026 · Самозанятый Капустьянов А.Д. · ИНН 780435531766 ·
+  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a><br>
+  Доход не гарантирован. Информация на сайте не является публичной офертой.
+</footer>
+
+<script>
+/* липкая кнопка на телефоне — после первого экрана, прячется у блока с ценой */
+(function(){
+  var s = document.getElementById('sticky'), offer = document.getElementById('offer');
+  function upd(){
+    var r = offer.getBoundingClientRect(), inOffer = r.top < innerHeight && r.bottom > 0;
+    s.classList.toggle('show', scrollY > innerHeight * .9 && !inOffer);
+  }
+  addEventListener('scroll', upd, {passive:true}); upd();
+})();
+</script>
+<script src="/assets/lead-ping.js" defer></script>
+</body>
+</html>
