@@ -1288,6 +1288,20 @@ footer {
 .proof a{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(200,200,200,.25);border-radius:10px;
   padding:15px 28px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--c2);text-decoration:none;white-space:nowrap}
 .proof a:hover{color:var(--c1);border-color:rgba(220,220,220,.5)}
+
+/* кабинет ученика */
+.cab-sub{max-width:640px;font-size:15px;font-weight:300;line-height:1.8;color:var(--c2);margin-top:18px}
+.cab-shots{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.cab-shot{display:block;border-radius:16px;overflow:hidden;border:1px solid rgba(200,200,200,.14);box-shadow:0 30px 80px rgba(0,0,0,.5);transition:transform .4s,border-color .4s}
+.cab-shot:hover{transform:translateY(-4px);border-color:rgba(220,220,220,.35)}
+.cab-shot img{display:block;width:100%;height:auto}
+.cab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.cab-card{border:1px solid rgba(200,200,200,.12);border-radius:14px;padding:20px 20px 22px;background:rgba(200,200,200,.025)}
+.cab-card b{display:block;font-size:14px;font-weight:600;color:var(--c1);margin-bottom:8px}
+.cab-card span{display:block;font-size:13px;font-weight:300;line-height:1.65;color:var(--c3)}
+.cab-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+@media (max-width:900px){.cab-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.cab-shots,.cab-grid{grid-template-columns:1fr}.cab-ctas .btn-primary,.cab-ctas .btn-secondary{width:100%;justify-content:center;text-align:center}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1932,6 +1946,29 @@ footer {
   <p class="lesson-sub reveal">Один из уроков курса целиком — посмотри, как подаётся материал, прежде чем записаться.</p>
   <div class="lesson-player reveal">
     <iframe src="https://kinescope.io/embed/qkuQ8ZcXcUo8v8Cci4PRNu" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" title="Пример урока"></iframe>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- КАБИНЕТ УЧЕНИКА — демо-тур (без упоминания генераций) -->
+<section class="section cab-section" id="cabinet">
+  <div class="section-label reveal">Кабинет ученика</div>
+  <h2 class="section-title reveal">Загляни в кабинет<br><em>до покупки</em></h2>
+  <p class="cab-sub reveal">Всё обучение в одном месте. Демо-кабинет открывается без регистрации — экскурсия по нему идёт сама и занимает минуту.</p>
+  <div class="cab-shots reveal">
+    <a href="https://app.neurocreator2.ru/tour?utm_source=master&amp;utm_medium=cabinet_block" target="_blank" rel="noopener" class="cab-shot"><img src="cabinet/cab-home.jpg" alt="Главная кабинета ученика: продолжить урок, ранг, цель недели" loading="lazy"></a>
+    <a href="https://app.neurocreator2.ru/tour?utm_source=master&amp;utm_medium=cabinet_block" target="_blank" rel="noopener" class="cab-shot"><img src="cabinet/cab-course.jpg" alt="Программа в кабинете: шесть модулей" loading="lazy"></a>
+  </div>
+  <div class="cab-grid reveal">
+    <div class="cab-card"><b>Уроки и программа</b><span>Шесть модулей, короткие видео, промпты с кнопкой «скопировать». Кабинет помнит, где ты остановился.</span></div>
+    <div class="cab-card"><b>Задания с разбором</b><span>В Мастер-группе сдаёшь практику прямо в кабинете — и в течение 48 часов получаешь комментарий, что поправить.</span></div>
+    <div class="cab-card"><b>Свежие заказы</b><span>Подборка заказов и вакансий для AI-креаторов обновляется каждый день — видишь, за что платят, пока учишься.</span></div>
+    <div class="cab-card"><b>Темп и поддержка</b><span>Цель на неделю, напоминания, если выпал из графика, и служба заботы — отвечает живой человек.</span></div>
+  </div>
+  <div class="cab-ctas reveal">
+    <a class="btn-primary" href="https://app.neurocreator2.ru/tour?utm_source=master&amp;utm_medium=cabinet_block" target="_blank" rel="noopener">Открыть демо-кабинет →</a>
+    <a class="btn-secondary" href="#excursion">Записаться на экскурсию</a>
   </div>
 </section>
 
