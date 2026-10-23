@@ -1,7 +1,39 @@
 {
- "updated": "2026-10-23T10:50:52Z",
+ "updated": "2026-10-23T11:29:13Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137703024",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по работе с ИИ\n🏢 Алабуга, ОЭЗ ППТ · Набережные Челны\n💰 от 90000 RUR",
+   "link": "https://hh.ru/vacancy/137703024?tech_source=api",
+   "date": "2026-10-23T14:11:37+0300"
+  },
+  {
+   "id": "hh/137703023",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по работе с ИИ\n🏢 Алабуга, ОЭЗ ППТ · Казань\n💰 от 90000 RUR",
+   "link": "https://hh.ru/vacancy/137703023?tech_source=api",
+   "date": "2026-10-23T14:11:37+0300"
+  },
+  {
+   "id": "hh/137703022",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по работе с ИИ\n🏢 Алабуга, ОЭЗ ППТ · Уфа\n💰 от 90000 RUR",
+   "link": "https://hh.ru/vacancy/137703022?tech_source=api",
+   "date": "2026-10-23T14:11:37+0300"
+  },
+  {
+   "id": "hh/138790022",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Архитектор-проектировщик ПГС (Revit + AI) на производство\n🏢 Северно · Вологда\n💰 от 70000 RUR",
+   "link": "https://hh.ru/vacancy/138790022?tech_source=api",
+   "date": "2026-10-23T14:08:15+0300"
+  },
   {
    "id": "hh/138477271",
    "source": "hh",
@@ -473,38 +505,6 @@
    "text": "Специалист по продвижению товара в интернете / SMM- менеджер / AI-креатор коротких роликов\n🏢 МЭРИ · Санкт-Петербург\n💰 от 70000 RUR",
    "link": "https://hh.ru/vacancy/138757081?tech_source=api",
    "date": "2026-10-22T15:26:37+0300"
-  },
-  {
-   "id": "hh/138756745",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI креатор\n🏢 ТРЕХМЕР · Москва",
-   "link": "https://hh.ru/vacancy/138756745?tech_source=api",
-   "date": "2026-10-22T15:20:28+0300"
-  },
-  {
-   "id": "hh/138436849",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Категорийный менеджер с ИИ-подходом\n🏢 Правила Мебели · Москва\n💰 от 180000 RUR",
-   "link": "https://hh.ru/vacancy/138436849?tech_source=api",
-   "date": "2026-10-22T15:07:03+0300"
-  },
-  {
-   "id": "hh/138617564",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Сценарист на YouTube-канал (нейросети, llm, ai-агенты)\n🏢 GameSport · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/138617564?tech_source=api",
-   "date": "2026-10-22T15:01:34+0300"
-  },
-  {
-   "id": "hh/137867944",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO/AI-редактор / Специалист по AI-контенту\n🏢 Вебпрактик · Ростов-на-Дону",
-   "link": "https://hh.ru/vacancy/137867944?tech_source=api",
-   "date": "2026-10-22T15:01:10+0300"
   },
   {
    "id": "work_editor/6687",
