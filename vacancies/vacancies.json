@@ -1,7 +1,31 @@
 {
- "updated": "2026-10-23T08:07:01Z",
+ "updated": "2026-10-23T08:38:24Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138782007",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Sales Manager / Менеджер по продажам (B2B, AI - офис)\n🏢 Selsup · Москва\n💰 от 100000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/138782007?tech_source=api",
+   "date": "2026-10-23T11:35:13+0300"
+  },
+  {
+   "id": "hh/138781764",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Консультант-исполнитель по внедрению ИИ-решений\n🏢 Riverstart (ООО Риверстарт) · Москва",
+   "link": "https://hh.ru/vacancy/138781764?tech_source=api",
+   "date": "2026-10-23T11:29:14+0300"
+  },
+  {
+   "id": "hh/138780996",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор\n🏢 Инет Ком · Казань",
+   "link": "https://hh.ru/vacancy/138780996?tech_source=api",
+   "date": "2026-10-23T11:15:39+0300"
+  },
   {
    "id": "hh/138779404",
    "source": "hh",
@@ -555,14 +579,6 @@
    "date": "2026-10-22T11:53:04+00:00"
   },
   {
-   "id": "hh/133039518",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
-   "link": "https://hh.ru/vacancy/133039518?tech_source=api",
-   "date": "2026-10-22T11:52:32+0300"
-  },
-  {
    "id": "SearchEditorr/4049",
    "source": "telegram",
    "channel": "SearchEditorr",
@@ -577,22 +593,6 @@
    "text": "Ищем монтажера Reels\n🔍\nОписание проекта:\nРабота в команде видеопродакшена. Создание динамичных вертикальных видео для различных проектов.\nЗадачи:\n– Монтаж Reels по ТЗ\n– Работа с анимацией и моушн-дизайном\n– Создание качественного саунд-дизайна\nТребования:\n– Владение Adobe Premiere Pro и After Effects (CapCut не рассматриваем)\n– Навыки анимации и работы со звуком\n– Наличие портфолио\nУсловия:\n– Удаленная работа\n– Разнообразные проекты и регулярные задачи\n#МонтажерReels\n#Reels\n#ищу_Reels\n#монтажReels",
    "link": "https://t.me/SearchEditorr/4048",
    "date": "2026-10-22T11:41:25+00:00"
-  },
-  {
-   "id": "hh/138743432",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Старший бизнес-эксперт (ИИ-проекты)\n🏢 Т1 · Москва",
-   "link": "https://hh.ru/vacancy/138743432?tech_source=api",
-   "date": "2026-10-22T11:41:21+0300"
-  },
-  {
-   "id": "hh/138743222",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Преподаватель по AI-контенту\n🏢 LENIVINS.AI · Москва\n💰 от 200000 RUR",
-   "link": "https://hh.ru/vacancy/138743222?tech_source=api",
-   "date": "2026-10-22T11:38:05+0300"
   },
   {
    "id": "smmlancer/8799",
