@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-23T11:29:13Z",
+ "updated": "2026-10-23T12:06:16Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138791716",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Разработчик внутренних ИТ-сервисов (Python / AI / автоматизация)\n🏢 Министерство строительства и развития инфраструктуры Свердловской области · Екатеринбург\n💰 от 113000 до 118000 RUR",
+   "link": "https://hh.ru/vacancy/138791716?tech_source=api",
+   "date": "2026-10-23T14:43:10+0300"
+  },
   {
    "id": "hh/137703024",
    "source": "hh",
@@ -33,6 +41,14 @@
    "text": "Архитектор-проектировщик ПГС (Revit + AI) на производство\n🏢 Северно · Вологда\n💰 от 70000 RUR",
    "link": "https://hh.ru/vacancy/138790022?tech_source=api",
    "date": "2026-10-23T14:08:15+0300"
+  },
+  {
+   "id": "hh/138262827",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-дизайнер / Дизайнер инфографики (маркетплейсы)\n🏢 Кирилюк Сергей Александрович · Москва",
+   "link": "https://hh.ru/vacancy/138262827?tech_source=api",
+   "date": "2026-10-23T13:56:58+0300"
   },
   {
    "id": "hh/138477271",
@@ -489,22 +505,6 @@
    "text": "Старший продакт-менеджер (Engagement & AI Game-Based Learning / Геймификация и ИИ-обучение)\n🏢 Novakid Inc · Москва\n💰 от 5000 USD",
    "link": "https://hh.ru/vacancy/138561960?tech_source=api",
    "date": "2026-10-22T15:49:27+0300"
-  },
-  {
-   "id": "hh/138757520",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Chief Technology Officer (AI)\n🏢 Softline · Москва",
-   "link": "https://hh.ru/vacancy/138757520?tech_source=api",
-   "date": "2026-10-22T15:36:30+0300"
-  },
-  {
-   "id": "hh/138757081",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по продвижению товара в интернете / SMM- менеджер / AI-креатор коротких роликов\n🏢 МЭРИ · Санкт-Петербург\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/138757081?tech_source=api",
-   "date": "2026-10-22T15:26:37+0300"
   },
   {
    "id": "work_editor/6687",
