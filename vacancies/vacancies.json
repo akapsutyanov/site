@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-23T13:40:38Z",
+ "updated": "2026-10-23T14:12:05Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138796985",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Методист в сфере Искусственного Интеллекта\n🏢 Moscow business academy · Москва\n💰 от 80000 RUR",
+   "link": "https://hh.ru/vacancy/138796985?tech_source=api",
+   "date": "2026-10-23T16:47:10+0300"
+  },
+  {
+   "id": "hh/138796704",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AQA/Fullstack QA (Ai sales)\n🏢 СБЕР · Москва",
+   "link": "https://hh.ru/vacancy/138796704?tech_source=api",
+   "date": "2026-10-23T16:40:10+0300"
+  },
   {
    "id": "hh/138794071",
    "source": "hh",
@@ -513,22 +529,6 @@
    "text": "AI-креатор / AI-фотограф/ Нейрофотограф\n🏢 LD LATTE · Москва\n💰 от 60000 до 80000 RUR",
    "link": "https://hh.ru/vacancy/137806540?tech_source=api",
    "date": "2026-10-22T17:15:01+0300"
-  },
-  {
-   "id": "hh/138565650",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель контент-завода (ИИ-креатор)\n🏢 BARKA · Москва\n💰 от 70000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/138565650?tech_source=api",
-   "date": "2026-10-22T17:14:44+0300"
-  },
-  {
-   "id": "hh/138760519",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению ИИ и автоматизации бизнес-процессов\n🏢 Helios · Стаханов\n💰 от 120000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/138760519?tech_source=api",
-   "date": "2026-10-22T16:43:01+0300"
   },
   {
    "id": "jobforjunior/8574",
