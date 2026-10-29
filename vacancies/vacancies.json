@@ -1,7 +1,31 @@
 {
- "updated": "2026-10-29T08:32:23Z",
+ "updated": "2026-10-29T09:04:43Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138753859",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-engineer\n🏢 World Vision · Самара\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/138753859?tech_source=api",
+   "date": "2026-10-29T11:57:42+0300"
+  },
+  {
+   "id": "hh/138782300",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам B2B (IT / AI-продукт «Экстрабриз»)\n🏢 Экстробриз Развитие · Ижевск\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/138782300?tech_source=api",
+   "date": "2026-10-29T11:38:49+0300"
+  },
+  {
+   "id": "hh/138961903",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "IT-инженер / DevOps / AI-разработчик\n🏢 Итсэлайв · Москва",
+   "link": "https://hh.ru/vacancy/138961903?tech_source=api",
+   "date": "2026-10-29T11:29:18+0300"
+  },
   {
    "id": "hh/133809298",
    "source": "hh",
@@ -9,6 +33,22 @@
    "text": "ИИ-креатор\n🏢 Esterk Lux Parfum · Москва",
    "link": "https://hh.ru/vacancy/133809298?tech_source=api",
    "date": "2026-10-29T11:27:02+0300"
+  },
+  {
+   "id": "hh/138961133",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Junior-разработчик / специалист по автоматизации и ИИ\n🏢 УралНет · Екатеринбург\n💰 от 70000 до 70000 RUR",
+   "link": "https://hh.ru/vacancy/138961133?tech_source=api",
+   "date": "2026-10-29T11:15:31+0300"
+  },
+  {
+   "id": "hh/138913993",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "B2B-маркетолог / AI, Outbound\n🏢 Сервер Молл · Санкт-Петербург\n💰 от 130000 RUR",
+   "link": "https://hh.ru/vacancy/138913993?tech_source=api",
+   "date": "2026-10-29T10:55:29+0300"
   },
   {
    "id": "hh/138779404",
@@ -491,14 +531,6 @@
    "date": "2026-10-28T10:48:37+00:00"
   },
   {
-   "id": "hh/138913993",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "B2B-маркетолог / AI, Outbound\n🏢 Сервер Молл · Санкт-Петербург\n💰 от 130000 RUR",
-   "link": "https://hh.ru/vacancy/138913993?tech_source=api",
-   "date": "2026-10-28T10:45:19+0300"
-  },
-  {
    "id": "smmlancer/8836",
    "source": "telegram",
    "channel": "smmlancer",
@@ -513,38 +545,6 @@
    "text": "AI Creator / Нейрокреатор\n🏢 RT · Москва",
    "link": "https://hh.ru/vacancy/138913711?tech_source=api",
    "date": "2026-10-28T10:42:14+0300"
-  },
-  {
-   "id": "hh/138912061",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам ИИ-решений (нейросети)\n🏢 Дв Импорт Групп · Хабаровск\n💰 от 50000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/138912061?tech_source=api",
-   "date": "2026-10-28T10:22:13+0300"
-  },
-  {
-   "id": "hh/138911748",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Директор филиала (AI-агентство)\n🏢 Гайнутдинова Евгения Николаевна · Волгоград\n💰 от 150000 до 400000 RUR",
-   "link": "https://hh.ru/vacancy/138911748?tech_source=api",
-   "date": "2026-10-28T10:17:34+0300"
-  },
-  {
-   "id": "hh/138911733",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Директор филиала (AI-агентство)\n🏢 Гайнутдинова Евгения Николаевна · Самара\n💰 от 150000 до 400000 RUR",
-   "link": "https://hh.ru/vacancy/138911733?tech_source=api",
-   "date": "2026-10-28T10:17:14+0300"
-  },
-  {
-   "id": "hh/138911732",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Директор филиала (AI-агентство)\n🏢 Гайнутдинова Евгения Николаевна · Челябинск\n💰 от 150000 до 400000 RUR",
-   "link": "https://hh.ru/vacancy/138911732?tech_source=api",
-   "date": "2026-10-28T10:17:14+0300"
   },
   {
    "id": "comeinreels/1820",
