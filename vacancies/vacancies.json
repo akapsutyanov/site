@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-30T12:14:23Z",
+ "updated": "2026-10-30T12:46:46Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138309142",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-first Lead-дизайнер (товары для дома, маркетплейсы)\n🏢 Hausberg LTD · Москва",
+   "link": "https://hh.ru/vacancy/138309142?tech_source=api",
+   "date": "2026-10-30T15:22:01+0300"
+  },
   {
    "id": "hh/139011446",
    "source": "hh",
@@ -537,14 +545,6 @@
    "text": "AI-креатор (стажёр)\n🏢 Napoleon IT · Санкт-Петербург",
    "link": "https://hh.ru/vacancy/138970519?tech_source=api",
    "date": "2026-10-29T13:23:10+0300"
-  },
-  {
-   "id": "hh/137978579",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Разработчик ИИ-решений\n🏢 Торговый Дом Лотос · Казань\n💰 от 150000 RUR",
-   "link": "https://hh.ru/vacancy/137978579?tech_source=api",
-   "date": "2026-10-29T13:06:20+0300"
   },
   {
    "id": "dnative_job/11623",
