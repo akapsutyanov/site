@@ -1331,6 +1331,11 @@ footer {
 section[id]{scroll-margin-top:120px}
 .case{background:linear-gradient(135deg,#292c30,#1c1e22);border-color:#45484d;box-shadow:0 14px 40px rgba(0,0,0,.16)}
 .case-tag{background:#34373c;border-color:#555960;color:#e0e2e5;font-size:10px;letter-spacing:1.2px}
+.case-identity{display:flex;align-items:center;gap:18px;margin-right:auto;min-width:0}
+.case-avatar{width:88px;height:88px;flex-shrink:0;border-radius:50%;object-fit:cover;border:2px solid #737981}
+.case-profile{display:inline-block;margin-top:8px;color:#d0d4da;font-size:12px;text-underline-offset:4px;overflow-wrap:anywhere}
+.case-profile:hover{color:#fff}
+.case-profile:focus-visible{outline:2px solid #d0d4da;outline-offset:5px}
 .case-col{background:#1c1e22;border-color:#41454c}
 .case-col.after{background:#383c42;border-color:#6b727b}
 .case-col.after .case-lbl{color:#f0f1f3}
@@ -1375,6 +1380,8 @@ section[id]{scroll-margin-top:120px}
   .reviews-section{margin:16px 12px;padding:40px 20px;border-radius:20px}
   .reviews-masonry{columns:1}
   .case-name{font-size:32px}
+  .case-identity{width:100%;gap:16px;margin-bottom:6px}
+  .case-avatar{width:76px;height:76px}
   .case-txt{font-weight:400}
   .proof{padding:24px 20px}
   .proof a{width:100%}
@@ -1691,7 +1698,7 @@ section[id]{scroll-margin-top:120px}
   <div class="cases-grid reveal">
 
     <div class="case">
-      <div class="case-head"><div class="case-name">Сан Саныч</div><span class="case-tag">42 года · барбер</span><span class="case-tag">с нуля</span></div>
+      <div class="case-head"><div class="case-identity"><img class="case-avatar" src="students/alex-yamal.jpg" alt="Сан Саныч — фото из Telegram" width="88" height="88" loading="lazy"><div><div class="case-name">Сан Саныч</div><a class="case-profile" href="https://t.me/AlexYAMAL89" target="_blank" rel="noopener">@AlexYAMAL89 ↗</a></div></div><span class="case-tag">42 года · барбер</span><span class="case-tag">с нуля</span></div>
       <div class="case-ba">
         <div class="case-col"><div class="case-lbl">Было</div><div class="case-txt">Барбер, <b>ни дня не работал с нейросетями</b>. Друзья крутили пальцем у виска: «какой ИИ в 42?». Ни портфолио, ни блога.</div></div>
         <div class="case-arrow">→</div>
@@ -1701,7 +1708,7 @@ section[id]{scroll-margin-top:120px}
     </div>
 
     <div class="case">
-      <div class="case-head"><div class="case-name">Андрей</div><span class="case-tag">первые заказы</span><span class="case-tag">за месяц</span></div>
+      <div class="case-head"><div class="case-identity"><img class="case-avatar" src="students/andrey.jpg" alt="Андрей — фото из Telegram" width="88" height="88" loading="lazy"><div><div class="case-name">Андрей</div><a class="case-profile" href="https://t.me/andreyinkas" target="_blank" rel="noopener">@andreyinkas ↗</a></div></div><span class="case-tag">первые заказы</span><span class="case-tag">за месяц</span></div>
       <div class="case-ba">
         <div class="case-col"><div class="case-lbl">Было</div><div class="case-txt">«Я не творческий» и «слишком много новой информации». Первому клиенту <b>сказал «я не могу»</b> — побоялся взяться.</div></div>
         <div class="case-arrow">→</div>
@@ -1711,7 +1718,7 @@ section[id]{scroll-margin-top:120px}
     </div>
 
     <div class="case">
-      <div class="case-head"><div class="case-name">Мила</div><span class="case-tag">33 года · второй декрет</span><span class="case-tag">поиск себя</span></div>
+      <div class="case-head"><div class="case-identity"><img class="case-avatar" src="students/mila.jpg" alt="Мила — фото из Telegram" width="88" height="88" loading="lazy"><div><div class="case-name">Мила</div><a class="case-profile" href="https://t.me/Mila_ai_creator" target="_blank" rel="noopener">@Mila_ai_creator ↗</a></div></div><span class="case-tag">33 года · второй декрет</span><span class="case-tag">поиск себя</span></div>
       <div class="case-ba">
         <div class="case-col"><div class="case-lbl">Было</div><div class="case-txt">Второй декрет, долгий поиск себя. Самое страшное — деньги: <b>все нейросети платные</b>, за каждую генерацию и каждый токен переживала.</div></div>
         <div class="case-arrow">→</div>
