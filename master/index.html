@@ -1387,6 +1387,68 @@ section[id]{scroll-margin-top:120px}
   .proof a{width:100%}
   .plan-card{padding:36px 24px}
 }
+/* Alternate full-width silver and dark sections while keeping one content grid. */
+.section-light{
+  --bg:#d8dadd;--bg2:#eef0f2;
+  --c1:#1b1e24;--c2:#343c47;--c3:#555e6b;--c4:#6a7482;
+  --ink:#1b1e24;--ink2:#414a56;--ink3:#555e6b;
+  --chrome-shine:linear-gradient(105deg,#47515e 0%,#202630 50%,#47515e 100%);
+  max-width:none;width:100%;margin:0;padding:88px max(24px,calc((100% - 1152px)/2));
+  border:0;border-radius:0;background:#d8dadd;color:var(--ink);
+}
+.section-light .section-title{color:var(--c1)}
+.section-light .section-title em{color:var(--c2)}
+.section-light .section-label{color:var(--c3)}
+.section-light .section-label::after{background:linear-gradient(to right,#7d8795,transparent)}
+.section-light .section-intro{color:var(--ink2);font-weight:400}
+.section-light .author-lead,.section-light .author-list div{font-weight:400}
+.section-light .author-nums div{background:#eef0f2;border-color:#b6bcc5}
+.section-light .author-photo{border-color:#a5aeba!important;box-shadow:0 18px 42px rgba(29,36,47,.16)!important}
+.section-light .results-grid,.section-light .result-right{gap:14px}
+.section-light .result-left,.section-light .result-stat-box{background:#eef0f2;border-color:#b6bcc5;border-radius:16px}
+.section-light .checklist{margin-top:0}
+.section-light .checklist li{display:block;position:relative;font-size:14px;font-weight:400;border-color:#cbd0d7;padding:15px 0 15px 22px}
+.section-light .checklist li::before{position:absolute;left:0;top:18px;margin:0}
+.section-light .result-stat-box:hover{border-color:#7b8798}
+.section-light .module-card,.section-light .module-card:nth-child(even){background:#eef0f2;border-color:#b6bcc5}
+.section-light .module-card.bonus-card{background:#cbd0d6;border-color:#9ca7b5}
+.section-light .module-card.open{border-color:#727f91}
+.section-light .module-header:hover{background:rgba(44,56,73,.05)}
+.section-light .module-num,.section-light .outcome-num{color:#687586}
+.section-light .module-arrow,.section-light .module-card.open .module-arrow{border-color:#919cab;color:#414a56}
+.section-light .module-body-inner,.section-light .module-result{border-color:#c2c9d2}
+.section-light .topic-item{background:#e1e5e9;border-color:#c1c9d3;font-weight:400}
+.section-light .tool-tag,.section-light .module-tag{background:#d4dae1;border-color:#b5bfcd;color:#374353}
+.section-light .outcome-card,.section-light .outcome-card:nth-child(2n){background:#eef0f2;border-color:#b6bcc5}
+.section-light .outcome-card:hover{border-color:#7b8798}
+.section-light .outcome-desc{font-weight:400}
+.section-light .guarantee-grid,.section-light .payment-grid{gap:14px}
+.section-light .guarantee-card,.section-light .payment-card{background:#eef0f2;border-color:#b6bcc5;border-radius:16px}
+.section-light .payment-card.special{background:#cbd0d6;border-color:#9ca7b5}
+.section-light .g-desc,.section-light .payment-desc{font-size:13px;font-weight:400}
+.section-light .guarantee-bottom{margin-top:14px;border:0;border-radius:16px;background:#cbd0d6;color:var(--ink2)}
+.section-light .payment-cta{border-color:#7f8a99;color:#263140;letter-spacing:1.4px}
+.section-light .payment-cta:hover{background:#bbc4cf}
+.section-light .exc-card{background:#eef0f2;border-color:#b6bcc5}
+.section-light .exc-disc{background:#e1e5e9;border-color:#9ca7b5}
+.section-light .exc-disc p,.section-light .exc-item .ed,.section-light .exc-no{font-weight:400}
+.section-light .exc-item{background:#e1e5e9;border-color:#bbc4cf}
+.section-light .exc-facts span{background:#dce1e7;border-color:#a4afbe;color:#354151}
+.section-light .exc-no{border-left-color:#6d7d91}
+.section-light .exc-cta{background:#242a33;color:#f6f7f9;box-shadow:0 6px 18px rgba(23,30,41,.12)}
+.section-light .exc-cta:hover{background:#3a4555}
+.section-light a:focus-visible,.section-light button:focus-visible{outline:2px solid #445d7d;outline-offset:4px}
+.section-light + .divider{display:none}
+@media(max-width:700px){
+  .section-light{padding:56px 24px;margin:0;border-radius:0}
+  .section-light .result-left{padding:26px 22px}
+  .section-light .result-stat-box{padding:26px}
+  .section-light .module-header{gap:12px;padding:22px 18px}
+  .section-light .module-num{width:42px;font-size:32px}
+  .section-light .module-body-inner{padding:0 18px 24px}
+  .section-light .exc-card{padding:26px 18px}
+  .section-light .exc-cta{width:100%;justify-content:center;padding:17px 16px;font-size:11px;letter-spacing:1px}
+}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1559,7 +1621,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- АВТОР -->
-<section class="author-section" id="author">
+<section class="author-section section-light" id="author">
   <div class="section-label reveal">Автор</div>
   <h2 class="section-title reveal">Учись у автора<br><em>с опытом съёмки и монтажа</em></h2>
   <div class="author-grid reveal">
@@ -1665,7 +1727,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- RESULTS -->
-<section class="results-section" id="results">
+<section class="results-section section-light" id="results">
   <div class="section-label reveal">Результат обучения</div>
   <h2 class="section-title reveal">Навыки AI-креатора.<br><em>Работы, которые можно показать.</em></h2>
   <p class="section-intro reveal">За 6 недель пройдёшь путь создания коммерческого контента и соберёшь основу для старта в профессии.</p>
@@ -1741,7 +1803,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- PROGRAM -->
-<section class="program-section" id="program">
+<section class="program-section section-light" id="program">
   <div class="section-label reveal">Программа</div>
   <h2 class="section-title reveal">От задачи бренда<br><em>до готового ролика и предложения</em></h2>
   <p class="section-intro reveal">Шесть основных модулей и два углублённых блока — по режиссуре и работе с нейросетями. В каждом шаге есть практика и конкретный результат.</p>
@@ -2060,7 +2122,7 @@ section[id]{scroll-margin-top:120px}
   Карточек можно сколько угодно — просто копируй <div class="review-card">…</div>.
   Клик по скриншоту открывает его крупно (лайтбокс).
 -->
-<section class="reviews-section" id="reviews">
+<section class="reviews-section section-light" id="reviews">
   <div class="section-label reveal">Отзывы студентов</div>
   <h2 class="section-title reveal">Реальные отзывы<br><em>из Telegram</em></h2>
   <p class="section-intro reveal">О практике, уроках и поддержке — словами учеников. Нажми на скриншот, чтобы прочитать отзыв крупнее.</p>
@@ -2098,7 +2160,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- OUTCOMES — подход к обучению -->
-<section class="outcomes-section" id="outcomes">
+<section class="outcomes-section section-light" id="outcomes">
   <div class="section-label reveal">Как будем учиться</div>
   <h2 class="section-title reveal">Практика и разборы.<br><em>Опыт автора в твоих проектах.</em></h2>
   <div class="outcomes-grid reveal">
@@ -2257,7 +2319,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- GUARANTEE -->
-<section class="guarantee-section reveal">
+<section class="guarantee-section section-light" id="guarantees">
   <div class="section-label">Гарантии</div>
   <h2 class="section-title">Условия возврата<br><em>и поддержки</em></h2>
   <div class="guarantee-grid">
@@ -2330,7 +2392,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- PAYMENT METHODS — способы оплаты -->
-<section class="payment-section" id="payment">
+<section class="payment-section section-light" id="payment">
   <div class="section-label reveal">Оплата</div>
   <h2 class="section-title reveal">Способы<br><em>оплаты</em></h2>
   <div class="payment-grid reveal">
@@ -2443,7 +2505,7 @@ section[id]{scroll-margin-top:120px}
 <div class="divider"></div>
 
 <!-- ЭКСКУРСИЯ -->
-<section class="exc-section" id="excursion">
+<section class="exc-section section-light" id="excursion">
   <div class="section-label reveal">Первый шаг</div>
   <h2 class="section-title reveal">Бесплатная экскурсия.<br><em>25 минут с автором.</em></h2>
   <div class="exc-card reveal">
