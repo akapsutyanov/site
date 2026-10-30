@@ -33,15 +33,15 @@
   --bg2:       #0d0d12;
   --c1:     #f4f4f4;
   --c2:     #c8c8c8;
-  --c3:     #888888;
+  --c3:     #afb1b5;
   --c4:     #444444;
   --ink:       #e8e8e8;
-  --ink2:      #a0a0a0;
-  --ink3:      #585858;
+  --ink2:      #c1c3c7;
+  --ink3:      #94979d;
   --accent:    #ff6b2b;
   --blue:      #2b6bff;
   --chrome-grad: linear-gradient(135deg, #f8f8f8 0%, #d0d0d0 40%, #888888 100%);
-  --chrome-shine: linear-gradient(105deg, #444 0%, #d0d0d0 35%, #f8f8f8 50%, #d0d0d0 65%, #444 100%);
+  --chrome-shine: linear-gradient(105deg, #a3a7ac 0%, #d0d0d0 35%, #f8f8f8 50%, #d0d0d0 65%, #a3a7ac 100%);
   --blur: blur(24px) saturate(180%);
 }
 
@@ -1326,6 +1326,60 @@ footer {
   .section-intro{font-size:14px}
 }
 @media(max-width:700px){.partnership-card .plan-features{columns:1}}
+
+/* Silver surfaces give the dark page rhythm and keep supporting text readable. */
+section[id]{scroll-margin-top:120px}
+.case{background:linear-gradient(135deg,#292c30,#1c1e22);border-color:#45484d;box-shadow:0 14px 40px rgba(0,0,0,.16)}
+.case-tag{background:#34373c;border-color:#555960;color:#e0e2e5;font-size:10px;letter-spacing:1.2px}
+.case-col{background:#1c1e22;border-color:#41454c}
+.case-col.after{background:#383c42;border-color:#6b727b}
+.case-col.after .case-lbl{color:#f0f1f3}
+.case-lbl,.case-arrow{color:#b8bcc3}
+.case-how{color:#bfc2c8}
+.proof{background:#24272c;border-color:#484c53}
+.proof a{background:#d5d7da;color:#17191c;border-color:#d5d7da;white-space:normal;text-align:center}
+.proof a:hover{background:#eef0f2;color:#101113}
+.modules-grid{gap:10px}
+.module-card{background:#181a1e;border-color:#363a40;border-radius:12px}
+.module-card:nth-child(even){background:#22252a}
+.module-num,.outcome-num{color:#9da3ad}
+.module-subtitle{font-size:12px;line-height:1.6}
+.outcomes-grid{gap:14px}
+.outcome-card{background:#202329;border-color:#3c4149;border-radius:14px}
+.outcome-card:nth-child(2n){background:#292d33}
+.outcome-desc{font-size:13px}
+.plan-card{background:#1b1e23;border-color:#3c424a;border-radius:18px}
+.plan-card.featured{background:linear-gradient(155deg,#41464e,#282c32);border-color:#939ba7;box-shadow:0 0 0 1px rgba(215,220,228,.12)}
+.plan-card:hover{border-color:#737d8b}
+.plan-features li{font-size:13px}
+.plan-divider{background:#464c55}
+.plan-features li.no{opacity:1;color:#91969f}
+.plan-guarantee{border-color:#464c55;line-height:1.7}
+.plan-safe{color:#b1b6bf}
+.plan-btn-secondary{border-color:#89919d;color:#edf0f4}
+.partnership-card{background:#15171b}
+.reviews-section{background:#c6c8cb;border:1px solid #e0e2e5;border-radius:28px;padding:68px 48px;margin:40px auto;color:#202329;max-width:1152px}
+.reviews-section .section-label{color:#424850}
+.reviews-section .section-label::after{background:#757d88}
+.reviews-section .section-title{color:#171a20}
+.reviews-section .section-title em{color:#4b535e}
+.reviews-section .section-intro{color:#3c434d;font-weight:400}
+.reviews-masonry{columns:2 300px;margin-top:36px;column-gap:22px}
+.review-card{background:#e5e6e8;border-color:#a6abb3;box-shadow:0 8px 24px rgba(24,29,37,.12);margin-bottom:22px}
+.review-card:hover{border-color:#747d8a;box-shadow:0 12px 30px rgba(24,29,37,.18)}
+.review-person{padding:18px 22px;color:#232830;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.review-person span{font-size:10px;font-weight:500;letter-spacing:1px;color:#555e6c;text-transform:uppercase}
+.review-card img:focus-visible{outline:3px solid #657b9c;outline-offset:-3px}
+@media(max-width:1200px){.reviews-section{margin:24px;max-width:none}}
+@media(max-width:700px){
+  .reviews-section{margin:16px 12px;padding:40px 20px;border-radius:20px}
+  .reviews-masonry{columns:1}
+  .case-name{font-size:32px}
+  .case-txt{font-weight:400}
+  .proof{padding:24px 20px}
+  .proof a{width:100%}
+  .plan-card{padding:36px 24px}
+}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -2002,13 +2056,14 @@ footer {
 <section class="reviews-section" id="reviews">
   <div class="section-label reveal">Отзывы студентов</div>
   <h2 class="section-title reveal">Реальные отзывы<br><em>из Telegram</em></h2>
+  <p class="section-intro reveal">О практике, уроках и поддержке — словами учеников. Нажми на скриншот, чтобы прочитать отзыв крупнее.</p>
 
   <div class="reviews-masonry reveal">
 
-    <div class="review-card"><img src="review-1.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-1.jpg')"></div>
-    <div class="review-card"><img src="review-2.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-2.jpg')"></div>
-    <div class="review-card"><img src="review-3.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-3.jpg')"></div>
-    <div class="review-card"><img src="review-4.jpg" alt="Отзыв студента" loading="lazy" onerror="reviewFail(this,'review-4.jpg')"></div>
+    <div class="review-card"><div class="review-person">A S <span>Telegram</span></div><img src="review-1.jpg" alt="Отзыв A S о практике и понятной подаче материала" loading="lazy" tabindex="0" role="button" aria-label="Увеличить отзыв A S" onerror="reviewFail(this,'review-1.jpg')"></div>
+    <div class="review-card"><div class="review-person">Алиса <span>Telegram</span></div><img src="review-2.jpg" alt="Отзыв Алисы о понятных уроках" loading="lazy" tabindex="0" role="button" aria-label="Увеличить отзыв Алисы" onerror="reviewFail(this,'review-2.jpg')"></div>
+    <div class="review-card"><div class="review-person">Nikita <span>Telegram</span></div><img src="review-3.jpg" alt="Отзыв Nikita о первых работах и поддержке на курсе" loading="lazy" tabindex="0" role="button" aria-label="Увеличить отзыв Nikita" onerror="reviewFail(this,'review-3.jpg')"></div>
+    <div class="review-card"><div class="review-person">Рустам <span>Telegram</span></div><img src="review-4.jpg" alt="Отзыв Рустама о практике и обратной связи" loading="lazy" tabindex="0" role="button" aria-label="Увеличить отзыв Рустама" onerror="reviewFail(this,'review-4.jpg')"></div>
 
   </div>
 </section>
@@ -2547,6 +2602,12 @@ window.reviewFail = function(img) {
   var grid = document.querySelector('.reviews-masonry');
   if (!grid) return;
   var lb;
+  grid.addEventListener('keydown', function(e) {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.review-card img')) {
+      e.preventDefault();
+      e.target.click();
+    }
+  });
   grid.addEventListener('click', function(e) {
     var img = e.target.closest('.review-card img');
     if (!img) return;
