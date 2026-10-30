@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-30T08:57:19Z",
+ "updated": "2026-10-30T09:29:50Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139003784",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-специалист (сеть карманных блогеров, AI-рилсы)\n🏢 REMONT.IO · Москва",
+   "link": "https://hh.ru/vacancy/139003784?tech_source=api",
+   "date": "2026-10-30T12:15:21+0300"
+  },
   {
    "id": "hh/139002347",
    "source": "hh",
@@ -545,14 +553,6 @@
    "text": "Педагог курса Нейросети в Хабаровске)\n🏢 ​Школа дизайна ArtTech · Хабаровск\n💰 от 30000 до 50000 RUR",
    "link": "https://hh.ru/vacancy/138460795?tech_source=api",
    "date": "2026-10-29T10:09:51+0300"
-  },
-  {
-   "id": "hh/138245966",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Аналитик данных AI\n🏢 Froza · Москва\n💰 от 200000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/138245966?tech_source=api",
-   "date": "2026-10-29T09:57:09+0300"
   },
   {
    "id": "vacancysmm/17211",
