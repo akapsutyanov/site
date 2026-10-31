@@ -1,7 +1,39 @@
 {
- "updated": "2026-10-30T21:17:51Z",
+ "updated": "2026-10-31T07:04:25Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139024653",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор в digital-агентство WEBTED\n🏢 WEBTED · Курск\n💰 от 100000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/139024653?tech_source=api",
+   "date": "2026-10-31T09:52:23+0300"
+  },
+  {
+   "id": "hh/138198880",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения нейросетям (AI агенты)\n🏢 xHuman Sales · Ростов-на-Дону\n💰 от 200000 до 300000 RUR",
+   "link": "https://hh.ru/vacancy/138198880?tech_source=api",
+   "date": "2026-10-31T09:15:47+0300"
+  },
+  {
+   "id": "hh/138729371",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Инженер по автоматизации бизнес-процессов (AI) /Системный администратор\n🏢 ВЛАДТРЕК · Владивосток\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/138729371?tech_source=api",
+   "date": "2026-10-31T05:38:45+0300"
+  },
+  {
+   "id": "hh/138583670",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер Wildberries (ChatGPT, Claude)\n🏢 Моц Виталий Сергеевич · Нижний Новгород\n💰 от 70000 до 100000 RUR",
+   "link": "https://hh.ru/vacancy/138583670?tech_source=api",
+   "date": "2026-10-31T02:06:54+0300"
+  },
   {
    "id": "hh/138723381",
    "source": "hh",
@@ -563,22 +595,6 @@
    "date": "2026-10-30T09:24:05+0300"
   },
   {
-   "id": "hh/138994118",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дизайнер инфографики / AI-дизайнер\n🏢 Альфасофт · Санкт-Петербург\n💰 от 40000 до 60000 RUR",
-   "link": "https://hh.ru/vacancy/138994118?tech_source=api",
-   "date": "2026-10-30T09:08:34+0300"
-  },
-  {
-   "id": "hh/130687729",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Senior AI/ML Developer (г. Новосибирск)\n🏢 СофтМолл · Новосибирск",
-   "link": "https://hh.ru/vacancy/130687729?tech_source=api",
-   "date": "2026-10-30T09:05:09+0300"
-  },
-  {
    "id": "smmlancer/8848",
    "source": "telegram",
    "channel": "smmlancer",
@@ -593,22 +609,6 @@
    "text": "графический дизайнер\n🏢 ИП САЮТИНА Н. В. · Ненецкий автономный округ\n💰 от 60000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/321290100017532/e6e82e08-d43f-11f1-866f-d9b02784358d",
    "date": "2026-10-30"
-  },
-  {
-   "id": "hh/138984741",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Видеомонтажёр Reels (с использованием ИИ)\n🏢 АБРАМОВА ЭЛЬВИРА ВАЛЕРЬЕВНА · Санкт-Петербург\n💰 от 12000 RUR",
-   "link": "https://hh.ru/vacancy/138984741?tech_source=api",
-   "date": "2026-10-29T20:06:34+0300"
-  },
-  {
-   "id": "hh/138984462",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дизайнер карточек товаров ИИ\n🏢 Шебаршин Илья Евгеньевич · Москва\n💰 от 95000 RUR",
-   "link": "https://hh.ru/vacancy/138984462?tech_source=api",
-   "date": "2026-10-29T19:22:01+0300"
   },
   {
    "id": "smmlancer/8846",
