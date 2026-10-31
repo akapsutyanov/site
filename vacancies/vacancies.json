@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-31T10:14:45Z",
+ "updated": "2026-10-31T10:46:09Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138214572",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Моушн-дизайнер (2D/3D, графика, AI), Мультимедиа-дизайнер (моушн, графика, AI)\n🏢 Ньютон Парк · Красноярск\n💰 от 100000 до 120000 RUR",
+   "link": "https://hh.ru/vacancy/138214572?tech_source=api",
+   "date": "2026-10-31T13:14:28+0300"
+  },
   {
    "id": "hh/137061196",
    "source": "hh",
@@ -545,14 +553,6 @@
    "text": "Старший менеджер по ИИ/AI / GPT Product Manager\n🏢 Арнест ЮниРусь · Москва",
    "link": "https://hh.ru/vacancy/138253057?tech_source=api",
    "date": "2026-10-30T11:16:23+0300"
-  },
-  {
-   "id": "hh/138700842",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Маркетолог (AI-native)\n🏢 101 · Москва",
-   "link": "https://hh.ru/vacancy/138700842?tech_source=api",
-   "date": "2026-10-30T11:12:21+0300"
   },
   {
    "id": "vacancysmm/17215",
