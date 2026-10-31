@@ -1,0 +1,164 @@
+
+body{background:#d8dce2;color:#22272e}
+nav{position:absolute;top:24px;max-width:1320px;width:calc(100% - 80px);background:rgba(237,239,242,.85);border-color:rgba(58,64,74,.16);box-shadow:0 12px 36px #27303f0a;backdrop-filter:blur(20px)}
+.nav-logo{background:none;-webkit-text-fill-color:#262c35;color:#262c35;animation:none}
+.nav-links a{color:#525b68}.nav-links a:hover{background:#d2d7df;color:#141a22}
+.nav-cta{background:#242b35;color:#fff;-webkit-text-fill-color:#fff;box-shadow:none}
+.vaHero{min-height:850px;min-height:max(850px,100svh);padding:140px 0 65px;align-items:center;background:linear-gradient(100deg,#e9ebee 0%,#dde1e6 45%,#a3a8b2 100%);border:0;isolation:isolate}
+.workshop-image{position:absolute;width:min(82vw,1400px);height:auto;right:-1vw;top:50%;transform:translateY(-45%);z-index:0;mask-image:linear-gradient(to right,transparent 0%,#000 23%,#000 96%,transparent 100%);pointer-events:none}
+.vaWrap{max-width:1320px;margin:0 auto;padding:0 32px;text-align:left;display:block;z-index:2;pointer-events:none}
+.vaWrap>*{max-width:520px;pointer-events:auto;animation:none}
+.vaBadge{background:#ffffff50;border:1px solid #aeb6c1;color:#3d4858;font-size:10px;letter-spacing:2px;display:inline-flex;padding:8px 13px;margin:0 0 19px;border-radius:6px}
+.vaBadge i{background:#65748a;box-shadow:none;animation:none}
+.vaEyebrow{color:#596371;font-size:10px;letter-spacing:2px;margin:0}
+.vaTitle{color:#252b33;font-size:clamp(58px,5.4vw,80px);line-height:1.01;letter-spacing:-1.6px;margin:21px 0 0;max-width:640px;font-weight:400}
+.vaTitle em{background:linear-gradient(130deg,#242e3d,#65738a 48%,#253143);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:none}
+.vaSub{color:#505966;font-size:15px;font-weight:400;line-height:1.8;max-width:480px;margin:24px 0 0}.vaSub b{color:#242d39;font-weight:600}
+.vaPills{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 0;justify-content:flex-start;max-width:510px}
+.vaPill{background:#f6f7f966;border-color:#aeb6c1;color:#4a5462;font-size:10px;letter-spacing:0;padding:7px 10px}.vaPill span{filter:grayscale(1)}
+.vaBtns{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin:28px 0 0}
+.vaBtns .btn-primary{background:linear-gradient(140deg,#303947,#171e29);color:#fff;border:1px solid #303947;padding:18px 26px;font-size:11px;box-shadow:0 9px 24px #27324224;letter-spacing:1.2px}
+.vaBtns .btn-secondary{background:none;border:0;border-bottom:1px solid #8994a4;border-radius:0;padding:0 0 3px;font-size:11px;color:#485363;letter-spacing:.7px}
+.vaCtaNote{color:#5b6471;font-size:10px;line-height:1.7;margin:15px 0 0;max-width:370px}
+.vaStats{display:flex;justify-content:flex-start;gap:30px;margin:30px 0 0;padding-top:22px;border-top:1px solid #aeb5c1;max-width:440px}.vsN{font-size:31px;color:#303b4d;background:none;-webkit-text-fill-color:#303b4d;line-height:1.1}.vsL{color:#616b79;font-size:9px;letter-spacing:1px;margin-top:5px}
+@media(min-width:1650px){.vaWrap{max-width:1500px}.workshop-image{right:calc((100vw - 1650px)/2 - 70px)}}
+@media(max-width:1100px) and (min-width:761px){.vaWrap>*{max-width:430px}.vaTitle{font-size:64px}.vaSub{max-width:390px}.workshop-image{right:-11vw;width:88vw;transform:translateY(-32%)}.vaHero{min-height:900px}.nav-links{display:none}}
+@media(max-width:760px){nav{top:14px;width:calc(100% - 32px);padding:12px 15px}.nav-logo{font-size:12px;letter-spacing:1px}.nav-cta{font-size:9px;padding:8px 12px}.vaHero{min-height:0;padding:104px 0 34px;display:flex;flex-direction:column;background:linear-gradient(135deg,#e9ebee,#c6ccd5)}.vaWrap{padding:0 24px;display:contents}.vaWrap>*{margin-left:24px;margin-right:24px;max-width:calc(100% - 48px)}.vaBadge{align-self:flex-start;order:0;margin-bottom:15px}.vaEyebrow{order:1;align-self:flex-start;font-size:8px;letter-spacing:1.4px}.vaTitle{order:2;align-self:flex-start;font-size:clamp(43px,11.5vw,70px);margin-top:14px;letter-spacing:-1px}.vaSub{order:3;font-size:13px;line-height:1.75;margin-top:20px;text-align:left}.workshop-image{order:4;position:relative;top:auto;right:auto;transform:none;width:132%;max-width:none;margin:-4px 0 -12px -29%;mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 88%,transparent 100%)}.vaPills{display:none}.vaBtns{order:5;align-self:stretch;align-items:center;margin-top:4px;gap:15px}.vaBtns .btn-primary{width:100%;justify-content:center;padding:18px 12px;font-size:10px}.vaCtaNote{order:6;text-align:center;font-size:10px;margin-top:14px}.vaStats{order:7;align-self:stretch;justify-content:space-between;gap:14px;margin-top:23px;padding-top:20px}.vsN{font-size:29px}.vsL{font-size:8px;letter-spacing:.4px}}
+
+
+/* Dark workshop hero proposal */
+body{background:#08090b;color:#f1f2f4}
+nav{background:rgba(16,18,22,.85);border-color:#ffffff1a;box-shadow:0 12px 36px #0004}
+.nav-logo{color:#e2e5ea;-webkit-text-fill-color:#e2e5ea}
+.nav-links a{color:#b4bac4}.nav-links a:hover{background:#ffffff0c;color:#fff}
+.nav-cta{background:linear-gradient(135deg,#f2f4f6,#bbc2cc);color:#171c24;-webkit-text-fill-color:#171c24}
+.vaHero{background:radial-gradient(ellipse at 80% 50%,#282d35 0%,#111419 42%,#08090b 75%)}
+.workshop-image{mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 92%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 17%,#000 87%,transparent 100%);mask-composite:intersect;filter:brightness(.83) contrast(1.07)}
+.vaBadge{background:#ffffff07;border-color:#ffffff26;color:#c1c8d2}.vaBadge i{background:#c6cedb}
+.vaEyebrow{color:#929ba9}.vaTitle{color:#f0f1f3}.vaTitle em{background:linear-gradient(135deg,#f7f8fa 0%,#c4ccd7 44%,#8e9aaa 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.vaSub{color:#b4bbc6}.vaSub b{color:#f0f2f5}.vaPill{background:#ffffff05;border-color:#ffffff20;color:#c1c7d0}
+.vaBtns .btn-primary{background:linear-gradient(135deg,#f1f3f6,#b9c1cd);border-color:#d5dae2;color:#141b25;box-shadow:0 7px 28px #b8c4db12}
+.vaBtns .btn-secondary{border-color:#606b7b;color:#c0c8d4}.vaCtaNote{color:#909aa8}.vaStats{border-top-color:#ffffff20}.vsN{color:#e1e6ee;-webkit-text-fill-color:#e1e6ee}.vsL{color:#98a3b3}
+@media(max-width:760px){.vaHero{background:radial-gradient(ellipse at 70% 50%,#20252d,#08090b 75%)}.workshop-image{mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 84%,transparent);filter:brightness(.88) contrast(1.07)}}
+
+.vaStats{flex-wrap:nowrap}.vaStats>div{padding:0;border:0;flex:1;min-width:0}.vaStats .vsN{font-size:33px}.vaStats .vsL{font-size:8px;letter-spacing:.7px;white-space:nowrap}
+@media(min-width:761px){.vaHero{padding:125px 0 50px}.vaHero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,#08090b 0%,rgba(8,9,11,.98) 27%,rgba(8,9,11,.85) 35%,transparent 51%)}.vaBtns{flex-direction:row;align-items:center;gap:20px}.vaBtns .btn-primary{padding:18px 20px;font-size:10px}.vaBtns .btn-secondary{font-size:9px;letter-spacing:.3px}.vaCtaNote{max-width:430px}.vaPills{margin-top:20px}.vaPill{font-size:9px;padding:6px 9px}.vaStats{margin-top:25px;max-width:430px}.vaTitle{font-size:clamp(58px,5.1vw,76px)}}
+
+/* Black artwork: retain natural chrome lighting without gray backdrop. */
+.vaHero{background:#08090b}
+.workshop-image{filter:none;mask-image:linear-gradient(to right,transparent 0%,#000 23%,#000 97%,transparent 100%);mask-composite:add}
+@media(min-width:761px){.vaHero::after{background:linear-gradient(to right,#08090b 0%,rgba(8,9,11,.98) 27%,rgba(8,9,11,.6) 35%,transparent 45%)}}
+@media(max-width:760px){.vaHero{background:#08090b}.workshop-image{filter:none;mask-image:none}}
+
+/* Preview revisions: proper second CTA and warm porcelain section system. */
+body{background:#08090b;color:var(--ink)}
+nav{position:fixed}.nav-burger{display:none}
+@media(max-width:1080px){.nav-burger{display:flex}}
+.vaBtns{gap:12px}
+.vaBtns .btn-primary,.vaBtns .btn-secondary{min-height:54px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;box-sizing:border-box}
+.vaBtns .btn-secondary{padding:17px 20px;border:1px solid #737d8d;background:#1b2028;color:#edf0f5;font-size:10px;font-weight:600;letter-spacing:.7px;text-decoration:none}
+.vaBtns .btn-secondary:hover{background:#2c3440;border-color:#a3aebe;color:#fff}
+.vaBtns a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.section-light{--bg:#e8e5df;--bg2:#f5f2ed;--c1:#242321;--c2:#373530;--c3:#56524c;--c4:#6b655c;--ink:#242321;--ink2:#514c45;--ink3:#56524c;--chrome-grad:linear-gradient(135deg,#48453f,#242321);--chrome-shine:linear-gradient(105deg,#514c45 0%,#242321 50%,#514c45 100%);background:#e8e5df;color:var(--ink);border-top:1px solid #d4cec5;border-bottom:1px solid #d4cec5}
+.section-light .section-title,.section-light .module-title,.section-light .outcome-title{color:#242321;-webkit-text-fill-color:#242321}
+.section-light .section-title em{color:#514c45;-webkit-text-fill-color:#514c45}
+.section-light .section-intro,.section-light .author-lead,.section-light .author-list div,.section-light .checklist li,.section-light .outcome-desc,.section-light .g-desc,.section-light .payment-desc,.section-light .exc-lead,.section-light .exc-item .ed,.section-light .exc-disc p{color:#514c45}
+.section-light .author-nums>div,.section-light .result-left,.section-light .result-stat-box,.section-light .module-card,.section-light .module-card:nth-child(even),.section-light .outcome-card,.section-light .outcome-card:nth-child(2n),.section-light .guarantee-card,.section-light .payment-card,.section-light .exc-card{background:#f5f2ed;border-color:#d9d3ca;box-shadow:none}
+.section-light .module-card.bonus-card,.section-light .payment-card.special,.section-light .guarantee-bottom{background:#ded8ce;border-color:#c9c0b4;color:#39352f}
+.section-light .topic-item,.section-light .exc-item,.section-light .exc-disc{background:#ece7df;border-color:#d6cec3;color:#484239}
+.section-light .tool-tag,.section-light .module-tag,.section-light .exc-facts span{background:#e2dbd0;border-color:#d0c6b8;color:#423b32}
+.section-light .module-num,.section-light .outcome-num{color:#6b6052}
+.section-light .module-arrow{color:#51483c;border-color:#c9bfb1}
+.section-light .module-body-inner,.section-light .module-result,.section-light .checklist li{border-color:#d8d0c5}
+.section-light .module-header:hover{background:#68563c08}
+.section-light .review-card{background:#f5f2ed;border-color:#d9d3ca;box-shadow:none}
+.section-light .review-person{background:#f5f2ed;color:#242321}.section-light .review-person span{color:#625b52}
+.section-light .payment-cta{color:#39352f;border-color:#c7bcad;background:#e2dbd0}
+.section-light .payment-cta:hover{background:#d9cfbf}
+.section-light .exc-cta{background:#2e2b27;color:#f5f2ed;box-shadow:none}
+.section-light .author-photo{border-color:#c9bfb1!important}
+@media(max-width:760px){.vaBtns{flex-direction:column;align-items:stretch}.vaBtns .btn-secondary{width:100%;padding:17px 15px;font-size:10px}.vaBtns .btn-primary{width:100%}.nav-burger{margin-left:12px}}
+
+/* Muted ambient loop, with poster, pause control and reduced-motion fallback. */
+.workshop-motion{aspect-ratio:16/9;height:auto}
+.workshop-motion>img,.workshop-motion>video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:fill}
+.workshop-motion>video{opacity:0;transition:opacity .2s ease;pointer-events:none}
+.workshop-motion.is-playing>video{opacity:1}
+.workshop-motion .motion-toggle{position:absolute;right:7%;bottom:1%;z-index:2;pointer-events:auto;padding:8px 12px;border:1px solid #5d6775;border-radius:7px;background:#11161dd9;color:#d8dde5;font:500 10px Montserrat,sans-serif;cursor:pointer;min-height:36px;letter-spacing:.3px}
+.workshop-motion .motion-toggle:hover{background:#26313e}.workshop-motion .motion-toggle:focus-visible{outline:2px solid #e5e9f0;outline-offset:3px}
+@media(max-width:760px){.workshop-motion .motion-toggle{bottom:5%;right:8%;padding:7px 10px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.workshop-motion>video{transition:none}}
+
+/* Purpose-built compact hero composition for tablets and phones. */
+@media(max-width:1100px){
+  nav{top:14px;width:calc(100% - 32px);padding:12px 16px;gap:12px}
+  .nav-logo{font-size:14px;letter-spacing:1px;margin-right:auto}.nav-cta{margin-left:auto;font-size:10px;padding:9px 13px}.nav-burger{display:flex;margin-left:0;flex-shrink:0}
+  .vaHero{display:flex;flex-direction:column;align-items:center;min-height:0;padding:110px 24px 32px;overflow:hidden}
+  .vaHero::after{display:none}.vaWrap{display:contents;padding:0;margin:0}
+  .vaWrap>*{pointer-events:auto;max-width:620px;width:auto;margin-left:0;margin-right:0;align-self:auto;text-align:center}
+  .vaBadge{order:0;display:inline-flex;margin:0 0 16px;padding:7px 12px;font-size:9px;letter-spacing:2px}
+  .vaEyebrow,.vaPills{display:none}
+  .vaTitle{order:1;font-size:clamp(44px,7vw,68px);line-height:1.04;margin:0;max-width:760px;letter-spacing:-1px}
+  .vaSub{order:2;max-width:590px;font-size:14px;line-height:1.7;margin:18px 0 0}
+  .vaBtns{order:3;display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:10px;width:100%;max-width:530px;margin:23px 0 0}
+  .vaBtns .btn-primary,.vaBtns .btn-secondary{flex:1;width:auto;min-width:0;min-height:52px;font-size:10px;padding:15px 12px;letter-spacing:.5px;line-height:1.4;text-align:center}
+  .vaCtaNote{order:4;font-size:10px;line-height:1.6;max-width:420px;margin:12px 0 0}
+  .workshop-image.workshop-motion{order:5;position:relative;inset:auto;transform:none;mask-image:none;filter:none;width:100%;max-width:600px;aspect-ratio:1.3;margin:8px auto 0;overflow:hidden;z-index:0}
+  .workshop-motion>img,.workshop-motion>video{width:143%;height:auto;max-width:none;object-fit:contain;left:auto;right:-2%;top:50%;bottom:auto;transform:translateY(-50%)}
+  .workshop-motion .motion-toggle{right:1%;bottom:1%;font-size:9px;min-height:32px;padding:6px 10px}
+  .vaStats{order:6;max-width:540px;width:100%;display:flex;align-self:auto;justify-content:space-between;margin:12px 0 0;padding-top:18px;gap:16px}
+  .vaStats>div{text-align:center}.vaStats .vsN{font-size:30px}.vaStats .vsL{font-size:8px;letter-spacing:.5px}
+}
+@media(max-width:600px){
+  .vaHero{padding:94px 20px 26px}.nav-logo{font-size:11px;letter-spacing:.7px}.nav-cta{display:none}.nav-burger{margin-left:auto}
+  .vaBadge{font-size:8px;letter-spacing:1.6px;margin-bottom:13px}.vaTitle{font-size:clamp(36px,10.8vw,55px);letter-spacing:-.7px}
+  .vaSub{font-size:12px;line-height:1.65;max-width:430px;margin-top:15px}.vaBtns{margin-top:19px;gap:8px}
+  .vaBtns .btn-primary,.vaBtns .btn-secondary{font-size:9px;letter-spacing:.2px;padding:13px 8px;min-height:50px}
+  .vaCtaNote{font-size:9px;max-width:310px;margin-top:10px}.workshop-image.workshop-motion{margin-top:6px;max-width:440px;aspect-ratio:1.3}
+  .vaStats{margin-top:10px;padding-top:16px;gap:9px}.vaStats .vsN{font-size:27px}.vaStats .vsL{font-size:7px;letter-spacing:.25px}
+}
+/* The course unfolds through eight illustrated workshop stations. */
+#program .modules-grid{gap:16px;margin-top:40px}
+#program .module-card{border-radius:18px;overflow:hidden}
+#program .module-header{display:grid;grid-template-columns:310px minmax(0,1fr) 36px;gap:28px;align-items:center;width:100%;padding:18px;background:transparent;border:0;color:inherit;font-family:inherit;text-align:left;cursor:pointer}
+#program .module-header:hover{background:#68563c06}
+#program .module-header:focus-visible{outline:3px solid #76664f;outline-offset:-4px}
+#program .module-illustration{display:block;background:#0b0d0f;border:1px solid #313944;border-radius:12px;overflow:hidden;aspect-ratio:4/3}
+#program .module-illustration img{display:block;width:100%;height:100%;object-fit:cover;object-position:right center;transition:transform .35s ease}
+/* Source rooms sit to the right; crop the empty field, preserving the whole room. */
+#program .module-card[data-module="5"] .module-illustration img{object-position:60% center}
+#program .module-header:hover .module-illustration img{transform:scale(1.025)}
+#program .module-stage{display:block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:#746653;margin-bottom:13px}
+#program .module-title{font-size:20px;line-height:1.35;margin-bottom:10px}
+#program .module-subtitle{font-size:13px;line-height:1.7;letter-spacing:0;color:#5b544a;max-width:550px}
+#program .module-arrow{width:34px;height:34px;justify-self:center}
+#program .module-body-inner{padding:8px 36px 30px;border-top-color:#d8d0c5}
+@media(max-width:900px){#program .module-header{grid-template-columns:240px minmax(0,1fr) 30px;gap:20px;padding:14px}#program .module-title{font-size:17px}#program .module-subtitle{font-size:12px}#program .module-stage{font-size:9px;margin-bottom:9px;letter-spacing:1px}}
+@media(max-width:600px){#program .modules-grid{gap:18px;margin-top:28px}#program .module-header{grid-template-columns:minmax(0,1fr) 32px;padding:12px;gap:17px 12px}#program .module-illustration{grid-column:1/-1;width:100%;aspect-ratio:4/3;border-radius:10px}#program .module-header-main{padding:0 4px 7px}#program .module-stage{font-size:9px;margin-bottom:9px}#program .module-title{font-size:17px;margin-bottom:8px;line-height:1.4}#program .module-subtitle{font-size:12px;line-height:1.65}#program .module-body-inner{padding:6px 16px 22px}#program .module-topics{gap:8px}}
+@media(prefers-reduced-motion:reduce){#program .module-illustration img{transition:none}#program .module-header:hover .module-illustration img{transform:none}}
+.workshop-motion{background:#08090b}.workshop-motion.is-playing>img{opacity:0}.workshop-motion>video{mix-blend-mode:lighten}
+@media(max-width:1100px){.workshop-image.workshop-motion{aspect-ratio:1.2;max-width:560px}.workshop-motion>img,.workshop-motion>video{width:136%;right:0}}
+@media(max-width:600px){.workshop-image.workshop-motion{aspect-ratio:1.2;max-width:440px}}
+
+/* Keep interactive and decorative states within the porcelain palette. */
+.section-light .section-label::after{background:linear-gradient(to right,#a99d8b,transparent)}
+.section-light .module-card.open,.section-light .result-stat-box:hover,.section-light .outcome-card:hover{border-color:#b6aa98}
+.section-light .module-card.open .module-arrow{border-color:#b6aa98;color:#51483c}
+.section-light .author-photo{box-shadow:none!important}
+.section-light .exc-no{border-left-color:#b6aa98}
+.section-light .exc-cta:hover{background:#454039}
+.section-light a:focus-visible,.section-light button:focus-visible{outline-color:#76664f}
+
+/* Own workshop marks: course facts, with links to their supporting sections. */
+.workshop-marks{position:absolute;z-index:3;right:max(40px,calc((100vw - 1270px)/2));top:130px;display:flex;align-items:center;width:352px;isolation:isolate}
+.experience-seal{display:block;width:142px;height:142px;flex-shrink:0;position:relative;z-index:2;border-radius:50%;background:conic-gradient(from 35deg,#fff,#a2a9b2 16%,#eef0f3 30%,#a8afb9 46%,#fff 63%,#b4bbc5 82%,#fff);box-shadow:0 8px 26px #0006,inset 0 0 0 1px #fff9;transform:rotate(-12deg);color:#181c22;text-decoration:none}
+.experience-seal svg{display:block;width:100%;height:100%;overflow:visible}
+.experience-seal circle{fill:none;stroke:#343b45;stroke-width:1}.experience-seal .seal-inner{stroke-width:.7;opacity:.65}
+.seal-ring{font:500 10px Montserrat,sans-serif;letter-spacing:1.2px;fill:#242932}
+.seal-number{text-anchor:middle;font:600 64px Montserrat,sans-serif;letter-spacing:-5px;fill:#181c22}
+.seal-years{text-anchor:middle;font:600 11px Montserrat,sans-serif;letter-spacing:3px;fill:#343b45}
+.portfolio-mark{display:flex;flex-direction:column;justify-content:center;gap:9px;margin-left:-20px;width:230px;min-height:100px;padding:17px 18px 17px 34px;border:1px solid #f2f4f7aa;border-radius:0 10px 10px 0;background:linear-gradient(118deg,#9aa4b2 0%,#e8edf2 27%,#fafbfc 42%,#bdc6d1 69%,#edf0f4 100%);color:#20252d;box-shadow:0 8px 26px #0004;text-decoration:none;text-align:left}
+.mark-kicker{font-size:7px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase}.portfolio-mark strong{font-size:23px;font-weight:700;letter-spacing:-.8px;line-height:1.1;white-space:nowrap}.mark-caption{font-size:10px;font-weight:500}.mark-caption span{margin-left:5px}
+.workshop-marks a:focus-visible{outline:2px solid #fff;outline-offset:5px}
+@media(max-width:1100px){.workshop-marks{position:relative;inset:auto;order:6;margin:10px auto 3px;width:352px;max-width:100%}.vaStats{order:7}}
+@media(max-width:600px){.workshop-marks{width:310px;margin-top:8px}.experience-seal{width:118px;height:118px}.portfolio-mark{min-height:88px;width:210px;padding:14px 12px 14px 28px;gap:8px}.portfolio-mark strong{font-size:21px}.mark-kicker{font-size:6px;letter-spacing:1.2px}.mark-caption{font-size:9px}}

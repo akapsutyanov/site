@@ -1450,6 +1450,8 @@ section[id]{scroll-margin-top:120px}
   .section-light .exc-cta{width:100%;justify-content:center;padding:17px 16px;font-size:11px;letter-spacing:1px}
 }
 </style>
+<link rel="stylesheet" href="/master/workshop.css?v=20261031">
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -1506,8 +1508,11 @@ section[id]{scroll-margin-top:120px}
 
 <!-- HERO · вариант A -->
 <section class="vaHero">
-  <div class="vaMosaic"><div class="vaCol"><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../heist/poster.jpg" alt=""></div><div class="vaCol"><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="../claw/ref1-prize.jpg" alt=""></div><div class="vaCol"><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""><img src="../mult/frame-shadow.jpg" alt=""><img src="../magnet/poster.jpg" alt=""><img src="../mult/frame-pie.jpg" alt=""></div><div class="vaCol"><img src="hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""><img src="hero-poster.jpg" alt=""><img src="../giant/poster.jpg" alt=""><img src="../mult/frame-monitor.jpg" alt=""></div></div>
-  <div class="vaScrim"></div>
+  <div class="workshop-image workshop-motion">
+    <img src="/master/hero-room-black.jpg" alt="Режиссёр в красной кофте работает с раскадровкой в хромированной мастерской">
+    <video id="workshopLoop" muted loop playsinline preload="metadata" aria-hidden="true" poster="/master/hero-room-black.jpg"><source src="/master/hero-workshop-loop.mp4" type="video/mp4"></video>
+    <button class="motion-toggle" type="button" aria-label="Включить анимацию мастерской" hidden>▶ Включить</button>
+  </div>
   <div class="vaWrap">
     <div class="vaBadge"><i></i>Профессия · с нуля</div>
     <div class="vaEyebrow">AI — Новый Уровень · Обучение с нуля</div>
@@ -1530,7 +1535,21 @@ section[id]{scroll-margin-top:120px}
       <div><div class="vsN">15</div><div class="vsL">мест в потоке</div></div>
     </div>
   </div>
-  <div class="vaScroll">Листай</div>
+  <div class="workshop-marks" aria-label="Опыт автора и результат обучения">
+    <a class="experience-seal" href="#author" aria-label="8 лет опыта автора в съёмке и монтаже">
+      <svg viewBox="0 0 160 160" aria-hidden="true">
+        <defs><path id="experience-ring" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs>
+        <circle cx="80" cy="80" r="75"/><circle class="seal-inner" cx="80" cy="80" r="49"/>
+        <text class="seal-ring"><textPath href="#experience-ring" textLength="382">ОПЫТ АВТОРА · СЪЁМКА И МОНТАЖ · </textPath></text>
+        <text class="seal-number" x="80" y="91">8</text><text class="seal-years" x="80" y="112">ЛЕТ</text>
+      </svg>
+    </a>
+    <a class="portfolio-mark" href="#results">
+      <span class="mark-kicker">Результат обучения</span>
+      <strong>3 AI-ролика</strong>
+      <span class="mark-caption">в твоём портфолио <span aria-hidden="true">↗</span></span>
+    </a>
+  </div>
 </section>
 
 <!-- TICKER -->
@@ -1806,20 +1825,19 @@ section[id]{scroll-margin-top:120px}
 <section class="program-section section-light" id="program">
   <div class="section-label reveal">Программа</div>
   <h2 class="section-title reveal">От задачи бренда<br><em>до готового ролика и предложения</em></h2>
-  <p class="section-intro reveal">Шесть основных модулей и два углублённых блока — по режиссуре и работе с нейросетями. В каждом шаге есть практика и конкретный результат.</p>
+  <p class="section-intro reveal">Шесть основных модулей и два углублённых блока — по режиссуре и работе с нейросетями. В каждом шаге есть практика и конкретный результат. Проходи мастерскую по этапам: от первого замысла до работы с клиентами.</p>
   <div class="modules-grid reveal">
 
     <!-- БЛОК 1 -->
     <div class="module-card" data-module="1">
-      <div class="module-header">
-        <div class="module-num">01</div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-1"><span class="module-illustration"><img src="/master/modules/1.jpg" alt="Мастерская: Идея, задача и первые генерации" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">01 · Идея</span>
           <div class="module-title">Идея, задача и первые генерации</div>
           <div class="module-subtitle">Выберешь направление и создашь первые AI-изображения</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-1">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">ChatGPT</span>
@@ -1841,15 +1859,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- БЛОК 2 -->
     <div class="module-card" data-module="2">
-      <div class="module-header">
-        <div class="module-num">02</div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-2"><span class="module-illustration"><img src="/master/modules/2.jpg" alt="Мастерская: Инструменты и бюджет" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">02 · Инструменты</span>
           <div class="module-title">Инструменты и бюджет</div>
           <div class="module-subtitle">Подберёшь нейросети под свои задачи и настроишь рабочий набор</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-2">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Агрегаторы</span>
@@ -1871,17 +1888,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- РЕЖИССЕРСКИЙ БЛОК -->
     <div class="module-card" data-module="r1">
-      <div class="module-header">
-        <div class="module-num">
-          <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--c3);font-family:'Montserrat',sans-serif;">РЕЖ</span>
-        </div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-r1"><span class="module-illustration"><img src="/master/modules/r1.jpg" alt="Мастерская: Режиссура и визуальный язык" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">Практикум · Режиссура</span>
           <div class="module-title">Режиссура и визуальный язык</div>
           <div class="module-subtitle">Соберёшь референсы и разработаешь визуальную концепцию</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-r1">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Режиссура</span>
@@ -1903,17 +1917,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- ТЕХНИЧЕСКИЙ БЛОК -->
     <div class="module-card" data-module="t1">
-      <div class="module-header">
-        <div class="module-num">
-          <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--c3);font-family:'Montserrat',sans-serif;">ТЕХ</span>
-        </div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-t1"><span class="module-illustration"><img src="/master/modules/r2.jpg" alt="Мастерская: Управление генерацией" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">Практикум · Генерация</span>
           <div class="module-title">Управление генерацией</div>
           <div class="module-subtitle">Научишься задавать стиль, свет и движение через промпты</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-t1">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Midjourney</span>
@@ -1952,15 +1963,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- ПРАКТИЧЕСКИЙ БЛОК -->
     <div class="module-card" data-module="p2">
-      <div class="module-header">
-        <div class="module-num">03</div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-p2"><span class="module-illustration"><img src="/master/modules/3.jpg" alt="Мастерская: Ролики для портфолио" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">03 · Создание роликов</span>
           <div class="module-title">Ролики для портфолио</div>
           <div class="module-subtitle">Пройдёшь путь от изображений и анимации до готовых работ</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-p2">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Midjourney</span>
@@ -1985,15 +1995,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- БЛОК 4 -->
     <div class="module-card" data-module="4">
-      <div class="module-header">
-        <div class="module-num">04</div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-4"><span class="module-illustration"><img src="/master/modules/4.jpg" alt="Мастерская: Портфолио и профиль специалиста" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">04 · Портфолио</span>
           <div class="module-title">Портфолио и профиль специалиста</div>
           <div class="module-subtitle">Оформишь работы так, чтобы клиент понимал твои возможности</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-4">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Соцсети</span>
@@ -2015,15 +2024,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- БЛОК 5 -->
     <div class="module-card" data-module="5">
-      <div class="module-header">
-        <div class="module-num">05</div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-5"><span class="module-illustration"><img src="/master/modules/5.jpg" alt="Мастерская: Поиск клиентов и продажи" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">05 · Клиенты</span>
           <div class="module-title">Поиск клиентов и продажи</div>
           <div class="module-subtitle">Подготовишь предложения клиентам и научишься обсуждать стоимость</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-5">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Скрипты продаж</span>
@@ -2045,15 +2053,14 @@ section[id]{scroll-margin-top:120px}
 
     <!-- БЛОК 6 -->
     <div class="module-card" data-module="6">
-      <div class="module-header">
-        <div class="module-num">06</div>
-        <div class="module-header-main">
+      <button class="module-header" type="button" aria-expanded="false" aria-controls="module-body-6"><span class="module-illustration"><img src="/master/modules/6.jpg" alt="Мастерская: Развитие после первых заказов" width="960" height="536" loading="lazy" decoding="async"></span>
+        <div class="module-header-main"><span class="module-stage">06 · Развитие</span>
           <div class="module-title">Развитие после первых заказов</div>
           <div class="module-subtitle">Намётишь дальнейший рост: стоимость услуг, блог и собственные продукты</div>
         </div>
         <div class="module-arrow">▾</div>
-      </div>
-      <div class="module-body">
+      </button>
+      <div class="module-body" id="module-body-6">
         <div class="module-body-inner">
           <div class="module-tools-row">
             <span class="tool-tag">Повышение чека</span>
@@ -2849,5 +2856,13 @@ document.querySelectorAll('.module-header').forEach(function(header) {
 
 </script>
 <script src="/assets/lead-ping.js" defer></script>
-</body>
+<script src="/master/hero-motion.js?v=20261031"></script>
+<script>
+document.querySelectorAll('#program .module-card').forEach(card => {
+ const header = card.querySelector('.module-header');
+ const update = () => header.setAttribute('aria-expanded', String(card.classList.contains('open')));
+ new MutationObserver(update).observe(card,{attributes:true,attributeFilter:['class']}); update();
+});
+new ResizeObserver(() => document.querySelectorAll('#program .module-card.open .module-body').forEach(body => {body.style.maxHeight = body.scrollHeight + 'px';})).observe(document.documentElement);
+</script></body>
 </html>
