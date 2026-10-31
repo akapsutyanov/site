@@ -1,7 +1,23 @@
 {
- "updated": "2026-10-31T08:39:51Z",
+ "updated": "2026-10-31T09:11:37Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138743222",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель по AI-контенту\n🏢 LENIVINS.AI · Москва\n💰 от 200000 RUR",
+   "link": "https://hh.ru/vacancy/138743222?tech_source=api",
+   "date": "2026-10-31T11:38:05+0300"
+  },
+  {
+   "id": "hh/138548344",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Партнёр компании по GEO- и AI-поисковой оптимизации (GEO / AI Search Optimization Specialist)\n🏢 Сотка · Москва\n💰 от 180000 RUR",
+   "link": "https://hh.ru/vacancy/138548344?tech_source=api",
+   "date": "2026-10-31T11:25:57+0300"
+  },
   {
    "id": "hh/138740094",
    "source": "hh",
@@ -553,22 +569,6 @@
    "text": "Менеджер по продажам обучения по Нейросетям для детей\n🏢 Квантастика · Москва\n💰 от 110000 до 250000 RUR",
    "link": "https://hh.ru/vacancy/138505344?tech_source=api",
    "date": "2026-10-30T10:12:13+0300"
-  },
-  {
-   "id": "hh/138158615",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-менеджер (AI reels, карусели)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 180000 RUR",
-   "link": "https://hh.ru/vacancy/138158615?tech_source=api",
-   "date": "2026-10-30T09:58:48+0300"
-  },
-  {
-   "id": "hh/138868155",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-видеокреатор / Создатель контента ИИ (Google Flow)\n🏢 Школа Блокси · Москва\n💰 от 60000 RUR",
-   "link": "https://hh.ru/vacancy/138868155?tech_source=api",
-   "date": "2026-10-30T09:58:07+0300"
   },
   {
    "id": "comeinreels/1826",
