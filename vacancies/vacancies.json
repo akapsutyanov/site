@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-01T09:50:24Z",
+ "updated": "2026-11-01T10:45:30Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138123663",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Python-разработчик AI-сервисов (LLM / RAG)\n🏢 QSOFT · Москва",
+   "link": "https://hh.ru/vacancy/138123663?tech_source=api",
+   "date": "2026-11-01T12:58:35+0300"
+  },
   {
    "id": "hh/138839182",
    "source": "hh",
@@ -505,14 +513,6 @@
    "text": "Junior Marketer / Ассистент в отдел маркетинга / Помощник маркетолога (AI & digital маркетинг)\n🏢 HealthCare Investment · Санкт-Петербург",
    "link": "https://hh.ru/vacancy/139018518?tech_source=api",
    "date": "2026-10-30T17:08:38+0300"
-  },
-  {
-   "id": "hh/139018414",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Монтажёр AI-сериалов в AI Production Studio\n🏢 Limex · Чебоксары",
-   "link": "https://hh.ru/vacancy/139018414?tech_source=api",
-   "date": "2026-10-30T17:06:03+0300"
   },
   {
    "id": "work_editor/6720",
