@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-01T11:16:28Z",
+ "updated": "2026-11-01T11:47:29Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138843995",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор / AI-фотограф/ Нейрофотограф\n🏢 LD LATTE · Москва\n💰 от 60000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/138843995?tech_source=api",
+   "date": "2026-11-01T14:11:11+0300"
+  },
+  {
+   "id": "hh/138262827",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-дизайнер / Дизайнер инфографики (маркетплейсы)\n🏢 Кирилюк Сергей Александрович · Москва",
+   "link": "https://hh.ru/vacancy/138262827?tech_source=api",
+   "date": "2026-11-01T13:56:58+0300"
+  },
   {
    "id": "hh/138477271",
    "source": "hh",
@@ -505,22 +521,6 @@
    "text": "AI-контент-креатор / Ведущий YouTube-канала про нейросети / AI-автор / AI-эксперт\n🏢 GameSport · Санкт-Петербург",
    "link": "https://hh.ru/vacancy/138028309?tech_source=api",
    "date": "2026-10-30T18:48:26+0300"
-  },
-  {
-   "id": "hh/137979338",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продукту AI ассистент в личном кабинете продавца, LLM\n🏢 Ozon · Москва",
-   "link": "https://hh.ru/vacancy/137979338?tech_source=api",
-   "date": "2026-10-30T18:22:12+0300"
-  },
-  {
-   "id": "hh/138894973",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-видеокреатор / Нейрокреатор (AI Video Creator)\n🏢 Октагон · Ижевск\n💰 от 70000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/138894973?tech_source=api",
-   "date": "2026-10-30T18:06:44+0300"
   },
   {
    "id": "work_editor/6720",
