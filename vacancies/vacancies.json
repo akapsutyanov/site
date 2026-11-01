@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-01T11:47:29Z",
+ "updated": "2026-11-01T13:23:56Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138847494",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по внедрению искусственного интеллекта\n🏢 Пермский завод промоборудования · Пермь",
+   "link": "https://hh.ru/vacancy/138847494?tech_source=api",
+   "date": "2026-11-01T15:12:50+0300"
+  },
+  {
+   "id": "hh/139033929",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Креатор-стратег (SMM & AI)\n🏢 HR-Профи · Ульяновск\n💰 от 80000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/139033929?tech_source=api",
+   "date": "2026-11-01T15:01:24+0300"
+  },
   {
    "id": "hh/138843995",
    "source": "hh",
@@ -505,22 +521,6 @@
    "text": "Менеджер Wildberries (ChatGPT, Claude)\n🏢 Моц Виталий Сергеевич · Нижний Новгород\n💰 от 70000 до 100000 RUR",
    "link": "https://hh.ru/vacancy/138583670?tech_source=api",
    "date": "2026-10-31T02:06:54+0300"
-  },
-  {
-   "id": "hh/138723381",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Технический специалист по внедрению и настройке (AI-продукт)\n🏢 Меламед Денис Леонидович · Москва\n💰 от 50000 до 55000 RUR",
-   "link": "https://hh.ru/vacancy/138723381?tech_source=api",
-   "date": "2026-10-30T19:37:46+0300"
-  },
-  {
-   "id": "hh/138028309",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-контент-креатор / Ведущий YouTube-канала про нейросети / AI-автор / AI-эксперт\n🏢 GameSport · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/138028309?tech_source=api",
-   "date": "2026-10-30T18:48:26+0300"
   },
   {
    "id": "work_editor/6720",
@@ -1435,14 +1435,6 @@
    "date": "2026-10-21"
   },
   {
-   "id": "tv/22ee3b63-cd4d-11f1-9aaf-0bedcfb2f06a",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "маркетолог\n🏢 ООО \"СТРОЙЗАЩИТА\" · Костромская область\n💰 от 56000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1084405000657/22ee3b63-cd4d-11f1-9aaf-0bedcfb2f06a",
-   "date": "2026-10-21"
-  },
-  {
    "id": "tv/7539d3c4-cc75-11f1-ad95-1708b64918cd",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1520,6 +1512,14 @@
    "channel": "Работа России",
    "text": "Бизнес ассистент\n🏢 JOBCART.RU · Город Москва\n💰 от 65000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1027700404797/e30321a4-c607-11f1-ae33-c1e0bfede95f",
+   "date": "2026-10-12"
+  },
+  {
+   "id": "tv/7f510054-c634-11f1-95b7-7b433e2e68a9",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Бизнес-ассистент\n🏢 ООО \"Джобкарт\" · Город Москва\n💰 от 65000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/7f510054-c634-11f1-95b7-7b433e2e68a9",
    "date": "2026-10-12"
   }
  ]
