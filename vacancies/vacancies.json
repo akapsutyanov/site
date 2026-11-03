@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-03T16:17:36Z",
+ "updated": "2026-11-03T16:49:07Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138447495",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Junior-разработчик (AI Engineering)\n🏢 Xsolla · Владивосток",
+   "link": "https://hh.ru/vacancy/138447495?tech_source=api",
+   "date": "2026-11-03T19:36:29+0300"
+  },
+  {
+   "id": "hh/138628767",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес-ассистент основателя (ассистент руководителя) в AI-проект\n🏢 Coffee Station · Москва\n💰 от 120000 до 160000 RUR",
+   "link": "https://hh.ru/vacancy/138628767?tech_source=api",
+   "date": "2026-11-03T19:35:36+0300"
+  },
   {
    "id": "hh/139122779",
    "source": "hh",
@@ -529,22 +545,6 @@
    "text": "AI-engineer в антифрод\n🏢 Альфа-Банк · Москва",
    "link": "https://hh.ru/vacancy/139081800?tech_source=api",
    "date": "2026-11-02T18:03:25+0300"
-  },
-  {
-   "id": "hh/139080942",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Нижний Новгород\n💰 от 72000 RUR",
-   "link": "https://hh.ru/vacancy/139080942?tech_source=api",
-   "date": "2026-11-02T17:33:10+0300"
-  },
-  {
-   "id": "hh/133320619",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Редактор текстов для обучения нейросетей (GigaChat)\n🏢 СБЕР · Воронеж",
-   "link": "https://hh.ru/vacancy/133320619?tech_source=api",
-   "date": "2026-11-02T17:32:20+0300"
   },
   {
    "id": "vacancysmm/17224",
