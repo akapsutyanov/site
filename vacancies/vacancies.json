@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-03T12:11:02Z",
+ "updated": "2026-11-03T12:43:09Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138139918",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-тренер/эксперт в области инженерии\n🏢 Яндекс Крауд · Москва",
+   "link": "https://hh.ru/vacancy/138139918?tech_source=api",
+   "date": "2026-11-03T15:40:48+0300"
+  },
+  {
+   "id": "hh/139115516",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор\n🏢 Igumnov pro remont · Калининград\n💰 от 40000 RUR",
+   "link": "https://hh.ru/vacancy/139115516?tech_source=api",
+   "date": "2026-11-03T15:21:06+0300"
+  },
   {
    "id": "hh/138616572",
    "source": "hh",
@@ -505,22 +521,6 @@
    "text": "Помощник куратора AI-проектов / менеджер клиентского сервиса\n🏢 Restosupport · Смоленск\n💰 от 50000 до 200000 RUR",
    "link": "https://hh.ru/vacancy/139074789?tech_source=api",
    "date": "2026-11-02T15:46:53+0300"
-  },
-  {
-   "id": "hh/138309142",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-first Lead-дизайнер (товары для дома, маркетплейсы)\n🏢 Hausberg LTD · Москва",
-   "link": "https://hh.ru/vacancy/138309142?tech_source=api",
-   "date": "2026-11-02T15:22:01+0300"
-  },
-  {
-   "id": "hh/139073352",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продвижению ИИ\n🏢 Астрахань-Гарант-Сервис · Астрахань\n💰 от 55000 до 90000 RUR",
-   "link": "https://hh.ru/vacancy/139073352?tech_source=api",
-   "date": "2026-11-02T15:21:44+0300"
   },
   {
    "id": "vacancysmm/17224",
