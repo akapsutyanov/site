@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-04T10:16:03Z",
+ "updated": "2026-11-04T10:47:39Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138477271",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SEO-специалист / Руководитель PBN-проекта (AI, автоматизация, дроп-домены)\n🏢 ITPro · Казань\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/138477271?tech_source=api",
+   "date": "2026-11-04T13:41:55+0300"
+  },
   {
    "id": "hh/138839182",
    "source": "hh",
@@ -433,14 +441,6 @@
    "text": "Data Scientist (AI агенты)\n🏢 СБЕР · Москва",
    "link": "https://hh.ru/vacancy/139106250?tech_source=api",
    "date": "2026-11-03T12:29:00+0300"
-  },
-  {
-   "id": "hh/137061196",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Псков\n💰 от 85750 RUR",
-   "link": "https://hh.ru/vacancy/137061196?tech_source=api",
-   "date": "2026-11-03T12:26:36+0300"
   },
   {
    "id": "vacancysmm/17229",
