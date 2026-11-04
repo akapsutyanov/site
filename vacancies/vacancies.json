@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-04T09:44:23Z",
+ "updated": "2026-11-04T10:16:03Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138839182",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI/ИИ контент-менеджер маркетплейсов\n🏢 Ай-Эм-Ди-Эм Оперейшнз · Москва\n💰 от 90000 до 110000 RUR",
+   "link": "https://hh.ru/vacancy/138839182?tech_source=api",
+   "date": "2026-11-04T12:40:57+0300"
+  },
+  {
+   "id": "hh/138785686",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "2D AI художник\n🏢 Pixel Talent · Москва",
+   "link": "https://hh.ru/vacancy/138785686?tech_source=api",
+   "date": "2026-11-04T12:40:46+0300"
+  },
   {
    "id": "hh/139134056",
    "source": "hh",
@@ -9,6 +25,22 @@
    "text": "SMM-менеджер со знанием нейросетей ИИ\n🏢 Колосова Надежда Алексеевна · Краснодар\n💰 от 15000 до 25000 RUR",
    "link": "https://hh.ru/vacancy/139134056?tech_source=api",
    "date": "2026-11-04T12:37:33+0300"
+  },
+  {
+   "id": "hh/138256771",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес аналитик AI\n🏢 Froza · Москва\n💰 от 200000 до 300000 RUR",
+   "link": "https://hh.ru/vacancy/138256771?tech_source=api",
+   "date": "2026-11-04T12:28:15+0300"
+  },
+  {
+   "id": "hh/138784017",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-менеджер / AI-контент-креатор\n🏢 Атлантик Айти · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/138784017?tech_source=api",
+   "date": "2026-11-04T12:07:05+0300"
   },
   {
    "id": "hh/139133274",
@@ -25,6 +57,22 @@
    "text": "AI-креатор (видео) / ИИ креатор\n🏢 Исупов Владислав Александрович · Екатеринбург\n💰 от 30000 RUR",
    "link": "https://hh.ru/vacancy/139133196?tech_source=api",
    "date": "2026-11-04T11:56:59+0300"
+  },
+  {
+   "id": "hh/138470765",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "CRM & Digital Product Manager (Retention / AI-marketing)\n🏢 Амариста · Москва",
+   "link": "https://hh.ru/vacancy/138470765?tech_source=api",
+   "date": "2026-11-04T11:53:46+0300"
+  },
+  {
+   "id": "hh/138470761",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Разработчик AI-автоматизации и аналитики (AI Automation Engineer / Python & Data Developer/e-com)\n🏢 Art Family · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/138470761?tech_source=api",
+   "date": "2026-11-04T11:53:38+0300"
   },
   {
    "id": "hh/138652446",
@@ -393,54 +441,6 @@
    "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Псков\n💰 от 85750 RUR",
    "link": "https://hh.ru/vacancy/137061196?tech_source=api",
    "date": "2026-11-03T12:26:36+0300"
-  },
-  {
-   "id": "hh/139105847",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Python-разработчик (FastAPI, маркетплейсы, разработка с ИИ)\n🏢 Ракета · Москва",
-   "link": "https://hh.ru/vacancy/139105847?tech_source=api",
-   "date": "2026-11-03T12:22:56+0300"
-  },
-  {
-   "id": "hh/139105713",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Middle AI Infrastructure Engineer\n🏢 СБЕР · Москва",
-   "link": "https://hh.ru/vacancy/139105713?tech_source=api",
-   "date": "2026-11-03T12:20:00+0300"
-  },
-  {
-   "id": "hh/139105552",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Графический дизайнер на маркетплейсы / AI-дизайнер\n🏢 Hausland · Москва\n💰 от 80000 RUR",
-   "link": "https://hh.ru/vacancy/139105552?tech_source=api",
-   "date": "2026-11-03T12:17:07+0300"
-  },
-  {
-   "id": "hh/139105181",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-дизайнер / AI-креатор (маркетплейс)\n🏢 Элитойс · Москва\n💰 до 60000 RUR",
-   "link": "https://hh.ru/vacancy/139105181?tech_source=api",
-   "date": "2026-11-03T12:12:50+0300"
-  },
-  {
-   "id": "hh/138744901",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент менеджер / AI Content Manager\n🏢 Се Плюс · Ставрополь\n💰 от 65000 RUR",
-   "link": "https://hh.ru/vacancy/138744901?tech_source=api",
-   "date": "2026-11-03T12:07:43+0300"
-  },
-  {
-   "id": "hh/133039518",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
-   "link": "https://hh.ru/vacancy/133039518?tech_source=api",
-   "date": "2026-11-03T11:52:32+0300"
   },
   {
    "id": "vacancysmm/17229",
