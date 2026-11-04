@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-04T09:12:46Z",
+ "updated": "2026-11-04T09:44:23Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139134056",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-менеджер со знанием нейросетей ИИ\n🏢 Колосова Надежда Алексеевна · Краснодар\n💰 от 15000 до 25000 RUR",
+   "link": "https://hh.ru/vacancy/139134056?tech_source=api",
+   "date": "2026-11-04T12:37:33+0300"
+  },
   {
    "id": "hh/139133274",
    "source": "hh",
@@ -433,14 +441,6 @@
    "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
    "link": "https://hh.ru/vacancy/133039518?tech_source=api",
    "date": "2026-11-03T11:52:32+0300"
-  },
-  {
-   "id": "hh/138917867",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Рекрутер / HRBP (EdTech, AI)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/138917867?tech_source=api",
-   "date": "2026-11-03T11:46:57+0300"
   },
   {
    "id": "vacancysmm/17229",
