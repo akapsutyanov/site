@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-04T14:30:29Z",
+ "updated": "2026-11-04T15:02:10Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138276601",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент-креатор / AI-креатор (TikTok)\n🏢 Тибейкина Екатерина Васильевна · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/138276601?tech_source=api",
+   "date": "2026-11-04T17:19:03+0300"
+  },
+  {
+   "id": "hh/138675213",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI/ИИ дизайнер / Контент-менеджер на маркетплейсы\n🏢 INARIO · Москва\n💰 от 120000 RUR",
+   "link": "https://hh.ru/vacancy/138675213?tech_source=api",
+   "date": "2026-11-04T17:14:47+0300"
+  },
   {
    "id": "hh/135286005",
    "source": "hh",
@@ -9,6 +25,14 @@
    "text": "AI Native Web Designer\n🏢 2ГИС · Москва",
    "link": "https://hh.ru/vacancy/135286005?tech_source=api",
    "date": "2026-11-04T17:02:54+0300"
+  },
+  {
+   "id": "hh/138796985",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Методист ИИ-курсов\n🏢 Moscow business academy · Москва\n💰 от 80000 до 100000 RUR",
+   "link": "https://hh.ru/vacancy/138796985?tech_source=api",
+   "date": "2026-11-04T16:47:10+0300"
   },
   {
    "id": "hh/139137817",
@@ -433,30 +457,6 @@
    "text": "AI-креатор\n🏢 Igumnov pro remont · Калининград\n💰 от 40000 RUR",
    "link": "https://hh.ru/vacancy/139115516?tech_source=api",
    "date": "2026-11-03T15:21:06+0300"
-  },
-  {
-   "id": "hh/138617564",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Сценарист на YouTube-канал (нейросети, llm, ai-агенты)\n🏢 GameSport · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/138617564?tech_source=api",
-   "date": "2026-11-03T15:01:34+0300"
-  },
-  {
-   "id": "hh/137117326",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Content Manager (SEO)\n🏢 Шлыков Станислав Игоревич · Москва\n💰 от 60000 до 85000 RUR",
-   "link": "https://hh.ru/vacancy/137117326?tech_source=api",
-   "date": "2026-11-03T14:53:51+0300"
-  },
-  {
-   "id": "hh/138616572",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Администратор интернет-магазинов / Контент-менеджер (Битрикс, AI)\n🏢 Центр Электронной Коммерции · Москва\n💰 от 150000 RUR",
-   "link": "https://hh.ru/vacancy/138616572?tech_source=api",
-   "date": "2026-11-03T14:45:47+0300"
   },
   {
    "id": "comeinlena/6572",
