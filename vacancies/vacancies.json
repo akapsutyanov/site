@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-06T09:50:37Z",
+ "updated": "2026-11-06T10:22:48Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139205079",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-специалист / контент-мейкер в автокомпанию (съёмка, монтаж, нейросети)\n🏢 Мегаполис · Самара\n💰 от 40000 RUR",
+   "link": "https://hh.ru/vacancy/139205079?tech_source=api",
+   "date": "2026-11-06T13:16:13+0300"
+  },
+  {
+   "id": "hh/139203937",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ведущий системный аналитик AI/ML\n🏢 Т1 · Иннополис",
+   "link": "https://hh.ru/vacancy/139203937?tech_source=api",
+   "date": "2026-11-06T12:56:08+0300"
+  },
+  {
+   "id": "hh/139203678",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по внедрению ИИ со знанием Claude\n🏢 Медийное агентство AMG · Екатеринбург\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/139203678?tech_source=api",
+   "date": "2026-11-06T12:51:35+0300"
+  },
   {
    "id": "hh/137061196",
    "source": "hh",
@@ -545,30 +569,6 @@
    "text": "Контент-маркетолог / Дизайнер карточек товара (SEO, AI, E-commerce)\n🏢 Софис · Москва\n💰 от 150000 до 200000 RUR",
    "link": "https://hh.ru/vacancy/137953036?tech_source=api",
    "date": "2026-11-05T13:44:33+0300"
-  },
-  {
-   "id": "hh/138379175",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Fullstack-разработчик (Node.js/React) / AI-native\n🏢 РТ · Москва",
-   "link": "https://hh.ru/vacancy/138379175?tech_source=api",
-   "date": "2026-11-05T13:43:48+0300"
-  },
-  {
-   "id": "hh/139165756",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Сценарист Reels и автор постов в блог про ИИ и вайбкодинг\n🏢 Релинк · Москва",
-   "link": "https://hh.ru/vacancy/139165756?tech_source=api",
-   "date": "2026-11-05T13:40:35+0300"
-  },
-  {
-   "id": "hh/139165305",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Сценарист / контент-продюсер YouTube в проект про ИИ и вайбкодинг\n🏢 Релинк · Москва",
-   "link": "https://hh.ru/vacancy/139165305?tech_source=api",
-   "date": "2026-11-05T13:33:25+0300"
   },
   {
    "id": "work_editor/6741",
