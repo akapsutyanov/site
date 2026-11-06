@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-06T08:12:56Z",
+ "updated": "2026-11-06T08:45:48Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139197930",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Научный сотрудник / Исследователь (цифровые технологии и искусственный интеллект)\n🏢 ТехноВек · Москва\n💰 от 450000 до 950000 RUR",
+   "link": "https://hh.ru/vacancy/139197930?tech_source=api",
+   "date": "2026-11-06T11:16:30+0300"
+  },
+  {
+   "id": "hh/138206844",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Дизайнер по ИИ\n🏢 C. S. · Санкт-Петербург\n💰 от 40000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/138206844?tech_source=api",
+   "date": "2026-11-06T11:15:00+0300"
+  },
+  {
+   "id": "hh/138123663",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Python-разработчик AI-сервисов (LLM / RAG)\n🏢 QSOFT · Москва",
+   "link": "https://hh.ru/vacancy/138123663?tech_source=api",
+   "date": "2026-11-06T11:01:20+0300"
+  },
   {
    "id": "hh/138740094",
    "source": "hh",
@@ -529,30 +553,6 @@
    "text": "ИИ-креатор\n🏢 Котматрос · Москва",
    "link": "https://hh.ru/vacancy/138705758?tech_source=api",
    "date": "2026-11-05T12:37:08+0300"
-  },
-  {
-   "id": "hh/139119000",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Маркетолог по привлечению клиентов / AI-маркетолог\n🏢 Сервер Молл · Санкт-Петербург\n💰 от 100000 RUR",
-   "link": "https://hh.ru/vacancy/139119000?tech_source=api",
-   "date": "2026-11-05T12:33:51+0300"
-  },
-  {
-   "id": "hh/139119174",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Маркетолог на европейский рынок / AI-маркетолог\n🏢 Сервер Молл · Санкт-Петербург\n💰 от 100000 RUR",
-   "link": "https://hh.ru/vacancy/139119174?tech_source=api",
-   "date": "2026-11-05T12:33:45+0300"
-  },
-  {
-   "id": "hh/139161366",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по AI-автоматизации (вайбкодер)\n🏢 Енидорцев Максим Владимирович · Екатеринбург\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/139161366?tech_source=api",
-   "date": "2026-11-05T12:25:22+0300"
   },
   {
    "id": "vacancysmm/17236",
