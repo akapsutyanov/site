@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-08T07:43:02Z",
+ "updated": "2026-11-08T08:14:42Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138505344",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения по Нейросетям для детей\n🏢 Квантастика · Москва\n💰 от 110000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/138505344?tech_source=api",
+   "date": "2026-11-08T10:12:13+0300"
+  },
+  {
+   "id": "hh/138868155",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-видеокреатор / Создатель контента ИИ (Google Flow)\n🏢 Школа Блокси · Москва\n💰 от 60000 RUR",
+   "link": "https://hh.ru/vacancy/138868155?tech_source=api",
+   "date": "2026-11-08T09:58:07+0300"
+  },
+  {
+   "id": "hh/138504029",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения нейросетям (AI / GPT / ПРОМТы)\n🏢 xHuman Sales · Тюмень\n💰 от 200000 RUR",
+   "link": "https://hh.ru/vacancy/138504029?tech_source=api",
+   "date": "2026-11-08T09:49:01+0300"
+  },
   {
    "id": "work_editor/6754",
    "source": "telegram",
@@ -611,36 +635,12 @@
    "date": "2026-11-06T12:56:08+0300"
   },
   {
-   "id": "hh/139203678",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению ИИ со знанием Claude\n🏢 Медийное агентство AMG · Екатеринбург\n💰 от 100000 RUR",
-   "link": "https://hh.ru/vacancy/139203678?tech_source=api",
-   "date": "2026-11-06T12:51:35+0300"
-  },
-  {
    "id": "forallmarketing/8917",
    "source": "telegram",
    "channel": "forallmarketing",
    "text": "Digital-маркетолог\nв\nALTWeb Group\n— группа компаний, разрабатывающая облачные SaaS-продукты для интернет-маркетинга, аналитики данных и SEO.\nУдалённая работа с гибким графиком.\nОписание вакансии на GeekJob.ru",
    "link": "https://t.me/forallmarketing/8917",
    "date": "2026-11-06T12:28:08+00:00"
-  },
-  {
-   "id": "hh/137061196",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Псков\n💰 от 85750 RUR",
-   "link": "https://hh.ru/vacancy/137061196?tech_source=api",
-   "date": "2026-11-06T12:26:36+0300"
-  },
-  {
-   "id": "hh/138744901",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент менеджер / AI Content Manager\n🏢 Се Плюс · Ставрополь\n💰 от 65000 RUR",
-   "link": "https://hh.ru/vacancy/138744901?tech_source=api",
-   "date": "2026-11-06T12:07:43+0300"
   },
   {
    "id": "comeinlena/6587",
