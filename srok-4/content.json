@@ -495,7 +495,6 @@
         "05",
         "07"
       ],
-      "video": "video/scene-01-nine-weeks-v1-480p.mp4",
       "poster": "previews/scene-01.webp"
     },
     {
@@ -511,7 +510,6 @@
         "09",
         "12"
       ],
-      "video": "video/scene-02-packing-v1-480p.mp4",
       "poster": "previews/scene-02.webp"
     },
     {
@@ -526,7 +524,6 @@
         "15",
         "04"
       ],
-      "video": "video/scene-03-vika-waiting-v2-480p.mp4",
       "poster": "previews/scene-03.webp"
     },
     {
@@ -544,7 +541,6 @@
         "12",
         "13"
       ],
-      "video": "video/scene-04-misha-rabbit-v1-480p.mp4",
       "poster": "previews/scene-04.webp"
     },
     {
@@ -561,7 +557,6 @@
         "07",
         "12"
       ],
-      "video": "video/scene-05-goodbye-v1-480p.mp4",
       "poster": "previews/scene-05.webp"
     },
     {
@@ -575,7 +570,6 @@
         "05",
         "11"
       ],
-      "video": "video/scene-06-outside-door-v1-final-480p.mp4",
       "poster": "previews/scene-06.webp"
     }
   ],
@@ -583,8 +577,6 @@
     {
       "title": "Куртка Миши",
       "prompt": "b01-child-coat",
-      "video": "video/b01-child-coat-2.5s.mp4",
-      "source": "video/b01-child-coat-4s.mp4",
       "poster": "previews/b01-child-coat.webp",
       "placement": "После первой фразы и реакции мужа, перед сборами.",
       "refs": [
@@ -594,8 +586,6 @@
     {
       "title": "Открытая сумка",
       "prompt": "b02-open-zipper",
-      "video": "video/b02-open-zipper-2.5s.mp4",
-      "source": "video/b02-open-zipper-4s.mp4",
       "poster": "previews/b02-open-zipper.webp",
       "placement": "После укладки второй футболки, перед квартирой Вики.",
       "refs": [
@@ -606,8 +596,6 @@
     {
       "title": "Нетронутая тарелка гостя",
       "prompt": "b03-guest-plate-v2",
-      "video": "video/b03-guest-plate-v2-2.5s.mp4",
-      "source": "video/b03-guest-plate-v2-4s.mp4",
       "poster": "previews/b03-guest-plate-v2.webp",
       "placement": "После установки второй тарелки и начала ожидания.",
       "refs": [
@@ -617,8 +605,6 @@
     {
       "title": "Заплатка зайца",
       "prompt": "b04-rabbit-patch",
-      "video": "video/b04-rabbit-patch-2.5s.mp4",
-      "source": "video/b04-rabbit-patch-4s.mp4",
       "poster": "previews/b04-rabbit-patch.webp",
       "placement": "После передачи игрушки, реплики Миши и реакции отца.",
       "refs": [
@@ -630,8 +616,6 @@
     {
       "title": "Ручка изнутри",
       "prompt": "b05-inside-handle",
-      "video": "video/b05-inside-handle-2.5s.mp4",
-      "source": "video/b05-inside-handle-4s.mp4",
       "poster": "previews/b05-inside-handle.webp",
       "placement": "После «Не знаю», перед переходом на площадку.",
       "refs": [
@@ -641,8 +625,6 @@
     {
       "title": "Сумка на площадке",
       "prompt": "b06-bag-landing",
-      "video": "video/b06-bag-landing-2.5s.mp4",
-      "source": "video/b06-bag-landing-4s.mp4",
       "poster": "previews/b06-bag-landing.webp",
       "placement": "Перед финальным неподвижным планом мужа.",
       "refs": [
@@ -651,10 +633,7 @@
       ]
     }
   ],
-  "main": "video/srok-04-veshchi-draft-480p.mp4",
-  "raw": "video/scene-06-without-overlay.mp4",
   "downloads": {
-    "srok-04-video.zip": 49.2,
     "srok-04-assets-prompts.zip": 51.0
   }
 }

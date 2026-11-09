@@ -46,9 +46,3 @@ dialog.addEventListener('click', event => {
   if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
 });
 dialog.addEventListener('close', () => opener?.focus());
-document.querySelectorAll('video').forEach(video => video.addEventListener('play', () => {
-  document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
-}));
-document.querySelectorAll('.scene').forEach(scene => scene.addEventListener('toggle', () => {
-  if (!scene.open) scene.querySelectorAll('video').forEach(video => video.pause());
-}));
