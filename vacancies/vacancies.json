@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-09T12:14:59Z",
+ "updated": "2026-11-09T12:48:25Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138929406",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Финансовый аналитик (управленческий учёт, автоматизация, ИИ)\n🏢 Спрейпласт · Москва\n💰 от 170000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/138929406?tech_source=api",
+   "date": "2026-11-09T15:23:24+0300"
+  },
+  {
+   "id": "hh/139271726",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ретушер (с ИИ)\n🏢 ANNALIZA · Ижевск\n💰 от 50000 до 55000 RUR",
+   "link": "https://hh.ru/vacancy/139271726?tech_source=api",
+   "date": "2026-11-09T15:16:39+0300"
+  },
   {
    "id": "hh/139271297",
    "source": "hh",
@@ -17,6 +33,14 @@
    "text": "AI-маркетолог / специалист по нейросетям и автоматизации маркетинга\n🏢 ЕВРО МАФ · Самара\n💰 от 90000 RUR",
    "link": "https://hh.ru/vacancy/139271298?tech_source=api",
    "date": "2026-11-09T15:10:45+0300"
+  },
+  {
+   "id": "hh/138617564",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Сценарист на YouTube-канал (нейросети, llm, ai-агенты)\n🏢 GameSport · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/138617564?tech_source=api",
+   "date": "2026-11-09T15:01:34+0300"
   },
   {
    "id": "hh/138616572",
@@ -529,30 +553,6 @@
    "text": "Преподаватель курса по ИИ / Тренер по нейросетям / Преподаватель IT-курсов\n🏢 СЕРПАНТИН · Йошкар-Ола\n💰 от 35000 до 52000 RUR",
    "link": "https://hh.ru/vacancy/138710996?tech_source=api",
    "date": "2026-11-08T14:08:20+0300"
-  },
-  {
-   "id": "hh/138882588",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Product Manager в команду ИИ-агентов\n🏢 Домклик · Москва",
-   "link": "https://hh.ru/vacancy/138882588?tech_source=api",
-   "date": "2026-11-08T13:51:01+0300"
-  },
-  {
-   "id": "hh/138379175",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Fullstack-разработчик (Node.js/React) / AI-native\n🏢 РТ · Москва",
-   "link": "https://hh.ru/vacancy/138379175?tech_source=api",
-   "date": "2026-11-08T13:43:48+0300"
-  },
-  {
-   "id": "hh/138880099",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-дизайнер для маркетплесов\n🏢 Чухина Наталья Михайловна · Брянск\n💰 от 55000 до 60000 RUR",
-   "link": "https://hh.ru/vacancy/138880099?tech_source=api",
-   "date": "2026-11-08T13:01:38+0300"
   },
   {
    "id": "comeinlena/6597",
