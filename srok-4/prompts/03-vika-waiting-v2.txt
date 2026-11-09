@@ -1,0 +1,64 @@
+SCENE CONTEXT
+An eight-second scene from SROK, a tactile stylized 3D domestic animated film. Animate the TWO supplied shot-composition references in the given order, joined by ONE hard cut at 3.5 seconds. A woman prepares a second place for an absent guest, then sits opposite that empty place and waits. She is Vika, not the other pregnant woman. No spoken words. Real-time movement within each shot, no slow motion or speed ramp. The cut omits the short walk and sitting; never morph one viewpoint into the other.
+THE DEVICE — OVERHEAD PLATE PLACEMENT, THEN WAITING ACROSS AN EMPTY PLACE. Shot 1 matches the exact straight-down camera in @image1. Shot 2 matches the close table-level camera in @image2. Both are still. The foreground plate is the same physical plate placed in shot 1. It must stay visibly on the near placemat for EVERY FRAME of shot 2. Both plates must remain visible in both shots.
+ACTING TASK — VIKA: make the promised visit feel like an ordinary welcoming evening. She finishes his place, then checks whether the silent phone has brought news of him. Finding none, she keeps the place ready and waits for him. Her goal is to welcome him, her obstacle is no confirmation of arrival, her tactic is to let the completed table stand as an invitation. Purposeful attention to the plate, phone and unoccupied chair; natural breathing and blinking. No vacant stare, villainous smile, crying or exaggerated anxious gestures. Her mouth remains closed throughout.
+
+ACTIVE REFERENCES
+@image1 — EXACT COMPOSITION AND INITIAL STATE FOR SHOT 1. Copy this overhead camera, framing, table orientation, lighting, two chairs, two rose placemats, two water glasses, smartphone position and Vika's two hands holding the lower plate. The upper plate is already on the table. Animate only the held lower plate being set down and her hands withdrawing. The tabletop stays a true rectangle seen straight down. Do not substitute an oblique view or crop to just one place.
+@image2 — EXACT COMPOSITION AND STATE FOR SHOT 2. Copy this camera and close framing, Vika seated at the far place, her established face and clothes, both visible plates, both glasses, the dark phone and the room. The large plate in the LOWER FOREGROUND belongs to the EMPTY guest chair. Keep that foreground plate on its placemat for the whole shot. Vika's own plate stays in front of her. Do not simplify to a one-plate table or a distant whole-room view.
+@image3 — VIKA IDENTITY CHECK ONLY. Same honey-blonde straight hair, pale sage-grey eyes, small left cheek mole, small gold hoops, dusty-rose cardigan, white tee and cream trousers. Use her face and outfit only. At home she has NO shoulder bag or strap. Keep her ordinary slim waist, no large pregnancy belly. Do not copy the reference sheet layout, grey background, pose or studio light.
+Both scene reference images show ONE consistent apartment and ONE woman. Render in their same dimensional matte tactile 3D style: softly flocked skin, felted hair, knit, warm wood, soft shadows and restrained brass. Preserve the reference images instead of reinventing their layouts.
+
+LOCATION MAP
+In both shots, the FAR/UPPER place is Vika's; the NEAR/LOWER place is for the absent guest. The phone is LEFT of the far/upper place in both images. In shot 1 Vika stands at the right side of the table and only her hands, sleeves and top of her hair enter from the right. After the hard cut she is seated in the FAR chair as in @image2. The NEAR chair stays empty. Nothing on the table changes position across the cut. Exactly two cream plates, two water glasses and one dark phone.
+
+FIRST FRAME
+Reproduce @image1 as closely as possible, including its complete table view, perpendicular 90-degree downward angle and two place settings. Her two hands hold the near plate a few centimetres above its rose placemat. The far plate already lies flat. Both plate circles are visible. No lamp or wall enters this overhead composition.
+
+FORMAT MODE
+Vertical 9:16. One full-frame image per shot. No split screen or panels.
+
+OPTICS
+Shot 1 uses the same straight-down 90-degree optical axis and full-table framing as @image1, FOV 63 degrees, f/8. Keep the table rectangle and plate circles undistorted.
+Shot 2 uses the same near-chair table-level composition as @image2, FOV 47 degrees, f/5.6, with Vika's face and BOTH plates readable. Keep her face large in the upper half and the unused plate prominent in the lower foreground.
+
+CAMERA
+0.0–3.5: stationary exact overhead view from @image1. No tilt or pan.
+At 3.5: ONE instantaneous HARD CUT directly to @image2's viewpoint with Vika already seated. No dissolve, morph or animated camera flight. This edit skips her moving to the chair.
+3.5–8.0: stationary exact close table-level composition from @image2. No camera travel, zoom, pullback or extra cut.
+
+ACTION SEQUENCE
+0.0–1.5: starting from @image1, Vika lowers the near plate by a few centimetres until it rests flat on the near rose placemat. Both hands release its rim only after contact.
+1.5–2.5: her two hands withdraw to the right and leave the frame. The newly placed plate stays on the NEAR placemat. The original plate stays on the FAR placemat. Both glasses and phone stay still.
+2.5–3.5: hold the complete overhead table for two, including BOTH plates and the two empty chairs.
+HARD CUT at 3.5.
+3.5–5.5: match @image2 exactly, with Vika seated at her far place and both hands resting beside her own plate. She glances toward the dark phone at screen-left, to her right, checking whether he has sent any sign of arrival. The phone stays flat and dark; she never picks it up or touches it.
+5.5–8.0: she returns attention to the unoccupied place opposite and waits. Keep both hands beside her own far plate. The big near guest plate remains clearly visible and untouched throughout. Nobody arrives. End on unresolved waiting.
+
+ANIMATION STYLE
+Restrained stylized 3D feature animation on twos within 24 fps output. Subtle breathing, small natural attention shifts, cardigan and hair settling. Only hands and held plate move in shot 1; only Vika's attention and natural breathing move in shot 2. The room and tableware remain stable.
+
+PHYSICS
+Exactly one woman with two arms, two hands and ten fingers. Both hands support one held plate, lower it onto cloth and release after contact. Exactly TWO plates remain on their own placemats after placement and across the cut. Exactly TWO glasses and ONE phone remain unchanged. No extra objects and no disappearing foreground plate. No hand/object intersection, floating or contact with the camera.
+
+LIGHTING
+Keep both keyframe references' warm 3000K pendant lighting and gentle cooler window fill. Preserve tactile surface texture, contact shadows under the plates and face modelling. No lighting change, flat frontal studio light, glitter or glossy skin.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No speech, narration, singing, humming, sigh, gasp, phone sound or additional voice. Quiet diegetic apartment room tone and ONE soft plate-on-placemat contact, with a little sleeve rustle. The phone stays silent. No dramatic impact or transition whoosh.
+
+QUALITY
+Maintain shot-reference fidelity: exact two-plate continuity, same Vika identity, same room, clean restrained movement. No text, letters, numbers, labels, subtitles, logos or interface anywhere. The phone remains dark. Fine natural film grain and dimensional tactile materials, matching the keyframes.
+
+TECHNICAL PARAMETERS
+Seedance 2.5, direct BytePlus/ByteDance. 480p, vertical 9:16, 24 fps output, 8 seconds total. Two stationary shots, ONE hard cut at 3.5. Real-time movement within each shot. Diegetic audio only.
+
+POSITIVE LOCKS
+Shot 1 matches @image1's strict overhead view and two-place layout.
+Shot 2 matches @image2's close waiting view, with BOTH plates visible for the entire shot.
+The plate placed at the near setting in shot 1 remains the prominent untouched foreground plate in shot 2.
+Vika is the only person and matches the references, with two arms, two hands and ten fingers, rose cardigan and no shoulder bag.
+Exactly two plates, two glasses, two placemats, two chairs and one dark phone remain consistent.
+The near chair stays empty and Vika sits in the far chair after the cut.
+All characters stay silent with mouths closed.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No music of any kind.

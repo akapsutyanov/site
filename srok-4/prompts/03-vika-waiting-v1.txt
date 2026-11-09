@@ -1,0 +1,67 @@
+SCENE CONTEXT
+SROK episode 4, scene 3. A parallel scene in Vika's separate apartment on the same evening. While the married man packs at his family home, Vika prepares a second place at her small dining table and waits for him. She is nine weeks pregnant with her usual slim waist, without a visible late-pregnancy belly. Exactly one person, Vika, is present. No dialogue or narration. Two shots, exactly ONE hard cut at 3.5 seconds, 8 seconds total. Real time within each shot; a brief natural editorial ellipsis across the cut lets her move to her own chair and sit. Never show teleportation within a shot. No slow motion, speed ramp or dissolve.
+THE DEVICE — EXACTLY VERTICAL TABLETOP VIEW, THEN THE ABSENT GUEST'S PLACE. Shot 1 is a perfect bird's-eye view at exactly 90 degrees straight down. The rectangular tabletop reads as a true rectangle and the plates and glasses as circles, with parallel table edges; only the tops of hands and perhaps the top of her hair appear at the side. No walls or horizon. Shot 2 observes Vika from just behind the empty guest chair, with the newly set place in the foreground. Both cameras are still. No inside-object viewpoint, sideways travel, face close-up sequence or repeated camera device from the preceding scene.
+ACTING TASK — VIKA. Shared scene direction: prepare an ordinary welcoming evening for two. Motive: she wants his promised visit to feel like the beginning of a shared home. Goal: have his place ready so there is nothing awkward when he arrives. Obstacle: she has no new confirmation that he is on his way. Tactic: make the waiting into an ordinary practical task, then check whether the phone has brought him any closer. The absent man's place is her partner in the task: she makes room for him, measures the silence against the readiness of that place, and keeps the invitation open. Physical channel: gently setting down his plate, then leaving the opposite chair empty while she sits at her own place. After checking the phone, she returns attention to the place she has prepared, as if keeping it ready can help him arrive. Do not play a villain, celebrate the affair, cry or enact exaggerated anxiety. Safety: naturally engaged attention, breathing and blinking, never a vacant frozen stare.
+
+ACTIVE REFERENCES
+@image1 — VIKA. Exact established design: young adult woman with long straight honey-blonde hair, pale sage-grey eyes, softly curved brows, small beauty mark low on her left cheek near the mouth, small gold hoop earrings. Same dusty-rose open knit cardigan, white T-shirt, cream trousers and white sneakers. ONE deliberate wardrobe difference for this home scene: the tan shoulder bag AND its strap are absent. Preserve her ordinary slim waist and natural body proportions; no enlarged pregnancy belly. Take ONLY identity, design and clothing from the sheet, never the sheet layout, pose, grey background or studio lighting.
+@image2 — VIKA'S EVENING DINING AREA. Preserve the small rectangular walnut table with rounded corners, exactly two dusty-rose upholstered chairs facing one another, exactly two rose placemats, greige kitchen cabinets with brass handles, left window and sink, right sideboard, warm linen pendant and evening colour palette. Use the reference as architecture and material guidance, not as a fixed shot size.
+Initial prop state: the FAR place already has one cream plate and its cutlery. One clear glass is beside that far plate at screen-left. The NEAR placemat has no plate yet; its one glass stands on screen-right. Vika is already holding the second cream plate above the near placemat. The right sideboard is now bare where that plate was: do not leave a duplicate there. One plain dark phone lies face-up on the table at the LEFT of Vika's FAR place. Exactly two plates total, two glasses total, one phone and two chairs. Add one plain fork and knife beside the near placemat before the first frame so both places are laid; she does not need to handle cutlery in this brief scene. No food, candles, flowers, bottles, pregnancy test or extra tableware.
+Render in the SAME tactile stylized 3D art-toy world as the references and previous SROK scenes: matte softly flocked skin, felted hair, tactile knit and woven cloth, rounded sculpted forms, pale warm wood and restrained brass. Dimensional forms with contact shadows and soft light falloff. No flat painted-paper style, glitter, glossy plastic or photoreal skin.
+
+LOCATION MAP
+Maintain the reference's orientation: window at room-left, sideboard at room-right, kitchen behind the FAR chair. Vika's own chair and already-laid place are FAR from the reference camera; the guest's empty chair and rose placemat are NEAR. Shot 1 views the same table directly downward with far place toward the top and near place toward the bottom. Vika stands beside the RIGHT table edge, near the guest's place, so her hands reach it naturally without leaning across the whole table. Shot 2 is from just behind the NEAR empty chair toward Vika now seated in the FAR chair. The phone remains to HER RIGHT, which is screen-left from this camera, beside her far place. The near guest chair remains empty throughout.
+
+FIRST FRAME
+Perfect 90-degree overhead view of the rectangular tabletop, both rose placemats and exactly two glasses. One cream plate is on the far placemat; Vika's two hands enter from the right holding the other cream plate horizontally 5 centimetres above the empty near placemat. The ceiling pendant is outside and above the camera; it does not obstruct the table. No face, walls, horizon or tilted perspective.
+
+FORMAT MODE
+Native vertical 9:16; one full-frame view per shot, no panels or reference-sheet layout.
+
+OPTICS
+Shot 1: FOV 63 degrees, f/8, optical axis exactly perpendicular to the tabletop, deep focus across the two places. Plates and glass rims read as circles. No oblique angle, fisheye or cinematic tilt.
+Shot 2: FOV 47 degrees, f/5.6, camera just above tabletop height behind and slightly to the left of the empty near chair, aimed toward Vika. Her face and the near empty place both remain readable, with only a narrow edge of the chair softly blurred at the very bottom. Vika sits slightly right of centre; the empty plate occupies the lower foreground. Her face is large enough to read, not a distant full-room view.
+
+CAMERA
+0.0–3.5: completely fixed overhead camera at exactly 90 degrees down. No rotation, descent or travel.
+HARD CUT at 3.5 to the guest-chair viewpoint. The cut omits her short walk to the far chair and sitting down.
+3.5–8.0: fixed view across the unused guest setting toward seated Vika. No camera slide, zoom, push-in, orbit, focus pull or additional cut.
+
+ACTION SEQUENCE
+0.0–1.8 — SHOT 1. Using both hands, Vika lowers the second cream plate onto the centre of the near rose placemat. The plate stays horizontal, touches the fabric and rests. She releases its rim after contact.
+1.8–3.5. She withdraws both hands to the right and out of view. Hold on the now-complete table for two: exactly two cream plates, two glasses, two places, two empty chairs. Nothing else is placed or removed. The phone stays by the far place, dark and silent.
+HARD CUT at 3.5.
+3.5–5.5 — SHOT 2. Vika is now seated at her own far place, her hands resting beside her plate on the table. She checks the phone lying to her right by looking toward it. She does not lift it, tap it, type, call or speak; it stays dark and silent, without visible messages or interface. Her attention is checking for a sign that he is on his way.
+5.5–8.0. Finding no new indication, she returns attention to the empty place opposite and remains ready to receive him. The unused guest plate and near chair stay in the foreground. Let the waiting remain unresolved. Her hands stay on the table beside her own plate; no belly touch, smile for the camera, tears or new action. End while she is still waiting, without anyone arriving.
+
+ANIMATION STYLE
+Tactile stylized 3D feature animation, restrained poses animated on twos within 24 fps output. Precise small hand contacts, soft cardigan settling and natural breathing. An ordinary careful plate placement, followed by active waiting. Stable character volume and kitchen geometry. No exaggerated mime, mechanical freeze or floating hands.
+
+PHYSICS
+Exactly one woman, two arms, two hands and ten fingers. Her hands support opposite sides of one plate and release only after it is supported by the placemat. One cream plate was already at the far place; the single new plate settles at the near place. The sideboard stays without a third plate. Exactly two glasses remain in their original positions. Table, chairs and phone are stationary. Hair and cardigan move only with small natural secondary motion. The phone lies flat on the table throughout.
+
+LIGHTING
+Same evening as the family scenes. Soft warm 3000K linen-pendant light over the table and quiet under-cabinet lighting, balanced by weaker blue-hour window fill around 6500K from frame-left. Preserve dusty-rose fabric, warm walnut, neutral cream plates and natural skin colour. Clear plate-on-mat contact shadow, gentle modelling of her face, background slightly dimmer than Vika. The overhead camera sits below the pendant, which stays outside the framing. Keep source direction consistent after the cut. No flat frontal studio light, dramatic coloured spotlight or sudden lighting change.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No speech, narration, humming, sigh, gasp or voice from another room. Quiet diegetic sounds only: a soft ceramic contact on the fabric placemat, subtle cardigan rustle and low apartment room tone. No phone ring, vibration, notification, keypad or screen sound. No cut whoosh or dramatic impact.
+
+QUALITY
+Stable Vika identity, matte tactile microtexture, gentle natural film grain. Clean two-hand contact and object permanence across the cut. Top-down geometry must be visibly exact, not a high diagonal angle. No text, letters, numbers, symbols, subtitles, logos or UI anywhere, including phone and appliance panels. Unlettered plain dishes and surfaces.
+
+TECHNICAL PARAMETERS
+Seedance 2.5 via direct BytePlus/ByteDance. 480p, vertical 9:16, 24 fps output, exactly 8 seconds. Two shots with exactly one hard cut at 3.5 seconds. Real-time actions within each shot with a brief editorial ellipsis across the cut. Generate only synchronized diegetic audio.
+
+POSITIVE LOCKS
+Exactly one visible person: Vika, matching @image1, in dusty-rose cardigan and white T-shirt with her ordinary slim waist.
+Her shoulders and torso are free of any bag or bag strap.
+She has exactly two arms, two hands and ten fingers.
+The separate apartment and furniture match @image2.
+Exactly two plates, two glasses, two rose placemats, two chairs and one dark phone remain consistent.
+The near guest place receives the second plate and stays unoccupied.
+Vika sits at the far place in shot 2, with the phone to her right, screen-left.
+Shot 1 is a perfect overhead 90-degree view; shot 2 is from the empty guest chair toward Vika.
+Two stationary shots are joined by one hard cut, with sitting omitted by that cut.
+The recording contains quiet physical room sounds only and all characters are silent.
+All surfaces and the dark phone are plain, unlettered and without interface.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No music of any kind.

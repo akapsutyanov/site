@@ -1,0 +1,25 @@
+ACTIVE REFERENCES
+@image1 — FAMILY BEDROOM: use the warm bedside-lamp light, cream bed linen and muted sage throw. The bed is the support beneath the bag; reproduce its textiles and evening atmosphere only, not a wide room view.
+@image2 — ONE SLATE-BLUE CANVAS TRAVEL BAG: reference sheet shows TWO VIEWS OF THE SAME SINGLE BAG. Use only its design: charcoal woven handles, curved brass zipper, unbranded front pocket and soft grey lining. In this shot it is OPEN as in the lower view, containing one folded grey shirt and one folded dark navy shirt. The reference background and multiple-panel layout are excluded.
+The established SROK visual language is tactile dimensional stylized 3D animation: felt, woven canvas, matte soft plaster and rounded sculpted forms, with coherent contact shadows and fine fiber texture. Keep depth and volume, not a flat painted illustration. Warm directional practical light around 2900–3000K models the material, gentle cooler ambient fill separates the background. Any glitter, sparkle or iridescence in the reference is NOT carried over. No glossy plastic, photoreal pores, paper-painting texture or decorative grain crawl.
+
+SCENE CONTEXT
+SROK episode 4, 'Things', standalone dramatic object insert. The departure becomes a physical object: an open zipper and two packed shirts. Intended around the end of the packing scene, before Vika. No new plot event occurs. No visible people, body parts or living animals. One single continuous shot, ZERO cuts.
+
+FRAMING AND OPTICS
+An extreme close-up from OUTSIDE the bag at a low oblique side angle: the curved open brass zipper and its stationary slider occupy the left foreground; the grey shirt fold and a narrow dark navy cloth layer are visible inside behind it. Soft slate-blue canvas fills the lower edge, a tiny cream bed-linen area establishes support. The open mouth reads clearly even though most of the bag is cropped. This is an external zipper detail, not the previous scene's camera-inside-the-bag viewpoint. There is no rabbit yet. No packing gesture, hand or person enters. It is a pause AFTER both shirts have been placed and BEFORE Misha brings his toy.
+Fixed FOV 12 degrees, natural compressed perspective from a respectful working distance, approximately f/4. Macro scale where specified comes from the narrow field and framing, not from a wide lens pushed close. One primary focus plane remains fixed; background softly defocused but the named subject fully readable. Do not widen to show the whole location. Vertical 9:16.
+
+CAMERA AND ACTION
+Exactly 4.0 seconds, real time throughout, no slow motion or speed ramps. 0.0–4.0: a perfectly locked-off camera holds the already-established still life, zero dolly, zoom, pan, tilt, orbit, handheld shake or rack focus. Static held object animation, stable geometry and steady light; quiet observed duration is intentional. No autonomous movement added to make the image busier. The first and last frames share the exact same composition.
+
+PHYSICS AND CONTINUITY
+One bag rests with weight on the bed. The brass zipper remains open and still, both shirts remain inside, nothing closes itself. No toy, loose new garment or additional bag appears.
+
+LIGHT AND SOUND
+Preserve the reference's warm practical evening light with a soft cool-neutral fill and natural contact shadows. Exposure and color remain fixed. No pulsing lights, dramatic shafts or lens flare.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No voices, dialogue, humming, breathing, narration or singing. Diegetic only: very soft bedroom room tone and distant muffled household ventilation only. Sound is quiet, suitable for laying under an existing scene.
+
+DELIVERY AND LOCKS
+Seedance 2.5, direct BytePlus, 480p, vertical 9:16, 24 fps output, exactly 4 seconds, one shot, zero cuts. Stable object identities and material depth throughout. Everything visible is unlettered: no text, letters, numbers, logos, captions or UI. Props remain inert and keep their established state. The subject is large within the specified tight crop; the rest of the location exists outside the frame. One stationary viewpoint and a single consistent focal length. No music of any kind.
+

@@ -1,0 +1,26 @@
+ACTIVE REFERENCES
+@image1 — FAMILY BEDROOM: warm bedside-lamp light and soft cream/sage bed textiles; location supplies light only within this tight detail.
+@image2 — ONE OPEN TRAVEL BAG: the sheet's two views describe the same slate-blue canvas bag, charcoal handles, brass zipper and grey lining. It contains the established grey and navy folded shirts.
+@image3 — MISHA'S SINGLE PLUSH RABBIT: exact oatmeal-beige plush, cream belly, embroidered face, bent LEFT ear and visible repair stitching on its LEFT forepaw. This is an inert cherished toy, not a living animal. Copy its small worn stitched repair exactly; no large new decorative badge. Use design only, not grey studio background.
+The established SROK visual language is tactile dimensional stylized 3D animation: felt, woven canvas, matte soft plaster and rounded sculpted forms, with coherent contact shadows and fine fiber texture. Keep depth and volume, not a flat painted illustration. Warm directional practical light around 2900–3000K models the material, gentle cooler ambient fill separates the background. Any glitter, sparkle or iridescence in the reference is NOT carried over. No glossy plastic, photoreal pores, paper-painting texture or decorative grain crawl.
+
+SCENE CONTEXT
+SROK episode 4, 'Things', standalone dramatic object insert. The toy is visibly loved and repaired: the child gives his father something that has comforted him. Insert after 'Пусть с тобой поспит', before the goodbye. No new plot event occurs. No visible people, body parts or living animals. One single continuous shot, ZERO cuts.
+
+FRAMING AND OPTICS
+A very tight external detail of the rabbit's LEFT FOREPAW with its small repaired seam and three visible pale stitches, resting naturally beside its cream plush belly. The rabbit is sitting upright on the folded clothes INSIDE the still-open slate-blue bag, as just placed by the child. A grey shirt fold and a narrow curved brass zipper edge beneath the toy provide immediate context. Focus the stitched repair and soft flattened fibers; the head and ears are cropped ABOVE the frame, the rest of the bag and bedroom remain outside the crop. The paw is the toy's attached front arm, not a detached plush piece or a human hand. All family members and their hands stay outside this extreme close-up. The father may still be steadying the toy higher up off-frame; this shot does not show him releasing it or changing its pose.
+Fixed FOV 12 degrees, natural compressed perspective from a respectful working distance, approximately f/4. Macro scale where specified comes from the narrow field and framing, not from a wide lens pushed close. One primary focus plane remains fixed; background softly defocused but the named subject fully readable. Do not widen to show the whole location. Vertical 9:16.
+
+CAMERA AND ACTION
+Exactly 4.0 seconds, real time throughout, no slow motion or speed ramps. 0.0–4.0: a perfectly locked-off camera holds the already-established still life, zero dolly, zoom, pan, tilt, orbit, handheld shake or rack focus. Static held object animation, stable geometry and steady light; quiet observed duration is intentional. No autonomous movement added to make the image busier. The first and last frames share the exact same composition.
+
+PHYSICS AND CONTINUITY
+Exactly one inert stuffed rabbit maintains the same seated pose in one open bag. Its attached patched forepaw lies naturally against its belly, cloth beneath bears its weight. No twitch, breathing, blinking, movement, stuffing leak or spontaneous zipper closure.
+
+LIGHT AND SOUND
+Preserve the reference's warm practical evening light with a soft cool-neutral fill and natural contact shadows. Exposure and color remain fixed. No pulsing lights, dramatic shafts or lens flare.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No voices, dialogue, humming, breathing, narration or singing. Diegetic only: soft bedroom room tone only, without toy squeaks or voices. Sound is quiet, suitable for laying under an existing scene.
+
+DELIVERY AND LOCKS
+Seedance 2.5, direct BytePlus, 480p, vertical 9:16, 24 fps output, exactly 4 seconds, one shot, zero cuts. Stable object identities and material depth throughout. Everything visible is unlettered: no text, letters, numbers, logos, captions or UI. Props remain inert and keep their established state. The subject is large within the specified tight crop; the rest of the location exists outside the frame. One stationary viewpoint and a single consistent focal length. No music of any kind.
+

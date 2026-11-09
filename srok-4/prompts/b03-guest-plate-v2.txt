@@ -1,0 +1,28 @@
+ACTIVE REFERENCE
+@image1 — A FINISHED FRAME FROM THE EXISTING SROK EPISODE. This is the precise source for object placement, materials and light. Use the NEAR GUEST PLACE SETTING IN THE BOTTOM HALF: the large ivory plate nearest the bottom edge, its pink woven placemat, one fork to plate-left, one knife to plate-right, one half-full clear glass to plate-upper-right, and the curved pink empty guest-chair back at the bottom. The far plate immediately in front of the blonde woman is a DIFFERENT, OCCUPIED place setting. Both plates exist in the room; this insert shows ONLY the NEAR GUEST PLATE. Do NOT use the former one-plate location design. Do NOT copy the wide composition or show the woman.
+
+STORY AND COMPOSITION
+A still, unoccupied guest place waiting for someone who has not arrived. Single close object insert, not a new scene or an empty apartment. Vika stays seated at the far end as in the reference but is completely above and OUTSIDE the tight frame. Her hands, torso, face, plate and phone are outside the image. They have not disappeared from the room.
+
+SHOT SIZE FIRST: a very close oblique downward view of the NEAR guest plate. The plate fills approximately 70 percent of the image width and sits in the lower-middle. Its entire circular rim is visible as an ellipse on the pink mat. Fork on the left and knife on the right frame it. The guest's clear half-full water glass sits at upper-right. A narrow soft pink arc of the empty guest-chair back may occupy the very bottom edge only. The rest of the picture is just this same tabletop and placemat; NO second mat, second plate, room horizon, kitchen, window, lampshade or people appear. Look diagonally down onto the NEAR setting from slightly above its empty chair. This is NOT a reverse view of the far chair. The table extends out of the upper edge before the opposite setting begins.
+
+CAMERA AND OPTICS
+Vertical 9:16, fixed18-degree FOV, f/4. Natural close-detail scale with compressed perspective, no wide-angle exaggeration. Camera at about50 degrees down to the table, not an overhead shot and not a frontal room view. Completely locked camera and locked focus, no push-in, pullback, drift, rack focus, cut or reframing. One uninterrupted4-second shot. Real time throughout, no slow motion or speed ramps.
+
+ACTION AND CONTINUITY
+0.0–4.0: hold the already-composed near guest plate. Everything stays still. Exactly ONE visible empty ivory plate, ONE fork, ONE knife, ONE clear half-full glass and ONE pink mat. Objects keep the positions shown in @image1. Nothing is placed, removed, created, moved or touched. The guest chair remains empty; Vika remains at the opposite end outside frame. No food, steam, crumbs, fingerprints, hand shadows or independently moving objects.
+
+STYLE AND LIGHTING
+Match the source's tactile dimensional stylized3D animation: softly rounded ivory ceramic, fine woven pink placemat, warm grained wood, blush bouclé chair edge, gentle glass reflections. Coherent contact shadows and softly modelled volume, no flat painted illustration, glitter, glossy plastic or photographic realism. Warm 3000K practical light and subtle cool window fill remain steady. The quiet soft background is simply the tabletop, not a view of the room.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. Very low kitchen room tone and a faint refrigerator hum only. No voices, breathing, humming, narration, footsteps, plate clinks or music.
+
+DELIVERY AND LOCKS
+Direct BytePlus Seedance2.5,480p,9:16,24fps,exactly4seconds,one continuous shot,zero cuts.
+The occupied opposite place and its person stay entirely outside the tight frame.
+The visible NEAR guest plate remains present throughout; one plate, one fork, one knife, one glass, one mat.
+Every object remains stationary with stable shape and correct contact.
+All surfaces are unlettered: no text, numbers, logos, subtitles or UI.
+No music of any kind.
+

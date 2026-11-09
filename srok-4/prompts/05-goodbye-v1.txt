@@ -1,0 +1,76 @@
+SCENE CONTEXT
+SROK episode 4, scene 5. Fifteen seconds, ONE CONTINUOUS SHOT, ZERO CUTS. The father is already crouching in an embrace with preschool Misha. He already wears his blue jacket; the single travel bag beside him is zipped shut, rabbit inside. Dressing and packing happened between scenes.
+THE DEVICE — RISE WITH THE FATHER, REMAIN WITH THE FAMILY. A modest camera rise accompanies him standing; the camera then stays inside with mother and son while he leaves.
+Misha wants more time with Dad and a simple answer about tomorrow. Father receives the embrace without making a promise. Mother answers honestly and offers physical reassurance. Restrained ordinary behaviour, active attention, no tears or invented farewell words.
+
+ACTIVE REFERENCES
+@image1 — FATHER IN JACKET. Preserve his tall lean build, sandy swept forelock, grey-blue eyes, long nose, freckles and light stubble. Open navy zip jacket over grey crewneck sweater, dark jeans, white sneakers, wedding ring. Use identity and clothes, not the fixed smile, card pose, grey field or panels.
+@image2 — MISHA. Same small preschool boy, tousled sandy-brown felted hair, brown eyes, freckles, pink nose and round cheeks. Butter-yellow long-sleeve pajamas, grey-blue trousers, white socks. Keep child-sized body and hands.
+@image3 — MOTHER. Same narrow oval face, hooded hazel-olive eyes, freckles and left-cheek beauty mark, brown hair in charcoal claw clip, temple strands and gold studs. Camel ribbed top and matching wide trousers, white socks, FULL 28-WEEK PREGNANCY BELLY.
+@image4 — HALL. Preserve pale timber floor, sage runner, left interior doorway/shoe bench, right pale-wood console, warm pendant and cream front door. From inside: handle LEFT, hinges RIGHT. One starting-state change: the door is already open inward toward the right wall.
+@image5 — ONE BAG. Use only the CLOSED UPPER VIEW: slate-blue canvas, two charcoal handles, brass zipper fully shut. Rabbit and clothes are packed inside and invisible; the lower open view never appears.
+All figures share the established tactile stylized 3D finish: flocked matte skin, felted hair, knit, woven canvas, wood and dimensional light falloff. Reference sheets supply designs only, never panels or studio backgrounds.
+
+LOCATION MAP
+Camera stays inside, slightly left of the hall centreline, looking toward the front door. Mother stands beside the left interior doorway; Misha stands a small step to her right on the runner. Father crouches just beyond him, centre-right, three-quarter to camera so both embracing faces read. Bag is beside father's anatomical LEFT foot, clear of the boy.
+Door starts about 60 degrees open, hinged at screen-right and held toward the right wall. Mother and child stay LEFT of its swing. Father crosses the clear central doorway with bag in LEFT hand; RIGHT hand controls the door.
+Crop the mirror's reflective surface out of the composition. Door hardware, console and furniture stay fixed.
+
+FIRST FRAME
+At about 85 centimetres camera height, father and son are already in a quiet close embrace, both physically supported on the floor. Misha's cheek is near his father's shoulder, with his face partly visible in profile. Mother is nearby on the left, her pregnancy clear. The single closed bag rests beside the father's left foot; the open front doorway is behind him.
+
+FORMAT MODE
+Native vertical 9:16, one full-frame image, no split screen, captions or borders.
+
+OPTICS
+Fixed FOV 47 degrees, approximately f/5.6. Choose the starting distance to contain the crouched father and small child together, with mother nearby. After the modest camera rise, keep BOTH mother's face and Misha's face visible at useful scale, as well as her belly. The final composition is an adult-and-child group, not an adult-height portrait. Child height and head size remain natural. No focal-length change or digital zoom.
+
+CAMERA
+0.0–3.0: hold at child height for the embrace and release.
+3.0–5.0: ONE gentle physical rise, about 30 centimetres from 85 to 115 centimetres, with slight compensating tilt as father stands. Do not rise to adult eye height; the lower frame continues to contain Misha.
+5.0–15.0: camera settled inside. Father leaves through the doorway; camera stays with mother and son, keeping both faces and the final handhold readable. No hidden cut, zoom, orbit or later reframing.
+
+ACTION SEQUENCE
+0.0–1.6: the embrace is already happening. Misha holds both arms around Dad's shoulders. Father supports his upper back without lifting him. Mother waits nearby.
+1.6–3.0: Misha slowly loosens his arms. Father releases in response, briefly settles his hands at the boy's upper arms, then withdraws. Their hands separate before he stands.
+3.0–5.0: father rises naturally; camera makes its single small rise. Misha stays on both feet and follows him with his eyes.
+5.0–6.0: father bends enough to grip BOTH short bag handles together in his LEFT hand and lifts the CLOSED bag once. It hangs with weight at his left thigh.
+6.0–9.0: two ordinary steps through the already-open doorway. Bag stays left, right hand free. While crossing the threshold he takes the door's free latch edge from the landing side with his RIGHT hand. His body and bag clear the threshold before the leaf swings across it. This is his only exit.
+9.0–10.0: from outside he gently pulls the SAME door shut. Right hand withdraws behind the leaf before the gap closes; the fixed right-side hinges remain unchanged. Soft latch. Father and bag stay outside and out of view. Misha watches.
+10.0–10.2: Misha turns his head slightly up toward mother, showing his mouth in readable three-quarter profile.
+10.2–12.0: MISHA says quietly and simply in Russian: "Папа завтра придёт?" Natural preschool voice, asking a real question. Mother listens with closed mouth.
+12.0–12.3: natural pause. Mother looks down toward him; her mouth stays visible.
+12.3–13.5: MOTHER says quietly and evenly in Russian: "Не знаю." Plain honest uncertainty. Misha listens with closed mouth.
+13.5–15.0: mother's LEFT hand takes Misha's RIGHT hand. They begin a small turn toward the interior doorway at frame-left. Their continued walk happens after this clip. Hold joined hands and readable faces; no further speech.
+
+ANIMATION STYLE
+Restrained tactile stylized 3D character animation on twos within a 24 fps output, with a smoothly weighted physical camera rise. Natural child-sized balance, measured release of the embrace, believable standing and two walking steps. Small cloth settling follows body motion. Quiet listening stays alive through breath and an occasional blink; no idle swaying or broad pantomime.
+
+PHYSICS
+Exactly three people initially, each with two arms, two hands and ten fingers. Misha stays on the floor during the hug. One closed bag, lifted once and carried continuously in father's LEFT hand; RIGHT hand closes the door. Father and bag clear the threshold before its single right-hinged closing swing. Mother and son remain clear of the leaf. Rabbit stays invisible inside the bag. At the end exactly two people remain visible, mother's LEFT hand holding child's RIGHT. All contacts are physical, without intersecting bodies, door or fabric.
+
+LIGHTING
+Match the hallway's ordinary warm evening light: soft pendant around 3000K, gentle warm spill from the left interior room and weaker neutral landing light through the open doorway. Closing the door removes only that small landing contribution. Mother's face, the boy's mouth and the pregnancy remain readable under the existing hall light; no dramatic exposure change. Soft dimensional face modelling, grounded contact shadows and matte tactile surfaces.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING.
+Exactly TWO non-overlapping Russian passages, once each: MISHA, "Папа завтра придёт?"; then MOTHER, "Не знаю." Accurate visible lip-sync only on the current speaker. Father never speaks. Otherwise only quiet room tone, soft jacket/pajama rustle, two sneaker steps, canvas handles taking weight and a gentle door latch. No invented goodbye, crying, gasp, ringtone or dramatic impact.
+
+QUALITY
+Stable faces, small-child scale and full maternal pregnancy throughout the continuous move. Preserve navy jacket, yellow-grey pajamas, camel knit and closed slate-blue bag. Legible mouth shapes during both lines, coherent hand release and handholding, natural door geometry. Fine natural film grain, tactile matte materials. No text, logos, numbers, subtitles, UI or reflected duplicate people.
+
+TECHNICAL PARAMETERS
+Seedance 2.5, direct BytePlus/ByteDance, 480p, vertical 9:16, 24 fps output. Exactly 15.0 seconds, ONE continuous shot and ZERO cuts. One small camera rise during 3.0–5.0 seconds, then a settled camera. Real time, no slow motion or speed ramp. Generate synchronized Russian dialogue and quiet diegetic sound.
+
+POSITIVE LOCKS
+Father already wears navy jacket; one bag is already closed, rabbit entirely inside.
+Embrace and release receive three seconds before he stands.
+Camera rises only 30 centimetres and retains mother AND preschool son.
+Father carries bag left, exits once, closes the door right-handed from outside, and stays outside.
+Door's inside handle is left, hinges right; family remains clear of its swing.
+After closure only mother and Misha remain visible.
+Child asks first, mother answers after a pause; only the speaker's lips articulate.
+Mother's left hand takes child's right hand.
+ONE continuous shot, ZERO cuts, fifteen seconds.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No music of any kind.
+

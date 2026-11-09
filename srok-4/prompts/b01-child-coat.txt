@@ -1,0 +1,24 @@
+ACTIVE REFERENCES
+@image1 — FAMILY HALLWAY: use its existing mustard-yellow child's coat on the LOWER brass hook, the greige plaster, nearby larger grey coat, warm pendant lighting and tactile materials. Take these designs and lighting only, not the reference's wide framing. This is the same child's yellow coat already present, not newly introduced clothing.
+The established SROK visual language is tactile dimensional stylized 3D animation: felt, woven canvas, matte soft plaster and rounded sculpted forms, with coherent contact shadows and fine fiber texture. Keep depth and volume, not a flat painted illustration. Warm directional practical light around 2900–3000K models the material, gentle cooler ambient fill separates the background. Any glitter, sparkle or iridescence in the reference is NOT carried over. No glossy plastic, photoreal pores, paper-painting texture or decorative grain crawl.
+
+SCENE CONTEXT
+SROK episode 4, 'Things', standalone dramatic object insert. The child's ordinary life is still here while the adults discuss leaving; an insert after the first conversation, before the packing. No new plot event occurs. No visible people, body parts or living animals. One single continuous shot, ZERO cuts.
+
+FRAMING AND OPTICS
+A close still life of the small mustard-yellow coat hanging from its existing low brass wall hook. The empty little sleeve and soft cuff are the emotional subject, large in the lower-right two thirds; a partial brass hook and a sliver of the larger grey coat above establish its child-sized scale. The coat remains empty, with no body inside. The large grey coat is only contextual, not asserted to belong to the father. Keep the console, key dish, keys, mirror, floor, doors and entire hallway outside this very tight crop. Preserve the actual hook positions from the reference.
+Fixed FOV 18 degrees, natural compressed perspective from a respectful working distance, approximately f/4. Macro scale where specified comes from the narrow field and framing, not from a wide lens pushed close. One primary focus plane remains fixed; background softly defocused but the named subject fully readable. Do not widen to show the whole location. Vertical 9:16.
+
+CAMERA AND ACTION
+Exactly 4.0 seconds, real time throughout, no slow motion or speed ramps. 0.0–4.0: a perfectly locked-off camera holds the already-established still life, zero dolly, zoom, pan, tilt, orbit, handheld shake or rack focus. Static held object animation, stable geometry and steady light; quiet observed duration is intentional. No autonomous movement added to make the image busier. The first and last frames share the exact same composition.
+
+PHYSICS AND CONTINUITY
+The coat hangs under gravity from the hook, both sleeves naturally empty. Completely settled cloth, no wind or autonomous movement. No changes in the hook or clothing.
+
+LIGHT AND SOUND
+Preserve the reference's warm practical evening light with a soft cool-neutral fill and natural contact shadows. Exposure and color remain fixed. No pulsing lights, dramatic shafts or lens flare.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No voices, dialogue, humming, breathing, narration or singing. Diegetic only: low steady hallway room tone and distant, nonrhythmic building ventilation only. Sound is quiet, suitable for laying under an existing scene.
+
+DELIVERY AND LOCKS
+Seedance 2.5, direct BytePlus, 480p, vertical 9:16, 24 fps output, exactly 4 seconds, one shot, zero cuts. Stable object identities and material depth throughout. Everything visible is unlettered: no text, letters, numbers, logos, captions or UI. Props remain inert and keep their established state. The subject is large within the specified tight crop; the rest of the location exists outside the frame. One stationary viewpoint and a single consistent focal length. No music of any kind.
+

@@ -1,0 +1,24 @@
+ACTIVE REFERENCES
+@image1 — THE FAMILY FRONT DOOR SEEN FROM INSIDE THE APARTMENT: warm light-grey panel, plain rectangular inset border, brass lever on the LEFT side of the door leaf, hinges on the RIGHT. Preserve the existing door, panel profile and matte brass shape. Use the warm interior pendant light; crop tightly rather than reproducing the full hallway.
+The established SROK visual language is tactile dimensional stylized 3D animation: felt, woven canvas, matte soft plaster and rounded sculpted forms, with coherent contact shadows and fine fiber texture. Keep depth and volume, not a flat painted illustration. Warm directional practical light around 2900–3000K models the material, gentle cooler ambient fill separates the background. Any glitter, sparkle or iridescence in the reference is NOT carried over. No glossy plastic, photoreal pores, paper-painting texture or decorative grain crawl.
+
+SCENE CONTEXT
+SROK episode 4, 'Things', standalone dramatic object insert. Inside, the handle does not move again. Use after the mother's 'Не знаю', before changing to the outside landing; preserve both dialogue lines intact. No new plot event occurs. No visible people, body parts or living animals. One single continuous shot, ZERO cuts.
+
+FRAMING AND OPTICS
+A restrained close-up of the INSIDE brass door lever and round rosette on the closed light-grey door. The lever remains on the LEFT side of this door as seen from inside; its free tip extends toward frame-right, exactly as in the reference. Include only a narrow piece of the inset panel and adjacent jamb to fix orientation. Lever and rosette are near the left third, quiet door surface fills the rest. The door is already fully closed at the FIRST frame. The closure happened in the preceding scene; this insert only holds the silence afterward. No keyhole close-up, lock turn, hand, face, moving shadow or reflection. No full door, floor or new architectural element.
+Fixed FOV 18 degrees, natural compressed perspective from a respectful working distance, approximately f/4. Macro scale where specified comes from the narrow field and framing, not from a wide lens pushed close. One primary focus plane remains fixed; background softly defocused but the named subject fully readable. Do not widen to show the whole location. Vertical 9:16.
+
+CAMERA AND ACTION
+Exactly 4.0 seconds, real time throughout, no slow motion or speed ramps. 0.0–4.0: a perfectly locked-off camera holds the already-established still life, zero dolly, zoom, pan, tilt, orbit, handheld shake or rack focus. Static held object animation, stable geometry and steady light; quiet observed duration is intentional. No autonomous movement added to make the image busier. The first and last frames share the exact same composition.
+
+PHYSICS AND CONTINUITY
+One rigid handle, one rosette, one closed door. The handle stays horizontal and completely still throughout; the latch is settled, the door does not open, shake or lock itself.
+
+LIGHT AND SOUND
+Preserve the reference's warm practical evening light with a soft cool-neutral fill and natural contact shadows. Exposure and color remain fixed. No pulsing lights, dramatic shafts or lens flare.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No voices, dialogue, humming, breathing, narration or singing. Diegetic only: very quiet interior room tone only; no repeat door slam, lock click or footsteps. Sound is quiet, suitable for laying under an existing scene.
+
+DELIVERY AND LOCKS
+Seedance 2.5, direct BytePlus, 480p, vertical 9:16, 24 fps output, exactly 4 seconds, one shot, zero cuts. Stable object identities and material depth throughout. Everything visible is unlettered: no text, letters, numbers, logos, captions or UI. Props remain inert and keep their established state. The subject is large within the specified tight crop; the rest of the location exists outside the frame. One stationary viewpoint and a single consistent focal length. No music of any kind.
+

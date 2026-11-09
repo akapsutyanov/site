@@ -1,0 +1,74 @@
+SCENE CONTEXT
+SROK episode 4, scene 2. Immediately after his pregnant wife said that Vika is nine weeks pregnant, the husband quietly packs a travel bag in their bedroom. His jacket has been removed between scenes; here he wears his established grey sweater. The wife arrives at the bedroom threshold. He interrupts his packing to see whether she will ask him to stay. She stays in the doorway without offering that invitation. He resumes packing. No spoken words, no captions, no music. The child and Vika are absent.
+THE DEVICE — A VIEW FROM INSIDE THE BAG, FOLLOWED BY A LATERAL DOORWAY REVEAL. Three shots, exactly TWO hard cuts at 3.0 and 8.0 seconds, 12 seconds total. This scene starts from a low object viewpoint, then uses one short physical sideways camera move. It is not another succession of static face portraits. Real time throughout, no slow motion or speed ramps.
+ACTING TASK, shared direction: complete the practical task quietly enough to keep the child outside this confrontation. Husband's motive is to make leaving possible without asking his wife for permission; his goal is to get the bag packed. Her presence forces him to check whether she will stop him. His hands suspend their work while his attention searches her for an invitation to stay; when none comes, he returns to the shirt. Wife's motive is to stop carrying his decisions for him; her goal is to make him face the fact that she is watching him choose. Her tactic is to remain at the threshold and give him no instruction, while actively registering whether he will put the shirt down or pack it. Physical channels: his interrupted packing, her one step to the threshold followed by staying there. End event: both see that he has resumed the packing himself. Safety: engaged attention on each other and the task, natural blinking and breathing, never frozen glassy eyes. Quiet restrained acting; no tears, big sighs, accusation gestures, comic shock or pantomime.
+
+ACTIVE REFERENCES
+@image1 — THE HUSBAND. Match his established tall lean body, sandy light-brown swept hair, grey-blue eyes, long nose, freckles and light stubble. Exactly the reference's grey crewneck knit sweater with sleeves pushed to the forearms, dark jeans, white sneakers and wedding ring. Take ONLY identity, design and clothing from the character sheet, never its background, panel layout, smile or studio lighting. He is without the blue jacket for the whole scene.
+@image2 — THE WIFE. Match her long narrow oval face, hooded hazel-olive eyes, freckles and left-cheek beauty mark, mid-brown hair pinned with a dark claw clip and loose temple strands, small gold studs. Same camel ribbed knit top and wide trousers, white socks, full 28-week pregnancy belly. Take ONLY her design and wardrobe, never the reference's background, panel layout or lighting. She watches her husband, not the camera.
+@image3 — THE BEDROOM. Keep the pale oak wardrobe in the rear with its left compartment already open, the open doorway on the LEFT leading to the family hall, the cream upholstered bed with sage blanket on the RIGHT, the right-side window and warm bedside lamp. The bed, wardrobe and doorway remain in the same places across cuts. Use this as a location reference, not as a mandatory distant framing: compose close enough to read hands, face and the doorway.
+@image4 — ONE TRAVEL BAG SHOWN TWICE FOR REFERENCE. Use the open lower view for shape: medium slate-blue canvas weekender, charcoal short handles, brass zipper, flat front pocket, grey lining. The top and bottom views depict ONE prop, never two bags. Deliberate initial-state change: the bag is EMPTY at the start; the folded shirts from the card will be placed in it during this scene. The bag remains fully unzipped throughout. Handles lie outside the opening against the bag sides.
+Render all references in the same tactile stylized 3D art-toy world: matte softly flocked skin, felted hair, soft knit and woven fabric, rounded sculpted forms, pale wood and restrained brass. Dimensional shapes lit by this room, with contact shadows and soft light falloff. No flat painted-paper treatment, glitter, glossy plastic or photoreal skin.
+
+LOCATION MAP
+The bag rests on the sage blanket near the foot of the bed, stable and fully open. Its long axis lies across the bed. The husband stands beside the accessible left side of the bed, beyond the bag from the initial camera viewpoint; his torso reads near centre-right. The doorway is visible in the rear-left behind and to the left of him. A folded navy T-shirt lies on the blanket immediately beside the bag within easy reach. He initially holds one folded light-grey T-shirt in both hands. These are the only two shirts being handled. The wife begins just outside the bedroom, arriving at its LEFT threshold in shot 2. Her pregnancy silhouette stays clear of the door frame. She stays at that threshold through shot 3.
+
+FIRST FRAME
+The camera is physically just INSIDE the open bag against its near inner wall, looking upward over its low far rim at the husband's face and the light-grey folded T-shirt in his hands. A soft narrow arc of grey lining and brass zipper frames the bottom and corners, not most of the picture. His face is readable above the opening. It is a camera viewpoint from a bag, not a miniature man inside a giant bag.
+
+FORMAT MODE
+Native vertical 9:16, one full-frame view per shot. No split screen, panels or reference-sheet layouts.
+
+OPTICS
+Shot 1: FOV 63 degrees, f/5.6, mild upward angle from the bag interior; his hands, shirt and face are readable, near lining softly blurred. Natural proportions, no fisheye.
+Shot 2: FOV 47 degrees, f/5.6, waist-height three-quarter medium from beside the foot of the bed. Husband, bag and rear-left doorway readable together. No focus rack.
+Shot 3: FOV 47 degrees, f/5.6, low exterior view just above mattress height beside the bag. Hands and bag dominate the foreground, with the wife readable in the LEFT doorway behind. Keep enough depth of field to preserve her silhouette and presence.
+
+CAMERA
+0.0–3.0: stationary camera inside the near edge of the open bag. The bag itself is stationary. No travelling through cloth or zipper.
+HARD CUT at 3.0 to an EXTERIOR viewpoint beside the foot of the bed.
+3.0–4.5: physically slide the camera 25 centimetres to camera-right at constant waist height, producing parallax past the near bed edge and opening a clearer view of the LEFT doorway. Keep the husband near frame-right. This is a lateral move, not a zoom, push-in or orbit.
+4.5–8.0: stop and hold the resulting medium composition, the two characters separated in depth.
+HARD CUT at 8.0 to the low exterior hands-and-bag composition.
+8.0–12.0: hold that composition. Stay on one side of the action axis throughout; the doorway always reads screen-left. Exactly three shots and two hard cuts.
+
+ACTION SEQUENCE
+0.0–3.0 — SHOT 1. The husband lowers the one folded light-grey T-shirt with both hands through the open mouth and places it flat in the FAR HALF of the bag, away from the near-wall camera. He releases it only after contact with the lining. Both hands withdraw through the same opening. The cloth and his arms never cover the whole lens or pass through the camera. The near half remains empty.
+HARD CUT at 3.0.
+3.0–4.5 — SHOT 2. During the short lateral camera move, he picks up the folded NAVY T-shirt from the blanket beside the bag with both hands. At the same time the wife takes one quiet step to the LEFT bedroom threshold and stops there, looking at him. She carries nothing. This movement gives him a reason to notice her.
+4.5–8.0. He interrupts packing with the navy shirt supported in both hands just above the bag. He turns his attention to her to find out whether she will stop him. She remains at the threshold, watching what he chooses to do. No nod, beckoning hand, reply, hug or movement toward him. Neither performs sadness; they attend to each other. The grey shirt remains inside the bag and the navy shirt remains in his hands.
+HARD CUT at 8.0.
+8.0–10.5 — SHOT 3. With his wife still visible in the rear-left doorway, he returns to the bag and lowers the SAME navy shirt flat ON TOP OF the grey shirt in the far half. His hands release the cloth after contact, then withdraw. Two folded shirts are now inside; the near half remains empty for a later scene.
+10.5–12.0. His hands rest at the open rim. He leaves the bag exactly where it is and fully open. She stays in the doorway. Hold the result without a new task. No zipping, lifting the bag, putting on a jacket or leaving the room.
+
+ANIMATION STYLE
+Tactile stylized 3D feature animation, restrained poses on twos within a 24 fps output, smooth camera motion. Natural body weight, tiny cloth settling after each placement, loose hair and sleeves with restrained secondary motion. A purposeful pause in the husband's task creates the beat; it is not a frozen video frame. The wife keeps natural breathing and active attention.
+
+PHYSICS
+Exactly two adults, each with two arms, two hands and ten fingers. The husband uses both of his own hands for each shirt. Exactly one bag on the bed, one grey shirt and one navy shirt. The empty bag gains the grey shirt first, then the navy shirt on top; neither shirt disappears or changes colour. Hands and cloth pass through the open mouth, never through the bag walls. Canvas yields slightly under contact while the bag stays in place; the mattress and blanket support its weight. The bag opening stays broad, unzipped and uncovered; the near half remains unfilled. The wife stays on the floor at the doorway with her full pregnancy volume.
+
+LIGHTING
+Established evening bedroom lighting: soft 3000K bedside lamp from the right and warm hall light behind the doorway, balanced by weaker blue-hour window fill around 6500K from the right-rear. Warm cloth highlights, cooler quiet shadows, clear contact shadows in the bag and under the arms. Keep faces readable inside the bag viewpoint; the bag rim provides a dark foreground framing layer, not a black tunnel. Preserve depth with foreground rim, working man and distant doorway. No frontal studio light or lighting changes across cuts.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No speech in any language, narration, sighs, gasps, humming or child's voice. Diegetic sound only: two soft cloth placements, subtle knit and canvas rustle, one quiet socked step at the threshold, low domestic room tone and distant refrigerator hum. No zipper sound because the bag stays open. No cut whoosh or dramatic impact.
+
+QUALITY
+Stable original identities and room geometry; clear fingertips and cloth contacts; tactile matte microtexture; gentle natural film grain. No crawling texture or object duplication. No text, letters, numbers, symbols, captions, logos or UI anywhere. The camera viewpoint is close and cinematic, never the wide empty location-card composition.
+
+TECHNICAL PARAMETERS
+Seedance 2.5, direct BytePlus/ByteDance, 480p, vertical 9:16, 24 fps output, exactly 12 seconds. Three shots, two hard cuts at 3.0 and 8.0. Real time throughout, no slow motion or speed ramps. Generate only synchronized diegetic audio.
+
+POSITIVE LOCKS
+Exactly one husband and one visibly pregnant wife, each with exactly two arms, two hands and ten fingers.
+The husband wears the grey sweater and dark jeans from @image1 throughout.
+The wife wears the same camel outfit and keeps the pregnancy volume from @image2 throughout.
+The room layout matches @image3, with the doorway always screen-left.
+One open canvas bag matches @image4; the two reference views depict that one prop.
+The first grey shirt enters the empty bag, then the navy shirt rests on top of it; the near half stays empty.
+The bag remains on the bed, fully unzipped and open at the end.
+The wife arrives at the threshold in shot 2 and stays there through shot 3.
+The camera starts inside the bag, cuts to a short lateral exterior slide, then cuts to a low exterior packing view.
+All sounds are physical room, cloth and footstep sounds; all characters stay silent.
+All visible surfaces remain plain and unlettered.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No music of any kind.

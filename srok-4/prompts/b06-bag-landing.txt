@@ -1,0 +1,25 @@
+ACTIVE REFERENCES
+@image1 — THE LANDING OUTSIDE THE FAMILY DOOR: pale grey-beige floor tiles, warm grey baseboard and closed light-grey door; soft 3000K ceiling illumination. The door is seen from OUTSIDE: hinges left, handle right, but both are above this low crop. Use only the floor, lower door panel and light, not its wide view.
+@image2 — THE SAME SINGLE SLATE-BLUE CANVAS BAG: copy the charcoal woven handles, unbranded front pocket, curved brass zipper and exact proportions. The upper view gives its CLOSED state. The two views are one object's design reference, never two bags. The two shirts and rabbit are completely enclosed within it.
+The established SROK visual language is tactile dimensional stylized 3D animation: felt, woven canvas, matte soft plaster and rounded sculpted forms, with coherent contact shadows and fine fiber texture. Keep depth and volume, not a flat painted illustration. Warm directional practical light around 2900–3000K models the material, gentle cooler ambient fill separates the background. Any glitter, sparkle or iridescence in the reference is NOT carried over. No glossy plastic, photoreal pores, paper-painting texture or decorative grain crawl.
+
+SCENE CONTEXT
+SROK episode 4, 'Things', standalone dramatic object insert. He has stepped out but has not gone anywhere yet. Use BEFORE the continuous final portrait scene, never after its last undecided hold. No new plot event occurs. No visible people, body parts or living animals. One single continuous shot, ZERO cuts.
+
+FRAMING AND OPTICS
+A low, compressed-perspective close shot of the single CLOSED slate-blue bag planted on the landing's grey-beige tiled floor beside the lower-right area of the closed family door. Bag sits in the lower-right two-thirds, a small section of the door base and one tile seam on the left tell where it is. It feels placed down and not yet carried away. The bag is large in frame, about half the frame height; no long corridor, whole doorway or empty establishing view. Both handles rest naturally against each other, zipper fully closed. The father is still standing immediately beside it, his feet and legs deliberately OUTSIDE the crop at frame-right. He has not left it behind; no footsteps or moving shadow suggest departure. Rabbit remains fully inside, without an ear or paw sticking out.
+Fixed FOV 29 degrees, natural compressed perspective from a respectful working distance, approximately f/4. Macro scale where specified comes from the narrow field and framing, not from a wide lens pushed close. One primary focus plane remains fixed; background softly defocused but the named subject fully readable. Do not widen to show the whole location. Vertical 9:16.
+
+CAMERA AND ACTION
+Exactly 4.0 seconds, real time throughout, no slow motion or speed ramps. 0.0–4.0: a perfectly locked-off camera holds the already-established still life, zero dolly, zoom, pan, tilt, orbit, handheld shake or rack focus. Static held object animation, stable geometry and steady light; quiet observed duration is intentional. No autonomous movement added to make the image busier. The first and last frames share the exact same composition.
+
+PHYSICS AND CONTINUITY
+One closed bag rests heavily on the floor with a soft contact shadow and slightly compressed base. No floating handles, crawling zipper, lifting, sliding or opening. Cloth and door remain still.
+
+LIGHT AND SOUND
+Preserve the reference's warm practical evening light with a soft cool-neutral fill and natural contact shadows. Exposure and color remain fixed. No pulsing lights, dramatic shafts or lens flare.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No voices, dialogue, humming, breathing, narration or singing. Diegetic only: quiet landing room tone only, no footfalls, phone buzz or elevator sound. Sound is quiet, suitable for laying under an existing scene.
+
+DELIVERY AND LOCKS
+Seedance 2.5, direct BytePlus, 480p, vertical 9:16, 24 fps output, exactly 4 seconds, one shot, zero cuts. Stable object identities and material depth throughout. Everything visible is unlettered: no text, letters, numbers, logos, captions or UI. Props remain inert and keep their established state. The subject is large within the specified tight crop; the rest of the location exists outside the frame. One stationary viewpoint and a single consistent focal length. No music of any kind.
+

@@ -1,0 +1,65 @@
+SCENE CONTEXT
+SROK episode 4, FINAL SCENE. The father has left his wife and preschool son inside their home, but he has not walked away from the closed apartment door. Outside on the landing, his phone receives Vika's call. He looks at the screen, then at the closed door. The phone stops vibrating on its own. He remains where he is. One continuous ten-second shot, ZERO CUTS, ZERO CAMERA MOVEMENT, no dialogue and no moral title. This is unresolved waiting: he neither returns inside nor walks toward Vika, and he does not accept or decline the call.
+SHOT SIZE FIRST — A TIGHT MEDIUM: his complete head, shoulders and torso down to the lower ribs, plus the phone held near the bottom of the frame. The closed door appears only as a narrow contextual section at frame-left. The full door, floor, ceiling, shoes and travel bag are deliberately outside this framing. Do not widen the shot to prove they exist.
+THE DEVICE — THE CAMERA STAYS AFTER THE SOUND STOPS. A completely stationary, restrained long-perspective composition holds the man and a small piece of the closed door. The last 2.5 seconds contain his continuing attention to the door after the call ends. No push-in, pullback, reveal, rise, lateral slide, focus pull or inside-object view. Real time throughout, no slow motion or speed ramps.
+ACTING TASK — FATHER. Shared direction: remain quiet outside the sleeping family's home. His motive is to avoid making the next decision irreversible. His goal is to find some permission to move, from the phone or from the people behind the door. His obstacle is that neither gives him a reassuring answer. Tactic: check the caller, then measure whether he can turn his back on the closed door; keep listening rather than acting. His stillness is an unfinished decision, not a blank face or a pose of regret. He gives the phone no answer and makes no gesture to the handle. Safety: mentally engaged eyes, natural small breaths and occasional blinking, no glassy freeze. No tears, clenched fists, wall leaning, theatrical sigh, smile or dramatic facial choreography.
+
+ACTIVE REFERENCES
+@image1 — THE FATHER IN HIS BLUE JACKET. Preserve his established tall lean build, sandy light-brown swept forelock, grey-blue eyes, long nose, freckles and short stubble. Same open dark ink-blue jacket over grey crewneck sweater, dark jeans, white sneakers and wedding ring. Only his identity, wardrobe and tactile design come from the sheet, not its smile, grey background, pose, panels or studio lighting. Full clothing description defines continuity, not full-body framing.
+@image2 — THE LANDING OUTSIDE THE FAMILY DOOR. Preserve the greige wall and closed warm light-grey door with its plain rectangular inset border, brass handle on the RIGHT and hinges on the LEFT when viewed from outside. Soft warm ceiling illumination. Use the location's surfaces and light, NOT its wide framing. Only a narrow part of the closed door and adjacent wall need appear; the ceiling fixture, entire doorway and tiled floor stay out of shot.
+Continuity outside frame: the same zipped slate-blue canvas bag is standing at his feet, with the rabbit and two shirts inside. It stays there, below the frame. Do not introduce a second visible bag or widen the camera to include it. His phone is one plain dark slim smartphone with rounded corners; no brand or readable interface. Its screen produces a faint soft glow during the incoming call. Caller identification will be added in editing, so generate no text, name, number or call buttons.
+Keep the established tactile stylized 3D finish: softly flocked matte skin, felted hair, knit and woven jacket, rounded sculpted forms, restrained brass and matte plaster. Dimensional face modelling, soft contact shadows and subtle natural grain. No paper-painting treatment, glossy plastic, glitter or photoreal pores.
+
+LOCATION MAP
+The man stands to the RIGHT of the closed door, close enough that a small turn toward frame-left brings the door into his attention. His feet stay planted at the same spot throughout. His face is initially three-quarter toward the camera, large in the right two-thirds. The door's right jamb and a strip of its panel occupy the left edge; the rest of the background is soft greige wall. His RIGHT hand holds the phone at lower-sternum level with the screen toward his eyes and slightly oblique to camera. His LEFT arm rests naturally below the crop. The bag stays on the floor, outside the crop. No other person or reflection appears.
+
+FIRST FRAME
+Tight medium portrait, crown to lower ribs, the father at frame-right and a narrow closed-door strip at frame-left. His complete face is clear, with little headroom; no ceiling or large empty hall. He already holds one dark phone low in his right hand, visible at the bottom of the composition. No walking or pocket retrieval is required.
+
+FORMAT MODE
+Native vertical 9:16, one full-frame continuous shot. No panels, split screen, border or generated typography.
+
+OPTICS
+Fixed FOV 29 degrees, approximately f/4. A longer-perspective tight medium from a respectful camera distance, not a wide lens close to his face or hands. Choose working distance to hold the crown-to-lower-ribs crop with natural face and phone proportions. The phone is close to his body, not thrust toward the camera. The face is the primary focus; the nearby phone and door strip remain intelligible, background gently soft. Fix lens and focus throughout. No enlarged nose, foreground hand or converging corridor perspective.
+
+CAMERA
+0.0–10.0: perfectly still camera at roughly his upper-chest to eye level, with a slight three-quarter viewing angle. Fixed tight-medium composition. No zoom, dolly, pan, tilt, orbit, reframing or hidden transition. No widening to show his legs, bag or entire door. One uninterrupted held shot.
+
+ACTION SEQUENCE
+0.0–0.4: he is already standing outside the closed door, phone in his right hand near his lower sternum. Quiet room tone.
+0.4–2.5: the incoming phone call begins as restrained rhythmic haptic buzzing. Its screen glows faintly without any legible content. He looks down at the screen to identify who is trying to reach him. His thumb rests along the side, away from the display; he neither taps nor swipes.
+2.5–4.5: leaving the phone in exactly the same hand and position, he turns his attention and head a little toward the closed door at frame-left. Keep his face readable in three-quarter profile; he does not turn his back to camera. He checks the silence from inside as if it might tell him what to do. The phone continues vibrating softly.
+4.5–7.5: he stays there with the phone low in his hand, attention on the closed door. No reach toward the handle, knock, step, call acceptance or rejection.
+7.5: the haptic buzzing stops ON ITS OWN; the screen loses its soft call glow. His thumb and fingers have not touched the screen. No beep or call-ending button animation.
+7.5–10.0: hold him after the call has ended. He keeps looking toward the closed door, still in exactly the same position. Natural breathing and alive listening, no new action. End unresolved, before any decision to go or return. No fade, caption, moral or door opening.
+
+ANIMATION STYLE
+Restrained tactile stylized 3D feature animation, poses on twos within a 24 fps output, with minimal organic secondary motion in jacket and hair. Weight stays planted; only small natural attention changes and breathing. Phone movement is no larger than a subtle haptic tremor. The final stillness remains acted, not a frozen frame.
+
+PHYSICS
+Exactly one man with two arms, two hands and ten fingers, maintaining natural anatomy even when cropped. One right hand supports one phone continuously. No extra hand, phone or reflection. Thumb stays off the screen. The door stays shut; handle and wall remain fixed. The bag remains on the floor outside the frame; he neither lifts nor kicks it. No leaning or floating.
+
+LIGHTING
+Soft warm landing light around 3000K shapes the forehead, cheek and blue jacket from upper-left. Gentle neutral wall bounce keeps the shadow-side eye readable. A small amount of phone glow affects only his lower fingers during the call, not his entire face. Keep the door and background quieter than the face; no flat studio illumination, dramatic rim glow or lighting change beyond the phone screen gently dimming at 7.5 seconds.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No speech, narration, crying, sigh, gasp, melody or voices behind the door. Quiet diegetic landing ambience only, with restrained repeated smartphone haptic buzzing from 0.4 to 7.5 seconds. Buzzing stops by itself at 7.5, followed by 2.5 seconds of low natural room tone. No loud notification ping, rejection tone, dramatic impact or door sound.
+
+QUALITY
+Stable character identity, dimensional facial texture and natural quiet acting. Tightly controlled image scale: face and phone matter, architecture stays partial. Soft natural grain, clear eyes without forced catchlights. No text, letters, numbers, logos, subtitles, symbols or interface anywhere. Keep enough uncluttered lower-left background for a small caller graphic added in editing; do not widen or shift the subject to make a large blank area.
+
+TECHNICAL PARAMETERS
+Seedance 2.5, direct BytePlus/ByteDance, 480p, vertical 9:16, 24 fps output, exactly 10 seconds. One stationary continuous shot, ZERO cuts, fixed FOV 29 degrees. Real time throughout, no slow motion or speed ramps. Generate only synchronized haptic buzzing and quiet room tone.
+
+POSITIVE LOCKS
+One visible father, same face and navy-jacket outfit as @image1, two arms and two hands with ten fingers.
+The door matches @image2 and remains closed at frame-left; the rest of the landing stays outside the tight crop.
+Framing stays crown-to-lower-ribs, with natural face and hand proportions and fixed29-degree perspective.
+One phone stays in his right hand near his body; thumb stays off its screen.
+The incoming call stops by itself, while he continues looking at the closed door.
+The last2.5seconds hold the same unresolved position without a new action.
+The travel bag remains below the frame at his feet.
+One continuous shot, zero cuts, zero camera movement.
+The soundtrack contains only room tone and phone vibration; everyone is silent.
+All visible surfaces and the phone are unlettered; caller text is reserved for editing.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No music of any kind.

@@ -1,0 +1,24 @@
+ACTIVE REFERENCES
+@image1 — VIKA'S KITCHEN: preserve the walnut-tone dining table, dusty-pink fabric placemats, matching blush bouclé upholstered chairs, plain ivory ceramic plates and clear straight water glasses. Use its warm pendant and blue evening-window light. Deliberate continuity change: the second ivory plate that is still on the sideboard in the location reference has ALREADY been placed on the near placemat in the finished scene. Both place settings now exist. The sideboard and the far place setting are out of frame.
+The established SROK visual language is tactile dimensional stylized 3D animation: felt, woven canvas, matte soft plaster and rounded sculpted forms, with coherent contact shadows and fine fiber texture. Keep depth and volume, not a flat painted illustration. Warm directional practical light around 2900–3000K models the material, gentle cooler ambient fill separates the background. Any glitter, sparkle or iridescence in the reference is NOT carried over. No glossy plastic, photoreal pores, paper-painting texture or decorative grain crawl.
+
+SCENE CONTEXT
+SROK episode 4, 'Things', standalone dramatic object insert. Vika has prepared a place for someone who has not arrived; insert during her waiting scene after the second plate has been set. No new plot event occurs. No visible people, body parts or living animals. One single continuous shot, ZERO cuts.
+
+FRAMING AND OPTICS
+A tight oblique reverse view from Vika's SIDE of the table toward the EMPTY guest chair. The prepared guest setting occupies the lower half: exactly one visible plain ivory plate on its pink mat, one fork to its left, one knife to its right, one clear half-full water glass just beyond. The empty guest chair's blush upholstered back rises softly in the upper-right. The plate and vacant chair clearly belong to the same place. Vika remains seated behind and to the side of the camera, entirely outside this crop; her own second plate, glass and phone are also outside the crop, still existing. Do not show the whole table, kitchen, a second empty chair or another person. This is the GUEST'S unused setting, not Vika's occupied chair.
+Fixed FOV 29 degrees, natural compressed perspective from a respectful working distance, approximately f/4. Macro scale where specified comes from the narrow field and framing, not from a wide lens pushed close. One primary focus plane remains fixed; background softly defocused but the named subject fully readable. Do not widen to show the whole location. Vertical 9:16.
+
+CAMERA AND ACTION
+Exactly 4.0 seconds, real time throughout, no slow motion or speed ramps. 0.0–4.0: a perfectly locked-off camera holds the already-established still life, zero dolly, zoom, pan, tilt, orbit, handheld shake or rack focus. Static held object animation, stable geometry and steady light; quiet observed duration is intentional. No autonomous movement added to make the image busier. The first and last frames share the exact same composition.
+
+PHYSICS AND CONTINUITY
+The plate, fork, knife, glass and empty chair remain absolutely still. Water is calm, the glass stays half full, and all objects keep contact with the table. No food, steam, additional crockery or autonomous phone activity.
+
+LIGHT AND SOUND
+Preserve the reference's warm practical evening light with a soft cool-neutral fill and natural contact shadows. Exposure and color remain fixed. No pulsing lights, dramatic shafts or lens flare.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No voices, dialogue, humming, breathing, narration or singing. Diegetic only: quiet kitchen room tone with a faint refrigerator hum only. Sound is quiet, suitable for laying under an existing scene.
+
+DELIVERY AND LOCKS
+Seedance 2.5, direct BytePlus, 480p, vertical 9:16, 24 fps output, exactly 4 seconds, one shot, zero cuts. Stable object identities and material depth throughout. Everything visible is unlettered: no text, letters, numbers, logos, captions or UI. Props remain inert and keep their established state. The subject is large within the specified tight crop; the rest of the location exists outside the frame. One stationary viewpoint and a single consistent focal length. No music of any kind.
+

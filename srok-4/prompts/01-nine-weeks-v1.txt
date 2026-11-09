@@ -1,0 +1,74 @@
+SCENE CONTEXT
+SROK, episode 4 "Things", opening scene. Start directly on the confrontation, already inside the family entrance hall, with no establishing shot, title or arrival prelude. The visibly heavily pregnant wife tells her husband that his younger lover Vika is nine weeks pregnant. The husband has just come home and is still wearing his open dark-blue jacket. He was about to put his keys into their usual tray. Exactly ONE spoken passage in RUSSIAN, spoken only by the wife: "У Вики девять недель." The husband remains silent. The child and Vika are absent.
+THE DEVICE — AN INTERRUPTED EVERYDAY ACTION: the wife's matter-of-fact line lands immediately; a cut reveals that the husband has failed to finish putting down his keys; his listening portrait reveals him testing whether any ordinary explanation can still work; the final shared frame holds the distance between them. Four shots joined by exactly THREE HARD CUTS at 2.6, 4.0 and 7.0 seconds. Twelve seconds total. Real time throughout, no slow motion, no speed ramps.
+ACTING — shared direction: keep this exchange at an ordinary indoor volume, without letting the child in another room hear a confrontation. The event ends when both have to wait in the same silence, unable to resume an ordinary homecoming.
+WIFE: she wants him to acknowledge the fact without making her interrogate him. Her obstacle is his habit of evading an answer. She delivers one plain factual sentence to him, then gives him the space to answer. Her attention actively tests whether he will meet the fact or try to pass it off; she does not help him with a second question. Physical channel: she stays at the doorway, facing him, hands relaxed beside her belly rather than reaching to greet him.
+HUSBAND: he wants her to allow the familiar homecoming to continue. Her exact knowledge makes his usual explanation unusable. Through the interrupted key gesture he tries to buy a moment to work out how much she knows. He searches her response for permission to say something ordinary, finds none, and stays with her gaze instead of inventing an answer. His mouth remains closed. Safety: both are mentally engaged with their partner, with natural breathing and natural blinking, never a glassy unfocused stare. Restrained feature-film acting; no tears, yelling, comic shock or theatrical recoil.
+
+ACTIVE REFERENCES
+@image1 — THE WIFE. Preserve her identity and proportions exactly: long narrow oval face, hooded hazel-olive eyes, straight brown brows, freckles and left-cheek beauty mark, brown hair pinned up with a charcoal claw clip and loose temple strands, small gold stud earrings. Preserve her large 28-week pregnancy belly, camel ribbed knit top and matching wide trousers, white socks. Take ONLY her character design and wardrobe from the sheet, never the sheet layout, grey background, expression or studio light.
+@image2 — THE HUSBAND IN HIS JACKET. Preserve his tall lean proportions, sandy light-brown swept forelock, grey-blue eyes, long nose, freckles and light stubble. Same open dark ink-blue jacket over grey crewneck sweater, dark jeans, white sneakers and wedding ring. Take ONLY his character design and wardrobe, never the sheet layout, grey background or studio light. His expression is driven by listening to his wife, not by the card's smile.
+@image3 — THE FAMILY ENTRANCE HALL. Preserve its narrow layout: closed greige entrance door at the far end, pale oak flooring and right-side rounded pale-wood console, shallow ceramic key tray on the console, oval brass mirror on the right wall, warm linen pendant, left-side doorway, sage runner, coat and mustard child's jacket on the right hooks. The wife stands by the existing LEFT doorway; the husband stands beside the existing RIGHT console. This is one room throughout. Reset only the small keys in the reference: the tray is initially empty and the husband holds one keyring with two plain metal keys. Remove loose duplicate keys from the console.
+Keep the original tactile stylized 3D art-toy world: matte flocked skin, soft felted hair, ribbed knit and woven cloth, rounded sculpted forms, pale wood and restrained brass. The same materials receive the location's light and cast contact shadows. Dimensional 3D forms, no flat paper-painting treatment, no glitter, no photoreal skin, no glossy plastic.
+
+LOCATION MAP
+View from the inner end of the hall toward the closed entrance door. Wife occupies the LEFT side beside the existing doorway, turned three-quarter toward her husband at screen-right. Husband occupies the RIGHT side beside the console, facing her across approximately 1.2 metres of clear hall. His RIGHT hand holds the keys just above the tray; his LEFT arm rests at his side. Maintain this screen direction in every shot; stay on the same side of their axis. The closed entrance door stays in the depth behind him. Frame the mirror outside the portraits; any visible mirror sliver reflects only the wall or ceiling, never an additional person. Nobody walks through the scene.
+
+FIRST FRAME
+A close medium view of the wife from head to below her pregnant belly, at the left third, with her husband's soft dark-blue shoulder forming a narrow foreground edge at far right. Her face and mouth are unobstructed and her pregnancy is unmistakable. She is already looking at him. The line starts within the first 0.2 seconds.
+
+FORMAT MODE
+Native vertical 9:16. One image fills the frame in every shot. No split screen or reference-sheet layout.
+
+OPTICS
+Shot 1: FOV 47 degrees, f/4, wife and belly clearly readable, husband's near shoulder soft.
+Shot 2: FOV 29 degrees, f/5.6, tight insert of the husband's right hand, keys and tray, all in focus.
+Shot 3: FOV 29 degrees, f/4, husband's listening face sharp, a narrow soft edge of the wife's shoulder at far left.
+Shot 4: FOV 63 degrees, f/5.6, a medium-wide shared frame with both characters readable and space between them. Camera position remains on the same side of the axis.
+
+CAMERA
+0.0–2.6: locked close medium of wife, already framed for the line.
+2.6–4.0: HARD CUT to the keys insert at console height.
+4.0–7.0: HARD CUT to the husband's close-up.
+7.0–12.0: HARD CUT to the shared frame, wife left and husband right. Hold without travelling, zooming or reframing. Only imperceptible operator weight. All transitions are instantaneous hard cuts; no dissolve or morph.
+
+ACTION SEQUENCE
+0.0–2.6 — SHOT 1. At 0.15 the wife says quietly and evenly in Russian: "У Вики девять недель." Natural adult female voice, clear ordinary conversational diction, no theatrical accent or sarcasm. Complete the line by about 2.2. Her mouth is visible and accurately synchronized for the whole line. Her hands remain low; she does not stroke or point at her belly. She stays looking at the husband, leaving the next turn to him.
+HARD CUT at 2.6.
+2.6–4.0 — SHOT 2. His right thumb and forefinger still grip the keyring. The two attached keys hang only 3–5 centimetres above the ceramic tray. His attempt to lower them has stopped. A tiny remaining swing settles under gravity with one very light metallic tick between the two keys. He neither releases nor drops them. No other action.
+HARD CUT at 4.0.
+4.0–7.0 — SHOT 3. The husband looks toward his wife at screen-left, actively checking whether she is waiting for an explanation or already knows it. He finds no way to begin. His mouth stays closed and he does not nod, shrug or smile. The key-holding hand remains below the frame in the same position.
+HARD CUT at 7.0.
+7.0–12.0 — SHOT 4. Both remain where they were. She waits for him to answer. He waits for her to say what else she knows. At 9.0–10.0 he finishes the small interrupted action: lowers the same keys fully into the tray and releases the ring only after the keys touch it. One quiet ceramic-and-metal contact. His hand withdraws a few centimetres and rests beside the tray. The wife does not rescue the silence. Hold their unanswered exchange until the cut at the end. Nobody leaves or removes clothing yet.
+
+ANIMATION STYLE
+Tactile stylized 3D feature animation, restrained poses animated on twos within a 24 fps output. Smooth stable camera. Small natural breathing, weight in planted feet, slight cloth and loose-hair secondary motion. Character volume and dimensional light stay stable. The keys are the only emphatic physical action; eye-work belongs to listening and testing the partner's response.
+
+PHYSICS
+Each adult has exactly two arms, two hands and ten fingers. One keyring with exactly two keys belongs to the husband's RIGHT hand throughout, then rests in the single tray. Keys stay attached to the ring; they swing and settle with gravity. The hand never changes sides and objects never multiply, float or pass through the tray. The wife keeps her full pregnancy volume. Clothing, walls, console and all contact shadows retain their shape across cuts.
+
+LIGHTING
+Evening. Use the established warm linen pendant as the motivated 3000K key from upper camera-right, shaping the faces and casting soft shadows on their far sides. A much weaker neutral-cool 5000K ambient bounce comes from the inner apartment at camera-left. Preserve cream and camel skin/cloth colours; dark ink-blue jacket supplies the contrast. Keep background exposure about half a stop below the faces and contact shadows readable, with soft falloff into the far hall. No flat frontal studio lighting, theatrical coloured spotlights or change of time of day. All four shots share the same lighting direction.
+
+AUDIO
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING.
+Exactly ONE spoken passage, entirely in Russian, spoken by the wife during shot 1: "У Вики девять недель." No voice-over, added words, male reply, sigh, gasp, child's voice or second repetition. The rest is very quiet domestic room tone, a distant refrigerator hum, the small key-against-key tick in shot 2 and one quiet key-tray contact in shot 4. Her line is close and intelligible above the room tone. No artificial impact sound or dramatic whoosh.
+
+QUALITY
+Stable original identities, delicate tactile microtexture, sculpted three-dimensional faces, clear Russian lip-sync, natural restrained film grain and gentle bloom only at the lamp. Clean silhouette separation without a glowing outline. No text, letters, numbers, symbols, captions, logos or UI anywhere. Preserve the same hall across every shot.
+
+TECHNICAL PARAMETERS
+Seedance 2.5 via direct BytePlus/ByteDance. 480p, vertical 9:16, 24 fps output. Exactly 12 seconds, four shots, three hard cuts. Real time throughout, no slow motion, no speed ramps. Generate synchronized scene audio.
+
+POSITIVE LOCKS
+Exactly two adults share the same entrance hall: wife left, husband right.
+The wife's established identity, camel outfit and 28-week pregnancy match @image1.
+The husband's established identity and open dark-blue jacket outfit match @image2.
+The architecture and materials match @image3.
+Each adult has exactly two arms, two hands and ten fingers.
+One right hand holds one ring with two keys until they are placed into one tray in shot 4.
+Four shots are joined by exactly three hard cuts at 2.6, 4.0 and 7.0 seconds.
+The wife's mouth is visible for the single exact Russian line in shot 1; the husband listens with his mouth closed.
+The soundtrack contains only her one line and restrained domestic sounds.
+Every visible surface and object is unlettered and unbranded.
+NO BACKGROUND MUSIC, NO SCORE, NO MUSICAL STING. No music of any kind.
