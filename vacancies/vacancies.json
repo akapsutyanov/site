@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-10T12:04:09Z",
+ "updated": "2026-11-10T12:36:40Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139317283",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Системный аналитик (AI sales)\n🏢 СБЕР · Москва",
+   "link": "https://hh.ru/vacancy/139317283?tech_source=api",
+   "date": "2026-11-10T15:20:00+0300"
+  },
+  {
+   "id": "hh/139316744",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор\n🏢 HumanCode · Нижний Новгород",
+   "link": "https://hh.ru/vacancy/139316744?tech_source=api",
+   "date": "2026-11-10T15:16:44+0300"
+  },
+  {
+   "id": "hh/138253057",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Старший менеджер по ИИ/AI / GPT Product Manager\n🏢 Арнест ЮниРусь · Москва",
+   "link": "https://hh.ru/vacancy/138253057?tech_source=api",
+   "date": "2026-11-10T15:06:06+0300"
+  },
   {
    "id": "hh/139313090",
    "source": "hh",
@@ -481,30 +505,6 @@
    "text": "AI-дизайнер / AI-креатор контента для Wildberries\n🏢 Зарипова Ирина Нурфаязовна · Ставрополь\n💰 от 70000 до 100000 RUR",
    "link": "https://hh.ru/vacancy/139279753?tech_source=api",
    "date": "2026-11-09T17:19:49+0300"
-  },
-  {
-   "id": "hh/138565650",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель контент-завода (ИИ-креатор)\n🏢 BARKA · Москва\n💰 от 70000 до 150000 RUR",
-   "link": "https://hh.ru/vacancy/138565650?tech_source=api",
-   "date": "2026-11-09T17:14:44+0300"
-  },
-  {
-   "id": "hh/139279367",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Коммерческий директор в AI-агентство\n🏢 Гайнутдинова Евгения Николаевна · Екатеринбург\n💰 от 150000 до 400000 RUR",
-   "link": "https://hh.ru/vacancy/139279367?tech_source=api",
-   "date": "2026-11-09T17:13:36+0300"
-  },
-  {
-   "id": "hh/139279368",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Коммерческий директор в AI-агентство\n🏢 Гайнутдинова Евгения Николаевна · Воронеж\n💰 от 150000 до 400000 RUR",
-   "link": "https://hh.ru/vacancy/139279368?tech_source=api",
-   "date": "2026-11-09T17:13:36+0300"
   },
   {
    "id": "comeindesign/1556",
