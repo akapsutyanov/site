@@ -1451,6 +1451,7 @@ section[id]{scroll-margin-top:120px}
 }
 </style>
 <link rel="stylesheet" href="/master/workshop.css?v=20261031">
+<link rel="stylesheet" href="/master/media-gallery.css?v=20261110">
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1591,44 +1592,36 @@ section[id]{scroll-margin-top:120px}
 
     <div class="work-item">
       <div class="work-video-wrap">
-        <iframe
-          data-src="https://kinescope.io/embed/mbvNwBooC7Sd9M5zKfgSUt?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
-          allowfullscreen
-        ></iframe>
+        <img class="media-poster" src="video-previews/mbvNwBooC7Sd9M5zKfgSUt.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/mbvNwBooC7Sd9M5zKfgSUt.mp4" poster="video-previews/mbvNwBooC7Sd9M5zKfgSUt.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/mbvNwBooC7Sd9M5zKfgSUt" data-video-id="mbvNwBooC7Sd9M5zKfgSUt" data-portrait="false" aria-label="AI-ролик · Видеореклама" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
       </div>
       <div class="work-caption">AI-ролик · Видеореклама</div>
     </div>
 
     <div class="work-item">
       <div class="work-video-wrap">
-        <iframe
-          data-src="https://kinescope.io/embed/f2iyp4d4qGjRXbzoFCgpMt?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
-          allowfullscreen
-        ></iframe>
+        <img class="media-poster" src="video-previews/f2iyp4d4qGjRXbzoFCgpMt.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/f2iyp4d4qGjRXbzoFCgpMt.mp4" poster="video-previews/f2iyp4d4qGjRXbzoFCgpMt.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/f2iyp4d4qGjRXbzoFCgpMt" data-video-id="f2iyp4d4qGjRXbzoFCgpMt" data-portrait="false" aria-label="AI-ролик · Кинематограф" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
       </div>
       <div class="work-caption">AI-ролик · Кинематограф</div>
     </div>
 
     <div class="work-item">
       <div class="work-video-wrap">
-        <iframe
-          data-src="https://kinescope.io/embed/6zicv4scTHmkpDanm4rHyc?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
-          allowfullscreen
-        ></iframe>
+        <img class="media-poster" src="video-previews/6zicv4scTHmkpDanm4rHyc.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/6zicv4scTHmkpDanm4rHyc.mp4" poster="video-previews/6zicv4scTHmkpDanm4rHyc.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/6zicv4scTHmkpDanm4rHyc" data-video-id="6zicv4scTHmkpDanm4rHyc" data-portrait="false" aria-label="AI-ролик · Арт-контент" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
       </div>
       <div class="work-caption">AI-ролик · Арт-контент</div>
     </div>
 
     <div class="work-item">
       <div class="work-video-wrap">
-        <iframe
-          data-src="https://kinescope.io/embed/4YJVTQ8njWVBW56QSTtrcj?autoplay=1&muted=1&loop=1&controls=0"
-          allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика"
-          allowfullscreen
-        ></iframe>
+        <img class="media-poster" src="video-previews/4YJVTQ8njWVBW56QSTtrcj.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/4YJVTQ8njWVBW56QSTtrcj.mp4" poster="video-previews/4YJVTQ8njWVBW56QSTtrcj.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/4YJVTQ8njWVBW56QSTtrcj" data-video-id="4YJVTQ8njWVBW56QSTtrcj" data-portrait="false" aria-label="AI-ролик · Анимация" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
       </div>
       <div class="work-caption">AI-ролик · Анимация</div>
     </div>
@@ -1700,45 +1693,56 @@ section[id]{scroll-margin-top:120px}
 
 <div class="divider"></div>
 
-<!-- STUDENT WORKS — авто-слайдер (вертикальные + горизонтальные видео) -->
-<!--
-  Как добавить своё видео: в нужной карточке .sw-card замени блок-плейсхолдер
-  <div class="sw-ph">...</div> на ОДНО из:
-    • локальный файл:  <video src="work-1.mp4" autoplay muted loop playsinline></video>
-    • Kinescope:       <iframe src="https://kinescope.io/embed/КОД?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
-  Ориентация карточки задаётся классом: .vertical (9:16) или .horizontal (16:9).
-  Карточки можно добавлять/удалять — слайдер сам зациклится (дубль создаётся скриптом).
--->
+<!-- STUDENT WORKS — local silent previews, full videos on Kinescope -->
 <section class="student-works" id="student-works">
   <div class="sw-head">
     <div class="section-label reveal">Работы учеников</div>
     <h2 class="section-title reveal">Сделано руками<br><em>наших студентов</em></h2>
   </div>
   <div class="sw-viewport reveal">
-    <!-- Видео учеников (Kinescope). Чтобы добавить ещё: скопируй .sw-card,
-         поставь класс .vertical (9:16) или .horizontal (16:9) и вставь свой embed-код. -->
+    <!-- Each card has a local 8-second preview and a link to the full Kinescope video. -->
     <div class="sw-track">
 
       <div class="sw-card vertical">
-        <iframe data-src="https://kinescope.io/embed/3sUuKLpgcMeP6HochRXvch?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
+        <img class="media-poster" src="video-previews/3sUuKLpgcMeP6HochRXvch.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/3sUuKLpgcMeP6HochRXvch.mp4" poster="video-previews/3sUuKLpgcMeP6HochRXvch.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/3sUuKLpgcMeP6HochRXvch" data-video-id="3sUuKLpgcMeP6HochRXvch" data-portrait="true" aria-label="Работа ученика · Reels / Shorts" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
         <div class="sw-cap"><span class="sw-tag">Reels / Shorts</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
       <div class="sw-card horizontal">
-        <iframe data-src="https://kinescope.io/embed/bAbndx1F8dGVWM3a2Ak5V5?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
+        <img class="media-poster" src="video-previews/bAbndx1F8dGVWM3a2Ak5V5.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/bAbndx1F8dGVWM3a2Ak5V5.mp4" poster="video-previews/bAbndx1F8dGVWM3a2Ak5V5.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/bAbndx1F8dGVWM3a2Ak5V5" data-video-id="bAbndx1F8dGVWM3a2Ak5V5" data-portrait="false" aria-label="Работа ученика · Кинематограф" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
         <div class="sw-cap"><span class="sw-tag">Кинематограф</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
       <div class="sw-card vertical">
-        <iframe data-src="https://kinescope.io/embed/iRmXYfYsXdZgRKpdj87vZe?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
+        <img class="media-poster" src="video-previews/iRmXYfYsXdZgRKpdj87vZe.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/iRmXYfYsXdZgRKpdj87vZe.mp4" poster="video-previews/iRmXYfYsXdZgRKpdj87vZe.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/iRmXYfYsXdZgRKpdj87vZe" data-video-id="iRmXYfYsXdZgRKpdj87vZe" data-portrait="true" aria-label="Работа ученика · AI-аватар" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
         <div class="sw-cap"><span class="sw-tag">AI-аватар</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
       <div class="sw-card vertical">
-        <iframe data-src="https://kinescope.io/embed/wce72cpDs4au9GCw5C4fTz?autoplay=1&muted=1&loop=1&controls=0" allow="autoplay; fullscreen" loading="lazy" title="Видео-работа ученика" allowfullscreen></iframe>
+        <img class="media-poster" src="video-previews/wce72cpDs4au9GCw5C4fTz.webp" alt="" loading="lazy" decoding="async">
+        <video class="media-preview" data-src="video-previews/wce72cpDs4au9GCw5C4fTz.mp4" poster="video-previews/wce72cpDs4au9GCw5C4fTz.webp" preload="none" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+        <a class="media-launch" href="https://kinescope.io/wce72cpDs4au9GCw5C4fTz" data-video-id="wce72cpDs4au9GCw5C4fTz" data-portrait="true" aria-label="Работа ученика · Клип" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть</span></a>
         <div class="sw-cap"><span class="sw-tag">Клип</span><span class="sw-name">Работа ученика</span></div>
       </div>
 
+    </div>
+  </div>
+  <div class="sw-controls"><button class="sw-pause" type="button" aria-pressed="false">Ⅱ Остановить ленту</button></div>
+  <div class="student-photos reveal">
+    <h3>Фотоработы студентов</h3>
+    <p>Образы, свет и детали. Нажми на фотографию, чтобы рассмотреть крупнее.</p>
+    <div class="student-photo-grid">
+      <a class="student-photo" href="student-works/portrait-01-large.webp" aria-label="Открыть фотоработу 1" target="_blank" rel="noopener"><img src="student-works/portrait-01.webp" alt="Портрет в голубом образе с объёмной причёской" width="640" height="853" loading="lazy" decoding="async"></a>
+      <a class="student-photo" href="student-works/portrait-02-large.webp" aria-label="Открыть фотоработу 2" target="_blank" rel="noopener"><img src="student-works/portrait-02.webp" alt="Портрет в белых очках с леденцом на голубом фоне" width="640" height="853" loading="lazy" decoding="async"></a>
+      <a class="student-photo" href="student-works/portrait-03-large.webp" aria-label="Открыть фотоработу 3" target="_blank" rel="noopener"><img src="student-works/portrait-03.webp" alt="Портрет в голубом пальто на тёмно-синем фоне" width="640" height="853" loading="lazy" decoding="async"></a>
+      <a class="student-photo" href="student-works/portrait-04-large.webp" aria-label="Открыть фотоработу 4" target="_blank" rel="noopener"><img src="student-works/portrait-04.webp" alt="Крупный портрет с золотыми серьгами" width="640" height="853" loading="lazy" decoding="async"></a>
+      <a class="student-photo" href="student-works/portrait-05-large.webp" aria-label="Открыть фотоработу 5" target="_blank" rel="noopener"><img src="student-works/portrait-05.webp" alt="Фронтальный портрет в голубом образе на синем фоне" width="640" height="853" loading="lazy" decoding="async"></a>
     </div>
   </div>
 </section>
@@ -2091,7 +2095,8 @@ section[id]{scroll-margin-top:120px}
   <h2 class="section-title reveal">Загляни <em>внутрь обучения</em></h2>
   <p class="lesson-sub reveal">Один из уроков курса целиком — посмотри, как подаётся материал, прежде чем записаться.</p>
   <div class="lesson-player reveal">
-    <iframe src="https://kinescope.io/embed/qkuQ8ZcXcUo8v8Cci4PRNu" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" title="Пример урока"></iframe>
+    <img class="media-poster" src="video-previews/qkuQ8ZcXcUo8v8Cci4PRNu.webp" alt="" loading="lazy" decoding="async">
+        <a class="media-launch" href="https://kinescope.io/qkuQ8ZcXcUo8v8Cci4PRNu" data-video-id="qkuQ8ZcXcUo8v8Cci4PRNu" data-portrait="false" aria-label="Пример урока" target="_blank" rel="noopener"><span class="media-play">▶ Смотреть урок</span></a>
   </div>
 </section>
 
@@ -2644,28 +2649,15 @@ document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 var t = document.getElementById('ticker');
 if (t) t.innerHTML += t.innerHTML;
 
-// Student works — duplicate cards once so the CSS marquee loops seamlessly
+// Duplicate lightweight cards for the seamless loop; never duplicate full players.
 document.querySelectorAll('.sw-track').forEach(function(track) {
-  track.innerHTML += track.innerHTML;
+  Array.from(track.children).forEach(function(card) {
+    var copy = card.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    copy.querySelectorAll('a, button, video').forEach(function(el) { el.tabIndex = -1; });
+    track.appendChild(copy);
+  });
 });
-
-// Lazy-load video embeds — each iframe starts only when it approaches the viewport
-(function() {
-  var frames = document.querySelectorAll('iframe[data-src]');
-  if (!('IntersectionObserver' in window)) {
-    frames.forEach(function(f) { f.src = f.dataset.src; });
-    return;
-  }
-  var ifrObs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(en) {
-      if (en.isIntersecting) {
-        en.target.src = en.target.dataset.src;
-        ifrObs.unobserve(en.target);
-      }
-    });
-  }, { rootMargin: '300px' });
-  frames.forEach(function(f) { ifrObs.observe(f); });
-})();
 
 // Review screenshots — hide the card if a file is missing
 window.reviewFail = function(img) {
@@ -2864,5 +2856,11 @@ document.querySelectorAll('#program .module-card').forEach(card => {
  new MutationObserver(update).observe(card,{attributes:true,attributeFilter:['class']}); update();
 });
 new ResizeObserver(() => document.querySelectorAll('#program .module-card.open .module-body').forEach(body => {body.style.maxHeight = body.scrollHeight + 'px';})).observe(document.documentElement);
-</script></body>
+</script><dialog class="media-dialog" id="mediaDialog" aria-labelledby="mediaDialogTitle">
+  <button class="media-dialog-close" type="button" aria-label="Закрыть просмотр" autofocus>×</button>
+  <div class="media-dialog-stage"></div>
+  <div class="media-dialog-footer"><span id="mediaDialogTitle"></span><a class="media-dialog-source" href="https://kinescope.io" target="_blank" rel="noopener">Открыть в Kinescope ↗</a></div>
+</dialog>
+<script src="/master/media-gallery.js?v=20261110" defer></script>
+</body>
 </html>
