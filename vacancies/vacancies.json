@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-11T15:25:41Z",
+ "updated": "2026-11-11T15:57:31Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139081800",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-engineer в антифрод\n🏢 Альфа-Банк · Москва",
+   "link": "https://hh.ru/vacancy/139081800?tech_source=api",
+   "date": "2026-11-11T18:53:53+0300"
+  },
+  {
+   "id": "hh/135343379",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Креативный продюсер AI-анимации\n🏢 VVP Group · Москва",
+   "link": "https://hh.ru/vacancy/135343379?tech_source=api",
+   "date": "2026-11-11T18:33:02+0300"
+  },
+  {
+   "id": "hh/135341881",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Продюсер AI-видео\n🏢 VVP Group · Москва",
+   "link": "https://hh.ru/vacancy/135341881?tech_source=api",
+   "date": "2026-11-11T18:32:57+0300"
+  },
+  {
+   "id": "hh/138894973",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-видеокреатор / Нейрокреатор (AI Video Creator)\n🏢 Октагон · Ижевск\n💰 от 70000 до 100000 RUR",
+   "link": "https://hh.ru/vacancy/138894973?tech_source=api",
+   "date": "2026-11-11T18:06:44+0300"
+  },
   {
    "id": "hh/139386041",
    "source": "hh",
@@ -624,38 +656,6 @@
    "channel": "hh.ru",
    "text": "Преподаватель русского языка для обучения нейросетей\n🏢 Яндекс Крауд · Екатеринбург\n💰 до 133000 RUR",
    "link": "https://hh.ru/vacancy/139324646?tech_source=api",
-   "date": "2026-11-10T16:04:01+0300"
-  },
-  {
-   "id": "hh/139324647",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Преподаватель русского языка для обучения нейросетей\n🏢 Яндекс Крауд · Казань\n💰 до 133000 RUR",
-   "link": "https://hh.ru/vacancy/139324647?tech_source=api",
-   "date": "2026-11-10T16:04:01+0300"
-  },
-  {
-   "id": "hh/139324648",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Преподаватель русского языка для обучения нейросетей\n🏢 Яндекс Крауд · Нижний Новгород\n💰 до 133000 RUR",
-   "link": "https://hh.ru/vacancy/139324648?tech_source=api",
-   "date": "2026-11-10T16:04:01+0300"
-  },
-  {
-   "id": "hh/139324649",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Преподаватель русского языка для обучения нейросетей\n🏢 Яндекс Крауд · Челябинск\n💰 до 133000 RUR",
-   "link": "https://hh.ru/vacancy/139324649?tech_source=api",
-   "date": "2026-11-10T16:04:01+0300"
-  },
-  {
-   "id": "hh/139324650",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Преподаватель русского языка для обучения нейросетей\n🏢 Яндекс Крауд · Самара\n💰 до 133000 RUR",
-   "link": "https://hh.ru/vacancy/139324650?tech_source=api",
    "date": "2026-11-10T16:04:01+0300"
   },
   {
