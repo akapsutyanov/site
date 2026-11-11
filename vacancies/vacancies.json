@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-11T11:33:48Z",
+ "updated": "2026-11-11T12:07:05Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139168385",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор-копирайтер (рекламные материалы, AI)\n🏢 МГДИЗАЙН · Санкт-Петербург\n💰 от 50000 до 60000 RUR",
+   "link": "https://hh.ru/vacancy/139168385?tech_source=api",
+   "date": "2026-11-11T14:21:28+0300"
+  },
+  {
+   "id": "hh/138519425",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель курса по нейросетям\n🏢 Творческое образование · Москва\n💰 от 40000 до 120000 RUR",
+   "link": "https://hh.ru/vacancy/138519425?tech_source=api",
+   "date": "2026-11-11T14:16:32+0300"
+  },
+  {
+   "id": "hh/138710996",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель курса по ИИ / Тренер по нейросетям / Преподаватель IT-курсов\n🏢 СЕРПАНТИН · Йошкар-Ола\n💰 от 35000 до 52000 RUR",
+   "link": "https://hh.ru/vacancy/138710996?tech_source=api",
+   "date": "2026-11-11T14:08:20+0300"
+  },
+  {
+   "id": "hh/138882588",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Product Manager в команду ИИ-агентов\n🏢 Домклик · Москва",
+   "link": "https://hh.ru/vacancy/138882588?tech_source=api",
+   "date": "2026-11-11T13:51:01+0300"
+  },
   {
    "id": "hh/138880099",
    "source": "hh",
@@ -571,14 +603,6 @@
    "date": "2026-11-10T16:03:38+0300"
   },
   {
-   "id": "hh/139321955",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Руководитель по развитию продукта (AI, стрим Платежи)\n🏢 Альфа-Банк · Москва",
-   "link": "https://hh.ru/vacancy/139321955?tech_source=api",
-   "date": "2026-11-10T15:46:34+0300"
-  },
-  {
    "id": "dnative_job/11653",
    "source": "telegram",
    "channel": "dnative_job",
@@ -601,30 +625,6 @@
    "text": "🔹\nTrainee Project Manager\n🔹\nTrainee Project Coordinator\nв\nMODSEN\n— IT-компания, которая занимается разработкой программного обеспечения и цифровых решений для бизнеса.\nМинск или Витебск, Беларусь. Оплачиваемая стажировка длительностью 3–5 месяцев.\nИщет Анастасия Ковалёва, её\nпост на LinkedIn\n.\nБольше вакансий для продактов и проджектов:\n@forproducts",
    "link": "https://t.me/jobforjunior/8608",
    "date": "2026-11-10T15:21:58+00:00"
-  },
-  {
-   "id": "hh/139317283",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Системный аналитик (AI sales)\n🏢 СБЕР · Москва",
-   "link": "https://hh.ru/vacancy/139317283?tech_source=api",
-   "date": "2026-11-10T15:20:00+0300"
-  },
-  {
-   "id": "hh/139316744",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор\n🏢 HumanCode · Нижний Новгород",
-   "link": "https://hh.ru/vacancy/139316744?tech_source=api",
-   "date": "2026-11-10T15:16:44+0300"
-  },
-  {
-   "id": "hh/138847494",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению искусственного интеллекта\n🏢 Пермский завод промоборудования · Пермь",
-   "link": "https://hh.ru/vacancy/138847494?tech_source=api",
-   "date": "2026-11-10T15:12:50+0300"
   },
   {
    "id": "forallmedia/4321",
