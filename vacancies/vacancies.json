@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-11T17:01:09Z",
+ "updated": "2026-11-11T17:32:59Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139396127",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Разработчик (ИИ-агенты и автоматизация)\n🏢 АО «ОТП Банк» (JSC «OTP Bank») · Москва",
+   "link": "https://hh.ru/vacancy/139396127?tech_source=api",
+   "date": "2026-11-11T20:13:30+0300"
+  },
   {
    "id": "hh/138723381",
    "source": "hh",
@@ -649,14 +657,6 @@
    "text": "Методист ИИ-курсов\n🏢 Moscow business academy · Москва\n💰 от 80000 до 100000 RUR",
    "link": "https://hh.ru/vacancy/138796985?tech_source=api",
    "date": "2026-11-10T16:47:10+0300"
-  },
-  {
-   "id": "hh/139137817",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Продюсер образовательных продуктов / Руководитель запусков (EdTech, AI)\n🏢 Консалт Холл · Махачкала\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/139137817?tech_source=api",
-   "date": "2026-11-10T16:43:23+0300"
   },
   {
    "id": "forallmarketing/8931",
