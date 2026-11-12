@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-12T14:27:04Z",
+ "updated": "2026-11-12T15:25:55Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139442976",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Шеф-редактор (лид ИИ-тренеров) по школьному русскому языку в Яндекс Образование\n🏢 Яндекс · Москва",
+   "link": "https://hh.ru/vacancy/139442976?tech_source=api",
+   "date": "2026-11-12T18:09:21+0300"
+  },
   {
    "id": "hh/139441591",
    "source": "hh",
@@ -11,12 +19,52 @@
    "date": "2026-11-12T17:15:25+0300"
   },
   {
+   "id": "hh/138565650",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель контент-завода (ИИ-креатор)\n🏢 BARKA · Москва\n💰 от 70000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/138565650?tech_source=api",
+   "date": "2026-11-12T17:14:44+0300"
+  },
+  {
+   "id": "hh/139279367",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Коммерческий директор в AI-агентство\n🏢 Гайнутдинова Евгения Николаевна · Екатеринбург\n💰 от 150000 до 400000 RUR",
+   "link": "https://hh.ru/vacancy/139279367?tech_source=api",
+   "date": "2026-11-12T17:13:36+0300"
+  },
+  {
+   "id": "hh/139279368",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Коммерческий директор в AI-агентство\n🏢 Гайнутдинова Евгения Николаевна · Воронеж\n💰 от 150000 до 400000 RUR",
+   "link": "https://hh.ru/vacancy/139279368?tech_source=api",
+   "date": "2026-11-12T17:13:36+0300"
+  },
+  {
+   "id": "hh/139279369",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Коммерческий директор в AI-агентство\n🏢 Гайнутдинова Евгения Николаевна · Ростов-на-Дону\n💰 от 150000 до 400000 RUR",
+   "link": "https://hh.ru/vacancy/139279369?tech_source=api",
+   "date": "2026-11-12T17:13:36+0300"
+  },
+  {
    "id": "hh/139441294",
    "source": "hh",
    "channel": "hh.ru",
    "text": "Системный аналитик в AI-команду\n🏢 Сбер2B · Москва",
    "link": "https://hh.ru/vacancy/139441294?tech_source=api",
    "date": "2026-11-12T17:11:03+0300"
+  },
+  {
+   "id": "hh/139216472",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-менеджер\n🏢 Эмилия Стиль · Москва\n💰 от 80000 RUR",
+   "link": "https://hh.ru/vacancy/139216472?tech_source=api",
+   "date": "2026-11-12T16:55:06+0300"
   },
   {
    "id": "hh/138622803",
@@ -467,30 +515,6 @@
    "date": "2026-11-11T19:37:46+0300"
   },
   {
-   "id": "hh/139394914",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продвижению ИТ-решений (BDM) AI\n🏢 K2 Тех · Москва",
-   "link": "https://hh.ru/vacancy/139394914?tech_source=api",
-   "date": "2026-11-11T19:17:41+0300"
-  },
-  {
-   "id": "hh/139081800",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-engineer в антифрод\n🏢 Альфа-Банк · Москва",
-   "link": "https://hh.ru/vacancy/139081800?tech_source=api",
-   "date": "2026-11-11T18:53:53+0300"
-  },
-  {
-   "id": "hh/138028309",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-контент-креатор / Ведущий YouTube-канала про нейросети / AI-автор / AI-эксперт\n🏢 GameSport · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/138028309?tech_source=api",
-   "date": "2026-11-11T18:48:26+0300"
-  },
-  {
    "id": "jobforpr/4142",
    "source": "telegram",
    "channel": "jobforpr",
@@ -515,36 +539,12 @@
    "date": "2026-11-11T18:34:01+00:00"
   },
   {
-   "id": "hh/135343379",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Креативный продюсер AI-анимации\n🏢 VVP Group · Москва",
-   "link": "https://hh.ru/vacancy/135343379?tech_source=api",
-   "date": "2026-11-11T18:33:02+0300"
-  },
-  {
-   "id": "hh/135341881",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Продюсер AI-видео\n🏢 VVP Group · Москва",
-   "link": "https://hh.ru/vacancy/135341881?tech_source=api",
-   "date": "2026-11-11T18:32:57+0300"
-  },
-  {
    "id": "jobforjunior/8612",
    "source": "telegram",
    "channel": "jobforjunior",
    "text": "Джуниор / Миддл Маркетолог-стратег по внешнему продвижению (Outreach PR Lead)\nв\nALTWeb Group\n— группа компаний, разрабатывающая облачные SaaS-продукты для интернет-маркетинга, аналитики данных и SEO.\nЯзыки:\nписьменный английский от B1 (Intermediate) и выше.\nУдалённая работа. Гибкий график.\nОписание вакансии на GeekJob.ru\nБольше вакансий в online-маркетинге:\n@forallmarketing",
    "link": "https://t.me/jobforjunior/8612",
    "date": "2026-11-11T18:29:01+00:00"
-  },
-  {
-   "id": "hh/138894973",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-видеокреатор / Нейрокреатор (AI Video Creator)\n🏢 Октагон · Ижевск\n💰 от 70000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/138894973?tech_source=api",
-   "date": "2026-11-11T18:06:44+0300"
   },
   {
    "id": "dnative_job/11656",
