@@ -267,8 +267,9 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:2px}
       <label class="consent" id="consentWrap">
         <input type="checkbox" id="q_consent">
         <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-        <span class="txt">Соглашаюсь на обработку персональных данных и <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+        <span class="txt">Даю <a href="/consent/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> для получения результата и связи по моему запросу.</span>
       </label>
+      <p class="hint"><a href="/privacy/" target="_blank" rel="noopener">Как используются данные</a></p>
       <button class="btn" id="toWheelBtn" onclick="goWheel()">К колесу фортуны →</button>
     </div>
   </section>
@@ -323,7 +324,7 @@ footer a{color:var(--c3);text-decoration:underline;text-underline-offset:2px}
 
 <footer>
   © 2026 · ИП Капустьянов Александр Дмитриевич<br>ИНН 780435351766 · ОГРНИП 326784700426091<br><a href="mailto:alexkapustyanov@gmail.com" style="color:inherit;text-underline-offset:3px;">alexkapustyanov@gmail.com</a> ·
-  <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a><br>
+  <a href="/privacy/" target="_blank" rel="noopener">Политика конфиденциальности</a><br>
   Розыгрыш носит рекламный характер. Доход не гарантирован.
 </footer>
 
@@ -441,11 +442,17 @@ function showResult(p){
 }
 
 function submitLead(prizeName){
+  if (!document.getElementById('q_consent').checked) return;
   var srcParam = '';
   try { srcParam = new URLSearchParams(location.search).get('from') || ''; } catch(e){}
   var source = 'Квиз' + (srcParam ? ' · ' + srcParam : '') + ' · 🎁 Приз: ' + prizeName;
 
+  var consentAt = new Date().toISOString();
+  source += ' · Согласие 2026-11-12: ' + consentAt;
   var payload = {
+    consent: true,
+    consent_version: '2026-11-12',
+    consent_at: consentAt,
     date:     new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
     source:   source,
     name:     document.getElementById('q_name').value.trim(),

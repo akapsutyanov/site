@@ -336,6 +336,7 @@ body {
 .form-disc p+p{margin-top:8px}
 .form-disc b{color:var(--ink2);font-weight:600}
 .form-disc.top{max-width:640px;margin:0 auto 22px}
+.consent-text{color:#b7bbc2}.consent-text a{color:#d4d7dc}.data-consent{display:flex;align-items:flex-start;gap:10px;text-align:left;cursor:pointer;margin-bottom:12px}.data-consent input{appearance:auto!important;position:static!important;opacity:1!important;width:18px!important;height:18px!important;flex:0 0 18px;margin:3px 0 0;accent-color:#aaa}.consent-text p{margin:8px 0 16px}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -478,13 +479,15 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
 
     <!-- SUBMIT -->
     <div class="submit-wrap">
+      <div class="consent-text">
+        <label class="data-consent" for="dataConsent">
+          <input type="checkbox" id="dataConsent" name="dataConsent" aria-describedby="consent-error">
+          <span>Даю <a href="/consent/" target="_blank" rel="noopener" class="consent-link">согласие на обработку персональных данных</a> для ответа на мою заявку.</span>
+        </label>
+        <div class="error-msg" id="consent-error" role="alert">Чтобы отправить анкету, отметьте согласие на обработку данных.</div>
+        <p>Как используются данные: <a href="/privacy/" target="_blank" rel="noopener" class="consent-link">политика обработки персональных данных</a>.</p>
+      </div>
       <button type="submit" class="btn-submit" id="submitBtn">Отправить анкету →</button>
-      <p class="consent-text">
-        Нажимая на кнопку, вы даёте согласие на
-        <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener" class="consent-link">обработку персональных данных</a>
-        и соглашаетесь с
-        <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener" class="consent-link">политикой конфиденциальности</a>
-      </p>
     </div>
 
   </form>
@@ -540,7 +543,7 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
 
   <footer class="anketa-footer">
     © 2026 · ИП Капустьянов Александр Дмитриевич<br>ИНН 780435351766 · ОГРНИП 326784700426091<br><a href="mailto:alexkapustyanov@gmail.com" style="color:inherit;text-underline-offset:3px;">alexkapustyanov@gmail.com</a><br>
-    <a href="https://akapustyanov.ru/politic" target="_blank" rel="noopener">Политика конфиденциальности</a> · Информация на сайте не является публичной офертой
+    <a href="/privacy/" target="_blank" rel="noopener">Политика конфиденциальности</a> · Информация на сайте не является публичной офертой
   </footer>
 
 </div>
@@ -560,7 +563,7 @@ document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
   });
 });
 
-document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+document.querySelectorAll('.q-option input[type="checkbox"]').forEach(function(cb) {
   cb.addEventListener('change', function() {
     var label = this.closest('.q-option');
     if (this.checked) { label.classList.add('selected'); } else { label.classList.remove('selected'); }
@@ -641,6 +644,9 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
 
   var blockInputs = [];
 
+  var dataConsent = document.getElementById('dataConsent');
+  if (!dataConsent.checked) { showErr('consent-error'); valid = false; } else { hideErr('consent-error'); }
+
   if (!valid) {
     var firstError = document.querySelector('.error-msg.show');
     if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -664,7 +670,12 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
   var source = srcParam === 'excursion' ? 'Экскурсия' : (srcParam === 'bonus' ? 'Предзапись' : (srcParam || 'Анкета'));
   if (utmInfo) source += ' · ' + utmInfo;
 
+  var consentAt = new Date().toISOString();
+  source += ' · Согласие 2026-11-12: ' + consentAt;
   var payload = {
+    consent: true,
+    consent_version: '2026-11-12',
+    consent_at: consentAt,
     date:      new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }),
     source:    source,
     name:      name,
