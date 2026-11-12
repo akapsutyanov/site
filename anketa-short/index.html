@@ -337,6 +337,24 @@ body {
 .form-disc b{color:var(--ink2);font-weight:600}
 .form-disc.top{max-width:640px;margin:0 auto 22px}
 .consent-text{color:#b7bbc2}.consent-text a{color:#d4d7dc}.data-consent{display:flex;align-items:flex-start;gap:10px;text-align:left;cursor:pointer;margin-bottom:12px}.data-consent input{appearance:auto!important;position:static!important;opacity:1!important;width:18px!important;height:18px!important;flex:0 0 18px;margin:3px 0 0;accent-color:#aaa}.consent-text p{margin:8px 0 16px}
+
+/* Описание обучения перед анкетой */
+.form-header { margin-bottom: 28px; }
+.form-intro { width: 100%; max-width: 560px; margin: 0 auto 32px; color: var(--ink2); font-size: 15px; line-height: 1.75; }
+.form-intro [hidden] { display: none; }
+.form-intro p + p { margin-top: 16px; }
+.form-intro strong, .form-intro h2 { color: var(--ink); }
+.form-intro h2 { font-size: 18px; font-weight: 600; line-height: 1.4; margin: 24px 0 12px; }
+.form-intro ul { padding-left: 21px; margin: 0 0 20px; }
+.form-intro li + li { margin-top: 10px; }
+.form-intro .intro-note { font-size: 13px; }
+.course-preview { margin-top: 24px; padding: 22px; border: 1px solid var(--gb-hi); border-radius: 16px; background: rgba(255,255,255,.035); }
+.course-preview h2 { margin-top: 0; }
+.course-preview-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 18px; margin-top: 18px; border: 1px solid rgba(220,220,220,.4); border-radius: 10px; color: var(--ink); text-decoration: none; font-weight: 600; }
+.course-preview-link:hover { background: rgba(255,255,255,.08); }
+.course-preview-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+@media(max-width:480px) { .course-preview { padding: 18px; } }
+
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -367,37 +385,64 @@ letter-spacing:2px;text-transform:uppercase;padding:9px 14px;border-radius:20px;
   <div class="form-header">
     <div class="form-eyebrow">
       <div class="eyebrow-dot"></div>
-      Регистрация участника · AI-Новый уровень 2026
+      Обучение · AI — Новый уровень
     </div>
-    <h1 class="form-title">Расскажи<br>о себе <span class="gold-text">пару слов</span></h1>
-    <p class="form-sub">После отправки анкеты свяжусь с тобой в Telegram</p>
+    <h1 class="form-title">Анкета на обучение<br><span class="gold-text">«AI — Новый уровень»</span></h1>
+    <p class="form-sub">Научись создавать AI-контент, который хочется смотреть: от рекламных роликов для брендов до собственных историй и мультсериалов.</p>
   </div>
 
+  <section class="form-intro" id="formIntro" aria-label="Об обучении">
+    <div id="trainingIntro">
+      <p>Я — Александр Капустьянов. На обучении покажу весь процесс создания ролика: как придумать идею, написать сценарий, создать персонажей, оживить кадры и собрать готовую работу с монтажом и звуком.</p>
+      <p>За <strong>6 недель</strong> ты пройдёшь путь от первых генераций до <strong>трёх AI-роликов для портфолио</strong> и подготовки к работе с клиентами.</p>
+      <h2>Что тебя ждёт</h2>
+      <ul>
+        <li>Понятный старт, даже если раньше ты не работал с нейросетями.</li>
+        <li>Практика: изображения, персонажи, анимация, монтаж и звук.</li>
+        <li>Работа над цельными роликами для своего блога и коммерческих задач.</li>
+        <li>Оформление портфолио, поиск клиентов и обсуждение стоимости своих услуг.</li>
+        <li>В Мастер-группе и VIP — моя обратная связь по твоим работам.</li>
+      </ul>
+      <p>Можно учиться самостоятельно или выбрать формат с моей поддержкой. Стоимость обучения — от <strong>29 990 ₽</strong>.</p>
+      <p><strong>Если пока присматриваешься — анкету тоже можно заполнить.</strong> Расскажи о своём опыте и целях, а я свяжусь с тобой в Telegram, отвечу на вопросы и помогу выбрать подходящий формат.</p>
+      <p class="intro-note">Заполнение анкеты не обязывает покупать обучение.</p>
+    </div>
+    <div id="excursionIntro" hidden>
+      <p>Если тебе хочется создавать ролики с нейросетями, но пока непонятно, с чего начать и подойдёт ли тебе обучение, — давай познакомимся.</p>
+      <h2>На экскурсии мы</h2>
+      <ul>
+        <li>Обсудим твой опыт и то, что ты хочешь создавать: контент для блога, рекламу для брендов или собственные истории.</li>
+        <li>Посмотрим платформу изнутри: уроки, задания и работы студентов.</li>
+        <li>Разберём, какие навыки тебе нужны и с чего лучше начать.</li>
+        <li>Обсудим программу, стоимость и подходящий уровень поддержки.</li>
+      </ul>
+      <p>Ты поймёшь, как проходит обучение, что предстоит делать на практике и подходит ли тебе такой формат.</p>
+      <p><strong>Заполни короткую анкету ниже.</strong> Твои ответы помогут мне подготовиться к разговору. После отправки выбери удобное время и подтверди запись в Telegram.</p>
+      <p class="intro-note">Экскурсия бесплатная и не обязывает покупать обучение.</p>
+    </div>
+    <div class="course-preview">
+      <h2>Хочешь сначала узнать больше об обучении?</h2>
+      <p>Посмотри программу, работы студентов и тарифы на сайте, а затем возвращайся к анкете.</p>
+      <a href="https://neurocreator2.ru/master/" target="_blank" rel="noopener" class="course-preview-link">Посмотреть обучение <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
   <script>
-  /* Подмена текстов по источнику: ?from=excursion (экскурсия) / ?from=bonus (предзапись с бонуса) */
   (function() {
-    var from = '';
-    try { from = new URLSearchParams(location.search).get('from') || ''; } catch(e) {}
+    var from = new URLSearchParams(location.search).get('from') || '';
     if (from === 'excursion') {
-      var t  = document.querySelector('.form-title');
-      var s  = document.querySelector('.form-sub');
-      var eb = document.querySelector('.form-eyebrow');
-      if (t)  t.innerHTML  = 'Заполни анкету<br><span class="gold-text">на экскурсию</span>';
-      if (s)  s.textContent = 'Четыре коротких вопроса — меньше минуты. По ним я пойму, что показать именно вам';
-      if (eb) eb.innerHTML = '<div class="eyebrow-dot"></div> Запись на экскурсию · AI-Новый уровень 2026';
+      document.querySelector('.form-title').innerHTML = 'Посмотри, как устроено обучение AI-контенту — <span class="gold-text">до покупки</span>';
+      document.querySelector('.form-sub').textContent = 'Бесплатная экскурсия по «AI — Новый уровень»: 25 минут лично со мной, Александром Капустьяновым.';
+      document.querySelector('.form-eyebrow').innerHTML = '<div class="eyebrow-dot"></div> Запись на экскурсию';
+      document.getElementById('trainingIntro').hidden = true;
+      document.getElementById('excursionIntro').hidden = false;
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('submitBtn').textContent = 'Записаться на экскурсию →';
+      });
     } else if (from === 'bonus') {
-      var t2  = document.querySelector('.form-title');
-      var eb2 = document.querySelector('.form-eyebrow');
-      if (t2)  t2.innerHTML  = 'Анкета<br><span class="gold-text">предзаписи</span>';
-      if (eb2) eb2.innerHTML = '<div class="eyebrow-dot"></div> Предзапись · AI-Новый уровень 2026';
+      document.querySelector('.form-eyebrow').innerHTML = '<div class="eyebrow-dot"></div> Предзапись на обучение';
     }
   })();
   </script>
-
-  <div class="form-disc top">
-        <p><b>Заполнение ни к чему не обязывает.</b> Это просто знакомство: посмотрим вашу ситуацию на созвоне и решим, подходит вам формат или нет.</p>
-        <p><b>Спам мы не любим.</b> Пишу лично и только по делу — подтвердить время и прислать ваш план после разбора. Никаких рассылок «каждый вторник».</p>
-      </div>
 
 <form class="form-card" id="mainForm" novalidate>
 
@@ -722,12 +767,13 @@ document.getElementById('mainForm').addEventListener('submit', function(e) {
     }
 
     document.getElementById('mainForm').style.display = 'none';
+    document.getElementById('formIntro').style.display = 'none';
     document.querySelector('.form-header').style.display = 'none';
     document.getElementById('successScreen').style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }).catch(function() {
     btn.disabled = false;
-    btn.textContent = 'Отправить анкету →';
+    btn.textContent = srcParam === 'excursion' ? 'Записаться на экскурсию →' : 'Отправить анкету →';
     alert('Ошибка отправки. Попробуй ещё раз.');
   });
 });
