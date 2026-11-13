@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-13T08:50:40Z",
+ "updated": "2026-11-13T09:30:17Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139464731",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес аналитик AI (Multi-Agent Systems)\n🏢 Консалтика · Москва",
+   "link": "https://hh.ru/vacancy/139464731?tech_source=api",
+   "date": "2026-11-13T12:27:27+0300"
+  },
+  {
+   "id": "hh/139463909",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель контент-производства (AI-контент, сериалы, гибридные съёмки)\n🏢 РА Медиа Лига · Москва",
+   "link": "https://hh.ru/vacancy/139463909?tech_source=api",
+   "date": "2026-11-13T12:12:51+0300"
+  },
   {
    "id": "hh/139132891",
    "source": "hh",
@@ -473,22 +489,6 @@
    "text": "Менеджер по продажам обучения по Нейросетям для детей\n🏢 Квантастика · Москва\n💰 от 110000 до 250000 RUR",
    "link": "https://hh.ru/vacancy/139431118?tech_source=api",
    "date": "2026-11-12T14:43:08+0300"
-  },
-  {
-   "id": "hh/138926119",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дизайнер / AI-креатор (бренд женской одежды, Wildberries)\n🏢 ГК Марфа · Москва\n💰 от 70000 до 80000 RUR",
-   "link": "https://hh.ru/vacancy/138926119?tech_source=api",
-   "date": "2026-11-12T14:17:05+0300"
-  },
-  {
-   "id": "hh/139267546",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ретушер (с ИИ)\n🏢 ANNALIZA · Ижевск\n💰 от 55000 до 60000 RUR",
-   "link": "https://hh.ru/vacancy/139267546?tech_source=api",
-   "date": "2026-11-12T14:10:52+0300"
   },
   {
    "id": "smmlancer/8917",
