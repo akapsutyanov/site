@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-14T20:55:55Z",
+ "updated": "2026-11-14T21:27:42Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139496312",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер направления искусственного интеллекта\n🏢 Пивоварни Бочкарев · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/139496312?tech_source=api",
+   "date": "2026-11-14T23:54:30+0300"
+  },
   {
    "id": "hh/138723381",
    "source": "hh",
@@ -681,14 +689,6 @@
    "text": "AI/ИИ контент-менеджер маркетплейсов\n🏢 Ай-Эм-Ди-Эм Оперейшнз · Москва\n💰 от 90000 до 110000 RUR",
    "link": "https://hh.ru/vacancy/138839182?tech_source=api",
    "date": "2026-11-13T12:40:57+0300"
-  },
-  {
-   "id": "hh/138785686",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "2D AI художник\n🏢 Pixel Talent · Москва",
-   "link": "https://hh.ru/vacancy/138785686?tech_source=api",
-   "date": "2026-11-13T12:40:46+0300"
   },
   {
    "id": "comeinlena/6620",
