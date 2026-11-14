@@ -1,12 +1,20 @@
 {
- "updated": "2026-11-14T16:35:23Z",
+ "updated": "2026-11-14T17:07:03Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138723381",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Технический специалист по внедрению и настройке (AI-продукт)\n🏢 Меламед Денис Леонидович · Москва\n💰 от 50000 до 55000 RUR",
+   "link": "https://hh.ru/vacancy/138723381?tech_source=api",
+   "date": "2026-11-14T19:37:46+0300"
+  },
   {
    "id": "hh/139495543",
    "source": "hh",
    "channel": "hh.ru",
-   "text": "Комьюнити-менеджер / трекер в клуб по нейросетям\n🏢 Чванов Олег Анатольевич · Москва\n💰 от 60000 до 100000 RUR",
+   "text": "Комьюнити-менеджер / Community Manager / Трекер-менеджер в онлайн-клуб по нейросетям (EdTech)\n🏢 Чванов Олег Анатольевич · Москва\n💰 от 60000 до 100000 RUR",
    "link": "https://hh.ru/vacancy/139495543?tech_source=api",
    "date": "2026-11-14T19:30:23+0300"
   },
@@ -681,14 +689,6 @@
    "text": "2D AI художник\n🏢 Pixel Talent · Москва",
    "link": "https://hh.ru/vacancy/138785686?tech_source=api",
    "date": "2026-11-13T12:40:46+0300"
-  },
-  {
-   "id": "hh/139464731",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Бизнес аналитик AI (Multi-Agent Systems)\n🏢 Консалтика · Москва",
-   "link": "https://hh.ru/vacancy/139464731?tech_source=api",
-   "date": "2026-11-13T12:27:27+0300"
   },
   {
    "id": "comeinlena/6620",
