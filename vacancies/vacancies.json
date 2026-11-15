@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-15T10:30:54Z",
+ "updated": "2026-11-15T11:03:15Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138924401",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Промпт-инженер / Аккаунт-менеджер\n🏢 Сфера · Москва\n💰 от 120000 до 250000 RUR",
+   "link": "https://hh.ru/vacancy/138924401?tech_source=api",
+   "date": "2026-11-15T13:43:11+0300"
+  },
+  {
+   "id": "hh/138749528",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер по продажам обучения нейросетям (AI агенты/ аватары/ контент)\n🏢 xHuman Sales · Москва\n💰 от 120000 до 180000 RUR",
+   "link": "https://hh.ru/vacancy/138749528?tech_source=api",
+   "date": "2026-11-15T13:35:33+0300"
+  },
+  {
+   "id": "hh/139206065",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по автоматизации 1С и бизнес-процессов с использованием AI\n🏢 Группа МЕТТАТРОН · Москва\n💰 от 180000 до 220000 RUR",
+   "link": "https://hh.ru/vacancy/139206065?tech_source=api",
+   "date": "2026-11-15T13:32:18+0300"
+  },
+  {
+   "id": "hh/139264012",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Директор филиала (AI-агентство)\n🏢 Гайнутдинова Евгения Николаевна · Москва\n💰 от 200000 до 450000 RUR",
+   "link": "https://hh.ru/vacancy/139264012?tech_source=api",
+   "date": "2026-11-15T13:13:57+0300"
+  },
   {
    "id": "hh/137061196",
    "source": "hh",
@@ -547,14 +579,6 @@
    "date": "2026-11-13T20:09:28+0300"
   },
   {
-   "id": "hh/139487847",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Графический дизайнер / AI-креатор (ювелирный бренд)\n🏢 Сириус · Омск\n💰 от 60000 до 90000 RUR",
-   "link": "https://hh.ru/vacancy/139487847?tech_source=api",
-   "date": "2026-11-13T19:46:53+0300"
-  },
-  {
    "id": "comeindesign/1561",
    "source": "telegram",
    "channel": "comeindesign",
@@ -595,36 +619,12 @@
    "date": "2026-11-13T18:01:58+00:00"
   },
   {
-   "id": "hh/139486059",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор / AI-дизайнер\n🏢 WAISTLINE (ООО Линия Талии) · Санкт-Петербург\n💰 до 60000 RUR",
-   "link": "https://hh.ru/vacancy/139486059?tech_source=api",
-   "date": "2026-11-13T17:58:22+0300"
-  },
-  {
    "id": "jobforjunior/8619",
    "source": "telegram",
    "channel": "jobforjunior",
    "text": "Junior Manual QA\nв\nChatPlace\n— SaaS-платформа для блогеров, экспертов и предпринимателей, которые продвигают и продают свои продукты через контент.\nУдалённая работа. Гибкий график.\nОписание вакансии на GeekJob.ru\nБольше вакансий в тестировании:\n@forallqa",
    "link": "https://t.me/jobforjunior/8619",
    "date": "2026-11-13T17:51:58+00:00"
-  },
-  {
-   "id": "hh/138626082",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Креативный продюсер (контент-креатор / видеомонтаж + AI)\n🏢 Coral Club · Москва",
-   "link": "https://hh.ru/vacancy/138626082?tech_source=api",
-   "date": "2026-11-13T17:28:33+0300"
-  },
-  {
-   "id": "hh/138675213",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI/ИИ дизайнер / Контент-менеджер на маркетплейсы\n🏢 INARIO · Москва\n💰 от 120000 RUR",
-   "link": "https://hh.ru/vacancy/138675213?tech_source=api",
-   "date": "2026-11-13T17:14:47+0300"
   },
   {
    "id": "jobforpr/4146",
