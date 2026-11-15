@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-15T08:24:27Z",
+ "updated": "2026-11-15T08:56:43Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138743222",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель по AI-контенту\n🏢 LENIVINS.AI · Москва\n💰 от 200000 RUR",
+   "link": "https://hh.ru/vacancy/138743222?tech_source=api",
+   "date": "2026-11-15T11:38:05+0300"
+  },
+  {
+   "id": "hh/139102763",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AL-специалист (специалист по искусственному интеллекту и автоматизации)\n🏢 Смоленцева Ирина Валентиновна · Казань\n💰 от 40000 RUR",
+   "link": "https://hh.ru/vacancy/139102763?tech_source=api",
+   "date": "2026-11-15T11:35:36+0300"
+  },
+  {
+   "id": "hh/139101857",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель отдела продукта (онлайн-школа, нейросети)\n🏢 Акулы Нейросетей · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/139101857?tech_source=api",
+   "date": "2026-11-15T11:20:11+0300"
+  },
+  {
+   "id": "hh/138123663",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Python-разработчик AI-сервисов (LLM / RAG)\n🏢 QSOFT · Москва",
+   "link": "https://hh.ru/vacancy/138123663?tech_source=api",
+   "date": "2026-11-15T11:01:20+0300"
+  },
   {
    "id": "hh/138740094",
    "source": "hh",
@@ -587,44 +619,12 @@
    "date": "2026-11-13T16:09:15+0300"
   },
   {
-   "id": "hh/138668951",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO/SERM/GEO специалист (поисковое продвижение и репутация в поиске и нейросетях)\n🏢 Дехолдинг · Москва\n💰 от 140 до 200 RUR",
-   "link": "https://hh.ru/vacancy/138668951?tech_source=api",
-   "date": "2026-11-13T16:03:38+0300"
-  },
-  {
-   "id": "hh/138668952",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SEO/SERM/GEO специалист (поисковое продвижение и репутация в поиске и нейросетях)\n🏢 Дехолдинг · Зеленоград\n💰 от 140 до 200 RUR",
-   "link": "https://hh.ru/vacancy/138668952?tech_source=api",
-   "date": "2026-11-13T16:03:38+0300"
-  },
-  {
-   "id": "hh/139480844",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по внедрению ИИ-системы\n🏢 MassPers · Москва\n💰 от 80000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/139480844?tech_source=api",
-   "date": "2026-11-13T15:55:56+0300"
-  },
-  {
    "id": "jobforjunior/8617",
    "source": "telegram",
    "channel": "jobforjunior",
    "text": "Junior React.js Developer\nMarc Ellis\nis a leading technology and professional services provider.\nOn-site (Dubai, UAE). Contract duration: 3 months.\nMore details in Prathiksha Bhat M's\npost on LinkedIn\n.\nБольше вакансий в Frontend & Node.js:\n@forfrontend",
    "link": "https://t.me/jobforjunior/8617",
    "date": "2026-11-13T15:48:58+00:00"
-  },
-  {
-   "id": "hh/139226559",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам IT-решений / SaaS / Маркетинг/ Сайты / AI\n🏢 АТЛАНТ КОНСАЛТ · Нижний Новгород\n💰 от 75000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/139226559?tech_source=api",
-   "date": "2026-11-13T15:41:31+0300"
   },
   {
    "id": "comeinlena/6622",
