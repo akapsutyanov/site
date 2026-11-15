@@ -1,7 +1,47 @@
 {
- "updated": "2026-11-15T09:28:10Z",
+ "updated": "2026-11-15T09:59:24Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137061196",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Псков\n💰 от 85750 RUR",
+   "link": "https://hh.ru/vacancy/137061196?tech_source=api",
+   "date": "2026-11-15T12:26:36+0300"
+  },
+  {
+   "id": "hh/138744901",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент менеджер / AI Content Manager\n🏢 Се Плюс · Ставрополь\n💰 от 65000 RUR",
+   "link": "https://hh.ru/vacancy/138744901?tech_source=api",
+   "date": "2026-11-15T12:07:43+0300"
+  },
+  {
+   "id": "hh/139418089",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "ИИ-аналитик по маркетплейсам (ВБ/Wildberries)\n🏢 Космо Бьюти · Москва",
+   "link": "https://hh.ru/vacancy/139418089?tech_source=api",
+   "date": "2026-11-15T11:58:53+0300"
+  },
+  {
+   "id": "hh/133039518",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/133039518?tech_source=api",
+   "date": "2026-11-15T11:52:38+0300"
+  },
+  {
+   "id": "hh/138917867",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Рекрутер (EdTech, AI)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/138917867?tech_source=api",
+   "date": "2026-11-15T11:46:57+0300"
+  },
   {
    "id": "hh/138743222",
    "source": "hh",
@@ -579,52 +619,12 @@
    "date": "2026-11-13T17:14:47+0300"
   },
   {
-   "id": "hh/139484606",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ведущий программист команды по ИИ\n🏢 Си Пи Эссетс Менеджмент · Москва",
-   "link": "https://hh.ru/vacancy/139484606?tech_source=api",
-   "date": "2026-11-13T17:10:46+0300"
-  },
-  {
-   "id": "hh/138796985",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Методист ИИ-курсов\n🏢 Moscow business academy · Москва\n💰 от 80000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/138796985?tech_source=api",
-   "date": "2026-11-13T16:47:10+0300"
-  },
-  {
-   "id": "hh/139003784",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "SMM-специалист (сеть карманных блогеров, AI-рилсы)\n🏢 REMONT.IO · Москва",
-   "link": "https://hh.ru/vacancy/139003784?tech_source=api",
-   "date": "2026-11-13T16:45:12+0300"
-  },
-  {
    "id": "jobforpr/4146",
    "source": "telegram",
    "channel": "jobforpr",
    "text": "Director of Communications and PR\nat a group of companies, responsible for public relations and external communications across all of the group's companies.\nMore details in Zev Deutsch's\npost on LinkedIn\n.\nБольше вакансий для ТОПов:\n@forchiefs",
    "link": "https://t.me/jobforpr/4146",
    "date": "2026-11-13T16:44:58+00:00"
-  },
-  {
-   "id": "hh/139137817",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Продюсер образовательных продуктов / Руководитель запусков (EdTech, AI)\n🏢 Консалт Холл · Махачкала\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/139137817?tech_source=api",
-   "date": "2026-11-13T16:43:23+0300"
-  },
-  {
-   "id": "hh/139481489",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по работе с ИИ\n🏢 КЗМК ТЭМПО · Набережные Челны\n💰 от 66000 до 103000 RUR",
-   "link": "https://hh.ru/vacancy/139481489?tech_source=api",
-   "date": "2026-11-13T16:09:15+0300"
   },
   {
    "id": "jobforjunior/8617",
