@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-17T08:22:47Z",
+ "updated": "2026-11-17T08:55:05Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139356282",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM / AI-контент-менеджер\n🏢 Фасадные Технологии · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/139356282?tech_source=api",
+   "date": "2026-11-17T11:18:51+0300"
+  },
+  {
+   "id": "hh/138700842",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Маркетолог (AI-native)\n🏢 101 · Москва",
+   "link": "https://hh.ru/vacancy/138700842?tech_source=api",
+   "date": "2026-11-17T11:12:21+0300"
+  },
+  {
+   "id": "hh/139155308",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Бизнес-ассистент широкого профиля с нейросетями и вайб-кодингом\n🏢 Идеальный турник · Санкт-Петербург\n💰 от 30000 до 30000 RUR",
+   "link": "https://hh.ru/vacancy/139155308?tech_source=api",
+   "date": "2026-11-17T10:47:37+0300"
+  },
   {
    "id": "hh/139564530",
    "source": "hh",
@@ -593,30 +617,6 @@
    "text": "AI-маркетолог / Маркетолог-аналитик (нейросети, SEO)\n🏢 ЛИДЕР ПЛЮС · Москва\n💰 от 125000 RUR",
    "link": "https://hh.ru/vacancy/139519028?tech_source=api",
    "date": "2026-11-16T10:33:07+0300"
-  },
-  {
-   "id": "hh/139518950",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам обучения по Нейросетям для детей\n🏢 Квантастика · Санкт-Петербург\n💰 от 110000 до 250000 RUR",
-   "link": "https://hh.ru/vacancy/139518950?tech_source=api",
-   "date": "2026-11-16T10:31:31+0300"
-  },
-  {
-   "id": "hh/139347900",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Team lead of Data & AI\n🏢 Акваарт · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/139347900?tech_source=api",
-   "date": "2026-11-16T10:20:00+0300"
-  },
-  {
-   "id": "hh/138460795",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Педагог курса Нейросети в Хабаровске)\n🏢 ​Школа дизайна ArtTech · Хабаровск\n💰 от 30000 до 50000 RUR",
-   "link": "https://hh.ru/vacancy/138460795?tech_source=api",
-   "date": "2026-11-16T10:09:51+0300"
   },
   {
    "id": "smm_top_vacancy/1684",
