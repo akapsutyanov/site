@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-18T09:17:24Z",
+ "updated": "2026-11-18T09:49:28Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137061196",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер проектов по разметке данных для обучения нейросетей\n🏢 СБЕР · Псков\n💰 от 85750 RUR",
+   "link": "https://hh.ru/vacancy/137061196?tech_source=api",
+   "date": "2026-11-18T12:26:36+0300"
+  },
+  {
+   "id": "hh/139610609",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI Artist / Generative Artist\n🏢 PostPro18 · Москва",
+   "link": "https://hh.ru/vacancy/139610609?tech_source=api",
+   "date": "2026-11-18T12:20:11+0300"
+  },
   {
    "id": "hh/139608970",
    "source": "hh",
@@ -9,6 +25,46 @@
    "text": "AI-креатор / Менеджер по привлечению AI-креаторов\n🏢 Церковникова Екатерина Георгиевна · Москва\n💰 от 60000 до 70000 RUR",
    "link": "https://hh.ru/vacancy/139608970?tech_source=api",
    "date": "2026-11-18T11:55:39+0300"
+  },
+  {
+   "id": "hh/133039518",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SEO-специалист с использованием ИИ-инструментов / AI Search\n🏢 Специальные Материалы · Москва\n💰 от 100000 RUR",
+   "link": "https://hh.ru/vacancy/133039518?tech_source=api",
+   "date": "2026-11-18T11:52:38+0300"
+  },
+  {
+   "id": "hh/138917867",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Рекрутер (EdTech, AI)\n🏢 LENIVINS.AI · Москва\n💰 от 100000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/138917867?tech_source=api",
+   "date": "2026-11-18T11:46:57+0300"
+  },
+  {
+   "id": "hh/138743222",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Преподаватель по AI-контенту\n🏢 LENIVINS.AI · Москва\n💰 от 200000 RUR",
+   "link": "https://hh.ru/vacancy/138743222?tech_source=api",
+   "date": "2026-11-18T11:38:05+0300"
+  },
+  {
+   "id": "hh/139102763",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AL-специалист (специалист по искусственному интеллекту и автоматизации)\n🏢 Смоленцева Ирина Валентиновна · Казань\n💰 от 40000 RUR",
+   "link": "https://hh.ru/vacancy/139102763?tech_source=api",
+   "date": "2026-11-18T11:35:36+0300"
+  },
+  {
+   "id": "hh/139101857",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель отдела продукта (онлайн-школа, нейросети)\n🏢 Акулы Нейросетей · Москва\n💰 от 150000 RUR",
+   "link": "https://hh.ru/vacancy/139101857?tech_source=api",
+   "date": "2026-11-18T11:20:11+0300"
   },
   {
    "id": "hh/138123663",
@@ -619,14 +675,6 @@
    "date": "2026-11-17T09:40:43+00:00"
   },
   {
-   "id": "hh/139558732",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист по ИИ и автоматизации бизнес-процессов (AI-агенты / 1С / MS SQL)\n🏢 ОРЕХ · Москва",
-   "link": "https://hh.ru/vacancy/139558732?tech_source=api",
-   "date": "2026-11-17T09:06:29+0300"
-  },
-  {
    "id": "comeinlena/6634",
    "source": "telegram",
    "channel": "comeinlena",
@@ -667,14 +715,6 @@
    "date": "2026-11-17T06:20:40+00:00"
   },
   {
-   "id": "hh/139553057",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Контент-менеджер / SMM-специалист (Reels, Shorts, ИИ, автоматизация)\n🏢 Киреева Наталья Сергеевна · Москва",
-   "link": "https://hh.ru/vacancy/139553057?tech_source=api",
-   "date": "2026-11-17T05:48:37+0300"
-  },
-  {
    "id": "work_editor/6785",
    "source": "telegram",
    "channel": "work_editor",
@@ -691,52 +731,12 @@
    "date": "2026-11-17T05:06:19+00:00"
   },
   {
-   "id": "hh/139550667",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI Video Specialist / Специалист по генерации реалистичных AI-видео\n🏢 Kiril Terenovick · Москва\n💰 от 650 до 800 USD",
-   "link": "https://hh.ru/vacancy/139550667?tech_source=api",
-   "date": "2026-11-17T00:13:57+0300"
-  },
-  {
    "id": "tv/60308438-e21c-11f1-bed1-8ba4a90a0c11",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Маркетолог\n🏢 ООО \"АКВАТОРИЯ\" · Приморский край\n💰 от 100000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1162536094313/60308438-e21c-11f1-bed1-8ba4a90a0c11",
    "date": "2026-11-17"
-  },
-  {
-   "id": "hh/138785559",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Специалист разметки данных для обучения нейросетей нового поколения\n🏢 СБЕР · Великие Луки\n💰 от 58600 RUR",
-   "link": "https://hh.ru/vacancy/138785559?tech_source=api",
-   "date": "2026-11-16T23:50:20+0300"
-  },
-  {
-   "id": "hh/139549291",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Технический руководитель / Tech Lead — агрегатор нейросетей\n🏢 Чернухина Диана Даниловна · Москва\n💰 от 200000 до 300000 RUR",
-   "link": "https://hh.ru/vacancy/139549291?tech_source=api",
-   "date": "2026-11-16T20:40:03+0300"
-  },
-  {
-   "id": "hh/139549175",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ креатор Google Flow\n🏢 Довнар Алексей Владимирович · Москва",
-   "link": "https://hh.ru/vacancy/139549175?tech_source=api",
-   "date": "2026-11-16T20:19:07+0300"
-  },
-  {
-   "id": "hh/139549176",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ креатор Google Flow\n🏢 Довнар Алексей Владимирович · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/139549176?tech_source=api",
-   "date": "2026-11-16T20:19:07+0300"
   },
   {
    "id": "smmlancer/8929",
