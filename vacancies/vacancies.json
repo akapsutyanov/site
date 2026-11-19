@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-19T11:17:53Z",
+ "updated": "2026-11-19T11:50:27Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138843995",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-креатор / AI-фотограф/ Нейрофотограф\n🏢 LD LATTE · Москва\n💰 от 60000 до 80000 RUR",
+   "link": "https://hh.ru/vacancy/138843995?tech_source=api",
+   "date": "2026-11-19T14:11:11+0300"
+  },
   {
    "id": "hh/139657741",
    "source": "hh",
@@ -513,14 +521,6 @@
    "text": "Коммерческий директор в AI-агентство\n🏢 Гайнутдинова Евгения Николаевна · Ростов-на-Дону\n💰 от 150000 до 400000 RUR",
    "link": "https://hh.ru/vacancy/139279369?tech_source=api",
    "date": "2026-11-18T17:13:36+0300"
-  },
-  {
-   "id": "hh/139627795",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-дизайнер / Digital-дизайнер (Claude Code, Figma, Tilda)\n🏢 Открытый университет Симург · Санкт-Петербург\n💰 от 70000 RUR",
-   "link": "https://hh.ru/vacancy/139627795?tech_source=api",
-   "date": "2026-11-18T17:07:17+0300"
   },
   {
    "id": "work_editor/6793",
