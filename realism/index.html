@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Полный реализм — игровой практикум по созданию реалистичных AI-кадров и видео. Войди в город, выполни задания и создай свою сцену.">
+  <title>Полный реализм — игровой практикум AI-креатора</title>
+  <link rel="icon" href="../master/favicon.png">
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      ['hero', 'explore', 'learn', 'create', 'scene'].forEach(function (name) {
+        var choice = params.get(name) || params.get('art') || (name === 'hero' ? 'f' : 'c');
+        if (choice === 'b' || choice === 'c' || ((choice === 'd' || choice === 'f') && name === 'hero')) {
+          document.documentElement.classList.add('art-' + name + '-' + choice);
+        }
+      });
+    }());
+  </script>
+  <link rel="stylesheet" href="assets/landing.css?v=20261119-11">
+</head>
+<body>
+  <header class="top"><div class="wrap"><a class="brand" href="../master/"><i class="mark">AI</i><span>НОВЫЙ УРОВЕНЬ<br>ИГРОВОЙ ПРАКТИКУМ</span></a><nav><a href="#world">Об игре</a><a href="#missions">Миссии</a><a href="#result">Результат</a></nav><a class="enter" href="https://app.neurocreator2.ru/realism/">Войти в игру</a></div></header>
+  <main>
+    <section class="hero" id="top"><div class="wrap"><div class="hero-bottom"><div><div class="eyebrow">AI НОВЫЙ УРОВЕНЬ / ИГРОВОЙ ПРАКТИКУМ</div><h1>Полный <em>реализм</em></h1></div><div><p>Войди в город как AI-креатор. Исследуй мир, выполняй задания и создавай кадры, которые выглядят как настоящая съёмка.</p><div class="meta"><span>Игра в браузере</span><span>Уроки</span><span>Фото и видео</span></div><div class="actions"><a class="btn" href="#access">Ранний доступ</a><a class="btn alt" href="https://app.neurocreator2.ru/realism/">Открыть игру</a></div><div class="small">Первая версия игры открыта для просмотра. Уроки готовятся к запуску группы.</div></div></div></div></section>
+    <section id="world"><div class="wrap"><span class="kicker">Один мир · реальные навыки</span><h2>Город — твоя <em>мастерская.</em></h2><p class="lede">Исследуй город от третьего лица. В мастерской узнавай приёмы, на локациях проверяй кадры, у заказчика получай задачу. Каждая игровая миссия ведёт к твоей собственной работе.</p><div class="grid three"><article class="feat"><div class="symbol">01</div><h3>Исследуй мир</h3><p>Находи точки заданий в игровом квартале и возвращайся к ним в удобном порядке.</p></article><article class="feat"><div class="symbol">02</div><h3>Учись в момент задачи</h3><p>Короткий урок, инструменты и промпты появляются там, где они нужны для следующего шага.</p></article><article class="feat"><div class="symbol">03</div><h3>Создай своё</h3><p>Финал прохождения — реалистичные кадры и короткий ролик по брифу.</p></article></div></div></section>
+    <section class="scene" id="scene"><div class="wrap"><span class="kicker">Вход в город</span><h2>Твоя новая <em>площадка.</em></h2><div class="scene-box"><div class="scene-ui"><div><span>РЕЖИМ: ПОЛНЫЙ РЕАЛИЗМ</span><strong>Мастерская. Улица. Заказчик. Твоя сцена.</strong></div><a class="btn alt" href="https://app.neurocreator2.ru/realism/">Открыть игровую зону</a></div></div><p class="scene-note">Кадр показывает художественное направление проекта. Игровая зона развивается вместе с уроками раннего набора.</p></div></section>
+    <section id="missions"><div class="wrap"><span class="kicker">Маршрут прохождения</span><h2>Четыре миссии до <em>своей сцены.</em></h2><div class="mission"><div class="mn">01</div><div><h3>Собери героя</h3><p>Лицо, кожа, волосы, одежда и единый образ без ощущения «пластика».</p></div><b>Фото</b></div><div class="mission"><div class="mn">02</div><div><h3>Оживи город</h3><p>Локация, свет, детали среды и кадр, которому веришь.</p></div><b>Мир</b></div><div class="mission"><div class="mn">03</div><div><h3>Сними кат-сцену</h3><p>Естественное движение героя и камеры, стабильный образ, чистый короткий ролик.</p></div><b>Видео</b></div><div class="mission"><div class="mn">04</div><div><h3>Прими заказ</h3><p>Получи бриф и примени весь маршрут к работе, которую можно показать клиенту.</p></div><b>Практика</b></div></div></section>
+    <section class="bonus" id="bonus"><div class="wrap"><div class="bonus-box"><div class="bonus-main"><span class="kicker">Бонус к практикуму</span><h2>Монтаж в Claude Code.</h2><p>Собери созданные кадры и сцены в законченный ролик. Покажу, как с помощью Claude Code выстроить последовательность, добавить титры и звук, внести правки и экспортировать финальное видео.</p></div><div class="bonus-flow" aria-label="Что входит в бонус"><div><span>01</span><strong>Исходники</strong><p>Отбираем лучшие кадры и видео из миссий.</p></div><div><span>02</span><strong>Сборка</strong><p>Монтируем ролик с Claude Code и Remotion.</p></div><div><span>03</span><strong>Финал</strong><p>Экспортируем работу для портфолио.</p></div></div></div></div></section>
+    <section class="outcome" id="result"><div class="wrap out-grid"><div><span class="kicker">Финал игры</span><h2>Выйди с работой, <em>а не с очками.</em></h2><p class="lede">Этот практикум посвящён одному навыку: убедительному реализму в AI-фото и коротком видео. Если захочешь собрать полноценные ролики, портфолио и выйти к заказчикам, внутри будет путь в большую программу «AI Новый Уровень».</p><div class="out-list"><div>Серия связанных реалистичных кадров</div><div>Короткое видео в той же сцене</div><div>Итоговая работа по брифу</div></div></div><div class="pitch" id="access"><span class="kicker">Ранний доступ</span><h3>Начни с первой группы</h3><div class="price">9 990 ₽</div><p>Игровой маршрут уже открыт для просмотра. В первой группе добавим уроки, материалы и бонус «Монтаж в Claude Code».</p><a class="btn" href="https://t.me/newhndrx?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D0%B9%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%20%C2%AB%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC%C2%BB">Написать об участии</a><p class="fine">Уточним дату открытия, состав первой версии и порядок оплаты до покупки.</p></div></div></section>
+  </main>
+  <footer class="foot"><div class="wrap"><span>© 2026 · ИП Капустьянов Александр Дмитриевич · ИНН 780435351766 · ОГРНИП 326784700426091</span><span><a href="../master/">Большая программа</a> · <a href="../privacy/">Политика конфиденциальности</a></span></div></footer>
+  <script>
+    if (location.hostname === '127.0.0.1' || location.hostname === 'localhost') {
+      document.querySelectorAll('a[href="https://app.neurocreator2.ru/realism/"]').forEach(function (a) {
+        a.href = 'http://127.0.0.1:8000/realism/';
+      });
+    }
+  </script>
+  <script>
+    if (location.hostname !== '127.0.0.1' && location.hostname !== 'localhost') {
+      var leadPing = document.createElement('script');
+      leadPing.src = '../assets/lead-ping.js';
+      document.body.appendChild(leadPing);
+    }
+  </script>
+</body>
+</html>
