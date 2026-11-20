@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-20T11:30:45Z",
+ "updated": "2026-11-20T12:03:21Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139698568",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Младший специалист по ИИ и автоматизации (Junior)\n🏢 Перфект · Москва",
+   "link": "https://hh.ru/vacancy/139698568?tech_source=api",
+   "date": "2026-11-20T14:42:18+0300"
+  },
+  {
+   "id": "hh/139168385",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Редактор-копирайтер (рекламные материалы, AI)\n🏢 МГДИЗАЙН · Санкт-Петербург\n💰 от 50000 до 60000 RUR",
+   "link": "https://hh.ru/vacancy/139168385?tech_source=api",
+   "date": "2026-11-20T14:21:28+0300"
+  },
   {
    "id": "hh/139696920",
    "source": "hh",
@@ -17,6 +33,14 @@
    "text": "Технический директор (направление искусственного интеллекта)\n🏢 ЭКЗИТА · Москва\n💰 от 80000 до 100000 RUR",
    "link": "https://hh.ru/vacancy/139696824?tech_source=api",
    "date": "2026-11-20T14:10:13+0300"
+  },
+  {
+   "id": "hh/138882588",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Product Manager в команду ИИ-агентов\n🏢 Домклик · Москва",
+   "link": "https://hh.ru/vacancy/138882588?tech_source=api",
+   "date": "2026-11-20T13:51:01+0300"
   },
   {
    "id": "hh/139694992",
@@ -480,30 +504,6 @@
    "channel": "hh.ru",
    "text": "Юрист обучения нейросетей\n🏢 Яндекс Крауд · Ростов-на-Дону\n💰 до 188000 RUR",
    "link": "https://hh.ru/vacancy/139657036?tech_source=api",
-   "date": "2026-11-19T13:50:19+0300"
-  },
-  {
-   "id": "hh/139657037",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Юрист обучения нейросетей\n🏢 Яндекс Крауд · Воронеж\n💰 до 188000 RUR",
-   "link": "https://hh.ru/vacancy/139657037?tech_source=api",
-   "date": "2026-11-19T13:50:19+0300"
-  },
-  {
-   "id": "hh/139657038",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Юрист обучения нейросетей\n🏢 Яндекс Крауд · Волгоград\n💰 до 188000 RUR",
-   "link": "https://hh.ru/vacancy/139657038?tech_source=api",
-   "date": "2026-11-19T13:50:19+0300"
-  },
-  {
-   "id": "hh/139657039",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Юрист обучения нейросетей\n🏢 Яндекс Крауд · Краснодар\n💰 до 188000 RUR",
-   "link": "https://hh.ru/vacancy/139657039?tech_source=api",
    "date": "2026-11-19T13:50:19+0300"
   },
   {
