@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-20T14:12:15Z",
+ "updated": "2026-11-20T14:44:16Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/138178016",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Менеджер продукта (AI)\n🏢 СПБ Биржа · Москва",
+   "link": "https://hh.ru/vacancy/138178016?tech_source=api",
+   "date": "2026-11-20T17:30:45+0300"
+  },
+  {
+   "id": "hh/139705948",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Специалист по AI / графический дизайнер\n🏢 Открытие · Москва\n💰 от 150000 до 200000 RUR",
+   "link": "https://hh.ru/vacancy/139705948?tech_source=api",
+   "date": "2026-11-20T17:30:08+0300"
+  },
+  {
+   "id": "hh/138738427",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Владелец продукта AI\n🏢 КОЛДИ · Москва",
+   "link": "https://hh.ru/vacancy/138738427?tech_source=api",
+   "date": "2026-11-20T17:20:35+0300"
+  },
   {
    "id": "hh/139704369",
    "source": "hh",
@@ -473,30 +497,6 @@
    "text": "ML-инженер / AI Research Engineer (анализ музыки и генерация видео)\n🏢 Боронд, Группа компаний · Москва",
    "link": "https://hh.ru/vacancy/139541536?tech_source=api",
    "date": "2026-11-19T16:06:53+0300"
-  },
-  {
-   "id": "hh/139664040",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Административный менеджер / помощник руководителя (AI-компания)\n🏢 РТ · Москва",
-   "link": "https://hh.ru/vacancy/139664040?tech_source=api",
-   "date": "2026-11-19T16:06:16+0300"
-  },
-  {
-   "id": "hh/139663814",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-контент-креатор / Специалист по созданию контента с нейросетями\n🏢 Игнатьев Алексей Михайлович · Чебаркуль\n💰 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/139663814?tech_source=api",
-   "date": "2026-11-19T16:03:09+0300"
-  },
-  {
-   "id": "hh/139663274",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-креатор/менеджер\n🏢 Федеральная мебельная компания Е1 · Краснодар\n💰 от 70000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/139663274?tech_source=api",
-   "date": "2026-11-19T15:48:06+0300"
   },
   {
    "id": "design_vacancy/3183",
