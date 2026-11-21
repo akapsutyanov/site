@@ -2764,12 +2764,24 @@ window.reviewFail = function(img) {
   document.addEventListener('click', function(e) { if (!m.contains(e.target) && !b.contains(e.target)) close(); });
 })();
 
-// Floating CTA — appears after scrolling past the hero
+// Сохраняем источник экскурсии для кнопки в секции и для плавающей кнопки.
 (function() {
+  var incoming = new URLSearchParams(location.search);
+  function excursionHref(href) {
+    var url = new URL(href);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(key) {
+      var value = incoming.get(key);
+      if (value) url.searchParams.set(key, value);
+    });
+    return url.href;
+  }
+  document.querySelectorAll('a[href*="/anketa"]').forEach(function(link) {
+    link.href = excursionHref(link.href);
+  });
   var cta = document.getElementById('floatingCta');
   if (!cta) return;
   var exc = document.getElementById('excursion');
-  var anketaHref = 'https://neurocreator2.ru/anketa?from=excursion&utm_source=master_float';
+  var anketaHref = excursionHref('https://neurocreator2.ru/anketa?from=excursion&utm_source=master_float');
   function onScroll() {
     if (window.scrollY > window.innerHeight * 0.85) cta.classList.add('show');
     else cta.classList.remove('show');
@@ -2789,23 +2801,6 @@ window.reviewFail = function(img) {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-})();
-
-// UTM passthrough — пробрасываем метки с этой страницы во все ссылки на анкету
-(function() {
-  try {
-    var qs = new URLSearchParams(location.search);
-    var utm = new URLSearchParams();
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) {
-      var v = qs.get(k); if (v) utm.set(k, v);
-    });
-    if (!utm.toString()) return;
-    document.querySelectorAll('a[href*="/anketa"]').forEach(function(a) {
-      var u = new URL(a.href);
-      utm.forEach(function(v, k) { u.searchParams.set(k, v); });
-      a.href = u.toString();
-    });
-  } catch(e) {}
 })();
 
 // FAQ accordion
