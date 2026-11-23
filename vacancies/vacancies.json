@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-23T08:46:26Z",
+ "updated": "2026-11-23T09:18:51Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139740610",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Промпт-инженер\n🏢 Альфа-Банк · Москва",
+   "link": "https://hh.ru/vacancy/139740610?tech_source=api",
+   "date": "2026-11-23T12:12:58+0300"
+  },
+  {
+   "id": "hh/139739700",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-креатор / Рилсмейкер (GameDev, Claude Code)\n🏢 Strong Monkey Games · Москва",
+   "link": "https://hh.ru/vacancy/139739700?tech_source=api",
+   "date": "2026-11-23T11:57:01+0300"
+  },
   {
    "id": "hh/139738220",
    "source": "hh",
@@ -9,6 +25,14 @@
    "text": "Исполнитель услуг по сбору и валидации данных для AI (video)\n🏢 Data Light · Пермь\n💰 от 35000 RUR",
    "link": "https://hh.ru/vacancy/139738220?tech_source=api",
    "date": "2026-11-23T11:33:48+0300"
+  },
+  {
+   "id": "hh/139356282",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM / AI-контент-менеджер\n🏢 Фасадные Технологии · Москва\n💰 от 100000 до 150000 RUR",
+   "link": "https://hh.ru/vacancy/139356282?tech_source=api",
+   "date": "2026-11-23T11:18:51+0300"
   },
   {
    "id": "hh/139735451",
@@ -537,30 +561,6 @@
    "text": "Маркетолог (SaaS/AI)\n🏢 X2-Sales · Москва\n💰 от 80000 до 150000 RUR",
    "link": "https://hh.ru/vacancy/139438568?tech_source=api",
    "date": "2026-11-21T16:09:33+0300"
-  },
-  {
-   "id": "hh/139213782",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по партнёрствам с ИИ-креаторами\n🏢 Аванесян Эрик Арменович · Санкт-Петербург\n💰 от 70000 до 100000 RUR",
-   "link": "https://hh.ru/vacancy/139213782?tech_source=api",
-   "date": "2026-11-21T16:03:06+0300"
-  },
-  {
-   "id": "hh/138929406",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Финансовый аналитик (управленческий учёт, автоматизация, ИИ)\n🏢 Спрейпласт · Москва\n💰 от 170000 до 200000 RUR",
-   "link": "https://hh.ru/vacancy/138929406?tech_source=api",
-   "date": "2026-11-21T15:23:24+0300"
-  },
-  {
-   "id": "hh/139271726",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ретушер (с ИИ)\n🏢 ANNALIZA · Ижевск\n💰 от 50000 до 55000 RUR",
-   "link": "https://hh.ru/vacancy/139271726?tech_source=api",
-   "date": "2026-11-21T15:16:39+0300"
   },
   {
    "id": "comeindesign/1569",
