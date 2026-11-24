@@ -162,3 +162,12 @@ nav{position:fixed}.nav-burger{display:none}
 .workshop-marks a:focus-visible{outline:2px solid #fff;outline-offset:5px}
 @media(max-width:1100px){.workshop-marks{position:relative;inset:auto;order:6;margin:10px auto 3px;width:352px;max-width:100%}.vaStats{order:7}}
 @media(max-width:600px){.workshop-marks{width:310px;margin-top:8px}.experience-seal{width:118px;height:118px}.portfolio-mark{min-height:88px;width:210px;padding:14px 12px 14px 28px;gap:8px}.portfolio-mark strong{font-size:21px}.mark-kicker{font-size:6px;letter-spacing:1.2px}.mark-caption{font-size:9px}}
+
+/* Course offer and excursion on the first screen. */
+.vaHero .vaBadge{display:inline-flex;margin:0;color:#c9ced6}
+.vaTitle{font-size:clamp(56px,4.7vw,76px);line-height:1.015;letter-spacing:-.035em;max-width:640px;margin:22px 0 0}
+.vaSub,.offer-result{max-width:475px;color:#b4bbc6;line-height:1.68;font-size:15px}
+.vaSub{margin:22px 0 0}.offer-result{margin:12px 0 0}.offer-result strong{font-weight:600;color:#f0f2f5}
+.offer-note{max-width:430px;margin-top:13px;color:#aab2be;font-size:12px;line-height:1.55}
+@media(max-width:1100px){.vaTitle{margin:15px 0 0;font-size:clamp(40px,6.8vw,64px);max-width:100%}.vaSub,.offer-result{order:2;max-width:525px;font-size:14px;text-align:center}.vaSub{margin-top:16px}.offer-result{margin-top:8px}.offer-note{order:4;max-width:430px;text-align:center}}
+@media(max-width:600px){.vaHero{padding-top:90px}.vaTitle{font-size:clamp(34px,9.5vw,52px);margin-top:14px}.vaSub,.offer-result{font-size:13px;line-height:1.55}.offer-note{font-size:11px}.vaHero .vaBadge{font-size:8px;letter-spacing:1.15px}}
