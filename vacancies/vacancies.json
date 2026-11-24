@@ -1,7 +1,47 @@
 {
- "updated": "2026-11-24T14:30:22Z",
+ "updated": "2026-11-24T16:04:36Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139281693",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Ассистент отдела продаж (Битрикс24, ИИ)\n🏢 Типак · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/139281693?tech_source=api",
+   "date": "2026-11-24T18:28:50+0300"
+  },
+  {
+   "id": "hh/139122779",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Видеомонтажёр YouTube / AI Video Editor (Kling, Seedance, Wan)\n🏢 Герасев Александр Дмитриевич · Москва",
+   "link": "https://hh.ru/vacancy/139122779?tech_source=api",
+   "date": "2026-11-24T18:24:10+0300"
+  },
+  {
+   "id": "hh/139809152",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Пресейл-маркетолог (B2B SaaS / AI-поиск и GEO / по работе с клиентами)\n🏢 Умный Сервис · Москва",
+   "link": "https://hh.ru/vacancy/139809152?tech_source=api",
+   "date": "2026-11-24T18:17:20+0300"
+  },
+  {
+   "id": "hh/139806932",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Продюсер ИИ-контента / AI-креатор\n🏢 Чернухина Диана Даниловна · Москва",
+   "link": "https://hh.ru/vacancy/139806932?tech_source=api",
+   "date": "2026-11-24T17:52:19+0300"
+  },
+  {
+   "id": "hh/138626082",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Креативный продюсер (контент-креатор / видеомонтаж + AI)\n🏢 Coral Club · Москва",
+   "link": "https://hh.ru/vacancy/138626082?tech_source=api",
+   "date": "2026-11-24T17:32:29+0300"
+  },
   {
    "id": "hh/139806269",
    "source": "hh",
@@ -17,6 +57,14 @@
    "text": "AI-инженер / AI-native Full-stack разработчик\n🏢 ФуллБокс · Старая Купавна (Московская область)",
    "link": "https://hh.ru/vacancy/139805842?tech_source=api",
    "date": "2026-11-24T17:19:24+0300"
+  },
+  {
+   "id": "hh/139216472",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "AI-контент-менеджер\n🏢 Эмилия Стиль · Москва",
+   "link": "https://hh.ru/vacancy/139216472?tech_source=api",
+   "date": "2026-11-24T16:55:06+0300"
   },
   {
    "id": "hh/139802149",
@@ -563,60 +611,12 @@
    "date": "2026-11-23T18:56:39+0300"
   },
   {
-   "id": "hh/138894973",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-видеокреатор / Нейрокреатор (AI Video Creator)\n🏢 Октагон · Ижевск",
-   "link": "https://hh.ru/vacancy/138894973?tech_source=api",
-   "date": "2026-11-23T18:06:44+0300"
-  },
-  {
-   "id": "hh/139706383",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "ИИ Контент-менеджер\n🏢 Pioneer London · Казань",
-   "link": "https://hh.ru/vacancy/139706383?tech_source=api",
-   "date": "2026-11-23T17:29:19+0300"
-  },
-  {
-   "id": "hh/139380695",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI-Визуализатор\n🏢 Domeo · Москва",
-   "link": "https://hh.ru/vacancy/139380695?tech_source=api",
-   "date": "2026-11-23T17:23:10+0300"
-  },
-  {
-   "id": "hh/139764929",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "2D AI художник\n🏢 Pixel Talent · Москва",
-   "link": "https://hh.ru/vacancy/139764929?tech_source=api",
-   "date": "2026-11-23T17:18:58+0300"
-  },
-  {
-   "id": "hh/139764541",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Креатор ИИ-видео\n🏢 Медиа · Москва",
-   "link": "https://hh.ru/vacancy/139764541?tech_source=api",
-   "date": "2026-11-23T17:09:24+0300"
-  },
-  {
    "id": "forallmarketing/8978",
    "source": "telegram",
    "channel": "forallmarketing",
    "text": "Senior Growth Marketing Lead\nв\nVLProjects\n— продуктовая IT-компания, создавшая B2B2C-платформу для монетизации контента по подписочной модели.\nУдалённая работа (вне РФ). Гибкий график начала рабочего дня.\nОписание вакансии на GeekJob.ru",
    "link": "https://t.me/forallmarketing/8978",
    "date": "2026-11-23T16:49:58+00:00"
-  },
-  {
-   "id": "hh/138261003",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Дизайнер ИИ\n🏢 ПОКОЛЕНИЕ ТРЕНДОВ · Рязань",
-   "link": "https://hh.ru/vacancy/138261003?tech_source=api",
-   "date": "2026-11-23T16:43:33+0300"
   },
   {
    "id": "dnative_job/11682",
