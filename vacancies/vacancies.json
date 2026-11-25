@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-25T11:49:58Z",
+ "updated": "2026-11-25T12:22:28Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/137953036",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Контент-маркетолог / Дизайнер карточек товара (SEO, AI, E-commerce)\n🏢 Софис · Москва",
+   "link": "https://hh.ru/vacancy/137953036?tech_source=api",
+   "date": "2026-11-25T15:10:47+0300"
+  },
+  {
+   "id": "hh/139704369",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Графический дизайнер / AI designer (Perfomance marketing)\n🏢 Айти Ворлд · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/139704369?tech_source=api",
+   "date": "2026-11-25T14:51:38+0300"
+  },
   {
    "id": "hh/139847736",
    "source": "hh",
@@ -521,22 +537,6 @@
    "text": "AI Product Manager (Junior+/Middle)\n🏢 Neurosphere · Москва",
    "link": "https://hh.ru/vacancy/139801004?tech_source=api",
    "date": "2026-11-24T15:50:53+0300"
-  },
-  {
-   "id": "hh/139799337",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Бухгалтер для обучения нейросетей (учёт и налоги в 1С)\n🏢 Яндекс Крауд · Москва",
-   "link": "https://hh.ru/vacancy/139799337?tech_source=api",
-   "date": "2026-11-24T15:23:35+0300"
-  },
-  {
-   "id": "hh/139799338",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Бухгалтер для обучения нейросетей (учёт и налоги в 1С)\n🏢 Яндекс Крауд · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/139799338?tech_source=api",
-   "date": "2026-11-24T15:23:35+0300"
   },
   {
    "id": "comeinlena/6668",
@@ -1299,14 +1299,6 @@
    "date": "2026-11-18"
   },
   {
-   "id": "tv/d1173ab8-e32d-11f1-966b-3b49598f80b3",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Контент-менеджер\n🏢 АО \"ЧИП И ДИП\" · Город Москва\n💰 от 80000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/6a85e6e0-7582-11ea-bdff-736ab11edb0c/d1173ab8-e32d-11f1-966b-3b49598f80b3",
-   "date": "2026-11-18"
-  },
-  {
    "id": "tv/d1129380-e2f0-11f1-9c45-e5a4da9c0dad",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1355,14 +1347,6 @@
    "date": "2026-11-12"
   },
   {
-   "id": "tv/f5589f0c-dec7-11f1-87a4-09d0e8c84613",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "смм -специалист\n🏢 АНО \"ЯЖИВУ\" · Краснодарский край\n💰 от 28000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1252300030410/f5589f0c-dec7-11f1-87a4-09d0e8c84613",
-   "date": "2026-11-12"
-  },
-  {
    "id": "tv/77d56464-ddc7-11f1-a71e-a7e2275c5303",
    "source": "trudvsem",
    "channel": "Работа России",
@@ -1392,14 +1376,6 @@
    "channel": "Работа России",
    "text": "SMM-специалист / Менеджер по развитию медиаресурсов\n🏢 ООО \"Джейкет.ру\" · Город Москва\n💰 от 120000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/4e57d920-dcfe-11f1-bb1e-ed02205da0c5",
-   "date": "2026-11-10"
-  },
-  {
-   "id": "tv/aa5ab338-dcdd-11f1-960a-c3c5b7d03fd4",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Контент-менеджер\n🏢 ООО \"БЬЮТИОПТ\" · Воронежская область\n💰 от 70000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1153668004577/aa5ab338-dcdd-11f1-960a-c3c5b7d03fd4",
    "date": "2026-11-10"
   },
   {
@@ -1451,44 +1427,12 @@
    "date": "2026-11-05"
   },
   {
-   "id": "tv/5a35e800-d8f7-11f1-a15c-471802d8f89e",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Контент-менеджер\n🏢 ИП Алиев Руслан Чингизович · Город Москва\n💰 от 60000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/5a35e800-d8f7-11f1-a15c-471802d8f89e",
-   "date": "2026-11-05"
-  },
-  {
-   "id": "tv/1db962e0-d8f2-11f1-bff3-31a031a194f2",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "ПОМОЩНИК ДИРЕКТОРА ПО ИНФОРМАЦИОННОЙ РАБОТЕ\n🏢 АНПОО \"РЭПК\" · Воронежская область\n💰 от 48000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1163600050371/1db962e0-d8f2-11f1-bff3-31a031a194f2",
-   "date": "2026-11-05"
-  },
-  {
-   "id": "tv/4e40e6f0-d8e6-11f1-855f-9bbc1c820699",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Аналитик разработки SIEM-контента (SOC) [RED Security, МТС Веб Сервисы]\n🏢 МТС · Самарская область\n💰 от 30000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/7226c750-02f1-11eb-8600-bfd13399602c/4e40e6f0-d8e6-11f1-855f-9bbc1c820699",
-   "date": "2026-11-05"
-  },
-  {
    "id": "tv/5a2dd1b4-d8f7-11f1-b61c-efe3615f1d77",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Графический дизайнер\n🏢 ООО \"Джобкарт\" · Оренбургская область\n💰 от 30000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/5147746474134/5a2dd1b4-d8f7-11f1-b61c-efe3615f1d77",
    "date": "2026-11-05"
-  },
-  {
-   "id": "tv/ff1b7840-d74d-11f1-b8e1-c59fe77e588d",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "менеджер информационных ресурсов\n🏢 МКУ \"ПРОЕКТНАЯ ДИРЕКЦИЯ ДКСИМП\" · Новосибирская область\n💰 от 66377 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/c727abd0-b5a4-11e8-93da-ef76bd2a03c1/ff1b7840-d74d-11f1-b8e1-c59fe77e588d",
-   "date": "2026-11-03"
   },
   {
    "id": "tv/8f610c4e-d77a-11f1-a422-775b9ebb0248",
@@ -1507,20 +1451,76 @@
    "date": "2026-11-02"
   },
   {
-   "id": "tv/766a2384-d693-11f1-8ee6-ff129b40c413",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "Контент-менеджер\n🏢 ООО \"Джейкет.ру\" · Ставропольский край\n💰 от 50000 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/5147746474134/766a2384-d693-11f1-8ee6-ff129b40c413",
-   "date": "2026-11-02"
-  },
-  {
    "id": "tv/181a1d94-d692-11f1-86da-9dfdcf34a1c4",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Дизайнер интерфейсов UX/UI (Middle+)\n🏢 Стек-ИТ · Ярославская область\n💰 от 60000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/7226c750-02f1-11eb-8600-bfd13399602c/181a1d94-d692-11f1-86da-9dfdcf34a1c4",
    "date": "2026-11-02"
+  },
+  {
+   "id": "tv/e6e82e08-d43f-11f1-866f-d9b02784358d",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "графический дизайнер\n🏢 ИП САЮТИНА Н. В. · Ненецкий автономный округ\n💰 от 60000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/321290100017532/e6e82e08-d43f-11f1-866f-d9b02784358d",
+   "date": "2026-10-30"
+  },
+  {
+   "id": "tv/1304d7c4-d451-11f1-8ee6-ff129b40c413",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Менеджер по продажам корпусной мебели\n🏢 ООО \"Джейкет.ру\" · Город Москва\n💰 от 180000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/1304d7c4-d451-11f1-8ee6-ff129b40c413",
+   "date": "2026-10-30"
+  },
+  {
+   "id": "tv/caeab8a8-d32f-11f1-b080-61572249df07",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Графический дизайнер\n🏢 ООО \"ШАНХАЙ СПЕЦТЕХНИКА\" · Хабаровский край\n💰 от 70000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1177536004942/caeab8a8-d32f-11f1-b080-61572249df07",
+   "date": "2026-10-29"
+  },
+  {
+   "id": "tv/ff042d9b-d359-11f1-b188-596978c8f37b",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Дизайнер\n🏢 ООО \"ФАБРИКА ВИЛАН\" · Чувашская Республика - Чувашия\n💰 от 50000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1182130001778/ff042d9b-d359-11f1-b188-596978c8f37b",
+   "date": "2026-10-29"
+  },
+  {
+   "id": "tv/fd1d1a30-d1fd-11f1-a5a8-2783e7265c32",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Помощник графического дизайнера\n🏢 ИП Алиев Руслан Чингизович · Город Москва\n💰 от 85000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/fd1d1a30-d1fd-11f1-a5a8-2783e7265c32",
+   "date": "2026-10-27"
+  },
+  {
+   "id": "tv/38d47ca0-d1ed-11f1-b4a4-47d9292de166",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Графический дизайнер\n🏢 ООО \"Джейкет.ру\" · Ростовская область\n💰 от 30000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/5147746474134/38d47ca0-d1ed-11f1-b4a4-47d9292de166",
+   "date": "2026-10-27"
+  },
+  {
+   "id": "tv/80575a30-d160-11f1-bddd-75870adb5ddc",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Автор-редактор книжных проектов\n🏢 ИП ТУРКО О. Ю. · Ямало-Ненецкий автономный округ\n💰 от 67733 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/323890100006300/80575a30-d160-11f1-bddd-75870adb5ddc",
+   "date": "2026-10-26"
+  },
+  {
+   "id": "tv/2c30d0a8-d10e-11f1-a8c2-27821a00b960",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "Менеджер маркетплейсов\n🏢 ООО \"ТИЗ\" · Томская область\n💰 от 50000 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1137017001153/2c30d0a8-d10e-11f1-a8c2-27821a00b960",
+   "date": "2026-10-26"
   }
  ]
 }
