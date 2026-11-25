@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-25T09:06:30Z",
+ "updated": "2026-11-25T09:39:04Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139836349",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "ИИ-видеопродюсер (генеративное видео, MiniMax, Kling, DaVinci Resolve)\n🏢 Тэктис · Москва",
+   "link": "https://hh.ru/vacancy/139836349?tech_source=api",
+   "date": "2026-11-25T12:33:07+0300"
+  },
+  {
+   "id": "hh/139835762",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Креатор-маркетолог в AI проект о здоровье\n🏢 Медтайм · Тула",
+   "link": "https://hh.ru/vacancy/139835762?tech_source=api",
+   "date": "2026-11-25T12:28:35+0300"
+  },
+  {
+   "id": "hh/139833465",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Юрист по AI управлению и этике\n🏢 СБЕР · Москва",
+   "link": "https://hh.ru/vacancy/139833465?tech_source=api",
+   "date": "2026-11-25T12:14:10+0300"
+  },
   {
    "id": "hh/139831665",
    "source": "hh",
@@ -473,30 +497,6 @@
    "text": "Аналитик криптовалют и финансовых рынков для обучения нейросетей\n🏢 Яндекс Крауд · Санкт-Петербург",
    "link": "https://hh.ru/vacancy/139799164?tech_source=api",
    "date": "2026-11-24T15:19:42+0300"
-  },
-  {
-   "id": "hh/139271726",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Ретушер (с ИИ)\n🏢 ANNALIZA · Ижевск",
-   "link": "https://hh.ru/vacancy/139271726?tech_source=api",
-   "date": "2026-11-24T15:16:39+0300"
-  },
-  {
-   "id": "hh/138762809",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Промпт-инженер / AI-специалист по развитию сайта\n🏢 Posiflora · Ростов-на-Дону",
-   "link": "https://hh.ru/vacancy/138762809?tech_source=api",
-   "date": "2026-11-24T14:48:28+0300"
-  },
-  {
-   "id": "hh/139797038",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Создатель ИИ-роликов (в офис)\n🏢 Сима-ленд · Екатеринбург",
-   "link": "https://hh.ru/vacancy/139797038?tech_source=api",
-   "date": "2026-11-24T14:36:37+0300"
   },
   {
    "id": "comeinlena/6668",
@@ -1251,19 +1251,19 @@
    "date": "2026-11-18"
   },
   {
-   "id": "tv/071ff9fe-e2ff-11f1-9c45-e5a4da9c0dad",
-   "source": "trudvsem",
-   "channel": "Работа России",
-   "text": "SMM-специалист\n🏢 АНО \"БУРЯАД ТВ\" · Республика Бурятия\n💰 от 26500 руб.",
-   "link": "https://trudvsem.ru/vacancy/card/1150327004211/071ff9fe-e2ff-11f1-9c45-e5a4da9c0dad",
-   "date": "2026-11-18"
-  },
-  {
    "id": "tv/c40035c8-e346-11f1-ba6b-cb0470d6d1ef",
    "source": "trudvsem",
    "channel": "Работа России",
    "text": "Менеджер по активным продажам B2B\n🏢 ООО \"БИОНИКС\" · Волгоградская область\n💰 от 100000 руб.",
    "link": "https://trudvsem.ru/vacancy/card/1123443001395/c40035c8-e346-11f1-ba6b-cb0470d6d1ef",
+   "date": "2026-11-18"
+  },
+  {
+   "id": "tv/071ff9fe-e2ff-11f1-9c45-e5a4da9c0dad",
+   "source": "trudvsem",
+   "channel": "Работа России",
+   "text": "SMM-специалист\n🏢 АНО \"БУРЯАД ТВ\" · Республика Бурятия\n💰 от 26500 руб.",
+   "link": "https://trudvsem.ru/vacancy/card/1150327004211/071ff9fe-e2ff-11f1-9c45-e5a4da9c0dad",
    "date": "2026-11-18"
   },
   {
