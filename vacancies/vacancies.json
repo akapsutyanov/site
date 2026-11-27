@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-27T18:17:56Z",
+ "updated": "2026-11-27T18:51:16Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139445907",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "SMM-менеджер / AI-контент-маркетолог (MedTech)\n🏢 НПО Технологии и Продукты Здоровья · Москва",
+   "link": "https://hh.ru/vacancy/139445907?tech_source=api",
+   "date": "2026-11-27T21:18:33+0300"
+  },
   {
    "id": "hh/139282311",
    "source": "hh",
@@ -657,14 +665,6 @@
    "text": "Маркетолог (контент, дизайн, видео, сайты и ИИ)\n🏢 Нависинк · Новосибирск",
    "link": "https://hh.ru/vacancy/139014642?tech_source=api",
    "date": "2026-11-26T15:56:30+0300"
-  },
-  {
-   "id": "hh/139889388",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Креатор AI\n🏢 НОНТОН · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/139889388?tech_source=api",
-   "date": "2026-11-26T15:53:18+0300"
   },
   {
    "id": "work_editor/6821",
