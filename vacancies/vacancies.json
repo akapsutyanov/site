@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-27T12:52:28Z",
+ "updated": "2026-11-27T13:25:02Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139931993",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Руководитель ИИ-трансформации\n🏢 Девелоперская компания · Санкт-Петербург",
+   "link": "https://hh.ru/vacancy/139931993?tech_source=api",
+   "date": "2026-11-27T16:20:46+0300"
+  },
   {
    "id": "hh/139011177",
    "source": "hh",
@@ -617,14 +625,6 @@
    "text": "AI/ИИ дизайнер\n🏢 Мебельсон · Ижевск",
    "link": "https://hh.ru/vacancy/139877191?tech_source=api",
    "date": "2026-11-26T11:55:49+0300"
-  },
-  {
-   "id": "hh/139309621",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "Менеджер по продажам / Business development manager (IT, машинное зрение и нейросети)\n🏢 Норд Клан · Санкт-Петербург",
-   "link": "https://hh.ru/vacancy/139309621?tech_source=api",
-   "date": "2026-11-26T11:25:56+0300"
   },
   {
    "id": "smm_top_vacancy/1715",
