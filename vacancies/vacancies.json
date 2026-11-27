@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-27T08:50:56Z",
+ "updated": "2026-11-27T09:23:14Z",
  "count": 190,
  "items": [
+  {
+   "id": "hh/139911908",
+   "source": "hh",
+   "channel": "hh.ru",
+   "text": "Инженер-геотехник или проектировщик фундаментов для обучения нейросетей\n🏢 Яндекс Крауд · Москва",
+   "link": "https://hh.ru/vacancy/139911908?tech_source=api",
+   "date": "2026-11-27T11:59:13+0300"
+  },
   {
    "id": "hh/139910356",
    "source": "hh",
@@ -697,14 +705,6 @@
    "text": "Программист (вайбкодер / AI-разработчик)\n🏢 Школа Фриланса · Казань",
    "link": "https://hh.ru/vacancy/139672799?tech_source=api",
    "date": "2026-11-25T17:58:35+0300"
-  },
-  {
-   "id": "hh/139672496",
-   "source": "hh",
-   "channel": "hh.ru",
-   "text": "AI креатор\n🏢 Charuel · Москва",
-   "link": "https://hh.ru/vacancy/139672496?tech_source=api",
-   "date": "2026-11-25T17:45:42+0300"
   },
   {
    "id": "jobforjunior/8646",
