@@ -1,0 +1,128 @@
+/* The original chrome palette, applied to the current course page. */
+:root, body .section-light {
+  --bg: #060608;
+  --bg2: #101012;
+  --ink: #ebebeb;
+  --ink2: #c1c1c3;
+  --ink3: #a1a1a4;
+  --c1: #f6f6f6;
+  --c2: #d3d3d4;
+  --c3: #aaa9ae;
+  --c4: #505052;
+  --surface: #101012;
+  --raised: #18181b;
+  --edge: #303033;
+  --chrome-grad: linear-gradient(135deg,#fafafa 0%,#d5d5d5 52%,#a5a5a5 100%);
+  --chrome-shine: linear-gradient(108deg,#a7a7a9 0%,#efefef 35%,#fff 49%,#c4c4c6 72%,#99999d 100%);
+  color-scheme: dark;
+}
+body { background:var(--bg);color:var(--ink) }
+nav { background:rgba(6,6,8,.84);border-color:#ffffff20;box-shadow:0 8px 32px #0005;max-width:1220px }
+.nav-logo { color:var(--ink);background:var(--chrome-shine);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent }
+.nav-links a,.nav-mobile a { color:var(--ink2) }
+.nav-links a:hover { background:#ffffff0e;color:white }
+.nav-cta { background:var(--chrome-grad);color:#101011;-webkit-text-fill-color:#101011 }
+
+.vaHero {
+  isolation:isolate;display:flex;position:relative;flex-direction:column;align-items:stretch;justify-content:center;
+  min-height:clamp(635px,100svh,1080px);padding:110px max(5vw,calc((100vw - 1180px)/2)) 92px;
+  overflow:hidden;background:var(--bg);border-bottom:1px solid #ffffff12;
+}
+.vaHero::after {display:none}
+.metal-backdrop,.metal-backdrop picture,.metal-backdrop img,.metal-backdrop video,.metal-backdrop::after {
+  position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+}
+.metal-backdrop {z-index:-1;overflow:hidden}
+.metal-backdrop img,.metal-backdrop video {display:block;object-fit:cover;object-position:62% 50%}
+.metal-backdrop video {opacity:0;transition:opacity .3s}
+.metal-backdrop.is-playing video {opacity:1}
+.metal-backdrop::after {
+  content:"";background:linear-gradient(90deg,#060608 0%,#060608f0 17%,#060608b3 38%,#06060812 68%,transparent),
+    linear-gradient(0deg,#060608 0%,#06060880 11%,transparent 36%);
+}
+.vaHero .vaWrap {
+  display:flex;flex-flow:column;align-items:flex-start;position:relative;z-index:1;width:100%;
+  max-width:725px;margin:0;padding:0;text-align:left;
+}
+.vaHero .vaWrap>* {align-self:flex-start;text-align:left;order:initial;margin-inline:0}
+.vaHero .vaBadge {display:inline-flex;width:fit-content;border:1px solid #ffffff30;background:#0a0a0cc4;
+  border-radius:30px;color:#dddde0;font-size:9px;font-weight:500;letter-spacing:.16em;padding:8px 15px}
+.vaHero .vaBadge i {background:#ddd}
+.vaHero h1.vaTitle {color:#f6f6f6;max-width:100%;font-size:clamp(52px,6.5vw,100px);font-weight:400;letter-spacing:-.045em;line-height:.99;margin:23px 0 0}
+.vaHero .vaTitle em {background:var(--chrome-shine);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.vaHero .vaSub {font-size:clamp(15px,1.25vw,18px);font-weight:400;line-height:1.65;max-width:480px;margin:23px 0 0;color:var(--ink2)}
+.vaHero .vaSub b {color:#f2f2f2}
+.vaHero .vaBtns {display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:10px;margin:28px 0 0;max-width:100%;width:auto}
+.vaHero .vaBtns a {min-height:50px;width:auto;flex:0 1 auto;line-height:1.35;letter-spacing:.065em;font-size:10px;text-align:center;white-space:normal}
+.vaHero .vaBtns .btn-primary,.section-light .exc-cta {color:#101011;border-color:#eee;background:var(--chrome-grad);box-shadow:inset 0 1px 0 #fffc}
+.vaHero .vaBtns .btn-secondary {background:#101012c9;border-color:#737374;color:#efefef}
+.vaHero .vaBtns .btn-secondary:hover {background:#262628;border-color:#ddd}
+.vaHero .offer-note {font:400 12px/1.65 Montserrat,sans-serif;max-width:410px;margin:13px 0 0;color:#b6b6b9}
+.vaHero .workshop-marks {position:absolute;inset:auto max(5vw,calc((100vw - 1180px)/2)) 50px auto;width:286px;margin:0}
+.vaHero .experience-seal {width:108px;height:108px}
+.vaHero .portfolio-mark {width:193px;min-height:75px;padding:12px 12px 12px 30px;gap:4px}
+.vaHero .portfolio-mark strong {font-size:20px}
+.vaHero .mark-caption {font-size:9px}
+.metal-motion-button {position:absolute;top:101px;right:max(5vw,calc((100vw - 1180px)/2));z-index:3;display:grid;place-items:center;
+  width:37px;height:37px;padding:8px;border-radius:50%;border:1px solid #ffffff50;background:#09090ac4;color:#eee;cursor:pointer}
+.metal-motion-button[hidden],.metal-motion-button .play-icon,.metal-motion-button.paused .pause-icon {display:none}
+.metal-motion-button.paused .play-icon {display:block}
+.metal-motion-button svg {width:15px;height:15px}
+.metal-motion-button:focus-visible,.vaHero a:focus-visible {outline:2px solid white;outline-offset:3px}
+
+/* Keep the illustrations, cards and spacing of the live modules. */
+body .section-light {background:var(--bg);color:var(--ink);border-color:#232325}
+body .section-light .section-label {color:var(--c3)}
+body .section-light .section-label::after {background:linear-gradient(90deg,var(--c4),transparent)}
+body .section-light :is(.section-title,.module-title,.outcome-title) {color:var(--ink);-webkit-text-fill-color:currentColor}
+body .section-light .section-title em {color:var(--c2);-webkit-text-fill-color:currentColor}
+body .section-light :is(.section-intro,.author-lead,.author-list div,.checklist li,.outcome-desc,.g-desc,.payment-desc,.exc-lead,.exc-item .ed,.exc-disc p) {color:var(--ink2)}
+body .section-light :is(.author-nums>div,.result-left,.result-stat-box,.module-card,.module-card:nth-child(even),.outcome-card,.outcome-card:nth-child(2n),.guarantee-card,.payment-card,.exc-card,.review-card) {
+  background:var(--surface);border-color:var(--edge);box-shadow:none;
+}
+body .section-light :is(.module-card.bonus-card,.payment-card.special,.guarantee-bottom) {background:var(--raised);border-color:#424245;color:var(--ink2)}
+body .section-light :is(.topic-item,.exc-item,.exc-disc,.tool-tag,.module-tag,.exc-facts span,.g-icon,.payment-icon) {background:#18181a;border-color:var(--edge);color:var(--ink2)}
+body .section-light :is(.module-num,.outcome-num) {color:var(--c3)}
+body .section-light :is(.module-arrow,.module-card.open .module-arrow) {border-color:#525255;color:var(--ink2)}
+body .section-light :is(.module-body-inner,.module-result,.checklist li) {border-color:var(--edge)}
+body #program .module-stage {color:#b8b8bb}
+body #program .module-subtitle {color:var(--ink2)}
+body #program .module-header:hover {background:#ffffff06}
+body .section-light :is(.module-card.open,.result-stat-box:hover,.outcome-card:hover,.review-card:hover) {border-color:#656568}
+body .section-light .author-photo {border-color:#454547!important;box-shadow:none!important}
+body .section-light .review-person {background:var(--surface);color:var(--ink)}
+body .section-light .review-person span {color:var(--ink3)}
+body .section-light .payment-cta {color:var(--ink);background:var(--raised);border-color:#575759}
+body .section-light .payment-cta:hover {background:#28282a}
+body .section-light .exc-no {border-color:#828284}
+body .section-light .exc-cta {background:var(--chrome-grad);color:#101011}
+body .section-light .exc-cta:hover {background:#fafafa}
+body .section-light :is(button,a):focus-visible,body #program .module-header:focus-visible {outline-color:#ddd}
+.case,.proof,.plan-card {background:var(--surface);border-color:var(--edge)}
+.case-col {background:#0d0d0f;border-color:var(--edge)}
+.case-col.after,.case-tag {background:var(--raised);border-color:#49494b}
+.plan-card.featured {background:linear-gradient(145deg,#242426,#131315 75%);border-color:#8c8c90}
+.case-col.after .case-lbl,.case-profile,.case-tag,.plan-safe {color:var(--c2)}
+.proof a {background:var(--chrome-grad);color:#101011}
+@media(max-width:1100px) {
+  .vaHero {min-height:max(630px,93svh);padding:115px 5vw 118px}
+  .vaHero .vaWrap {max-width:610px}
+  .vaHero .workshop-marks {bottom:32px}
+}
+@media(max-width:700px) {
+  .vaHero {min-height:max(690px,94svh);justify-content:flex-end;padding:130px 22px 25px;align-items:stretch}
+  .metal-backdrop img,.metal-backdrop video {object-position:center top}
+  .metal-backdrop::after {background:linear-gradient(180deg,#06060835,transparent 18%,#06060866 34%,#060608de 55%,#060608 88%)}
+  .vaHero .vaWrap {width:100%;max-width:500px;margin-inline:auto}
+  .vaHero h1.vaTitle {font-size:clamp(43px,9.4vw,60px);margin:16px 0 0;line-height:1.015}
+  .vaHero .vaBadge {padding:6px 10px;font-size:8px;letter-spacing:.12em}
+  .vaHero .vaSub {font-size:14px;line-height:1.55;margin:16px 0 0;max-width:38ch}
+  .vaHero .vaBtns {margin:18px 0 0;gap:8px;width:100%}
+  .vaHero .vaBtns a {font-size:9px;padding:12px 8px;min-height:46px;flex:1}
+  .vaHero .offer-note {font-size:11px;line-height:1.5;margin:10px 0 0;max-width:46ch}
+  .vaHero .workshop-marks {position:relative;inset:auto;align-self:flex-start;width:215px;margin:23px 0 0 max(0px,calc((100% - 500px)/2))}
+  .vaHero .experience-seal {width:73px;height:73px}
+  .vaHero .portfolio-mark {width:152px;min-height:53px;margin-left:-10px;padding:6px 8px 6px 18px;gap:2px}
+  .vaHero .portfolio-mark strong {font-size:16px}.vaHero .mark-kicker {font-size:6px}.vaHero .mark-caption {font-size:8px}
+  .metal-motion-button {top:78px;right:22px;width:33px;height:33px}
+}
